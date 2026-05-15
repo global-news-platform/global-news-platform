@@ -1,0 +1,60 @@
+name: Automated News Ingestion
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      max:
+        description: "Max articles per source"
+        default: "5"
+        type: number
+
+permissions:
+  contents: write
+  deployments: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ingest RSS feeds
+        run: node scripts/pipeline.js --ingest-only --max ${{ inputs.max || '5' }}
+
+      - name: Regenerate sitemap & RSS feed
+        run: |
+          node scripts/lib/sitemap.js
+          node scripts/lib/feed.js
+
+      - name: Build & verify
+        run: npx next build
+
+      - name: Commit & push
+        run: |
+          git config user.name "Global News Bot"
+          git config user.email "bot@globalnews.news"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto: ingest news articles $(date +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=global-news-platform --branch=main

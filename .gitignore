@@ -1,0 +1,24 @@
+node_modules/
+.next/
+out/
+dist/
+
+# Environment
+.env
+.env.local
+.env.production.local
+
+# Build artifacts
+*.tsbuildinfo
+next-env.d.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Automation data
+scripts/data/

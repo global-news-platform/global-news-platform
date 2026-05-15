@@ -1,0 +1,27 @@
+# ============================================================
+#  Cloudflare Pages Configuration
+#  https://developers.cloudflare.com/pages/
+# ============================================================
+
+name = "global-news-platform"
+compatibility_date = "2026-05-15"
+
+# Static export output directory (from next.config.ts output: "export")
+pages_build_output_dir = "out"
+
+# ── Production environment ──────────────────────────────────
+[env.production]
+routes = [
+  { pattern = "globalnews.news", zone_name = "globalnews.news" },
+  { pattern = "www.globalnews.news", zone_name = "globalnews.news" },
+]
+
+# ── Preview (branch) environments ──────────────────────────
+[env.preview]
+routes = [
+  { pattern = "{branch}.global-news-platform.pages.dev", zone_name = "global-news-platform.pages.dev" },
+]
+
+# ── Build configuration ─────────────────────────────────────
+[build]
+command = "npm run build"

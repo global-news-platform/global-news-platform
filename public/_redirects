@@ -1,0 +1,19 @@
+# ============================================================
+#  Cloudflare Pages — Redirect Rules
+#  https://developers.cloudflare.com/pages/configuration/redirects/
+# ============================================================
+
+# ── WWW → non-WWW (or swap if you prefer www) ──────────────
+# https://www.globalnews.news/*  https://globalnews.news/:splat  301
+
+# ── Common redirects ───────────────────────────────────────
+/rss    /feed.xml   301
+/atom   /feed.xml   301
+
+# ── Social proof redirects ─────────────────────────────────
+/discord  https://discord.gg/your-invite   302
+/github   https://github.com/anomalyco/global-news-platform   302
+/twitter  https://twitter.com/globalnews   302
+
+# ── Legacy URL patterns (if migrating) ─────────────────────
+# /posts/:slug  /article/:slug  301

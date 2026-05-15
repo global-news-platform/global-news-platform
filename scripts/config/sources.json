@@ -1,0 +1,105 @@
+{
+  "_note": "RSS sources for automated news ingestion. Set enabled: true to activate.",
+  "sources": [
+    {
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "world",
+      "label": "BBC World"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "category": "technology",
+      "label": "BBC Technology"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "category": "business",
+      "label": "BBC Business"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+      "category": "science",
+      "label": "BBC Science"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/health/rss.xml",
+      "category": "health",
+      "label": "BBC Health"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "category": "sports",
+      "label": "BBC Sport"
+    },
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "category": "world",
+      "label": "NYT World"
+    },
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+      "category": "politics",
+      "label": "NYT Politics"
+    },
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "category": "technology",
+      "label": "NYT Technology"
+    },
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+      "category": "business",
+      "label": "NYT Business"
+    },
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
+      "category": "science",
+      "label": "NYT Science"
+    },
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+      "category": "health",
+      "label": "NYT Health"
+    },
+    {
+      "url": "https://www.theguardian.com/world/rss",
+      "category": "world",
+      "label": "Guardian World"
+    },
+    {
+      "url": "https://www.theguardian.com/uk/technology/rss",
+      "category": "technology",
+      "label": "Guardian Technology"
+    },
+    {
+      "url": "https://www.theguardian.com/uk/business/rss",
+      "category": "business",
+      "label": "Guardian Business"
+    },
+    {
+      "url": "https://www.theguardian.com/environment/climate-crisis/rss",
+      "category": "climate",
+      "label": "Guardian Climate"
+    },
+    {
+      "url": "https://www.theguardian.com/science/rss",
+      "category": "science",
+      "label": "Guardian Science"
+    },
+    {
+      "url": "https://www.theguardian.com/sport/rss",
+      "category": "sports",
+      "label": "Guardian Sport"
+    },
+    {
+      "url": "https://www.theguardian.com/commentisfree/rss",
+      "category": "opinion",
+      "label": "Guardian Opinion"
+    },
+    {
+      "url": "https://www.theguardian.com/culture/rss",
+      "category": "culture",
+      "label": "Guardian Culture"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Global News</title>
+    <link>https://globalnews.news</link>
+    <description>Global News delivers comprehensive, trusted coverage of world events, business, technology, politics, and culture.</description>
+    <language>en-US</language>
+    <copyright>Copyright 2026 Global News. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 15 May 2026 17:54:57 GMT</lastBuildDate>
+    <image>
+      <url>https://globalnews.news/images/og-default.jpg</url>
+      <title>Global News</title>
+      <link>https://globalnews.news</link>
+    </image>
+    <atom:link href="https://globalnews.news/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Breaking: Central Bank Announces Emergency Rate Decision Amid Market Volatility</title>
+      <link>https://globalnews.news/article/emergency-rate-decision</link>
+      <guid isPermaLink="true">https://globalnews.news/article/emergency-rate-decision</guid>
+      <description>The Federal Reserve has announced an emergency 50 basis point rate cut following a week of unprecedented market turbulence driven by geopolitical tensions.</description>
+      <author>Elena Rodriguez</author>
+      <category>Business</category>
+      <pubDate>Fri, 15 May 2026 06:30:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/market-turbulence.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Geopolitical Tensions Escalate as Diplomatic Talks Collapse in Eastern Europe</title>
+      <link>https://globalnews.news/article/diplomatic-talks-collapse</link>
+      <guid isPermaLink="true">https://globalnews.news/article/diplomatic-talks-collapse</guid>
+      <description>Peace negotiations have broken down amid mutual accusations, raising fears of a wider regional conflict and sending shockwaves through global markets.</description>
+      <author>Sarah Mitchell</author>
+      <category>World</category>
+      <pubDate>Fri, 15 May 2026 03:00:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/diplomatic-talks.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Global Climate Summit Reaches Historic Agreement on Emissions Reductions</title>
+      <link>https://globalnews.news/article/climate-summit-agreement</link>
+      <guid isPermaLink="true">https://globalnews.news/article/climate-summit-agreement</guid>
+      <description>World leaders have signed a landmark accord committing to a 60% reduction in carbon emissions by 2035, marking the most ambitious climate target in history.</description>
+      <author>Priya Patel</author>
+      <category>Climate</category>
+      <pubDate>Thu, 14 May 2026 08:00:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/climate-summit.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Revolutionary AI Model Achieves Breakthrough in Scientific Research</title>
+      <link>https://globalnews.news/article/ai-protein-breakthrough</link>
+      <guid isPermaLink="true">https://globalnews.news/article/ai-protein-breakthrough</guid>
+      <description>A new artificial intelligence system has demonstrated the ability to independently design novel proteins, opening possibilities for revolutionary drug discoveries.</description>
+      <author>James Chen</author>
+      <category>Technology</category>
+      <pubDate>Wed, 13 May 2026 10:00:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/ai-research.jpg" medium="image" />
+    </item>
+    <item>
+      <title>FDA Approves Groundbreaking Gene Therapy for Rare Childhood Disease</title>
+      <link>https://globalnews.news/article/gene-therapy-approval</link>
+      <guid isPermaLink="true">https://globalnews.news/article/gene-therapy-approval</guid>
+      <description>In a landmark decision, regulators have approved a first-of-its-kind gene therapy that could transform treatment for children with a rare genetic disorder.</description>
+      <author>Priya Patel</author>
+      <category>Health</category>
+      <pubDate>Tue, 12 May 2026 14:00:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/gene-therapy.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Global Markets Rally as Trade Deal Eliminates Tariffs Between Major Economies</title>
+      <link>https://globalnews.news/article/trade-deal-rally</link>
+      <guid isPermaLink="true">https://globalnews.news/article/trade-deal-rally</guid>
+      <description>Stock markets surged worldwide after the landmark US-EU trade agreement eliminated nearly all tariffs, potentially adding trillions to global GDP.</description>
+      <author>Elena Rodriguez</author>
+      <category>Business</category>
+      <pubDate>Mon, 11 May 2026 09:30:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/trade-deal.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Hubble Successor Unveils First Images, Revealing Unprecedented Views of Deep Space</title>
+      <link>https://globalnews.news/article/space-telescope-images</link>
+      <guid isPermaLink="true">https://globalnews.news/article/space-telescope-images</guid>
+      <description>The next-generation space telescope has released its first stunning images, showing galaxies and nebulae in extraordinary detail that surpasses even the Hubble.</description>
+      <author>James Chen</author>
+      <category>Science</category>
+      <pubDate>Sun, 10 May 2026 16:00:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/space-telescope.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Supreme Court Rules on Landmark Digital Privacy Case, Setting New Legal Precedent</title>
+      <link>https://globalnews.news/article/digital-privacy-ruling</link>
+      <guid isPermaLink="true">https://globalnews.news/article/digital-privacy-ruling</guid>
+      <description>The highest court has ruled that digital communications require a warrant for law enforcement access, reshaping privacy law for the modern era.</description>
+      <author>Marcus Williams</author>
+      <category>Politics</category>
+      <pubDate>Sat, 09 May 2026 11:00:00 GMT</pubDate>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://globalnews.news/images/articles/supreme-court.jpg" medium="image" />
+    </item>
+  </channel>
+</rss>
