@@ -17,12 +17,12 @@ export function TrendingBar({ articles }: TrendingBarProps) {
   if (articles.length === 0) return null
 
   return (
-    <section className="border-b border-border bg-secondary/50">
+    <section className="border-b border-border bg-secondary/30">
       <Container>
         <div className="flex items-stretch">
-          <div className="flex shrink-0 items-center gap-2 border-r border-border pr-4 py-3">
+          <div className="flex shrink-0 items-center gap-2.5 border-r border-border pr-5 py-3">
             <TrendingUp className="h-4 w-4 text-news-red" />
-            <span className="whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.12em]">
+            <span className="whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.15em]">
               Trending
             </span>
           </div>
@@ -34,9 +34,9 @@ export function TrendingBar({ articles }: TrendingBarProps) {
               <Link
                 key={article.slug}
                 href={`/article/${article.slug}`}
-                className="group flex shrink-0 items-center gap-2 border-r border-border px-4 py-3 transition-colors last:border-r-0 hover:bg-secondary"
+                className="group flex shrink-0 items-center gap-2.5 border-r border-border px-4 py-3 transition-colors last:border-r-0 hover:bg-secondary/60"
               >
-                <span className="font-headline text-lg font-black leading-none tabular-nums text-news-red/40">
+                <span className="font-headline text-lg font-black leading-none tabular-nums text-news-red/30">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="whitespace-nowrap text-xs font-medium transition-colors group-hover:text-news-red">
@@ -47,7 +47,7 @@ export function TrendingBar({ articles }: TrendingBarProps) {
           </div>
           <Link
             href="/breaking"
-            className="group ml-auto flex shrink-0 items-center gap-1 border-l border-border px-4 py-3 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
+            className="group ml-auto flex shrink-0 items-center gap-1 border-l border-border px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground transition-colors hover:text-foreground"
           >
             More
             <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />

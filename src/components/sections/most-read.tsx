@@ -13,7 +13,7 @@ export function MostRead({ articles }: MostReadProps) {
   if (articles.length === 0) return null
 
   return (
-    <section className="border-t border-border py-8 md:py-10 content-visibility-auto" style={{ containIntrinsicSize: "400px" }}>
+    <section className="py-10 md:py-14">
       <Container>
         <SectionTitle variant="featured">Most Read</SectionTitle>
         <div className="grid gap-0 divide-y divide-border md:grid-cols-2 md:divide-x md:divide-y-0 lg:grid-cols-4">
@@ -21,19 +21,19 @@ export function MostRead({ articles }: MostReadProps) {
             <Link
               key={article.slug}
               href={`/article/${article.slug}`}
-              className="group flex items-start gap-4 px-0 py-5 transition-colors hover:bg-secondary/50 md:px-5 md:first:pl-0 md:last:pr-0"
+              className="group relative flex items-start gap-4 px-0 py-5 transition-all hover:bg-secondary/40 md:px-6 md:first:pl-0 md:last:pr-0 md:hover:-translate-y-0.5"
             >
-              <span className="font-headline text-4xl font-black leading-none tabular-nums text-muted-foreground/15">
+              <span className="font-headline text-4xl font-black leading-none tabular-nums text-foreground/[0.08] md:text-5xl">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <div className="flex-1">
-                <span className="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-news-red">
+              <div className="flex-1 pt-1">
+                <span className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.15em] text-news-red">
                   {article.category}
                 </span>
-                <h3 className="font-headline text-sm font-bold leading-snug group-hover:underline md:text-base">
+                <h3 className="font-headline text-sm font-bold leading-snug group-hover:underline md:text-base/relaxed">
                   {article.title}
                 </h3>
-                <span className="mt-1.5 block text-xs text-muted-foreground">
+                <span className="mt-2 block text-xs text-muted-foreground">
                   {formatDateRelative(article.publishedAt)}
                 </span>
               </div>

@@ -15,13 +15,13 @@
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 9%;
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 0 0% 90.2%;
+    --input: 0 0% 90.2%;
     --ring: 0 0% 4%;
     --radius: 0.25rem;
   }
@@ -35,17 +35,17 @@
     --popover-foreground: 0 0% 93%;
     --primary: 0 0% 93%;
     --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 13%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 93%;
-    --muted: 0 0% 13%;
-    --muted-foreground: 0 0% 63%;
-    --accent: 0 0% 13%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 63.1%;
+    --accent: 0 0% 12%;
     --accent-foreground: 0 0% 93%;
-    --destructive: 0 63% 31%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 93%;
-    --border: 0 0% 13%;
-    --input: 0 0% 13%;
-    --ring: 0 0% 83%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 0 0% 83.1%;
   }
 }
 
@@ -60,7 +60,55 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
   ::selection {
-    @apply bg-foreground text-background;
+    @apply bg-foreground/10 text-foreground;
+  }
+  .dark ::selection {
+    @apply bg-foreground/15 text-foreground;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply relative border-t border-border;
+  }
+  .section-divider-accent {
+    @apply relative border-t-[3px] border-foreground;
+  }
+  .section-label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground;
+  }
+  .category-accent-world {
+    @apply border-l-2 border-news-blue;
+  }
+  .category-accent-business {
+    @apply border-l-2 border-news-amber;
+  }
+  .category-accent-technology {
+    @apply border-l-2 border-news-blue;
+  }
+  .category-accent-climate {
+    @apply border-l-2 border-news-green;
+  }
+  .category-accent-politics {
+    @apply border-l-2 border-news-red;
+  }
+  .category-accent-science {
+    @apply border-l-2 border-news-green;
+  }
+  .category-accent-culture {
+    @apply border-l-2 border-news-amber;
+  }
+  .category-accent-sports {
+    @apply border-l-2 border-news-blue;
+  }
+  .category-accent-opinion {
+    @apply border-l-2 border-news-red;
+  }
+  .category-accent-health {
+    @apply border-l-2 border-news-green;
   }
 }
 

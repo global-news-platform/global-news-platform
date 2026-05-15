@@ -31,7 +31,7 @@ export function InView({
           setVisible(false)
         }
       },
-      { rootMargin: "-48px" },
+      { rootMargin: "-48px 0px" },
     )
 
     observer.observe(el)
@@ -45,7 +45,8 @@ export function InView({
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(24px)",
-        transition: `opacity 0.5s ease-out ${delay}s, transform 0.5s ease-out ${delay}s`,
+        transition: `opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`,
+        willChange: "transform, opacity",
       }}
     >
       {children}

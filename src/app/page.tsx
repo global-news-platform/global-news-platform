@@ -103,15 +103,15 @@ export default function HomePage() {
         </InView>
       )}
 
-      {categorySections.length > 0 && (
+      {mostRead.length > 0 && (
         <InView delay={0.15}>
-          <CategoryGrid categories={categorySections} />
+          <MostRead articles={mostRead} />
         </InView>
       )}
 
-      {mostRead.length > 0 && (
+      {categorySections.length > 0 && (
         <InView delay={0.2}>
-          <MostRead articles={mostRead} />
+          <CategoryGrid categories={categorySections} />
         </InView>
       )}
 
