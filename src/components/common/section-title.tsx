@@ -34,7 +34,7 @@ export function SectionTitle({
           className="group block"
         >
           <div className="flex items-center justify-between border-t-[3px] border-foreground pt-4">
-            <h2 className="font-headline text-2xl font-bold leading-tight md:text-3xl">
+            <h2 className="font-headline text-2xl font-bold leading-tight tracking-tight md:text-3xl">
               {children}
             </h2>
             {href && (
@@ -50,8 +50,8 @@ export function SectionTitle({
           className="group block"
         >
           <div className="flex items-center gap-4 border-t border-border pt-4">
-            <span className="h-[3px] w-8 bg-news-red" />
-            <h2 className="font-headline text-lg font-bold leading-tight md:text-xl">
+            <span className="h-[3px] w-8 shrink-0 rounded-sm bg-news-red" />
+            <h2 className="font-headline text-lg font-bold leading-tight tracking-tight md:text-xl">
               {children}
             </h2>
             {href && (

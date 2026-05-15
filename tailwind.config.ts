@@ -11,7 +11,12 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.25rem",
+        lg: "1.5rem",
+        xl: "2rem",
+      },
       screens: {
         sm: "640px",
         md: "768px",
@@ -25,6 +30,19 @@ const config: Config = {
         sans: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
         serif: ["var(--font-merriweather)", "Georgia", "Times New Roman", "serif"],
         headline: ["var(--font-playfair)", "Georgia", "Times New Roman", "serif"],
+      },
+      fontSize: {
+        "2xs": ["0.625rem", { lineHeight: "0.875rem" }],
+        "xs": ["0.75rem", { lineHeight: "1rem" }],
+        "sm": ["0.8125rem", { lineHeight: "1.25rem" }],
+        "base": ["0.9375rem", { lineHeight: "1.5rem" }],
+        "lg": ["1.0625rem", { lineHeight: "1.625rem" }],
+        "xl": ["1.25rem", { lineHeight: "1.75rem" }],
+        "2xl": ["1.5rem", { lineHeight: "1.875rem" }],
+        "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        "4xl": ["2.25rem", { lineHeight: "2.75rem" }],
+        "5xl": ["2.75rem", { lineHeight: "3.25rem" }],
+        "6xl": ["3.5rem", { lineHeight: "4rem" }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -72,6 +90,11 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        card: "var(--card-shadow)",
+        "card-hover": "var(--card-shadow-hover)",
+        elevated: "var(--elevated-shadow)",
+      },
       keyframes: {
         "fade-in": {
           from: { opacity: "0" },
@@ -97,6 +120,18 @@ const config: Config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.7" },
         },
+        "live-pulse": {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.5", transform: "scale(1.15)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "slide-down": {
+          from: { opacity: "0", transform: "translateY(-8px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
@@ -105,6 +140,12 @@ const config: Config = {
         "scale-in": "scale-in 0.4s ease-out",
         marquee: "marquee 30s linear infinite",
         "pulse-soft": "pulse-soft 2s ease-in-out infinite",
+        "live-pulse": "live-pulse 1.5s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+        "slide-down": "slide-down 0.2s ease-out",
+      },
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
       },
       typography: {
         DEFAULT: {
