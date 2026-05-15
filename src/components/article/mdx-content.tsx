@@ -1,153 +1,76 @@
-import { MDXRemote } from "next-mdx-remote/rsc"
-import type { MDXComponents } from "mdx/types"
+import Image from "next/image"
 import Link from "next/link"
-import { OptimizedImage } from "@/components/common/optimized-image"
-
-const components: MDXComponents = {
-  h2: ({ children, id, ...props }) => (
-    <h2
-      id={id || String(children).toLowerCase().replace(/\s+/g, "-")}
-      className="group mt-10 mb-4 font-headline text-2xl font-bold leading-tight md:text-3xl"
-      {...props}
-    >
-      {children}
-    </h2>
-  ),
-  h3: ({ children, id, ...props }) => (
-    <h3
-      id={id || String(children).toLowerCase().replace(/\s+/g, "-")}
-      className="group mt-8 mb-3 font-headline text-xl font-bold leading-snug"
-      {...props}
-    >
-      {children}
-    </h3>
-  ),
-  h4: ({ children, ...props }) => (
-    <h4 className="mt-6 mb-2 font-headline text-lg font-bold" {...props}>
-      {children}
-    </h4>
-  ),
-  p: ({ children, ...props }) => (
-    <p className="mb-5 leading-[1.75] text-foreground/90 text-[17px] md:text-lg" {...props}>
-      {children}
-    </p>
-  ),
-  blockquote: ({ children, ...props }) => (
-    <blockquote
-      className="relative my-8 border-l-[3px] border-news-red pl-6 italic text-foreground/80"
-      {...props}
-    >
-      <span className="absolute -left-0.5 -top-3 font-headline text-5xl leading-none text-news-red/20" aria-hidden="true">
-        &ldquo;
-      </span>
-      <div className="text-lg md:text-xl">{children}</div>
-    </blockquote>
-  ),
-  a: ({ children, href, ...props }) => {
-    const isExternal = href?.startsWith("http")
-    if (isExternal) {
-      return (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-news-blue underline underline-offset-2 decoration-1 transition-colors hover:text-news-blue/80"
-          {...props}
-        >
-          {children}
-        </a>
-      )
-    }
-    return (
-      <Link
-        href={href || "#"}
-        className="text-news-blue underline underline-offset-2 decoration-1 transition-colors hover:text-news-blue/80"
-        {...props}
-      >
-        {children}
-      </Link>
-    )
-  },
-  ul: ({ children, ...props }) => (
-    <ul className="mb-5 ml-6 list-disc space-y-1.5 text-[17px] leading-relaxed md:text-lg" {...props}>
-      {children}
-    </ul>
-  ),
-  ol: ({ children, ...props }) => (
-    <ol className="mb-5 ml-6 list-decimal space-y-1.5 text-[17px] leading-relaxed md:text-lg" {...props}>
-      {children}
-    </ol>
-  ),
-  li: ({ children, ...props }) => (
-    <li className="text-foreground/90 marker:text-muted-foreground" {...props}>
-      {children}
-    </li>
-  ),
-  hr: ({ ...props }) => (
-    <hr className="my-10 border-border" {...props} />
-  ),
-  img: ({ alt, src, ...props }) => (
-    <figure className="my-8">
-      <div className="relative aspect-video overflow-hidden rounded-lg bg-muted">
-        <OptimizedImage
-          src={src || ""}
-          alt={alt || ""}
-          fill
-          loading="lazy"
-          sizes="(max-width: 768px) 100vw, 768px"
-          className="object-cover"
-        />
-      </div>
-      {alt && (
-        <figcaption className="mt-2 text-center text-sm text-muted-foreground">
-          {alt}
-        </figcaption>
-      )}
-    </figure>
-  ),
-  strong: ({ children, ...props }) => (
-    <strong className="font-bold text-foreground" {...props}>
-      {children}
-    </strong>
-  ),
-  em: ({ children, ...props }) => (
-    <em className="italic text-foreground/80" {...props}>
-      {children}
-    </em>
-  ),
-  code: ({ children, ...props }) => (
-    <code
-      className="rounded bg-secondary px-1.5 py-0.5 text-sm font-mono text-foreground"
-      {...props}
-    >
-      {children}
-    </code>
-  ),
-  pre: ({ children, ...props }) => (
-    <pre
-      className="my-6 overflow-x-auto rounded-lg bg-secondary p-4 text-sm"
-      {...props}
-    >
-      {children}
-    </pre>
-  ),
-}
+import { cn } from "@/lib/utils"
 
 interface MDXContentProps {
   content: string
+  className?: string
 }
 
-export function MDXContent({ content }: MDXContentProps) {
+export function MDXContent({ content, className }: MDXContentProps) {
+  // Parse mdx content manually, rendering basic markdown as styled HTML
+  const rendered = content
+    .split("\n\n")
+    .map((block) => {
+      // Images
+      const imgMatch = block.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
+      if (imgMatch) {
+        return `<figure class="my-8"><img src="${imgMatch[2]}" alt="${imgMatch[1]}" class="w-full rounded-lg" loading="lazy" /><figcaption class="mt-2 text-center text-[13px] text-muted-foreground">${imgMatch[1]}</figcaption></figure>`
+      }
+      // Links
+      const linkMatch = block.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+      if (linkMatch) {
+        return `<a href="${linkMatch[2]}" class="underline decoration-foreground/20 underline-offset-2 decoration-[1px] transition-colors hover:decoration-foreground/60">${linkMatch[1]}</a>`
+      }
+      // Blockquotes
+      if (block.startsWith("> ")) {
+        const lines = block.split("\n").map((l) => l.replace(/^>\s?/, "")).join("\n")
+        return `<blockquote class="border-l-[3px] border-foreground/20 pl-6 my-8 italic text-[17px] md:text-[19px] text-foreground/80 font-serif">${lines}</blockquote>`
+      }
+      // Headers
+      if (block.startsWith("### ")) {
+        return `<h3 class="font-serif text-xl md:text-2xl font-semibold mt-8 mb-3 text-foreground">${block.replace("### ", "")}</h3>`
+      }
+      if (block.startsWith("## ")) {
+        return `<h2 class="font-serif text-2xl md:text-3xl font-bold mt-12 mb-4 text-foreground">${block.replace("## ", "")}</h2>`
+      }
+      // Unordered list
+      if (block.split("\n").every((l) => l.startsWith("- "))) {
+        const items = block.split("\n").map((l) => `<li class="text-[16.5px] md:text-[18px] text-foreground/85 leading-[1.8]">${l.replace(/^- /, "")}</li>`).join("")
+        return `<ul class="mb-5 pl-6 space-y-2">${items}</ul>`
+      }
+      // Ordered list
+      if (block.split("\n").every((l) => /^\d+\.\s/.test(l))) {
+        const items = block.split("\n").map((l) => `<li class="text-[16.5px] md:text-[18px] text-foreground/85 leading-[1.8]">${l.replace(/^\d+\.\s/, "")}</li>`).join("")
+        return `<ol class="mb-5 pl-6 space-y-2">${items}</ol>`
+      }
+      // Horizontal rule
+      if (block === "---") {
+        return `<hr class="my-12 border-border" />`
+      }
+      // Paragraph
+      const processed = block
+        .split("\n")
+        .map((line) => {
+          if (line.startsWith("### ")) return `<h3 class="font-serif text-xl md:text-2xl font-semibold mt-8 mb-3 text-foreground">${line.replace("### ", "")}</h3>`
+          if (line.startsWith("## ")) return `<h2 class="font-serif text-2xl md:text-3xl font-bold mt-12 mb-4 text-foreground">${line.replace("## ", "")}</h2>`
+          if (line.startsWith("> ")) return `<blockquote class="border-l-[3px] border-foreground/20 pl-6 my-8 italic text-[17px] md:text-[19px] text-foreground/80 font-serif">${line.replace(/^>\s?/, "")}</blockquote>`
+          if (line.startsWith("#### ")) return `<h4 class="font-serif text-lg font-semibold mt-6 mb-2 text-foreground">${line.replace("#### ", "")}</h4>`
+          // inline image
+          const inlineImg = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
+          if (inlineImg) return `<figure class="my-8"><img src="${inlineImg[2]}" alt="${inlineImg[1]}" class="w-full rounded-lg" loading="lazy" /></figure>`
+          return line
+        })
+        .join("<br/>")
+
+      return `<p class="mb-5 leading-[1.8] text-[16.5px] md:text-[18px] text-foreground/85">${processed}</p>`
+    })
+    .join("\n")
+
   return (
-    <MDXRemote
-      source={content}
-      components={components as MDXComponents}
-      options={{
-        mdxOptions: {
-          remarkPlugins: [],
-          rehypePlugins: [],
-        },
-      }}
+    <div
+      className={cn("prose-article", className)}
+      dangerouslySetInnerHTML={{ __html: rendered }}
     />
   )
 }

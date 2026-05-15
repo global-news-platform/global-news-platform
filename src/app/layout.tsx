@@ -3,6 +3,7 @@ import { Inter, Merriweather, Playfair_Display } from "next/font/google"
 import { ThemeProvider } from "@/components/common/theme-provider"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { BackToTop } from "@/components/common/back-to-top"
 import { siteConfig } from "@/lib/constants"
 import "./globals.css"
 
@@ -163,6 +164,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <BackToTop />
           </div>
         </ThemeProvider>
       </body>

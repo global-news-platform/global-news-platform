@@ -4,40 +4,51 @@ import { cn } from "@/lib/utils"
 interface OptimizedImageProps {
   src: string
   alt: string
-  fill?: boolean
   width?: number
   height?: number
-  priority?: boolean
-  loading?: "lazy" | "eager"
-  sizes?: string
+  fill?: boolean
   className?: string
+  wrapperClassName?: string
+  priority?: boolean
+  sizes?: string
 }
 
 export function OptimizedImage({
   src,
   alt,
-  fill = false,
   width,
   height,
-  priority = false,
-  loading,
-  sizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw",
+  fill = false,
   className,
+  wrapperClassName,
+  priority = false,
+  sizes,
 }: OptimizedImageProps) {
   return (
-    <Image
-      src={src}
-      alt={alt}
-      fill={fill}
-      width={!fill ? width : undefined}
-      height={!fill ? height : undefined}
-      priority={priority}
-      loading={loading || (priority ? undefined : "lazy")}
-      sizes={sizes}
+    <div
       className={cn(
-        "object-cover transition-transform duration-500",
-        className,
+        "relative overflow-hidden bg-muted",
+        fill ? "h-full w-full" : "",
+        wrapperClassName,
       )}
-    />
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={!fill ? width : undefined}
+        height={!fill ? height : undefined}
+        fill={fill}
+        className={cn(
+          "object-cover transition-all duration-500 group-hover:scale-[1.02]",
+          className,
+        )}
+        priority={priority}
+        loading={priority ? undefined : "lazy"}
+        sizes={
+          sizes ||
+          "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        }
+      />
+    </div>
   )
 }

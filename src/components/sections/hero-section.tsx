@@ -1,7 +1,3 @@
-import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
-
-import { Container } from "@/components/common/container"
 import { ArticleCard } from "@/components/article/article-card"
 import type { ArticleLink } from "@/types"
 
@@ -12,42 +8,27 @@ interface HeroSectionProps {
 
 export function HeroSection({ featured, secondary }: HeroSectionProps) {
   return (
-    <section className="border-b border-border">
-      <Container className="py-5 sm:py-6 md:py-8 lg:py-10">
-        <div className="grid gap-5 sm:gap-6 lg:gap-8 lg:grid-cols-3">
+    <section className="py-6 md:py-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-6 xl:px-8">
+        <div className="grid gap-6 lg:grid-cols-3">
+          {/* Main hero */}
           <div className="lg:col-span-2">
             <ArticleCard article={featured} variant="hero" />
           </div>
 
-          <aside className="flex flex-col">
-            <div className="border-b border-border pb-2.5 sm:pb-3">
-              <div className="flex items-center gap-2">
-                <span className="h-3 w-0.5 rounded-full bg-news-red" />
-                <h2 className="section-label">More Top Stories</h2>
+          {/* Secondary */}
+          <div className="flex flex-col gap-5 border-t border-border pt-5 lg:border-none lg:pt-0">
+            {secondary.slice(0, 3).map((article, i) => (
+              <div key={article.slug}>
+                <ArticleCard article={article} variant="horizontal" />
+                {i < 2 && (
+                  <div className="mt-5 border-b border-border" />
+                )}
               </div>
-            </div>
-            <div className="flex-1 divide-y divide-border">
-              {secondary.slice(0, 3).map((article, index) => (
-                <ArticleCard
-                  key={article.slug}
-                  article={article}
-                  variant={index === 2 ? "sidebar" : "compact"}
-                  className={index === 2 ? "pt-3 sm:pt-3.5" : ""}
-                />
-              ))}
-            </div>
-            <div className="border-t border-border pt-2.5 sm:pt-3">
-              <Link
-                href="/breaking"
-                className="group inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-news-red transition-colors hover:text-news-red/80"
-              >
-                View all top stories
-                <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-            </div>
-          </aside>
+            ))}
+          </div>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

@@ -33,16 +33,18 @@ const config: Config = {
       },
       fontSize: {
         "2xs": ["0.625rem", { lineHeight: "0.875rem" }],
-        "xs": ["0.75rem", { lineHeight: "1rem" }],
-        "sm": ["0.8125rem", { lineHeight: "1.25rem" }],
-        "base": ["0.9375rem", { lineHeight: "1.5rem" }],
-        "lg": ["1.0625rem", { lineHeight: "1.625rem" }],
-        "xl": ["1.25rem", { lineHeight: "1.75rem" }],
-        "2xl": ["1.5rem", { lineHeight: "1.875rem" }],
-        "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        xs: ["0.75rem", { lineHeight: "1rem" }],
+        sm: ["0.8125rem", { lineHeight: "1.25rem" }],
+        base: ["0.9375rem", { lineHeight: "1.5rem" }],
+        lg: ["1.0625rem", { lineHeight: "1.625rem" }],
+        xl: ["1.25rem", { lineHeight: "1.75rem" }],
+        "2xl": ["1.5rem", { lineHeight: "1.9rem" }],
+        "3xl": ["1.875rem", { lineHeight: "2.3rem" }],
         "4xl": ["2.25rem", { lineHeight: "2.75rem" }],
-        "5xl": ["2.75rem", { lineHeight: "3.25rem" }],
-        "6xl": ["3.5rem", { lineHeight: "4rem" }],
+        "5xl": ["3rem", { lineHeight: "3.4rem" }],
+        "6xl": ["3.75rem", { lineHeight: "4.1rem" }],
+        "7xl": ["4.5rem", { lineHeight: "4.8rem" }],
+        "8xl": ["5.5rem", { lineHeight: "5.8rem" }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -78,11 +80,15 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        news: {
-          red: "#DC2626",
-          blue: "#1A56DB",
-          amber: "#F59E0B",
-          green: "#059669",
+        header: {
+          DEFAULT: "hsl(var(--header-bg))",
+        },
+        nav: {
+          DEFAULT: "hsl(var(--nav-bg))",
+        },
+        ticker: {
+          DEFAULT: "hsl(var(--ticker-bg))",
+          foreground: "hsl(var(--ticker-fg))",
         },
       },
       borderRadius: {
@@ -94,6 +100,8 @@ const config: Config = {
         card: "var(--card-shadow)",
         "card-hover": "var(--card-shadow-hover)",
         elevated: "var(--elevated-shadow)",
+        header: "0 1px 3px rgba(0,0,0,0.04)",
+        nav: "0 1px 2px rgba(0,0,0,0.03)",
       },
       keyframes: {
         "fade-in": {
@@ -124,7 +132,7 @@ const config: Config = {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
           "50%": { opacity: "0.5", transform: "scale(1.15)" },
         },
-        "shimmer": {
+        shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
@@ -153,8 +161,8 @@ const config: Config = {
             maxWidth: "72ch",
             color: "hsl(var(--foreground))",
             a: {
-              color: "hsl(var(--primary))",
-              "&:hover": { color: "hsl(var(--primary))" },
+              color: "hsl(var(--foreground))",
+              "&:hover": { opacity: "0.7" },
             },
             'h1, h2, h3, h4': {
               fontFamily: "var(--font-merriweather), Georgia, serif",
@@ -162,6 +170,10 @@ const config: Config = {
             },
           },
         },
+      },
+      maxWidth: {
+        reading: "65ch",
+        "reading-wide": "72ch",
       },
     },
   },

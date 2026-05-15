@@ -1,33 +1,18 @@
 import type { Metadata } from "next"
-import dynamic from "next/dynamic"
 
 import { HeroSection } from "@/components/sections/hero-section"
 import { InView } from "@/components/common/in-view"
-
-const BreakingNewsBanner = dynamic(() =>
-  import("@/components/sections/breaking-news-banner").then((m) => m.BreakingNewsBanner),
-  { ssr: true },
-)
-
-const TrendingBar = dynamic(() =>
-  import("@/components/sections/trending-bar").then((m) => m.TrendingBar),
-  { ssr: true },
-)
-
-const CategoryGrid = dynamic(() =>
-  import("@/components/sections/category-grid").then((m) => m.CategoryGrid),
-  { ssr: true },
-)
-
-const MostRead = dynamic(() =>
-  import("@/components/sections/most-read").then((m) => m.MostRead),
-  { ssr: true },
-)
-
-const LatestNews = dynamic(() =>
-  import("@/components/sections/latest-news").then((m) => m.LatestNews),
-  { ssr: true },
-)
+import { BreakingNewsBanner } from "@/components/sections/breaking-news-banner"
+import { TrendingBar } from "@/components/sections/trending-bar"
+import { MostRead } from "@/components/sections/most-read"
+import { LatestNews } from "@/components/sections/latest-news"
+import { CategoryGrid } from "@/components/sections/category-grid"
+import { OpinionSection } from "@/components/sections/opinion-section"
+import { EditorPicks } from "@/components/sections/editor-picks"
+import { NewsletterSection } from "@/components/sections/newsletter-section"
+import { GlobalAffairs } from "@/components/sections/global-affairs"
+import { TechnologySpotlight } from "@/components/sections/technology-spotlight"
+import { BusinessMarkets } from "@/components/sections/business-markets"
 
 import {
   getArticleLinks,
@@ -74,6 +59,20 @@ export default function HomePage() {
     .filter((a) => !a.breaking)
     .slice(0, 8)
 
+  const opinionArticles = articles.filter(
+    (a) => a.categorySlug === "opinion",
+  )
+  const editorPicks = articles.slice(0, 3)
+  const worldArticles = articles.filter(
+    (a) => a.categorySlug === "world",
+  )
+  const techArticles = articles.filter(
+    (a) => a.categorySlug === "technology",
+  )
+  const businessArticles = articles.filter(
+    (a) => a.categorySlug === "business",
+  )
+
   const websiteSchema = generateWebsiteSchema()
   const organizationSchema = generateOrganizationSchema()
 
@@ -103,9 +102,21 @@ export default function HomePage() {
         </InView>
       )}
 
+      {worldArticles.length > 0 && (
+        <InView delay={0.12}>
+          <GlobalAffairs articles={worldArticles} />
+        </InView>
+      )}
+
       {mostRead.length > 0 && (
         <InView delay={0.15}>
           <MostRead articles={mostRead} />
+        </InView>
+      )}
+
+      {techArticles.length > 0 && (
+        <InView delay={0.18}>
+          <TechnologySpotlight articles={techArticles} />
         </InView>
       )}
 
@@ -115,11 +126,33 @@ export default function HomePage() {
         </InView>
       )}
 
+      {businessArticles.length > 0 && (
+        <InView delay={0.22}>
+          <BusinessMarkets articles={businessArticles} />
+        </InView>
+      )}
+
       {latestArticles.length > 0 && (
         <InView delay={0.25}>
           <LatestNews articles={latestArticles} />
         </InView>
       )}
+
+      {editorPicks.length > 0 && (
+        <InView delay={0.28}>
+          <EditorPicks articles={editorPicks} />
+        </InView>
+      )}
+
+      {opinionArticles.length > 0 && (
+        <InView delay={0.3}>
+          <OpinionSection articles={opinionArticles} />
+        </InView>
+      )}
+
+      <InView delay={0.35}>
+        <NewsletterSection />
+      </InView>
     </>
   )
 }

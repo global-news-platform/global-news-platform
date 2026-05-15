@@ -1,26 +1,15 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import dynamic from "next/dynamic"
 
 import { ArticleHero } from "@/components/article/article-hero"
 import { TagCloud } from "@/components/article/tag-cloud"
 import { AuthorCard } from "@/components/article/author-card"
 import { ArticleNav } from "@/components/article/article-nav"
 import { RelatedArticles } from "@/components/article/related-articles"
-import { InView } from "@/components/common/in-view"
-
-const MDXContent = dynamic(() =>
-  import("@/components/article/mdx-content").then((m) => m.MDXContent),
-  { ssr: true },
-)
-
-const ShareButtons = dynamic(() =>
-  import("@/components/article/share-buttons").then((m) => m.ShareButtons),
-)
-
-const ReadingProgressClient = dynamic(() =>
-  import("@/components/article/reading-progress-client").then((m) => m.ReadingProgressClient),
-)
+import { MDXContent } from "@/components/article/mdx-content"
+import { ShareButtons } from "@/components/article/share-buttons"
+import { ReadingProgressClient } from "@/components/article/reading-progress-client"
+import { Container } from "@/components/common/container"
 
 import {
   getArticleBySlug,
@@ -108,55 +97,57 @@ export default async function ArticlePage({
         }}
       />
 
-      <ArticleHero article={article} />
+      <Container size="sm" className="py-8 md:py-12">
+        <div className="mx-auto flex max-w-reading-wide justify-center gap-10">
+          {/* Sticky share sidebar */}
+          <aside className="sticky top-24 hidden h-fit lg:block">
+            <ShareButtons
+              url={articleUrl}
+              title={article.title}
+              variant="sidebar"
+            />
+          </aside>
 
-      <div className="mx-auto flex max-w-6xl justify-center gap-8 px-4 py-8 md:px-6 md:py-10 lg:py-12">
-        <ShareButtons
-          url={articleUrl}
-          title={article.title}
-          variant="sidebar"
-        />
+          {/* Main content */}
+          <article className="min-w-0 flex-1">
+            <ArticleHero article={article} />
 
-        <article className="min-w-0 flex-1 max-w-3xl">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <MDXContent content={article.content} />
-          </div>
+            <div className="mt-10">
+              <MDXContent content={article.content} className="max-w-reading" />
+            </div>
 
-          <InView>
-            <TagCloud tags={article.tags} />
-          </InView>
+            <div className="mt-10 space-y-6">
+              <TagCloud tags={article.tags} />
+            </div>
 
-          {authorProfile && (
-            <InView delay={0.1}>
-              <div className="mt-8">
+            {authorProfile && (
+              <div className="mt-10">
                 <AuthorCard author={authorProfile} />
               </div>
-            </InView>
-          )}
+            )}
 
-          <InView delay={0.15}>
-            <div className="mt-6 border-t border-border pt-6 lg:hidden">
+            <div className="mt-8 lg:hidden">
               <ShareButtons
                 url={articleUrl}
                 title={article.title}
-                excerpt={article.excerpt}
+                variant="inline"
               />
             </div>
-          </InView>
-        </article>
-      </div>
 
-      {(prev || next) && (
-        <InView delay={0.1}>
-          <ArticleNav prev={prev} next={next} />
-        </InView>
-      )}
+            {(prev || next) && (
+              <div className="mt-10">
+                <ArticleNav prev={prev} next={next} />
+              </div>
+            )}
+          </article>
+        </div>
 
-      {related.length > 0 && (
-        <InView delay={0.15}>
-          <RelatedArticles articles={related} />
-        </InView>
-      )}
+        {related.length > 0 && (
+          <div className="mt-12">
+            <RelatedArticles articles={related} />
+          </div>
+        )}
+      </Container>
     </>
   )
 }

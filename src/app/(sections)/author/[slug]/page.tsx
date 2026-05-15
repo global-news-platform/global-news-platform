@@ -4,7 +4,6 @@ import { notFound } from "next/navigation"
 import { Container } from "@/components/common/container"
 import { ArticleCard } from "@/components/article/article-card"
 import { Breadcrumbs } from "@/components/article/breadcrumbs"
-import { InView } from "@/components/common/in-view"
 
 import { getArticlesByAuthor, getAuthorBySlug, getAllArticles } from "@/lib/articles"
 import { authors } from "@/data/authors/authors"
@@ -66,7 +65,7 @@ export default async function AuthorPage({
         <Container>
           <Breadcrumbs
             items={[
-              { label: "Authors", href: "/" },
+              { label: "Home", href: "/" },
               { label: author.name },
             ]}
           />
@@ -123,15 +122,17 @@ export default async function AuthorPage({
 
       <div className="py-8 md:py-12">
         <Container>
-          <h2 className="mb-6 font-headline text-lg font-bold uppercase tracking-wider">
+          <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
             Articles by {author.name}
           </h2>
           {articles.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {articles.map((article, index) => (
-                <InView key={article.slug} delay={Math.min(index * 0.05, 0.3)}>
-                  <ArticleCard article={article} variant="default" />
-                </InView>
+              {articles.map((article) => (
+                <ArticleCard
+                  key={article.slug}
+                  article={article}
+                  variant="default"
+                />
               ))}
             </div>
           ) : (

@@ -14,11 +14,11 @@ export const metadata: Metadata = generateMetadata({
 export default function AboutPage() {
   return (
     <div className="py-8 md:py-12">
-      <Container className="max-w-3xl">
+      <Container size="sm">
         <h1 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
           About {siteConfig.name}
         </h1>
-        <div className="mt-2 h-1 w-16 bg-primary" />
+        <div className="mt-2 h-1 w-16 bg-foreground" />
 
         <div className="mt-8 space-y-8 text-base leading-relaxed text-foreground/90">
           <section>
@@ -56,7 +56,7 @@ export default function AboutPage() {
                   desc: "We hold ourselves to the same standards of transparency we demand from those we cover. Our corrections policy is publicly documented.",
                 },
               ].map((item) => (
-                <li key={item.title} className="border-l-2 border-border pl-4">
+                <li key={item.title} className="border-l-[3px] border-border pl-4">
                   <strong className="font-semibold">{item.title}:</strong> {item.desc}
                 </li>
               ))}
@@ -79,7 +79,7 @@ export default function AboutPage() {
               Have a tip, feedback, or inquiry? Reach out to our team at{" "}
               <a
                 href={`mailto:contact@${new URL(siteConfig.url).hostname}`}
-                className="underline underline-offset-2 hover:text-primary"
+                className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60"
               >
                 contact@{new URL(siteConfig.url).hostname}
               </a>

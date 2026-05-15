@@ -1,6 +1,7 @@
 "use client"
 
-import { useRef, useState, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
+import { cn } from "@/lib/utils"
 
 interface InViewProps {
   children: React.ReactNode
@@ -16,7 +17,7 @@ export function InView({
   once = true,
 }: InViewProps) {
   const ref = useRef<HTMLDivElement>(null)
-  const [visible, setVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const el = ref.current
@@ -25,29 +26,29 @@ export function InView({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true)
+          setTimeout(() => setIsVisible(true), delay * 1000)
           if (once) observer.unobserve(el)
         } else if (!once) {
-          setVisible(false)
+          setIsVisible(false)
         }
       },
-      { rootMargin: "-48px 0px" },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     )
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [once])
+  }, [delay, once])
 
   return (
     <div
       ref={ref}
-      className={className}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(24px)",
-        transition: `opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`,
-        willChange: "transform, opacity",
-      }}
+      className={cn(
+        "transition-all duration-700 ease-out-expo",
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "translate-y-6 opacity-0",
+        className,
+      )}
     >
       {children}
     </div>

@@ -1,29 +1,29 @@
 "use client"
 
-import { Twitter, Facebook, Linkedin, Link, Mail, Check } from "lucide-react"
+import { Twitter, Linkedin, Link2, Mail, Facebook } from "lucide-react"
+import { cn } from "@/lib/utils"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
+import { siteConfig } from "@/lib/constants"
 
 interface ShareButtonsProps {
   url: string
   title: string
-  excerpt?: string
   variant?: "inline" | "sidebar"
 }
 
 export function ShareButtons({
   url,
   title,
-  excerpt,
   variant = "inline",
 }: ShareButtonsProps) {
-  const { copy, copied } = useCopyToClipboard()
-  const encodedUrl = encodeURIComponent(url)
+  const { copied, copy } = useCopyToClipboard()
+  const fullUrl = `${siteConfig.url}${url}`
+  const encodedUrl = encodeURIComponent(fullUrl)
   const encodedTitle = encodeURIComponent(title)
-  const encodedExcerpt = encodeURIComponent(excerpt || title)
 
-  const links = [
+  const shareLinks = [
     {
-      name: "X / Twitter",
+      name: "Twitter",
       href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
       icon: Twitter,
     },
@@ -39,82 +39,78 @@ export function ShareButtons({
     },
     {
       name: "Email",
-      href: `mailto:?subject=${encodedTitle}&body=${encodedExcerpt}%0A%0A${encodedUrl}`,
+      href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
       icon: Mail,
     },
   ]
 
   if (variant === "sidebar") {
     return (
-      <aside className="sticky top-24 flex-col items-center gap-3 hidden lg:flex">
-        <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">
+      <div className="flex flex-col items-center gap-3">
+        <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
           Share
         </span>
         <div className="flex flex-col gap-2">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border transition-colors hover:bg-secondary hover:text-foreground"
-              aria-label={`Share on ${link.name}`}
-            >
-              <link.icon className="h-4 w-4" />
-            </a>
-          ))}
+          {shareLinks.map((link) => {
+            const Icon = link.icon
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                aria-label={`Share on ${link.name}`}
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            )
+          })}
           <button
-            onClick={() => copy(url)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-border transition-colors hover:bg-secondary hover:text-foreground"
+            onClick={() => copy(fullUrl)}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             aria-label="Copy link"
           >
             {copied ? (
-              <Check className="h-4 w-4 text-green-500" />
+              <span className="text-[10px] font-medium">OK</span>
             ) : (
-              <Link className="h-4 w-4" />
+              <Link2 className="h-4 w-4" />
             )}
           </button>
         </div>
-        <div className="h-16 w-px bg-border" />
-      </aside>
+      </div>
     )
   }
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-        Share
-      </span>
-      <div className="flex items-center gap-1.5">
-        {links.slice(0, 4).map((link) => (
+      <span className="text-[12px] text-muted-foreground">Share:</span>
+      {shareLinks.map((link) => {
+        const Icon = link.icon
+        return (
           <a
             key={link.name}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-border transition-colors hover:bg-secondary"
+            className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
             aria-label={`Share on ${link.name}`}
           >
-            <link.icon className="h-3.5 w-3.5" />
+            <Icon className="h-4 w-4" />
           </a>
-        ))}
-        <button
-          onClick={() => copy(url)}
-          className="relative flex h-8 w-8 items-center justify-center rounded-full border border-border transition-colors hover:bg-secondary"
-          aria-label="Copy link"
-        >
-          {copied ? (
-            <Check className="h-3.5 w-3.5 text-green-500" />
-          ) : (
-            <Link className="h-3.5 w-3.5" />
-          )}
-          {copied && (
-            <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-foreground px-2 py-1 text-[10px] text-background">
-              Copied!
-            </span>
-          )}
-        </button>
-      </div>
+        )
+      })}
+      <button
+        onClick={() => copy(fullUrl)}
+        className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
+        aria-label="Copy link"
+      >
+        {copied ? (
+          <span className="text-[10px] font-medium">Copied!</span>
+        ) : (
+          <Link2 className="h-4 w-4" />
+        )}
+      </button>
     </div>
   )
 }

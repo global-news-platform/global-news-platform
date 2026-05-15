@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
 import type { ArticleLink } from "@/types"
 
 interface ArticleNavProps {
@@ -12,43 +11,45 @@ export function ArticleNav({ prev, next }: ArticleNavProps) {
   if (!prev && !next) return null
 
   return (
-    <section className="border-t border-border py-8">
-      <div className="mx-auto max-w-3xl">
-        <div className="grid grid-cols-2 gap-4">
-          {prev ? (
-            <Link
-              href={`/article/${prev.slug}`}
-              className="group flex flex-col gap-1.5 rounded-lg border border-border p-4 transition-colors hover:bg-secondary"
-            >
-              <span className="flex items-center gap-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                <ChevronLeft className="h-3 w-3" />
+    <nav className="border-t border-border pt-8">
+      <div className="grid gap-4 sm:grid-cols-2">
+        {prev ? (
+          <Link
+            href={`/article/${prev.slug}`}
+            className="group flex items-start gap-3 rounded-lg border border-border p-4 transition-colors hover:bg-secondary"
+          >
+            <ChevronLeft className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+            <div>
+              <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
                 Previous
               </span>
-              <span className="font-headline text-sm font-bold leading-snug group-hover:underline">
+              <p className="mt-1 text-sm font-medium leading-snug">
                 {prev.title}
-              </span>
-            </Link>
-          ) : (
-            <div />
-          )}
-          {next ? (
-            <Link
-              href={`/article/${next.slug}`}
-              className="group flex flex-col gap-1.5 rounded-lg border border-border p-4 text-right transition-colors hover:bg-secondary"
-            >
-              <span className="flex items-center justify-end gap-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+              </p>
+            </div>
+          </Link>
+        ) : (
+          <div />
+        )}
+        {next ? (
+          <Link
+            href={`/article/${next.slug}`}
+            className="group flex items-start gap-3 rounded-lg border border-border p-4 text-right transition-colors hover:bg-secondary sm:text-right"
+          >
+            <div className="flex-1">
+              <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
                 Next
-                <ChevronRight className="h-3 w-3" />
               </span>
-              <span className="font-headline text-sm font-bold leading-snug group-hover:underline">
+              <p className="mt-1 text-sm font-medium leading-snug">
                 {next.title}
-              </span>
-            </Link>
-          ) : (
-            <div />
-          )}
-        </div>
+              </p>
+            </div>
+            <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+          </Link>
+        ) : (
+          <div />
+        )}
       </div>
-    </section>
+    </nav>
   )
 }

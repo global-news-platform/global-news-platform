@@ -1,9 +1,7 @@
 import Link from "next/link"
-import { Calendar, Clock } from "lucide-react"
-
-import { Breadcrumbs } from "@/components/article/breadcrumbs"
 import { OptimizedImage } from "@/components/common/optimized-image"
 import { formatDate } from "@/lib/utils"
+import { categories } from "@/lib/constants"
 import type { ArticleMeta } from "@/types"
 
 interface ArticleHeroProps {
@@ -11,81 +9,84 @@ interface ArticleHeroProps {
 }
 
 export function ArticleHero({ article }: ArticleHeroProps) {
-  return (
-    <section className="border-b border-border bg-gradient-to-b from-secondary/40 to-background">
-      <div className="mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12 lg:py-16">
-        <Breadcrumbs
-          items={[
-            { label: article.category, href: `/category/${article.categorySlug}` },
-            { label: article.title },
-          ]}
-        />
+  const categoryName = categories.find((c) => c.slug === article.categorySlug)?.name || article.category
 
+  return (
+    <header className="relative">
+      {/* Breadcrumbs */}
+      <nav className="mb-4 flex items-center gap-2 text-[12px] text-muted-foreground">
+        <Link href="/" className="transition-colors hover:text-foreground">
+          Home
+        </Link>
+        <span>/</span>
         <Link
           href={`/category/${article.categorySlug}`}
-          className="mb-4 inline-block"
+          className="transition-colors hover:text-foreground"
         >
-          <span className="inline-block rounded-sm bg-news-red px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white transition-opacity hover:opacity-90">
-            {article.category}
-          </span>
+          {categoryName}
         </Link>
+        <span>/</span>
+        <span className="text-foreground/60">{article.title}</span>
+      </nav>
 
-        <h1 className="font-headline text-3xl font-black leading-tight md:text-4xl lg:text-5xl">
-          {article.title}
-        </h1>
-
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground md:text-xl">
-          {article.excerpt}
-        </p>
-
-        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-          <Link
-            href={`/author/${article.authorSlug}`}
-            className="group flex items-center gap-2 font-medium text-foreground"
-          >
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-secondary text-xs font-bold text-muted-foreground group-hover:text-foreground">
-              {article.author.charAt(0)}
-            </span>
-            <span className="group-hover:underline">{article.author}</span>
-          </Link>
-          <span className="hidden h-1 w-1 rounded-full bg-border md:block" />
-          <span className="flex items-center gap-1.5">
-            <Calendar className="h-3.5 w-3.5" />
-            {formatDate(article.publishedAt)}
-          </span>
-          {article.updatedAt && (
-            <>
-              <span className="h-1 w-1 rounded-full bg-border" />
-              <span className="text-xs">Updated {formatDate(article.updatedAt)}</span>
-            </>
-          )}
-          <span className="h-1 w-1 rounded-full bg-border" />
-          <span className="flex items-center gap-1.5">
-            <Clock className="h-3.5 w-3.5" />
-            {article.readingTime} min read
-          </span>
-        </div>
+      {/* Category badge */}
+      <div className="mb-4">
+        <Link
+          href={`/category/${article.categorySlug}`}
+          className="inline-block rounded bg-foreground/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:bg-foreground/10"
+        >
+          {categoryName}
+        </Link>
       </div>
 
+      {/* Title */}
+      <h1 className="font-headline text-3xl font-bold leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
+        {article.title}
+      </h1>
+
+      {/* Excerpt */}
+      <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+        {article.excerpt}
+      </p>
+
+      {/* Meta */}
+      <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+        <Link
+          href={`/author/${article.authorSlug}`}
+          className="font-medium text-foreground transition-colors hover:text-muted-foreground"
+        >
+          {article.author}
+        </Link>
+        <span className="text-muted-foreground/40">&middot;</span>
+        <time dateTime={article.publishedAt}>
+          {formatDate(article.publishedAt)}
+        </time>
+        <span className="text-muted-foreground/40">&middot;</span>
+        <span>{article.readingTime} min read</span>
+        {article.updatedAt && (
+          <>
+            <span className="text-muted-foreground/40">&middot;</span>
+            <span className="text-muted-foreground/60">
+              Updated {formatDate(article.updatedAt)}
+            </span>
+          </>
+        )}
+      </div>
+
+      {/* Image */}
       {article.image && (
-        <div className="mx-auto max-w-5xl px-4 pb-8 md:px-6 md:pb-12">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-muted">
-            <OptimizedImage
-              src={article.image}
-              alt={article.imageAlt || article.title}
-              fill
-              priority
-              sizes="(max-width: 1280px) 100vw, 1200px"
-              className="object-cover"
-            />
-          </div>
-          {article.imageAlt && (
-            <p className="mt-2 text-center text-xs text-muted-foreground">
-              {article.imageAlt}
-            </p>
-          )}
+        <div className="mt-8 overflow-hidden rounded-lg">
+          <OptimizedImage
+            src={article.image}
+            alt={article.imageAlt || article.title}
+            width={1200}
+            height={675}
+            className="aspect-[16/9] w-full object-cover"
+            priority
+            sizes="100vw"
+          />
         </div>
       )}
-    </section>
+    </header>
   )
 }

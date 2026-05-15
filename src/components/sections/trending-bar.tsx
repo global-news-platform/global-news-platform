@@ -1,10 +1,6 @@
-"use client"
-
 import Link from "next/link"
-import { TrendingUp, ArrowRight } from "lucide-react"
-import { useRef } from "react"
-
-import { Container } from "@/components/common/container"
+import { Flame, ArrowRight } from "lucide-react"
+import { SectionTitle } from "@/components/common/section-title"
 import type { ArticleLink } from "@/types"
 
 interface TrendingBarProps {
@@ -12,48 +8,38 @@ interface TrendingBarProps {
 }
 
 export function TrendingBar({ articles }: TrendingBarProps) {
-  const scrollRef = useRef<HTMLDivElement>(null)
-
   if (articles.length === 0) return null
 
   return (
-    <section className="border-b border-border bg-secondary/40">
-      <Container>
-        <div className="flex items-stretch">
-          <div className="flex shrink-0 items-center gap-2 border-r border-border pr-3 py-2.5 sm:gap-2.5 sm:pr-5 sm:py-3">
-            <TrendingUp className="h-3.5 w-3.5 text-news-red sm:h-4 sm:w-4" />
-            <span className="whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.18em] sm:text-[11px]">
-              Trending
-            </span>
-          </div>
-          <div
-            ref={scrollRef}
-            className="flex items-center gap-0 overflow-x-auto scrollbar-hide scrollbar-thin"
-          >
-            {articles.map((article, index) => (
-              <Link
-                key={article.slug}
-                href={`/article/${article.slug}`}
-                className="group flex shrink-0 items-center gap-2 border-r border-border px-3 py-2.5 transition-colors last:border-r-0 hover:bg-secondary/60 sm:gap-3 sm:px-4 sm:py-3"
-              >
-                <span className="font-headline text-base font-black leading-none tabular-nums text-news-red/25 group-hover:text-news-red/40 transition-colors sm:text-lg">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="whitespace-nowrap text-xs font-medium transition-colors group-hover:text-news-red">
+    <section className="border-y border-border bg-secondary/30 py-5 md:py-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-6 xl:px-8">
+        <SectionTitle
+          label="Trending"
+          variant="default"
+          className="mb-4"
+        />
+        <div className="flex gap-6 overflow-x-auto scrollbar-hide">
+          {articles.map((article, i) => (
+            <Link
+              key={article.slug}
+              href={`/article/${article.slug}`}
+              className="group flex shrink-0 items-start gap-4"
+            >
+              <span className="font-headline text-4xl font-bold leading-none text-foreground/10">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div className="max-w-[220px]">
+                <h3 className="text-sm font-semibold leading-snug transition-colors group-hover:text-muted-foreground">
                   {article.title}
+                </h3>
+                <span className="mt-1.5 block text-[11px] text-muted-foreground">
+                  {article.readingTime} min read
                 </span>
-              </Link>
-            ))}
-          </div>
-          <Link
-            href="/breaking"
-            className="group ml-auto flex shrink-0 items-center gap-1 border-l border-border px-3 py-2.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground sm:gap-1.5 sm:px-4 sm:py-3 sm:text-[11px]"
-          >
-            More
-            <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
-          </Link>
+              </div>
+            </Link>
+          ))}
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

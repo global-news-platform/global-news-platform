@@ -1,30 +1,27 @@
 "use client"
 
-import { Container } from "@/components/common/container"
-import { Button } from "@/components/ui/button"
-
 export default function Error({
+  error,
   reset,
 }: {
   error: Error & { digest?: string }
   reset: () => void
 }) {
   return (
-    <div className="flex min-h-[50vh] items-center justify-center py-20">
-      <Container className="text-center">
-        <h1 className="font-headline text-8xl font-black text-muted-foreground/20">
-          500
-        </h1>
-        <h2 className="mt-4 font-headline text-2xl font-bold">
-          Something went wrong
-        </h2>
+    <div className="flex min-h-[60vh] items-center justify-center px-4">
+      <div className="text-center">
+        <h1 className="font-headline text-6xl font-bold">500</h1>
+        <h2 className="mt-4 text-xl font-semibold">Something went wrong</h2>
         <p className="mt-2 text-muted-foreground">
           An unexpected error occurred. Please try again.
         </p>
-        <Button onClick={reset} className="mt-6">
+        <button
+          onClick={reset}
+          className="mt-6 rounded bg-foreground px-6 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+        >
           Try Again
-        </Button>
-      </Container>
+        </button>
+      </div>
     </div>
   )
 }

@@ -2,12 +2,10 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 
 import { Container } from "@/components/common/container"
-import { SectionTitle } from "@/components/common/section-title"
 import { ArticleCard } from "@/components/article/article-card"
-import { InView } from "@/components/common/in-view"
 import { Breadcrumbs } from "@/components/article/breadcrumbs"
 
-import { getArticlesByCategory, getArticleLinks, getAllArticles } from "@/lib/articles"
+import { getArticlesByCategory, getArticleLinks } from "@/lib/articles"
 import { categories } from "@/lib/constants"
 import {
   absoluteUrl,
@@ -49,7 +47,7 @@ export default async function CategoryPage({
   if (!category) notFound()
 
   const articles = getArticlesByCategory(slug)
-  const allArticles = getArticleLinks().filter(
+  const otherArticles = getArticleLinks().filter(
     (a) => a.categorySlug !== slug,
   )
 
@@ -87,7 +85,7 @@ export default async function CategoryPage({
               { label: category.name },
             ]}
           />
-          <div className="border-b-2 border-foreground pb-4">
+          <div className="border-b-[3px] border-foreground pb-4">
             <h1 className="font-headline text-3xl font-bold md:text-4xl">
               {category.name}
             </h1>
@@ -98,21 +96,32 @@ export default async function CategoryPage({
 
       <div className="py-8 md:py-12">
         <Container>
-          {articles.length > 0 && (
-            <InView>
-              <div className="mb-10">
-                <ArticleCard article={articles[0]} variant="featured" />
+          {articles.length > 0 ? (
+            <div className="space-y-10">
+              {/* Featured */}
+              <div className="grid gap-8 md:grid-cols-2">
+                <div className="md:col-span-2 lg:col-span-1">
+                  <ArticleCard article={articles[0]} variant="featured" />
+                </div>
+                {articles.slice(1, 3).map((article) => (
+                  <div key={article.slug}>
+                    <ArticleCard article={article} variant="horizontal" />
+                  </div>
+                ))}
               </div>
-            </InView>
-          )}
 
-          {articles.length > 1 ? (
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {articles.slice(1).map((article, index) => (
-                <InView key={article.slug} delay={Math.min(index * 0.05, 0.3)}>
-                  <ArticleCard article={article} />
-                </InView>
-              ))}
+              {/* Grid */}
+              {articles.length > 3 && (
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {articles.slice(3).map((article) => (
+                    <ArticleCard
+                      key={article.slug}
+                      article={article}
+                      variant="default"
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           ) : (
             <div className="py-20 text-center">
@@ -122,12 +131,14 @@ export default async function CategoryPage({
             </div>
           )}
 
-          {allArticles.length > 0 && (
-            <div className="mt-16">
-              <SectionTitle>More News</SectionTitle>
+          {otherArticles.length > 0 && (
+            <div className="mt-16 border-t border-border pt-10">
+              <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
+                More News
+              </h2>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {allArticles.slice(0, 4).map((article) => (
-                  <ArticleCard key={article.slug} article={article} />
+                {otherArticles.slice(0, 4).map((article) => (
+                  <ArticleCard key={article.slug} article={article} variant="default" />
                 ))}
               </div>
             </div>

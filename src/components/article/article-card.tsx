@@ -1,9 +1,11 @@
-import Link from "next/link"
-import { Calendar, Clock } from "lucide-react"
+"use client"
 
-import type { ArticleLink } from "@/types"
-import { formatDateRelative } from "@/lib/utils"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
+import { formatDateRelative } from "@/lib/utils"
+import { OptimizedImage } from "@/components/common/optimized-image"
+import { categories } from "@/lib/constants"
+import type { ArticleLink } from "@/types"
 
 interface ArticleCardProps {
   article: ArticleLink
@@ -15,60 +17,61 @@ interface ArticleCardProps {
     | "horizontal"
     | "numbered"
     | "sidebar"
-  number?: number
-  className?: string
+    | "large"
+  index?: number
 }
 
-export function ArticleCard({
-  article,
-  variant = "default",
-  number,
-  className,
-}: ArticleCardProps) {
+const categoryColors: Record<string, string> = {
+  world: "bg-blue-500",
+  politics: "bg-red-500",
+  business: "bg-amber-500",
+  technology: "bg-purple-500",
+  science: "bg-cyan-500",
+  health: "bg-emerald-500",
+  climate: "bg-emerald-500",
+  culture: "bg-amber-500",
+  sports: "bg-blue-500",
+  opinion: "bg-red-500",
+}
+
+export function ArticleCard({ article, variant = "default", index }: ArticleCardProps) {
+  const catColor = categoryColors[article.categorySlug] || "bg-foreground"
+  const categoryName = categories.find((c) => c.slug === article.categorySlug)?.name || article.category
+
   if (variant === "hero") {
     return (
       <Link
         href={`/article/${article.slug}`}
-        className={cn("group relative block overflow-hidden bg-black rounded-sm", className)}
+        className="group relative block overflow-hidden rounded-lg bg-card"
       >
-        <div className="relative aspect-[4/3] overflow-hidden bg-muted sm:aspect-[16/9] lg:aspect-[21/9]">
-          {article.image && (
-            <img
-              src={article.image}
-              alt={article.title}
-              className="h-full w-full object-cover transition-transform duration-1000 ease-out-expo group-hover:scale-105"
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 via-40% to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
+        <div className="aspect-[16/10] overflow-hidden">
+          <OptimizedImage
+            src={article.image || "/images/placeholder.svg"}
+            alt={article.title}
+            fill
+            className="transition-transform duration-700 group-hover:scale-[1.03]"
+            sizes="(max-width: 768px) 100vw, 60vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-8 lg:p-10 xl:p-12">
-          <div className="mb-2 inline-flex items-center gap-1.5 rounded-sm bg-news-red px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-white shadow-sm sm:px-3 sm:py-1 sm:text-[11px]">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/70" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
+        <div className="absolute bottom-0 p-5 md:p-8">
+          <div className="mb-3 flex items-center gap-2.5">
+            <span className="rounded bg-white/20 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+              {categoryName}
             </span>
-            <span className="hidden sm:inline">{article.category}</span>
-            <span className="sm:hidden">Live</span>
+            <span className="text-[12px] text-white/70">
+              {article.readingTime} min read
+            </span>
           </div>
-          <h3 className="font-headline text-xl font-bold leading-tight text-white sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-4xl text-balance">
+          <h2 className="font-headline text-xl font-bold leading-tight text-white md:text-3xl md:leading-tight lg:text-4xl lg:leading-tight">
             {article.title}
-          </h3>
-          <p className="mt-1 line-clamp-2 max-w-3xl text-xs leading-relaxed text-gray-300 sm:mt-2 sm:text-sm md:text-base md:leading-relaxed lg:text-lg">
+          </h2>
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/70 md:text-base">
             {article.excerpt}
           </p>
-          <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-400 sm:mt-3 sm:gap-x-4 sm:text-xs md:mt-4">
-            <span className="font-semibold text-gray-200">{article.author}</span>
-            <span className="hidden h-1 w-1 rounded-full bg-gray-600 sm:inline-block" />
-            <span className="flex items-center gap-1 sm:gap-1.5">
-              <Calendar className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
-              {formatDateRelative(article.publishedAt)}
-            </span>
-            <span className="h-1 w-1 rounded-full bg-gray-600" />
-            <span className="flex items-center gap-1 sm:gap-1.5">
-              <Clock className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
-              {article.readingTime}m
-            </span>
+          <div className="mt-3 flex items-center gap-2 text-[12px] text-white/50">
+            <span>{formatDateRelative(article.publishedAt)}</span>
           </div>
         </div>
       </Link>
@@ -79,37 +82,79 @@ export function ArticleCard({
     return (
       <Link
         href={`/article/${article.slug}`}
-        className={cn("group grid gap-4 sm:gap-5 md:grid-cols-5", className)}
+        className="group block"
       >
-        <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-muted md:col-span-2">
-          {article.image ? (
-            <img
-              src={article.image}
-              alt={article.title}
-              className="h-full w-full object-cover transition-transform duration-700 ease-out-expo group-hover:scale-105"
-            />
-          ) : (
-            <div className="flex h-full items-center justify-center bg-gradient-to-br from-muted to-muted/50" />
-          )}
+        <div className="mb-3 overflow-hidden rounded-lg">
+          <OptimizedImage
+            src={article.image || "/images/placeholder.svg"}
+            alt={article.title}
+            fill={false}
+            width={800}
+            height={450}
+            className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
-        <div className="md:col-span-3 md:self-center">
-          <div className="mb-1.5 flex items-center gap-2">
-            <span className="h-3 w-0.5 shrink-0 rounded-full bg-news-red" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-news-red">
-              {article.category}
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+              {categoryName}
+            </span>
+            <span className="text-[11px] text-muted-foreground/40">&middot;</span>
+            <span className="text-[11px] text-muted-foreground">
+              {article.readingTime} min read
             </span>
           </div>
-          <h3 className="font-headline text-base font-bold leading-snug tracking-tight sm:text-lg md:text-2xl/tight">
+          <h3 className="font-headline text-lg font-bold leading-snug md:text-xl md:leading-snug">
             {article.title}
           </h3>
-          <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground sm:mt-2">
+          <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
             {article.excerpt}
           </p>
-          <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground sm:mt-3">
-            <span className="font-semibold text-foreground">{article.author}</span>
-            <span className="h-1 w-1 rounded-full bg-border" />
-            <span>{formatDateRelative(article.publishedAt)}</span>
+          <span className="block text-[12px] text-muted-foreground/60">
+            {formatDateRelative(article.publishedAt)}
+          </span>
+        </div>
+      </Link>
+    )
+  }
+
+  if (variant === "large") {
+    return (
+      <Link
+        href={`/article/${article.slug}`}
+        className="group block"
+      >
+        <div className="mb-4 overflow-hidden rounded-lg">
+          <OptimizedImage
+            src={article.image || "/images/placeholder.svg"}
+            alt={article.title}
+            fill={false}
+            width={1200}
+            height={675}
+            className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            sizes="(max-width: 768px) 100vw, 40vw"
+          />
+        </div>
+        <div className="space-y-2.5">
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+              {categoryName}
+            </span>
+            <span className="text-[11px] text-muted-foreground/40">&middot;</span>
+            <span className="text-[11px] text-muted-foreground">
+              {article.readingTime} min read
+            </span>
           </div>
+          <h3 className="font-headline text-xl font-bold leading-snug md:text-2xl md:leading-snug">
+            {article.title}
+          </h3>
+          <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+            {article.excerpt}
+          </p>
+          <span className="block text-[12px] text-muted-foreground/60">
+            {formatDateRelative(article.publishedAt)}
+          </span>
         </div>
       </Link>
     )
@@ -119,56 +164,29 @@ export function ArticleCard({
     return (
       <Link
         href={`/article/${article.slug}`}
-        className={cn("group flex gap-3 sm:gap-4", className)}
+        className="group flex gap-4"
       >
-        <div className="relative aspect-[4/3] w-24 shrink-0 overflow-hidden rounded-sm bg-muted sm:w-[120px] md:w-[140px]">
-          {article.image ? (
-            <img
-              src={article.image}
-              alt={article.title}
-              className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-            />
-          ) : null}
+        <div className="w-28 shrink-0 overflow-hidden rounded md:w-32">
+          <OptimizedImage
+            src={article.image || "/images/placeholder.svg"}
+            alt={article.title}
+            fill={false}
+            width={160}
+            height={120}
+            className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            sizes="128px"
+          />
         </div>
-        <div className="flex flex-1 flex-col justify-center">
-          <span className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-news-red sm:mb-1">
-            {article.category}
+        <div className="flex min-w-0 flex-1 flex-col justify-center">
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            {categoryName}
           </span>
-          <h3 className="font-headline text-sm font-bold leading-snug sm:text-base/relaxed">
+          <h3 className="mt-1 text-sm font-semibold leading-snug">
             {article.title}
           </h3>
-          <span className="mt-1 text-[11px] text-muted-foreground sm:mt-1.5 sm:text-xs">
+          <span className="mt-1.5 text-[11px] text-muted-foreground">
             {formatDateRelative(article.publishedAt)}
           </span>
-        </div>
-      </Link>
-    )
-  }
-
-  if (variant === "compact") {
-    return (
-      <Link
-        href={`/article/${article.slug}`}
-        className={cn("group flex gap-3 py-3", className)}
-      >
-        <div className="relative aspect-square w-16 shrink-0 overflow-hidden rounded-sm bg-muted sm:w-[72px]">
-          {article.image ? (
-            <img
-              src={article.image}
-              alt={article.title}
-              className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-            />
-          ) : (
-            <div className="flex h-full items-center justify-center bg-gradient-to-br from-muted to-muted/70" />
-          )}
-        </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-headline text-sm font-bold leading-snug group-hover:text-news-red transition-colors">
-            {article.title}
-          </h3>
-          <p className="mt-1 text-[11px] text-muted-foreground sm:text-xs">
-            {formatDateRelative(article.publishedAt)}
-          </p>
         </div>
       </Link>
     )
@@ -178,19 +196,16 @@ export function ArticleCard({
     return (
       <Link
         href={`/article/${article.slug}`}
-        className={cn("group flex items-start gap-3 sm:gap-4", className)}
+        className="group flex items-start gap-4"
       >
-        <span className="font-headline text-2xl font-black leading-none tabular-nums text-foreground/[0.07] sm:text-3xl md:text-4xl lg:text-5xl transition-colors group-hover:text-news-red/[0.12]">
-          {String(number ?? 0).padStart(2, "0")}
+        <span className="font-headline text-3xl font-bold leading-none text-muted-foreground/20">
+          {String(index ?? 1).padStart(2, "0")}
         </span>
-        <div className="flex-1 min-w-0">
-          <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.18em] text-news-red sm:mb-1.5">
-            {article.category}
-          </span>
-          <h3 className="font-headline text-sm font-bold leading-snug group-hover:text-news-red transition-colors">
+        <div className="flex-1">
+          <h3 className="text-sm font-semibold leading-snug transition-colors group-hover:text-muted-foreground">
             {article.title}
           </h3>
-          <span className="mt-1 block text-[11px] text-muted-foreground sm:mt-1.5 sm:text-xs">
+          <span className="mt-1 block text-[11px] text-muted-foreground">
             {formatDateRelative(article.publishedAt)}
           </span>
         </div>
@@ -202,23 +217,27 @@ export function ArticleCard({
     return (
       <Link
         href={`/article/${article.slug}`}
-        className={cn("group border-b border-border py-3 last:border-0 block sm:py-3.5", className)}
+        className="group flex items-start gap-3"
       >
-        <div className="mb-1 flex items-center gap-2">
-          <span className="h-2.5 w-0.5 shrink-0 rounded-full bg-news-red/70" />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-news-red">
-            {article.category}
+        <div className="w-16 shrink-0 overflow-hidden rounded">
+          <OptimizedImage
+            src={article.image || "/images/placeholder.svg"}
+            alt={article.title}
+            fill={false}
+            width={80}
+            height={80}
+            className="aspect-square w-full object-cover"
+            sizes="64px"
+          />
+        </div>
+        <div className="flex-1">
+          <h3 className="text-sm font-semibold leading-snug">
+            {article.title}
+          </h3>
+          <span className="mt-1 block text-[11px] text-muted-foreground">
+            {formatDateRelative(article.publishedAt)}
           </span>
         </div>
-        <h3 className="font-headline text-sm font-bold leading-snug sm:text-base/relaxed transition-colors group-hover:text-news-red">
-          {article.title}
-        </h3>
-        <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
-          {article.excerpt}
-        </p>
-        <span className="mt-1 block text-[11px] text-muted-foreground">
-          {formatDateRelative(article.publishedAt)}
-        </span>
       </Link>
     )
   }
@@ -226,37 +245,34 @@ export function ArticleCard({
   return (
     <Link
       href={`/article/${article.slug}`}
-      className={cn("group flex flex-col rounded-sm transition-all duration-300 hover:shadow-card-hover", className)}
+      className="group block"
     >
-      <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-muted">
-        {article.image ? (
-          <img
-            src={article.image}
-            alt={article.title}
-            className="h-full w-full object-cover transition-transform duration-700 ease-out-expo group-hover:scale-105"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center bg-gradient-to-br from-muted to-muted/50" />
-        )}
+      <div className="mb-3 overflow-hidden rounded-lg">
+        <OptimizedImage
+          src={article.image || "/images/placeholder.svg"}
+          alt={article.title}
+          fill={false}
+          width={600}
+          height={338}
+          className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
       </div>
-      <div className="mt-2.5 flex-1 sm:mt-3">
-        <div className="mb-1 flex items-center gap-2 sm:mb-1.5">
-          <span className="h-2.5 w-0.5 shrink-0 rounded-full bg-news-red/70" />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-news-red">
-            {article.category}
+      <div className="space-y-1.5">
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            {categoryName}
+          </span>
+          <span className="text-[11px] text-muted-foreground">
+            {article.readingTime}m
           </span>
         </div>
-        <h3 className="font-headline text-sm font-bold leading-snug tracking-tight sm:text-base md:text-lg/relaxed transition-colors group-hover:text-news-red">
+        <h3 className="text-sm font-bold leading-snug md:text-base md:leading-snug">
           {article.title}
         </h3>
-        <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted-foreground sm:mt-1.5">
+        <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
           {article.excerpt}
         </p>
-        <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground sm:mt-3">
-          <span className="font-semibold text-foreground">{article.author}</span>
-          <span className="h-1 w-1 rounded-full bg-border" />
-          <span>{formatDateRelative(article.publishedAt)}</span>
-        </div>
       </div>
     </Link>
   )

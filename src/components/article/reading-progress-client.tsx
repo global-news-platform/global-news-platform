@@ -1,13 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useReadingProgress } from "@/hooks/use-reading-progress"
-import { ReadingProgress } from "@/components/article/reading-progress"
+import dynamic from "next/dynamic"
+
+const ReadingProgress = dynamic(
+  () => import("@/components/article/reading-progress").then((m) => m.ReadingProgress),
+  { ssr: false },
+)
 
 export function ReadingProgressClient() {
-  const progress = useReadingProgress()
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  if (!mounted) return null
-  return <ReadingProgress progress={progress} />
+  return <ReadingProgress />
 }

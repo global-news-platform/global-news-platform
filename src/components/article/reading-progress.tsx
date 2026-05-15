@@ -1,16 +1,14 @@
 "use client"
 
-import { Container } from "@/components/common/container"
+import { useReadingProgress } from "@/hooks/use-reading-progress"
 
-interface ReadingProgressProps {
-  progress: number
-}
+export function ReadingProgress() {
+  const progress = useReadingProgress()
 
-export function ReadingProgress({ progress }: ReadingProgressProps) {
   return (
-    <div className="fixed left-0 top-0 z-50 h-0.5 w-full bg-muted">
+    <div className="fixed left-0 top-0 z-50 h-[3px] w-full bg-transparent">
       <div
-        className="h-full bg-news-red transition-all duration-150 ease-out"
+        className="h-full bg-foreground/80 transition-[width] duration-200 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>
