@@ -4,130 +4,712 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://globalnews.news</loc>
-    <lastmod>2026-05-15T06:30:00Z</lastmod>
+    <lastmod>2026-05-15T23:59:34.000Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://globalnews.news/breaking</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/world</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/politics</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/business</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/technology</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/science</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/health</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/climate</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/culture</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/sports</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://globalnews.news/category/opinion</loc>
-    <lastmod>2026-05-15T17:54:57.963Z</lastmod>
+    <lastmod>2026-05-16T00:16:48.412Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/us-pga-championship-2026-golf-day-two-live-updates-6fed26</loc>
+    <lastmod>2026-05-15T23:59:34.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/lebanon-says-six-killed-in-israeli-strike-as-us-announces-ce-d9c212</loc>
+    <lastmod>2026-05-15T23:59:07.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/with-possible-ral-castro-indictment-us-eyes-venezuela-playbo-04c163</loc>
+    <lastmod>2026-05-15T23:41:23.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/in-better-form-than-kane-why-watkins-is-no-longer-being-writ-88c758</loc>
+    <lastmod>2026-05-15T23:17:19.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/supreme-court-rejects-virginia-democrats-effort-to-reinstate-41c242</loc>
+    <lastmod>2026-05-15T23:00:43.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/we-crumbled-another-loss-another-unwanted-record-for-leaky-l-bec5b2</loc>
+    <lastmod>2026-05-15T22:55:18.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/tina-peters-colorado-election-denier-will-be-freed-by-gov-ja-f4aee1</loc>
+    <lastmod>2026-05-15T22:15:24.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/aston-villa-secure-champions-league-spot-with-win-over-liver-5f99d8</loc>
+    <lastmod>2026-05-15T21:50:27.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/trump-and-xi-conclude-very-successful-talks-but-few-deals-co-f3055c</loc>
+    <lastmod>2026-05-15T21:50:14.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/guardiola-insists-he-has-one-more-year-on-man-city-deal-11dc07</loc>
+    <lastmod>2026-05-15T21:30:27.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/trump-warns-taiwan-against-declaring-independence-hours-afte-55babe</loc>
+    <lastmod>2026-05-15T21:28:25.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/trump-administration-weighs-17-billion-fund-for-allies-inves-5b77d7</loc>
+    <lastmod>2026-05-15T21:23:21.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/will-the-iran-war-backlash-save-rep-thomas-massie-in-kentuck-c23067</loc>
+    <lastmod>2026-05-15T21:18:08.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/trump-says-20-year-nuclear-programme-suspension-by-iran-woul-f8f393</loc>
+    <lastmod>2026-05-15T21:17:05.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/ahead-of-us-250th-anniversary-more-national-guard-troops-to--ba0c71</loc>
+    <lastmod>2026-05-15T21:11:24.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/celtic-hearts-set-for-titanic-title-duel-09064b</loc>
+    <lastmod>2026-05-15T21:08:54.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/aston-villa-back-in-champions-league-as-ollie-watkins-double-3827cb</loc>
+    <lastmod>2026-05-15T21:06:25.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/npr-podcast-host-ramtin-arablouei-exits-amid-workplace-inqui-96afeb</loc>
+    <lastmod>2026-05-15T20:55:07.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/stock-market-rally-confronts-inflation-and-higher-interest-r-c1d39b</loc>
+    <lastmod>2026-05-15T20:45:49.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/trumps-learning-curve-on-china-ends-with-conciliation-at-sum-29c6d2</loc>
+    <lastmod>2026-05-15T19:59:29.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/uk-borrowing-costs-rise-and-pound-falls-as-leadership-drama--9bde6c</loc>
+    <lastmod>2026-05-15T19:30:01.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/justice-dept-aims-to-use-terrorism-laws-to-target-mexican-of-750116</loc>
+    <lastmod>2026-05-15T18:43:32.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/ebola-outbreak-kills-65-people-in-eastern-democratic-republi-8cd91e</loc>
+    <lastmod>2026-05-15T18:22:04.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/british-gas-pays-20m-over-prepayment-meter-force-fitting-sca-71b5db</loc>
+    <lastmod>2026-05-15T17:49:05.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/for-xis-critics-trumps-china-visit-is-fuel-for-jokes-they-ca-f4fa68</loc>
+    <lastmod>2026-05-15T17:42:10.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/how-a-drug-cartel-made-a-mexican-state-its-tool-16bb80</loc>
+    <lastmod>2026-05-15T17:30:02.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/some-medicare-patients-can-now-get-free-cbd-78bbd3</loc>
+    <lastmod>2026-05-15T17:15:15.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/the-guardian-view-on-trump-in-beijing-the-us-and-china-are-p-4f8e4c</loc>
+    <lastmod>2026-05-15T16:59:51.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/extremely-cruel-and-tragic-iranian-director-asghar-farhadi-s-c523ed</loc>
+    <lastmod>2026-05-15T16:39:42.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/in-the-grey-review-guy-ritchies-bizarrely-buried-action-cape-7822be</loc>
+    <lastmod>2026-05-15T16:38:19.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/pound-heads-for-worst-week-in-18-months-as-burnham-lines-up--f27900</loc>
+    <lastmod>2026-05-15T16:17:30.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/middlesbrough-demand-southampton-are-expelled-from-playoffs--bc0ef1</loc>
+    <lastmod>2026-05-15T16:05:49.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/deion-sanders-says-son-shedeur-made-it-through-hell-in-rooki-4ce11b</loc>
+    <lastmod>2026-05-15T15:41:29.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/is-it-safe-to-swim-at-englands-bathing-sites-aaadf2</loc>
+    <lastmod>2026-05-15T15:41:17.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/ftse-100-listed-insurer-hiscoxs-shares-leap-amid-report-of-t-88432d</loc>
+    <lastmod>2026-05-15T15:32:10.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/all-of-a-sudden-review-care-home-drama-is-tender-meditative--e257bd</loc>
+    <lastmod>2026-05-15T15:16:43.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/drake-iceman-maid-of-honour-habibti-review-triple-album-come-b64e44</loc>
+    <lastmod>2026-05-15T15:08:03.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/traitors-with-crabs-to-the-prince-andrew-plan-the-10-best-sn-c5616a</loc>
+    <lastmod>2026-05-15T15:00:44.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/beckhams-become-billionaires-as-oasis-make-rich-list-for-fir-1a635a</loc>
+    <lastmod>2026-05-15T14:58:36.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/malis-forces-target-rebel-alliance-in-juntas-fight-to-keep-p-95a38a</loc>
+    <lastmod>2026-05-15T14:57:35.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/heathrow-rival-could-lead-expansion-watchdog-says-93be9e</loc>
+    <lastmod>2026-05-15T14:08:28.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/supreme-court-allows-abortion-pill-access-by-mail-to-continu-14c5fe</loc>
+    <lastmod>2026-05-15T13:08:04.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/x-pledges-quicker-action-on-hate-and-terror-content-in-the-u-23baae</loc>
+    <lastmod>2026-05-15T12:57:30.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/from-team-reeves-to-manchesterism-labours-four-economic-camp-fb8649</loc>
+    <lastmod>2026-05-15T12:54:36.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/prisoner-swap-goes-ahead-as-kyiv-mourns-24-killed-in-russian-1d1f8c</loc>
+    <lastmod>2026-05-15T12:53:57.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/tesco-bosss-pay-rises-by-more-than-1m-to-108m-after-market-s-5ca59d</loc>
+    <lastmod>2026-05-15T12:13:21.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/why-is-the-democratic-party-still-hiding-its-2024-election-a-b58778</loc>
+    <lastmod>2026-05-15T12:00:40.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/i-didnt-want-to-be-the-guinea-pig-inside-techs-ai-fueled-man-575f33</loc>
+    <lastmod>2026-05-15T11:34:24.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/uae-to-complete-second-oil-pipeline-bypassing-strait-of-horm-41e50f</loc>
+    <lastmod>2026-05-15T11:28:08.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/ai-safety-is-so-back-mythos-mayhem-with-nikesh-arora-hot-mes-d84db9</loc>
+    <lastmod>2026-05-15T11:00:06.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/ban-private-jets-and-cut-speed-limits-to-avert-uk-fuel-crisi-36d132</loc>
+    <lastmod>2026-05-15T10:12:29.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/trumps-new-momsgov-website-is-an-anti-choice-hub-that-mislea-800fb8</loc>
+    <lastmod>2026-05-15T10:00:37.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/medicare-coverage-for-glp-1-weight-loss-drugs-cost-eligibili-3fbd45</loc>
+    <lastmod>2026-05-15T09:03:47.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/archaeologists-find-egyptian-mummy-buried-with-the-iliad-0be616</loc>
+    <lastmod>2026-05-15T09:01:37.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/from-phishing-to-porn-star-impersonators-how-scamming-athlet-4e4376</loc>
+    <lastmod>2026-05-15T09:00:35.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://globalnews.news/article/emergency-rate-decision</loc>
     <lastmod>2026-05-15T06:30:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/market-turbulence.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/market-turbulence.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/a-woolly-solution-to-nis-peatland-problems-b74e21</loc>
+    <lastmod>2026-05-15T05:40:37.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/claim-counter-claim-and-techs-seedy-side-exposed-five-things-faf87b</loc>
+    <lastmod>2026-05-15T05:03:31.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/dont-swim-at-12-of-14-river-bathing-sites-as-more-locations--bf761e</loc>
+    <lastmod>2026-05-15T04:13:45.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/aging-palestinian-leader-boosting-his-sons-political-rise-of-820638</loc>
+    <lastmod>2026-05-15T04:01:20.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/inside-the-congolese-hotel-where-trump-deported-15-us-migran-3dbc63</loc>
+    <lastmod>2026-05-15T04:01:14.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/nymphomaniacs-and-sex-droughts-what-i-learned-while-studying-cc2c2a</loc>
+    <lastmod>2026-05-15T04:00:27.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://globalnews.news/article/diplomatic-talks-collapse</loc>
     <lastmod>2026-05-15T03:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/diplomatic-talks.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/diplomatic-talks.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/openai-trial-heads-to-jury-after-closing-arguments-in-musk-v-c5ff82</loc>
+    <lastmod>2026-05-15T01:47:03.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/prostate-cancer-screening-can-save-lives-but-absolute-benefi-12688e</loc>
+    <lastmod>2026-05-15T00:00:21.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/high-stakes-courtroom-drama-of-musk-v-openai-hears-closing-a-43cb00</loc>
+    <lastmod>2026-05-14T23:08:06.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/inside-the-secretive-and-lucrative-world-of-orchid-breeding-1275b4</loc>
+    <lastmod>2026-05-14T23:03:16.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/ai-could-put-people-off-tech-jobs-and-hurt-the-economy-warns-4e8a01</loc>
+    <lastmod>2026-05-14T23:01:20.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/16-more-people-in-the-us-are-being-monitored-for-hantavirus--d08c79</loc>
+    <lastmod>2026-05-14T21:09:59.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/millions-of-pounds-saved-by-replacing-palantir-tech-in-refug-5d7d7f</loc>
+    <lastmod>2026-05-14T21:09:02.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/watchdog-groups-urge-senate-to-investigate-samuel-alito-over-f311f9</loc>
+    <lastmod>2026-05-14T21:06:28.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/cerebras-ai-chip-maker-rises-89-in-market-debut-as-tech-ipos-361d6c</loc>
+    <lastmod>2026-05-14T20:23:32.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/judge-orders-trump-administration-to-return-colombian-woman--e087c9</loc>
+    <lastmod>2026-05-14T18:49:23.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/digital-arson-spree-by-ai-bonnie-and-clyde-raises-fears-over-776ea1</loc>
+    <lastmod>2026-05-14T18:00:14.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/why-ai-safety-controls-are-not-very-effective-48290f</loc>
+    <lastmod>2026-05-14T17:28:21.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/google-denies-breaching-law-by-promoting-suicide-forum-linke-6340a2</loc>
+    <lastmod>2026-05-14T17:01:14.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/when-will-the-iran-war-end-the-us-cant-even-decide-when-it-b-ad6e50</loc>
+    <lastmod>2026-05-14T16:00:11.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/will-her-daughter-be-safe-at-pali-high-as-it-rebuilds-from-l-154c78</loc>
+    <lastmod>2026-05-14T15:54:36.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/were-right-on-track-says-streeting-as-key-target-for-hospita-677901</loc>
+    <lastmod>2026-05-14T14:26:20.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/trump-didnt-drain-the-swamp-he-turned-it-into-a-cesspool-ste-e1e710</loc>
+    <lastmod>2026-05-14T12:00:25.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/un-pleads-for-equatorial-guinea-not-to-send-us-asylum-seeker-659e61</loc>
+    <lastmod>2026-05-14T11:00:25.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/can-some-very-tiny-particles-cool-the-planet-one-tech-compan-6abad1</loc>
+    <lastmod>2026-05-14T09:02:54.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/ishmael-reed-is-writing-a-play-about-elon-musk-ce6cf9</loc>
+    <lastmod>2026-05-14T09:02:52.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/listen-and-learn-the-hidden-secret-to-spotting-a-liar-e83f29</loc>
+    <lastmod>2026-05-14T09:00:22.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://globalnews.news/article/climate-summit-agreement</loc>
     <lastmod>2026-05-14T08:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/climate-summit.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/climate-summit.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/un-members-prepare-for-pivotal-vote-on-landmark-icj-climate--e9f3ff</loc>
+    <lastmod>2026-05-14T07:00:20.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/remains-of-second-us-soldier-who-went-missing-in-morocco-rec-4bf699</loc>
+    <lastmod>2026-05-13T23:01:13.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/neanderthals-used-stone-drills-to-treat-cavities-59000-years-26e026</loc>
+    <lastmod>2026-05-13T18:00:04.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/a-physicist-who-thinks-in-poetry-from-the-cosmic-edge-729567</loc>
+    <lastmod>2026-05-13T14:04:01.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/do-we-judge-people-by-the-way-they-sound-how-accents-shape-o-ffe6ac</loc>
+    <lastmod>2026-05-13T14:00:04.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/irresponsible-backlash-as-utah-approves-datacenter-twice-the-f695e6</loc>
+    <lastmod>2026-05-13T11:30:56.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/posh-sandwich-has-more-salt-than-nearly-five-cheeseburgers-a5abbd</loc>
+    <lastmod>2026-05-13T10:57:35.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/datacentres-using-6-of-electricity-supply-in-uk-and-us-resea-006e46</loc>
+    <lastmod>2026-05-13T10:48:13.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/mps-call-for-sunbed-advertising-ban-to-help-prevent-skin-can-700190</loc>
+    <lastmod>2026-05-13T10:37:30.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://globalnews.news/article/ai-protein-breakthrough</loc>
     <lastmod>2026-05-13T10:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/ai-research.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/ai-research.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/how-are-countries-responding-to-hantavirus-93fc60</loc>
+    <lastmod>2026-05-13T08:36:54.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/sydney-dentists-patients-warned-of-viruses-including-hiv-466b73</loc>
+    <lastmod>2026-05-13T06:17:55.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/white-tailed-eagles-to-be-released-in-exmoor-despite-farmer--ff8c80</loc>
+    <lastmod>2026-05-13T05:00:08.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/how-an-impossible-idea-led-to-a-pancreatic-cancer-breakthrou-b6f713</loc>
+    <lastmod>2026-05-12T14:34:01.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://globalnews.news/article/gene-therapy-approval</loc>
     <lastmod>2026-05-12T14:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/gene-therapy.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/gene-therapy.svg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/building-nests-is-hard-thats-why-some-birds-steal-8f6812</loc>
+    <lastmod>2026-05-12T13:00:08.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://globalnews.news/article/datacentres-should-be-forced-to-invest-in-wind-and-solar-ene-9c3cbc</loc>
+    <lastmod>2026-05-12T05:16:37.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://globalnews.news/article/trade-deal-rally</loc>
     <lastmod>2026-05-11T09:30:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/trade-deal.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/trade-deal.svg</image:loc></image:image>
   </url>
   <url>
     <loc>https://globalnews.news/article/space-telescope-images</loc>
     <lastmod>2026-05-10T16:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/space-telescope.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/space-telescope.svg</image:loc></image:image>
   </url>
   <url>
     <loc>https://globalnews.news/article/digital-privacy-ruling</loc>
     <lastmod>2026-05-09T11:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://globalnews.news/images/articles/supreme-court.jpg</image:loc></image:image>
+    <image:image><image:loc>https://globalnews.news/images/articles/supreme-court.svg</image:loc></image:image>
   </url>
 </urlset>
