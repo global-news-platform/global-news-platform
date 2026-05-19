@@ -10,14 +10,11 @@ import {
   Sun,
   Moon,
   Globe,
-  ChevronDown,
-  ExternalLink,
   Rss,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/components/common/theme-provider"
 import { navigation, categories } from "@/lib/constants"
-import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -34,22 +31,24 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
-  const [scrolledPast, setScrolledPast] = useState(false)
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
       const y = window.scrollY
       setIsScrolled(y > 10)
-      setScrolledPast(y > 80)
     }
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const prevPathname = useRef(pathname)
   useEffect(() => {
-    setMobileMenuOpen(false)
-  }, [pathname])
+    if (prevPathname.current !== pathname && mobileMenuOpen) {
+      setMobileMenuOpen(false)
+    }
+    prevPathname.current = pathname
+  }, [pathname, mobileMenuOpen])
 
   useEffect(() => {
     if (searchOpen && searchInputRef.current) {

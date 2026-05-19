@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
-import type { ArticleMeta, ArticleLink } from "@/types"
+import type { ArticleMeta } from "@/types"
 import { siteConfig } from "@/lib/constants"
-
-type WithContext<T> = T & { "@context": "https://schema.org" }
 
 export function absoluteUrl(path: string): string {
   return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`

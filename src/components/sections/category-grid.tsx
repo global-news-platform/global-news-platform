@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { ArticleCard } from "@/components/article/article-card"
 import { SectionTitle } from "@/components/common/section-title"
-import { categories } from "@/lib/constants"
 import type { ArticleLink } from "@/types"
 
 interface CategorySection {
@@ -20,7 +19,6 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
   return (
     <>
       {sections.map((section) => {
-        const catInfo = categories.find((c) => c.slug === section.slug)
         return (
           <section
             key={section.slug}
@@ -32,33 +30,30 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
                 href={`/category/${section.slug}`}
                 variant="featured"
               />
-              <div className="grid gap-6 md:grid-cols-2">
-                {/* Featured */}
-                <div>
-                  {section.articles[0] && (
-                    <ArticleCard
-                      article={section.articles[0]}
-                      variant="featured"
-                    />
-                  )}
-                </div>
-                {/* List */}
-                <div className="flex flex-col gap-4">
-                  {section.articles.slice(1, 4).map((article) => (
-                    <div key={article.slug}>
-                      <ArticleCard
-                        article={article}
-                        variant="horizontal"
-                      />
-                    </div>
-                  ))}
-                  <Link
-                    href={`/category/${section.slug}`}
-                    className="mt-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    More {section.name} news &rarr;
-                  </Link>
-                </div>
+              <div className="grid gap-5 md:grid-cols-2">
+                {section.articles[0] && (
+                  <ArticleCard
+                    article={section.articles[0]}
+                    variant="large"
+                  />
+                )}
+                {section.articles.length > 1 && (
+                  <div className="flex flex-col rounded-xl border border-border/50 bg-card/50 p-4 md:p-5">
+                    {section.articles.slice(1, 4).map((article) => (
+                      <div key={article.slug}>
+                        <ArticleCard article={article} variant="horizontal" />
+                      </div>
+                    ))}
+                    {section.articles.length > 4 && (
+                      <Link
+                        href={`/category/${section.slug}`}
+                        className="mt-auto pt-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        More {section.name} news &rarr;
+                      </Link>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </section>

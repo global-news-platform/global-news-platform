@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 
 import { Container } from "@/components/common/container"
 import { ArticleCard } from "@/components/article/article-card"
-import { getBreakingArticles } from "@/lib/articles"
+import { AdSlot } from "@/components/common/ad-slot"
+import { getBreakingArticles, preResolveAllImages } from "@/lib/articles"
 import { generateMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = generateMetadata({
@@ -15,7 +16,8 @@ export const metadata: Metadata = generateMetadata({
   },
 })
 
-export default function BreakingPage() {
+export default async function BreakingPage() {
+  await preResolveAllImages()
   const articles = getBreakingArticles()
 
   return (
@@ -37,10 +39,23 @@ export default function BreakingPage() {
         </div>
 
         {articles.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} variant="default" />
-            ))}
+          <div className="flex gap-8">
+            <div className="min-w-0 flex-1">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {articles.map((article) => (
+                  <ArticleCard key={article.slug} article={article} variant="default" />
+                ))}
+              </div>
+
+              <AdSlot variant="billboard" className="mt-10 hidden md:flex" label="Stay Informed" />
+            </div>
+
+            <aside className="hidden w-[260px] shrink-0 xl:block">
+              <div className="sticky top-28 flex flex-col gap-6">
+                <AdSlot variant="skyscraper" className="w-full" label="Advertisement" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
+              </div>
+            </aside>
           </div>
         ) : (
           <div className="py-20 text-center">

@@ -39,6 +39,7 @@ export const categories = [
   { slug: "culture", name: "Culture", description: "Arts, entertainment, and society" },
   { slug: "sports", name: "Sports", description: "Athletics and sporting events" },
   { slug: "opinion", name: "Opinion", description: "Commentary and analysis" },
+  { slug: "general", name: "General", description: "General news and coverage" },
 ] as const
 
 export const navigation = [

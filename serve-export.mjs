@@ -25,31 +25,64 @@ const MIME = {
   ".txt": "text/plain",
 }
 
-const server = http.createServer((req, res) => {
-  const filePath = path.join(outDir, req.url === "/" ? "index.html" : req.url)
-  const ext = path.extname(filePath)
-  const contentType = MIME[ext] || "application/octet-stream"
+function decodePath(rawUrl) {
+  const qIdx = rawUrl.indexOf("?")
+  const pathname = qIdx === -1 ? rawUrl : rawUrl.slice(0, qIdx)
+  try {
+    return decodeURIComponent(pathname)
+  } catch {
+    return pathname
+  }
+}
 
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
-      const notFound = path.join(outDir, "404.html")
-      fs.readFile(notFound, (err2, data2) => {
-        if (err2) {
-          res.writeHead(404, { "Content-Type": "text/plain" })
-          res.end("Not Found")
+const handler = (req, res) => {
+  const decoded = decodePath(req.url)
+  let filePath = path.join(outDir, decoded === "/" ? "index.html" : decoded)
+  let ext = path.extname(filePath)
+  let contentType = MIME[ext] || "application/octet-stream"
+
+  tryRead(filePath, ext, contentType)
+
+  function tryRead(fp, ext, contentType) {
+    fs.readFile(fp, (err, data) => {
+      if (err) {
+        if (fp === filePath && !ext) {
+          const withHtml = fp + ".html"
+          tryRead(withHtml, ".html", MIME[".html"])
           return
         }
-        res.writeHead(404, { "Content-Type": "text/html" })
-        res.end(data2)
-      })
-      return
-    }
-    res.writeHead(200, { "Content-Type": contentType })
-    res.end(data)
-  })
-})
+        const notFound = path.join(outDir, "404.html")
+        fs.readFile(notFound, (err2, data2) => {
+          if (err2) {
+            res.writeHead(404, { "Content-Type": "text/plain" })
+            res.end("Not Found")
+            return
+          }
+          res.writeHead(404, { "Content-Type": "text/html" })
+          res.end(data2)
+        })
+        return
+      }
+      res.writeHead(200, { "Content-Type": contentType })
+      res.end(data)
+    })
+  }
+}
 
-server.listen(PORT, () => {
-  console.log(`Global News static server running at http://localhost:${PORT}`)
-  console.log(`Serving from: ${outDir}`)
-})
+const startServer = (port) => {
+  const srv = http.createServer(handler)
+  srv.on("error", (err) => {
+    if (err.code === "EADDRINUSE") {
+      console.log(`Port ${port} in use, trying ${port + 1}...`)
+      startServer(port + 1)
+    } else {
+      throw err
+    }
+  })
+  srv.listen(port, () => {
+    console.log(`Global News static server running at http://localhost:${port}`)
+    console.log(`Serving from: ${outDir}`)
+  })
+}
+
+startServer(PORT)

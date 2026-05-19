@@ -177,9 +177,12 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    "aspect-video",
+    "aspect-[16/9]",
+  ],
   plugins: [
     require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
     require("tailwindcss-animate"),
   ],
 }

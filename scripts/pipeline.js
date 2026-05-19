@@ -110,12 +110,6 @@ async function stepIngest() {
 
       if (exists(slug)) { continue }
 
-      // Download image
-      if (item.imageUrl) {
-        const localPath = await download(item.imageUrl, slug)
-        if (localPath) fm.image = localPath
-      }
-
       const mdx = formatMdx(fm, item.body || item.excerpt)
       const written = write(slug, mdx)
       if (written) {

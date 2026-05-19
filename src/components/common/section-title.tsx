@@ -18,10 +18,7 @@ export function SectionTitle({
   return (
     <div
       className={cn(
-        "relative mb-6 flex items-center justify-between border-b border-border pb-3",
-        {
-          "border-b-[3px] border-foreground": variant === "breaking",
-        },
+        "relative mb-6 flex items-center justify-between md:mb-8",
         className,
       )}
     >
@@ -33,15 +30,13 @@ export function SectionTitle({
           </span>
         )}
         {variant === "editorial" && (
-          <div className="h-5 w-0.5 bg-foreground" />
+          <div className="h-6 w-[3px] rounded-full bg-foreground" />
         )}
         <h2
-          className={cn("font-semibold tracking-tight", {
+          className={cn("font-bold tracking-tight", {
             "font-headline text-xl md:text-2xl": variant === "featured" || variant === "editorial",
-            "text-lg md:text-xl font-bold uppercase tracking-[0.05em]":
-              variant === "breaking",
-            "text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground":
-              variant === "default",
+            "text-lg md:text-xl uppercase tracking-[0.05em]": variant === "breaking",
+            "text-sm uppercase tracking-[0.12em] text-muted-foreground": variant === "default",
           })}
         >
           {label}
@@ -50,10 +45,10 @@ export function SectionTitle({
       {href && (
         <Link
           href={href}
-          className="group inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+          className="group inline-flex items-center gap-1 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
           View All
-          <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
         </Link>
       )}
     </div>

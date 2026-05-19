@@ -1,0 +1,48 @@
+name: Daily Maintenance
+
+on:
+  schedule:
+    # Run daily at 6:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Compute trending & metrics
+        run: node -e "
+          const { computeTrending, computeDailyMetrics } = require('./scripts/lib/metrics');
+          computeTrending(20);
+          computeDailyMetrics();
+          console.log('✓ Trending & metrics updated');
+        "
+
+      - name: Regenerate static files
+        run: |
+          node scripts/lib/sitemap.js
+          node scripts/lib/feed.js
+
+      - name: Commit
+        run: |
+          git config user.name "Global News Bot"
+          git config user.email "bot@globalnews.news"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Auto: daily maintenance $(date +%Y-%m-%d)"
+            git push
+          fi

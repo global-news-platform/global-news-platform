@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { OptimizedImage } from "@/components/common/optimized-image"
+import { EditorialImage } from "@/components/common/editorial-image"
 import { formatDate } from "@/lib/utils"
 import { categories } from "@/lib/constants"
 import type { ArticleMeta } from "@/types"
@@ -14,19 +14,21 @@ export function ArticleHero({ article }: ArticleHeroProps) {
   return (
     <header className="relative">
       {/* Breadcrumbs */}
-      <nav className="mb-4 flex items-center gap-2 text-[12px] text-muted-foreground">
-        <Link href="/" className="transition-colors hover:text-foreground">
+      <nav className="mb-4 flex items-center gap-2 overflow-hidden text-[12px] text-muted-foreground">
+        <Link href="/" className="shrink-0 transition-colors hover:text-foreground">
           Home
         </Link>
-        <span>/</span>
+        <span className="shrink-0">/</span>
         <Link
           href={`/category/${article.categorySlug}`}
-          className="transition-colors hover:text-foreground"
+          className="shrink-0 transition-colors hover:text-foreground"
         >
           {categoryName}
         </Link>
-        <span>/</span>
-        <span className="text-foreground/60">{article.title}</span>
+        <span className="shrink-0">/</span>
+        <span className="overflow-hidden overflow-ellipsis whitespace-nowrap text-foreground/60">
+          {article.title}
+        </span>
       </nav>
 
       {/* Category badge */}
@@ -40,12 +42,12 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       </div>
 
       {/* Title */}
-      <h1 className="font-headline text-3xl font-bold leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
+      <h1 className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
         {article.title}
       </h1>
 
       {/* Excerpt */}
-      <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+      <p className="overflow-wrap-anywhere mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
         {article.excerpt}
       </p>
 
@@ -74,19 +76,16 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       </div>
 
       {/* Image */}
-      {article.image && (
-        <div className="mt-8 overflow-hidden rounded-lg">
-          <OptimizedImage
-            src={article.image}
-            alt={article.imageAlt || article.title}
-            width={1200}
-            height={675}
-            className="aspect-[16/9] w-full object-cover"
-            priority
-            sizes="100vw"
-          />
-        </div>
-      )}
+      <div className="relative mt-8 w-full h-[420px] overflow-hidden rounded-lg">
+        <EditorialImage
+          src={article.image}
+          alt={article.imageAlt || article.title}
+          categorySlug={article.categorySlug}
+          slug={article.slug}
+          priority
+          showAttribution
+        />
+      </div>
     </header>
   )
 }

@@ -1,0 +1,70 @@
+name: News Pipeline
+
+on:
+  schedule:
+    # Run every 2 hours
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: "Max articles per source"
+        required: false
+        default: "10"
+      concurrency:
+        description: "Concurrent fetches"
+        required: false
+        default: "5"
+
+permissions:
+  contents: write
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Run ingestion
+        run: node scripts/run-fetch.js --max=${{ github.event.inputs.max_articles || '10' }} --concurrency=${{ github.event.inputs.concurrency || '5' }}
+
+      - name: Generate sitemap & feed
+        run: |
+          node scripts/lib/sitemap.js
+          node scripts/lib/feed.js
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit changes
+        run: |
+          git config user.name "Global News Bot"
+          git config user.email "bot@globalnews.news"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto: ingest articles $(date +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Deploy to Vercel
+        if: success()
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod"

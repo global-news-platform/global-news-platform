@@ -60,6 +60,7 @@ export interface ArticleLink {
   authorSlug: string
   publishedAt: string
   image?: string
+  imageAlt?: string
   readingTime: number
   featured: boolean
   breaking: boolean

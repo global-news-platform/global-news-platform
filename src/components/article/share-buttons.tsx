@@ -1,7 +1,6 @@
 "use client"
 
 import { Twitter, Linkedin, Link2, Mail, Facebook } from "lucide-react"
-import { cn } from "@/lib/utils"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import { siteConfig } from "@/lib/constants"
 

@@ -3,9 +3,10 @@ import type { Metadata } from "next"
 
 import { Container } from "@/components/common/container"
 import { ArticleCard } from "@/components/article/article-card"
+import { AdSlot } from "@/components/common/ad-slot"
 import { Breadcrumbs } from "@/components/article/breadcrumbs"
 
-import { getArticlesByCategory, getArticleLinks } from "@/lib/articles"
+import { getArticlesByCategory, getArticleLinks, preResolveAllImages } from "@/lib/articles"
 import { categories } from "@/lib/constants"
 import {
   absoluteUrl,
@@ -43,6 +44,7 @@ export default async function CategoryPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
+  await preResolveAllImages()
   const category = categories.find((c) => c.slug === slug)
   if (!category) notFound()
 
@@ -96,53 +98,66 @@ export default async function CategoryPage({
 
       <div className="py-8 md:py-12">
         <Container>
-          {articles.length > 0 ? (
-            <div className="space-y-10">
-              {/* Featured */}
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="md:col-span-2 lg:col-span-1">
-                  <ArticleCard article={articles[0]} variant="featured" />
-                </div>
-                {articles.slice(1, 3).map((article) => (
-                  <div key={article.slug}>
-                    <ArticleCard article={article} variant="horizontal" />
-                  </div>
-                ))}
-              </div>
+          <AdSlot variant="leaderboard" className="mb-8 hidden md:flex" />
 
-              {/* Grid */}
-              {articles.length > 3 && (
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  {articles.slice(3).map((article) => (
-                    <ArticleCard
-                      key={article.slug}
-                      article={article}
-                      variant="default"
-                    />
-                  ))}
+          <div className="flex gap-8">
+            <div className="min-w-0 flex-1">
+              {articles.length > 0 ? (
+                <div className="space-y-10">
+                  {/* Featured */}
+                  <div className="grid gap-8 md:grid-cols-2">
+                    <div className="md:col-span-2 lg:col-span-1">
+                      <ArticleCard article={articles[0]} variant="featured" />
+                    </div>
+                    {articles.slice(1, 3).map((article) => (
+                      <div key={article.slug}>
+                        <ArticleCard article={article} variant="horizontal" />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Grid */}
+                  {articles.length > 3 && (
+                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                      {articles.slice(3).map((article) => (
+                        <ArticleCard
+                          key={article.slug}
+                          article={article}
+                          variant="default"
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="py-20 text-center">
+                  <p className="text-lg text-muted-foreground">
+                    No articles in this category yet.
+                  </p>
+                </div>
+              )}
+
+              {otherArticles.length > 0 && (
+                <div className="mt-16 border-t border-border pt-10">
+                  <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
+                    More News
+                  </h2>
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {otherArticles.slice(0, 4).map((article) => (
+                      <ArticleCard key={article.slug} article={article} variant="default" />
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
-          ) : (
-            <div className="py-20 text-center">
-              <p className="text-lg text-muted-foreground">
-                No articles in this category yet.
-              </p>
-            </div>
-          )}
 
-          {otherArticles.length > 0 && (
-            <div className="mt-16 border-t border-border pt-10">
-              <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                More News
-              </h2>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {otherArticles.slice(0, 4).map((article) => (
-                  <ArticleCard key={article.slug} article={article} variant="default" />
-                ))}
+            <aside className="hidden w-[260px] shrink-0 xl:block">
+              <div className="sticky top-28 flex flex-col gap-6">
+                <AdSlot variant="skyscraper" className="w-full" label="Advertisement" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
               </div>
-            </div>
-          )}
+            </aside>
+          </div>
         </Container>
       </div>
     </>

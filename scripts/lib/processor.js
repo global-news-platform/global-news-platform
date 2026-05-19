@@ -1,5 +1,3 @@
-const crypto = require("crypto")
-
 const STOPWORDS = new Set([
   "the","and","for","are","but","not","you","all","can","had","her","was",
   "one","our","out","has","have","been","its","more","some","them","than",
@@ -60,6 +58,26 @@ const TOPIC_MAP = {
   pandemic:"covid-19",biotechnology:"biotechnology",
 }
 
+const ESCAPED_QUOTE_PATTERNS = [
+  [/\\"/g, '"'],
+  [/\\'/g, "'"],
+  [/&quot;/g, '"'],
+  [/&#39;/g, "'"],
+  [/&#x27;/g, "'"],
+]
+
+function sanitizeText(text) {
+  if (!text) return ""
+  let result = String(text)
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]/g, "")
+    .normalize("NFC")
+  for (const [pattern, replacement] of ESCAPED_QUOTE_PATTERNS) {
+    result = result.replace(pattern, replacement)
+  }
+  result = result.replace(/\s+/g, " ").trim()
+  return result
+}
+
 function slugify(text) {
   return text.toLowerCase()
     .replace(/[^\w\s-]/g, "")
@@ -114,44 +132,54 @@ function detectBreaking(text) {
   return triggers.some(t => lower.includes(t))
 }
 
-function generateArticleSlug(title) {
-  const base = slugify(title).slice(0, 60)
-  const suffix = crypto.randomBytes(3).toString("hex")
-  return `${base}-${suffix}`
+function generateArticleSlug(title, usedSlugs = new Set()) {
+  let base = slugify(title).slice(0, 60)
+  if (!base) base = "article"
+  if (usedSlugs.has(base)) {
+    let i = 1
+    while (usedSlugs.has(`${base}-${i}`)) i++
+    return `${base}-${i}`
+  }
+  return base
 }
 
 function buildFrontmatter(raw, topics) {
-  const tags = generateTags(topics, raw.category)
+  const safeCategory = raw.category || "World"
+  const tags = generateTags(topics, safeCategory.toLowerCase())
   const isBreaking = detectBreaking(raw.title + " " + raw.excerpt)
 
   return {
-    title: raw.title,
-    excerpt: raw.excerpt,
-    category: raw.category.charAt(0).toUpperCase() + raw.category.slice(1),
-    author: raw.author,
-    authorSlug: slugify(raw.author),
+    title: sanitizeText(raw.title),
+    excerpt: sanitizeText(raw.excerpt),
+    category: safeCategory.charAt(0).toUpperCase() + safeCategory.slice(1),
+    author: sanitizeText(raw.author) || "Staff",
+    authorSlug: slugify(raw.author || "staff"),
     publishedAt: raw.publishedAt,
-    image: raw.imageUrl ? `/images/articles/${slugify(raw.title).slice(0, 40)}.jpg` : "",
-    imageAlt: raw.title,
+    image: "",
+    imageAlt: sanitizeText(raw.imageAlt) || sanitizeText(raw.title),
     tags,
-    featured: isBreaking,
-    breaking: isBreaking,
-    trending: isBreaking,
+    readingTime: raw.readingTime || 5,
+    featured: Boolean(raw.featured) || isBreaking,
+    breaking: Boolean(raw.breaking) || isBreaking,
+    trending: Boolean(raw.trending) || isBreaking,
   }
 }
 
 function formatMdx(fm, body) {
   const lines = Object.entries(fm)
     .map(([k, v]) => {
-      if (!v && v !== false) return null
-      if (Array.isArray(v)) return `${k}: [${v.map(t => `"${t}"`).join(", ")}]`
+      if (v === null || v === undefined) return null
+      if (v === false && k !== "featured" && k !== "breaking" && k !== "trending") return null
+      if (Array.isArray(v)) {
+        return `${k}: [${v.map(t => `"${t}"`).join(", ")}]`
+      }
       if (typeof v === "boolean") return `${k}: ${v}`
-      if (typeof v === "string" && /^[-\w]+$/.test(v)) return `${k}: ${v}`
-      return `${k}: "${v.replace(/"/g, '\\"')}"`
+      const strVal = String(v).replace(/\\/g, "\\\\").replace(/"/g, '\\"')
+      return `${k}: "${strVal}"`
     })
     .filter(Boolean)
 
-  return `---\n${lines.join("\n")}\n---\n\n${body.trim()}\n`
+  return `---\n${lines.join("\n")}\n---\n\n${(body || "").trim()}\n`
 }
 
-module.exports = { extractTopics, generateTags, buildFrontmatter, formatMdx, slugify, generateArticleSlug }
+module.exports = { extractTopics, generateTags, buildFrontmatter, formatMdx, slugify, generateArticleSlug, sanitizeText }

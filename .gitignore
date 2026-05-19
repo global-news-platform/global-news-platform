@@ -22,3 +22,7 @@ logs/
 
 # Automation data
 scripts/data/
+
+# Build output
+out/
+nul

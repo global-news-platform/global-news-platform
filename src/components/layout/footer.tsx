@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Globe, Rss, Twitter, Facebook, Linkedin, Mail } from "lucide-react"
-import { siteConfig, navigation, categories } from "@/lib/constants"
+import { siteConfig, categories } from "@/lib/constants"
 import { Container } from "@/components/common/container"
 
 export function Footer() {

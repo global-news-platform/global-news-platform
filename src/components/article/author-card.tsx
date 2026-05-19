@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Twitter, Mail } from "lucide-react"
-import { OptimizedImage } from "@/components/common/optimized-image"
+import { SafeImage } from "@/components/ui/safe-image"
 import type { Author } from "@/types"
 
 interface AuthorCardProps {
@@ -12,12 +12,9 @@ export function AuthorCard({ author }: AuthorCardProps) {
     <div className="flex items-start gap-4 rounded-lg border border-border bg-background p-5">
       {author.avatar && (
         <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full">
-          <OptimizedImage
+          <SafeImage
             src={author.avatar}
             alt={author.name}
-            width={56}
-            height={56}
-            className="aspect-square w-full object-cover"
           />
         </div>
       )}

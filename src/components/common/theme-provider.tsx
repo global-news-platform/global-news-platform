@@ -5,6 +5,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from "react"
 
@@ -26,36 +27,41 @@ const ThemeProviderContext = createContext<ThemeProviderState | undefined>(
   undefined,
 )
 
+function getResolvedTheme(theme: Theme): "light" | "dark" {
+  if (theme === "system") {
+    return typeof window !== "undefined"
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+      : "light"
+  }
+  return theme
+}
+
+function getInitialTheme(storageKey: string, defaultTheme: Theme): Theme {
+  if (typeof window !== "undefined") {
+    return (localStorage.getItem(storageKey) as Theme) || defaultTheme
+  }
+  return defaultTheme
+}
+
 export function ThemeProvider({
   children,
   defaultTheme = "system",
   storageKey = "global-news-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setThemeState] = useState<Theme>(defaultTheme)
-  const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light")
+  const [theme, setThemeState] = useState<Theme>(() =>
+    getInitialTheme(storageKey, defaultTheme),
+  )
 
-  useEffect(() => {
-    const stored = localStorage.getItem(storageKey) as Theme | null
-    if (stored) setThemeState(stored)
-  }, [storageKey])
+  const resolvedTheme = useMemo(() => getResolvedTheme(theme), [theme])
 
   useEffect(() => {
     const root = document.documentElement
     root.classList.remove("light", "dark")
-
-    let resolved: "light" | "dark"
-    if (theme === "system") {
-      resolved = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
-    } else {
-      resolved = theme
-    }
-
-    root.classList.add(resolved)
-    setResolvedTheme(resolved)
-  }, [theme])
+    root.classList.add(resolvedTheme)
+  }, [resolvedTheme])
 
   useEffect(() => {
     if (theme !== "system") return
@@ -65,7 +71,6 @@ export function ThemeProvider({
       const root = document.documentElement
       root.classList.remove("light", "dark")
       root.classList.add(mq.matches ? "dark" : "light")
-      setResolvedTheme(mq.matches ? "dark" : "light")
     }
     mq.addEventListener("change", handler)
     return () => mq.removeEventListener("change", handler)

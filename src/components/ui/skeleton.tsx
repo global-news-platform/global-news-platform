@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils"
 
-function Skeleton({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
@@ -18,7 +15,7 @@ function Skeleton({
 function ArticleCardSkeleton() {
   return (
     <div className="space-y-3">
-      <Skeleton className="aspect-[16/9] w-full" />
+      <Skeleton className="w-full h-48" />
       <Skeleton className="h-3 w-16" />
       <Skeleton className="h-5 w-full" />
       <Skeleton className="h-5 w-3/4" />
@@ -31,7 +28,7 @@ function HeroSkeleton() {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <div className="space-y-4">
-        <Skeleton className="aspect-[16/10] w-full" />
+        <Skeleton className="w-full h-[420px]" />
         <Skeleton className="h-4 w-20" />
         <Skeleton className="h-10 w-full" />
         <Skeleton className="h-10 w-3/4" />

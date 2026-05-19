@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 import { ArticleHero } from "@/components/article/article-hero"
+import { AdSlot } from "@/components/common/ad-slot"
 import { TagCloud } from "@/components/article/tag-cloud"
 import { AuthorCard } from "@/components/article/author-card"
 import { ArticleNav } from "@/components/article/article-nav"
@@ -17,6 +18,7 @@ import {
   getRelatedArticles,
   getAdjacentArticles,
   getAuthorBySlug,
+  preResolveAllImages,
 } from "@/lib/articles"
 import {
   absoluteUrl,
@@ -62,6 +64,7 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
+  await preResolveAllImages()
   const article = getArticleBySlug(slug)
   if (!article) notFound()
 
@@ -98,7 +101,7 @@ export default async function ArticlePage({
       />
 
       <Container size="sm" className="py-8 md:py-12">
-        <div className="mx-auto flex max-w-reading-wide justify-center gap-10">
+        <div className="mx-auto flex max-w-[88rem] justify-center gap-6 xl:gap-10">
           {/* Sticky share sidebar */}
           <aside className="sticky top-24 hidden h-fit lg:block">
             <ShareButtons
@@ -109,7 +112,7 @@ export default async function ArticlePage({
           </aside>
 
           {/* Main content */}
-          <article className="min-w-0 flex-1">
+          <article className="min-w-0 max-w-reading-wide flex-1">
             <ArticleHero article={article} />
 
             <div className="mt-10">
@@ -118,6 +121,10 @@ export default async function ArticlePage({
 
             <div className="mt-10 space-y-6">
               <TagCloud tags={article.tags} />
+            </div>
+
+            <div className="mt-10">
+              <AdSlot variant="rectangle" className="hidden sm:flex" label="Continue Reading" />
             </div>
 
             {authorProfile && (
@@ -140,6 +147,18 @@ export default async function ArticlePage({
               </div>
             )}
           </article>
+
+          {/* Right sidebar ad */}
+          <aside className="sticky top-24 hidden h-fit xl:block xl:w-[260px]">
+            <div className="flex flex-col gap-6">
+              <AdSlot variant="skyscraper" className="w-full" label="You Might Like" />
+              <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
+            </div>
+          </aside>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-[88rem]">
+          <AdSlot variant="billboard" className="hidden md:flex" label="Recommended Reading" />
         </div>
 
         {related.length > 0 && (

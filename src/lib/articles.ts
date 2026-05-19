@@ -6,15 +6,64 @@ import type { ArticleMeta, ArticleLink, Author } from "@/types"
 import { authors } from "@/data/authors/authors"
 import { categories } from "@/lib/constants"
 import { slugify } from "@/lib/utils"
+import { getArticleImage } from "@/lib/getImage"
+import {
+  sanitizeTitle,
+  sanitizeExcerpt,
+  sanitizeBody,
+  validateArticleContent,
+  deduplicateArticles,
+  safeString,
+  safeNumber,
+} from "@/lib/sanitize"
 
 const articlesDir = path.join(process.cwd(), "src/data/articles")
 
+const VALID_CATEGORY_NAMES = new Set(categories.map((c) => c.name.toLowerCase()))
+
+let _allArticlesCache: ArticleMeta[] | null = null
+let _slugCache: string[] | null = null
+const _resolvedImages = new Map<string, string>()
+let _imagesResolved = false
+let _resolvePromise: Promise<void> | null = null
+
+export async function preResolveAllImages(): Promise<void> {
+  if (_imagesResolved) return
+  if (_resolvePromise) {
+    await _resolvePromise
+    return
+  }
+  _resolvePromise = resolveAllArticleImages()
+  await _resolvePromise
+  _imagesResolved = true
+}
+
+async function resolveAllArticleImages(): Promise<void> {
+  const articles = getAllArticles()
+  await Promise.all(
+    articles.map(async (article) => {
+      try {
+        const url = await getArticleImage(article.slug, article.categorySlug, article.title)
+        _resolvedImages.set(article.slug, url)
+        article.image = url
+      } catch {
+        // keep undefined, fallback handles it
+      }
+    }),
+  )
+  _breakingCache = null
+  _trendingCache = null
+  _categoryCache = null
+}
+
 export function getArticleSlugs(): string[] {
+  if (_slugCache) return _slugCache
   if (!fs.existsSync(articlesDir)) return []
-  return fs
+  _slugCache = fs
     .readdirSync(articlesDir)
     .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"))
     .map((f) => f.replace(/\.(md|mdx)$/, ""))
+  return _slugCache
 }
 
 function parseFrontmatter(content: string): {
@@ -26,15 +75,33 @@ function parseFrontmatter(content: string): {
 
   const frontmatter: Record<string, unknown> = {}
   const lines = match[1].split("\n")
+
   for (const line of lines) {
-    const [key, ...rest] = line.split(":")
-    if (key && rest.length > 0) {
-      const value = rest.join(":").trim()
-      if (value.startsWith("[") && value.endsWith("]")) {
-        frontmatter[key.trim()] = JSON.parse(value.replace(/'/g, '"'))
-      } else {
-        frontmatter[key.trim()] = value.replace(/^["']|["']$/g, "")
+    const trimmed = line.trim()
+    if (!trimmed || trimmed.startsWith("#")) continue
+    const colonIndex = trimmed.indexOf(":")
+    if (colonIndex === -1) continue
+    const key = trimmed.slice(0, colonIndex).trim()
+    const value: string = trimmed.slice(colonIndex + 1).trim()
+
+    if (!key) continue
+
+    if (value.startsWith("[") && value.endsWith("]")) {
+      try {
+        frontmatter[key] = JSON.parse(value.replace(/'/g, '"'))
+      } catch {
+        frontmatter[key] = value
       }
+    } else if (value.toLowerCase() === "null") {
+      frontmatter[key] = null
+    } else if (value.toLowerCase() === "true") {
+      frontmatter[key] = true
+    } else if (value.toLowerCase() === "false") {
+      frontmatter[key] = false
+    } else if (value.startsWith('"') && value.endsWith('"')) {
+      frontmatter[key] = value.slice(1, -1).replace(/\\"/g, '"')
+    } else {
+      frontmatter[key] = value
     }
   }
 
@@ -49,30 +116,58 @@ export function getArticleBySlug(slug: string): ArticleMeta | null {
       const { frontmatter, body } = parseFrontmatter(content)
       const rt = readingTime(body)
 
-      const categoryName = String(frontmatter.category || "General")
+      const rawTitle = safeString(frontmatter.title, "")
+      const sanitizedTitle = sanitizeTitle(rawTitle)
+
+      const validation = validateArticleContent({
+        title: sanitizedTitle || rawTitle,
+        excerpt: safeString(frontmatter.excerpt),
+        body,
+      })
+
+      if (!validation.valid) {
+        return null
+      }
+
+      if (!sanitizedTitle) {
+        return null
+      }
+
+      const sanitizedExcerpt = sanitizeExcerpt(safeString(frontmatter.excerpt))
+      const sanitizedBody = sanitizeBody(body)
+
+      let categoryName = safeString(frontmatter.category, "General")
+      if (!VALID_CATEGORY_NAMES.has(categoryName.toLowerCase())) {
+        categoryName = "World"
+      }
       const categoryInfo = categories.find(
         (c) => c.name.toLowerCase() === categoryName.toLowerCase(),
       )
 
+      const rawAuthor = safeString(frontmatter.author, "Staff")
+      const rawAuthorSlug = safeString(frontmatter.authorSlug) || slugify(rawAuthor)
+
+      const resolvedImage = _resolvedImages.get(slug) || (frontmatter.image ? safeString(frontmatter.image) : undefined)
+
       return {
         slug,
-        title: String(frontmatter.title || ""),
-        excerpt: String(frontmatter.excerpt || ""),
-        content: body,
+        title: sanitizedTitle,
+        excerpt: sanitizedExcerpt,
+        content: sanitizedBody,
         category: categoryName,
         categorySlug: categoryInfo?.slug || categoryName.toLowerCase(),
-        author: String(frontmatter.author || "Staff"),
-        authorSlug: String(frontmatter.authorSlug || slugify(String(frontmatter.author || "staff"))),
-        publishedAt: String(frontmatter.publishedAt || ""),
+        author: rawAuthor,
+        authorSlug: rawAuthorSlug,
+        publishedAt: safeString(frontmatter.publishedAt, ""),
         updatedAt: frontmatter.updatedAt
-          ? String(frontmatter.updatedAt)
+          ? safeString(frontmatter.updatedAt)
           : undefined,
-        image: frontmatter.image ? String(frontmatter.image) : undefined,
+        image: resolvedImage,
         imageAlt: frontmatter.imageAlt
-          ? String(frontmatter.imageAlt)
+          ? safeString(frontmatter.imageAlt)
           : undefined,
-        tags: (frontmatter.tags as string[]) || [],
-        readingTime: Math.round(rt.minutes),
+        tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],
+        readingTime: safeNumber(rt.minutes, 1),
         featured: Boolean(frontmatter.featured),
         breaking: Boolean(frontmatter.breaking),
         trending: Boolean(frontmatter.trending),
@@ -83,18 +178,20 @@ export function getArticleBySlug(slug: string): ArticleMeta | null {
 }
 
 export function getAllArticles(): ArticleMeta[] {
+  if (_allArticlesCache) return _allArticlesCache
   const slugs = getArticleSlugs()
-  return slugs
+  _allArticlesCache = slugs
     .map((slug) => getArticleBySlug(slug))
     .filter((a): a is ArticleMeta => a !== null)
     .sort(
       (a, b) =>
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
     )
+  return _allArticlesCache
 }
 
 export function getArticleLinks(): ArticleLink[] {
-  return getAllArticles().map((a) => ({
+  const all = getAllArticles().map((a) => ({
     slug: a.slug,
     title: a.title,
     excerpt: a.excerpt,
@@ -104,27 +201,47 @@ export function getArticleLinks(): ArticleLink[] {
     authorSlug: a.authorSlug,
     publishedAt: a.publishedAt,
     image: a.image,
+    imageAlt: a.imageAlt,
     readingTime: a.readingTime,
     featured: a.featured,
     breaking: a.breaking,
     trending: a.trending,
   }))
+  return deduplicateArticles(all)
 }
 
+let _breakingCache: ArticleLink[] | null = null
 export function getBreakingArticles(): ArticleLink[] {
-  return getArticleLinks().filter((a) => a.breaking)
+  if (_breakingCache) return _breakingCache
+  _breakingCache = getArticleLinks().filter((a) => a.breaking)
+  return _breakingCache
 }
 
+let _trendingCache: ArticleLink[] | null = null
 export function getTrendingArticles(): ArticleLink[] {
-  return getArticleLinks().filter((a) => a.trending)
+  if (_trendingCache) return _trendingCache
+  _trendingCache = getArticleLinks().filter((a) => a.trending)
+  return _trendingCache
 }
 
 export function getFeaturedArticle(): ArticleLink | null {
-  return getArticleLinks().find((a) => a.featured) || null
+  return getArticleLinks().find((a) => a.featured) || getArticleLinks()[0] || null
+}
+
+let _categoryCache: Map<string, ArticleLink[]> | null = null
+function getCategoryCache(): Map<string, ArticleLink[]> {
+  if (_categoryCache) return _categoryCache
+  _categoryCache = new Map()
+  for (const article of getArticleLinks()) {
+    const existing = _categoryCache.get(article.categorySlug) || []
+    existing.push(article)
+    _categoryCache.set(article.categorySlug, existing)
+  }
+  return _categoryCache
 }
 
 export function getArticlesByCategory(categorySlug: string): ArticleLink[] {
-  return getArticleLinks().filter((a) => a.categorySlug === categorySlug)
+  return getCategoryCache().get(categorySlug) || []
 }
 
 export function getArticlesByAuthor(authorSlug: string): ArticleLink[] {
@@ -137,17 +254,18 @@ export function getAuthorBySlug(slug: string): Author | undefined {
     authorData[author.slug] = author
   }
 
+  const existing = authorData[slug]
+  if (existing) return existing
+
   const articleAuthor = getAllArticles().find((a) => a.authorSlug === slug)
   if (articleAuthor) {
     return {
       slug,
       name: articleAuthor.author,
-      bio: undefined,
-      role: undefined,
     }
   }
 
-  return authors.find((a) => a.slug === slug)
+  return undefined
 }
 
 export function getRelatedArticles(
@@ -155,8 +273,8 @@ export function getRelatedArticles(
   categorySlug: string,
   limit = 3,
 ): ArticleLink[] {
-  return getArticleLinks()
-    .filter((a) => a.slug !== slug && a.categorySlug === categorySlug)
+  return getArticlesByCategory(categorySlug)
+    .filter((a) => a.slug !== slug)
     .slice(0, limit)
 }
 
@@ -190,4 +308,15 @@ export function getArticlesGroupedByCategory(
       }
     })
     .filter((g) => g.articles.length > 0)
+}
+
+export function clearArticleCaches(): void {
+  _allArticlesCache = null
+  _slugCache = null
+  _breakingCache = null
+  _trendingCache = null
+  _categoryCache = null
+  _resolvedImages.clear()
+  _imagesResolved = false
+  _resolvePromise = null
 }

@@ -1,11 +1,13 @@
 import type { Metadata } from "next"
+import { SafeImage } from "@/components/ui/safe-image"
 import { notFound } from "next/navigation"
 
 import { Container } from "@/components/common/container"
 import { ArticleCard } from "@/components/article/article-card"
+import { AdSlot } from "@/components/common/ad-slot"
 import { Breadcrumbs } from "@/components/article/breadcrumbs"
 
-import { getArticlesByAuthor, getAuthorBySlug, getAllArticles } from "@/lib/articles"
+import { getArticlesByAuthor, getAuthorBySlug, getAllArticles, preResolveAllImages } from "@/lib/articles"
 import { authors } from "@/data/authors/authors"
 import {
   absoluteUrl,
@@ -41,6 +43,7 @@ export default async function AuthorPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
+  await preResolveAllImages()
   const author = getAuthorBySlug(slug)
   if (!author) notFound()
 
@@ -72,7 +75,7 @@ export default async function AuthorPage({
           <div className="flex flex-col gap-6 md:flex-row md:items-start">
             <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full bg-muted md:h-24 md:w-24">
               {author.avatar ? (
-                <img
+                <SafeImage
                   src={author.avatar}
                   alt={author.name}
                   className="h-full w-full object-cover"
@@ -122,24 +125,37 @@ export default async function AuthorPage({
 
       <div className="py-8 md:py-12">
         <Container>
-          <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-            Articles by {author.name}
-          </h2>
-          {articles.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {articles.map((article) => (
-                <ArticleCard
-                  key={article.slug}
-                  article={article}
-                  variant="default"
-                />
-              ))}
+          <AdSlot variant="leaderboard" className="mb-8 hidden md:flex" label="Advertisement" />
+
+          <div className="flex gap-8">
+            <div className="min-w-0 flex-1">
+              <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
+                Articles by {author.name}
+              </h2>
+              {articles.length > 0 ? (
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {articles.map((article) => (
+                    <ArticleCard
+                      key={article.slug}
+                      article={article}
+                      variant="default"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="py-16 text-center">
+                  <p className="text-muted-foreground">No articles found.</p>
+                </div>
+              )}
             </div>
-          ) : (
-            <div className="py-16 text-center">
-              <p className="text-muted-foreground">No articles found.</p>
-            </div>
-          )}
+
+            <aside className="hidden w-[260px] shrink-0 xl:block">
+              <div className="sticky top-28 flex flex-col gap-6">
+                <AdSlot variant="skyscraper" className="w-full" label="You Might Also Like" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored Content" />
+              </div>
+            </aside>
+          </div>
         </Container>
       </div>
     </>

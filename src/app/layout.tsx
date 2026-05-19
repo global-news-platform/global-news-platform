@@ -150,9 +150,9 @@ export default function RootLayout({
           href="/feed.xml"
         />
       </head>
-      <body className="min-h-screen bg-background font-sans antialiased">
+      <body className="bg-background font-sans antialiased">
         <ThemeProvider defaultTheme="system" storageKey="global-news-theme">
-          <div className="relative flex min-h-screen flex-col">
+          <div className="relative flex min-h-dvh flex-col">
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-foreground focus:px-4 focus:py-2 focus:text-background focus:outline-none"
@@ -160,7 +160,7 @@ export default function RootLayout({
               Skip to content
             </a>
             <Header />
-            <main id="main-content" className="flex-1">
+            <main id="main-content">
               {children}
             </main>
             <Footer />
