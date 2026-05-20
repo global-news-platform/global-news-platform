@@ -33,15 +33,28 @@ export async function preResolveAllImages(): Promise<void> {
     await _resolvePromise
     return
   }
+  // Skip API calls on Vercel — frontmatter images are baked in
+  if (process.env.VERCEL === "1") {
+    _imagesResolved = true
+    return
+  }
   _resolvePromise = resolveAllArticleImages()
   await _resolvePromise
   _imagesResolved = true
 }
 
 async function resolveAllArticleImages(): Promise<void> {
-  const articles = getAllArticles()
+  const allArticles = getAllArticles()
+  const seen = new Set<string>()
+  const toResolve = allArticles.filter((a) => {
+    if (a.image) return false
+    const base = a.slug.replace(/--[a-f0-9]+$/i, "")
+    if (seen.has(base)) return false
+    seen.add(base)
+    return true
+  })
   await Promise.all(
-    articles.map(async (article) => {
+    toResolve.map(async (article) => {
       try {
         const url = await getArticleImage(article.slug, article.categorySlug, article.title)
         _resolvedImages.set(article.slug, url)
@@ -59,10 +72,23 @@ async function resolveAllArticleImages(): Promise<void> {
 export function getArticleSlugs(): string[] {
   if (_slugCache) return _slugCache
   if (!fs.existsSync(articlesDir)) return []
-  _slugCache = fs
+  const allSlugs = fs
     .readdirSync(articlesDir)
     .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"))
     .map((f) => f.replace(/\.(md|mdx)$/, ""))
+    .sort((a, b) => {
+      const baseA = a.replace(/--[a-f0-9]+$/i, "")
+      const baseB = b.replace(/--[a-f0-9]+$/i, "")
+      if (baseA !== baseB) return baseA.localeCompare(baseB)
+      return a.length - b.length
+    })
+  const seen = new Set<string>()
+  _slugCache = allSlugs.filter((slug) => {
+    const base = slug.replace(/--[a-f0-9]+$/i, "")
+    if (seen.has(base)) return false
+    seen.add(base)
+    return true
+  })
   return _slugCache
 }
 
