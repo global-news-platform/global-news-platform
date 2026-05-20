@@ -336,6 +336,17 @@ export function getArticlesGroupedByCategory(
     .filter((g) => g.articles.length > 0)
 }
 
+export function searchArticles(query: string): ArticleLink[] {
+  const q = query.toLowerCase().trim()
+  if (!q) return []
+  return getArticleLinks().filter(
+    (a) =>
+      a.title.toLowerCase().includes(q) ||
+      a.category.toLowerCase().includes(q) ||
+      a.author.toLowerCase().includes(q),
+  )
+}
+
 export function clearArticleCaches(): void {
   _allArticlesCache = null
   _slugCache = null
