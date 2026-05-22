@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { EditorialImage } from "@/components/common/editorial-image"
+import { SafeImage } from "@/components/ui/safe-image"
 import { formatDate } from "@/lib/utils"
 import { categories } from "@/lib/constants"
 import type { ArticleMeta } from "@/types"
@@ -16,7 +16,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       {/* Breadcrumbs */}
       <nav className="mb-4 flex items-center gap-2 overflow-hidden text-[12px] text-muted-foreground">
         <Link href="/" className="shrink-0 transition-colors hover:text-foreground">
-          Home
+          ہوم
         </Link>
         <span className="shrink-0">/</span>
         <Link
@@ -35,7 +35,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       <div className="mb-4">
         <Link
           href={`/category/${article.categorySlug}`}
-          className="inline-block rounded bg-foreground/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:bg-foreground/10"
+          className="inline-block rounded bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-foreground"
         >
           {categoryName}
         </Link>
@@ -64,26 +64,25 @@ export function ArticleHero({ article }: ArticleHeroProps) {
           {formatDate(article.publishedAt)}
         </time>
         <span className="text-muted-foreground/40">&middot;</span>
-        <span>{article.readingTime} min read</span>
+        <span>{article.readingTime} منٹ</span>
         {article.updatedAt && (
           <>
             <span className="text-muted-foreground/40">&middot;</span>
             <span className="text-muted-foreground/60">
-              Updated {formatDate(article.updatedAt)}
+              اپ ڈیٹ: {formatDate(article.updatedAt)}
             </span>
           </>
         )}
       </div>
 
       {/* Image */}
-      <div className="relative mt-8 w-full h-[420px] overflow-hidden rounded-lg">
-        <EditorialImage
+      <div className="relative mt-8 w-full h-[420px] overflow-hidden rounded">
+        <SafeImage
           src={article.image}
           alt={article.imageAlt || article.title}
           categorySlug={article.categorySlug}
           slug={article.slug}
           priority
-          showAttribution
         />
       </div>
     </header>

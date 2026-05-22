@@ -13,38 +13,38 @@ export function ArticleNav({ prev, next }: ArticleNavProps) {
   return (
     <nav className="border-t border-border pt-8">
       <div className="grid gap-4 sm:grid-cols-2">
-        {prev ? (
+        {next ? (
           <Link
-            href={`/article/${prev.slug}`}
+            href={`/article/${next.slug}`}
             className="group flex items-start gap-3 rounded-lg border border-border p-4 transition-colors hover:bg-secondary"
           >
-            <ChevronLeft className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+            <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                Previous
+                پچھلا
               </span>
               <p className="mt-1 text-sm font-medium leading-snug">
-                {prev.title}
+                {next.title}
               </p>
             </div>
           </Link>
         ) : (
           <div />
         )}
-        {next ? (
+        {prev ? (
           <Link
-            href={`/article/${next.slug}`}
+            href={`/article/${prev.slug}`}
             className="group flex items-start gap-3 rounded-lg border border-border p-4 text-right transition-colors hover:bg-secondary sm:text-right"
           >
             <div className="flex-1">
               <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                Next
+                اگلا
               </span>
               <p className="mt-1 text-sm font-medium leading-snug">
-                {next.title}
+                {prev.title}
               </p>
             </div>
-            <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+            <ChevronLeft className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
           </Link>
         ) : (
           <div />

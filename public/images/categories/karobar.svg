@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2a1a"/>
+      <stop offset="50%" stop-color="#2d4a1a"/>
+      <stop offset="100%" stop-color="#1a2a1a"/>
+    </linearGradient>
+    <linearGradient id="overlay" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="30%" stop-color="#f59e0b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="#f59e0b" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#spotlight)"/>
+  <rect width="1920" height="1080" fill="url(#overlay)"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <line x1="80" y1="0" x2="80" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="160" y1="0" x2="160" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="240" y1="0" x2="240" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="320" y1="0" x2="320" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="480" y1="0" x2="480" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="560" y1="0" x2="560" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="640" y1="0" x2="640" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="880" y1="0" x2="880" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="960" y1="0" x2="960" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1040" y1="0" x2="1040" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1120" y1="0" x2="1120" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1200" y1="0" x2="1200" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1280" y1="0" x2="1280" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1360" y1="0" x2="1360" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1520" y1="0" x2="1520" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1600" y1="0" x2="1600" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1680" y1="0" x2="1680" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1760" y1="0" x2="1760" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1840" y1="0" x2="1840" y2="1080" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="60" x2="1920" y2="60" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="120" x2="1920" y2="120" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="180" x2="1920" y2="180" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="240" x2="1920" y2="240" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="300" x2="1920" y2="300" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="360" x2="1920" y2="360" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1920" y2="420" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="480" x2="1920" y2="480" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="540" x2="1920" y2="540" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="600" x2="1920" y2="600" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="660" x2="1920" y2="660" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="720" x2="1920" y2="720" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="780" x2="1920" y2="780" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="840" x2="1920" y2="840" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="900" x2="1920" y2="900" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="960" x2="1920" y2="960" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="1020" x2="1920" y2="1020" stroke="#f59e0b" stroke-opacity="0.04" stroke-width="1"/>
+  <circle cx="150" cy="150" r="400" fill="#f59e0b" fill-opacity="0.020"/>
+  <circle cx="1700" cy="200" r="300" fill="#f59e0b" fill-opacity="0.025"/>
+  <circle cx="200" cy="800" r="250" fill="#f59e0b" fill-opacity="0.035"/>
+  <circle cx="1600" cy="850" r="350" fill="#f59e0b" fill-opacity="0.027"/>
+  <circle cx="900" cy="500" r="500" fill="#f59e0b" fill-opacity="0.023"/>
+  <circle cx="100" cy="500" r="200" fill="#f59e0b" fill-opacity="0.041"/>
+  <circle cx="1800" cy="450" r="280" fill="#f59e0b" fill-opacity="0.043"/>
+  <circle cx="600" cy="100" r="180" fill="#f59e0b" fill-opacity="0.041"/>
+  <line x1="926.9559435427208" y1="276.4896870690552" x2="1126.955943542721" y2="-23.510312930944792" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="3.7262597643445012"/>
+  <line x1="1653.723325719504" y1="565.265210550673" x2="1853.723325719504" y2="265.26521055067303" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="3.26494727018477"/>
+  <line x1="1840.053335956664" y1="36.3615149848536" x2="2040.053335956664" y2="-263.6384850151464" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="3.014901281645876"/>
+  <line x1="1388.5581442318946" y1="668.1242600576601" x2="1588.5581442318946" y2="368.1242600576601" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="1.3723722296798706"/>
+  <line x1="1236.2425565429917" y1="819.5548190819028" x2="1436.2425565429917" y2="519.5548190819028" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="2.3593617976805046"/>
+  <line x1="1542.021213904166" y1="646.4189155159743" x2="1742.021213904166" y2="346.4189155159743" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="1.43498829995396"/>
+  <line x1="1432.4292780625003" y1="250.2926681071269" x2="1632.4292780625003" y2="-49.7073318928731" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="3.6927284157344222"/>
+  <line x1="1661.7620113587093" y1="509.47911172592774" x2="1861.7620113587093" y2="209.47911172592774" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="3.405995991239654"/>
+  <line x1="1388.1365316519086" y1="891.9034177455014" x2="1588.1365316519086" y2="591.9034177455014" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="1.0649929418518802"/>
+  <line x1="1078.3127628166628" y1="849.8966269013141" x2="1278.3127628166628" y2="549.8966269013141" stroke="#f59e0b" stroke-opacity="0.06" stroke-width="1.2871052159027814"/>
+  <rect x="0" y="0" width="1920" height="4" fill="#f59e0b" opacity="0.5"/>
+  <rect x="0" y="1076" width="1920" height="4" fill="#f59e0b" opacity="0.3"/>
+  <rect x="80" y="0" width="4" height="1080" fill="#f59e0b" opacity="0.1"/>
+  <rect x="80" y="350" width="6" height="380" fill="#f59e0b" opacity="0.15"/>
+  <rect x="110" y="430" width="200" height="4" fill="#f59e0b" opacity="0.4"/>
+  <g filter="url(#shadow)">
+    <text x="130" y="520" font-family="Georgia,'Times New Roman',serif" font-size="96" font-weight="bold" fill="#ffffff" letter-spacing="4">BUSINESS</text>
+  </g>
+  <rect x="130" y="545" width="160" height="5" fill="#f59e0b" opacity="0.7"/>
+  <rect x="300" y="545" width="80" height="5" fill="#f59e0b" opacity="0.3"/>
+  <line x1="130" y1="560" x2="400" y2="560" stroke="#f59e0b" stroke-opacity="0.15" stroke-width="1"/>
+  <rect x="80" y="780" width="1760" height="1" fill="#f59e0b" opacity="0.08"/>
+  <text x="130" y="830" font-family="Georgia,'Times New Roman',serif" font-size="18" fill="#f59e0b" opacity="0.5" letter-spacing="6">EDITORIAL</text>
+  <rect x="130" y="850" width="60" height="2" fill="#f59e0b" opacity="0.2"/>
+</svg>

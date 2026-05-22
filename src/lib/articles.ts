@@ -6,68 +6,31 @@ import type { ArticleMeta, ArticleLink, Author } from "@/types"
 import { authors } from "@/data/authors/authors"
 import { categories } from "@/lib/constants"
 import { slugify } from "@/lib/utils"
-import { getArticleImage } from "@/lib/getImage"
+import { getImage } from "@/lib/getImage"
 import {
   sanitizeTitle,
-  sanitizeExcerpt,
   sanitizeBody,
   validateArticleContent,
   deduplicateArticles,
   safeString,
   safeNumber,
 } from "@/lib/sanitize"
+import {
+  generateUrduHeadline,
+  generateUrduExcerpt,
+  categorizeEnglishCategory,
+} from "@/lib/urdu-headlines"
+import { removeEnglishFromUrdu } from "@/lib/urdu-ai"
+
+const MAX_DAILY_ARTICLES = 100
 
 const articlesDir = path.join(process.cwd(), "src/data/articles")
 
-const VALID_CATEGORY_NAMES = new Set(categories.map((c) => c.name.toLowerCase()))
-
 let _allArticlesCache: ArticleMeta[] | null = null
 let _slugCache: string[] | null = null
-const _resolvedImages = new Map<string, string>()
-let _imagesResolved = false
-let _resolvePromise: Promise<void> | null = null
 
-export async function preResolveAllImages(): Promise<void> {
-  if (_imagesResolved) return
-  if (_resolvePromise) {
-    await _resolvePromise
-    return
-  }
-  // Skip API calls on Vercel — frontmatter images are baked in
-  if (process.env.VERCEL === "1") {
-    _imagesResolved = true
-    return
-  }
-  _resolvePromise = resolveAllArticleImages()
-  await _resolvePromise
-  _imagesResolved = true
-}
-
-async function resolveAllArticleImages(): Promise<void> {
-  const allArticles = getAllArticles()
-  const seen = new Set<string>()
-  const toResolve = allArticles.filter((a) => {
-    if (a.image) return false
-    const base = a.slug.replace(/--[a-f0-9]+$/i, "")
-    if (seen.has(base)) return false
-    seen.add(base)
-    return true
-  })
-  await Promise.all(
-    toResolve.map(async (article) => {
-      try {
-        const url = await getArticleImage(article.slug, article.categorySlug, article.title)
-        _resolvedImages.set(article.slug, url)
-        article.image = url
-      } catch {
-        // keep undefined, fallback handles it
-      }
-    }),
-  )
-  _breakingCache = null
-  _trendingCache = null
-  _categoryCache = null
-}
+const _urduTitleCache = new Map<string, string>()
+const _urduExcerptCache = new Map<string, string>()
 
 export function getArticleSlugs(): string[] {
   if (_slugCache) return _slugCache
@@ -134,7 +97,7 @@ function parseFrontmatter(content: string): {
   return { frontmatter, body: match[2] }
 }
 
-export function getArticleBySlug(slug: string): ArticleMeta | null {
+export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null> {
   for (const ext of [".mdx", ".md"]) {
     const filePath = path.join(articlesDir, `${slug}${ext}`)
     if (fs.existsSync(filePath)) {
@@ -151,34 +114,45 @@ export function getArticleBySlug(slug: string): ArticleMeta | null {
         body,
       })
 
-      if (!validation.valid) {
-        return null
+      if (!validation.valid) return null
+      if (!sanitizedTitle) return null
+
+      let urduTitle: string
+      let urduExcerpt: string
+
+      const cacheKey = slug
+      if (_urduTitleCache.has(cacheKey)) {
+        urduTitle = _urduTitleCache.get(cacheKey)!
+        urduExcerpt = _urduExcerptCache.get(cacheKey)!
+      } else {
+        urduTitle = await generateUrduHeadline(sanitizedTitle)
+        urduExcerpt = await generateUrduExcerpt(urduTitle, safeString(frontmatter.excerpt))
+        _urduTitleCache.set(cacheKey, urduTitle)
+        _urduExcerptCache.set(cacheKey, urduExcerpt)
       }
 
-      if (!sanitizedTitle) {
-        return null
-      }
+      const sanitizedBody = removeEnglishFromUrdu(sanitizeBody(body))
 
-      const sanitizedExcerpt = sanitizeExcerpt(safeString(frontmatter.excerpt))
-      const sanitizedBody = sanitizeBody(body)
-
-      let categoryName = safeString(frontmatter.category, "General")
-      if (!VALID_CATEGORY_NAMES.has(categoryName.toLowerCase())) {
-        categoryName = "World"
-      }
+      const rawCategory = safeString(frontmatter.category, "General")
+      const urduCategory = categorizeEnglishCategory(rawCategory)
       const categoryInfo = categories.find(
-        (c) => c.name.toLowerCase() === categoryName.toLowerCase(),
+        (c) => c.name === urduCategory,
       )
+      const categoryName = categoryInfo?.name || urduCategory
 
       const rawAuthor = safeString(frontmatter.author, "Staff")
       const rawAuthorSlug = safeString(frontmatter.authorSlug) || slugify(rawAuthor)
 
-      const resolvedImage = _resolvedImages.get(slug) || (frontmatter.image ? safeString(frontmatter.image) : undefined)
+      const resolvedImage = getImage({
+        slug,
+        categorySlug: categoryInfo?.slug,
+        frontmatterImage: frontmatter.image as string | undefined | null,
+      })
 
       return {
         slug,
-        title: sanitizedTitle,
-        excerpt: sanitizedExcerpt,
+        title: urduTitle,
+        excerpt: urduExcerpt,
         content: sanitizedBody,
         category: categoryName,
         categorySlug: categoryInfo?.slug || categoryName.toLowerCase(),
@@ -203,21 +177,24 @@ export function getArticleBySlug(slug: string): ArticleMeta | null {
   return null
 }
 
-export function getAllArticles(): ArticleMeta[] {
+export async function getAllArticles(): Promise<ArticleMeta[]> {
   if (_allArticlesCache) return _allArticlesCache
   const slugs = getArticleSlugs()
-  _allArticlesCache = slugs
-    .map((slug) => getArticleBySlug(slug))
+  const articles = await Promise.all(
+    slugs.map((slug) => getArticleBySlug(slug)),
+  )
+  _allArticlesCache = articles
     .filter((a): a is ArticleMeta => a !== null)
     .sort(
       (a, b) =>
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
     )
+    .slice(0, MAX_DAILY_ARTICLES)
   return _allArticlesCache
 }
 
-export function getArticleLinks(): ArticleLink[] {
-  const all = getAllArticles().map((a) => ({
+export async function getArticleLinks(): Promise<ArticleLink[]> {
+  const all = (await getAllArticles()).map((a) => ({
     slug: a.slug,
     title: a.title,
     excerpt: a.excerpt,
@@ -233,32 +210,33 @@ export function getArticleLinks(): ArticleLink[] {
     breaking: a.breaking,
     trending: a.trending,
   }))
-  return deduplicateArticles(all)
+  return deduplicateArticles(all).slice(0, MAX_DAILY_ARTICLES)
 }
 
 let _breakingCache: ArticleLink[] | null = null
-export function getBreakingArticles(): ArticleLink[] {
+export async function getBreakingArticles(): Promise<ArticleLink[]> {
   if (_breakingCache) return _breakingCache
-  _breakingCache = getArticleLinks().filter((a) => a.breaking)
+  _breakingCache = (await getArticleLinks()).filter((a) => a.breaking)
   return _breakingCache
 }
 
 let _trendingCache: ArticleLink[] | null = null
-export function getTrendingArticles(): ArticleLink[] {
+export async function getTrendingArticles(): Promise<ArticleLink[]> {
   if (_trendingCache) return _trendingCache
-  _trendingCache = getArticleLinks().filter((a) => a.trending)
+  _trendingCache = (await getArticleLinks()).filter((a) => a.trending)
   return _trendingCache
 }
 
-export function getFeaturedArticle(): ArticleLink | null {
-  return getArticleLinks().find((a) => a.featured) || getArticleLinks()[0] || null
+export async function getFeaturedArticle(): Promise<ArticleLink | null> {
+  const links = await getArticleLinks()
+  return links.find((a) => a.featured) || links[0] || null
 }
 
 let _categoryCache: Map<string, ArticleLink[]> | null = null
-function getCategoryCache(): Map<string, ArticleLink[]> {
+async function getCategoryCache(): Promise<Map<string, ArticleLink[]>> {
   if (_categoryCache) return _categoryCache
   _categoryCache = new Map()
-  for (const article of getArticleLinks()) {
+  for (const article of await getArticleLinks()) {
     const existing = _categoryCache.get(article.categorySlug) || []
     existing.push(article)
     _categoryCache.set(article.categorySlug, existing)
@@ -266,15 +244,15 @@ function getCategoryCache(): Map<string, ArticleLink[]> {
   return _categoryCache
 }
 
-export function getArticlesByCategory(categorySlug: string): ArticleLink[] {
-  return getCategoryCache().get(categorySlug) || []
+export async function getArticlesByCategory(categorySlug: string): Promise<ArticleLink[]> {
+  return (await getCategoryCache()).get(categorySlug) || []
 }
 
-export function getArticlesByAuthor(authorSlug: string): ArticleLink[] {
-  return getArticleLinks().filter((a) => a.authorSlug === authorSlug)
+export async function getArticlesByAuthor(authorSlug: string): Promise<ArticleLink[]> {
+  return (await getArticleLinks()).filter((a) => a.authorSlug === authorSlug)
 }
 
-export function getAuthorBySlug(slug: string): Author | undefined {
+export async function getAuthorBySlug(slug: string): Promise<Author | undefined> {
   const authorData: Record<string, Author> = {}
   for (const author of authors) {
     authorData[author.slug] = author
@@ -283,63 +261,61 @@ export function getAuthorBySlug(slug: string): Author | undefined {
   const existing = authorData[slug]
   if (existing) return existing
 
-  const articleAuthor = getAllArticles().find((a) => a.authorSlug === slug)
+  const allArticles = await getAllArticles()
+  const articleAuthor = allArticles.find((a) => a.authorSlug === slug)
   if (articleAuthor) {
-    return {
-      slug,
-      name: articleAuthor.author,
-    }
+    return { slug, name: articleAuthor.author }
   }
 
   return undefined
 }
 
-export function getRelatedArticles(
+export async function getRelatedArticles(
   slug: string,
   categorySlug: string,
   limit = 3,
-): ArticleLink[] {
-  return getArticlesByCategory(categorySlug)
+): Promise<ArticleLink[]> {
+  return (await getArticlesByCategory(categorySlug))
     .filter((a) => a.slug !== slug)
     .slice(0, limit)
 }
 
-export function getMostReadArticles(limit = 4): ArticleLink[] {
-  return getArticleLinks().slice(0, limit)
+export async function getMostReadArticles(limit = 4): Promise<ArticleLink[]> {
+  return (await getArticleLinks()).slice(0, limit)
 }
 
-export function getAdjacentArticles(
+export async function getAdjacentArticles(
   slug: string,
-): { prev: ArticleLink | null; next: ArticleLink | null } {
-  const all = getArticleLinks()
+): Promise<{ prev: ArticleLink | null; next: ArticleLink | null }> {
+  const all = await getArticleLinks()
   const index = all.findIndex((a) => a.slug === slug)
   if (index === -1) return { prev: null, next: null }
   return {
-    prev: index < all.length - 1 ? all[index + 1] : null,
-    next: index > 0 ? all[index - 1] : null,
+    prev: index > 0 ? all[index - 1] : null,
+    next: index < all.length - 1 ? all[index + 1] : null,
   }
 }
 
-export function getArticlesGroupedByCategory(
+export async function getArticlesGroupedByCategory(
   categorySlugs: string[],
   articlesPerCategory = 4,
-): { slug: string; name: string; articles: ArticleLink[] }[] {
-  return categorySlugs
-    .map((slug) => {
+): Promise<{ slug: string; name: string; articles: ArticleLink[] }[]> {
+  return (await Promise.all(
+    categorySlugs.map(async (slug) => {
       const cat = categories.find((c) => c.slug === slug)
       return {
         slug,
         name: cat?.name || slug,
-        articles: getArticlesByCategory(slug).slice(0, articlesPerCategory),
+        articles: (await getArticlesByCategory(slug)).slice(0, articlesPerCategory),
       }
-    })
-    .filter((g) => g.articles.length > 0)
+    }),
+  )).filter((g) => g.articles.length > 0)
 }
 
-export function searchArticles(query: string): ArticleLink[] {
+export async function searchArticles(query: string): Promise<ArticleLink[]> {
   const q = query.toLowerCase().trim()
   if (!q) return []
-  return getArticleLinks().filter(
+  return (await getArticleLinks()).filter(
     (a) =>
       a.title.toLowerCase().includes(q) ||
       a.category.toLowerCase().includes(q) ||
@@ -353,7 +329,6 @@ export function clearArticleCaches(): void {
   _breakingCache = null
   _trendingCache = null
   _categoryCache = null
-  _resolvedImages.clear()
-  _imagesResolved = false
-  _resolvePromise = null
+  _urduTitleCache.clear()
+  _urduExcerptCache.clear()
 }

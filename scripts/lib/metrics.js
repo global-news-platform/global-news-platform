@@ -1,214 +1,115 @@
-/**
- * Trending analytics and engagement tracking engine.
- * Tracks article views, calculates momentum scores,
- * detects trending topics, and computes "Most Read" rankings.
- */
-
 const fs = require("fs")
 const path = require("path")
 
-const METRICS_FILE = path.join(__dirname, "..", "data", "metrics.json")
-const TRENDING_FILE = path.join(__dirname, "..", "data", "trending.json")
+const ARTICLES_DIR = path.join(__dirname, "../../src/data/articles")
+const METRICS_PATH = path.join(__dirname, "../../src/data/metrics.json")
 
-function loadMetrics() {
-  try {
-    if (fs.existsSync(METRICS_FILE)) {
-      return JSON.parse(fs.readFileSync(METRICS_FILE, "utf-8"))
-    }
-  } catch {}
-  return { articles: {}, keywords: {}, daily: [] }
-}
-
-function saveMetrics(data) {
-  const dir = path.dirname(METRICS_FILE)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-  fs.writeFileSync(METRICS_FILE, JSON.stringify(data, null, 2))
-}
-
-function loadTrending() {
-  try {
-    if (fs.existsSync(TRENDING_FILE)) {
-      return JSON.parse(fs.readFileSync(TRENDING_FILE, "utf-8"))
-    }
-  } catch {}
-  return { trending: [], updatedAt: null }
-}
-
-function saveTrending(data) {
-  const dir = path.dirname(TRENDING_FILE)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-  fs.writeFileSync(TRENDING_FILE, JSON.stringify(data, null, 2))
-}
-
-function recordView(slug, title, category) {
-  const metrics = loadMetrics()
-  const now = Date.now()
-
-  if (!metrics.articles[slug]) {
-    metrics.articles[slug] = {
-      title,
-      category,
-      views: 0,
-      firstSeen: new Date().toISOString(),
-      hourly: {},
-    }
-  }
-
-  const article = metrics.articles[slug]
-  article.views++
-  article.lastSeen = new Date().toISOString()
-
-  const hourKey = new Date().toISOString().slice(0, 13)
-  article.hourly[hourKey] = (article.hourly[hourKey] || 0) + 1
-
-  saveMetrics(metrics)
-}
-
-function getMomentum(slug) {
-  const metrics = loadMetrics()
-  const article = metrics.articles[slug]
-  if (!article) return 0
-
-  const now = Date.now()
-  const hourMs = 3600000
-  let recentViews = 0
-  let olderViews = 0
-
-  for (const [hour, count] of Object.entries(article.hourly)) {
-    const hourTime = new Date(hour + ":00:00").getTime()
-    if (now - hourTime < hourMs * 2) {
-      recentViews += count
-    } else {
-      olderViews += count
-    }
-  }
-
-  if (olderViews === 0) return recentViews > 0 ? 10 : 0
-  return Math.round((recentViews / olderViews) * 100) / 100
-}
-
-function computeTrending(limit = 10) {
-  const metrics = loadMetrics()
-  const now = Date.now()
-  const dayMs = 86400000
-
-  const scored = Object.entries(metrics.articles)
-    .filter(([, a]) => {
-      const age = now - new Date(a.lastSeen || a.firstSeen).getTime()
-      return age < dayMs * 3 // Only articles from last 3 days
-    })
-    .map(([slug, data]) => {
-      const momentum = getMomentum(slug)
-      const age = now - new Date(data.firstSeen).getTime()
-      const ageHours = age / 3600000
-      const velocity = ageHours > 0 ? data.views / ageHours : data.views
-
+function getAllArticles() {
+  if (!fs.existsSync(ARTICLES_DIR)) return []
+  return fs
+    .readdirSync(ARTICLES_DIR)
+    .filter((f) => f.endsWith(".mdx"))
+    .map((f) => {
+      const filePath = path.join(ARTICLES_DIR, f)
+      const content = fs.readFileSync(filePath, "utf-8")
+      const frontmatter = parseFrontmatter(content)
       return {
-        slug,
-        title: data.title,
-        category: data.category,
-        views: data.views,
-        momentum,
-        velocity: Math.round(velocity * 100) / 100,
-        score: Math.round((data.views * 0.4 + momentum * 30 + velocity * 5) * 100) / 100,
+        slug: f.replace(/\.mdx$/, ""),
+        ...frontmatter,
+        fileSize: fs.statSync(filePath).size,
       }
     })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-
-  const trending = { trending: scored, updatedAt: new Date().toISOString() }
-  saveTrending(trending)
-  return scored
 }
 
-function getTrending() {
-  try {
-    const data = loadTrending()
-    // Recompute if older than 30 minutes
-    if (
-      data.updatedAt &&
-      Date.now() - new Date(data.updatedAt).getTime() < 30 * 60 * 1000
-    ) {
-      return data.trending
-    }
-  } catch {}
-  return computeTrending()
-}
+function parseFrontmatter(content) {
+  const match = content.match(/^---\s*\n([\s\S]*?)\n---/)
+  if (!match) return {}
 
-function getMostRead(limit = 5) {
-  const metrics = loadMetrics()
-  return Object.entries(metrics.articles)
-    .sort(([, a], [, b]) => b.views - a.views)
-    .slice(0, limit)
-    .map(([slug, data]) => ({
-      slug,
-      title: data.title,
-      category: data.category,
-      views: data.views,
-    }))
-}
+  const data = {}
+  const lines = match[1].split("\n")
+  for (const line of lines) {
+    const idx = line.indexOf(":")
+    if (idx === -1) continue
+    const key = line.slice(0, idx).trim()
+    let value = line.slice(idx + 1).trim()
 
-function trackKeyword(keyword) {
-  const metrics = loadMetrics()
-  const day = new Date().toISOString().slice(0, 10)
-  if (!metrics.keywords[keyword]) {
-    metrics.keywords[keyword] = {}
+    if (value.startsWith("[") && value.endsWith("]")) {
+      try {
+        value = JSON.parse(value.replace(/'/g, '"'))
+      } catch {
+        value = value.slice(1, -1).split(",").map((s) => s.trim().replace(/['"]/g, ""))
+      }
+    } else if (value === "true") value = true
+    else if (value === "false") value = false
+    else value = value.replace(/^["']|["']$/g, "")
+
+    data[key] = value
   }
-  metrics.keywords[keyword][day] = (metrics.keywords[keyword][day] || 0) + 1
-  saveMetrics(metrics)
-}
-
-function getHotKeywords(limit = 10) {
-  const metrics = loadMetrics()
-  const today = new Date().toISOString().slice(0, 10)
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10)
-
-  const scored = Object.entries(metrics.keywords)
-    .map(([keyword, days]) => {
-      const todayCount = days[today] || 0
-      const yesterdayCount = days[yesterday] || 0
-      const momentum = yesterdayCount > 0 ? todayCount / yesterdayCount : todayCount
-      return { keyword, todayCount, momentum, score: todayCount * momentum }
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-
-  return scored
+  return data
 }
 
 function computeDailyMetrics() {
-  const metrics = loadMetrics()
-  const today = new Date().toISOString().slice(0, 10)
+  const articles = getAllArticles()
+  const today = new Date().toISOString().split("T")[0]
 
-  const totalViews = Object.values(metrics.articles).reduce(
-    (sum, a) => sum + a.views,
-    0,
-  )
-  const totalArticles = Object.keys(metrics.articles).length
-
-  metrics.daily.push({
-    date: today,
-    totalViews,
-    totalArticles,
-    timestamp: new Date().toISOString(),
-  })
-
-  // Keep last 90 days
-  if (metrics.daily.length > 90) {
-    metrics.daily = metrics.daily.slice(-90)
+  const categoryCount = {}
+  for (const article of articles) {
+    const cat = article.category || "uncategorized"
+    categoryCount[cat] = (categoryCount[cat] || 0) + 1
   }
 
-  saveMetrics(metrics)
-  return { totalViews, totalArticles }
+  const metrics = {
+    date: today,
+    totalArticles: articles.length,
+    totalSizeKb: Math.round(
+      articles.reduce((sum, a) => sum + (a.fileSize || 0), 0) / 1024,
+    ),
+    categories: categoryCount,
+    topCategories: Object.entries(categoryCount)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 10)
+      .map(([name, count]) => ({ name, count })),
+  }
+
+  fs.writeFileSync(METRICS_PATH, JSON.stringify(metrics, null, 2), "utf-8")
+  console.log(`Metrics written: ${metrics.totalArticles} articles across ${Object.keys(categoryCount).length} categories`)
+
+  return metrics
+}
+
+function computeTrending(limit = 20) {
+  const articles = getAllArticles()
+
+  const scored = articles.map((a) => {
+    let score = 0
+    if (a.breaking) score += 10
+    if (a.featured) score += 5
+    if (a.trending) score += 3
+    if (a.publishedAt) {
+      const age = (Date.now() - new Date(a.publishedAt).getTime()) / 3600000
+      score += Math.max(0, 48 - age) / 48 * 10
+    }
+    return { ...a, score }
+  })
+
+  scored.sort((a, b) => b.score - a.score)
+
+  const trending = scored.slice(0, limit).map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    category: a.category,
+    score: Math.round(a.score * 10) / 10,
+  }))
+
+  const trendingPath = path.join(__dirname, "../../src/data/trending.json")
+  fs.writeFileSync(trendingPath, JSON.stringify(trending, null, 2), "utf-8")
+  console.log(`Trending computed: top ${trending.length} articles`)
+
+  return trending
 }
 
 module.exports = {
-  recordView,
-  getMomentum,
-  computeTrending,
-  getTrending,
-  getMostRead,
-  trackKeyword,
-  getHotKeywords,
   computeDailyMetrics,
+  computeTrending,
+  getAllArticles,
 }

@@ -1,130 +1,155 @@
-const Parser = require("rss-parser")
+const RssParser = require("rss-parser")
+const fs = require("fs")
+const path = require("path")
 
-const parser = new Parser({
+const parser = new RssParser({
   timeout: 15000,
-  maxRedirects: 3,
   headers: {
-    "User-Agent": "GlobalNewsBot/1.0 (news aggregator; +https://globalnews.news)",
-    Accept: "application/rss+xml, application/xml, text/xml, application/atom+xml",
+    "User-Agent":
+      "Mozilla/5.0 (compatible; GlobalNewsBot/1.0; +https://pakistan-news.news)",
   },
 })
 
-function extractImage(item) {
-  try {
-    if (item.enclosure?.url && item.enclosure.type?.startsWith("image/"))
-      return item.enclosure.url
+const SOURCES_PATH = path.join(__dirname, "../config/sources.json")
+const ARTICLES_DIR = path.join(__dirname, "../../src/data/articles")
 
-    const mc = item["media:content"]
-    if (mc) {
-      const url = Array.isArray(mc) ? mc[0]?.$?.url : mc.$?.url
-      if (url) return url
-    }
-
-    const mt = item["media:thumbnail"]
-    if (mt) {
-      const url = Array.isArray(mt) ? mt[0]?.$?.url : mt.$?.url
-      if (url) return url
-    }
-
-    const html = item["content:encoded"] || item.content || item.description || ""
-    const m = html.match(/<img[^>]+src=["']([^"']+)["']/)
-    if (m) return m[1]
-  } catch {}
-  return null
+function loadSources() {
+  const raw = fs.readFileSync(SOURCES_PATH, "utf-8")
+  return JSON.parse(raw).sources
 }
 
-function extractContent(item) {
-  return item["content:encoded"] || item.content || item.description || ""
-}
-
-function stripHtml(html) {
+function htmlToText(html) {
   if (!html) return ""
   return html
-    .replace(/<script[\s\S]*?<\/script>/gi, "")
-    .replace(/<style[\s\S]*?<\/style>/gi, "")
-    .replace(/<[^>]+>/g, "")
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+    .replace(/<[^>]+>/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
-    .replace(/&#(\d+);/g, (_, c) => String.fromCharCode(+c))
+    .replace(/&#x27;/g, "'")
+    .replace(/&#x2F;/g, "/")
     .replace(/\s+/g, " ")
     .trim()
 }
 
-function htmlToMarkdown(html) {
-  if (!html) return ""
+function extractImage(item) {
+  if (item.enclosure && item.enclosure.url) return item.enclosure.url
 
-  let md = html
-    .replace(/<script[\s\S]*?<\/script>/gi, "")
-    .replace(/<style[\s\S]*?<\/style>/gi, "")
-    .replace(/<iframe[\s\S]*?<\/iframe>/gi, "")
-    .replace(/<nav[\s\S]*?<\/nav>/gi, "")
-    .replace(/<aside[\s\S]*?<\/aside>/gi, "")
+  if (item["media:content"] && item["media:content"].$) {
+    return item["media:content"].$.url
+  }
 
-  md = md.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, "# $1\n\n")
-  md = md.replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, "## $1\n\n")
-  md = md.replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, "### $1\n\n")
-  md = md.replace(/<h4[^>]*>([\s\S]*?)<\/h4>/gi, "#### $1\n\n")
-  md = md.replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, "**$1**")
-  md = md.replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, "**$1**")
-  md = md.replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, "*$1*")
-  md = md.replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, "*$1*")
-  md = md.replace(/<a[^>]*href=["'](https?:\/\/[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi, "[$2]($1)")
-  md = md.replace(/<img[^>]*src=["']([^"']+)["'][^>]*alt=["']([^"']*)["'][^>]*\/?>/gi, "![$2]($1)")
-  md = md.replace(/<img[^>]*src=["']([^"']+)["'][^>]*\/?>/gi, "![image]($1)")
+  if (item["media:thumbnail"] && item["media:thumbnail"].$) {
+    return item["media:thumbnail"].$.url
+  }
 
-  md = md.replace(/<ul[^>]*>([\s\S]*?)<\/ul>/gi, (_, c) =>
-    c.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, "- $1\n") + "\n"
-  )
-  md = md.replace(/<ol[^>]*>([\s\S]*?)<\/ol>/gi, (_, c) => {
-    let i = 0
-    return c.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, () => `${++i}. $1\n`) + "\n"
-  })
-  md = md.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, c) =>
-    c.trim().split("\n").map(l => `> ${l.trim()}`).join("\n") + "\n\n"
-  )
-  md = md.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, "$1\n\n")
-  md = md.replace(/<br\s*\/?>/gi, "\n")
-  md = md.replace(/<hr\s*\/?>/gi, "\n---\n")
-  md = md.replace(/<figure[^>]*>([\s\S]*?)<\/figure>/gi, "$1\n")
-  md = md.replace(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/gi, "*$1*\n")
-  md = md.replace(/<[^>]+>/g, "")
+  const content = item["content:encoded"] || item.content || ""
+  const imgMatch = content.match(/<img[^>]+src=["']([^"']+)["']/i)
+  if (imgMatch) return imgMatch[1]
 
-  md = md.replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#(\d+);/g, (_, c) => String.fromCharCode(+c))
-
-  md = md.replace(/\n{4,}/g, "\n\n\n")
-  md = md.replace(/[ \t]+/g, " ")
-  return md.trim()
+  return null
 }
 
-async function fetchSource(source) {
-  const feed = await parser.parseURL(source.url)
-  const items = (feed.items || []).slice(0, 15)
-  return items.map(item => {
-    const contentHtml = extractContent(item)
-    const pubDate = new Date(item.pubDate || item.isoDate || item.date || Date.now())
-    const cutoff = Date.now() - 7 * 86400000
-    if (pubDate.getTime() < cutoff) return null
+function extractDescription(item) {
+  return htmlToText(item.contentSnippet || item.content || item.description || "")
+}
+
+function generateSlug(title) {
+  let slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 80)
+
+  const hash = Math.random().toString(36).substring(2, 8)
+  return `${slug}--${hash}`
+}
+
+function generateTags(title, description, category) {
+  const words = (title + " " + description).toLowerCase()
+  const tagKeywords = [
+    "trump", "biden", "congress", "senate", "supreme court",
+    "iran", "ukraine", "russia", "china", "taiwan",
+    "ebola", "hantavirus", "covid", "health", "vaccine",
+    "ai", "artificial intelligence", "openai", "musk", "elon",
+    "nba", "nfl", "premier league", "champions league", "cricket",
+    "climate", "environment", "energy", "oil", "gas",
+    "election", "midterm", "primary", "vote",
+  ]
+
+  const tags = []
+  for (const keyword of tagKeywords) {
+    if (words.includes(keyword)) {
+      tags.push(keyword)
+    }
+  }
+
+  if (tags.length === 0) tags.push(category.toLowerCase())
+
+  return [...new Set(tags)]
+}
+
+async function fetchSource(source, maxPerSource = 5) {
+  const { url, category, label } = source
+  console.log(`  [${label}] Fetching ${url}...`)
+
+  let feed
+  try {
+    feed = await parser.parseURL(url)
+  } catch (err) {
+    console.error(`  [${label}] ERROR: ${err.message}`)
+    return []
+  }
+
+  const items = (feed.items || []).slice(0, maxPerSource)
+  console.log(`  [${label}] Got ${items.length} items`)
+
+  return items.map((item) => {
+    const title = (item.title || "Untitled").trim()
+    const description = extractDescription(item)
+    const imageUrl = extractImage(item)
+    const slug = generateSlug(title)
 
     return {
+      source: label,
       sourceUrl: item.link || "",
-      title: (item.title || "").trim(),
-      excerpt: stripHtml(contentHtml).slice(0, 250).replace(/\s+\S*$/, "") + ".",
-      body: htmlToMarkdown(contentHtml),
-      author: item.creator || item.author || source.label,
-      category: source.category,
-      publishedAt: pubDate.toISOString(),
-      imageUrl: extractImage(item),
-      sourceLabel: source.label,
+      slug,
+      title,
+      description: description.substring(0, 300),
+      content: description,
+      category,
+      imageUrl,
+      publishedAt: item.isoDate || item.pubDate || new Date().toISOString(),
+      tags: generateTags(title, description, category),
+      guid: item.guid || item.link || slug,
     }
-  }).filter(Boolean)
+  })
 }
 
-module.exports = { fetchSource, htmlToMarkdown, stripHtml }
+async function fetchAllSources(maxPerSource = 5) {
+  const sources = loadSources()
+  console.log(`Loaded ${sources.length} sources from config`)
+
+  const allArticles = []
+  for (const source of sources) {
+    const articles = await fetchSource(source, maxPerSource)
+    allArticles.push(...articles)
+  }
+
+  console.log(`\nTotal articles fetched: ${allArticles.length}`)
+  return allArticles
+}
+
+module.exports = {
+  loadSources,
+  fetchSource,
+  fetchAllSources,
+  htmlToText,
+  extractImage,
+  extractDescription,
+  generateSlug,
+  generateTags,
+}

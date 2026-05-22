@@ -1,0 +1,67 @@
+{
+  "date": "2026-05-22",
+  "totalArticles": 1381,
+  "totalSizeKb": 1661,
+  "categories": {
+    "Health": 131,
+    "Technology": 196,
+    "sehat": 10,
+    "Politics": 78,
+    "Science": 188,
+    "Culture": 66,
+    "science": 10,
+    "World": 204,
+    "Sports": 136,
+    "Business": 185,
+    "karobar": 10,
+    "khel": 5,
+    "technology": 10,
+    "Climate": 67,
+    "dunya": 10,
+    "Opinion": 65,
+    "shobiz": 5,
+    "siasat": 5
+  },
+  "topCategories": [
+    {
+      "name": "World",
+      "count": 204
+    },
+    {
+      "name": "Technology",
+      "count": 196
+    },
+    {
+      "name": "Science",
+      "count": 188
+    },
+    {
+      "name": "Business",
+      "count": 185
+    },
+    {
+      "name": "Sports",
+      "count": 136
+    },
+    {
+      "name": "Health",
+      "count": 131
+    },
+    {
+      "name": "Politics",
+      "count": 78
+    },
+    {
+      "name": "Climate",
+      "count": 67
+    },
+    {
+      "name": "Culture",
+      "count": 66
+    },
+    {
+      "name": "Opinion",
+      "count": 65
+    }
+  ]
+}

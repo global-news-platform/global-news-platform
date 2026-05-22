@@ -27,9 +27,13 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
-        serif: ["var(--font-merriweather)", "Georgia", "Times New Roman", "serif"],
-        headline: ["var(--font-playfair)", "Georgia", "Times New Roman", "serif"],
+        sans: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "Noto Sans Arabic", "system-ui", "sans-serif"],
+        serif: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "Noto Sans Arabic", "serif"],
+        headline: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "serif"],
+        urdu: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "serif"],
+        urduBody: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "serif"],
+        arabic: ["var(--font-noto-arabic)", "Noto Sans Arabic", "sans-serif"],
+        kufi: ["var(--font-noto-arabic)", "Noto Sans Arabic", "sans-serif"],
       },
       fontSize: {
         "2xs": ["0.625rem", { lineHeight: "0.875rem" }],
@@ -85,10 +89,28 @@ const config: Config = {
         },
         nav: {
           DEFAULT: "hsl(var(--nav-bg))",
+          foreground: "hsl(var(--nav-fg))",
         },
         ticker: {
           DEFAULT: "hsl(var(--ticker-bg))",
           foreground: "hsl(var(--ticker-fg))",
+        },
+        "section-header": {
+          DEFAULT: "hsl(var(--section-header-bg))",
+          foreground: "hsl(var(--section-header-fg))",
+        },
+        pakistan: {
+          50: "#f0fdf4",
+          100: "#dcfce7",
+          200: "#bbf7d0",
+          300: "#86efac",
+          400: "#4ade80",
+          500: "#22c55e",
+          600: "#16a34a",
+          700: "#15803d",
+          800: "#166534",
+          900: "#14532d",
+          950: "#052e16",
         },
       },
       borderRadius: {
@@ -124,6 +146,10 @@ const config: Config = {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(-100%)" },
         },
+        "marquee-rtl": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(100%)" },
+        },
         "pulse-soft": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.7" },
@@ -147,6 +173,7 @@ const config: Config = {
         "slide-up": "slide-up 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
         marquee: "marquee 30s linear infinite",
+        "marquee-rtl": "marquee-rtl 30s linear infinite",
         "pulse-soft": "pulse-soft 2s ease-in-out infinite",
         "live-pulse": "live-pulse 1.5s ease-in-out infinite",
         shimmer: "shimmer 2s linear infinite",
@@ -165,7 +192,8 @@ const config: Config = {
               "&:hover": { opacity: "0.7" },
             },
             'h1, h2, h3, h4': {
-              fontFamily: "var(--font-merriweather), Georgia, serif",
+              fontFamily: "var(--font-noto-nastaliq), Noto Nastaliq Urdu, serif",
+              lineHeight: "1.6",
               color: "hsl(var(--foreground))",
             },
           },

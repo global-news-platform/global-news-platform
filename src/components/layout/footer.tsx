@@ -1,93 +1,74 @@
 import Link from "next/link"
 import { Globe, Rss, Twitter, Facebook, Linkedin, Mail } from "lucide-react"
-import { siteConfig, categories } from "@/lib/constants"
-import { Container } from "@/components/common/container"
+
+const footerCategories = [
+  { slug: "pakistan", name: "پاکستان" },
+  { slug: "dunya", name: "دنیا" },
+  { slug: "siasat", name: "سیاست" },
+  { slug: "karobar", name: "کاروبار" },
+  { slug: "technology", name: "ٹیکنالوجی" },
+  { slug: "khel", name: "کھیل" },
+  { slug: "sehat", name: "صحت" },
+  { slug: "science", name: "سائنس" },
+  { slug: "shobiz", name: "شوبز" },
+  { slug: "mazhab", name: "مذہب" },
+  { slug: "taleem", name: "تعلیم" },
+  { slug: "raye", name: "رائے" },
+]
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
-  const footerCategories = categories.filter((c) =>
-    ["world", "politics", "business", "technology", "science", "culture", "sports", "opinion"].includes(c.slug),
-  )
 
   return (
-    <footer className="border-t border-border bg-secondary/30">
-      <Container className="py-12 md:py-16">
-        {/* Newsletter */}
-        <div className="mb-12 rounded-lg border border-border bg-background p-6 md:mb-16 md:p-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h3 className="font-headline text-xl font-bold md:text-2xl">
-              Stay Informed
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Get the day&apos;s most important news delivered to your inbox every morning.
-            </p>
-            <form
-              className="mt-5 flex max-w-md mx-auto gap-2"
-              action="#"
-            >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 rounded border border-border bg-background px-4 py-2.5 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring"
-                required
-              />
-              <button
-                type="submit"
-                className="rounded bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-
-        {/* Main grid */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-border/40 bg-primary text-primary-foreground">
+      {/* Main grid */}
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-5 lg:px-6 xl:px-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded bg-foreground">
-                <Globe className="h-4 w-4 text-background" />
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/20">
+                <Globe className="h-5 w-5" />
               </div>
-              <span className="text-sm font-bold">{siteConfig.name}</span>
+              <span className="text-lg font-bold">پاکستان نیوز</span>
             </Link>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {siteConfig.description}
+            <p className="mt-3 text-sm leading-relaxed text-primary-foreground/70">
+              پاکستان کا معتبر ترین خبروں کا پلیٹ فارم۔ پاکستان، دنیا، سیاست، کاروبار، ٹیکنالوجی، کھیل اور دیگر شعبوں کی تازہ ترین خبریں۔
             </p>
-            <div className="mt-4 flex items-center gap-3">
+            <div className="mt-5 flex items-center gap-2">
               <a
-                href={siteConfig.links.twitter}
+                href="https://twitter.com/pakistannews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-                aria-label="Twitter"
+                className="rounded-lg bg-white/10 p-2 text-primary-foreground/80 transition-colors hover:bg-white/20 hover:text-primary-foreground"
+                aria-label="ٹویٹر"
               >
                 <Twitter className="h-4 w-4" />
               </a>
               <a
-                href={siteConfig.links.facebook}
+                href="https://facebook.com/pakistannews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-                aria-label="Facebook"
+                className="rounded-lg bg-white/10 p-2 text-primary-foreground/80 transition-colors hover:bg-white/20 hover:text-primary-foreground"
+                aria-label="فیس بک"
               >
                 <Facebook className="h-4 w-4" />
               </a>
               <a
-                href={siteConfig.links.linkedin}
+                href="https://linkedin.com/company/pakistannews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-                aria-label="LinkedIn"
+                className="rounded-lg bg-white/10 p-2 text-primary-foreground/80 transition-colors hover:bg-white/20 hover:text-primary-foreground"
+                aria-label="لنکڈ ان"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href={siteConfig.links.rss}
+                href="/feed.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-                aria-label="RSS Feed"
+                className="rounded-lg bg-white/10 p-2 text-primary-foreground/80 transition-colors hover:bg-white/20 hover:text-primary-foreground"
+                aria-label="آر ایس ایس فیڈ"
               >
                 <Rss className="h-4 w-4" />
               </a>
@@ -96,15 +77,34 @@ export function Footer() {
 
           {/* Sections */}
           <div>
-            <h4 className="mb-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-              Sections
+            <h4 className="mb-4 text-[12px] font-bold uppercase tracking-[0.15em] text-primary-foreground/60">
+              زمرہ جات
             </h4>
             <ul className="space-y-2">
-              {footerCategories.map((cat) => (
+              {footerCategories.slice(0, 6).map((cat) => (
                 <li key={cat.slug}>
                   <Link
                     href={`/category/${cat.slug}`}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+                  >
+                    {cat.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* More sections */}
+          <div>
+            <h4 className="mb-4 text-[12px] font-bold uppercase tracking-[0.15em] text-primary-foreground/60">
+              مزید
+            </h4>
+            <ul className="space-y-2">
+              {footerCategories.slice(6, 12).map((cat) => (
+                <li key={cat.slug}>
+                  <Link
+                    href={`/category/${cat.slug}`}
+                    className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                   >
                     {cat.name}
                   </Link>
@@ -115,83 +115,60 @@ export function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="mb-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-              Quick Links
+            <h4 className="mb-4 text-[12px] font-bold uppercase tracking-[0.15em] text-primary-foreground/60">
+              فوری لنکس
             </h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/breaking"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                 >
-                  Breaking News
+                  بریکنگ نیوز
                 </Link>
               </li>
-              {["world", "technology", "business"].map((slug) => {
-                const cat = categories.find((c) => c.slug === slug)
-                return (
-                  <li key={slug}>
-                    <Link
-                      href={`/category/${slug}`}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {cat?.name || slug}
-                    </Link>
-                  </li>
-                )
-              })}
+              <li>
+                <Link
+                  href="/search"
+                  className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+                >
+                  خبریں تلاش کریں
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/about-us"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                 >
-                  About Us
+                  ہمارے بارے میں
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="mb-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-              Contact
-            </h4>
-            <ul className="space-y-2">
               <li>
                 <a
-                  href={`mailto:contact@${siteConfig.url.replace("https://", "")}`}
-                  className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  href={`mailto:contact@pakistan-news.news`}
+                  className="flex items-center gap-2 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                 >
                   <Mail className="h-3.5 w-3.5" />
-                  contact@{siteConfig.url.replace("https://", "")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={siteConfig.links.rss}
-                  className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  <Rss className="h-3.5 w-3.5" />
-                  RSS Feed
+                  contact@pakistan-news.news
                 </a>
               </li>
             </ul>
           </div>
         </div>
-      </Container>
+      </div>
 
-      {/* Bottom */}
-      <div className="border-t border-border">
-        <Container className="flex flex-col items-center justify-between gap-2 py-5 md:flex-row">
-          <p className="text-xs text-muted-foreground">
-            &copy; {currentYear} {siteConfig.name}. All rights reserved.
+      {/* Bottom bar */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 sm:flex-row sm:px-5 lg:px-6 xl:px-8">
+          <p className="text-xs text-primary-foreground/60">
+            &copy; {currentYear} پاکستان نیوز. جملہ حقوق محفوظ ہیں۔
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-muted-foreground">
-              Trusted news from around the world
+            <span className="text-xs text-primary-foreground/60">
+              پاکستان کی معتبر خبریں
             </span>
           </div>
-        </Container>
+        </div>
       </div>
     </footer>
   )

@@ -1,9 +1,8 @@
-const REPEATED_PHRASE_LENGTH = 8
 const TITLE_MIN_LENGTH = 8
 const EXCERPT_MAX_LENGTH = 180
 const EXCESSIVE_PUNCTUATION_THRESHOLD = 0.15
 
-const BROKEN_PREFIXES = [/^[a-z]{1,3}\b(?:\s+[a-z]{1,3}\b)*\s+\d+[:.]?\s*/i, /^[-\s]+\w/, /^[^a-zA-Z0-9]{2,}/]
+const BROKEN_PREFIXES = [/^[a-z]{1,3}\b(?:\s+[a-z]{1,3}\b)*\s+\d+[:.]?\s*/i, /^[-\s]+\w/, /^[^a-zA-Z0-9\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]{2,}/]
 
 const MALFORMED_CHAR_PATTERN = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/
 
@@ -48,6 +47,8 @@ const AI_HALLUCINATED_FORMATTING = [
   /~~[^~]+~~/g,
   /\^\^[^\^]+\^\^/g,
 ]
+
+const URDU_CHAR_RANGE = /[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/
 
 function removeEscapedQuotes(text: string): string {
   let result = text
@@ -131,7 +132,9 @@ function hasExcessivePunctuation(text: string): boolean {
 
 function hasRepeatedPhrases(text: string): boolean {
   const lower = text.toLowerCase()
-  for (let len = REPEATED_PHRASE_LENGTH; len <= Math.min(30, Math.floor(lower.length / 2)); len++) {
+  const lengths = [8, 14]
+  for (const len of lengths) {
+    if (len > Math.floor(lower.length / 2)) continue
     const seen = new Set<string>()
     for (let i = 0; i <= lower.length - len; i++) {
       const phrase = lower.slice(i, i + len)
@@ -146,7 +149,7 @@ function hasCorruptedUnicode(text: string): boolean {
   const replacementCount = (text.match(/\uFFFD/g) || []).length
   if (replacementCount > 3) return true
   const nonLatinRatio =
-    text.replace(/[\w\s.,!?;:'"-]/g, "").length / Math.max(text.length, 1)
+    text.replace(/[\w\s.,!?;:'"\-\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g, "").length / Math.max(text.length, 1)
   return nonLatinRatio > 0.3
 }
 
@@ -171,7 +174,10 @@ export function sanitizeTitle(title: string): string {
   result = result.replace(/\s+/g, " ").trim()
   result = result.replace(/[^\S\r\n]+/g, " ")
   if (result.length < TITLE_MIN_LENGTH) return ""
-  result = result.charAt(0).toUpperCase() + result.slice(1)
+  const firstChar = result.charAt(0)
+  if (!URDU_CHAR_RANGE.test(firstChar)) {
+    result = result.charAt(0).toUpperCase() + result.slice(1)
+  }
   return result
 }
 
@@ -259,30 +265,33 @@ export function cleanAIOutput(text: string): string {
 export function deduplicateArticles<T extends { title: string; slug?: string }>(
   articles: T[],
 ): T[] {
-  const seen = new Map<string, number>()
+  const exactMatch = new Set<string>()
   const seenSlugs = new Set<string>()
-  const result: T[] = []
+  const normalizedList: { article: T; normalized: string }[] = []
   for (const article of articles) {
     if (!article.title) continue
+    if (seenSlugs.has(article.slug || "")) continue
     const normalized = article.title
       .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, "")
+      .replace(/[^a-z0-9\s\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g, "")
       .replace(/\s+/g, " ")
       .trim()
-    if (seenSlugs.has(article.slug || "")) continue
     if (normalized.length < 5) continue
+    if (exactMatch.has(normalized)) continue
+    exactMatch.add(normalized)
+    if (article.slug) seenSlugs.add(article.slug)
+    normalizedList.push({ article, normalized })
+  }
+  const result: T[] = []
+  for (let i = 0; i < normalizedList.length; i++) {
     let isDuplicate = false
-    for (const [key] of seen) {
-      const similarity = cosineSimilarityWords(normalized, key)
-      if (similarity > 0.75) {
+    for (let j = 0; j < i; j++) {
+      if (cosineSimilarityWords(normalizedList[i].normalized, normalizedList[j].normalized) > 0.75) {
         isDuplicate = true
         break
       }
     }
-    if (isDuplicate) continue
-    seen.set(normalized, result.length)
-    if (article.slug) seenSlugs.add(article.slug)
-    result.push(article)
+    if (!isDuplicate) result.push(normalizedList[i].article)
   }
   return result
 }

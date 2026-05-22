@@ -31,7 +31,7 @@ function xmlUrl({
 }
 
 export async function GET() {
-  const articles = getArticleLinks()
+  const articles = await getArticleLinks()
 
   const homepageUrl = {
     loc: siteConfig.url,

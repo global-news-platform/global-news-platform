@@ -1,22 +1,45 @@
-# Setup: install scheduled task for automated news ingestion
-# Run as Administrator
+<#
+.SYNOPSIS
+    Installs a scheduled task to run the news pipeline every 4 hours.
+.DESCRIPTION
+    Creates a Windows Scheduled Task that runs scripts/run.bat
+    every 4 hours. Requires Administrator privileges.
+#>
 
-$Name = "GlobalNewsPipeline"
-$Script = Join-Path (Get-Location) "scripts\run.bat"
+$TaskName = "GlobalNewsPipeline"
+$ScriptPath = Join-Path $PSScriptRoot "run.bat"
+$TaskPath = "\GlobalNews\"
 
-if (-not (Test-Path $Script)) {
-    Write-Host "ERROR: run.bat not found" -ForegroundColor Red
+# Ensure we're running as admin
+$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
+if (-not $isAdmin) {
+    Write-Warning "This script must be run as Administrator."
+    Write-Warning "Please restart PowerShell as Administrator and try again."
     exit 1
 }
 
-$action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$Script`""
-$trigger = New-ScheduledTaskTrigger -Daily -At "00:00" -RepetitionInterval (New-TimeSpan -Hours 2) -RepetitionDuration (New-TimeSpan -Days 365)
-$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopIfGoingOnBatteries -AllowStartIfOnBatteries -RunOnlyIfNetworkAvailable -ExecutionTimeLimit (New-TimeSpan -Minutes 20)
+# Create task if it doesn't exist
+$existing = Get-ScheduledTask -TaskPath $TaskPath -TaskName $TaskName -ErrorAction SilentlyContinue
+if ($existing) {
+    Write-Host "Updating existing task: $TaskName"
+    Unregister-ScheduledTask -TaskPath $TaskPath -TaskName $TaskName -Confirm:$false
+}
+
+$action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$ScriptPath`""
+$trigger = New-ScheduledTaskTrigger -Daily -At "00:00" -RepetitionInterval (New-TimeSpan -Hours 4) -RepetitionDuration (New-TimeSpan -Days 365)
+
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -ExecutionTimeLimit (New-TimeSpan -Hours 1)
+
 $principal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 
-Unregister-ScheduledTask -TaskName $Name -Confirm:$false -ErrorAction SilentlyContinue
-
-Register-ScheduledTask -TaskName $Name -Action $action -Trigger $trigger -Settings $settings -Principal $principal -Description "Global News — automated ingestion every 2 hours" -Force
-
-Write-Host "✓ Scheduled task '$Name' installed (every 2 hours)" -ForegroundColor Green
-Write-Host "  Script: $Script"
+try {
+    Register-ScheduledTask -TaskName $TaskName -TaskPath $TaskPath -Action $action -Trigger $trigger -Settings $settings -Principal $principal -Force
+    Write-Host "✓ Task '$TaskName' installed successfully."
+    Write-Host "  Schedule: Every 4 hours"
+    Write-Host "  Script: $ScriptPath"
+    Write-Host "  To view: Get-ScheduledTask -TaskPath '$TaskPath' |fl"
+} catch {
+    Write-Error "Failed to register task: $_"
+    exit 1
+}

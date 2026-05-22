@@ -14,14 +14,17 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
           <div className="lg:col-span-2">
             <ArticleCard article={featured} variant="hero" />
           </div>
-          <div className="flex flex-col gap-2 rounded-xl border border-border/50 bg-card/50 p-4 md:p-5">
-            <div className="section-label pb-1">Top Stories</div>
-            {secondary.slice(0, 4).map((article, i) => (
-              <div key={article.slug}>
-                <ArticleCard article={article} variant="horizontal" />
-                {i < secondary.slice(0, 4).length - 1 && <div className="border-t border-border/40" />}
-              </div>
-            ))}
+          <div className="flex flex-col border border-border bg-card p-4 md:p-5">
+            <h3 className="mb-3 text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
+              اہم خبریں
+            </h3>
+            <div className="divide-y divide-border/60">
+              {secondary.slice(0, 4).map((article) => (
+                <div key={article.slug}>
+                  <ArticleCard article={article} variant="horizontal" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

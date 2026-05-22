@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useMemo, useCallback, useRef, useEffect } from "react"
+import { useState, useCallback, useRef } from "react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { resolveImageUrl } from "@/lib/image-resolver"
+import { getFallbackImageUrl, getFallbackImageDataUrl } from "@/lib/images/fallbackImages"
 
 export interface SafeImageProps {
   src?: string
@@ -12,9 +13,11 @@ export interface SafeImageProps {
   priority?: boolean
   categorySlug?: string
   slug?: string
-  credit?: string
-  source?: string
   showAttribution?: boolean
+}
+
+function isSvgPath(path: string): boolean {
+  return path.endsWith(".svg")
 }
 
 export function SafeImage({
@@ -24,44 +27,34 @@ export function SafeImage({
   wrapperClassName,
   priority = false,
   categorySlug,
-  slug,
-  credit: explicitCredit,
-  source: explicitSource,
-  showAttribution = false,
 }: SafeImageProps) {
-  const [loaded, setLoaded] = useState(priority)
   const [errored, setErrored] = useState(false)
-  const [showSkeleton, setShowSkeleton] = useState(!priority)
-  const imgRef = useRef<HTMLImageElement>(null)
+  const [loadingFailed, setLoadingFailed] = useState(false)
+  const attemptCount = useRef(0)
+  const cat = categorySlug || "general"
 
-  const resolved = useMemo(() => resolveImageUrl(src, categorySlug, slug), [src, categorySlug, slug])
+  const fallbackUrl = getFallbackImageUrl(cat)
 
-  const [displaySrc, setDisplaySrc] = useState(resolved.src)
+  const imageSrc = loadingFailed || errored || !src ? fallbackUrl : src
 
-  useEffect(() => {
-    if (imgRef.current?.complete) {
-      setLoaded(true)
-      setShowSkeleton(false)
+  const blurDataUrl = getFallbackImageDataUrl(cat)
+  const isSvg = isSvgPath(imageSrc)
+
+  const handleError = useCallback(() => {
+    attemptCount.current += 1
+    if (attemptCount.current >= 2) {
+      setErrored(true)
+      setLoadingFailed(true)
+    } else {
+      setErrored(true)
     }
   }, [])
 
   const handleLoad = useCallback(() => {
-    setLoaded(true)
-    setShowSkeleton(false)
-    setErrored(false)
-  }, [])
-
-  const handleError = useCallback(() => {
-    if (!errored) {
-      setErrored(true)
-      const fallbackUrl = resolveImageUrl(null, categorySlug, slug)
-      setDisplaySrc(fallbackUrl.src)
+    if (errored) {
+      setErrored(false)
     }
-  }, [errored, categorySlug, slug])
-
-  const attribution = explicitCredit || resolved.credit || null
-  const sourceText = explicitSource || resolved.source || null
-  const showCredit = showAttribution && (attribution || sourceText)
+  }, [errored])
 
   return (
     <div
@@ -71,37 +64,25 @@ export function SafeImage({
         wrapperClassName,
       )}
     >
-      {showSkeleton && !loaded && (
-        <div
-          className="absolute inset-0 animate-pulse bg-muted/30 rounded-lg"
-          aria-hidden="true"
-        />
-      )}
-
-      <img
-        ref={imgRef}
-        src={displaySrc}
+      <Image
+        key={imageSrc}
+        src={imageSrc}
         alt={alt}
         className={cn(
           "w-full h-full object-cover transition-opacity duration-300",
-          loaded ? "opacity-100" : "opacity-0",
-          errored && "opacity-60",
           className,
         )}
+        width={1200}
+        height={800}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        priority={priority}
         loading={priority ? "eager" : "lazy"}
-        onLoad={handleLoad}
+        placeholder={isSvg ? "empty" : "blur"}
+        blurDataURL={isSvg ? undefined : blurDataUrl}
         onError={handleError}
+        onLoad={handleLoad}
+        quality={isSvg ? undefined : 85}
       />
-
-      {showCredit && (
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-2 pb-1 pt-4">
-          <span className="text-[10px] font-medium text-white/80">
-            {attribution && `Photo: ${attribution}`}
-            {attribution && sourceText && " "}
-            {sourceText && `via ${sourceText}`}
-          </span>
-        </div>
-      )}
     </div>
   )
 }

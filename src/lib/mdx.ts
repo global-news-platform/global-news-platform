@@ -1,23 +1,6 @@
 import fs from "fs"
 import path from "path"
 
-export interface ArticleFrontmatter {
-  title: string
-  excerpt: string
-  category: string
-  categorySlug?: string
-  author: string
-  authorSlug: string
-  publishedAt: string
-  updatedAt?: string
-  image?: string
-  imageAlt?: string
-  tags: string[]
-  featured?: boolean
-  breaking?: boolean
-  trending?: boolean
-}
-
 export function getArticleSlugs(): string[] {
   const articlesDir = path.join(process.cwd(), "src/data/articles")
   if (!fs.existsSync(articlesDir)) return []

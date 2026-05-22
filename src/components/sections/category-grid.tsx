@@ -38,7 +38,7 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
                   />
                 )}
                 {section.articles.length > 1 && (
-                  <div className="flex flex-col rounded-xl border border-border/50 bg-card/50 p-4 md:p-5">
+                  <div className="flex flex-col border border-border bg-card p-4 md:p-5">
                     {section.articles.slice(1, 4).map((article) => (
                       <div key={article.slug}>
                         <ArticleCard article={article} variant="horizontal" />
@@ -47,9 +47,9 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
                     {section.articles.length > 4 && (
                       <Link
                         href={`/category/${section.slug}`}
-                        className="mt-auto pt-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                        className="mt-auto pt-3 text-sm font-medium text-primary transition-colors hover:text-primary/80"
                       >
-                        More {section.name} news &rarr;
+                        {section.name} کی مزید خبریں
                       </Link>
                     )}
                   </div>

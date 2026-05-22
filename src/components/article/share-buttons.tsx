@@ -2,7 +2,6 @@
 
 import { Twitter, Linkedin, Link2, Mail, Facebook } from "lucide-react"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
-import { siteConfig } from "@/lib/constants"
 
 interface ShareButtonsProps {
   url: string
@@ -16,7 +15,7 @@ export function ShareButtons({
   variant = "inline",
 }: ShareButtonsProps) {
   const { copied, copy } = useCopyToClipboard()
-  const fullUrl = `${siteConfig.url}${url}`
+  const fullUrl = url
   const encodedUrl = encodeURIComponent(fullUrl)
   const encodedTitle = encodeURIComponent(title)
 
@@ -47,7 +46,7 @@ export function ShareButtons({
     return (
       <div className="flex flex-col items-center gap-3">
         <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-          Share
+          شیئر کریں
         </span>
         <div className="flex flex-col gap-2">
           {shareLinks.map((link) => {
@@ -59,7 +58,7 @@ export function ShareButtons({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-                aria-label={`Share on ${link.name}`}
+                aria-label={`${link.name} پر شیئر کریں`}
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -68,10 +67,10 @@ export function ShareButtons({
           <button
             onClick={() => copy(fullUrl)}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-            aria-label="Copy link"
+            aria-label="لنک کاپی کریں"
           >
             {copied ? (
-              <span className="text-[10px] font-medium">OK</span>
+              <span className="text-[10px] font-medium">ہو گیا</span>
             ) : (
               <Link2 className="h-4 w-4" />
             )}
@@ -83,7 +82,7 @@ export function ShareButtons({
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-[12px] text-muted-foreground">Share:</span>
+      <span className="text-[12px] text-muted-foreground">شیئر کریں:</span>
       {shareLinks.map((link) => {
         const Icon = link.icon
         return (
@@ -93,7 +92,7 @@ export function ShareButtons({
             target="_blank"
             rel="noopener noreferrer"
             className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-            aria-label={`Share on ${link.name}`}
+            aria-label={`${link.name} پر شیئر کریں`}
           >
             <Icon className="h-4 w-4" />
           </a>
@@ -102,10 +101,10 @@ export function ShareButtons({
       <button
         onClick={() => copy(fullUrl)}
         className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-        aria-label="Copy link"
+        aria-label="لنک کاپی کریں"
       >
         {copied ? (
-          <span className="text-[10px] font-medium">Copied!</span>
+          <span className="text-[10px] font-medium">کاپی!</span>
         ) : (
           <Link2 className="h-4 w-4" />
         )}

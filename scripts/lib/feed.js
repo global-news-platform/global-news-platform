@@ -1,104 +1,121 @@
-/**
- * Standalone RSS feed.xml generator.
- * Reads MDX articles and writes to public/feed.xml.
- */
-
 const fs = require("fs")
 const path = require("path")
 
-const ROOT = path.join(__dirname, "..", "..")
-const SRC_ARTICLES = path.join(ROOT, "src", "data", "articles")
-const PUBLIC = path.join(ROOT, "public")
+const ARTICLES_DIR = path.join(__dirname, "../../src/data/articles")
+const PUBLIC_DIR = path.join(__dirname, "../../public")
+const FEED_PATH = path.join(PUBLIC_DIR, "feed.xml")
 
-const SITE_URL = process.env.SITE_URL || "https://globalnews.news"
-const SITE_NAME = "Global News"
-const SITE_DESC = "Global News delivers comprehensive, trusted coverage of world events, business, technology, politics, and culture."
+const SITE_URL = process.env.SITE_URL || "https://pakistan-news.news"
+const SITE_NAME = "پاکستان نیوز"
+const SITE_DESC = "پاکستان کا معتبر ترین خبروں کا پلیٹ فارم"
 
-function getArticles() {
-  if (!fs.existsSync(SRC_ARTICLES)) return []
-  return fs.readdirSync(SRC_ARTICLES)
-    .filter(f => f.endsWith(".mdx"))
-    .map(f => {
-      const content = fs.readFileSync(path.join(SRC_ARTICLES, f), "utf-8")
-      const fmMatch = content.match(/^---\n([\s\S]*?)\n---/)
-      if (!fmMatch) return null
-      const fm = {}
-      for (const line of fmMatch[1].split("\n")) {
-        const [k, ...v] = line.split(":")
-        if (k && v.length) fm[k.trim()] = v.join(":").trim().replace(/^["']|["']$/g, "")
-      }
-      const body = content.replace(/^---\n[\s\S]*?\n---\n\n?/, "")
-      const excerptMatch = content.match(/^excerpt:\s*["']([^"']+)["']$/m)
-      const tagsMatch = content.match(/^tags:\s*\[([^\]]+)\]/m)
-      return {
-        slug: f.replace(/\.mdx$/, ""),
-        title: fm.title || "",
-        excerpt: excerptMatch ? excerptMatch[1] : body.slice(0, 200),
-        author: fm.author || "Staff",
-        category: fm.category || "General",
-        publishedAt: fm.publishedAt || "",
-        image: fm.image || "",
-      }
-    })
-    .filter(Boolean)
-    .sort((a, b) => new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0))
+function getArticles(limit = 50) {
+  if (!fs.existsSync(ARTICLES_DIR)) return []
+
+  const files = fs
+    .readdirSync(ARTICLES_DIR)
+    .filter((f) => f.endsWith(".mdx"))
+    .sort()
+    .reverse()
+    .slice(0, limit)
+
+  return files.map((f) => {
+    const content = fs.readFileSync(path.join(ARTICLES_DIR, f), "utf-8")
+    const fm = parseFrontmatter(content)
+
+    const bodyMatch = content.match(/^---[\s\S]*?---\s*\n([\s\S]*)$/)
+    const body = bodyMatch ? bodyMatch[1].trim() : ""
+
+    return {
+      slug: f.replace(/\.mdx$/, ""),
+      title: fm.title || "Untitled",
+      excerpt: fm.excerpt || "",
+      body: body.substring(0, 500),
+      category: fm.category || "general",
+      author: fm.author || "Staff",
+      publishedAt: fm.publishedAt || new Date().toISOString(),
+      image: fm.image || "",
+    }
+  })
 }
 
-function esc(s) {
-  return String(s)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&apos;")
+function parseFrontmatter(content) {
+  const match = content.match(/^---\s*\n([\s\S]*?)\n---/)
+  if (!match) return {}
+
+  const data = {}
+  const lines = match[1].split("\n")
+  for (const line of lines) {
+    const idx = line.indexOf(":")
+    if (idx === -1) continue
+    const key = line.slice(0, idx).trim()
+    let value = line.slice(idx + 1).trim()
+    value = value.replace(/^["']|["']$/g, "")
+    if (value === "true") value = true
+    else if (value === "false") value = false
+    data[key] = value
+  }
+  return data
 }
 
-function generate() {
-  const articles = getArticles()
+function escapeXml(str) {
+  if (!str) return ""
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;")
+}
 
-  const items = articles.map(a => `
-    <item>
-      <title>${esc(a.title)}</title>
-      <link>${SITE_URL}/article/${a.slug}</link>
-      <guid isPermaLink="true">${SITE_URL}/article/${a.slug}</guid>
-      <description>${esc(a.excerpt)}</description>
-      <author>${esc(a.author)}</author>
-      <category>${esc(a.category)}</category>
-      <pubDate>${new Date(a.publishedAt).toUTCString()}</pubDate>
-      ${a.image ? `<media:content xmlns:media="http://search.yahoo.com/mrss/" url="${SITE_URL}${esc(a.image)}" medium="image" />` : ""}
-    </item>`).join("")
+function generateFeed() {
+  const articles = getArticles(50)
 
-  const rss = `<?xml version="1.0" encoding="UTF-8"?>
+  const items = articles
+    .map(
+      (a) => `  <item>
+    <title>${escapeXml(a.title)}</title>
+    <link>${SITE_URL}/article/${a.slug}</link>
+    <guid isPermaLink="true">${SITE_URL}/article/${a.slug}</guid>
+    <description>${escapeXml(a.excerpt)}</description>
+    <category>${escapeXml(a.category)}</category>
+    <author>${escapeXml(a.author)}</author>
+    <pubDate>${new Date(a.publishedAt).toUTCString()}</pubDate>
+    ${a.image ? `<enclosure url="${SITE_URL}${a.image}" type="image/jpeg" />` : ""}
+  </item>`,
+    )
+    .join("\n")
+
+  const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
      xmlns:atom="http://www.w3.org/2005/Atom"
-     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>${esc(SITE_NAME)}</title>
+    <title>${escapeXml(SITE_NAME)}</title>
     <link>${SITE_URL}</link>
-    <description>${esc(SITE_DESC)}</description>
-    <language>en-US</language>
-    <copyright>Copyright ${new Date().getFullYear()} ${esc(SITE_NAME)}. All rights reserved.</copyright>
+    <description>${escapeXml(SITE_DESC)}</description>
+    <language>ur-pk</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${SITE_URL}/images/og-default.jpg</url>
-      <title>${esc(SITE_NAME)}</title>
+      <url>${SITE_URL}/images/logo.svg</url>
+      <title>${escapeXml(SITE_NAME)}</title>
       <link>${SITE_URL}</link>
     </image>
-    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
-    ${items}
+${items}
   </channel>
 </rss>`
 
-  const outPath = path.join(PUBLIC, "feed.xml")
-  if (!fs.existsSync(PUBLIC)) fs.mkdirSync(PUBLIC, { recursive: true })
-  fs.writeFileSync(outPath, rss, "utf-8")
-  return { count: articles.length, file: outPath }
-}
+  fs.mkdirSync(PUBLIC_DIR, { recursive: true })
+  fs.writeFileSync(FEED_PATH, feed, "utf-8")
+  console.log(`RSS feed generated: ${articles.length} items → ${FEED_PATH}`)
 
-module.exports = { generate }
+  return feed
+}
 
 if (require.main === module) {
-  const result = generate()
-  console.log(`Generated RSS feed: ${result.count} items → ${result.file}`)
+  generateFeed()
 }
+
+module.exports = { generateFeed }

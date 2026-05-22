@@ -48,7 +48,7 @@ function getInitialTheme(storageKey: string, defaultTheme: Theme): Theme {
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  storageKey = "global-news-theme",
+  storageKey = "pakistan-news-theme",
   ...props
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(() =>

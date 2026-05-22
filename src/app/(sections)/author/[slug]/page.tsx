@@ -7,7 +7,7 @@ import { ArticleCard } from "@/components/article/article-card"
 import { AdSlot } from "@/components/common/ad-slot"
 import { Breadcrumbs } from "@/components/article/breadcrumbs"
 
-import { getArticlesByAuthor, getAuthorBySlug, getAllArticles, preResolveAllImages } from "@/lib/articles"
+import { getArticlesByAuthor, getAuthorBySlug, getAllArticles } from "@/lib/articles"
 import { authors } from "@/data/authors/authors"
 import {
   absoluteUrl,
@@ -15,8 +15,12 @@ import {
   generatePersonSchema,
 } from "@/lib/seo"
 
+export const dynamic = "force-static"
+export const revalidate = 3600
+
 export async function generateStaticParams() {
-  const articleAuthorSlugs = getAllArticles().map((a) => a.authorSlug).filter(Boolean)
+  const allArticles = await getAllArticles()
+  const articleAuthorSlugs = allArticles.map((a) => a.authorSlug).filter(Boolean)
   const authorSlugs = authors.map((a) => a.slug)
   return [...new Set([...authorSlugs, ...articleAuthorSlugs])].map((slug) => ({ slug }))
 }
@@ -27,12 +31,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const author = getAuthorBySlug(slug)
+  const author = await getAuthorBySlug(slug)
   if (!author) return {}
 
   return buildMetadata({
-    title: `${author.name} — Articles, News & Analysis`,
-    description: author.bio || `Articles by ${author.name}`,
+    title: `${author.name} — مضامین، خبریں و تجزیہ`,
+    description: author.bio || `${author.name} کے مضامین`,
     path: `/author/${slug}`,
   })
 }
@@ -43,11 +47,10 @@ export default async function AuthorPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  await preResolveAllImages()
-  const author = getAuthorBySlug(slug)
+  const author = await getAuthorBySlug(slug)
   if (!author) notFound()
 
-  const articles = getArticlesByAuthor(slug)
+  const articles = await getArticlesByAuthor(slug)
   const authorUrl = absoluteUrl(`/author/${slug}`)
 
   const personSchema = generatePersonSchema(
@@ -68,7 +71,6 @@ export default async function AuthorPage({
         <Container>
           <Breadcrumbs
             items={[
-              { label: "Home", href: "/" },
               { label: author.name },
             ]}
           />
@@ -115,7 +117,7 @@ export default async function AuthorPage({
                 )}
                 <span className="h-1 w-1 rounded-full bg-border" />
                 <span>
-                  {articles.length} {articles.length === 1 ? "article" : "articles"}
+                  {articles.length} مضمون{articles.length === 1 ? "" : "یں"}
                 </span>
               </div>
             </div>
@@ -125,12 +127,12 @@ export default async function AuthorPage({
 
       <div className="py-8 md:py-12">
         <Container>
-          <AdSlot variant="leaderboard" className="mb-8 hidden md:flex" label="Advertisement" />
+          <AdSlot variant="leaderboard" className="mb-8 hidden md:flex" label="اشتہار" />
 
           <div className="flex gap-8">
             <div className="min-w-0 flex-1">
               <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                Articles by {author.name}
+                {author.name} کے مضامین
               </h2>
               {articles.length > 0 ? (
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -144,15 +146,15 @@ export default async function AuthorPage({
                 </div>
               ) : (
                 <div className="py-16 text-center">
-                  <p className="text-muted-foreground">No articles found.</p>
+                  <p className="text-muted-foreground">کوئی مضمون نہیں ملا۔</p>
                 </div>
               )}
             </div>
 
             <aside className="hidden w-[260px] shrink-0 xl:block">
               <div className="sticky top-28 flex flex-col gap-6">
-                <AdSlot variant="skyscraper" className="w-full" label="You Might Also Like" />
-                <AdSlot variant="rectangle" className="w-full" label="Sponsored Content" />
+                <AdSlot variant="skyscraper" className="w-full" label="آپ کو پسند آ سکتا ہے" />
+                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ مواد" />
               </div>
             </aside>
           </div>

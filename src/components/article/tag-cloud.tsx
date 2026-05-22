@@ -12,7 +12,7 @@ export function TagCloud({ tags }: TagCloudProps) {
       {tags.map((tag) => (
         <Link
           key={tag}
-          href={`/category/${tag.toLowerCase()}`}
+          href={`/search?q=${encodeURIComponent(tag.toLowerCase())}`}
           className="rounded bg-secondary px-2.5 py-1 text-[12px] text-muted-foreground transition-colors hover:text-foreground"
         >
           {tag}

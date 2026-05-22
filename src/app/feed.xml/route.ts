@@ -13,7 +13,7 @@ function escapeXml(text: string): string {
 }
 
 export async function GET() {
-  const articles = getArticleLinks()
+  const articles = await getArticleLinks()
 
   const items = articles
     .map(
@@ -43,7 +43,7 @@ export async function GET() {
     <link>${siteConfig.url}</link>
     <description>${escapeXml(siteConfig.description)}</description>
     <language>${siteConfig.locale.replace("_", "-")}</language>
-    <copyright>Copyright ${new Date().getFullYear()} ${escapeXml(siteConfig.name)}. All rights reserved.</copyright>
+    <copyright>${new Date().getFullYear()} ${escapeXml(siteConfig.name)} — جملہ حقوق محفوظ ہیں</copyright>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <image>
       <url>${siteConfig.url}${siteConfig.ogImage}</url>

@@ -1,382 +1,74 @@
 {
   "sources": [
     {
-      "url": "https://feeds.bbci.co.uk/news/rss.xml",
-      "label": "BBC News",
-      "category": "world",
-      "lang": "en",
-      "priority": 1
-    },
-    {
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
-      "label": "BBC World",
-      "category": "world",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://feeds.bbci.co.uk/news/politics/rss.xml",
-      "label": "BBC Politics",
-      "category": "politics",
-      "lang": "en",
-      "priority": 1
+      "category": "dunya",
+      "label": "BBC World"
     },
     {
       "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
-      "label": "BBC Technology",
       "category": "technology",
-      "lang": "en",
-      "priority": 1
+      "label": "BBC Technology"
     },
     {
       "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
-      "label": "BBC Business",
-      "category": "business",
-      "lang": "en",
-      "priority": 1
+      "category": "karobar",
+      "label": "BBC Business"
     },
     {
       "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
-      "label": "BBC Science",
       "category": "science",
-      "lang": "en",
-      "priority": 1
+      "label": "BBC Science"
     },
     {
       "url": "https://feeds.bbci.co.uk/news/health/rss.xml",
-      "label": "BBC Health",
-      "category": "health",
-      "lang": "en",
-      "priority": 1
+      "category": "sehat",
+      "label": "BBC Health"
     },
     {
       "url": "https://feeds.bbci.co.uk/sport/rss.xml",
-      "label": "BBC Sport",
-      "category": "sports",
-      "lang": "en",
-      "priority": 1
+      "category": "khel",
+      "label": "BBC Sport"
     },
     {
-      "url": "https://feeds.bbci.co.uk/culture/rss.xml",
-      "label": "BBC Culture",
-      "category": "culture",
-      "lang": "en",
-      "priority": 1
+      "url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+      "category": "shobiz",
+      "label": "BBC Entertainment"
     },
     {
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-      "label": "NYT World",
-      "category": "world",
-      "lang": "en",
-      "priority": 1
+      "category": "dunya",
+      "label": "NYT World"
     },
     {
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-      "label": "NYT Politics",
-      "category": "politics",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
-      "label": "NYT Business",
-      "category": "business",
-      "lang": "en",
-      "priority": 1
+      "category": "siasat",
+      "label": "NYT Politics"
     },
     {
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
-      "label": "NYT Technology",
       "category": "technology",
-      "lang": "en",
-      "priority": 1
+      "label": "NYT Technology"
+    },
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+      "category": "karobar",
+      "label": "NYT Business"
     },
     {
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
-      "label": "NYT Science",
       "category": "science",
-      "lang": "en",
-      "priority": 1
+      "label": "NYT Science"
     },
     {
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
-      "label": "NYT Health",
-      "category": "health",
-      "lang": "en",
-      "priority": 1
+      "category": "sehat",
+      "label": "NYT Health"
     },
     {
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
-      "label": "NYT Sports",
-      "category": "sports",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://feeds.washingtonpost.com/rss/world",
-      "label": "Washington Post World",
-      "category": "world",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://feeds.washingtonpost.com/rss/politics",
-      "label": "Washington Post Politics",
-      "category": "politics",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://feeds.washingtonpost.com/rss/business",
-      "label": "Washington Post Business",
-      "category": "business",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://feeds.washingtonpost.com/rss/technology",
-      "label": "Washington Post Tech",
-      "category": "technology",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.theguardian.com/world/rss",
-      "label": "Guardian World",
-      "category": "world",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.theguardian.com/politics/rss",
-      "label": "Guardian Politics",
-      "category": "politics",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.theguardian.com/business/rss",
-      "label": "Guardian Business",
-      "category": "business",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.theguardian.com/technology/rss",
-      "label": "Guardian Technology",
-      "category": "technology",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.theguardian.com/science/rss",
-      "label": "Guardian Science",
-      "category": "science",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.theguardian.com/sport/rss",
-      "label": "Guardian Sport",
-      "category": "sports",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.theguardian.com/culture/rss",
-      "label": "Guardian Culture",
-      "category": "culture",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.theguardian.com/environment/climate-crisis/rss",
-      "label": "Guardian Climate",
-      "category": "climate",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.aljazeera.com/xml/rss/all.xml",
-      "label": "Al Jazeera",
-      "category": "world",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.reutersagency.com/feed/",
-      "label": "Reuters",
-      "category": "world",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://abcnews.go.com/abcnews/topstories",
-      "label": "ABC News",
-      "category": "world",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.npr.org/rss/rss.php?id=1001",
-      "label": "NPR",
-      "category": "world",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
-      "label": "NYT Climate",
-      "category": "climate",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.newscientist.com/feed/home",
-      "label": "New Scientist",
-      "category": "science",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.sciencedaily.com/rss/all.xml",
-      "label": "ScienceDaily",
-      "category": "science",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://feeds.nature.com/nature/rss/current",
-      "label": "Nature",
-      "category": "science",
-      "lang": "en",
-      "priority": 3
-    },
-    {
-      "url": "https://techcrunch.com/feed/",
-      "label": "TechCrunch",
-      "category": "technology",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://feeds.arstechnica.com/arstechnica/index",
-      "label": "Ars Technica",
-      "category": "technology",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.wired.com/feed/rss",
-      "label": "Wired",
-      "category": "technology",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.theverge.com/rss/index.xml",
-      "label": "The Verge",
-      "category": "technology",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
-      "label": "CNBC",
-      "category": "business",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
-      "label": "CNBC Tech",
-      "category": "technology",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.economist.com/feeds/print-sections/77/business.xml",
-      "label": "Economist Business",
-      "category": "business",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.economist.com/feeds/print-sections/79/international.xml",
-      "label": "Economist World",
-      "category": "world",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://feeds.bloomberg.com/markets/news.rss",
-      "label": "Bloomberg Markets",
-      "category": "business",
-      "lang": "en",
-      "priority": 1
-    },
-    {
-      "url": "https://feeds.bloomberg.com/technology/news.rss",
-      "label": "Bloomberg Tech",
-      "category": "technology",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.dw.com/en/top-stories/rss",
-      "label": "DW News",
-      "category": "world",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
-      "label": "Google News",
-      "category": "world",
-      "lang": "en",
-      "priority": 3
-    },
-    {
-      "url": "https://hnrss.org/frontpage",
-      "label": "Hacker News",
-      "category": "technology",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.reddit.com/r/worldnews/.rss",
-      "label": "Reddit WorldNews",
-      "category": "world",
-      "lang": "en",
-      "priority": 3
-    },
-    {
-      "url": "https://www.reddit.com/r/technology/.rss",
-      "label": "Reddit Technology",
-      "category": "technology",
-      "lang": "en",
-      "priority": 3
-    },
-    {
-      "url": "https://www.reddit.com/r/science/.rss",
-      "label": "Reddit Science",
-      "category": "science",
-      "lang": "en",
-      "priority": 3
-    },
-    {
-      "url": "https://www.espn.com/espn/rss/news",
-      "label": "ESPN",
-      "category": "sports",
-      "lang": "en",
-      "priority": 2
-    },
-    {
-      "url": "https://www.politico.com/rss/politicopicks.xml",
-      "label": "Politico",
-      "category": "politics",
-      "lang": "en",
-      "priority": 2
+      "category": "khel",
+      "label": "NYT Sports"
     }
   ]
 }

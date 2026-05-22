@@ -1,32 +1,96 @@
 const { execSync } = require("child_process")
-const path = require("path")
-const REPO = path.join(__dirname, "..", "..")
 
-function run(args) {
+const BOT_NAME = "Global News Bot"
+const BOT_EMAIL = "bot@globalnews.news"
+
+function isGitAvailable() {
   try {
-    const out = execSync(`git ${args}`, { cwd: REPO, encoding: "utf-8", stdio: "pipe" })
-    return { ok: true, out: out.trim() }
-  } catch (e) {
-    return { ok: false, err: e.stderr?.trim() || e.message }
+    execSync("git --version", { stdio: "ignore" })
+    return true
+  } catch {
+    return false
   }
 }
 
 function hasChanges() {
-  const r = run("status --porcelain")
-  return r.ok && r.out.length > 0
+  try {
+    const output = execSync("git status --porcelain", { encoding: "utf-8" })
+    return output.trim().length > 0
+  } catch {
+    return false
+  }
 }
 
-function commitAll(message) {
-  run('config user.name "Global News Bot"')
-  run('config user.email "bot@globalnews.news"')
-  const stage = run("add -A")
-  if (!stage.ok) return { ok: false, err: stage.err }
-  const r = run(`commit -m "${message.replace(/"/g, '\\"')}"`)
-  return { ok: r.ok, out: r.out, err: r.err }
+function stageAll() {
+  execSync("git add -A", { stdio: "pipe" })
+}
+
+function commit(message) {
+  execSync(`git config user.name "${BOT_NAME}"`, { stdio: "pipe" })
+  execSync(`git config user.email "${BOT_EMAIL}"`, { stdio: "pipe" })
+  execSync(`git commit -m "${message}"`, { stdio: "pipe" })
 }
 
 function push() {
-  return run("push")
+  execSync("git push", { stdio: "pipe" })
 }
 
-module.exports = { hasChanges, commitAll, push }
+function commitAndPush(message) {
+  if (!isGitAvailable()) {
+    console.log("Git not available, skipping commit")
+    return false
+  }
+
+  if (process.env.GIT_DISABLED === "true") {
+    console.log("GIT_DISABLED=true, skipping commit")
+    return false
+  }
+
+  stageAll()
+
+  if (!hasChanges()) {
+    console.log("No changes to commit")
+    return false
+  }
+
+  commit(message)
+  console.log(`Committed: ${message}`)
+
+  try {
+    push()
+    console.log("Pushed to remote")
+  } catch (err) {
+    console.log(`Push failed (may not have remote): ${err.message}`)
+  }
+
+  return true
+}
+
+function getCurrentBranch() {
+  try {
+    return execSync("git rev-parse --abbrev-ref HEAD", {
+      encoding: "utf-8",
+    }).trim()
+  } catch {
+    return "unknown"
+  }
+}
+
+function getLastCommitMessage() {
+  try {
+    return execSync("git log -1 --pretty=%B", { encoding: "utf-8" }).trim()
+  } catch {
+    return ""
+  }
+}
+
+module.exports = {
+  isGitAvailable,
+  hasChanges,
+  stageAll,
+  commit,
+  push,
+  commitAndPush,
+  getCurrentBranch,
+  getLastCommitMessage,
+}

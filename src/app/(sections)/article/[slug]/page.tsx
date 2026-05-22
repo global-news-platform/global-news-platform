@@ -18,7 +18,6 @@ import {
   getRelatedArticles,
   getAdjacentArticles,
   getAuthorBySlug,
-  preResolveAllImages,
 } from "@/lib/articles"
 import {
   absoluteUrl,
@@ -27,6 +26,9 @@ import {
   generateBreadcrumbSchema,
 } from "@/lib/seo"
 import { siteConfig } from "@/lib/constants"
+
+export const dynamic = "force-static"
+export const revalidate = 3600
 
 export async function generateStaticParams() {
   return getArticleSlugs().map((slug) => ({ slug }))
@@ -38,7 +40,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const article = getArticleBySlug(slug)
+  const article = await getArticleBySlug(slug)
   if (!article) return {}
 
   return buildMetadata({
@@ -64,13 +66,14 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  await preResolveAllImages()
-  const article = getArticleBySlug(slug)
+  const article = await getArticleBySlug(slug)
   if (!article) notFound()
 
-  const related = getRelatedArticles(slug, article.categorySlug, 3)
-  const { prev, next } = getAdjacentArticles(slug)
-  const authorProfile = getAuthorBySlug(article.authorSlug)
+  const [related, { prev, next }, authorProfile] = await Promise.all([
+    getRelatedArticles(slug, article.categorySlug, 3),
+    getAdjacentArticles(slug),
+    getAuthorBySlug(article.authorSlug),
+  ])
 
   const articleUrl = absoluteUrl(`/article/${article.slug}`)
   const publisherLogo = absoluteUrl(siteConfig.logo)
@@ -83,7 +86,7 @@ export default async function ArticlePage({
 
   const breadcrumbSchema = generateBreadcrumbSchema(
     [
-      { name: "Home", url: siteConfig.url },
+      { name: "ہوم", url: siteConfig.url },
       { name: article.category, url: absoluteUrl(`/category/${article.categorySlug}`) },
       { name: article.title, url: articleUrl },
     ],
@@ -124,7 +127,7 @@ export default async function ArticlePage({
             </div>
 
             <div className="mt-10">
-              <AdSlot variant="rectangle" className="hidden sm:flex" label="Continue Reading" />
+              <AdSlot variant="rectangle" className="hidden sm:flex" label="مزید پڑھیں" />
             </div>
 
             {authorProfile && (
@@ -151,14 +154,14 @@ export default async function ArticlePage({
           {/* Right sidebar ad */}
           <aside className="sticky top-24 hidden h-fit xl:block xl:w-[260px]">
             <div className="flex flex-col gap-6">
-              <AdSlot variant="skyscraper" className="w-full" label="You Might Like" />
-              <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
+              <AdSlot variant="skyscraper" className="w-full" label="آپ کو پسند آ سکتا ہے" />
+              <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
             </div>
           </aside>
         </div>
 
         <div className="mx-auto mt-12 max-w-[88rem]">
-          <AdSlot variant="billboard" className="hidden md:flex" label="Recommended Reading" />
+          <AdSlot variant="billboard" className="hidden md:flex" label="تجویز کردہ پڑھنا" />
         </div>
 
         {related.length > 0 && (

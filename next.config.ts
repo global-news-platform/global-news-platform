@@ -2,40 +2,22 @@ import type { NextConfig } from "next"
 import createMDX from "@next/mdx"
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: process.env.VERCEL === "1" ? "export" : undefined,
   images: {
     unoptimized: true,
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "plus.unsplash.com" },
-      { protocol: "https", hostname: "images.pexels.com" },
-      { protocol: "https", hostname: "cdn.pixabay.com" },
-      { protocol: "https", hostname: "pixabay.com" },
-      { protocol: "https", hostname: "picsum.photos" },
-    ],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ["image/webp", "image/avif"],
+    dangerouslyAllowSVG: true,
+    minimumCacheTTL: 86400,
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  webpack: (config, { isServer }) => {
-    if (process.env.NODE_ENV === "development") {
-      config.watchOptions = {
-        ignored: [
-          "**/node_modules/**",
-          "**/.next/**",
-          "**/out/**",
-          "**/logs/**",
-          "**/content/**",
-          "**/*.tsbuildinfo",
-        ],
-        aggregateTimeout: 600,
-        poll: false,
-      }
-    }
-    return config
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
   devIndicators: false,
+  compress: true,
+  generateEtags: true,
 }
 
 const withMDX = createMDX({

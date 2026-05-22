@@ -1,39 +1,55 @@
 const fs = require("fs")
 const path = require("path")
-const crypto = require("crypto")
 
-const FILE = path.join(__dirname, "..", "data", "processed.json")
+const TRACKER_PATH = path.join(__dirname, "../../src/data/.tracker.json")
 
 function load() {
+  if (!fs.existsSync(TRACKER_PATH)) return { seen: [], processed: 0 }
   try {
-    if (fs.existsSync(FILE)) return JSON.parse(fs.readFileSync(FILE, "utf-8"))
-  } catch {}
-  return {}
+    return JSON.parse(fs.readFileSync(TRACKER_PATH, "utf-8"))
+  } catch {
+    return { seen: [], processed: 0 }
+  }
 }
 
-function save(data) {
-  const dir = path.dirname(FILE)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-  fs.writeFileSync(FILE, JSON.stringify(data, null, 2))
+function save(state) {
+  fs.mkdirSync(path.dirname(TRACKER_PATH), { recursive: true })
+  fs.writeFileSync(TRACKER_PATH, JSON.stringify(state, null, 2), "utf-8")
 }
 
-function hash(url) {
-  return crypto.createHash("sha1").update(url).digest("hex").slice(0, 12)
+function isDuplicate(guid) {
+  const state = load()
+  return state.seen.includes(guid)
 }
 
-function isProcessed(url) {
-  const store = load()
-  return !!store[hash(url)]
+function markProcessed(guid) {
+  const state = load()
+  if (!state.seen.includes(guid)) {
+    state.seen.push(guid)
+    state.processed = (state.processed || 0) + 1
+    if (state.seen.length > 10000) {
+      state.seen = state.seen.slice(-5000)
+    }
+    save(state)
+  }
 }
 
-function markProcessed(url, slug) {
-  const store = load()
-  store[hash(url)] = { slug, at: new Date().toISOString() }
-  save(store)
+function getStats() {
+  const state = load()
+  return {
+    totalSeen: state.seen.length,
+    totalProcessed: state.processed || 0,
+  }
 }
 
-function count() {
-  return Object.keys(load()).length
+function reset() {
+  save({ seen: [], processed: 0 })
 }
 
-module.exports = { isProcessed, markProcessed, count }
+module.exports = {
+  isDuplicate,
+  markProcessed,
+  getStats,
+  reset,
+  load,
+}

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Inter, Merriweather, Playfair_Display } from "next/font/google"
+import { Noto_Nastaliq_Urdu, Noto_Sans_Arabic } from "next/font/google"
 import { ThemeProvider } from "@/components/common/theme-provider"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
@@ -7,30 +7,22 @@ import { BackToTop } from "@/components/common/back-to-top"
 import { siteConfig } from "@/lib/constants"
 import "./globals.css"
 
-const inter = Inter({
-  subsets: ["latin"],
+const notoNastaliq = Noto_Nastaliq_Urdu({
+  subsets: ["arabic"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-noto-nastaliq",
   preload: true,
-  fallback: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+  weight: ["400", "600", "700"],
+  fallback: ["system-ui", "sans-serif"],
 })
 
-const merriweather = Merriweather({
-  subsets: ["latin"],
+const notoArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
   display: "swap",
-  variable: "--font-merriweather",
+  variable: "--font-noto-arabic",
   preload: true,
-  weight: ["300", "400", "700", "900"],
-  fallback: ["Georgia", "Times New Roman", "serif"],
-})
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-playfair",
-  preload: true,
-  weight: ["400", "500", "600", "700", "800"],
-  fallback: ["Georgia", "Times New Roman", "serif"],
+  weight: ["400", "500", "600", "700"],
+  fallback: ["sans-serif"],
 })
 
 export const viewport: Viewport = {
@@ -49,12 +41,13 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  generator: "Global News Platform",
+  generator: "Pakistan News Platform",
   applicationName: siteConfig.name,
   referrer: "origin-when-cross-origin",
   keywords: [
-    "news", "world news", "breaking news", "current events",
-    "global affairs", "international news",
+    "پاکستان", "خبریں", "اردو خبریں", "پاکستان نیوز",
+    "breaking news", "pakistan news", "urdu news",
+    "world news", "pakistan headlines",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
@@ -82,8 +75,8 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [`${siteConfig.url}${siteConfig.ogImage}`],
-    site: "@globalnews",
-    creator: "@globalnews",
+    site: "@pakistannews",
+    creator: "@pakistannews",
   },
   robots: {
     index: true,
@@ -120,17 +113,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const fontVariables = `${inter.variable} ${merriweather.variable} ${playfair.variable}`
+  const fontVariables = `${notoNastaliq.variable} ${notoArabic.variable}`
 
   return (
-    <html lang="en" suppressHydrationWarning className={fontVariables}>
+    <html lang="ur" dir="rtl" suppressHydrationWarning className={fontVariables}>
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
-                  var theme = localStorage.getItem('global-news-theme') || 'system';
+                  var theme = localStorage.getItem('pakistan-news-theme') || 'system';
                   var root = document.documentElement;
                   root.classList.remove('light', 'dark');
                   if (theme === 'system') {
@@ -146,18 +139,18 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title={`${siteConfig.name} RSS Feed`}
+          title={`${siteConfig.name} — آر ایس ایس فیڈ`}
           href="/feed.xml"
         />
       </head>
-      <body className="bg-background font-sans antialiased">
-        <ThemeProvider defaultTheme="system" storageKey="global-news-theme">
+      <body className="bg-background font-urdu antialiased">
+        <ThemeProvider defaultTheme="system" storageKey="pakistan-news-theme">
           <div className="relative flex min-h-dvh flex-col">
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-foreground focus:px-4 focus:py-2 focus:text-background focus:outline-none"
             >
-              Skip to content
+              مواد پر جائیں
             </a>
             <Header />
             <main id="main-content">

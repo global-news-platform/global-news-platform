@@ -6,7 +6,7 @@ import { ArticleCard } from "@/components/article/article-card"
 import { AdSlot } from "@/components/common/ad-slot"
 import { Breadcrumbs } from "@/components/article/breadcrumbs"
 
-import { getArticlesByCategory, getArticleLinks, preResolveAllImages } from "@/lib/articles"
+import { getArticlesByCategory, getArticleLinks } from "@/lib/articles"
 import { categories } from "@/lib/constants"
 import {
   absoluteUrl,
@@ -14,6 +14,9 @@ import {
   generateCollectionSchema,
   generateBreadcrumbSchema,
 } from "@/lib/seo"
+
+export const dynamic = "force-static"
+export const revalidate = 3600
 
 export async function generateStaticParams() {
   return categories.map((cat) => ({ slug: cat.slug }))
@@ -29,11 +32,11 @@ export async function generateMetadata({
   if (!category) return {}
 
   return buildMetadata({
-    title: `${category.name} News — Latest Updates & Analysis`,
+    title: `${category.name} — تازہ ترین خبریں و تجزیہ`,
     description: category.description,
     path: `/category/${category.slug}`,
     openGraph: {
-      title: `${category.name} News — ${category.description}`,
+      title: `${category.name} — ${category.description}`,
     },
   })
 }
@@ -44,19 +47,18 @@ export default async function CategoryPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  await preResolveAllImages()
   const category = categories.find((c) => c.slug === slug)
   if (!category) notFound()
 
-  const articles = getArticlesByCategory(slug)
-  const otherArticles = getArticleLinks().filter(
+  const articles = await getArticlesByCategory(slug)
+  const otherArticles = (await getArticleLinks()).filter(
     (a) => a.categorySlug !== slug,
   )
 
   const pageUrl = absoluteUrl(`/category/${slug}`)
 
   const collectionSchema = generateCollectionSchema(
-    `${category.name} News`,
+    `${category.name} خبریں`,
     category.description,
     pageUrl,
     articles.length,
@@ -64,7 +66,7 @@ export default async function CategoryPage({
 
   const breadcrumbSchema = generateBreadcrumbSchema(
     [
-      { name: "Home", url: absoluteUrl("/") },
+      { name: "ہوم", url: absoluteUrl("/") },
       { name: category.name, url: pageUrl },
     ],
     pageUrl,
@@ -83,7 +85,6 @@ export default async function CategoryPage({
         <Container>
           <Breadcrumbs
             items={[
-              { label: "Home", href: "/" },
               { label: category.name },
             ]}
           />
@@ -132,7 +133,7 @@ export default async function CategoryPage({
               ) : (
                 <div className="py-20 text-center">
                   <p className="text-lg text-muted-foreground">
-                    No articles in this category yet.
+                    اس زمرے میں ابھی کوئی مضمون نہیں ہے۔
                   </p>
                 </div>
               )}
@@ -140,7 +141,7 @@ export default async function CategoryPage({
               {otherArticles.length > 0 && (
                 <div className="mt-16 border-t border-border pt-10">
                   <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                    More News
+                    مزید خبریں
                   </h2>
                   <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {otherArticles.slice(0, 4).map((article) => (
@@ -153,8 +154,8 @@ export default async function CategoryPage({
 
             <aside className="hidden w-[260px] shrink-0 xl:block">
               <div className="sticky top-28 flex flex-col gap-6">
-                <AdSlot variant="skyscraper" className="w-full" label="Advertisement" />
-                <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
+                <AdSlot variant="skyscraper" className="w-full" label="اشتہار" />
+                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
               </div>
             </aside>
           </div>
