@@ -21,7 +21,7 @@ function articleExists(slug) {
   })
 }
 
-function writeArticle(article) {
+function writeArticle(article, imagePath) {
   ensureDir(ARTICLES_DIR)
 
   if (articleExists(article.slug)) {
@@ -29,7 +29,7 @@ function writeArticle(article) {
     return false
   }
 
-  const mdxContent = buildMdxContent(article)
+  const mdxContent = buildMdxContent(article, imagePath)
   const filePath = path.join(ARTICLES_DIR, `${article.slug}.mdx`)
 
   try {
@@ -42,7 +42,7 @@ function writeArticle(article) {
   }
 }
 
-function writeAllArticles(articles) {
+function writeAllArticles(articles, imageResults) {
   ensureDir(ARTICLES_DIR)
 
   let written = 0
@@ -55,7 +55,8 @@ function writeAllArticles(articles) {
       continue
     }
 
-    const result = writeArticle(article)
+    const imagePath = imageResults ? imageResults[article.slug] : undefined
+    const result = writeArticle(article, imagePath)
     if (result) written++
     else failed++
   }

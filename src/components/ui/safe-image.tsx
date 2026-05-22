@@ -1,9 +1,8 @@
 "use client"
 
-import { useState, useCallback, useRef } from "react"
+import { useState, useCallback, useEffect } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { getFallbackImageUrl, getFallbackImageDataUrl } from "@/lib/images/fallbackImages"
 
 export interface SafeImageProps {
   src?: string
@@ -13,11 +12,31 @@ export interface SafeImageProps {
   priority?: boolean
   categorySlug?: string
   slug?: string
-  showAttribution?: boolean
 }
 
-function isSvgPath(path: string): boolean {
-  return path.endsWith(".svg")
+const CATEGORY_FALLBACK_MAP: Record<string, string> = {
+  pakistan: "/images/fallbacks/pakistan.jpg",
+  dunya: "/images/fallbacks/world.jpg",
+  siasat: "/images/fallbacks/politics.jpg",
+  karobar: "/images/fallbacks/business.jpg",
+  technology: "/images/fallbacks/technology.jpg",
+  khel: "/images/fallbacks/sports.jpg",
+  sehat: "/images/fallbacks/health.jpg",
+  science: "/images/fallbacks/science.jpg",
+  shobiz: "/images/fallbacks/entertainment.jpg",
+  mazhab: "/images/fallbacks/pakistan.jpg",
+  taleem: "/images/fallbacks/technology.jpg",
+  mausam: "/images/fallbacks/world.jpg",
+  crime: "/images/fallbacks/world.jpg",
+  adalat: "/images/fallbacks/politics.jpg",
+  baynalaqwami: "/images/fallbacks/world.jpg",
+  videos: "/images/fallbacks/technology.jpg",
+  raye: "/images/fallbacks/politics.jpg",
+  general: "/images/fallbacks/world.jpg",
+}
+
+function getFallbackForCategory(slug?: string): string {
+  return CATEGORY_FALLBACK_MAP[slug || ""] || "/images/fallbacks/world.jpg"
 }
 
 export function SafeImage({
@@ -28,33 +47,24 @@ export function SafeImage({
   priority = false,
   categorySlug,
 }: SafeImageProps) {
-  const [errored, setErrored] = useState(false)
-  const [loadingFailed, setLoadingFailed] = useState(false)
-  const attemptCount = useRef(0)
+  const [currentSrc, setCurrentSrc] = useState<string | undefined>(undefined)
+  const [loadError, setLoadError] = useState(false)
   const cat = categorySlug || "general"
 
-  const fallbackUrl = getFallbackImageUrl(cat)
+  const fallbackUrl = getFallbackForCategory(cat)
+  const resolvedSrc = currentSrc || src || fallbackUrl
 
-  const imageSrc = loadingFailed || errored || !src ? fallbackUrl : src
-
-  const blurDataUrl = getFallbackImageDataUrl(cat)
-  const isSvg = isSvgPath(imageSrc)
+  useEffect(() => {
+    setCurrentSrc(undefined)
+    setLoadError(false)
+  }, [src])
 
   const handleError = useCallback(() => {
-    attemptCount.current += 1
-    if (attemptCount.current >= 2) {
-      setErrored(true)
-      setLoadingFailed(true)
-    } else {
-      setErrored(true)
+    if (!loadError) {
+      setLoadError(true)
+      setCurrentSrc(fallbackUrl)
     }
-  }, [])
-
-  const handleLoad = useCallback(() => {
-    if (errored) {
-      setErrored(false)
-    }
-  }, [errored])
+  }, [loadError, fallbackUrl])
 
   return (
     <div
@@ -65,11 +75,11 @@ export function SafeImage({
       )}
     >
       <Image
-        key={imageSrc}
-        src={imageSrc}
+        src={resolvedSrc}
         alt={alt}
         className={cn(
           "w-full h-full object-cover transition-opacity duration-300",
+          "aspect-[3/2]",
           className,
         )}
         width={1200}
@@ -77,11 +87,7 @@ export function SafeImage({
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         priority={priority}
         loading={priority ? "eager" : "lazy"}
-        placeholder={isSvg ? "empty" : "blur"}
-        blurDataURL={isSvg ? undefined : blurDataUrl}
         onError={handleError}
-        onLoad={handleLoad}
-        quality={isSvg ? undefined : 85}
       />
     </div>
   )

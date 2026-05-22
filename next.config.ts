@@ -12,9 +12,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 86400,
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  eslint: { ignoreDuringBuilds: true },
   devIndicators: false,
   compress: true,
   generateEtags: true,

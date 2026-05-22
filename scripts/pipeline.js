@@ -2,7 +2,7 @@
 
 const { fetchAllSources } = require("./lib/rss")
 const { writeAllArticles, getArticleCount } = require("./lib/writer")
-const { downloadAllImages } = require("./lib/download")
+const { downloadAllImages, validateArticleImages } = require("./lib/download")
 const { markProcessed, getStats } = require("./lib/tracker")
 const { generateSitemap } = require("./lib/sitemap")
 const { generateFeed } = require("./lib/feed")
@@ -48,8 +48,14 @@ async function main() {
     return
   }
 
+  console.log(`\nDownloading images for ${articles.length} articles...`)
+  const dlResult = await downloadAllImages(articles)
+  console.log(
+    `\nImages: ${dlResult.downloaded} downloaded, ${dlResult.fallback} fallback used, ${dlResult.skipped} skipped`,
+  )
+
   console.log(`\nWriting ${articles.length} articles to ${ARTICLES_DIR}...`)
-  const writeResult = writeAllArticles(articles)
+  const writeResult = writeAllArticles(articles, dlResult.results)
 
   console.log(
     `\nWrite results: ${writeResult.written} written, ${writeResult.skipped} skipped, ${writeResult.failed} failed`,
@@ -64,9 +70,16 @@ async function main() {
     return
   }
 
-  console.log(`\nDownloading images...`)
-  const dlResult = await downloadAllImages(articles)
-  console.log(`Images: ${dlResult.downloaded} downloaded, ${dlResult.failed} failed`)
+  console.log(`\nValidating article images...`)
+  const missingImages = validateArticleImages(articles, dlResult.results)
+  if (missingImages.length > 0) {
+    console.log(`  \u26A0 ${missingImages.length} articles have missing images`)
+    for (const slug of missingImages) {
+      console.log(`    Missing: ${slug}`)
+    }
+  } else {
+    console.log("  \u2713 All images verified")
+  }
 
   if (ingestOnly) {
     const elapsed = Math.round((Date.now() - startTime) / 1000)
@@ -100,6 +113,8 @@ async function main() {
   console.log(`  Total articles in store: ${articleCount}`)
   console.log(`  This run: ${writeResult.written} new, ${writeResult.skipped} duplicates`)
   console.log(`  All-time processed: ${stats.totalProcessed}`)
+  console.log(`  Images downloaded: ${dlResult.downloaded}`)
+  console.log(`  Images fallback: ${dlResult.fallback}`)
   console.log(`  Time elapsed: ${elapsed}s`)
   console.log("=".repeat(60))
 }

@@ -15,38 +15,39 @@ function pickRandomAuthor() {
   return FALLBACK_AUTHORS[Math.floor(Math.random() * FALLBACK_AUTHORS.length)]
 }
 
-function getCategorySlug(categoryName) {
-  const categoryMapping = {
-    dunya: "dunya",
-    siasat: "siasat",
-    karobar: "karobar",
-    technology: "technology",
-    khel: "khel",
-    sehat: "sehat",
-    science: "science",
-    shobiz: "shobiz",
-    mazhab: "mazhab",
-    taleem: "taleem",
-    mausam: "mausam",
-    crime: "crime",
-    adalat: "adalat",
-    baynalaqwami: "baynalaqwami",
-    videos: "videos",
-    raye: "raye",
-    general: "general",
-    world: "dunya",
-    politics: "siasat",
-    business: "karobar",
-    entertainment: "shobiz",
-    sports: "khel",
-    health: "sehat",
-    environment: "science",
-    opinion: "raye",
-    pakistan: "pakistan",
-  }
+const ENGLISH_TO_SLUG = {
+  dunya: "dunya",
+  siasat: "siasat",
+  karobar: "karobar",
+  technology: "technology",
+  khel: "khel",
+  sehat: "sehat",
+  science: "science",
+  shobiz: "shobiz",
+  mazhab: "mazhab",
+  taleem: "taleem",
+  mausam: "mausam",
+  crime: "crime",
+  adalat: "adalat",
+  baynalaqwami: "baynalaqwami",
+  videos: "videos",
+  raye: "raye",
+  general: "general",
+  world: "dunya",
+  politics: "siasat",
+  business: "karobar",
+  entertainment: "shobiz",
+  sports: "khel",
+  health: "sehat",
+  environment: "science",
+  opinion: "raye",
+  pakistan: "pakistan",
+}
 
+function getCategorySlug(categoryName) {
+  if (!categoryName) return "general"
   const key = categoryName.toLowerCase().trim()
-  return categoryMapping[key] || "general"
+  return ENGLISH_TO_SLUG[key] || "general"
 }
 
 function extractTopics(title, description, tags) {
@@ -79,15 +80,12 @@ function extractTopics(title, description, tags) {
   return [...topics].slice(0, 5)
 }
 
-function buildFrontmatter(article) {
+function buildFrontmatter(article, imagePath) {
   const author = pickRandomAuthor()
-  const categorySlug = getCategorySlug(article.category)
+  const categorySlug = getCategorySlug(article.categorySlug || article.category)
   const topics = extractTopics(article.title, article.description, article.tags)
 
-  const imagePrompt = article.title
-    .replace(/[^a-zA-Z0-9\s]/g, "")
-    .trim()
-    .substring(0, 100)
+  const effectiveImage = imagePath || `/images/fallbacks/${getFallbackSlug(categorySlug)}.jpg`
 
   return {
     title: article.title,
@@ -96,18 +94,42 @@ function buildFrontmatter(article) {
     author: author.name,
     authorSlug: author.slug,
     publishedAt: new Date(article.publishedAt).toISOString(),
-    image: `/images/articles/${article.slug}.jpg`,
+    image: effectiveImage,
     imageAlt: article.title.substring(0, 120),
     tags: [...new Set([...topics, ...article.tags])].slice(0, 6),
     featured: false,
     breaking: false,
     trending: false,
-    imagePrompt,
   }
 }
 
-function buildMdxContent(article) {
-  const fm = buildFrontmatter(article)
+const FALLBACK_MAP = {
+  pakistan: "pakistan",
+  dunya: "world",
+  siasat: "politics",
+  karobar: "business",
+  technology: "technology",
+  khel: "sports",
+  sehat: "health",
+  science: "science",
+  shobiz: "entertainment",
+  mazhab: "pakistan",
+  taleem: "technology",
+  mausam: "world",
+  crime: "world",
+  adalat: "politics",
+  baynalaqwami: "world",
+  videos: "technology",
+  raye: "politics",
+  general: "world",
+}
+
+function getFallbackSlug(categorySlug) {
+  return FALLBACK_MAP[categorySlug] || "world"
+}
+
+function buildMdxContent(article, imagePath) {
+  const fm = buildFrontmatter(article, imagePath)
 
   const frontmatter = `---
 title: "${escapeYamlString(fm.title)}"
