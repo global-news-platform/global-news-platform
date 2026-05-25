@@ -18,26 +18,47 @@ function normalizeImage(image: string | undefined | null): string {
 interface ArticleCardProps {
   article: ArticleLink
   variant?: "hero" | "compact" | "horizontal" | "text-list" | "featured" | "default"
-  index?: number
 }
 
-export function ArticleCard({ article, variant = "compact", index }: ArticleCardProps) {
+function Img({
+  src,
+  alt,
+  aspect,
+  priority,
+  quality,
+}: {
+  src?: string | null
+  alt: string
+  aspect: string
+  priority?: boolean
+  quality?: number
+}) {
+  const url = normalizeImage(src)
+  return (
+    <div className={cn("relative w-full overflow-hidden bg-muted", aspect)}>
+      <Image
+        src={url}
+        alt={alt}
+        fill
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        priority={priority}
+        loading={priority ? "eager" : "lazy"}
+        quality={quality ?? 85}
+      />
+    </div>
+  )
+}
+
+export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) {
   if (!article || !article.slug) return null
   const catName = categories.find((c) => c.slug === article.categorySlug)?.name || article.category
 
   if (variant === "hero") {
     return (
       <Link href={`/article/${article.slug}`} className="group relative block h-full overflow-hidden">
-        <div className="relative h-full min-h-[380px] md:min-h-[480px] lg:min-h-[540px] overflow-hidden">
-          <Image
-            src={normalizeImage(article.image)}
-            alt={article.title || ""}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-            width={1200}
-            height={675}
-            sizes="100vw"
-            priority
-          />
+        <div className="relative h-full min-h-[380px] md:min-h-[480px] lg:min-h-[540px]">
+          <Img src={article.image} alt={article.title || ""} aspect="absolute inset-0" priority quality={92} />
           <div className="absolute inset-0 hero-gradient" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 lg:p-8">
@@ -74,15 +95,8 @@ export function ArticleCard({ article, variant = "compact", index }: ArticleCard
   if (variant === "featured") {
     return (
       <Link href={`/article/${article.slug}`} className="group block">
-        <div className="relative h-40 md:h-48 overflow-hidden mb-2.5">
-          <Image
-            src={normalizeImage(article.image)}
-            alt={article.title || ""}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-            width={600}
-            height={400}
-            sizes="50vw"
-          />
+        <div className="mb-2.5">
+          <Img src={article.image} alt={article.title || ""} aspect="aspect-[4/3]" />
         </div>
         <div className="flex items-center gap-2 mb-1">
           <span className="text-[10px] font-bold uppercase tracking-[0.06em] text-destructive">{catName}</span>
@@ -97,15 +111,8 @@ export function ArticleCard({ article, variant = "compact", index }: ArticleCard
   if (variant === "horizontal") {
     return (
       <Link href={`/article/${article.slug}`} className="group flex gap-3 py-2.5 border-b border-border/20 last:border-0">
-        <div className="relative w-20 h-14 shrink-0 overflow-hidden md:w-24 md:h-16">
-          <Image
-            src={normalizeImage(article.image)}
-            alt={article.title || ""}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-            width={160}
-            height={110}
-            sizes="20vw"
-          />
+        <div className="w-20 shrink-0 md:w-24">
+          <Img src={article.image} alt={article.title || ""} aspect="aspect-[4/3]" />
         </div>
         <div className="flex min-w-0 flex-1 flex-col justify-center">
           <h4 className="font-headline text-[13px] font-bold leading-[1.5] line-clamp-2">{article.title}</h4>
@@ -137,15 +144,8 @@ export function ArticleCard({ article, variant = "compact", index }: ArticleCard
 
   return (
     <Link href={`/article/${article.slug}`} className="group block">
-      <div className="relative h-28 md:h-32 overflow-hidden mb-2">
-        <Image
-          src={normalizeImage(article.image)}
-          alt={article.title || ""}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          width={400}
-          height={267}
-          sizes="(max-width: 768px) 50vw, 25vw"
-        />
+      <div className="mb-2">
+        <Img src={article.image} alt={article.title || ""} aspect="aspect-[4/3]" />
       </div>
       <div className="flex items-center gap-1.5 mb-1">
         <span className="text-[9px] font-bold uppercase tracking-[0.06em] text-destructive">{catName}</span>
