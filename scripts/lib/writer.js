@@ -21,28 +21,30 @@ function articleExists(slug) {
   })
 }
 
-function writeArticle(article, imagePath) {
+function writeArticle(article) {
   ensureDir(ARTICLES_DIR)
 
   if (articleExists(article.slug)) {
-    console.log(`  ✗ Skipped (duplicate): ${article.title.substring(0, 60)}`)
+    console.log(`  \u2717 Skipped (duplicate): ${article.title.substring(0, 60)}`)
     return false
   }
 
-  const mdxContent = buildMdxContent(article, imagePath)
+  const mdxContent = buildMdxContent(article)
   const filePath = path.join(ARTICLES_DIR, `${article.slug}.mdx`)
 
   try {
     fs.writeFileSync(filePath, mdxContent, "utf-8")
-    console.log(`  ✓ Written: ${article.title.substring(0, 60)}`)
+    const imgMatch = mdxContent.match(/image: "([^"]+)"/)
+    const imgInfo = imgMatch ? imgMatch[1] : "no image"
+    console.log(`  \u2713 ${article.title.substring(0, 60)} [${imgInfo}]`)
     return true
   } catch (err) {
-    console.error(`  ✗ Failed to write ${article.slug}: ${err.message}`)
+    console.error(`  \u2717 Failed to write ${article.slug}: ${err.message}`)
     return false
   }
 }
 
-function writeAllArticles(articles, imageResults) {
+function writeAllArticles(articles) {
   ensureDir(ARTICLES_DIR)
 
   let written = 0
@@ -54,9 +56,7 @@ function writeAllArticles(articles, imageResults) {
       skipped++
       continue
     }
-
-    const imagePath = imageResults ? imageResults[article.slug] : undefined
-    const result = writeArticle(article, imagePath)
+    const result = writeArticle(article)
     if (result) written++
     else failed++
   }

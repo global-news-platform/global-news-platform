@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { getFallbackImageUrl } from "@/lib/images/fallbackImages"
 
 export interface SafeImageProps {
   src?: string
@@ -12,31 +13,6 @@ export interface SafeImageProps {
   priority?: boolean
   categorySlug?: string
   slug?: string
-}
-
-const CATEGORY_FALLBACK_MAP: Record<string, string> = {
-  pakistan: "/images/fallbacks/pakistan.jpg",
-  dunya: "/images/fallbacks/world.jpg",
-  siasat: "/images/fallbacks/politics.jpg",
-  karobar: "/images/fallbacks/business.jpg",
-  technology: "/images/fallbacks/technology.jpg",
-  khel: "/images/fallbacks/sports.jpg",
-  sehat: "/images/fallbacks/health.jpg",
-  science: "/images/fallbacks/science.jpg",
-  shobiz: "/images/fallbacks/entertainment.jpg",
-  mazhab: "/images/fallbacks/pakistan.jpg",
-  taleem: "/images/fallbacks/technology.jpg",
-  mausam: "/images/fallbacks/world.jpg",
-  crime: "/images/fallbacks/world.jpg",
-  adalat: "/images/fallbacks/politics.jpg",
-  baynalaqwami: "/images/fallbacks/world.jpg",
-  videos: "/images/fallbacks/technology.jpg",
-  raye: "/images/fallbacks/politics.jpg",
-  general: "/images/fallbacks/world.jpg",
-}
-
-function getFallbackForCategory(slug?: string): string {
-  return CATEGORY_FALLBACK_MAP[slug || ""] || "/images/fallbacks/world.jpg"
 }
 
 export function SafeImage({
@@ -49,9 +25,7 @@ export function SafeImage({
 }: SafeImageProps) {
   const [currentSrc, setCurrentSrc] = useState<string | undefined>(undefined)
   const [loadError, setLoadError] = useState(false)
-  const cat = categorySlug || "general"
-
-  const fallbackUrl = getFallbackForCategory(cat)
+  const fallbackUrl = getFallbackImageUrl(categorySlug)
   const resolvedSrc = currentSrc || src || fallbackUrl
 
   useEffect(() => {
@@ -82,8 +56,8 @@ export function SafeImage({
           "aspect-[3/2]",
           className,
         )}
-        width={1200}
-        height={800}
+        width={800}
+        height={533}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         priority={priority}
         loading={priority ? "eager" : "lazy"}
