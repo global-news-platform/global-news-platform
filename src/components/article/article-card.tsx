@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { cn, formatDateRelative } from "@/lib/utils"
@@ -32,6 +33,24 @@ function EditorialFallback({ categorySlug, categoryName }: { categorySlug: strin
   )
 }
 
+const CATEGORY_FALLBACKS: Record<string, string> = {
+  pakistan: "/images/fallbacks/pakistan.jpg",
+  dunya: "/images/fallbacks/world.jpg",
+  siasat: "/images/fallbacks/politics.jpg",
+  karobar: "/images/fallbacks/business.jpg",
+  technology: "/images/fallbacks/technology.jpg",
+  khel: "/images/fallbacks/sports.jpg",
+  sehat: "/images/fallbacks/health.jpg",
+  shobiz: "/images/fallbacks/entertainment.jpg",
+  science: "/images/fallbacks/science.jpg",
+}
+
+const DEFAULT_FALLBACK = "/images/fallbacks/default.jpg"
+
+function getCategoryFallback(categorySlug: string): string {
+  return CATEGORY_FALLBACKS[categorySlug] || DEFAULT_FALLBACK
+}
+
 function ArticleImage({
   src,
   alt,
@@ -45,51 +64,56 @@ function ArticleImage({
   categoryName: string
   priority?: boolean
 }) {
-  if (src && typeof src === "string" && (src.startsWith("/") || src.startsWith("http"))) {
-    return (
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-        sizes={
-          priority
-            ? "100vw"
-            : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        }
-        loading={priority ? "eager" : "lazy"}
-        priority={priority}
-        quality={92}
-      />
-    )
+  const hasInitialSrc = !!(src && typeof src === "string" && (src.startsWith("/") || src.startsWith("http")))
+  const [imgSrc, setImgSrc] = useState<string | null>(hasInitialSrc ? src! : null)
+  const [fallbackTried, setFallbackTried] = useState(false)
+
+  if (!imgSrc) {
+    return <EditorialFallback categorySlug={categorySlug} categoryName={categoryName} />
   }
 
-  return <EditorialFallback categorySlug={categorySlug} categoryName={categoryName} />
+  return (
+    <Image
+      src={imgSrc}
+      alt={alt}
+      fill
+      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+      sizes={
+        priority
+          ? "100vw"
+          : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      }
+      loading={priority ? "eager" : "lazy"}
+      priority={priority}
+      quality={92}
+      onError={() => {
+        if (!fallbackTried) {
+          setFallbackTried(true)
+          setImgSrc(getCategoryFallback(categorySlug))
+        } else {
+          setImgSrc(null)
+        }
+      }}
+    />
+  )
 }
 
 export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) {
   if (!article || !article.slug) return null
   const catName = categories.find((c) => c.slug === article.categorySlug)?.name || article.category
-  const hasImage = article.image && typeof article.image === "string" && (article.image.startsWith("/") || article.image.startsWith("http"))
 
   if (variant === "hero") {
     return (
       <Link href={`/article/${article.slug}`} className="group relative block w-full overflow-hidden bg-black">
         <div className="relative w-full h-[320px] sm:h-[400px] md:h-[520px] lg:h-[600px]">
-          {hasImage ? (
-            <Image
-              src={article.image!}
-              alt={article.title || ""}
-              fill
-              className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-105"
-              sizes="100vw"
-              priority
-              quality={100}
-            />
-          ) : (
-            <EditorialFallback categorySlug={article.categorySlug} categoryName={catName} />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+          <ArticleImage
+            src={article.image}
+            alt={article.title || ""}
+            categorySlug={article.categorySlug}
+            categoryName={catName}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-8 lg:p-12">
           <div className="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
@@ -144,7 +168,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             categorySlug={article.categorySlug}
             categoryName={catName}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         </div>
         <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-2 sm:mt-3 mb-1 sm:mb-1.5">
           <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.06em] text-destructive">{catName}</span>

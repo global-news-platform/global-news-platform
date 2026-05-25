@@ -6,6 +6,29 @@ const FALLBACKS_DIR = path.join(process.cwd(), "public/images/fallbacks")
 
 const MIN_FILE_SIZE = 5000
 
+const CATEGORY_FALLBACK_MAP: Record<string, string> = {
+  pakistan: "pakistan",
+  dunya: "world",
+  siasat: "politics",
+  karobar: "business",
+  technology: "technology",
+  khel: "sports",
+  sehat: "health",
+  shobiz: "entertainment",
+  science: "science",
+  mazhab: "default",
+  taleem: "default",
+  mausam: "default",
+  crime: "default",
+  adalat: "default",
+  baynalaqwami: "world",
+  raye: "politics",
+  videos: "entertainment",
+  general: "default",
+}
+
+const FALLBACK_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".svg"]
+
 function fileExists(filePath: string): boolean {
   try { return fs.existsSync(filePath) } catch { return false }
 }
@@ -32,15 +55,29 @@ function findLocalImage(slug: string): string | null {
   return null
 }
 
+function getFallbackFileName(categorySlug?: string): string {
+  if (!categorySlug) return "default"
+  return CATEGORY_FALLBACK_MAP[categorySlug] || "default"
+}
+
 function resolveFallbackImage(categorySlug?: string): string | undefined {
-  if (!categorySlug || !fs.existsSync(FALLBACKS_DIR)) return undefined
-  const extOrder = [".jpg", ".jpeg", ".png", ".webp"]
-  for (const ext of extOrder) {
-    const candidate = path.join(FALLBACKS_DIR, `${categorySlug}${ext}`)
+  if (!FALLBACKS_DIR || !fs.existsSync(FALLBACKS_DIR)) return undefined
+  const fallbackName = getFallbackFileName(categorySlug)
+
+  for (const ext of FALLBACK_EXTENSIONS) {
+    const candidate = path.join(FALLBACKS_DIR, `${fallbackName}${ext}`)
     if (fileExists(candidate) && fs.statSync(candidate).size > 0) {
-      return `/images/fallbacks/${categorySlug}${ext}`
+      return `/images/fallbacks/${fallbackName}${ext}`
     }
   }
+
+  for (const ext of FALLBACK_EXTENSIONS) {
+    const candidate = path.join(FALLBACKS_DIR, `default${ext}`)
+    if (fileExists(candidate) && fs.statSync(candidate).size > 0) {
+      return `/images/fallbacks/default${ext}`
+    }
+  }
+
   return undefined
 }
 
@@ -52,13 +89,11 @@ export function getImage(options: {
 } = {}): string | undefined {
   const { slug, categorySlug, frontmatterImage } = options
 
-  // 1. Try to find a locally downloaded image matching the slug
   if (slug) {
     const found = findLocalImage(slug)
     if (found) return found
   }
 
-  // 2. Check if frontmatter points to a real image
   if (frontmatterImage) {
     if (frontmatterImage.startsWith("/images/")) {
       const localPath = path.join(process.cwd(), "public", frontmatterImage)
@@ -67,19 +102,23 @@ export function getImage(options: {
       }
     }
 
-    // 3. Handle /fallback/[category].jpg → map to real fallback images
-    if (frontmatterImage.startsWith("/fallback/")) {
+    if (frontmatterImage.startsWith("/fallback/") || frontmatterImage.startsWith("/images/fallbacks/")) {
       const fallbackName = path.basename(frontmatterImage, path.extname(frontmatterImage))
-      const resolved = resolveFallbackImage(fallbackName || categorySlug)
+
+      for (const [slug, fb] of Object.entries(CATEGORY_FALLBACK_MAP)) {
+        if (fb === fallbackName) {
+          const resolved = resolveFallbackImage(slug)
+          if (resolved) return resolved
+        }
+      }
+
+      const resolved = resolveFallbackImage(fallbackName)
       if (resolved) return resolved
     }
   }
 
-  // 4. Last resort: try category-based fallback
-  if (categorySlug) {
-    const resolved = resolveFallbackImage(categorySlug)
-    if (resolved) return resolved
-  }
+  const resolved = resolveFallbackImage(categorySlug)
+  if (resolved) return resolved
 
   return undefined
 }
