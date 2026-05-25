@@ -218,7 +218,7 @@ export function Header() {
                   )
                 })}
               </nav>
-              <div className="mr-1 flex items-center gap-1">
+              <div className="ms-2 flex items-center gap-1">
                 <Link
                   href="/category/raye"
                   className={cn(

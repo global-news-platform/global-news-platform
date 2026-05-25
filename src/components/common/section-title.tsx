@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { ArrowLeft } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 interface SectionTitleProps {
   label: string
@@ -54,7 +54,7 @@ export function SectionTitle({
             className="group inline-flex items-center gap-1 text-xs font-medium text-primary transition-colors hover:text-primary/80"
           >
             سب دیکھیں
-            <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
           </Link>
         )}
       </div>

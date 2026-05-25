@@ -1,87 +1,586 @@
-import { PERSON_URDU, LOCATION_URDU, URDU_HEADLINE_TEMPLATES, URDU_TOPIC_WORDS, removeEnglishFromUrdu } from "./urdu-ai"
+import { PERSON_URDU, LOCATION_URDU, removeEnglishFromUrdu } from "./urdu-ai"
 
-function extractEntity(title: string): string {
-  const lower = title.toLowerCase()
+const WORD_TRANSLATION: Record<string, string> = {
+  "Artificial Intelligence": "مصنوعی ذہانت",
+  "Climate Change": "موسمیاتی تبدیلی",
+  "Climate Crisis": "موسمیاتی بحران",
+  "Human Rights": "انسانی حقوق",
+  "Nuclear Weapon": "جوہری ہتھیار",
+  "Stock Market": "اسٹاک مارکیٹ",
+  "United Nations": "اقوام متحدہ",
+  "Supreme Court": "سپریم کورٹ",
+  "High Court": "ہائی کورٹ",
+  "White House": "وائٹ ہاؤس",
+  "Prime Minister": "وزیراعظم",
+  "Chief Minister": "وزیر اعلیٰ",
+  "Foreign Minister": "وزیر خارجہ",
+  "Defense Minister": "وزیر دفاع",
+  "Finance Minister": "وزیر خزانہ",
+  "Chief Justice": "چیف جسٹس",
+  "Election Commission": "الیکشن کمیشن",
+  "National Assembly": "قومی اسمبلی",
+  "Provincial Assembly": "صوبائی اسمبلی",
+  "Local Government": "مقامی حکومت",
+  "Military Operation": "فوجی آپریشن",
+  "Peace Process": "امن عمل",
+  "Diplomatic Relations": "سفارتی تعلقات",
+  "Trade War": "تجارتی جنگ",
+  "Interest Rate": "سود کی شرح",
+  "Central Bank": "مرکزی بینک",
+  "Foreign Policy": "خارجہ پالیسی",
+  "Public Health": "عوامی صحت",
+  "Mental Health": "ذہنی صحت",
+  "Natural Disaster": "قدرتی آفت",
+  "Social Media": "سوشل میڈیا",
+  "Tech Company": "ٹیک کمپنی",
+  "Cyber Attack": "سائبر حملہ",
+  "Data Privacy": "ڈیٹا پرائیویسی",
+  "Space Program": "خلائی پروگرام",
+  "World Cup": "ورلڈ کپ",
+  "Gold Medal": "گولڈ میڈل",
+  "Press Conference": "پریس کانفرنس",
+  "Intelligence": "ذہانت",
+  "Pakistan": "پاکستان",
+  "India": "بھارت",
+  "China": "چین",
+  "US": "امریکہ",
+  "USA": "امریکہ",
+  "UK": "برطانیہ",
+  "World": "دنیا",
+  "Global": "عالمی",
+  "International": "بین الاقوامی",
+  "National": "قومی",
+  "Local": "مقامی",
+  "Regional": "علاقائی",
+  "Election": "انتخابات",
+  "Vote": "ووٹ",
+  "Campaign": "مہم",
+  "Candidate": "امیدوار",
+  "War": "جنگ",
+  "Peace": "امن",
+  "Deal": "معاہدہ",
+  "Crisis": "بحران",
+  "Attack": "حملہ",
+  "Strike": "ہڑتال",
+  "Protest": "احتجاج",
+  "Rebel": "باغی",
+  "Rebellion": "بغاوت",
+  "Revolution": "انقلاب",
+  "Sanctions": "پابندیاں",
+  "Ceasefire": "جنگ بندی",
+  "Truce": "جنگ بندی",
+  "Treaty": "معاہدہ",
+  "Alliance": "اتحاد",
+  "Summit": "سربراہی اجلاس",
+  "Meeting": "اجلاس",
+  "Talks": "مذاکرات",
+  "Negotiation": "مذاکرات",
+  "Agreement": "معاہدہ",
+  "Accord": "معاہدہ",
+  "Resolution": "قرارداد",
+  "Budget": "بجٹ",
+  "Economy": "معیشت",
+  "Economic": "معاشی",
+  "Market": "مارکیٹ",
+  "Trade": "تجارت",
+  "Business": "کاروبار",
+  "Finance": "فنانس",
+  "Financial": "مالی",
+  "Investment": "سرمایہ کاری",
+  "Investor": "سرمایہ کار",
+  "Stock": "اسٹاک",
+  "Share": "حصص",
+  "Bank": "بینک",
+  "Banking": "بینکاری",
+  "Loan": "قرض",
+  "Debt": "قرض",
+  "Deficit": "خسارہ",
+  "Inflation": "مہنگائی",
+  "Tax": "ٹیکس",
+  "Tariff": "ٹیرف",
+  "Revenue": "آمدنی",
+  "Profit": "منافع",
+  "Loss": "نقصان",
+  "Price": "قیمت",
+  "Cost": "لاگت",
+  "Oil": "تیل",
+  "Gas": "گیس",
+  "Energy": "توانائی",
+  "Power": "بجلی",
+  "Electricity": "بجلی",
+  "Nuclear": "جوہری",
+  "Solar": "شمسی",
+  "Wind": "ہوا",
+  "Health": "صحت",
+  "Medical": "طبی",
+  "Medicine": "دوا",
+  "Drug": "منشیات",
+  "Vaccine": "ویکسین",
+  "Virus": "وائرس",
+  "Disease": "بیماری",
+  "Epidemic": "وبا",
+  "Pandemic": "وبا",
+  "Hospital": "ہسپتال",
+  "Doctor": "ڈاکٹر",
+  "Patient": "مریض",
+  "Surgery": "سرجری",
+  "Treatment": "علاج",
+  "Cancer": "کینسر",
+  "Heart": "دل",
+  "Brain": "دماغ",
+  "Death": "ہلاکت",
+  "Dead": "ہلاک",
+  "Killed": "ہلاک",
+  "Died": "وفات",
+  "Injured": "زخمی",
+  "Wounded": "زخمی",
+  "Hospitalized": "ہسپتال داخل",
+  "Rescue": "ریسکیو",
+  "Emergency": "ایمرجنسی",
+  "Disaster": "آفت",
+  "Flood": "سیلاب",
+  "Earthquake": "زلزلہ",
+  "Storm": "طوفان",
+  "Hurricane": "سمندری طوفان",
+  "Tornado": "طوفان",
+  "Wildfire": "جنگل کی آگ",
+  "Drought": "خشک سالی",
+  "Famine": "قحط",
+  "Climate": "موسم",
+  "Weather": "موسم",
+  "Environment": "ماحول",
+  "Pollution": "آلودگی",
+  "Science": "سائنس",
+  "Space": "خلاء",
+  "Research": "تحقیق",
+  "Study": "مطالعہ",
+  "Discovery": "دریافت",
+  "Experiment": "تجربہ",
+  "Technology": "ٹیکنالوجی",
+  "Tech": "ٹیکنالوجی",
+  "Digital": "ڈیجیٹل",
+  "Internet": "انٹرنیٹ",
+  "Online": "آن لائن",
+  "Cyber": "سائبر",
+  "AI": "مصنوعی ذہانت",
+  "Artificial": "مصنوعی",
+  "Robot": "روبٹ",
+  "Software": "سافٹ ویئر",
+  "Hardware": "ہارڈ ویئر",
+  "Computer": "کمپیوٹر",
+  "Smartphone": "اسمارٹ فون",
+  "Phone": "فون",
+  "App": "ایپ",
+  "Data": "ڈیٹا",
+  "Network": "نیٹ ورک",
+  "Security": "سیکیورٹی",
+  "Privacy": "پرائیویسی",
+  "Sports": "کھیل",
+  "Game": "کھیل",
+  "Match": "میچ",
+  "Tournament": "ٹورنامنٹ",
+  "Championship": "چیمپئن شپ",
+  "League": "لیگ",
+  "Cricket": "کرکٹ",
+  "Football": "فٹ بال",
+  "Soccer": "فٹ بال",
+  "Tennis": "ٹینس",
+  "Hockey": "ہاکی",
+  "Olympics": "اولمپکس",
+  "Athlete": "کھلاڑی",
+  "Player": "کھلاڑی",
+  "Team": "ٹیم",
+  "Coach": "کوچ",
+  "Captain": "کپتان",
+  "Win": "جیت",
+  "Victory": "فتح",
+  "Defeat": "شکست",
+  "Score": "اسکور",
+  "Education": "تعلیم",
+  "School": "اسکول",
+  "College": "کالج",
+  "University": "یونیورسٹی",
+  "Student": "طلبہ",
+  "Teacher": "استاد",
+  "Professor": "پروفیسر",
+  "Exam": "امتحان",
+  "Result": "نتیجہ",
+  "Course": "کورس",
+  "Degree": "ڈگری",
+  "Film": "فلم",
+  "Movie": "فلم",
+  "Cinema": "سینما",
+  "Music": "موسیقی",
+  "Song": "گیت",
+  "Singer": "گلوکار",
+  "Actor": "اداکار",
+  "Actress": "اداکارہ",
+  "Director": "ہدایت کار",
+  "Show": "شو",
+  "Concert": "کنسرٹ",
+  "Award": "ایوارڈ",
+  "Festival": "تہوار",
+  "Entertainment": "شوبز",
+  "Celebrity": "مشہور شخصیت",
+  "Fashion": "فیشن",
+  "Art": "آرٹ",
+  "Culture": "ثقافت",
+  "Heritage": "ورثہ",
+  "History": "تاریخ",
+  "Government": "حکومت",
+  "President": "صدر",
+  "Minister": "وزیر",
+  "Governor": "گورنر",
+  "Mayor": "میئر",
+  "Parliament": "پارلیمنٹ",
+  "Senate": "سینٹ",
+  "Assembly": "اسمبلی",
+  "Court": "عدالت",
+  "Justice": "انصاف",
+  "Judge": "جج",
+  "Law": "قانون",
+  "Legal": "قانونی",
+  "Lawyer": "وکیل",
+  "Trial": "مقدمہ",
+  "Case": "کیس",
+  "Verdict": "فیصلہ",
+  "Sentence": "سزا",
+  "Prison": "جیل",
+  "Jail": "جیل",
+  "Police": "پولیس",
+  "Crime": "جرائم",
+  "Criminal": "مجرم",
+  "Fraud": "دھوکہ دہی",
+  "Corruption": "بدعنوانی",
+  "Scandal": "سکینڈل",
+  "Investigation": "تفتیش",
+  "Arrest": "گرفتاری",
+  "Arrested": "گرفتار",
+  "Charge": "الزام",
+  "Charged": "الزام عائد",
+  "Guilty": "مجرم",
+  "Innocent": "بے قصور",
+  "Border": "سرحد",
+  "Refugee": "پناہ گزین",
+  "Immigrant": "تارک وطن",
+  "Migration": "نقل مکانی",
+  "Army": "فوج",
+  "Military": "فوجی",
+  "Navy": "بحریہ",
+  "Air Force": "فضائیہ",
+  "Soldier": "سپاہی",
+  "General": "جرنیل",
+  "Chief": "سربراہ",
+  "Officer": "افسر",
+  "Defence": "دفاع",
+  "Defense": "دفاع",
+  "Weapon": "ہتھیار",
+  "Missile": "میزائل",
+  "Drone": "ڈرون",
+  "Bomb": "بم",
+  "Explosion": "دھماکہ",
+  "Terrorist": "دہشت گرد",
+  "Terrorism": "دہشت گردی",
+  "Extremist": "انتہا پسند",
+  "Militant": "عسکریت پسند",
+  "Report": "رپورٹ",
+  "Analysis": "تجزیہ",
+  "Survey": "سروے",
+  "Update": "اپ ڈیٹ",
+  "Statement": "بیان",
+  "Announcement": "اعلان",
+  "Declaration": "اعلان",
+  "Decision": "فیصلہ",
+  "Policy": "پالیسی",
+  "Plan": "منصوبہ",
+  "Project": "منصوبہ",
+  "Program": "پروگرام",
+  "Development": "ترقی",
+  "Progress": "پیشرفت",
+  "Reform": "اصلاحات",
+  "Change": "تبدیلی",
+  "Threat": "خطرہ",
+  "Risk": "خطرہ",
+  "Warning": "انتباہ",
+  "Challenge": "چیلنج",
+  "Opportunity": "موقع",
+  "Future": "مستقبل",
+  "New": "نئی",
+  "Major": "اہم",
+  "Top": "سرفہرست",
+  "Breaking": "بریکنگ",
+  "Latest": "تازہ ترین",
+  "Exclusive": "خصوصی",
+  "Special": "خصوصی",
+  "Important": "اہم",
+  "Key": "اہم",
+  "Big": "بڑی",
+  "Massive": "بڑے پیمانے پر",
+  "Huge": "بہت بڑا",
+  "Historic": "تاریخی",
+  "Landmark": "اہم سنگ میل",
+  "First": "پہلا",
+  "Last": "آخری",
+  "Final": "آخری",
+  "Early": "ابتدائی",
+  "Late": "تاخیر",
+  "Former": "سابق",
+  "Current": "موجودہ",
+  "Recent": "حالیہ",
+  "Annual": "سالانہ",
+  "Daily": "روزانہ",
+  "Weekly": "ہفتہ وار",
+  "Month": "ماہ",
+  "Year": "سال",
+  "Today": "آج",
+  "Yesterday": "کل",
+  "Tomorrow": "آنے والا کل",
+  "Week": "ہفتہ",
+  "Decade": "دہائی",
+  "Century": "صدی",
+  "People": "عوام",
+  "Public": "عوامی",
+  "Community": "برادری",
+  "Family": "خاندان",
+  "Child": "بچہ",
+  "Children": "بچے",
+  "Woman": "خاتون",
+  "Women": "خواتین",
+  "Man": "مرد",
+  "Men": "مرد",
+  "Youth": "نوجوان",
+  "Leader": "رہنما",
+  "Official": "سرکاری",
+  "Authority": "حکام",
+  "Department": "محکمہ",
+  "Agency": "ایجنسی",
+  "Commission": "کمیشن",
+  "Committee": "کمیٹی",
+  "Council": "کونسل",
+  "Group": "گروپ",
+  "Party": "جماعت",
+  "Union": "یونین",
+  "Organization": "تنظیم",
+  "Company": "کمپنی",
+  "Firm": "فرم",
+  "Industry": "صنعت",
+  "Factory": "فیکٹری",
+  "Agriculture": "زراعت",
+  "Farm": "کھیت",
+  "Food": "خوراک",
+  "Water": "پانی",
+  "Housing": "ہاؤسنگ",
+  "Construction": "تعمیرات",
+  "Road": "سڑک",
+  "Bridge": "پل",
+  "Railway": "ریلوے",
+  "Airport": "ہوائی اڈہ",
+  "Port": "بندرگاہ",
+  "Transport": "ٹرانسپورٹ",
+  "Vehicle": "گاڑی",
+  "Car": "کار",
+  "Bus": "بس",
+  "Train": "ٹرین",
+  "Plane": "طیارہ",
+  "Ship": "جہاز",
+  "Flight": "پرواز",
+  "Tourism": "سیاحت",
+  "Travel": "سفر",
+  "Hotel": "ہوٹل",
+  "Restaurant": "ریستوراں",
+  "Hospitality": "مہمان نوازی",
+  "Media": "میڈیا",
+  "News": "خبر",
+  "Press": "پریس",
+  "Newspaper": "اخبار",
+  "Journalist": "صحافی",
+  "Editor": "ایڈیٹر",
+  "Column": "کالم",
+  "Interview": "انٹرویو",
+  "Coverage": "کوریج",
+  "Broadcast": "نشریات",
+  "Television": "ٹیلی ویژن",
+  "TV": "ٹی وی",
+  "Radio": "ریڈیو",
+  "Platform": "پلیٹ فارم",
+  "Website": "ویب سائٹ",
+  "Search": "تلاش",
+  "Google": "گوگل",
+  "Apple": "ایپل",
+  "Amazon": "ایمیزون",
+  "Microsoft": "مائیکروسافٹ",
+  "Meta": "میٹا",
+  "Twitter": "ٹوئٹر",
+  "X": "ایکس",
+  "YouTube": "یوٹیوب",
+  "Facebook": "فیس بک",
+  "Instagram": "انسٹاگرام",
+  "WhatsApp": "واٹس ایپ",
+  "ChatGPT": "چیٹ جی پی ٹی",
+  "OpenAI": "اوپن اے آئی",
+  "Billion": "ارب",
+  "Million": "ملین",
+  "Thousand": "ہزار",
+  "Percent": "فیصد",
+  "Rate": "شرح",
+  "Ratio": "تناسب",
+  "Average": "اوسط",
+  "Total": "کل",
+  "Record": "ریکارڈ",
+  "Highest": "سب سے زیادہ",
+  "Lowest": "سب سے کم",
+  "Increase": "اضافہ",
+  "Decrease": "کمی",
+  "Rise": "اضافہ",
+  "Fall": "کمی",
+  "Drop": "کمی",
+  "Gain": "فائدہ",
+  "Growth": "ترقی",
+  "Recovery": "بحالی",
+  "Slowdown": "سست روی",
+  "Recession": "کساد بازاری",
+  "Job": "نوکری",
+  "Employment": "روزگار",
+  "Unemployment": "بے روزگاری",
+  "Worker": "مزدور",
+  "Labor": "محنت",
+  "Wage": "اجرت",
+  "Salary": "تنخواہ",
+  "Pension": "پنشن",
+  "Benefit": "فائدہ",
+  "Insurance": "انشورنس",
+  "Fund": "فنڈ",
+  "Donation": "عطیہ",
+  "Aid": "امداد",
+  "Relief": "ریلیف",
+  "Support": "حمایت",
+  "Opposition": "اپوزیشن",
+  "Rival": "حریف",
+  "Enemy": "دشمن",
+  "Friend": "دوست",
+  "Ally": "اتحادی",
+  "Coalition": "اتحاد",
+  "Demonstration": "مظاہرہ",
+  "Rally": "ریلی",
+  "March": "مارچ",
+  "Sit in": "دھرنا",
+  "Lockdown": "لاک ڈاؤن",
+  "Curfew": "کرفیو",
+  "Quarantine": "قرنطینہ",
+  "Isolation": "تنہائی",
+  "Transplant": "ٹرانسپلانٹ",
+  "Organ": "عضو",
+  "Blood": "خون",
+  "Cell": "خلیہ",
+  "Gene": "جین",
+  "DNA": "ڈی این اے",
+  "Protein": "پروٹین",
+  "Clinical": "کلینیکل",
+  "Diagnosis": "تشخیص",
+  "Therapy": "تھراپی",
+  "Mental": "ذہنی",
+  "Physical": "جسمانی",
+  "Diabetes": "ذیابیطس",
+  "Obesity": "موٹاپا",
+  "Stroke": "فالج",
+  "Pneumonia": "نمونیا",
+  "Malaria": "ملیریا",
+  "Dengue": "ڈینگی",
+  "Cholera": "ہیضہ",
+  "Tuberculosis": "تپ دق",
+  "HIV": "ایچ آئی وی",
+  "AIDS": "ایڈز",
+  "Autism": "آٹزم",
+  "Alzheimer": "الزائمر",
+  "Parkinson": "پارکنسن",
+  "Depression": "ڈپریشن",
+  "Anxiety": "بے چینی",
+  "Stress": "تناؤ",
+  "Suicide": "خودکشی",
+  "Murder": "قتل",
+  "Assassination": "قتل",
+  "Execution": "پھانسی",
+  "Kidnapping": "اغوا",
+  "Robbery": "ڈکیتی",
+  "Theft": "چوری",
+  "Burglary": "چوری",
+  "Smuggling": "سمگلنگ",
+  "Trafficking": "سمگلنگ",
+  "Drugs": "منشیات",
+  "Alcohol": "شراب",
+  "Gambling": "جوا",
+  "Piracy": "قزاقی",
+  "Copyright": "کاپی رائٹ",
+  "Patent": "پیٹنٹ",
+  "Trademark": "ٹریڈ مارک",
+}
+
+function translateTitle(title: string): string {
+  let result = title
+
   for (const [eng, ur] of Object.entries(PERSON_URDU)) {
-    if (lower.includes(eng.toLowerCase())) return ur
+    const regex = new RegExp(`\\b${escapeRegExp(eng)}\\b`, "gi")
+    result = result.replace(regex, ur)
   }
-  return ""
-}
 
-function extractLocation(title: string): string {
-  const lower = title.toLowerCase()
   for (const [eng, ur] of Object.entries(LOCATION_URDU)) {
-    if (lower.includes(eng.toLowerCase())) return ur
+    const regex = new RegExp(`\\b${escapeRegExp(eng)}\\b`, "gi")
+    result = result.replace(regex, ur)
   }
-  return ""
+
+  const sortedWords = Object.entries(WORD_TRANSLATION).sort((a, b) => b[0].length - a[0].length)
+  for (const [eng, ur] of sortedWords) {
+    const regex = new RegExp(`\\b${escapeRegExp(eng)}\\b`, "gi")
+    result = result.replace(regex, ur)
+  }
+
+  return result
 }
 
-function extractTopic(title: string): string {
-  const lower = title.toLowerCase()
-  for (const [eng, ur] of Object.entries(URDU_TOPIC_WORDS)) {
-    if (lower.includes(eng)) return ur
-  }
-  return ""
+function escapeRegExp(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
 }
 
-function generateTemplateHeadline(title: string): string {
-  const entity = extractEntity(title)
-  const location = extractLocation(title)
-  const topic = extractTopic(title)
-
-  let template = URDU_HEADLINE_TEMPLATES[Math.floor(Math.random() * URDU_HEADLINE_TEMPLATES.length)]
-  template = template.replace("{entity}", entity || "حکام")
-  template = template.replace("{location}", location || "ملک")
-  template = template.replace("{topic}", topic || "اہم خبر")
-
-  return template
-    .replace(/\s+/g, " ")
-    .replace(/[،;]+$/, "")
-    .trim()
+export function hasSufficientUrdu(text: string): boolean {
+  if (!text || text.length < 3) return false
+  const urduChars = text.match(/[\u0600-\u06FF]/g) || []
+  const totalChars = text.replace(/\s/g, "").length
+  return urduChars.length / totalChars > 0.3
 }
 
 export async function generateUrduHeadline(title: string): Promise<string> {
-  if (!title || title.length < 5) return removeEnglishFromUrdu(title)
+  if (!title || title.length < 5) return title
 
-  const template = generateTemplateHeadline(title)
-  const cleaned = removeEnglishFromUrdu(template)
-  if (cleaned.length > 5) return cleaned
+  const translated = translateTitle(title)
+  const cleaned = removeEnglishFromUrdu(translated)
 
-  return removeEnglishFromUrdu(title)
+  if (cleaned.length > 5 && hasSufficientUrdu(cleaned)) return cleaned
+
+  return title
 }
 
 export async function generateUrduExcerpt(title: string, excerpt: string): Promise<string> {
-  if (!excerpt || excerpt.length < 5) return "تفصیلات کے مطابق یہ خبر منظر عام پر آئی ہے۔"
+  if (!excerpt || excerpt.length < 5) {
+    const translated = translateTitle(title)
+    const cleaned = removeEnglishFromUrdu(translated)
+    if (cleaned.length > 10 && hasSufficientUrdu(cleaned)) return `${cleaned.substring(0, 120)}۔`
+    return title.substring(0, 100)
+  }
 
   if (/[\u0600-\u06FF]/.test(excerpt) && excerpt.length > 20) {
     const clean = excerpt.replace(/[.!?;:]+\s*$/, "").trim()
     return `${removeEnglishFromUrdu(clean)}۔`
   }
 
-  const entity = extractEntity(title)
-  const location = extractLocation(title)
-  const topic = extractTopic(title)
+  const translated = translateTitle(excerpt)
+  const cleaned = removeEnglishFromUrdu(translated)
+  if (cleaned.length > 10) return `${cleaned.substring(0, 150)}۔`
 
-  const intros = [
-    "تفصیلات کے مطابق",
-    "اطلاعات کے مطابق",
-    "بتایا گیا ہے کہ",
-    "ذرائع کا کہنا ہے کہ",
-  ]
-  const intro = intros[Math.floor(Math.random() * intros.length)]
+  const titleTranslated = translateTitle(title)
+  const titleCleaned = removeEnglishFromUrdu(titleTranslated)
+  if (titleCleaned.length > 10 && hasSufficientUrdu(titleCleaned)) return `${titleCleaned.substring(0, 120)}۔`
 
-  if (entity && topic) {
-    return `${intro} ${entity} نے ${topic} کے حوالے سے اہم بیان دیا ہے۔`
-  }
-  if (location && topic) {
-    return `${intro} ${location} میں ${topic} کے حوالے سے صورتحال تشویشناک ہے۔`
-  }
-  if (entity && location) {
-    return `${intro} ${entity} کی ${location} کے دورے کے حوالے سے اہم خبر سامنے آئی ہے۔`
-  }
-
-  const clean = removeEnglishFromUrdu(excerpt.replace(/[.!?;:]+\s*$/, "").trim())
-  return `${intro} ${clean.slice(0, 120)}۔`
+  return removeEnglishFromUrdu(excerpt.replace(/[.!?;:]+\s*$/, "").trim()).substring(0, 150) + "۔"
 }
 
 export function categorizeEnglishCategory(cat: string): string {

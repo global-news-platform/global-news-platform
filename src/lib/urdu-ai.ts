@@ -203,24 +203,6 @@ export const TAG_URDU: Record<string, string> = {
   "uk": "برطانیہ",
 }
 
-export const URDU_HEADLINE_TEMPLATES: string[] = [
-  "{entity} کی {topic} پر اہم پیشرفت",
-  "{entity} کے حوالے سے نیا انکشاف",
-  "{location} میں {topic}، اہم خبر",
-  "{entity} کا {location} کو {topic} کا پیغام",
-  "{topic} کے بارے میں {entity} کا بیان",
-  "{location} میں {topic} میں اضافہ",
-  "{entity} اور {location} کے درمیان {topic} طے",
-  "{topic} پر {entity} کا ردعمل",
-  "{location} میں {topic} سے متعلق انتباہ",
-  "{entity} کی {topic} پر سخت تنقید",
-  "{location} میں {topic} کے امکانات روشن",
-  "{entity} کی {location} کو بڑی پیشکش",
-  "{topic} کے حوالے سے {entity} کا اعلان متوقع",
-  "{location} میں {topic} کی تیاریاں شروع",
-  "{entity} کا {topic} پر خصوصی اجلاس",
-]
-
 export const URDU_TOPIC_WORDS: Record<string, string> = {
   "election": "انتخابات",
   "war": "جنگ",

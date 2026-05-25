@@ -1,9 +1,17 @@
 "use client"
 
-import { useState, useCallback, useEffect } from "react"
+import { useState, useCallback } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { getFallbackImageUrl } from "@/lib/images/fallbackImages"
+
+const FALLBACK_IMAGE = "/images/fallback/default.jpg"
+
+function normalizeImage(image: string | undefined | null): string {
+  if (!image || typeof image !== "string" || image.trim() === "") return FALLBACK_IMAGE
+  const trimmed = image.trim()
+  if (trimmed.startsWith("data:") || trimmed.startsWith("http://") || trimmed.startsWith("https://") || trimmed.startsWith("/")) return trimmed
+  return FALLBACK_IMAGE
+}
 
 export interface SafeImageProps {
   src?: string
@@ -21,41 +29,20 @@ export function SafeImage({
   className,
   wrapperClassName,
   priority = false,
-  categorySlug,
 }: SafeImageProps) {
-  const [currentSrc, setCurrentSrc] = useState<string | undefined>(undefined)
-  const [loadError, setLoadError] = useState(false)
-  const fallbackUrl = getFallbackImageUrl(categorySlug)
-  const resolvedSrc = currentSrc || src || fallbackUrl
-
-  useEffect(() => {
-    setCurrentSrc(undefined)
-    setLoadError(false)
-  }, [src])
+  const currentSrc = normalizeImage(src)
+  const [fallbackSrc, setFallbackSrc] = useState<string | null>(null)
 
   const handleError = useCallback(() => {
-    if (!loadError) {
-      setLoadError(true)
-      setCurrentSrc(fallbackUrl)
-    }
-  }, [loadError, fallbackUrl])
+    setFallbackSrc(FALLBACK_IMAGE)
+  }, [])
 
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden rounded-lg bg-muted/20",
-        "w-full h-full",
-        wrapperClassName,
-      )}
-    >
+    <div className={cn("relative overflow-hidden w-full h-full", wrapperClassName)}>
       <Image
-        src={resolvedSrc}
+        src={fallbackSrc || currentSrc}
         alt={alt}
-        className={cn(
-          "w-full h-full object-cover transition-opacity duration-300",
-          "aspect-[3/2]",
-          className,
-        )}
+        className={cn("w-full h-full object-cover transition-opacity duration-300", className)}
         width={800}
         height={533}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

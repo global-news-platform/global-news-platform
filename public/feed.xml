@@ -8,7 +8,7 @@
     <link>https://pakistan-news.news</link>
     <description>پاکستان کا معتبر ترین خبروں کا پلیٹ فارم</description>
     <language>ur-pk</language>
-    <lastBuildDate>Mon, 25 May 2026 09:44:37 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 12:14:58 GMT</lastBuildDate>
     <atom:link href="https://pakistan-news.news/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://pakistan-news.news/images/logo.svg</url>
@@ -23,6 +23,26 @@
     <category>dunya</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 09:59:52 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Who made Opta&apos;s team of the season?</title>
+    <link>https://pakistan-news.news/article/who-made-opta-s-team-of-the-season--eg3b4t</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/who-made-opta-s-team-of-the-season--eg3b4t</guid>
+    <description>Data analyst Opta looks at the numbers to provide its own Premier League team of the season.</description>
+    <category>khel</category>
+    <author>علی احمد</author>
+    <pubDate>Mon, 25 May 2026 11:57:08 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/who-made-opta-s-team-of-the-season--eg3b4t.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
+    <link>https://pakistan-news.news/article/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--xen8mt</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--xen8mt</guid>
+    <description>BBC Sport chief football writer Phil McNulty reviews every team&apos;s Premier League - and looks back at his pre-season predictions.</description>
+    <category>khel</category>
+    <author>عمران ملک</author>
+    <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
   </item>
   <item>
@@ -96,6 +116,16 @@
     <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
   </item>
   <item>
+    <title>When Humans Went Away, the Wildlife Strayed</title>
+    <link>https://pakistan-news.news/article/when-humans-went-away-the-wildlife-strayed--c8fxti</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/when-humans-went-away-the-wildlife-strayed--c8fxti</guid>
+    <description>When people disappeared from the landscape, as they did during the pandemic, wild animals changed how they used space and resources, scientists found.</description>
+    <category>science</category>
+    <author>سارہ خان</author>
+    <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
+  </item>
+  <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
     <link>https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--wp4nuo</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--wp4nuo</guid>
@@ -132,6 +162,16 @@
     <description>The temporary shutdowns came after videos emerged showing two Waymo cars stopped on swamped streets in Atlanta on Wednesday.</description>
     <category>technology</category>
     <author>سارہ خان</author>
+    <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
+    <link>https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--gjir5z</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--gjir5z</guid>
+    <description>The temporary shutdowns came after videos emerged showing two Waymo cars stopped on swamped streets in Atlanta on Wednesday.</description>
+    <category>technology</category>
+    <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
@@ -186,6 +226,16 @@
     <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
+    <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
+    <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--6r3ilp</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--6r3ilp</guid>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <category>technology</category>
+    <author>سارہ خان</author>
+    <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
     <title>&apos;Unselfish&apos; over &apos;ego&apos; - what do leaks say about Tuchel&apos;s England?</title>
     <link>https://pakistan-news.news/article/unselfish-over-ego-what-do-leaks-say-about-tuchel-s-england--qpvlft</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/unselfish-over-ego-what-do-leaks-say-about-tuchel-s-england--qpvlft</guid>
@@ -222,6 +272,16 @@
     <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
     <category>sehat</category>
     <author>سارہ خان</author>
+    <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
+    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--pwsg6c</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--pwsg6c</guid>
+    <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
+    <category>sehat</category>
+    <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
   </item>
@@ -267,6 +327,16 @@
   </item>
   <item>
     <title>UK Institute Is Hunting for Dangers Lurking in AI</title>
+    <link>https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--u4trpw</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--u4trpw</guid>
+    <description>The government’s A.I. Security Institute, staffed by alumni from OpenAI and Google, is becoming a model for countries grappling with A.I.’s emerging risks.</description>
+    <category>technology</category>
+    <author>سارہ خان</author>
+    <pubDate>Sun, 24 May 2026 09:01:43 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>UK Institute Is Hunting for Dangers Lurking in AI</title>
     <link>https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--rqxk81</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--rqxk81</guid>
     <description>The government’s A.I. Security Institute, staffed by alumni from OpenAI and Google, is becoming a model for countries grappling with A.I.’s emerging risks.</description>
@@ -304,6 +374,16 @@
     <author>عمران ملک</author>
     <pubDate>Mon, 25 May 2026 08:43:43 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/images/articles/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--s6pln2.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>U.S.-Iran Peace Deal Nearer, But Could Take Days to Nail Down, U.S. Official Says</title>
+    <link>https://pakistan-news.news/article/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--pdnrmd</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--pdnrmd</guid>
+    <description>The official said the sides had agreed in principle to reopen the Strait of Hormuz and commit Iran to disposing of its highly enriched uranium, but stressed tha</description>
+    <category>dunya</category>
+    <author>فاطمہ حسین</author>
+    <pubDate>Mon, 25 May 2026 12:11:10 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>U.S.-Iran Peace Deal Nearer, But Could Take Days to Nail Down, U.S. Official Says</title>
@@ -359,6 +439,16 @@
     <title>U.S. Adds Security Measures at Dulles to Receive Citizens Who Have Been in Ebola Outbreak Region</title>
     <link>https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---3ailks</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---3ailks</guid>
+    <description>The Department of Homeland Security directed all flights carrying certain travelers to arrive at Dulles International Airport in Virginia.</description>
+    <category>sehat</category>
+    <author>فاطمہ حسین</author>
+    <pubDate>Thu, 21 May 2026 18:52:38 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>U.S. Adds Security Measures at Dulles to Receive Citizens Who Have Been in Ebola Outbreak Region</title>
+    <link>https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---0qkxki</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---0qkxki</guid>
     <description>The Department of Homeland Security directed all flights carrying certain travelers to arrive at Dulles International Airport in Virginia.</description>
     <category>sehat</category>
     <author>فاطمہ حسین</author>
@@ -424,96 +514,6 @@
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 17:30:43 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump wants new Fed chair to be &apos;totally independent&apos;</title>
-    <link>https://pakistan-news.news/article/trump-wants-new-fed-chair-to-be-totally-independent--hk6el3</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-wants-new-fed-chair-to-be-totally-independent--hk6el3</guid>
-    <description>The US president piled major pressure on Kevin Warsh&apos;s predecessor to cut interest rates.</description>
-    <category>karobar</category>
-    <author>بابر شاہ</author>
-    <pubDate>Fri, 22 May 2026 18:16:58 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump’s Self-Indulgent Streak Deepens G.O.P. Fears He is Risking Losses in Midterms</title>
-    <link>https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--wbot0h</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--wbot0h</guid>
-    <description>“The stupid stuff is killing our chances,” said a retiring Republican senator.</description>
-    <category>siasat</category>
-    <author>سارہ خان</author>
-    <pubDate>Mon, 25 May 2026 09:03:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump’s Self-Indulgent Streak Deepens G.O.P. Fears He is Risking Losses in Midterms</title>
-    <link>https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--t79f3w</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--t79f3w</guid>
-    <description>“The stupid stuff is killing our chances,” said a retiring Republican senator.</description>
-    <category>siasat</category>
-    <author>سارہ خان</author>
-    <pubDate>Mon, 25 May 2026 09:03:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--t79f3w.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump’s Self-Indulgent Streak Deepens G.O.P. Fears He is Risking Losses in Midterms</title>
-    <link>https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--ectuy0</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--ectuy0</guid>
-    <description>“The stupid stuff is killing our chances,” said a retiring Republican senator.</description>
-    <category>siasat</category>
-    <author>سارہ خان</author>
-    <pubDate>Mon, 25 May 2026 09:03:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
-    <link>https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--sqzx18</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--sqzx18</guid>
-    <description>Public health experts say the administration’s quarantine orders go beyond what is needed to prevent the U.S. spread of Ebola and hantavirus.</description>
-    <category>sehat</category>
-    <author>فاطمہ حسین</author>
-    <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--sqzx18.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
-    <link>https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--j5tcgl</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--j5tcgl</guid>
-    <description>Public health experts say the administration’s quarantine orders go beyond what is needed to prevent the U.S. spread of Ebola and hantavirus.</description>
-    <category>sehat</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
-    <link>https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--9gio37</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--9gio37</guid>
-    <description>Public health experts say the administration’s quarantine orders go beyond what is needed to prevent the U.S. spread of Ebola and hantavirus.</description>
-    <category>sehat</category>
-    <author>عمران ملک</author>
-    <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
-    <link>https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--6nys23</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--6nys23</guid>
-    <description>Public health experts say the administration’s quarantine orders go beyond what is needed to prevent the U.S. spread of Ebola and hantavirus.</description>
-    <category>sehat</category>
-    <author>عمران ملک</author>
-    <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump Cancels Signing of Executive Order Granting Oversight of A.I. Models</title>
-    <link>https://pakistan-news.news/article/trump-cancels-signing-of-executive-order-granting-oversight-of-a-i-models--togvnr</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-cancels-signing-of-executive-order-granting-oversight-of-a-i-models--togvnr</guid>
-    <description>The president said he postponed the executive order, which would give the government power to evaluate A.I. models before their release, over concerns about “as</description>
-    <category>technology</category>
-    <author>بابر شاہ</author>
-    <pubDate>Thu, 21 May 2026 17:47:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   </channel>
 </rss>
