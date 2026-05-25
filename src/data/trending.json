@@ -1,5 +1,17 @@
 [
   {
+    "slug": "ferrari-unveils-luce-its-first-fully-electric-car--jlktno",
+    "title": "Ferrari Unveils Luce, Its First Fully Electric Car",
+    "category": "karobar",
+    "score": 10
+  },
+  {
+    "slug": "iran-war-live-updates-negotiations-to-end-the-war-resume-in-qatar--0gtm22",
+    "title": "Iran War Live Updates: Negotiations to End the War Resume in Qatar",
+    "category": "dunya",
+    "score": 10
+  },
+  {
     "slug": "iran-war-live-updates-negotiations-to-end-the-war-resume-in-qatar--lw2uax",
     "title": "Iran War Live Updates: Negotiations to End the War Resume in Qatar",
     "category": "dunya",
@@ -9,6 +21,18 @@
     "slug": "netanyahu-says-israel-will-intensify-strikes-against-hezbollah--jb8dnd",
     "title": "Netanyahu says Israel will intensify strikes against Hezbollah",
     "category": "dunya",
+    "score": 9.9
+  },
+  {
+    "slug": "netanyahu-says-israel-will-intensify-strikes-against-hezbollah--n40y4y",
+    "title": "Netanyahu says Israel will intensify strikes against Hezbollah",
+    "category": "dunya",
+    "score": 9.9
+  },
+  {
+    "slug": "three-acl-injuries-later-how-notts-county-s-jones-lit-up-wembley--et5frt",
+    "title": "Three ACL injuries later - how Notts County's Jones lit up Wembley",
+    "category": "khel",
     "score": 9.9
   },
   {
@@ -30,6 +54,12 @@
     "score": 9.9
   },
   {
+    "slug": "gb-s-boulter-scrapes-into-french-open-second-round--vccm3a",
+    "title": "GB's Boulter scrapes into French Open second round",
+    "category": "khel",
+    "score": 9.9
+  },
+  {
     "slug": "shaw-signs-new-man-city-deal-after-contract-u-turn--eiuyua",
     "title": "Shaw signs new Man City deal after contract U-turn",
     "category": "khel",
@@ -42,6 +72,18 @@
     "score": 9.8
   },
   {
+    "slug": "shaw-signs-new-man-city-deal-after-contract-u-turn--x76cp0",
+    "title": "Shaw signs new Man City deal after contract U-turn",
+    "category": "khel",
+    "score": 9.8
+  },
+  {
+    "slug": "as-a-i-fever-rises-in-silicon-valley-pope-leo-has-a-few-words--b0w2uy",
+    "title": "As A.I. Fever Rises in Silicon Valley, Pope Leo Has a Few Words",
+    "category": "technology",
+    "score": 9.7
+  },
+  {
     "slug": "as-a-i-fever-rises-in-silicon-valley-pope-leo-has-a-few-words--s0optv",
     "title": "As A.I. Fever Rises in Silicon Valley, Pope Leo Has a Few Words",
     "category": "technology",
@@ -52,6 +94,12 @@
     "title": "As A.I. Fever Rises in Silicon Valley, Pope Leo Has a Few Words",
     "category": "technology",
     "score": 9.7
+  },
+  {
+    "slug": "in-city-at-center-of-ebola-crisis-the-virus-is-far-ahead-of-us--6iye8d",
+    "title": "In City at Center of Ebola Crisis, ‘the Virus Is Far Ahead of Us’",
+    "category": "sehat",
+    "score": 9.6
   },
   {
     "slug": "in-city-at-center-of-ebola-crisis-the-virus-is-far-ahead-of-us--cxcuvr",
@@ -70,53 +118,5 @@
     "title": "Trump Urges More Countries to Normalize Relations With Israel as Part of Iran Deal",
     "category": "siasat",
     "score": 9.5
-  },
-  {
-    "slug": "trump-urges-more-countries-to-normalize-relations-with-israel-as-part-of-iran-de--wobdqb",
-    "title": "Trump Urges More Countries to Normalize Relations With Israel as Part of Iran Deal",
-    "category": "siasat",
-    "score": 9.5
-  },
-  {
-    "slug": "monday-night-club-what-next-for-relegated-west-ham-as-spurs-survive--v7tfi7",
-    "title": "Monday Night Club: What next for relegated West Ham as Spurs survive?",
-    "category": "khel",
-    "score": 9.5
-  },
-  {
-    "slug": "russia-threatens-more-kyiv-strikes-and-tells-foreign-nationals-to-leave--tih81p",
-    "title": "Russia threatens more Kyiv strikes and tells foreign nationals to leave",
-    "category": "dunya",
-    "score": 9.5
-  },
-  {
-    "slug": "russia-threatens-more-kyiv-strikes-and-tells-foreign-nationals-to-leave--xw8at2",
-    "title": "Russia threatens more Kyiv strikes and tells foreign nationals to leave",
-    "category": "dunya",
-    "score": 9.5
-  },
-  {
-    "slug": "iran-war-live-updates-top-iranian-negotiators-arrive-in-qatar-for-talks-on-peace--1gvf8g",
-    "title": "Iran War Live Updates: Top Iranian Negotiators Arrive in Qatar for Talks on Peace Deal",
-    "category": "dunya",
-    "score": 9.3
-  },
-  {
-    "slug": "how-art-auctions-choreographed-a-2-5-billion-comeback--696jsf",
-    "title": "How Art Auctions Choreographed a $2.5 Billion Comeback",
-    "category": "karobar",
-    "score": 9.3
-  },
-  {
-    "slug": "how-art-auctions-choreographed-a-2-5-billion-comeback--dtb7sh",
-    "title": "How Art Auctions Choreographed a $2.5 Billion Comeback",
-    "category": "karobar",
-    "score": 9.3
-  },
-  {
-    "slug": "how-art-auctions-choreographed-a-2-5-billion-comeback--lzwqeh",
-    "title": "How Art Auctions Choreographed a $2.5 Billion Comeback",
-    "category": "karobar",
-    "score": 9.3
   }
 ]
