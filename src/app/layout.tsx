@@ -12,7 +12,7 @@ const notoNastaliq = Noto_Nastaliq_Urdu({
   display: "swap",
   variable: "--font-noto-nastaliq",
   preload: true,
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   fallback: ["system-ui", "sans-serif"],
 })
 

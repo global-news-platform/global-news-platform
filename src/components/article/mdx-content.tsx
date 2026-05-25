@@ -20,7 +20,7 @@ export function MDXContent({ content, className }: MDXContentProps) {
     .map((block) => {
       const imgMatch = block.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
       if (imgMatch) {
-        return `<figure class="my-8"><img src="${escapeHtml(imgMatch[2])}" alt="${escapeHtml(imgMatch[1])}" class="w-full rounded-lg" loading="lazy" /><figcaption class="mt-2 text-center text-[13px] text-muted-foreground">${escapeHtml(imgMatch[1])}</figcaption></figure>`
+        return `<figure class="my-8"><img src="${escapeHtml(imgMatch[2])}" alt="${escapeHtml(imgMatch[1])}" class="w-full rounded-xl shadow-md" loading="lazy" decoding="async" style="object-fit:cover;aspect-ratio:16/9" /><figcaption class="mt-2 text-center text-[13px] text-muted-foreground">${escapeHtml(imgMatch[1])}</figcaption></figure>`
       }
       const linkMatch = block.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
       if (linkMatch) {
@@ -55,7 +55,7 @@ export function MDXContent({ content, className }: MDXContentProps) {
           if (line.startsWith("> ")) return `<blockquote class="border-l-[3px] border-foreground/20 pl-6 my-8 italic text-[17px] md:text-[19px] text-foreground/80 font-serif">${escapeHtml(line.replace(/^>\s?/, ""))}</blockquote>`
           if (line.startsWith("#### ")) return `<h4 class="font-serif text-lg font-semibold mt-6 mb-2 text-foreground">${escapeHtml(line.replace("#### ", ""))}</h4>`
           const inlineImg = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
-          if (inlineImg) return `<figure class="my-8"><img src="${escapeHtml(inlineImg[2])}" alt="${escapeHtml(inlineImg[1])}" class="w-full rounded-lg" loading="lazy" /></figure>`
+          if (inlineImg) return `<figure class="my-8"><img src="${escapeHtml(inlineImg[2])}" alt="${escapeHtml(inlineImg[1])}" class="w-full rounded-xl shadow-md" loading="lazy" decoding="async" style="object-fit:cover;aspect-ratio:16/9" /></figure>`
           return escapeHtml(line)
         })
         .join("<br/>")

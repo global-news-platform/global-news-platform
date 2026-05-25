@@ -4,9 +4,9 @@ import createMDX from "@next/mdx"
 const nextConfig: NextConfig = {
   output: process.env.VERCEL === "1" ? "export" : undefined,
   images: {
-    unoptimized: true,
+    unoptimized: false,
     formats: ["image/webp", "image/avif"],
-    deviceSizes: [640, 828, 1080, 1200],
+    deviceSizes: [480, 640, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     dangerouslyAllowSVG: false,
     minimumCacheTTL: 86400,

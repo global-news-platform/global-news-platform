@@ -151,7 +151,7 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
         urduExcerpt = _urduExcerptCache.get(cacheKey)!
       } else {
         urduTitle = await generateUrduHeadline(sanitizedTitle)
-        urduExcerpt = await generateUrduExcerpt(urduTitle, safeString(frontmatter.excerpt))
+        urduExcerpt = await generateUrduExcerpt(urduTitle, safeString(frontmatter.excerpt), body)
         _urduTitleCache.set(cacheKey, urduTitle)
         _urduExcerptCache.set(cacheKey, urduExcerpt)
       }
@@ -215,7 +215,7 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
       if (!a.title || a.title.length < 5) return false
       if (!a.excerpt || a.excerpt.length < 5) return false
       if (!hasSufficientUrdu(a.title)) return false
-      if (!a.image || a.image.startsWith("/fallback/")) return false
+      if (!a.image) return false
       return true
     })
     .sort(

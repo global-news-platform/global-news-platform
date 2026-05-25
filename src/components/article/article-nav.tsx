@@ -18,7 +18,7 @@ export function ArticleNav({ prev, next }: ArticleNavProps) {
             href={`/article/${next.slug}`}
             className="group flex items-start gap-3 rounded-lg border border-border p-4 transition-colors hover:bg-secondary"
           >
-            <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+            <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground rtl:rotate-180" />
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
                 پچھلا

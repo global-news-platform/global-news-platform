@@ -13,17 +13,17 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
   if (dismissed || articles.length === 0) return null
 
   return (
-    <div className="breaking-ticker border-b border-destructive/20">
+    <div className="bg-destructive border-b border-destructive/20 shadow-sm">
       <div className="mx-auto flex max-w-full items-stretch">
-        <div className="flex shrink-0 items-center gap-1.5 bg-destructive/30 px-3 md:px-4">
+        <div className="flex shrink-0 items-center gap-1.5 bg-black/20 px-4 md:px-5">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
           </span>
-          <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em]">LIVE</span>
+          <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] text-white/90">LIVE</span>
         </div>
-        <div className="flex-1 overflow-hidden py-2">
-          <div className="flex animate-marquee-rtl gap-10 whitespace-nowrap" dir="rtl">
+        <div className="flex-1 overflow-hidden py-2.5">
+          <div className="flex animate-marquee-rtl gap-12 whitespace-nowrap" dir="rtl">
             {[...articles, ...articles].map((article, i) => (
               <Link
                 key={`${article.slug}-${i}`}

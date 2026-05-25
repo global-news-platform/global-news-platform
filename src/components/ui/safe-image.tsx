@@ -29,25 +29,30 @@ export function SafeImage({
   className,
   wrapperClassName,
   priority = false,
+  categorySlug,
 }: SafeImageProps) {
   const currentSrc = normalizeImage(src)
   const [fallbackSrc, setFallbackSrc] = useState<string | null>(null)
 
   const handleError = useCallback(() => {
-    setFallbackSrc(FALLBACK_IMAGE)
-  }, [])
+    if (categorySlug) {
+      setFallbackSrc(`/images/fallbacks/${categorySlug}.jpg`)
+    } else {
+      setFallbackSrc(FALLBACK_IMAGE)
+    }
+  }, [categorySlug])
 
   return (
     <div className={cn("relative overflow-hidden w-full h-full", wrapperClassName)}>
       <Image
         src={fallbackSrc || currentSrc}
         alt={alt}
-        className={cn("w-full h-full object-cover transition-opacity duration-300", className)}
-        width={800}
-        height={533}
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className={cn("w-full h-full object-cover object-center transition-opacity duration-300", className)}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 100vw"
         priority={priority}
         loading={priority ? "eager" : "lazy"}
+        quality={100}
         onError={handleError}
       />
     </div>

@@ -76,7 +76,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       </div>
 
       {/* Image */}
-      <div className="relative mt-8 w-full h-[420px] overflow-hidden rounded">
+      <div className="relative mt-8 w-full h-[420px] md:h-[500px] lg:h-[560px] overflow-hidden rounded-xl shadow-lg">
         <SafeImage
           src={article.image}
           alt={article.imageAlt || article.title}
@@ -84,6 +84,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
           slug={article.slug}
           priority
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
       </div>
     </header>
   )

@@ -8,19 +8,23 @@ interface HeroSectionProps {
 
 export function HeroSection({ featured, secondary }: HeroSectionProps) {
   return (
-    <section className="border-b border-border/20">
-      <div className="mx-auto max-w-full px-0 md:px-3 lg:px-4">
-        <div className="grid md:grid-cols-4">
-          <div className="md:col-span-3">
+    <section className="bg-background border-b border-border/10 shadow-sm">
+      <div className="mx-auto w-full">
+        <div className="flex flex-col lg:grid lg:grid-cols-4">
+          <div className="lg:col-span-3 w-full">
             <ArticleCard article={featured} variant="hero" />
           </div>
-          <div className="border-r border-border/20 bg-card">
-            <div className="bg-destructive px-3 py-2">
-              <h3 className="text-[11px] font-bold uppercase tracking-[0.1em] text-destructive-foreground">
+          <div className="w-full bg-card">
+            <div className="bg-destructive px-4 py-3 flex items-center gap-2.5">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-destructive-foreground/60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-destructive-foreground" />
+              </span>
+              <h3 className="text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.1em] text-destructive-foreground">
                 اہم خبریں
               </h3>
             </div>
-            <div className="px-3 divide-y divide-border/20">
+            <div className="px-3 divide-y divide-border/10">
               {secondary.slice(0, 5).map((article) => (
                 <ArticleCard key={article.slug} article={article} variant="horizontal" />
               ))}

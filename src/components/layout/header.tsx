@@ -305,14 +305,14 @@ export function Header() {
           </DialogHeader>
           <form onSubmit={handleSearch} className="mt-2">
             <div className="relative">
-              <Search className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Search className="absolute end-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 ref={searchInputRef}
                 type="search"
                 placeholder="خبریں تلاش کریں..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full rounded border border-border bg-background py-3 pr-10 pl-4 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring"
+                className="w-full rounded border border-border bg-background py-3 pe-10 ps-4 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div className="mt-3 flex flex-wrap gap-2">

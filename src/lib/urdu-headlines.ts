@@ -58,7 +58,6 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Candidate": "امیدوار",
   "War": "جنگ",
   "Peace": "امن",
-  "Deal": "معاہدہ",
   "Crisis": "بحران",
   "Attack": "حملہ",
   "Strike": "ہڑتال",
@@ -101,8 +100,6 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Revenue": "آمدنی",
   "Profit": "منافع",
   "Loss": "نقصان",
-  "Price": "قیمت",
-  "Cost": "لاگت",
   "Oil": "تیل",
   "Gas": "گیس",
   "Energy": "توانائی",
@@ -110,10 +107,9 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Electricity": "بجلی",
   "Nuclear": "جوہری",
   "Solar": "شمسی",
-  "Wind": "ہوا",
   "Health": "صحت",
   "Medical": "طبی",
-  "Medicine": "دوا",
+  "Medicine": "طب",
   "Drug": "منشیات",
   "Vaccine": "ویکسین",
   "Virus": "وائرس",
@@ -126,15 +122,12 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Surgery": "سرجری",
   "Treatment": "علاج",
   "Cancer": "کینسر",
-  "Heart": "دل",
-  "Brain": "دماغ",
   "Death": "ہلاکت",
   "Dead": "ہلاک",
   "Killed": "ہلاک",
   "Died": "وفات",
   "Injured": "زخمی",
   "Wounded": "زخمی",
-  "Hospitalized": "ہسپتال داخل",
   "Rescue": "ریسکیو",
   "Emergency": "ایمرجنسی",
   "Disaster": "آفت",
@@ -164,12 +157,11 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Cyber": "سائبر",
   "AI": "مصنوعی ذہانت",
   "Artificial": "مصنوعی",
-  "Robot": "روبٹ",
+  "Robot": "روبوٹ",
   "Software": "سافٹ ویئر",
   "Hardware": "ہارڈ ویئر",
   "Computer": "کمپیوٹر",
   "Smartphone": "اسمارٹ فون",
-  "Phone": "فون",
   "App": "ایپ",
   "Data": "ڈیٹا",
   "Network": "نیٹ ورک",
@@ -203,27 +195,22 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Student": "طلبہ",
   "Teacher": "استاد",
   "Professor": "پروفیسر",
-  "Exam": "امتحان",
-  "Result": "نتیجہ",
-  "Course": "کورس",
-  "Degree": "ڈگری",
   "Film": "فلم",
   "Movie": "فلم",
   "Cinema": "سینما",
   "Music": "موسیقی",
-  "Song": "گیت",
   "Singer": "گلوکار",
   "Actor": "اداکار",
   "Actress": "اداکارہ",
   "Director": "ہدایت کار",
   "Show": "شو",
-  "Concert": "کنسرٹ",
   "Award": "ایوارڈ",
   "Festival": "تہوار",
   "Entertainment": "شوبز",
   "Celebrity": "مشہور شخصیت",
   "Fashion": "فیشن",
-  "Art": "آرٹ",
+  "Art": "فن",
+  "Artist": "فنکار",
   "Culture": "ثقافت",
   "Heritage": "ورثہ",
   "History": "تاریخ",
@@ -259,7 +246,7 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Charge": "الزام",
   "Charged": "الزام عائد",
   "Guilty": "مجرم",
-  "Innocent": "بے قصور",
+  "Innocent": "بے گناہ",
   "Border": "سرحد",
   "Refugee": "پناہ گزین",
   "Immigrant": "تارک وطن",
@@ -281,7 +268,6 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Explosion": "دھماکہ",
   "Terrorist": "دہشت گرد",
   "Terrorism": "دہشت گردی",
-  "Extremist": "انتہا پسند",
   "Militant": "عسکریت پسند",
   "Report": "رپورٹ",
   "Analysis": "تجزیہ",
@@ -299,8 +285,6 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Progress": "پیشرفت",
   "Reform": "اصلاحات",
   "Change": "تبدیلی",
-  "Threat": "خطرہ",
-  "Risk": "خطرہ",
   "Warning": "انتباہ",
   "Challenge": "چیلنج",
   "Opportunity": "موقع",
@@ -328,16 +312,6 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Current": "موجودہ",
   "Recent": "حالیہ",
   "Annual": "سالانہ",
-  "Daily": "روزانہ",
-  "Weekly": "ہفتہ وار",
-  "Month": "ماہ",
-  "Year": "سال",
-  "Today": "آج",
-  "Yesterday": "کل",
-  "Tomorrow": "آنے والا کل",
-  "Week": "ہفتہ",
-  "Decade": "دہائی",
-  "Century": "صدی",
   "People": "عوام",
   "Public": "عوامی",
   "Community": "برادری",
@@ -376,7 +350,7 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Railway": "ریلوے",
   "Airport": "ہوائی اڈہ",
   "Port": "بندرگاہ",
-  "Transport": "ٹرانسپورٹ",
+  "Transport": "نقل و حمل",
   "Vehicle": "گاڑی",
   "Car": "کار",
   "Bus": "بس",
@@ -388,14 +362,12 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Travel": "سفر",
   "Hotel": "ہوٹل",
   "Restaurant": "ریستوراں",
-  "Hospitality": "مہمان نوازی",
   "Media": "میڈیا",
   "News": "خبر",
   "Press": "پریس",
   "Newspaper": "اخبار",
   "Journalist": "صحافی",
   "Editor": "ایڈیٹر",
-  "Column": "کالم",
   "Interview": "انٹرویو",
   "Coverage": "کوریج",
   "Broadcast": "نشریات",
@@ -423,7 +395,6 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Thousand": "ہزار",
   "Percent": "فیصد",
   "Rate": "شرح",
-  "Ratio": "تناسب",
   "Average": "اوسط",
   "Total": "کل",
   "Record": "ریکارڈ",
@@ -434,10 +405,8 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Rise": "اضافہ",
   "Fall": "کمی",
   "Drop": "کمی",
-  "Gain": "فائدہ",
   "Growth": "ترقی",
   "Recovery": "بحالی",
-  "Slowdown": "سست روی",
   "Recession": "کساد بازاری",
   "Job": "نوکری",
   "Employment": "روزگار",
@@ -461,42 +430,9 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Ally": "اتحادی",
   "Coalition": "اتحاد",
   "Demonstration": "مظاہرہ",
-  "Rally": "ریلی",
   "March": "مارچ",
-  "Sit in": "دھرنا",
   "Lockdown": "لاک ڈاؤن",
   "Curfew": "کرفیو",
-  "Quarantine": "قرنطینہ",
-  "Isolation": "تنہائی",
-  "Transplant": "ٹرانسپلانٹ",
-  "Organ": "عضو",
-  "Blood": "خون",
-  "Cell": "خلیہ",
-  "Gene": "جین",
-  "DNA": "ڈی این اے",
-  "Protein": "پروٹین",
-  "Clinical": "کلینیکل",
-  "Diagnosis": "تشخیص",
-  "Therapy": "تھراپی",
-  "Mental": "ذہنی",
-  "Physical": "جسمانی",
-  "Diabetes": "ذیابیطس",
-  "Obesity": "موٹاپا",
-  "Stroke": "فالج",
-  "Pneumonia": "نمونیا",
-  "Malaria": "ملیریا",
-  "Dengue": "ڈینگی",
-  "Cholera": "ہیضہ",
-  "Tuberculosis": "تپ دق",
-  "HIV": "ایچ آئی وی",
-  "AIDS": "ایڈز",
-  "Autism": "آٹزم",
-  "Alzheimer": "الزائمر",
-  "Parkinson": "پارکنسن",
-  "Depression": "ڈپریشن",
-  "Anxiety": "بے چینی",
-  "Stress": "تناؤ",
-  "Suicide": "خودکشی",
   "Murder": "قتل",
   "Assassination": "قتل",
   "Execution": "پھانسی",
@@ -506,17 +442,81 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Burglary": "چوری",
   "Smuggling": "سمگلنگ",
   "Trafficking": "سمگلنگ",
-  "Drugs": "منشیات",
   "Alcohol": "شراب",
-  "Gambling": "جوا",
   "Piracy": "قزاقی",
   "Copyright": "کاپی رائٹ",
   "Patent": "پیٹنٹ",
   "Trademark": "ٹریڈ مارک",
+  "Price": "قیمت",
+  "Cost": "لاگت",
 }
 
-function translateTitle(title: string): string {
-  let result = title
+const PHRASE_PATTERNS: [RegExp, (matches: RegExpMatchArray) => string][] = [
+  [/(\w+) says (\w+) is (\w+)/gi, (m) => `${m[1]} نے کہا کہ ${m[2]} ${m[3]} ہے`],
+  [/(\w+) warns (\w+) about (\w+)/gi, (m) => `${m[1]} نے ${m[2]} کو ${m[3]} سے خبردار کیا`],
+  [/(\w+) calls for (\w+)/gi, (m) => `${m[1]} نے ${m[2]} کا مطالبہ کیا`],
+  [/(\w+) rejects (\w+)/gi, (m) => `${m[1]} نے ${m[2]} کو مسترد کیا`],
+  [/(\w+) faces (\w+) over (\w+)/gi, (m) => `${m[1]} کو ${m[3]} پر ${m[2]} کا سامنا`],
+  [/(\w+) to (\w+) in (\w+)/gi, (m) => `${m[3]} میں ${m[2]} کے لیے ${m[1]}`],
+  [/^(?:How|Why|What|When|Where|Who)\s(.+?)\?$/i, (m) => `${m[1]}: ایک جائزہ`],
+]
+
+const USD_PATTERN = /\$(\d+(?:\.\d+)?)\s*(million|billion|trillion)?/gi
+const PERCENT_PATTERN = /(\d+(?:\.\d+)?)\s*%/g
+
+function formatNumberWithUrduSuffix(num: string, unit?: string): string {
+  const suffix = unit ? ` ${WORD_TRANSLATION[unit] || unit}` : ""
+  return `${num}${suffix}`
+}
+
+function preprocessText(text: string): string {
+  let result = text
+
+  result = result.replace(USD_PATTERN, (_match, num, unit) => {
+    return `ڈالر ${formatNumberWithUrduSuffix(num, unit)}`
+  })
+
+  result = result.replace(PERCENT_PATTERN, (_match, num) => {
+    return `${num} فیصد`
+  })
+
+  result = result.replace(/'s\b/g, " کے ")
+  result = result.replace(/\bcan't\b/gi, "نہیں کر سکتے")
+  result = result.replace(/\bwon't\b/gi, "نہیں کریں گے")
+  result = result.replace(/\bdon't\b/gi, "نہیں کرتے")
+  result = result.replace(/\bdoesn't\b/gi, "نہیں کرتا")
+  result = result.replace(/\bisn't\b/gi, "نہیں ہے")
+  result = result.replace(/\baren't\b/gi, "نہیں ہیں")
+  result = result.replace(/\bwasn't\b/gi, "نہیں تھا")
+  result = result.replace(/\bweren't\b/gi, "نہیں تھے")
+
+  result = result.replace(/--/g, " — ")
+  result = result.replace(/[""''“”]/g, '"')
+
+  return result
+}
+
+function tryPhraseTranslation(text: string): string | null {
+  for (const [pattern, replacement] of PHRASE_PATTERNS) {
+    const match = text.match(pattern)
+    if (match) {
+      try {
+        return replacement(match)
+      } catch {
+        continue
+      }
+    }
+  }
+  return null
+}
+
+function translateText(text: string): string {
+  let result = text
+
+  const phraseResult = tryPhraseTranslation(result)
+  if (phraseResult) {
+    result = phraseResult
+  }
 
   for (const [eng, ur] of Object.entries(PERSON_URDU)) {
     const regex = new RegExp(`\\b${escapeRegExp(eng)}\\b`, "gi")
@@ -530,8 +530,10 @@ function translateTitle(title: string): string {
 
   const sortedWords = Object.entries(WORD_TRANSLATION).sort((a, b) => b[0].length - a[0].length)
   for (const [eng, ur] of sortedWords) {
-    const regex = new RegExp(`\\b${escapeRegExp(eng)}\\b`, "gi")
-    result = result.replace(regex, ur)
+    if (ur.length > 2) {
+      const regex = new RegExp(`\\b${escapeRegExp(eng)}\\b`, "gi")
+      result = result.replace(regex, ur)
+    }
   }
 
   return result
@@ -544,43 +546,143 @@ function escapeRegExp(str: string): string {
 export function hasSufficientUrdu(text: string): boolean {
   if (!text || text.length < 3) return false
   const urduChars = text.match(/[\u0600-\u06FF]/g) || []
-  const totalChars = text.replace(/\s/g, "").length
-  return urduChars.length / totalChars > 0.3
+  const nonSpaceChars = text.replace(/\s/g, "").length
+  if (nonSpaceChars === 0) return false
+  return urduChars.length / nonSpaceChars > 0.25
+}
+
+function cleanEnglishResidue(text: string): string {
+  let result = text
+
+  result = result.replace(/\b[A-Za-z]{1,3}\b/g, "")
+
+  result = result.replace(/\s{2,}/g, " ").trim()
+
+  result = result.replace(/^[\s,;:.]+/, "").replace(/[\s,;:.]+$/, "")
+
+  return result
+}
+
+function makeUrduHeadlineNatural(title: string): string {
+  let result = title
+
+  result = result.replace(/^کی\s+/i, "")
+  result = result.replace(/^کا\s+/i, "")
+  result = result.replace(/^کے\s+/i, "")
+
+  result = result.replace(/\s+میں\s+$/i, "")
+
+  if (!result.endsWith("۔") && !result.endsWith("?") && !result.endsWith("!")) {
+    const lastChar = result.trim().slice(-1)
+    if (/[\u0600-\u06FFa-zA-Z0-9]/.test(lastChar)) {
+    }
+  }
+
+  return result.trim()
+}
+
+function isMostlyProperNouns(text: string): boolean {
+  const words = text.split(/\s+/).filter(Boolean)
+  if (words.length === 0) return false
+  const properCount = words.filter((w) => /^[A-Z]/.test(w)).length
+  return properCount / words.length > 0.6
+}
+
+function extractKeyPhrases(title: string): string[] {
+  const words = title.split(/\s+/).filter(Boolean)
+  const stopWords = new Set(["the", "a", "an", "is", "are", "was", "were", "to", "in", "for", "of", "and", "on", "at", "by", "with", "from", "as", "its", "it", "has", "have", "had", "be", "been", "being", "will", "would", "could", "should", "may", "might", "can", "shall", "do", "does", "did", "but", "or", "not", "no", "nor", "so", "if", "than", "that", "this", "these", "those"])
+  return words.filter((w) => !stopWords.has(w.toLowerCase()) && w.length > 2)
+}
+
+function formatAsUrduHeadline(title: string, cleaned: string): string {
+  if (cleaned.length > 15 && hasSufficientUrdu(cleaned)) {
+    return makeUrduHeadlineNatural(cleaned)
+  }
+
+  const keyPhrases = extractKeyPhrases(title)
+  if (isMostlyProperNouns(title) || keyPhrases.length <= 2) {
+    const translatedPhrases = keyPhrases
+      .map((p) => {
+        const t = translateText(p)
+        return removeEnglishFromUrdu(t)
+      })
+      .filter(Boolean)
+    if (translatedPhrases.length > 0) {
+      return translatedPhrases.join(" • ")
+    }
+  }
+
+  return title
 }
 
 export async function generateUrduHeadline(title: string): Promise<string> {
   if (!title || title.length < 5) return title
 
-  const translated = translateTitle(title)
+  const processed = preprocessText(title)
+
+  const phraseTranslated = tryPhraseTranslation(processed)
+  const baseForTranslation = phraseTranslated || processed
+
+  const translated = translateText(baseForTranslation)
   const cleaned = removeEnglishFromUrdu(translated)
 
-  if (cleaned.length > 5 && hasSufficientUrdu(cleaned)) return cleaned
+  if (cleaned.length > 8 && hasSufficientUrdu(cleaned)) {
+    return makeUrduHeadlineNatural(cleaned)
+  }
 
-  return title
+  const fallback = cleanEnglishResidue(translated)
+  if (fallback.length > 8 && hasSufficientUrdu(fallback)) {
+    return makeUrduHeadlineNatural(fallback)
+  }
+
+  return formatAsUrduHeadline(title, cleaned)
 }
 
-export async function generateUrduExcerpt(title: string, excerpt: string): Promise<string> {
-  if (!excerpt || excerpt.length < 5) {
-    const translated = translateTitle(title)
-    const cleaned = removeEnglishFromUrdu(translated)
-    if (cleaned.length > 10 && hasSufficientUrdu(cleaned)) return `${cleaned.substring(0, 120)}۔`
-    return title.substring(0, 100)
+export async function generateUrduExcerpt(title: string, excerpt: string, body?: string): Promise<string> {
+  const bodyText = (body || "").replace(/[#*`>\-\[\]]/g, " ").replace(/\s+/g, " ").trim()
+
+  const sourceExcerpt = excerpt || bodyText.substring(0, 200) || title
+
+  if (sourceExcerpt.length < 10) {
+    const titleTranslated = translateText(title)
+    const titleCleaned = removeEnglishFromUrdu(titleTranslated)
+    if (titleCleaned.length > 15 && hasSufficientUrdu(titleCleaned)) {
+      return `${titleCleaned.substring(0, 120)}۔`
+    }
+    return `${title.substring(0, 80)}۔`
   }
 
-  if (/[\u0600-\u06FF]/.test(excerpt) && excerpt.length > 20) {
-    const clean = excerpt.replace(/[.!?;:]+\s*$/, "").trim()
-    return `${removeEnglishFromUrdu(clean)}۔`
+  if (/[\u0600-\u06FF]/.test(sourceExcerpt) && sourceExcerpt.length > 20) {
+    const clean = sourceExcerpt.replace(/[.!?;:]+\s*$/, "").trim()
+    const final = removeEnglishFromUrdu(clean)
+    return final.length > 15 ? `${final}۔` : `${clean}۔`
   }
 
-  const translated = translateTitle(excerpt)
+  const processed = preprocessText(sourceExcerpt)
+  const translated = translateText(processed)
   const cleaned = removeEnglishFromUrdu(translated)
-  if (cleaned.length > 10) return `${cleaned.substring(0, 150)}۔`
 
-  const titleTranslated = translateTitle(title)
+  if (cleaned.length > 15 && hasSufficientUrdu(cleaned)) {
+    return `${cleaned.substring(0, 160)}۔`
+  }
+
+  if (bodyText.length > 40) {
+    const bodyProcessed = preprocessText(bodyText)
+    const bodyTranslated = translateText(bodyProcessed)
+    const bodyCleaned = removeEnglishFromUrdu(bodyTranslated)
+    if (bodyCleaned.length > 20 && hasSufficientUrdu(bodyCleaned)) {
+      return `${bodyCleaned.substring(0, 160)}۔`
+    }
+  }
+
+  const titleProcessed = preprocessText(title)
+  const titleTranslated = translateText(titleProcessed)
   const titleCleaned = removeEnglishFromUrdu(titleTranslated)
-  if (titleCleaned.length > 10 && hasSufficientUrdu(titleCleaned)) return `${titleCleaned.substring(0, 120)}۔`
+  if (titleCleaned.length > 15 && hasSufficientUrdu(titleCleaned)) {
+    return `${titleCleaned.substring(0, 120)}۔`
+  }
 
-  return removeEnglishFromUrdu(excerpt.replace(/[.!?;:]+\s*$/, "").trim()).substring(0, 150) + "۔"
+  return `${removeEnglishFromUrdu(sourceExcerpt.replace(/[.!?;:]+\s*$/, "").trim()).substring(0, 150)}۔`
 }
 
 export function categorizeEnglishCategory(cat: string): string {
@@ -606,7 +708,7 @@ export function categorizeEnglishCategory(cat: string): string {
     "travel": "سفر",
     "food": "کھانا",
     "fashion": "فیشن",
-    "art": "آرٹ",
+    "art": "فن",
     "music": "موسیقی",
     "film": "فلم",
     "economy": "معیشت",

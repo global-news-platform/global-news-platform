@@ -105,6 +105,9 @@ const config: Config = {
         "live-red": {
           DEFAULT: "hsl(var(--live-red))",
         },
+        section: {
+          DEFAULT: "hsl(var(--section-bg))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -180,6 +183,7 @@ const config: Config = {
   safelist: [
     "aspect-video",
     "aspect-[16/9]",
+    "aspect-[4/3]",
   ],
   plugins: [
     require("@tailwindcss/typography"),

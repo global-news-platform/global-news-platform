@@ -10,8 +10,8 @@ import {
   getBreakingArticles,
   getFeaturedArticle,
   getArticlesByCategory,
-  getTrendingArticles,
 } from "@/lib/articles"
+import { hasSufficientUrdu } from "@/lib/urdu-headlines"
 
 import {
   generateWebsiteSchema,
@@ -32,17 +32,34 @@ export const metadata: Metadata = {
   },
 }
 
-function excludeSlugs<T extends { slug: string }>(articles: T[], exclude: Set<string>): T[] {
-  return articles.filter((a) => !exclude.has(a.slug))
+function hasValidImage(a: ArticleLink): boolean {
+  return !!(a.image && typeof a.image === "string" && (a.image.startsWith("/") || a.image.startsWith("http")))
 }
 
-const PRIORITY_CATEGORIES = new Set(["pakistan", "siasat", "karobar", "khel", "technology", "sehat", "shobiz"])
+function filterQualityArticles(articles: ArticleLink[]): ArticleLink[] {
+  return articles.filter((a) => {
+    if (!a.title || a.title.length < 8) return false
+    if (!hasSufficientUrdu(a.title)) return false
+    return true
+  })
+}
 
-function sortByPriority(articles: ArticleLink[]): ArticleLink[] {
+const CATEGORY_PRIORITY: Record<string, number> = {
+  pakistan: 0,
+  siasat: 1,
+  karobar: 2,
+  dunya: 3,
+  khel: 4,
+  technology: 5,
+  sehat: 6,
+  shobiz: 7,
+}
+
+function sortByEditorialPriority(articles: ArticleLink[]): ArticleLink[] {
   return [...articles].sort((a, b) => {
-    const aPrio = PRIORITY_CATEGORIES.has(a.categorySlug) ? 0 : 1
-    const bPrio = PRIORITY_CATEGORIES.has(b.categorySlug) ? 0 : 1
-    if (aPrio !== bPrio) return aPrio - bPrio
+    const aCat = CATEGORY_PRIORITY[a.categorySlug] ?? 99
+    const bCat = CATEGORY_PRIORITY[b.categorySlug] ?? 99
+    if (aCat !== bCat) return aCat - bCat
     return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   })
 }
@@ -52,7 +69,6 @@ export default async function HomePage() {
     allArticles,
     breaking,
     featured,
-    trending,
     pakistanArticles,
     siasatArticles,
     worldArticles,
@@ -65,7 +81,6 @@ export default async function HomePage() {
     getArticleLinks(),
     getBreakingArticles(),
     getFeaturedArticle(),
-    getTrendingArticles(),
     getArticlesByCategory("pakistan"),
     getArticlesByCategory("siasat"),
     getArticlesByCategory("dunya"),
@@ -80,7 +95,12 @@ export default async function HomePage() {
   if (featured) usedSlugs.add(featured.slug)
   for (const a of breaking) usedSlugs.add(a.slug)
 
-  const secondaryArticles = excludeSlugs(sortByPriority(allArticles), usedSlugs)
+  const qualitySecondary = filterQualityArticles(allArticles)
+  const secondaryArticles = sortByEditorialPriority(qualitySecondary).filter((a) => !usedSlugs.has(a.slug))
+
+  const validFeatured = featured && hasValidImage(featured)
+    ? featured
+    : allArticles.find((a) => hasValidImage(a)) || null
 
   const websiteSchema = generateWebsiteSchema()
   const organizationSchema = generateOrganizationSchema()
@@ -94,39 +114,31 @@ export default async function HomePage() {
         }}
       />
 
-      {/* BREAKING TICKER */}
       <BreakingNewsBanner articles={breaking} />
 
-      {/* HERO — massive lead story + top stories sidebar */}
-      {featured && (
-        <HeroSection featured={featured} secondary={secondaryArticles} />
+      {validFeatured ? (
+        <HeroSection featured={validFeatured} secondary={secondaryArticles} />
+      ) : (
+        <div className="w-full py-8 px-4 text-center text-muted-foreground text-sm">
+          کوئی نمایاں خبر دستیاب نہیں
+        </div>
       )}
 
-      {/* DIVIDER */}
-      <div className="mx-auto max-w-full px-3 md:px-4 lg:px-5">
-        <hr className="border-border/20 my-0" />
-      </div>
-
-      {/* CATEGORY SECTIONS — URDU DENSE STYLE */}
       <CategoryGrid
         categories={[
-          { slug: "pakistan", name: "پاکستان", articles: pakistanArticles },
-          { slug: "dunya", name: "دنیا", articles: worldArticles },
-          { slug: "siasat", name: "سیاست", articles: siasatArticles },
-          { slug: "karobar", name: "کاروبار", articles: karobarArticles },
+          { slug: "pakistan", name: "پاکستان", articles: filterQualityArticles(pakistanArticles) },
+          { slug: "dunya", name: "دنیا", articles: filterQualityArticles(worldArticles) },
+          { slug: "siasat", name: "سیاست", articles: filterQualityArticles(siasatArticles) },
+          { slug: "karobar", name: "کاروبار", articles: filterQualityArticles(karobarArticles) },
         ]}
       />
 
-      <div className="mx-auto max-w-full px-3 md:px-4 lg:px-5">
-        <hr className="border-border/20 my-0" />
-      </div>
-
       <CategoryGrid
         categories={[
-          { slug: "khel", name: "کھیل", articles: khelArticles },
-          { slug: "technology", name: "ٹیکنالوجی", articles: techArticles },
-          { slug: "sehat", name: "صحت", articles: sehatArticles },
-          { slug: "shobiz", name: "شوبز", articles: shobizArticles },
+          { slug: "khel", name: "کھیل", articles: filterQualityArticles(khelArticles) },
+          { slug: "technology", name: "ٹیکنالوجی", articles: filterQualityArticles(techArticles) },
+          { slug: "sehat", name: "صحت", articles: filterQualityArticles(sehatArticles) },
+          { slug: "shobiz", name: "شوبز", articles: filterQualityArticles(shobizArticles) },
         ]}
       />
     </>

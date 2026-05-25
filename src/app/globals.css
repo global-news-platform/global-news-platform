@@ -14,17 +14,19 @@
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 97%;
     --secondary-foreground: 0 0% 12%;
-    --muted: 0 0% 97%;
-    --muted-foreground: 0 0% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     --accent: 38 55% 48%;
     --accent-foreground: 0 0% 100%;
     --destructive: 358 70% 42%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
+    --border: 0 0% 84%;
+    --input: 0 0% 84%;
     --ring: 358 65% 22%;
     --radius: 0.375rem;
-    --card-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+    --elevated-shadow: 0 8px 25px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
     --header-bg: 0 0% 100%;
     --nav-bg: 358 65% 22%;
     --nav-fg: 0 0% 100%;
@@ -57,7 +59,9 @@
     --input: 0 0% 14%;
     --ring: 358 55% 40%;
     --radius: 0.375rem;
-    --card-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    --card-shadow-hover: 0 4px 16px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.3);
+    --elevated-shadow: 0 8px 30px rgba(0,0,0,0.35);
     --header-bg: 0 0% 4%;
     --nav-bg: 358 50% 18%;
     --nav-fg: 0 0% 93%;
@@ -81,13 +85,20 @@
   html[dir="rtl"] { direction: rtl; text-align: right; }
   html[dir="rtl"] .ltr { direction: ltr; text-align: left; }
 
+  html[dir="rtl"] .num,
+  html[dir="rtl"] time,
+  html[dir="rtl"] [dir="rtl"] {
+    font-variant-numeric: eastern-arabic;
+  }
+
   body {
     @apply text-foreground font-urdu text-[14px] leading-[1.7];
     font-feature-settings: "liga" 1, "kern" 1;
     -webkit-tap-highlight-color: transparent;
+    font-variant-numeric: eastern-arabic;
   }
 
-  ::selection { @apply bg-destructive/15 text-foreground; }
+  ::selection { @apply bg-destructive/20 text-foreground; }
   :focus-visible { @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background; }
 
   @media (hover: none) and (pointer: coarse) {
@@ -101,16 +112,16 @@
     word-spacing: 0.04em;
   }
 
-  h1 { @apply text-xl md:text-2xl lg:text-4xl; line-height: 1.3; }
-  h2 { @apply text-lg md:text-xl lg:text-2xl; line-height: 1.35; }
-  h3 { @apply text-base md:text-lg; line-height: 1.4; }
-  h4 { @apply text-sm md:text-base; line-height: 1.45; }
+  h1 { @apply text-2xl md:text-3xl lg:text-4xl; line-height: 1.25; }
+  h2 { @apply text-xl md:text-2xl lg:text-3xl; line-height: 1.3; }
+  h3 { @apply text-lg md:text-xl lg:text-2xl; line-height: 1.35; }
+  h4 { @apply text-base md:text-lg; line-height: 1.4; }
 
   p { @apply font-urdu leading-[1.7] text-pretty; }
 
   article p, .prose-article p { @apply leading-[1.9] text-[15px] md:text-[16px]; }
 
-  .font-headline { letter-spacing: -0.005em; }
+  .font-headline { letter-spacing: -0.01em; word-spacing: 0.02em; }
   img { @apply select-none; }
 }
 
@@ -143,25 +154,31 @@
   .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
   .scrollbar-thin::-webkit-scrollbar-thumb { background-color: hsl(var(--border)); border-radius: 3px; }
 
-  /* BREAKING TICKER */
   .breaking-ticker {
-    @apply relative bg-destructive text-destructive-foreground overflow-hidden;
+    @apply bg-destructive text-destructive-foreground overflow-hidden;
   }
 
-  /* HERO OVERLAY */
-  .hero-gradient {
+  .card-premium {
+    @apply bg-card border border-border/10 rounded-lg overflow-hidden shadow-sm transition-all duration-300;
+  }
+  .card-premium:hover {
+    @apply shadow-md border-border/20;
+    transform: translateY(-1px);
+  }
+
+  .image-shimmer {
     background: linear-gradient(
-      to top,
-      hsl(0 0% 0% / 0.95) 0%,
-      hsl(0 0% 0% / 0.8) 20%,
-      hsl(0 0% 0% / 0.5) 40%,
-      transparent 65%
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted)/0.5) 50%,
+      hsl(var(--muted)) 100%
     );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
   }
 
-  /* SECTION RED BAR HEADER */
   .section-bar {
-    @apply border-b-[3px] border-destructive pb-1.5 mb-3 flex items-center justify-between;
+    @apply border-b-[3px] border-destructive pb-2 mb-4 flex items-center justify-between;
   }
   .section-bar-title {
     @apply text-sm font-bold text-foreground;
@@ -170,31 +187,47 @@
     @apply text-[11px] text-muted-foreground hover:text-destructive transition-colors flex items-center gap-1;
   }
 
-  /* HEADLINE LIST */
+  .card-article {
+    @apply bg-card border border-border/10 rounded-lg overflow-hidden shadow-sm transition-all duration-300;
+  }
+  .card-article:hover {
+    @apply shadow-card-hover border-border/20;
+    transform: translateY(-2px);
+  }
+
+  .img-container {
+    @apply relative overflow-hidden bg-muted;
+  }
+  .img-container img {
+    @apply object-cover object-center w-full h-full;
+  }
+
   .headline-item {
-    @apply border-b border-border/20 py-2.5 last:border-0;
+    @apply border-b border-border/10 py-2.5 last:border-0;
   }
   .headline-link {
     @apply flex items-start gap-2;
   }
   .headline-dot {
-    @apply mt-[5px] h-1.5 w-1.5 shrink-0 rounded-full bg-destructive;
+    @apply mt-[6px] h-2 w-2 shrink-0 rounded-full bg-destructive;
   }
 
-  /* CATEGORY SECTION HEADER */
   .cat-bar {
-    @apply bg-destructive text-destructive-foreground px-3 py-1.5 flex items-center justify-between;
+    @apply bg-destructive text-destructive-foreground px-4 py-2 flex items-center justify-between rounded;
   }
   .cat-bar-title {
-    @apply text-[13px] font-bold tracking-wide;
+    @apply text-[14px] font-bold tracking-wide;
   }
   .cat-bar-link {
-    @apply text-[11px] text-destructive-foreground/70 hover:text-destructive-foreground transition-colors flex items-center gap-1;
+    @apply text-[11px] text-destructive-foreground/75 hover:text-destructive-foreground transition-colors flex items-center gap-1;
   }
 
   .news-divider {
     @apply border-b border-border/20 my-4;
   }
+
+  .max-w-reading { max-width: 65ch; }
+  .max-w-reading-wide { max-width: 72ch; }
 }
 
 @layer utilities {
@@ -217,4 +250,18 @@
 @keyframes marquee-rtl {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes image-zoom-in {
+  from { transform: scale(1.05); opacity: 0.8; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.image-zoom-in {
+  animation: image-zoom-in 0.6s ease-out both;
 }
