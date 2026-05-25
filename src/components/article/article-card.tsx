@@ -3,34 +3,13 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { cn, formatDateRelative } from "@/lib/utils"
+import { formatDateRelative } from "@/lib/utils"
 import { categories } from "@/lib/constants"
-import { getCategoryGradient } from "@/lib/images/fallbackImages"
 import type { ArticleLink } from "@/types"
 
 interface ArticleCardProps {
   article: ArticleLink
   variant?: "hero" | "featured" | "horizontal" | "text-list" | "compact" | "default"
-}
-
-function EditorialFallback({ categorySlug, categoryName }: { categorySlug: string; categoryName: string }) {
-  return (
-    <div
-      className={cn(
-        "w-full h-full flex items-center justify-center bg-gradient-to-br",
-        getCategoryGradient(categorySlug),
-      )}
-    >
-      <div className="text-center px-4">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-3 backdrop-blur-sm">
-          <svg className="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-          </svg>
-        </div>
-        <p className="text-white/30 text-[10px] font-bold uppercase tracking-[0.15em]">{categoryName}</p>
-      </div>
-    </div>
-  )
 }
 
 const CATEGORY_FALLBACKS: Record<string, string> = {
@@ -55,22 +34,18 @@ function ArticleImage({
   src,
   alt,
   categorySlug,
-  categoryName,
   priority = false,
 }: {
   src?: string | null
   alt: string
   categorySlug: string
-  categoryName: string
   priority?: boolean
 }) {
-  const hasInitialSrc = !!(src && typeof src === "string" && (src.startsWith("/") || src.startsWith("http")))
-  const [imgSrc, setImgSrc] = useState<string | null>(hasInitialSrc ? src! : null)
+  const initialSrc = src && typeof src === "string" && (src.startsWith("/") || src.startsWith("http"))
+    ? src
+    : getCategoryFallback(categorySlug)
+  const [imgSrc, setImgSrc] = useState<string>(initialSrc)
   const [fallbackTried, setFallbackTried] = useState(false)
-
-  if (!imgSrc) {
-    return <EditorialFallback categorySlug={categorySlug} categoryName={categoryName} />
-  }
 
   return (
     <Image
@@ -85,13 +60,13 @@ function ArticleImage({
       }
       loading={priority ? "eager" : "lazy"}
       priority={priority}
-      quality={92}
+      quality={100}
       onError={() => {
         if (!fallbackTried) {
           setFallbackTried(true)
           setImgSrc(getCategoryFallback(categorySlug))
         } else {
-          setImgSrc(null)
+          setImgSrc(DEFAULT_FALLBACK)
         }
       }}
     />
@@ -110,12 +85,11 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             src={article.image}
             alt={article.title || ""}
             categorySlug={article.categorySlug}
-            categoryName={catName}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-8 lg:p-12">
+        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-8 lg:p-12 z-10">
           <div className="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
             {article.breaking && (
               <span className="inline-flex items-center gap-1.5 rounded bg-destructive px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-lg shadow-destructive/40">
@@ -166,7 +140,6 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             src={article.image}
             alt={article.title || ""}
             categorySlug={article.categorySlug}
-            categoryName={catName}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         </div>
@@ -192,7 +165,6 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
               src={article.image}
               alt={article.title || ""}
               categorySlug={article.categorySlug}
-              categoryName={catName}
             />
           </div>
         </div>
@@ -234,7 +206,6 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             src={article.image}
             alt={article.title || ""}
             categorySlug={article.categorySlug}
-            categoryName={catName}
           />
         </div>
         <div className="p-2.5 sm:p-3">
@@ -256,7 +227,6 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
           src={article.image}
           alt={article.title || ""}
           categorySlug={article.categorySlug}
-          categoryName={catName}
         />
       </div>
       <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 mb-1">

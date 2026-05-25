@@ -1,6 +1,5 @@
 const path = require("path")
-const { resolveArticleImage } = require("./imageResolver")
-const { downloadArticleImage, getFallbackForCategory, getKeywordFallback } = require("./imageDownloader")
+const { downloadArticleImage, getFallbackForCategory, getKeywordFallback, resetBatchHashes } = require("./imageDownloader")
 
 const FALLBACK_AUTHORS = [
   { name: "علی احمد", slug: "ali-ahmed" },
@@ -84,14 +83,8 @@ function extractTopics(title, description, tags) {
 }
 
 async function resolveImageForArticle(article, categorySlug) {
-  try {
-    const result = await downloadArticleImage(article)
-    return result.path
-  } catch (err) {
-    const kw = getKeywordFallback(article.title)
-    if (kw) return kw.image
-    return getFallbackForCategory(categorySlug)
-  }
+  const result = await downloadArticleImage(article)
+  return result.path
 }
 
 async function buildFrontmatter(article) {
@@ -111,6 +104,7 @@ async function buildFrontmatter(article) {
     image: imagePath,
     imageAlt: article.title.substring(0, 120),
     tags: [...new Set([...topics, ...article.tags])].slice(0, 6),
+    sourceUrl: article.sourceUrl || "",
     featured: false,
     breaking: false,
     trending: false,
@@ -129,6 +123,7 @@ authorSlug: "${fm.authorSlug}"
 publishedAt: "${fm.publishedAt}"
 image: "${fm.image}"
 imageAlt: "${escapeYamlString(fm.imageAlt)}"
+sourceUrl: "${escapeYamlString(fm.sourceUrl)}"
 tags: [${fm.tags.map((t) => `"${t}"`).join(", ")}]
 featured: ${fm.featured}
 breaking: ${fm.breaking}

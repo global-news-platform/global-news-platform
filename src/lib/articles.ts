@@ -23,7 +23,7 @@ import {
 } from "@/lib/urdu-headlines"
 import { removeEnglishFromUrdu } from "@/lib/urdu-ai"
 
-const MAX_DAILY_ARTICLES = 100
+const MAX_DAILY_ARTICLES = 250
 
 const articlesDir = path.join(process.cwd(), "src/data/articles")
 const articleImgDir = path.join(process.cwd(), "public/images/articles")
@@ -74,8 +74,9 @@ export function getArticleSlugs(): string[] {
   }
 
   _slugCache = Array.from(slugMap.values())
+    .sort((a, b) => b.mtime.getTime() - a.mtime.getTime())
     .map((v) => v.slug)
-    .sort((a, b) => baseSlug(a).localeCompare(baseSlug(b)))
+    .slice(0, MAX_DAILY_ARTICLES)
 
   return _slugCache
 }

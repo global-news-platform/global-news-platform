@@ -3,7 +3,6 @@ import path from "path"
 
 const ARTICLES_IMG_DIR = path.join(process.cwd(), "public/images/articles")
 const FALLBACKS_DIR = path.join(process.cwd(), "public/images/fallbacks")
-
 const MIN_FILE_SIZE = 5000
 
 const CATEGORY_FALLBACK_MAP: Record<string, string> = {
@@ -27,57 +26,43 @@ const CATEGORY_FALLBACK_MAP: Record<string, string> = {
   general: "default",
 }
 
-const FALLBACK_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".svg"]
-
-function fileExists(filePath: string): boolean {
-  try { return fs.existsSync(filePath) } catch { return false }
+function fileExists(fp: string): boolean {
+  try { return fs.existsSync(fp) } catch { return false }
 }
 
 function findLocalImage(slug: string): string | null {
-  if (!fs.existsSync(ARTICLES_IMG_DIR)) return null
+  if (!fileExists(ARTICLES_IMG_DIR)) return null
   const files = fs.readdirSync(ARTICLES_IMG_DIR)
   for (const file of files) {
     if (path.parse(file).name === slug) {
-      const filePath = path.join(ARTICLES_IMG_DIR, file)
-      const stats = fs.statSync(filePath)
-      if (stats.size >= MIN_FILE_SIZE) {
-        return `/images/articles/${file}`
-      }
+      const fp = path.join(ARTICLES_IMG_DIR, file)
+      if (fs.statSync(fp).size >= MIN_FILE_SIZE) return `/images/articles/${file}`
     }
   }
   for (const ext of [".jpg", ".jpeg", ".png", ".webp"]) {
     const candidate = path.join(ARTICLES_IMG_DIR, `${slug}${ext}`)
-    if (fileExists(candidate)) {
-      const stats = fs.statSync(candidate)
-      if (stats.size >= MIN_FILE_SIZE) return `/images/articles/${slug}${ext}`
+    if (fileExists(candidate) && fs.statSync(candidate).size >= MIN_FILE_SIZE) {
+      return `/images/articles/${slug}${ext}`
     }
   }
   return null
 }
 
-function getFallbackFileName(categorySlug?: string): string {
-  if (!categorySlug) return "default"
-  return CATEGORY_FALLBACK_MAP[categorySlug] || "default"
-}
-
 function resolveFallbackImage(categorySlug?: string): string | undefined {
-  if (!FALLBACKS_DIR || !fs.existsSync(FALLBACKS_DIR)) return undefined
-  const fallbackName = getFallbackFileName(categorySlug)
-
-  for (const ext of FALLBACK_EXTENSIONS) {
-    const candidate = path.join(FALLBACKS_DIR, `${fallbackName}${ext}`)
+  if (!fileExists(FALLBACKS_DIR)) return undefined
+  const name = CATEGORY_FALLBACK_MAP[categorySlug || ""] || "default"
+  for (const ext of [".jpg", ".jpeg", ".png", ".webp"]) {
+    const candidate = path.join(FALLBACKS_DIR, `${name}${ext}`)
     if (fileExists(candidate) && fs.statSync(candidate).size > 0) {
-      return `/images/fallbacks/${fallbackName}${ext}`
+      return `/images/fallbacks/${name}${ext}`
     }
   }
-
-  for (const ext of FALLBACK_EXTENSIONS) {
+  for (const ext of [".jpg", ".jpeg", ".png", ".webp"]) {
     const candidate = path.join(FALLBACKS_DIR, `default${ext}`)
     if (fileExists(candidate) && fs.statSync(candidate).size > 0) {
       return `/images/fallbacks/default${ext}`
     }
   }
-
   return undefined
 }
 
@@ -101,26 +86,9 @@ export function getImage(options: {
         return frontmatterImage
       }
     }
-
-    if (frontmatterImage.startsWith("/fallback/") || frontmatterImage.startsWith("/images/fallbacks/")) {
-      const fallbackName = path.basename(frontmatterImage, path.extname(frontmatterImage))
-
-      for (const [slug, fb] of Object.entries(CATEGORY_FALLBACK_MAP)) {
-        if (fb === fallbackName) {
-          const resolved = resolveFallbackImage(slug)
-          if (resolved) return resolved
-        }
-      }
-
-      const resolved = resolveFallbackImage(fallbackName)
-      if (resolved) return resolved
-    }
   }
 
-  const resolved = resolveFallbackImage(categorySlug)
-  if (resolved) return resolved
-
-  return undefined
+  return resolveFallbackImage(categorySlug)
 }
 
 export async function verifyArticleImage(
@@ -128,12 +96,13 @@ export async function verifyArticleImage(
   _categorySlug?: string,
   _title?: string,
 ): Promise<string | undefined> {
-  if (!fs.existsSync(ARTICLES_IMG_DIR)) return undefined
+  if (!fileExists(ARTICLES_IMG_DIR)) return undefined
   const files = fs.readdirSync(ARTICLES_IMG_DIR)
   for (const file of files) {
     if (path.parse(file).name === slug) {
-      const filePath = path.join(ARTICLES_IMG_DIR, file)
-      if (fs.statSync(filePath).size >= MIN_FILE_SIZE) return `/images/articles/${file}`
+      if (fs.statSync(path.join(ARTICLES_IMG_DIR, file)).size >= MIN_FILE_SIZE) {
+        return `/images/articles/${file}`
+      }
     }
   }
   return undefined

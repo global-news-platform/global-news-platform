@@ -31,7 +31,7 @@ export const dynamic = "force-static"
 export const revalidate = 3600
 
 export async function generateStaticParams() {
-  return getArticleSlugs().map((slug) => ({ slug }))
+  return getArticleSlugs().slice(0, 250).map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({

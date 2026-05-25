@@ -3,10 +3,10 @@ const path = require("path")
 const http = require("http")
 const https = require("https")
 const crypto = require("crypto")
+const sharp = require("sharp")
 
 const ARTICLES_DIR = path.join(__dirname, "../../public/images/articles")
-const FALLBACK_DIR = path.join(__dirname, "../../public/fallback")
-const CATEGORY_POOL_DIR = path.join(__dirname, "../../public/images/categories")
+const FALLBACKS_DIR = path.join(__dirname, "../../public/images/fallbacks")
 
 const FALLBACK_IMAGES = {
   pakistan: "pakistan.jpg",
@@ -20,89 +20,87 @@ const FALLBACK_IMAGES = {
   entertainment: "entertainment.jpg",
 }
 
-const KEYWORD_FALLBACK_MAP = {
-  cricket: "sports", football: "sports", soccer: "sports",
-  nba: "sports", nfl: "sports", tennis: "sports", golf: "sports",
-  premier: "sports", champion: "sports", olympic: "sports",
-  "premier league": "sports", "champions league": "sports",
-  parliament: "politics", congress: "politics", senate: "politics",
-  election: "politics", president: "politics", vote: "politics",
-  government: "politics", political: "politics", supreme: "politics",
-  ai: "technology", "artificial intelligence": "technology",
-  google: "technology", openai: "technology", chatbot: "technology",
-  robot: "technology", cyber: "technology", software: "technology",
-  tech: "technology", startup: "technology", digital: "technology",
-  data: "technology", app: "technology", computer: "technology",
-  hospital: "health", doctor: "health", health: "health",
-  disease: "health", vaccine: "health", drug: "health",
-  cancer: "health", medical: "health", patient: "health",
-  stock: "business", market: "business", economy: "business",
-  inflation: "business", trade: "business", tariff: "business",
-  bank: "business", oil: "business", price: "business",
-  business: "business", company: "business",
-  climate: "science", environment: "science", space: "science",
-  nasa: "science", planet: "science", research: "science",
-  film: "entertainment", movie: "entertainment", music: "entertainment",
-  celebrity: "entertainment", star: "entertainment",
-  actor: "entertainment", actress: "entertainment",
-  iran: "world", russia: "world", ukraine: "world", china: "world",
-  israel: "world", gaza: "world", africa: "world", europe: "world",
-  america: "world",
-  pakistan: "pakistan", lahore: "pakistan", karachi: "pakistan",
+const MIN_WIDTH = 600
+const MIN_HEIGHT = 300
+const MIN_FILE_SIZE = 10240
+const MIN_ASPECT = 0.75
+const MAX_ASPECT = 3.5
+
+let batchHashes = new Set()
+
+function resetBatchHashes() {
+  batchHashes = new Set()
 }
 
 function ensureDir(dir) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
-  }
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
 }
 
 function slugify(title) {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .substring(0, 80)
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").substring(0, 80)
 }
 
 function getFallbackForCategory(categorySlug) {
-  const pool = categorySlug || "world"
-  const fallbackKey = FALLBACK_IMAGES[pool] ? pool : "world"
-  const fallbackFile = FALLBACK_IMAGES[fallbackKey]
-  const fallbackPath = path.join(FALLBACK_DIR, fallbackFile)
-  if (fs.existsSync(fallbackPath)) {
-    return `/fallback/${fallbackFile}`
+  const key = categorySlug || "world"
+  const fallbackFile = FALLBACK_IMAGES[key]
+  if (fallbackFile) {
+    const p = path.join(FALLBACKS_DIR, fallbackFile)
+    if (fs.existsSync(p)) return `/images/fallbacks/${fallbackFile}`
   }
-  const catFallbackPath = path.join(CATEGORY_POOL_DIR, pool, "default.jpg")
-  if (fs.existsSync(catFallbackPath)) {
-    return `/images/categories/${pool}/default.jpg`
+  for (const [cat, file] of Object.entries(FALLBACK_IMAGES)) {
+    const p = path.join(FALLBACKS_DIR, file)
+    if (fs.existsSync(p)) return `/images/fallbacks/${file}`
   }
-  return "/images/categories/world/default.jpg"
+  return "/images/fallbacks/default.jpg"
 }
 
 function getKeywordFallback(title) {
   if (!title) return null
   const lower = title.toLowerCase()
-  for (const [keyword, cat] of Object.entries(KEYWORD_FALLBACK_MAP)) {
-    if (lower.includes(keyword)) {
-      return { category: cat, image: getFallbackForCategory(cat) }
-    }
+  const map = {
+    cricket: "sports", football: "sports", soccer: "sports",
+    nba: "sports", nfl: "sports", tennis: "sports", golf: "sports",
+    olympic: "sports", premier: "sports", champion: "sports",
+    parliament: "politics", congress: "politics", senate: "politics",
+    election: "politics", president: "politics", vote: "politics",
+    government: "politics", political: "politics",
+    ai: "technology", google: "technology", openai: "technology",
+    chatbot: "technology", robot: "technology", cyber: "technology",
+    software: "technology", tech: "technology", startup: "technology",
+    digital: "technology", data: "technology", app: "technology",
+    hospital: "health", doctor: "health", health: "health",
+    disease: "health", vaccine: "health", drug: "health",
+    cancer: "health", medical: "health", patient: "health",
+    stock: "business", market: "business", economy: "business",
+    inflation: "business", trade: "business", tariff: "business",
+    bank: "business", oil: "business", price: "business",
+    business: "business", company: "business",
+    climate: "science", environment: "science", space: "science",
+    nasa: "science", planet: "science", research: "science",
+    film: "entertainment", movie: "entertainment", music: "entertainment",
+    celebrity: "entertainment", star: "entertainment",
+    iran: "world", russia: "world", ukraine: "world", china: "world",
+    israel: "world", gaza: "world", africa: "world", europe: "world",
+    pakistan: "pakistan", lahore: "pakistan", karachi: "pakistan",
+  }
+  for (const [keyword, cat] of Object.entries(map)) {
+    if (lower.includes(keyword)) return { category: cat, image: getFallbackForCategory(cat) }
   }
   return null
 }
 
-function downloadImage(url) {
+function downloadImageBuffer(url) {
   return new Promise((resolve, reject) => {
     const protocol = url.startsWith("https") ? https : http
     const req = protocol.get(url, {
-      timeout: 10000,
+      timeout: 15000,
       headers: {
         "User-Agent": "Mozilla/5.0 (compatible; GlobalNewsBot/1.0)",
         Accept: "image/webp,image/jpeg,image/png,*/*",
       },
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        downloadImage(res.headers.location).then(resolve).catch(reject)
+        downloadImageBuffer(res.headers.location).then(resolve).catch(reject)
         return
       }
       if (res.statusCode !== 200) {
@@ -115,21 +113,21 @@ function downloadImage(url) {
         return
       }
       const chunks = []
-      res.on("data", (chunk) => chunks.push(chunk))
-      res.on("end", () => {
-        const buffer = Buffer.concat(chunks)
-        if (buffer.length < 100) {
-          reject(new Error("Image too small"))
+      const maxSize = 10 * 1024 * 1024
+      let totalSize = 0
+      res.on("data", (chunk) => {
+        totalSize += chunk.length
+        if (totalSize > maxSize) {
+          req.destroy()
+          reject(new Error("Image too large"))
           return
         }
-        resolve(buffer)
+        chunks.push(chunk)
       })
+      res.on("end", () => resolve(Buffer.concat(chunks)))
     })
     req.on("error", reject)
-    req.on("timeout", () => {
-      req.destroy()
-      reject(new Error("Timeout"))
-    })
+    req.on("timeout", () => { req.destroy(); reject(new Error("Timeout")) })
   })
 }
 
@@ -137,62 +135,30 @@ function computeHash(buffer) {
   return crypto.createHash("md5").update(buffer).digest("hex")
 }
 
-function isDuplicate(hash, slug) {
-  if (!fs.existsSync(ARTICLES_DIR)) return false
-  const files = fs.readdirSync(ARTICLES_DIR)
-  for (const file of files) {
-    if (path.parse(file).name === slug) continue
-    const filePath = path.join(ARTICLES_DIR, file)
-    try {
-      const existingBuffer = fs.readFileSync(filePath)
-      const existingHash = computeHash(existingBuffer)
-      if (existingHash === hash) return true
-    } catch {
-      continue
-    }
-  }
+function isDuplicateInBatch(hash) {
+  if (batchHashes.has(hash)) return true
+  batchHashes.add(hash)
   return false
 }
 
-function getBestImageUrl(article) {
-  if (article.ogImage && isValidUrl(article.ogImage)) return article.ogImage
-
-  if (article.imageUrls && article.imageUrls.length > 0) {
-    const validUrls = article.imageUrls.filter(isValidUrl)
-    if (validUrls.length > 0) {
-      const sorted = validUrls.sort((a, b) => {
-        const aScore = urlQualityScore(a)
-        const bScore = urlQualityScore(b)
-        return bScore - aScore
-      })
-      return sorted[0]
-    }
+async function validateImage(buffer) {
+  if (buffer.length < MIN_FILE_SIZE) {
+    return { valid: false, reason: `File too small: ${buffer.length} bytes` }
   }
-
-  if (article.imageUrl && isValidUrl(article.imageUrl)) {
-    return article.imageUrl
+  try {
+    const metadata = await sharp(buffer).metadata()
+    const { width, height, format } = metadata
+    if (!width || !height) return { valid: false, reason: "Cannot read dimensions" }
+    if (width < MIN_WIDTH) return { valid: false, reason: `Width ${width} < ${MIN_WIDTH}` }
+    if (height < MIN_HEIGHT) return { valid: false, reason: `Height ${height} < ${MIN_HEIGHT}` }
+    const aspect = width / height
+    if (aspect < MIN_ASPECT) return { valid: false, reason: `Aspect ${aspect.toFixed(2)} < ${MIN_ASPECT} (too tall)` }
+    if (aspect > MAX_ASPECT) return { valid: false, reason: `Aspect ${aspect.toFixed(2)} > ${MAX_ASPECT} (too wide)` }
+    if (format === "svg") return { valid: false, reason: "SVG not allowed" }
+    return { valid: true, width, height, format }
+  } catch (err) {
+    return { valid: false, reason: `sharp error: ${err.message}` }
   }
-
-  return null
-}
-
-function urlQualityScore(url) {
-  let score = 0
-  const u = url.toLowerCase()
-  if (u.includes("og")) score += 3
-  if (u.includes("featured")) score += 2
-  if (u.includes("large")) score += 1
-  if (u.includes("thumb")) score -= 1
-  if (u.includes("icon")) score -= 2
-  if (u.includes("logo")) score -= 3
-  if (u.includes("avatar")) score -= 2
-  if (u.includes("banner")) score -= 1
-  const parsed = new URL(url)
-  const host = parsed.hostname
-  if (host.includes("bbc") || host.includes("nytimes") || host.includes("cnn")) {
-    score += 2
-  }
-  return score
 }
 
 function isValidUrl(url) {
@@ -205,111 +171,185 @@ function isValidUrl(url) {
   }
 }
 
-async function downloadArticleImage(article) {
-  ensureDir(ARTICLES_DIR)
-
-  const slug = article.slug || slugify(article.title || "untitled")
-  const imageUrl = getBestImageUrl(article)
-
-  if (!imageUrl) {
-    const kw = getKeywordFallback(article.title)
-    if (kw) {
-      return { path: kw.image, source: "keyword-fallback", downloaded: false }
-    }
-    const fallback = getFallbackForCategory(article.categorySlug || article.category)
-    return { path: fallback, source: "category-fallback", downloaded: false }
-  }
-
+function urlQualityScore(url) {
+  let score = 0
+  const u = url.toLowerCase()
+  if (u.includes("og")) score += 3
+  if (u.includes("featured")) score += 2
+  if (u.includes("large") || u.includes("hero")) score += 1
+  if (u.includes("thumb") || u.includes("thumbnail")) score -= 1
+  if (u.includes("icon")) score -= 2
+  if (u.includes("logo")) score -= 3
+  if (u.includes("avatar")) score -= 2
+  if (u.includes("banner")) score -= 1
+  if (u.includes("amp") || u.includes("crop=")) score += 1
   try {
-    const buffer = await downloadImage(imageUrl)
-    const hash = computeHash(buffer)
-
-    if (isDuplicate(hash, slug)) {
-      console.log(`  ~ Duplicate image for "${article.title.substring(0, 50)}", using fallback`)
-      const kw = getKeywordFallback(article.title)
-      if (kw) {
-        return { path: kw.image, source: "keyword-fallback", downloaded: false }
-      }
-      const fallback = getFallbackForCategory(article.categorySlug || article.category)
-      return { path: fallback, source: "category-fallback", downloaded: false }
+    const parsed = new URL(url)
+    const host = parsed.hostname
+    if (host.includes("bbc") || host.includes("nytimes") || host.includes("cnn") || host.includes("reuters")) {
+      score += 2
     }
-
-    const ext = path.extname(new URL(imageUrl).pathname) || ".jpg"
-    const safeExt = [".jpg", ".jpeg", ".png", ".webp", ".gif"].includes(ext) ? ext : ".jpg"
-    const filename = `${slug}${safeExt}`
-    const filePath = path.join(ARTICLES_DIR, filename)
-
-    fs.writeFileSync(filePath, buffer)
-    console.log(`  ✓ Downloaded image for "${article.title.substring(0, 50)}"`)
-    return { path: `/images/articles/${filename}`, source: "downloaded", downloaded: true }
-  } catch (err) {
-    console.log(`  ✗ Failed to download image for "${article.title.substring(0, 50)}": ${err.message}`)
-    const kw = getKeywordFallback(article.title)
-    if (kw) {
-      return { path: kw.image, source: "keyword-fallback", downloaded: false }
-    }
-    const fallback = getFallbackForCategory(article.categorySlug || article.category)
-    return { path: fallback, source: "category-fallback", downloaded: false }
-  }
+    if (parsed.pathname.match(/\d{3,}/)) score += 1
+  } catch {}
+  return score
 }
 
-async function fetchOgImage(articleUrl) {
-  if (!articleUrl || !isValidUrl(articleUrl)) return null
-  try {
-    const html = await fetchUrl(articleUrl)
-    if (!html) return null
-    const patterns = [
-      /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
-      /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
-      /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
-      /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
-    ]
-    for (const pattern of patterns) {
-      const match = html.match(pattern)
-      if (match && match[1] && isValidUrl(match[1])) {
-        return match[1]
-      }
+function getBestImageUrl(article) {
+  if (article.ogImage && isValidUrl(article.ogImage)) return article.ogImage
+  if (article.imageUrls && article.imageUrls.length > 0) {
+    const valid = article.imageUrls.filter(isValidUrl)
+    if (valid.length > 0) {
+      const sorted = valid.sort((a, b) => urlQualityScore(b) - urlQualityScore(a))
+      return sorted[0]
     }
-    return null
-  } catch {
-    return null
   }
+  if (article.imageUrl && isValidUrl(article.imageUrl)) return article.imageUrl
+  return null
 }
 
-function fetchUrl(url) {
-  return new Promise((resolve, reject) => {
-    const protocol = url.startsWith("https") ? https : http
-    const req = protocol.get(url, {
-      timeout: 8000,
+function fetchOgImage(articleUrl) {
+  if (!articleUrl || !isValidUrl(articleUrl)) return Promise.resolve(null)
+  return new Promise((resolve) => {
+    const protocol = articleUrl.startsWith("https") ? https : http
+    const req = protocol.get(articleUrl, {
+      timeout: 10000,
       headers: {
         "User-Agent": "Mozilla/5.0 (compatible; GlobalNewsBot/1.0)",
         Accept: "text/html,application/xhtml+xml",
       },
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        fetchUrl(res.headers.location).then(resolve).catch(reject)
+        fetchOgImage(res.headers.location).then(resolve)
         return
       }
-      if (res.statusCode !== 200) {
-        reject(new Error(`HTTP ${res.statusCode}`))
-        return
-      }
-      let data = ""
+      if (res.statusCode !== 200) { resolve(null); return }
+      let html = ""
       res.on("data", (chunk) => {
-        data += chunk.toString()
-        if (data.length > 50000) {
-          req.destroy()
-          resolve(data)
-        }
+        html += chunk.toString()
+        if (html.length > 100000) { req.destroy(); resolve(extractOgFromHtml(html)) }
       })
-      res.on("end", () => resolve(data))
+      res.on("end", () => resolve(extractOgFromHtml(html)))
     })
-    req.on("error", reject)
-    req.on("timeout", () => {
-      req.destroy()
-      reject(new Error("Timeout"))
-    })
+    req.on("error", () => resolve(null))
+    req.on("timeout", () => { req.destroy(); resolve(null) })
   })
+}
+
+function extractOgFromHtml(html) {
+  const patterns = [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
+    /<link[^>]+rel=["']image_src["'][^>]+href=["']([^"']+)["']/i,
+    /<link[^>]+href=["']([^"']+)["'][^>]+rel=["']image_src["']/i,
+  ]
+  for (const pattern of patterns) {
+    const m = html.match(pattern)
+    if (m && m[1]) {
+      try { new URL(m[1]); return m[1] } catch { continue }
+    }
+  }
+  const jsonLd = html.match(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i)
+  if (jsonLd) {
+    try {
+      const data = JSON.parse(jsonLd[1])
+      const img = data.image || (data.thumbnailUrl) || (data.publisher?.logo?.url)
+      if (img && isValidUrl(img)) return img
+      if (Array.isArray(img) && img.length > 0 && isValidUrl(img[0])) return img[0]
+    } catch {}
+  }
+  const imgTags = html.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)
+  let bestImg = null
+  let bestSize = 0
+  for (const match of imgTags) {
+    try {
+      new URL(match[1])
+      const w = parseInt(match[0].match(/width=["'](\d+)["']/i)?.[1] || "0")
+      const h = parseInt(match[0].match(/height=["'](\d+)["']/i)?.[1] || "0")
+      const size = w * h
+      if (size > bestSize && w >= 400) {
+        bestSize = size
+        bestImg = match[1]
+      }
+    } catch {}
+  }
+  return bestImg
+}
+
+async function downloadArticleImage(article) {
+  ensureDir(ARTICLES_DIR)
+  const slug = article.slug || slugify(article.title || "untitled")
+  const imageUrl = getBestImageUrl(article)
+
+  if (imageUrl) {
+    console.log(`  → Trying RSS image for "${(article.title || "").substring(0, 50)}"`)
+    const result = await tryDownload(slug, imageUrl, article)
+    if (result) return result
+  }
+
+  if (article.sourceUrl) {
+    console.log(`  → Fetching og:image from article page for "${(article.title || "").substring(0, 50)}"`)
+    const ogUrl = await fetchOgImage(article.sourceUrl)
+    if (ogUrl) {
+      const result = await tryDownload(slug, ogUrl, article)
+      if (result) return result
+    }
+  }
+
+  const kw = getKeywordFallback(article.title)
+  if (kw) {
+    console.log(`  ⚠ Using keyword fallback for "${(article.title || "").substring(0, 50)}": ${kw.image}`)
+    return { path: kw.image, source: "keyword-fallback", downloaded: false, width: 0, height: 0 }
+  }
+
+  const fallback = getFallbackForCategory(article.categorySlug || article.category)
+  console.log(`  ⚠ Using category fallback for "${(article.title || "").substring(0, 50)}": ${fallback}`)
+  return { path: fallback, source: "category-fallback", downloaded: false, width: 0, height: 0 }
+}
+
+async function tryDownload(slug, imageUrl, article) {
+  try {
+    const buffer = await downloadImageBuffer(imageUrl)
+    const hash = computeHash(buffer)
+
+    if (isDuplicateInBatch(hash)) {
+      console.log(`  ~ Skipped duplicate image (same hash as another article in this batch) for "${(article.title || "").substring(0, 50)}"`)
+      return null
+    }
+
+    const validation = await validateImage(buffer)
+    if (!validation.valid) {
+      console.log(`  ✗ Image validation failed: ${validation.reason} for "${(article.title || "").substring(0, 50)}"`)
+      return null
+    }
+
+    const finalSlug = slug.replace(/[^a-zA-Z0-9_-]/g, "")
+    const filename = `${finalSlug}.jpg`
+    const filePath = path.join(ARTICLES_DIR, filename)
+
+    let processed = buffer
+    if (validation.format !== "jpeg" && validation.format !== "jpg") {
+      try {
+        processed = await sharp(buffer).jpeg({ quality: 92, progressive: true }).toBuffer()
+      } catch {}
+    }
+
+    const finalMeta = await sharp(processed).metadata()
+
+    fs.writeFileSync(filePath, processed)
+    console.log(`  ✓ Downloaded & validated image ${validation.width}x${validation.height} for "${(article.title || "").substring(0, 50)}"`)
+    return {
+      path: `/images/articles/${filename}`,
+      source: "downloaded",
+      downloaded: true,
+      width: finalMeta.width || validation.width,
+      height: finalMeta.height || validation.height,
+    }
+  } catch (err) {
+    console.log(`  ✗ Download failed: ${err.message} for "${(article.title || "").substring(0, 50)}"`)
+    return null
+  }
 }
 
 function verifyLocalImage(imagePath) {
@@ -322,21 +362,11 @@ function verifyLocalImage(imagePath) {
 }
 
 function ensureArticleImage(article) {
-  const imagePath = article.image
-  if (imagePath && verifyLocalImage(imagePath)) {
-    return imagePath
-  }
-  const articlesImagePath = path.join(
-    ARTICLES_DIR,
-    `${article.slug || slugify(article.title)}.jpg`,
-  )
-  if (fs.existsSync(articlesImagePath)) {
-    return `/images/articles/${article.slug || slugify(article.title)}.jpg`
-  }
+  if (article.image && verifyLocalImage(article.image)) return article.image
+  const articlesImagePath = path.join(ARTICLES_DIR, `${article.slug || slugify(article.title)}.jpg`)
+  if (fs.existsSync(articlesImagePath)) return `/images/articles/${article.slug || slugify(article.title)}.jpg`
   const kw = getKeywordFallback(article.title)
-  if (kw) {
-    return kw.image
-  }
+  if (kw) return kw.image
   return getFallbackForCategory(article.categorySlug || article.category)
 }
 
@@ -348,4 +378,5 @@ module.exports = {
   verifyLocalImage,
   ensureArticleImage,
   fetchOgImage,
+  resetBatchHashes,
 }

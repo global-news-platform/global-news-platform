@@ -4,7 +4,33 @@ import { useState, useCallback } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
-const FALLBACK_IMAGE = "/images/fallback/default.jpg"
+const FALLBACK_IMAGE = "/images/fallbacks/default.jpg"
+
+const CATEGORY_FALLBACK_MAP: Record<string, string> = {
+  pakistan: "pakistan",
+  dunya: "world",
+  siasat: "politics",
+  karobar: "business",
+  technology: "technology",
+  khel: "sports",
+  sehat: "health",
+  shobiz: "entertainment",
+  science: "science",
+  mazhab: "default",
+  taleem: "default",
+  mausam: "default",
+  crime: "default",
+  adalat: "default",
+  baynalaqwami: "world",
+  raye: "politics",
+  videos: "entertainment",
+  general: "default",
+}
+
+function getCategoryFallbackFile(categorySlug?: string): string {
+  const name = CATEGORY_FALLBACK_MAP[categorySlug || ""] || "default"
+  return `/images/fallbacks/${name}.jpg`
+}
 
 function normalizeImage(image: string | undefined | null): string {
   if (!image || typeof image !== "string" || image.trim() === "") return FALLBACK_IMAGE
@@ -35,11 +61,7 @@ export function SafeImage({
   const [fallbackSrc, setFallbackSrc] = useState<string | null>(null)
 
   const handleError = useCallback(() => {
-    if (categorySlug) {
-      setFallbackSrc(`/images/fallbacks/${categorySlug}.jpg`)
-    } else {
-      setFallbackSrc(FALLBACK_IMAGE)
-    }
+    setFallbackSrc(getCategoryFallbackFile(categorySlug))
   }, [categorySlug])
 
   return (

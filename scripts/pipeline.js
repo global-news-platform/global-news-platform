@@ -3,7 +3,7 @@
 const { fetchAllSources } = require("./lib/rss")
 const { writeAllArticles, getArticleCount } = require("./lib/writer")
 const { markProcessed, getStats } = require("./lib/tracker")
-const { resetTracker } = require("./lib/imageResolver")
+const { resetBatchHashes } = require("./lib/imageDownloader")
 const { generateSitemap } = require("./lib/sitemap")
 const { generateFeed } = require("./lib/feed")
 const { computeTrending, computeDailyMetrics } = require("./lib/metrics")
@@ -49,22 +49,12 @@ async function main() {
     return
   }
 
-  const imagePoolSizes = {}
-  const poolDirs = fs.readdirSync(path.join(__dirname, "../public/images/categories"))
-  for (const dir of poolDirs) {
-    const dirPath = path.join(__dirname, "../public/images/categories", dir)
-    if (fs.statSync(dirPath).isDirectory()) {
-      const count = fs.readdirSync(dirPath).filter((f) => f.endsWith(".jpg")).length
-      imagePoolSizes[dir] = count
-    }
-  }
+  const articleImgCount = fs.existsSync(path.join(__dirname, "../public/images/articles"))
+    ? fs.readdirSync(path.join(__dirname, "../public/images/articles")).filter((f) => f.endsWith(".jpg")).length
+    : 0
+  console.log(`\nLocal article images on disk: ${articleImgCount}`)
 
-  console.log(`\nImage pools ready:`)
-  for (const [pool, count] of Object.entries(imagePoolSizes)) {
-    console.log(`  ${pool}: ${count} images`)
-  }
-
-  resetTracker()
+  resetBatchHashes()
 
   console.log(`\nWriting ${articles.length} articles to ${ARTICLES_DIR}...`)
   console.log(`  Downloading article images from RSS feeds...`)
@@ -115,9 +105,7 @@ async function main() {
   console.log(`  Total articles in store: ${articleCount}`)
   console.log(`  This run: ${writeResult.written} new, ${writeResult.skipped} duplicates`)
   console.log(`  All-time processed: ${stats.totalProcessed}`)
-  console.log(`  Image pool: ${Object.values(imagePoolSizes).reduce((a, b) => a + b, 0)} local images`)
-  console.log(`  Image API calls: 0`)
-  console.log(`  Image timeouts: 0`)
+  console.log(`  Local article images: ${articleImgCount}`)
   console.log(`  Time elapsed: ${Math.round((Date.now() - startTime) / 1000)}s`)
   console.log("=".repeat(60))
 }

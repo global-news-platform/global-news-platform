@@ -64,6 +64,7 @@ function writeArticleMdx(filePath, fm, originalContent) {
   lines.push('publishedAt: "' + (fm.publishedAt || "") + '"')
   lines.push('image: "' + fm.image + '"')
   lines.push('imageAlt: "' + escapeYaml(fm.imageAlt || fm.title || "") + '"')
+  lines.push('sourceUrl: "' + escapeYaml(fm.sourceUrl || "") + '"')
   lines.push("tags: [" + tagsStr + "]")
   lines.push("featured: " + (fm.featured || false))
   lines.push("breaking: " + (fm.breaking || false))
@@ -190,10 +191,9 @@ async function fixArticleImage(slug, fm, filePath) {
     return { fixed: true, reason: "category-fallback", image: fallback }
   }
 
-  var worldFallback = "/images/categories/world/default.jpg"
-  fm.image = worldFallback
+  fm.image = fallback
   writeArticleMdx(filePath, fm, fs.readFileSync(filePath, "utf-8"))
-  return { fixed: true, reason: "default-fallback", image: worldFallback }
+  return { fixed: true, reason: "default-fallback", image: fallback }
 }
 
 async function main() {

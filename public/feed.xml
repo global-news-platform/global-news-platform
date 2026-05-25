@@ -8,7 +8,7 @@
     <link>https://pakistan-news.news</link>
     <description>پاکستان کا معتبر ترین خبروں کا پلیٹ فارم</description>
     <language>ur-pk</language>
-    <lastBuildDate>Mon, 25 May 2026 20:14:03 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 22:17:29 GMT</lastBuildDate>
     <atom:link href="https://pakistan-news.news/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://pakistan-news.news/images/logo.svg</url>
@@ -23,7 +23,7 @@
     <category>dunya</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 09:59:52 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Who made Opta&apos;s team of the season?</title>
@@ -33,7 +33,7 @@
     <category>khel</category>
     <author>علی احمد</author>
     <pubDate>Mon, 25 May 2026 11:57:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/who-made-opta-s-team-of-the-season--eg3b4t.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>White House gunman had previous run-ins with Secret Service, court documents show</title>
@@ -43,7 +43,7 @@
     <category>dunya</category>
     <author>عمران ملک</author>
     <pubDate>Mon, 25 May 2026 15:45:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/white-house-gunman-had-previous-run-ins-with-secret-service-court-documents-show--gsvdhx.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>White House gunman had previous run-ins with Secret Service, court documents show</title>
@@ -53,7 +53,7 @@
     <category>dunya</category>
     <author>علی احمد</author>
     <pubDate>Mon, 25 May 2026 15:45:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>White House gunman had previous run-ins with Secret Service, court documents show</title>
@@ -63,7 +63,7 @@
     <category>dunya</category>
     <author>بابر شاہ</author>
     <pubDate>Mon, 25 May 2026 15:45:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>White House gunman had previous run-ins with Secret Service, court documents show</title>
@@ -73,7 +73,17 @@
     <category>dunya</category>
     <author>فاطمہ حسین</author>
     <pubDate>Mon, 25 May 2026 15:45:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>White House gunman had previous run-ins with Secret Service, court documents show</title>
+    <link>https://pakistan-news.news/article/white-house-gunman-had-previous-run-ins-with-secret-service-court-documents-show--8o0o4m</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/white-house-gunman-had-previous-run-ins-with-secret-service-court-documents-show--8o0o4m</guid>
+    <description>The suspect previously obstructed a White House entry lane in June of 2025 and told Secret Service agents he was Jesus Christ.</description>
+    <category>dunya</category>
+    <author>سارہ خان</author>
+    <pubDate>Mon, 25 May 2026 15:45:27 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/white-house-gunman-had-previous-run-ins-with-secret-service-court-documents-show--8o0o4m.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>White House gunman had previous run-ins with Secret Service, court documents show</title>
@@ -83,7 +93,7 @@
     <category>dunya</category>
     <author>بابر شاہ</author>
     <pubDate>Mon, 25 May 2026 15:45:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/white-house-gunman-had-previous-run-ins-with-secret-service-court-documents-show--2n3a9e.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
@@ -93,7 +103,7 @@
     <category>khel</category>
     <author>عمران ملک</author>
     <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
@@ -103,7 +113,7 @@
     <category>khel</category>
     <author>بابر شاہ</author>
     <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
@@ -113,7 +123,7 @@
     <category>khel</category>
     <author>فاطمہ حسین</author>
     <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
@@ -123,7 +133,7 @@
     <category>khel</category>
     <author>فاطمہ حسین</author>
     <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
@@ -133,7 +143,7 @@
     <category>khel</category>
     <author>فاطمہ حسین</author>
     <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
@@ -143,7 +153,7 @@
     <category>khel</category>
     <author>عمران ملک</author>
     <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--7f96bd.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>When Humans Went Away, the Wildlife Strayed</title>
@@ -153,7 +163,7 @@
     <category>science</category>
     <author>سارہ خان</author>
     <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>When Humans Went Away, the Wildlife Strayed</title>
@@ -163,7 +173,7 @@
     <category>science</category>
     <author>علی احمد</author>
     <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>When Humans Went Away, the Wildlife Strayed</title>
@@ -183,7 +193,7 @@
     <category>science</category>
     <author>علی احمد</author>
     <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>When Humans Went Away, the Wildlife Strayed</title>
@@ -193,7 +203,7 @@
     <category>science</category>
     <author>سارہ خان</author>
     <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -203,7 +213,7 @@
     <category>karobar</category>
     <author>سارہ خان</author>
     <pubDate>Fri, 22 May 2026 20:09:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -223,7 +233,7 @@
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -233,7 +243,7 @@
     <category>technology</category>
     <author>سارہ خان</author>
     <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -243,7 +253,7 @@
     <category>technology</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -253,107 +263,127 @@
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 20:09:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
+    <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--yl63d6</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--yl63d6</guid>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <category>technology</category>
+    <author>علی احمد</author>
+    <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--yl63d6.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--tg7r7n</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--tg7r7n</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--tg7r7n.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--qh6ve1</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--qh6ve1</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
+    <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--pzz8nk</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--pzz8nk</guid>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <category>technology</category>
+    <author>سارہ خان</author>
+    <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--pzz8nk.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--mbvp52</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--mbvp52</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\\\\\&quot;out of an abundance of caution\\\\\\\&quot;.</description>
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--j5jsk5</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--j5jsk5</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\\\\\&quot;out of an abundance of caution\\\\\\\&quot;.</description>
     <category>technology</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--iof3sy</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--iof3sy</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--hpbrvu</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--hpbrvu</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>بابر شاہ</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--a7ufx5</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--a7ufx5</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--7nvfqi</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--7nvfqi</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--6r3ilp</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--6r3ilp</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>سارہ خان</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--6he912</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--6he912</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>&apos;Unselfish&apos; over &apos;ego&apos; - what do leaks say about Tuchel&apos;s England?</title>
@@ -363,7 +393,7 @@
     <category>khel</category>
     <author>علی احمد</author>
     <pubDate>Fri, 22 May 2026 15:39:00 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Unseen Rik Mayall material to be shown at festival</title>
@@ -373,7 +403,27 @@
     <category>shobiz</category>
     <author>عمران ملک</author>
     <pubDate>Mon, 25 May 2026 06:22:12 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Unseen Rik Mayall material to be shown at festival</title>
+    <link>https://pakistan-news.news/article/unseen-rik-mayall-material-to-be-shown-at-festival--g6yxqv</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/unseen-rik-mayall-material-to-be-shown-at-festival--g6yxqv</guid>
+    <description>The nine-day Rik Mayall Comedy Festival begins in Droitwich Spa on Friday.</description>
+    <category>shobiz</category>
+    <author>فاطمہ حسین</author>
+    <pubDate>Mon, 25 May 2026 06:22:12 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/unseen-rik-mayall-material-to-be-shown-at-festival--g6yxqv.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Unseen Rik Mayall material to be shown at festival</title>
+    <link>https://pakistan-news.news/article/unseen-rik-mayall-material-to-be-shown-at-festival--79ym6t</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/unseen-rik-mayall-material-to-be-shown-at-festival--79ym6t</guid>
+    <description>The nine-day Rik Mayall Comedy Festival begins in Droitwich Spa on Friday.</description>
+    <category>shobiz</category>
+    <author>بابر شاہ</author>
+    <pubDate>Mon, 25 May 2026 06:22:12 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/unseen-rik-mayall-material-to-be-shown-at-festival--79ym6t.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Unseen Rik Mayall material to be shown at festival</title>
@@ -383,7 +433,7 @@
     <category>shobiz</category>
     <author>سارہ خان</author>
     <pubDate>Mon, 25 May 2026 06:22:12 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/unseen-rik-mayall-material-to-be-shown-at-festival--4q744g.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/pakistan.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK should set maximum working temperature rules, advisers say</title>
@@ -393,7 +443,7 @@
     <category>science</category>
     <author>سارہ خان</author>
     <pubDate>Tue, 19 May 2026 23:40:12 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK sees hottest day of year as bank holiday travellers face queues</title>
@@ -403,7 +453,7 @@
     <category>karobar</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 17:25:35 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/business.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/business.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
@@ -413,7 +463,7 @@
     <category>sehat</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
@@ -423,7 +473,7 @@
     <category>sehat</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
@@ -433,7 +483,7 @@
     <category>sehat</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
@@ -443,7 +493,7 @@
     <category>sehat</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
@@ -453,67 +503,17 @@
     <category>sehat</category>
     <author>سارہ خان</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/fallbacks/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
-    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--pwsg6c</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--pwsg6c</guid>
+    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--qde152</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--qde152</guid>
     <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
     <category>sehat</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
-    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--7ioo1q</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--7ioo1q</guid>
-    <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
-    <category>sehat</category>
-    <author>سارہ خان</author>
-    <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
-    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--3x2lg4</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--3x2lg4</guid>
-    <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
-    <category>sehat</category>
-    <author>فاطمہ حسین</author>
-    <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--3x2lg4.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
-    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--225u3t</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--225u3t</guid>
-    <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
-    <category>sehat</category>
-    <author>سارہ خان</author>
-    <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
-    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--0451fy</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--0451fy</guid>
-    <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
-    <category>sehat</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/default.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>UK police bosses say unsafe social media platforms should be blocked for under-16s</title>
-    <link>https://pakistan-news.news/article/uk-police-bosses-say-unsafe-social-media-platforms-should-be-blocked-for-under-1--eilg98</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/uk-police-bosses-say-unsafe-social-media-platforms-should-be-blocked-for-under-1--eilg98</guid>
-    <description>The NCA and NPCC say children should be blocked from accessing sites which do not stop them seeing nudes or being contacted by strangers.</description>
-    <category>technology</category>
-    <author>بابر شاہ</author>
-    <pubDate>Thu, 21 May 2026 23:07:54 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/images/articles/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--qde152.jpg" type="image/jpeg" />
   </item>
   </channel>
 </rss>
