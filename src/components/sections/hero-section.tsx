@@ -8,21 +8,21 @@ interface HeroSectionProps {
 
 export function HeroSection({ featured, secondary }: HeroSectionProps) {
   return (
-    <section className="py-4 md:py-6 lg:py-8">
-      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-6 xl:px-8">
-        <div className="grid gap-5 lg:grid-cols-3">
-          <div className="lg:col-span-2">
+    <section className="border-b border-border/20">
+      <div className="mx-auto max-w-full px-0 md:px-3 lg:px-4">
+        <div className="grid md:grid-cols-4">
+          <div className="md:col-span-3">
             <ArticleCard article={featured} variant="hero" />
           </div>
-          <div className="flex flex-col border border-border bg-card p-4 md:p-5">
-            <h3 className="mb-3 text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
-              اہم خبریں
-            </h3>
-            <div className="divide-y divide-border/60">
-              {secondary.slice(0, 4).map((article) => (
-                <div key={article.slug}>
-                  <ArticleCard article={article} variant="horizontal" />
-                </div>
+          <div className="border-r border-border/20 bg-card">
+            <div className="bg-destructive px-3 py-2">
+              <h3 className="text-[11px] font-bold uppercase tracking-[0.1em] text-destructive-foreground">
+                اہم خبریں
+              </h3>
+            </div>
+            <div className="px-3 divide-y divide-border/20">
+              {secondary.slice(0, 5).map((article) => (
+                <ArticleCard key={article.slug} article={article} variant="horizontal" />
               ))}
             </div>
           </div>

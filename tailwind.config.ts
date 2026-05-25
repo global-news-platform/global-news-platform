@@ -99,18 +99,11 @@ const config: Config = {
           DEFAULT: "hsl(var(--section-header-bg))",
           foreground: "hsl(var(--section-header-fg))",
         },
-        pakistan: {
-          50: "#f0fdf4",
-          100: "#dcfce7",
-          200: "#bbf7d0",
-          300: "#86efac",
-          400: "#4ade80",
-          500: "#22c55e",
-          600: "#16a34a",
-          700: "#15803d",
-          800: "#166534",
-          900: "#14532d",
-          950: "#052e16",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+        },
+        "live-red": {
+          DEFAULT: "hsl(var(--live-red))",
         },
       },
       borderRadius: {
@@ -147,8 +140,8 @@ const config: Config = {
           to: { transform: "translateX(-100%)" },
         },
         "marquee-rtl": {
-          from: { transform: "translateX(-100%)" },
-          to: { transform: "translateX(100%)" },
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
         "pulse-soft": {
           "0%, 100%": { opacity: "1" },
@@ -173,7 +166,7 @@ const config: Config = {
         "slide-up": "slide-up 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
         marquee: "marquee 30s linear infinite",
-        "marquee-rtl": "marquee-rtl 30s linear infinite",
+        "marquee-rtl": "marquee-rtl 40s linear infinite",
         "pulse-soft": "pulse-soft 2s ease-in-out infinite",
         "live-pulse": "live-pulse 1.5s ease-in-out infinite",
         shimmer: "shimmer 2s linear infinite",
@@ -181,27 +174,6 @@ const config: Config = {
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: "72ch",
-            color: "hsl(var(--foreground))",
-            a: {
-              color: "hsl(var(--foreground))",
-              "&:hover": { opacity: "0.7" },
-            },
-            'h1, h2, h3, h4': {
-              fontFamily: "var(--font-noto-nastaliq), Noto Nastaliq Urdu, serif",
-              lineHeight: "1.6",
-              color: "hsl(var(--foreground))",
-            },
-          },
-        },
-      },
-      maxWidth: {
-        reading: "65ch",
-        "reading-wide": "72ch",
       },
     },
   },

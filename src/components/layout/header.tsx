@@ -84,30 +84,30 @@ export function Header() {
         )}
       >
         {/* Top bar with date and social */}
-        <div className="hidden border-b border-border/40 bg-secondary/50 md:block">
-          <div className="mx-auto flex h-8 max-w-7xl items-center justify-between px-4 sm:px-5 lg:px-6 xl:px-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[11px] font-medium text-muted-foreground">
+        <div className="hidden border-b border-border/30 bg-foreground md:block">
+          <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 sm:px-5 lg:px-6 xl:px-8">
+            <div className="flex items-center gap-4">
+              <span className="text-[11px] font-medium text-background/70">
                 {today}
               </span>
-              <span className="text-muted-foreground/30">|</span>
+              <span className="text-background/20">|</span>
               <Link
                 href="/breaking"
-                className="flex items-center gap-1.5 text-[11px] font-bold text-red-600 transition-colors hover:text-red-700"
+                className="flex items-center gap-1.5 text-[11px] font-bold text-red-400 transition-colors hover:text-red-300"
               >
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-red-600" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400/60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
                 </span>
                 بریکنگ
               </Link>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5">
               <a
                 href="https://facebook.com/pakistannews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded p-1 text-muted-foreground transition-colors hover:text-foreground"
+                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
                 aria-label="فیس بک"
               >
                 <Facebook className="h-3 w-3" />
@@ -116,7 +116,7 @@ export function Header() {
                 href="https://twitter.com/pakistannews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded p-1 text-muted-foreground transition-colors hover:text-foreground"
+                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
                 aria-label="ٹویٹر"
               >
                 <Twitter className="h-3 w-3" />
@@ -125,15 +125,15 @@ export function Header() {
                 href="/feed.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded p-1 text-muted-foreground transition-colors hover:text-foreground"
+                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
                 aria-label="آر ایس ایس فیڈ"
               >
                 <Rss className="h-3 w-3" />
               </a>
-              <span className="text-muted-foreground/30">|</span>
+              <span className="text-background/20">|</span>
               <button
                 onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-                className="rounded p-1 text-muted-foreground transition-colors hover:text-foreground"
+                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
                 aria-label="تھیم تبدیل کریں"
               >
                 {resolvedTheme === "dark" ? (
@@ -146,8 +146,8 @@ export function Header() {
           </div>
         </div>
 
-        {/* Logo row */}
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-5 lg:px-6 xl:px-8">
+        {/* Logo row - prominent branding */}
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-5 lg:px-6 xl:px-8">
           <button
             onClick={() => setMobileMenuOpen(true)}
             className="rounded p-2 text-foreground transition-colors hover:bg-secondary md:hidden"
@@ -158,16 +158,16 @@ export function Header() {
 
           <Link
             href="/"
-            className="group flex items-center gap-3"
+            className="group flex items-center gap-3.5"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <Globe className="h-5 w-5 text-primary-foreground" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary shadow-md">
+              <Globe className="h-6 w-6 text-primary-foreground" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold leading-tight tracking-tight md:text-2xl">
+              <span className="text-2xl font-bold leading-tight tracking-tight md:text-3xl">
                 پاکستان نیوز
               </span>
-              <span className="hidden text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground md:block">
+              <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground md:block">
                 پاکستان کی معتبر آواز
               </span>
             </div>
@@ -195,10 +195,10 @@ export function Header() {
           </div>
         </div>
 
-        {/* Navigation bar - colored background like traditional news */}
+        {/* Navigation bar - deep red / primary */}
         <div className="hidden border-t border-primary/20 md:block">
           <div className="bg-primary">
-            <div className="mx-auto flex h-10 max-w-7xl items-center px-4 sm:px-5 lg:px-6 xl:px-8">
+            <div className="mx-auto flex h-11 max-w-7xl items-center px-4 sm:px-5 lg:px-6 xl:px-8">
               <nav className="flex items-center gap-0.5 flex-1">
                 {navigation.slice(0, 8).map((item) => {
                   const isActive = pathname === item.href || pathname.startsWith(item.href + "/")
@@ -207,7 +207,7 @@ export function Header() {
                       key={item.href}
                       href={item.href}
                       className={cn(
-                        "rounded-sm px-3 py-1.5 text-[13px] font-medium transition-all",
+                        "rounded-sm px-3.5 py-1.5 text-[13px] font-medium transition-all",
                         isActive
                           ? "bg-white/20 text-white"
                           : "text-white/85 hover:bg-white/10 hover:text-white",
@@ -218,11 +218,11 @@ export function Header() {
                   )
                 })}
               </nav>
-              <div className="ms-2 flex items-center gap-1">
+              <div className="ms-3 flex items-center gap-1.5">
                 <Link
                   href="/category/raye"
                   className={cn(
-                    "rounded-sm px-3 py-1.5 text-[13px] font-medium transition-all",
+                    "rounded-sm px-3.5 py-1.5 text-[13px] font-medium transition-all",
                     pathname === "/category/raye"
                       ? "bg-white/20 text-white"
                       : "text-white/85 hover:bg-white/10 hover:text-white",
