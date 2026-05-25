@@ -42,6 +42,31 @@ function htmlToText(html) {
     .trim()
 }
 
+function extractOgImage(item) {
+  const content = item["content:encoded"] || item.content || ""
+
+  const patterns = [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
+  ]
+
+  for (const pattern of patterns) {
+    const match = content.match(pattern)
+    if (match && match[1]) {
+      try {
+        new URL(match[1])
+        return match[1]
+      } catch {
+        continue
+      }
+    }
+  }
+
+  return null
+}
+
 function extractImages(item) {
   const urls = []
 
@@ -49,34 +74,54 @@ function extractImages(item) {
     urls.push(item.enclosure.url)
   }
 
-  if (item["media:content"] && item["media:content"].$) {
-    urls.push(item["media:content"].$.url)
+  if (item["media:content"]) {
+    if (item["media:content"].$ && item["media:content"].$.url) {
+      urls.push({ url: item["media:content"].$.url, type: "media:content" })
+    }
+    if (Array.isArray(item["media:content"])) {
+      for (const mc of item["media:content"]) {
+        if (mc.$ && mc.$.url) {
+          urls.push({ url: mc.$.url, type: "media:content" })
+        }
+      }
+    }
   }
 
   if (item["media:thumbnail"] && item["media:thumbnail"].$) {
-    urls.push(item["media:thumbnail"].$.url)
+    urls.push({ url: item["media:thumbnail"].$.url, type: "media:thumbnail" })
   }
 
-  if (item["media:content"] && Array.isArray(item["media:content"])) {
-    for (const mc of item["media:content"]) {
-      if (mc.$ && mc.$.url) urls.push(mc.$.url)
+  if (item["media:group"] && item["media:group"]["media:content"]) {
+    const mc = item["media:group"]["media:content"]
+    if (Array.isArray(mc)) {
+      for (const m of mc) {
+        if (m.$ && m.$.url) urls.push({ url: m.$.url, type: "media:group" })
+      }
+    } else if (mc.$ && mc.$.url) {
+      urls.push({ url: mc.$.url, type: "media:group" })
     }
+  }
+
+  const ogImage = extractOgImage(item)
+  if (ogImage) {
+    urls.push({ url: ogImage, type: "og:image" })
   }
 
   const content = item["content:encoded"] || item.content || ""
   const imgMatches = content.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)
   for (const match of imgMatches) {
-    if (match[1]) urls.push(match[1])
+    if (match[1]) {
+      try {
+        new URL(match[1])
+        urls.push({ url: match[1], type: "content-img" })
+      } catch {
+        continue
+      }
+    }
   }
 
-  const ogMatch = content.match(/property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
-  if (ogMatch && ogMatch[1]) urls.push(ogMatch[1])
-
-  const ogMatch2 = content.match(/content=["']([^"']+)["'][^>]+property=["']og:image["']/i)
-  if (ogMatch2 && ogMatch2[1]) urls.push(ogMatch2[1])
-
-  const unique = [...new Set(urls)]
-  const valid = unique.filter((u) => {
+  const uniqueUrls = [...new Set(urls.map((u) => u.url))]
+  const valid = uniqueUrls.filter((u) => {
     try {
       const parsed = new URL(u)
       return parsed.protocol === "http:" || parsed.protocol === "https:"
@@ -90,7 +135,23 @@ function extractImages(item) {
 
 function extractImage(item) {
   const images = extractImages(item)
-  return images.length > 0 ? images[0] : null
+  if (images.length === 0) return null
+
+  const ogImage = extractOgImage(item)
+  if (ogImage) return ogImage
+
+  for (const url of images) {
+    const u = url.toLowerCase()
+    if (u.includes("featured") || u.includes("large") || u.includes("hero")) {
+      return url
+    }
+  }
+
+  return images[0]
+}
+
+function extractImageUrls(item) {
+  return extractImages(item)
 }
 
 function extractDescription(item) {
@@ -150,8 +211,9 @@ async function fetchSource(source, maxPerSource = 5) {
   return items.map((item) => {
     const title = (item.title || "Untitled").trim()
     const description = extractDescription(item)
+    const ogImage = extractOgImage(item)
     const imageUrl = extractImage(item)
-    const imageUrls = extractImages(item)
+    const imageUrls = extractImageUrls(item)
     const slug = generateSlug(title)
 
     return {
@@ -163,7 +225,8 @@ async function fetchSource(source, maxPerSource = 5) {
       content: description,
       category,
       categorySlug: category,
-      imageUrl,
+      ogImage,
+      imageUrl: ogImage || imageUrl,
       imageUrls,
       publishedAt: item.isoDate || item.pubDate || new Date().toISOString(),
       tags: generateTags(title, description, category),
@@ -193,6 +256,8 @@ module.exports = {
   htmlToText,
   extractImage,
   extractImages,
+  extractImageUrls,
+  extractOgImage,
   extractDescription,
   generateSlug,
   generateTags,

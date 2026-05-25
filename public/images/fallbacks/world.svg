@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgb(15,29,53)"/>
+      <stop offset="50%" stop-color="rgb(5,24,63)"/>
+      <stop offset="100%" stop-color="rgb(15,29,53)"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgb(59,130,246)" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="rgb(59,130,246)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="rgb(59,130,246)" opacity="0.4"/>
+  <circle cx="200" cy="150" r="250" fill="rgb(59,130,246)" opacity="0.03"/>
+  <circle cx="1000" cy="600" r="300" fill="rgb(59,130,246)" opacity="0.04"/>
+  <circle cx="600" cy="400" r="400" fill="rgb(59,130,246)" opacity="0.02"/>
+  <g transform="translate(60, 370)">
+    <rect x="0" y="-4" width="60" height="4" fill="rgb(59,130,246)" opacity="0.5"/>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="white">
+      WORLD
+    </text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.3">
+      Global News Pakistan
+    </text>
+  </g>
+  <rect x="60" y="720" width="1080" height="1" fill="rgb(59,130,246)" opacity="0.1"/>
+</svg>

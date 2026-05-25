@@ -67,8 +67,8 @@ async function main() {
   resetTracker()
 
   console.log(`\nWriting ${articles.length} articles to ${ARTICLES_DIR}...`)
-  console.log(`  Images resolved locally via hash — no downloads, no APIs, no timeouts`)
-  const writeResult = writeAllArticles(articles)
+  console.log(`  Downloading article images from RSS feeds...`)
+  const writeResult = await writeAllArticles(articles)
 
   console.log(
     `\nWrite results: ${writeResult.written} written, ${writeResult.skipped} skipped, ${writeResult.failed} failed`,

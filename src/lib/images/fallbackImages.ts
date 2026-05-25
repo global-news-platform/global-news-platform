@@ -27,14 +27,43 @@ const CATEGORY_POOL_MAP: Record<string, string> = {
   breaking: "/images/categories/breaking/default.jpg",
 }
 
+const FALLBACK_DIR_MAP: Record<string, string> = {
+  pakistan: "/fallback/pakistan.jpg",
+  dunya: "/fallback/world.jpg",
+  siasat: "/fallback/politics.jpg",
+  karobar: "/fallback/business.jpg",
+  technology: "/fallback/technology.jpg",
+  khel: "/fallback/sports.jpg",
+  sehat: "/fallback/health.jpg",
+  shobiz: "/fallback/entertainment.jpg",
+  mazhab: "/fallback/pakistan.jpg",
+  taleem: "/fallback/technology.jpg",
+  mausam: "/fallback/world.jpg",
+  crime: "/fallback/world.jpg",
+  adalat: "/fallback/politics.jpg",
+  baynalaqwami: "/fallback/world.jpg",
+  videos: "/fallback/technology.jpg",
+  raye: "/fallback/opinion.jpg",
+  general: "/fallback/world.jpg",
+  world: "/fallback/world.jpg",
+  politics: "/fallback/politics.jpg",
+  business: "/fallback/business.jpg",
+  sports: "/fallback/sports.jpg",
+  health: "/fallback/health.jpg",
+  entertainment: "/fallback/entertainment.jpg",
+  science: "/fallback/science.jpg",
+  opinion: "/fallback/opinion.jpg",
+  breaking: "/images/categories/breaking/default.jpg",
+}
+
 export function getFallbackImageUrl(slug?: string): string {
   const cat = slug?.toLowerCase() || "general"
-  return CATEGORY_POOL_MAP[cat] || "/images/categories/breaking/default.jpg"
+  return FALLBACK_DIR_MAP[cat] || CATEGORY_POOL_MAP[cat] || "/images/categories/breaking/default.jpg"
 }
 
 export function getPlaceholderImageUrl(slug?: string): string {
   const cat = slug?.toLowerCase() || "general"
-  return CATEGORY_POOL_MAP[cat] || "/images/categories/breaking/default.jpg"
+  return FALLBACK_DIR_MAP[cat] || CATEGORY_POOL_MAP[cat] || "/images/categories/breaking/default.jpg"
 }
 
 export function getFallbackImageDataUrl(): string {

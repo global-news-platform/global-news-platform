@@ -9,6 +9,7 @@ try {
 }
 
 const FALLBACKS_DIR = path.join(__dirname, "../public/images/fallbacks")
+const FALLBACK_DIR2 = path.join(__dirname, "../public/fallback")
 const CATEGORIES_DIR = path.join(__dirname, "../public/images/categories")
 
 const FALLBACKS = {
@@ -60,6 +61,9 @@ async function main() {
   if (!fs.existsSync(FALLBACKS_DIR)) {
     fs.mkdirSync(FALLBACKS_DIR, { recursive: true })
   }
+  if (!fs.existsSync(FALLBACK_DIR2)) {
+    fs.mkdirSync(FALLBACK_DIR2, { recursive: true })
+  }
 
   for (const [slug, config] of Object.entries(FALLBACKS)) {
     const svg = generateSVG(slug, config)
@@ -73,7 +77,12 @@ async function main() {
           .resize(1200, 800)
           .jpeg({ quality: 85 })
           .toFile(jpgPath)
-        console.log(`  \u2713 ${slug}.jpg (${slug}.svg)`)
+        const jpgPath2 = path.join(FALLBACK_DIR2, `${slug}.jpg`)
+        await sharp(Buffer.from(svg))
+          .resize(1200, 800)
+          .jpeg({ quality: 85 })
+          .toFile(jpgPath2)
+        console.log(`  \u2713 ${slug}.jpg (fallback dirs)`)
       } catch (err) {
         console.log(`  \u2713 ${slug}.svg (sharp failed: ${err.message})`)
       }

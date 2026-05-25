@@ -1,5 +1,6 @@
 const path = require("path")
 const { resolveArticleImage } = require("./imageResolver")
+const { downloadArticleImage, getFallbackForCategory, getKeywordFallback } = require("./imageDownloader")
 
 const FALLBACK_AUTHORS = [
   { name: "علی احمد", slug: "ali-ahmed" },
@@ -82,17 +83,23 @@ function extractTopics(title, description, tags) {
   return [...topics].slice(0, 5)
 }
 
-function buildFrontmatter(article) {
+async function resolveImageForArticle(article, categorySlug) {
+  try {
+    const result = await downloadArticleImage(article)
+    return result.path
+  } catch (err) {
+    const kw = getKeywordFallback(article.title)
+    if (kw) return kw.image
+    return getFallbackForCategory(categorySlug)
+  }
+}
+
+async function buildFrontmatter(article) {
   const author = pickAuthor()
   const categorySlug = getCategorySlug(article.categorySlug || article.category)
   const topics = extractTopics(article.title, article.description, article.tags)
 
-  const imagePath = resolveArticleImage(
-    article.slug,
-    categorySlug,
-    article.title,
-    article.breaking || false,
-  )
+  const imagePath = await resolveImageForArticle(article, categorySlug)
 
   return {
     title: article.title,
@@ -110,8 +117,8 @@ function buildFrontmatter(article) {
   }
 }
 
-function buildMdxContent(article) {
-  const fm = buildFrontmatter(article)
+async function buildMdxContent(article) {
+  const fm = await buildFrontmatter(article)
 
   const frontmatter = `---
 title: "${escapeYamlString(fm.title)}"
@@ -153,4 +160,6 @@ function escapeYamlString(str) {
 module.exports = {
   buildFrontmatter,
   buildMdxContent,
+  getCategorySlug,
+  extractTopics,
 }

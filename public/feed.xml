@@ -8,7 +8,7 @@
     <link>https://pakistan-news.news</link>
     <description>پاکستان کا معتبر ترین خبروں کا پلیٹ فارم</description>
     <language>ur-pk</language>
-    <lastBuildDate>Mon, 25 May 2026 09:12:40 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 09:44:37 GMT</lastBuildDate>
     <atom:link href="https://pakistan-news.news/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://pakistan-news.news/images/logo.svg</url>
@@ -23,7 +23,7 @@
     <category>dunya</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 09:59:52 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/bottom-wave-3.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
@@ -33,7 +33,27 @@
     <category>khel</category>
     <author>فاطمہ حسین</author>
     <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/sports/spotlight-3.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
+    <link>https://pakistan-news.news/article/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--d48jwa</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--d48jwa</guid>
+    <description>BBC Sport chief football writer Phil McNulty reviews every team&apos;s Premier League - and looks back at his pre-season predictions.</description>
+    <category>khel</category>
+    <author>فاطمہ حسین</author>
+    <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Which side were remarkable? Who were a shambles? Phil McNulty&apos;s season review</title>
+    <link>https://pakistan-news.news/article/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--7f96bd</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--7f96bd</guid>
+    <description>BBC Sport chief football writer Phil McNulty reviews every team&apos;s Premier League - and looks back at his pre-season predictions.</description>
+    <category>khel</category>
+    <author>عمران ملک</author>
+    <pubDate>Mon, 25 May 2026 08:10:33 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/which-side-were-remarkable-who-were-a-shambles-phil-mcnulty-s-season-review--7f96bd.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>When Humans Went Away, the Wildlife Strayed</title>
@@ -43,7 +63,7 @@
     <category>science</category>
     <author>سارہ خان</author>
     <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/asymmetric-4.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>When Humans Went Away, the Wildlife Strayed</title>
@@ -53,7 +73,27 @@
     <category>science</category>
     <author>علی احمد</author>
     <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/spotlight-1.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>When Humans Went Away, the Wildlife Strayed</title>
+    <link>https://pakistan-news.news/article/when-humans-went-away-the-wildlife-strayed--qv1jqc</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/when-humans-went-away-the-wildlife-strayed--qv1jqc</guid>
+    <description>When people disappeared from the landscape, as they did during the pandemic, wild animals changed how they used space and resources, scientists found.</description>
+    <category>science</category>
+    <author>عمران ملک</author>
+    <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/when-humans-went-away-the-wildlife-strayed--qv1jqc.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>When Humans Went Away, the Wildlife Strayed</title>
+    <link>https://pakistan-news.news/article/when-humans-went-away-the-wildlife-strayed--kvxpq0</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/when-humans-went-away-the-wildlife-strayed--kvxpq0</guid>
+    <description>When people disappeared from the landscape, as they did during the pandemic, wild animals changed how they used space and resources, scientists found.</description>
+    <category>science</category>
+    <author>علی احمد</author>
+    <pubDate>Thu, 21 May 2026 18:00:08 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -63,7 +103,17 @@
     <category>karobar</category>
     <author>سارہ خان</author>
     <pubDate>Fri, 22 May 2026 20:09:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/business/diagonal-1.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
+    <link>https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--vll55q</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--vll55q</guid>
+    <description>The temporary shutdowns came after videos emerged showing two Waymo cars stopped on swamped streets in Atlanta on Wednesday.</description>
+    <category>technology</category>
+    <author>بابر شاہ</author>
+    <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--vll55q.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -73,7 +123,17 @@
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/horizon-4.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
+    <link>https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--rc6fht</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-suspends-service-in-six-cities-after-cars-drove-into-flooded-roads--rc6fht</guid>
+    <description>The temporary shutdowns came after videos emerged showing two Waymo cars stopped on swamped streets in Atlanta on Wednesday.</description>
+    <category>technology</category>
+    <author>سارہ خان</author>
+    <pubDate>Fri, 22 May 2026 21:24:51 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo Suspends Service in Six Cities After Cars Drove Into Flooded Roads</title>
@@ -83,27 +143,47 @@
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 20:09:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/framed-3.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
+    <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--tg7r7n</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--tg7r7n</guid>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <category>technology</category>
+    <author>عمران ملک</author>
+    <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--tg7r7n.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--mbvp52</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--mbvp52</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/top-banner-5.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
     <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--j5jsk5</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--j5jsk5</guid>
-    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \\\&quot;out of an abundance of caution\\\&quot;.</description>
     <category>technology</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/pulse-4.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Waymo pauses robotaxis in five US cities after cars drive into flooded roads</title>
+    <link>https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--a7ufx5</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/waymo-pauses-robotaxis-in-five-us-cities-after-cars-drive-into-flooded-roads--a7ufx5</guid>
+    <description>A Waymo spokesperson said it had expanded the temporary pause \&quot;out of an abundance of caution\&quot;.</description>
+    <category>technology</category>
+    <author>فاطمہ حسین</author>
+    <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>&apos;Unselfish&apos; over &apos;ego&apos; - what do leaks say about Tuchel&apos;s England?</title>
@@ -113,7 +193,7 @@
     <category>khel</category>
     <author>علی احمد</author>
     <pubDate>Fri, 22 May 2026 15:39:00 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/sports/horizon-4.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK should set maximum working temperature rules, advisers say</title>
@@ -123,7 +203,7 @@
     <category>science</category>
     <author>سارہ خان</author>
     <pubDate>Tue, 19 May 2026 23:40:12 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/spotlight-5.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/science.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK sees hottest day of year as bank holiday travellers face queues</title>
@@ -133,7 +213,7 @@
     <category>karobar</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 17:25:35 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/business/bottom-wave-3.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/business.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
@@ -143,7 +223,7 @@
     <category>sehat</category>
     <author>سارہ خان</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/asymmetric-2.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
@@ -153,7 +233,27 @@
     <category>sehat</category>
     <author>سارہ خان</author>
     <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/framed-2.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
+    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--3x2lg4</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--3x2lg4</guid>
+    <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
+    <category>sehat</category>
+    <author>فاطمہ حسین</author>
+    <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--3x2lg4.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>UK scientists developing Ebola vaccine that could be ready for trials in months</title>
+    <link>https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--225u3t</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/uk-scientists-developing-ebola-vaccine-that-could-be-ready-for-trials-in-months--225u3t</guid>
+    <description>The rare species of Ebola involved - known as Bundibugyo - kills around a third of those infected and has no proven vaccine yet.</description>
+    <category>sehat</category>
+    <author>سارہ خان</author>
+    <pubDate>Fri, 22 May 2026 15:03:51 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK police bosses say unsafe social media platforms should be blocked for under-16s</title>
@@ -163,7 +263,27 @@
     <category>technology</category>
     <author>بابر شاہ</author>
     <pubDate>Thu, 21 May 2026 23:07:54 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/pulse-4.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>UK Institute Is Hunting for Dangers Lurking in AI</title>
+    <link>https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--rqxk81</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--rqxk81</guid>
+    <description>The government’s A.I. Security Institute, staffed by alumni from OpenAI and Google, is becoming a model for countries grappling with A.I.’s emerging risks.</description>
+    <category>technology</category>
+    <author>عمران ملک</author>
+    <pubDate>Sun, 24 May 2026 09:01:43 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/uk-institute-is-hunting-for-dangers-lurking-in-ai--rqxk81.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>UK Institute Is Hunting for Dangers Lurking in AI</title>
+    <link>https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--j3qb3e</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/uk-institute-is-hunting-for-dangers-lurking-in-ai--j3qb3e</guid>
+    <description>The government’s A.I. Security Institute, staffed by alumni from OpenAI and Google, is becoming a model for countries grappling with A.I.’s emerging risks.</description>
+    <category>technology</category>
+    <author>علی احمد</author>
+    <pubDate>Sun, 24 May 2026 09:01:43 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>UK Institute Is Hunting for Dangers Lurking in AI</title>
@@ -173,7 +293,27 @@
     <category>technology</category>
     <author>بابر شاہ</author>
     <pubDate>Sun, 24 May 2026 09:01:43 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/pulse-1.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>U.S.-Iran Peace Deal Nearer, But Could Take Days to Nail Down, U.S. Official Says</title>
+    <link>https://pakistan-news.news/article/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--s6pln2</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--s6pln2</guid>
+    <description>The official said the sides had agreed in principle to reopen the Strait of Hormuz and commit Iran to disposing of its highly enriched uranium, but stressed tha</description>
+    <category>dunya</category>
+    <author>عمران ملک</author>
+    <pubDate>Mon, 25 May 2026 08:43:43 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--s6pln2.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>U.S.-Iran Peace Deal Nearer, But Could Take Days to Nail Down, U.S. Official Says</title>
+    <link>https://pakistan-news.news/article/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--ouyf0u</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/u-s-iran-peace-deal-nearer-but-could-take-days-to-nail-down-u-s-official-says--ouyf0u</guid>
+    <description>The official said the sides had agreed in principle to reopen the Strait of Hormuz and commit Iran to disposing of its highly enriched uranium, but stressed tha</description>
+    <category>dunya</category>
+    <author>سارہ خان</author>
+    <pubDate>Mon, 25 May 2026 09:39:51 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>U.S.-Iran Peace Deal Nearer, But Could Take Days to Nail Down, U.S. Official Says</title>
@@ -183,7 +323,7 @@
     <category>dunya</category>
     <author>سارہ خان</author>
     <pubDate>Mon, 25 May 2026 08:43:43 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/bottom-wave-4.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>U.S. Adds Security Measures at Dulles to Receive Citizens Who Have Been in Ebola Outbreak Region</title>
@@ -193,7 +333,27 @@
     <category>sehat</category>
     <author>بابر شاہ</author>
     <pubDate>Thu, 21 May 2026 18:52:38 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/horizon-2.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>U.S. Adds Security Measures at Dulles to Receive Citizens Who Have Been in Ebola Outbreak Region</title>
+    <link>https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---e2lm45</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---e2lm45</guid>
+    <description>The Department of Homeland Security directed all flights carrying certain travelers to arrive at Dulles International Airport in Virginia.</description>
+    <category>sehat</category>
+    <author>بابر شاہ</author>
+    <pubDate>Thu, 21 May 2026 18:52:38 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>U.S. Adds Security Measures at Dulles to Receive Citizens Who Have Been in Ebola Outbreak Region</title>
+    <link>https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---49eb04</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---49eb04</guid>
+    <description>The Department of Homeland Security directed all flights carrying certain travelers to arrive at Dulles International Airport in Virginia.</description>
+    <category>sehat</category>
+    <author>عمران ملک</author>
+    <pubDate>Thu, 21 May 2026 18:52:38 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/u-s-adds-security-measures-at-dulles-to-receive-citizens-who-have-been-in-ebola---49eb04.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>U.S. Adds Security Measures at Dulles to Receive Citizens Who Have Been in Ebola Outbreak Region</title>
@@ -203,7 +363,7 @@
     <category>sehat</category>
     <author>فاطمہ حسین</author>
     <pubDate>Thu, 21 May 2026 18:52:38 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/spotlight-5.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>TV presenter Judith Chalmers dies aged 90</title>
@@ -213,7 +373,7 @@
     <category>shobiz</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 13:49:35 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/entertainment/asymmetric-3.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Turkish riot police storm opposition offices after leaders ousted</title>
@@ -223,27 +383,47 @@
     <category>dunya</category>
     <author>عمران ملک</author>
     <pubDate>Sun, 24 May 2026 19:49:39 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/diagonal-3.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Turkish riot police storm opposition offices after leaders ousted</title>
+    <link>https://pakistan-news.news/article/turkish-riot-police-storm-opposition-offices-after-leaders-ousted--dzojzz</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/turkish-riot-police-storm-opposition-offices-after-leaders-ousted--dzojzz</guid>
+    <description>Officers forced their way into the building days after the party vowed to defy a court ruling removing its leaders.</description>
+    <category>dunya</category>
+    <author>عمران ملک</author>
+    <pubDate>Sun, 24 May 2026 19:49:39 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Turkish riot police storm opposition offices after leaders ousted</title>
+    <link>https://pakistan-news.news/article/turkish-riot-police-storm-opposition-offices-after-leaders-ousted--bot39n</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/turkish-riot-police-storm-opposition-offices-after-leaders-ousted--bot39n</guid>
+    <description>Officers forced their way into the building days after the party vowed to defy a court ruling removing its leaders.</description>
+    <category>dunya</category>
+    <author>علی احمد</author>
+    <pubDate>Sun, 24 May 2026 19:49:39 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/turkish-riot-police-storm-opposition-offices-after-leaders-ousted--bot39n.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>&apos;Tuchel&apos;s gambles and iron conviction position him as the anti-Southgate&apos;</title>
     <link>https://pakistan-news.news/article/tuchel-s-gambles-and-iron-conviction-position-him-as-the-anti-southgate--zl0mxy</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/tuchel-s-gambles-and-iron-conviction-position-him-as-the-anti-southgate--zl0mxy</guid>
-    <description>Thomas Tuchel proves he is the \&quot;anti-Southgate\&quot; in making tough calls for England&apos;s World Cup 2026 squad.</description>
+    <description>Thomas Tuchel proves he is the \\\&quot;anti-Southgate\\\&quot; in making tough calls for England&apos;s World Cup 2026 squad.</description>
     <category>khel</category>
     <author>بابر شاہ</author>
     <pubDate>Fri, 22 May 2026 10:34:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/sports/asymmetric-5.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Trust and a connection - why Raducanu rehired Richardson</title>
     <link>https://pakistan-news.news/article/trust-and-a-connection-why-raducanu-rehired-richardson--8hym6a</link>
     <guid isPermaLink="true">https://pakistan-news.news/article/trust-and-a-connection-why-raducanu-rehired-richardson--8hym6a</guid>
-    <description>Emma Raducanu believes it is \&quot;very difficult to say\&quot; she made a mistake in parting ways with recently rehired coach Andrew Richardson after her US Open triumph.</description>
+    <description>Emma Raducanu believes it is \\\&quot;very difficult to say\\\&quot; she made a mistake in parting ways with recently rehired coach Andrew Richardson after her US Open triumph.</description>
     <category>khel</category>
     <author>فاطمہ حسین</author>
     <pubDate>Fri, 22 May 2026 17:30:43 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/sports/bottom-wave-4.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Trump wants new Fed chair to be &apos;totally independent&apos;</title>
@@ -253,7 +433,7 @@
     <category>karobar</category>
     <author>بابر شاہ</author>
     <pubDate>Fri, 22 May 2026 18:16:58 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/politics/corner-3.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Trump’s Self-Indulgent Streak Deepens G.O.P. Fears He is Risking Losses in Midterms</title>
@@ -263,7 +443,37 @@
     <category>siasat</category>
     <author>سارہ خان</author>
     <pubDate>Mon, 25 May 2026 09:03:09 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/politics/top-banner-5.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Trump’s Self-Indulgent Streak Deepens G.O.P. Fears He is Risking Losses in Midterms</title>
+    <link>https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--t79f3w</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--t79f3w</guid>
+    <description>“The stupid stuff is killing our chances,” said a retiring Republican senator.</description>
+    <category>siasat</category>
+    <author>سارہ خان</author>
+    <pubDate>Mon, 25 May 2026 09:03:09 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--t79f3w.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Trump’s Self-Indulgent Streak Deepens G.O.P. Fears He is Risking Losses in Midterms</title>
+    <link>https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--ectuy0</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/trump-s-self-indulgent-streak-deepens-g-o-p-fears-he-is-risking-losses-in-midter--ectuy0</guid>
+    <description>“The stupid stuff is killing our chances,” said a retiring Republican senator.</description>
+    <category>siasat</category>
+    <author>سارہ خان</author>
+    <pubDate>Mon, 25 May 2026 09:03:09 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/world.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
+    <link>https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--sqzx18</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--sqzx18</guid>
+    <description>Public health experts say the administration’s quarantine orders go beyond what is needed to prevent the U.S. spread of Ebola and hantavirus.</description>
+    <category>sehat</category>
+    <author>فاطمہ حسین</author>
+    <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--sqzx18.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
@@ -273,7 +483,17 @@
     <category>sehat</category>
     <author>علی احمد</author>
     <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/politics/horizon-2.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
+    <link>https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--9gio37</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/trump-officials-strict-stand-on-ebola-leaves-health-experts-stunned--9gio37</guid>
+    <description>Public health experts say the administration’s quarantine orders go beyond what is needed to prevent the U.S. spread of Ebola and hantavirus.</description>
+    <category>sehat</category>
+    <author>عمران ملک</author>
+    <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Trump Officials’ Strict Stand on Ebola Leaves Health Experts ‘Stunned’</title>
@@ -283,7 +503,7 @@
     <category>sehat</category>
     <author>عمران ملک</author>
     <pubDate>Fri, 22 May 2026 00:22:27 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/politics/spotlight-5.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/health.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Trump Cancels Signing of Executive Order Granting Oversight of A.I. Models</title>
@@ -293,227 +513,7 @@
     <category>technology</category>
     <author>بابر شاہ</author>
     <pubDate>Thu, 21 May 2026 17:47:33 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/politics/spotlight-2.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump Approved a Nvidia Chip for Sale in China. Beijing Doesn’t Want It.</title>
-    <link>https://pakistan-news.news/article/trump-approved-a-nvidia-chip-for-sale-in-china-beijing-doesn-t-want-it--mgz0ro</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-approved-a-nvidia-chip-for-sale-in-china-beijing-doesn-t-want-it--mgz0ro</guid>
-    <description>The U.S. tech giant’s powerful H200 chip seemed poised to boost Beijing’s A.I. ambitions, but not a single one has been purchased in China.</description>
-    <category>technology</category>
-    <author>سارہ خان</author>
-    <pubDate>Thu, 21 May 2026 12:21:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/politics/corner-1.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Trump Administration Offers Conflicting View of Civil Rights Cuts</title>
-    <link>https://pakistan-news.news/article/trump-administration-offers-conflicting-view-of-civil-rights-cuts--ezbeiq</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/trump-administration-offers-conflicting-view-of-civil-rights-cuts--ezbeiq</guid>
-    <description>Education Secretary Linda McMahon has said she wants to hire more civil rights lawyers, but the White House has proposed cutting that office in half.</description>
-    <category>siasat</category>
-    <author>فاطمہ حسین</author>
-    <pubDate>Fri, 22 May 2026 20:53:51 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/politics/corner-2.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Toilets and changing rooms must be used on basis of biological sex, guidance confirms</title>
-    <link>https://pakistan-news.news/article/toilets-and-changing-rooms-must-be-used-on-basis-of-biological-sex-guidance-conf--yo9ulz</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/toilets-and-changing-rooms-must-be-used-on-basis-of-biological-sex-guidance-conf--yo9ulz</guid>
-    <description>The guidance was published on Thursday following the landmark Supreme Court ruling last year.</description>
-    <category>sehat</category>
-    <author>عمران ملک</author>
-    <pubDate>Thu, 21 May 2026 18:30:20 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/business/spotlight-5.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Toilets and changing rooms must be used on basis of biological sex, guidance confirms</title>
-    <link>https://pakistan-news.news/article/toilets-and-changing-rooms-must-be-used-on-basis-of-biological-sex-guidance-conf--qfd4e2</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/toilets-and-changing-rooms-must-be-used-on-basis-of-biological-sex-guidance-conf--qfd4e2</guid>
-    <description>The guidance was published on Thursday following the landmark Supreme Court ruling last year.</description>
-    <category>sehat</category>
-    <author>بابر شاہ</author>
-    <pubDate>Thu, 21 May 2026 18:30:20 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/business/bottom-wave-4.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>The tragedy of the &apos;invisible killer&apos; of the young</title>
-    <link>https://pakistan-news.news/article/the-tragedy-of-the-invisible-killer-of-the-young--y1gbcs</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/the-tragedy-of-the-invisible-killer-of-the-young--y1gbcs</guid>
-    <description>Bereaved families are calling for a national cardiac screening programme for over-14s</description>
-    <category>sehat</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 05:05:56 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/horizon-3.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>The tragedy of the &apos;invisible killer&apos; of the young</title>
-    <link>https://pakistan-news.news/article/the-tragedy-of-the-invisible-killer-of-the-young--c7xz0i</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/the-tragedy-of-the-invisible-killer-of-the-young--c7xz0i</guid>
-    <description>Bereaved families are calling for a national cardiac screening programme for over-14s</description>
-    <category>sehat</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 05:05:56 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/horizon-5.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>The title battle finally came alive - then Antonelli took control</title>
-    <link>https://pakistan-news.news/article/the-title-battle-finally-came-alive-then-antonelli-took-control--ul0frt</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/the-title-battle-finally-came-alive-then-antonelli-took-control--ul0frt</guid>
-    <description>The Formula 1 title battle caught light in Canada - but then took a potentially decisive turn, writes Andrew Benson.</description>
-    <category>khel</category>
-    <author>علی احمد</author>
-    <pubDate>Mon, 25 May 2026 00:59:57 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/sports/diagonal-5.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>The space race to create gym equipment for future astronauts</title>
-    <link>https://pakistan-news.news/article/the-space-race-to-create-gym-equipment-for-future-astronauts--k2ha09</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/the-space-race-to-create-gym-equipment-for-future-astronauts--k2ha09</guid>
-    <description>Scientists are attempting to build exercise equipment to be used on future space flights.</description>
-    <category>science</category>
-    <author>بابر شاہ</author>
-    <pubDate>Fri, 22 May 2026 23:42:07 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/bottom-wave-1.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Sundar Pichai Understands Why People Are Anxious About A.I.</title>
-    <link>https://pakistan-news.news/article/sundar-pichai-understands-why-people-are-anxious-about-a-i--a1dwvk</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/sundar-pichai-understands-why-people-are-anxious-about-a-i--a1dwvk</guid>
-    <description>After a busy Google I/O, the company’s chief executive sits down with the hosts of “Hard Fork” to discuss the future of Google Search, how he’s using A.I. agent</description>
-    <category>technology</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 14:49:56 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/stripe-1.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Stop blaming young people for being unemployed, says Amazon&apos;s UK boss</title>
-    <link>https://pakistan-news.news/article/stop-blaming-young-people-for-being-unemployed-says-amazon-s-uk-boss--j0xpuk</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/stop-blaming-young-people-for-being-unemployed-says-amazon-s-uk-boss--j0xpuk</guid>
-    <description>John Boumphrey says the education system \&quot;isn&apos;t necessarily producing young people who are ready for work\&quot;.</description>
-    <category>karobar</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 10:56:32 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/business/stripe-4.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Stocks Gain for 8th Week Amid Impasse Over Reopening Strait of Hormuz</title>
-    <link>https://pakistan-news.news/article/stocks-gain-for-8th-week-amid-impasse-over-reopening-strait-of-hormuz--2tr70u</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/stocks-gain-for-8th-week-amid-impasse-over-reopening-strait-of-hormuz--2tr70u</guid>
-    <description>Nearly three months since the fighting began, disagreements remain over the fate of Iran’s uranium stockpile and transit fees for the Strait of Hormuz.</description>
-    <category>karobar</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 20:28:01 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/stripe-1.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>&apos;Spurs avoid humiliation but elation of fans will soon turn to anger&apos;</title>
-    <link>https://pakistan-news.news/article/spurs-avoid-humiliation-but-elation-of-fans-will-soon-turn-to-anger--6numlh</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/spurs-avoid-humiliation-but-elation-of-fans-will-soon-turn-to-anger--6numlh</guid>
-    <description>Tottenham Hotspur&apos;s celebrations in survival cannot cover up their embarrassment of a season that almost ended in the unthinkable, says chief football writer Ph</description>
-    <category>khel</category>
-    <author>بابر شاہ</author>
-    <pubDate>Sun, 24 May 2026 19:19:39 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/sports/diagonal-1.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>SpaceX to Attempt Launch of Updated Starship Rocket</title>
-    <link>https://pakistan-news.news/article/spacex-to-attempt-launch-of-updated-starship-rocket--zt94kt</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/spacex-to-attempt-launch-of-updated-starship-rocket--zt94kt</guid>
-    <description>If a problem with the launch tower is fixed, SpaceX will try to launch on Friday evening.</description>
-    <category>science</category>
-    <author>فاطمہ حسین</author>
-    <pubDate>Fri, 22 May 2026 19:49:21 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/bottom-wave-1.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>SpaceX Completes Mostly Successful Starship Rocket Flight</title>
-    <link>https://pakistan-news.news/article/spacex-completes-mostly-successful-starship-rocket-flight--g5fq58</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/spacex-completes-mostly-successful-starship-rocket-flight--g5fq58</guid>
-    <description>The 12th test flight of SpaceX’s gargantuan rocket launched on Friday evening and ended its journey in the Indian Ocean just over an hour later.</description>
-    <category>science</category>
-    <author>فاطمہ حسین</author>
-    <pubDate>Sat, 23 May 2026 17:21:18 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/pulse-4.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Six ways to keep your home and yourself cool in hot weather</title>
-    <link>https://pakistan-news.news/article/six-ways-to-keep-your-home-and-yourself-cool-in-hot-weather--r2zdz9</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/six-ways-to-keep-your-home-and-yourself-cool-in-hot-weather--r2zdz9</guid>
-    <description>Six simple things you can do to help keep your house cool when temperatures rise.</description>
-    <category>science</category>
-    <author>بابر شاہ</author>
-    <pubDate>Wed, 20 May 2026 09:23:43 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/horizon-2.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Six ways to keep your home and yourself cool in hot weather</title>
-    <link>https://pakistan-news.news/article/six-ways-to-keep-your-home-and-yourself-cool-in-hot-weather--gegymo</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/six-ways-to-keep-your-home-and-yourself-cool-in-hot-weather--gegymo</guid>
-    <description>Six simple things you can do to help keep your house cool when temperatures rise.</description>
-    <category>science</category>
-    <author>علی احمد</author>
-    <pubDate>Wed, 20 May 2026 09:23:43 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/science/diagonal-1.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>She was told to marry in a country which bans girls&apos; education. So she got in a taxi and fled</title>
-    <link>https://pakistan-news.news/article/she-was-told-to-marry-in-a-country-which-bans-girls-education-so-she-got-in-a-ta--x4fozv</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/she-was-told-to-marry-in-a-country-which-bans-girls-education-so-she-got-in-a-ta--x4fozv</guid>
-    <description>Nearly five years on from Afghanistan&apos;s school ban, young women say they have waved goodbye to their dreams.</description>
-    <category>dunya</category>
-    <author>علی احمد</author>
-    <pubDate>Sun, 24 May 2026 21:02:08 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/top-banner-2.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Russia&apos;s Putin vows retaliation after accusing Ukraine of hitting student dormitory</title>
-    <link>https://pakistan-news.news/article/russia-s-putin-vows-retaliation-after-accusing-ukraine-of-hitting-student-dormit--i7gpf7</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/russia-s-putin-vows-retaliation-after-accusing-ukraine-of-hitting-student-dormit--i7gpf7</guid>
-    <description>Ukraine said it hit Russia&apos;s elite Rubicon drone military unit in a Moscow-occupied part of eastern Ukraine.</description>
-    <category>dunya</category>
-    <author>علی احمد</author>
-    <pubDate>Fri, 22 May 2026 19:40:14 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/technology/spotlight-3.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Rubio tries to reassure Nato allies over US troop deployments</title>
-    <link>https://pakistan-news.news/article/rubio-tries-to-reassure-nato-allies-over-us-troop-deployments--4wgskv</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/rubio-tries-to-reassure-nato-allies-over-us-troop-deployments--4wgskv</guid>
-    <description>President Donald Trump says he wants to send more troops to Poland, a week after his officials cancelled a similar deployment.</description>
-    <category>dunya</category>
-    <author>عمران ملک</author>
-    <pubDate>Fri, 22 May 2026 15:18:30 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/spotlight-5.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Rubio says &apos;solid&apos; Iran deal may come on Monday</title>
-    <link>https://pakistan-news.news/article/rubio-says-solid-iran-deal-may-come-on-monday--maxczz</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/rubio-says-solid-iran-deal-may-come-on-monday--maxczz</guid>
-    <description>The deal under discussion would involve a 60-day ceasefire extension during which the Strait of Hormuz would be reopened, US media reports.</description>
-    <category>dunya</category>
-    <author>سارہ خان</author>
-    <pubDate>Mon, 25 May 2026 08:28:12 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/world/pulse-3.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Riskiest skin cancer cases hit UK record high</title>
-    <link>https://pakistan-news.news/article/riskiest-skin-cancer-cases-hit-uk-record-high--uo5u0a</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/riskiest-skin-cancer-cases-hit-uk-record-high--uo5u0a</guid>
-    <description>The number of melanoma skin cancer cases has risen above 20,000 a year for the first time in the UK.</description>
-    <category>sehat</category>
-    <author>بابر شاہ</author>
-    <pubDate>Thu, 21 May 2026 23:15:18 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/asymmetric-2.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Riskiest skin cancer cases hit UK record high</title>
-    <link>https://pakistan-news.news/article/riskiest-skin-cancer-cases-hit-uk-record-high--5qcvdp</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/riskiest-skin-cancer-cases-hit-uk-record-high--5qcvdp</guid>
-    <description>The number of melanoma skin cancer cases has risen above 20,000 a year for the first time in the UK.</description>
-    <category>sehat</category>
-    <author>عمران ملک</author>
-    <pubDate>Thu, 21 May 2026 23:15:18 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/categories/health/corner-2.jpg" type="image/jpeg" />
+    <enclosure url="https://pakistan-news.news/fallback/technology.jpg" type="image/jpeg" />
   </item>
   </channel>
 </rss>

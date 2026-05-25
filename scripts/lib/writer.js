@@ -21,7 +21,7 @@ function articleExists(slug) {
   })
 }
 
-function writeArticle(article) {
+async function writeArticle(article) {
   ensureDir(ARTICLES_DIR)
 
   if (articleExists(article.slug)) {
@@ -29,7 +29,7 @@ function writeArticle(article) {
     return false
   }
 
-  const mdxContent = buildMdxContent(article)
+  const mdxContent = await buildMdxContent(article)
   const filePath = path.join(ARTICLES_DIR, `${article.slug}.mdx`)
 
   try {
@@ -44,7 +44,7 @@ function writeArticle(article) {
   }
 }
 
-function writeAllArticles(articles) {
+async function writeAllArticles(articles) {
   ensureDir(ARTICLES_DIR)
 
   let written = 0
@@ -56,7 +56,7 @@ function writeAllArticles(articles) {
       skipped++
       continue
     }
-    const result = writeArticle(article)
+    const result = await writeArticle(article)
     if (result) written++
     else failed++
   }

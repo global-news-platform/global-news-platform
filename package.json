@@ -13,6 +13,7 @@
     "ingest": "node scripts/pipeline.js --ingest-only",
     "sitemap": "node scripts/lib/sitemap.js",
     "feed": "node scripts/lib/feed.js",
+    "fix-images": "node scripts/fix-images.js",
     "verify": "npm run typecheck && npm run build"
   },
   "dependencies": {

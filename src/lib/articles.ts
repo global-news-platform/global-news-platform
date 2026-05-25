@@ -147,6 +147,7 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
         slug,
         categorySlug: categoryInfo?.slug,
         frontmatterImage: frontmatter.image as string | undefined | null,
+        title: sanitizedTitle,
       })
 
       return {
