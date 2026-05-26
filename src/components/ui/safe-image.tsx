@@ -3,34 +3,9 @@
 import { useState, useCallback } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { getFallbackImageUrl } from "@/lib/images/fallbackImages"
 
 const FALLBACK_IMAGE = "/images/fallbacks/default.jpg"
-
-const CATEGORY_FALLBACK_MAP: Record<string, string> = {
-  pakistan: "pakistan",
-  dunya: "world",
-  siasat: "politics",
-  karobar: "business",
-  technology: "technology",
-  khel: "sports",
-  sehat: "health",
-  shobiz: "entertainment",
-  science: "science",
-  mazhab: "default",
-  taleem: "default",
-  mausam: "default",
-  crime: "default",
-  adalat: "default",
-  baynalaqwami: "world",
-  raye: "politics",
-  videos: "entertainment",
-  general: "default",
-}
-
-function getCategoryFallbackFile(categorySlug?: string): string {
-  const name = CATEGORY_FALLBACK_MAP[categorySlug || ""] || "default"
-  return `/images/fallbacks/${name}.jpg`
-}
 
 function normalizeImage(image: string | undefined | null): string {
   if (!image || typeof image !== "string" || image.trim() === "") return FALLBACK_IMAGE
@@ -59,10 +34,17 @@ export function SafeImage({
 }: SafeImageProps) {
   const currentSrc = normalizeImage(src)
   const [fallbackSrc, setFallbackSrc] = useState<string | null>(null)
+  const [fallbackLevel, setFallbackLevel] = useState(0)
 
   const handleError = useCallback(() => {
-    setFallbackSrc(getCategoryFallbackFile(categorySlug))
-  }, [categorySlug])
+    if (fallbackLevel === 0) {
+      setFallbackLevel(1)
+      setFallbackSrc(getFallbackImageUrl(categorySlug))
+    } else {
+      setFallbackLevel(2)
+      setFallbackSrc(FALLBACK_IMAGE)
+    }
+  }, [categorySlug, fallbackLevel])
 
   return (
     <div className={cn("relative overflow-hidden w-full h-full", wrapperClassName)}>

@@ -6,7 +6,7 @@ const isVercelExport = process.env.VERCEL === "1"
 const nextConfig: NextConfig = {
   output: isVercelExport ? "export" : undefined,
   images: {
-    unoptimized: isVercelExport,
+    unoptimized: true,
     formats: ["image/webp", "image/avif"],
     deviceSizes: [480, 640, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],

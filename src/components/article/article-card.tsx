@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { formatDateRelative } from "@/lib/utils"
 import { categories } from "@/lib/constants"
+import { getFallbackImageUrl } from "@/lib/images/fallbackImages"
 import type { ArticleLink } from "@/types"
 
 interface ArticleCardProps {
@@ -12,22 +13,10 @@ interface ArticleCardProps {
   variant?: "hero" | "featured" | "horizontal" | "text-list" | "compact" | "default"
 }
 
-const CATEGORY_FALLBACKS: Record<string, string> = {
-  pakistan: "/images/fallbacks/pakistan.jpg",
-  dunya: "/images/fallbacks/world.jpg",
-  siasat: "/images/fallbacks/politics.jpg",
-  karobar: "/images/fallbacks/business.jpg",
-  technology: "/images/fallbacks/technology.jpg",
-  khel: "/images/fallbacks/sports.jpg",
-  sehat: "/images/fallbacks/health.jpg",
-  shobiz: "/images/fallbacks/entertainment.jpg",
-  science: "/images/fallbacks/science.jpg",
-}
-
 const DEFAULT_FALLBACK = "/images/fallbacks/default.jpg"
 
 function getCategoryFallback(categorySlug: string): string {
-  return CATEGORY_FALLBACKS[categorySlug] || DEFAULT_FALLBACK
+  return getFallbackImageUrl(categorySlug)
 }
 
 function ArticleImage({

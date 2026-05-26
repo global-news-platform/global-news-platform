@@ -1,4 +1,4 @@
-const CATEGORY_GRADIENTS: Record<string, string> = {
+export const CATEGORY_GRADIENTS: Record<string, string> = {
   pakistan: "from-[#1a3a2a] to-[#0d1f16]",
   dunya: "from-[#0f1f3a] to-[#071128]",
   siasat: "from-[#2d0f0f] to-[#1a0707]",
@@ -31,6 +31,37 @@ export function getCategoryGradient(slug?: string): string {
   return CATEGORY_GRADIENTS[slug?.toLowerCase() || ""] || CATEGORY_GRADIENTS.general
 }
 
-export function getFallbackImageUrl(_slug?: string): string {
-  return ""
+export const CATEGORY_FALLBACK_MAP: Record<string, string> = {
+  pakistan: "pakistan",
+  dunya: "world",
+  siasat: "politics",
+  karobar: "business",
+  technology: "technology",
+  khel: "sports",
+  sehat: "health",
+  shobiz: "entertainment",
+  science: "science",
+  mazhab: "default",
+  taleem: "default",
+  mausam: "default",
+  crime: "default",
+  adalat: "default",
+  baynalaqwami: "world",
+  raye: "politics",
+  videos: "entertainment",
+  general: "default",
+  world: "world",
+  politics: "politics",
+  business: "business",
+  sports: "sports",
+  health: "health",
+  entertainment: "entertainment",
+  breaking: "default",
 }
+
+export function getFallbackImageUrl(slug?: string): string {
+  const name = CATEGORY_FALLBACK_MAP[slug?.toLowerCase() || ""] || "default"
+  return `/images/fallbacks/${name}.jpg`
+}
+
+

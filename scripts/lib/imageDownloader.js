@@ -4,6 +4,7 @@ const http = require("http")
 const https = require("https")
 const crypto = require("crypto")
 const sharp = require("sharp")
+const { searchImage } = require("./imageSearch")
 
 const ARTICLES_DIR = path.join(__dirname, "../../public/images/articles")
 const FALLBACKS_DIR = path.join(__dirname, "../../public/images/fallbacks")
@@ -113,7 +114,7 @@ function downloadImageBuffer(url) {
         return
       }
       const chunks = []
-      const maxSize = 10 * 1024 * 1024
+      const maxSize = 50 * 1024 * 1024
       let totalSize = 0
       res.on("data", (chunk) => {
         totalSize += chunk.length
@@ -297,6 +298,13 @@ async function downloadArticleImage(article) {
     }
   }
 
+  const wikiResult = await searchImage(article.title)
+  if (wikiResult && wikiResult.url) {
+    console.log(`  → Trying Wikipedia image for "${(article.title || "").substring(0, 50)}": ${wikiResult.url}`)
+    const result = await tryDownload(slug, wikiResult.url, article)
+    if (result) return result
+  }
+
   const kw = getKeywordFallback(article.title)
   if (kw) {
     console.log(`  ⚠ Using keyword fallback for "${(article.title || "").substring(0, 50)}": ${kw.image}`)
@@ -372,6 +380,7 @@ function ensureArticleImage(article) {
 
 module.exports = {
   downloadArticleImage,
+  tryDownload,
   getBestImageUrl,
   getFallbackForCategory,
   getKeywordFallback,

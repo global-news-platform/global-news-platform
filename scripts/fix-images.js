@@ -9,6 +9,7 @@ const {
   verifyLocalImage,
   fetchOgImage,
 } = require("./lib/imageDownloader")
+const { searchImage } = require("./lib/imageSearch")
 
 const ARTICLES_DIR = path.join(__dirname, "../src/data/articles")
 const ARTICLES_IMG_DIR = path.join(__dirname, "../public/images/articles")
@@ -167,6 +168,23 @@ async function fixArticleImage(slug, fm, filePath) {
     }
   }
 
+  if (!hasLocalArticleImage(slug)) {
+    var wikiImg = await searchImage(title)
+    if (wikiImg && wikiImg.url) {
+      var article = {
+        slug: slug, title: title, sourceUrl: fm.sourceUrl || "", ogImage: wikiImg.url,
+        imageUrl: wikiImg.url, imageUrls: [wikiImg.url],
+        categorySlug: categorySlug, category: fm.category,
+      }
+      var result = await downloadArticleImage(article)
+      if (result && result.path && result.path.startsWith("/images/articles/")) {
+        fm.image = result.path
+        writeArticleMdx(filePath, fm, fs.readFileSync(filePath, "utf-8"))
+        return { fixed: true, reason: "wikipedia", image: result.path }
+      }
+    }
+  }
+
   var kw = getKeywordFallback(title)
   if (kw) {
     var kwPath = path.join(__dirname, "../public", kw.image)
@@ -243,7 +261,7 @@ async function main() {
 
     if (result.fixed) {
       stats.fixed++
-      if (result.reason === "og-image" || result.reason === "downloaded") stats.ogImage++
+      if (result.reason === "og-image" || result.reason === "downloaded" || result.reason === "wikipedia") stats.ogImage++
       else if (result.reason === "keyword-fallback") stats.keywordFallback++
       else if (result.reason === "category-fallback" || result.reason === "default-fallback") stats.categoryFallback++
       else if (result.reason === "path-fixed") stats.pathFixed++

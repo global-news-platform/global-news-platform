@@ -1,30 +1,10 @@
 import fs from "fs"
 import path from "path"
+import { getFallbackImageUrl } from "@/lib/images/fallbackImages"
 
 const ARTICLES_IMG_DIR = path.join(process.cwd(), "public/images/articles")
 const FALLBACKS_DIR = path.join(process.cwd(), "public/images/fallbacks")
 const MIN_FILE_SIZE = 5000
-
-const CATEGORY_FALLBACK_MAP: Record<string, string> = {
-  pakistan: "pakistan",
-  dunya: "world",
-  siasat: "politics",
-  karobar: "business",
-  technology: "technology",
-  khel: "sports",
-  sehat: "health",
-  shobiz: "entertainment",
-  science: "science",
-  mazhab: "default",
-  taleem: "default",
-  mausam: "default",
-  crime: "default",
-  adalat: "default",
-  baynalaqwami: "world",
-  raye: "politics",
-  videos: "entertainment",
-  general: "default",
-}
 
 function fileExists(fp: string): boolean {
   try { return fs.existsSync(fp) } catch { return false }
@@ -50,18 +30,14 @@ function findLocalImage(slug: string): string | null {
 
 function resolveFallbackImage(categorySlug?: string): string | undefined {
   if (!fileExists(FALLBACKS_DIR)) return undefined
-  const name = CATEGORY_FALLBACK_MAP[categorySlug || ""] || "default"
-  for (const ext of [".jpg", ".jpeg", ".png", ".webp"]) {
-    const candidate = path.join(FALLBACKS_DIR, `${name}${ext}`)
-    if (fileExists(candidate) && fs.statSync(candidate).size > 0) {
-      return `/images/fallbacks/${name}${ext}`
-    }
+  const url = getFallbackImageUrl(categorySlug)
+  const localPath = path.join(process.cwd(), "public", url)
+  if (fileExists(localPath) && fs.statSync(localPath).size > 0) {
+    return url
   }
-  for (const ext of [".jpg", ".jpeg", ".png", ".webp"]) {
-    const candidate = path.join(FALLBACKS_DIR, `default${ext}`)
-    if (fileExists(candidate) && fs.statSync(candidate).size > 0) {
-      return `/images/fallbacks/default${ext}`
-    }
+  const defaultPath = path.join(FALLBACKS_DIR, "default.jpg")
+  if (fileExists(defaultPath) && fs.statSync(defaultPath).size > 0) {
+    return "/images/fallbacks/default.jpg"
   }
   return undefined
 }

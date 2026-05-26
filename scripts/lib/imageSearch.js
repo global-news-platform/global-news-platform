@@ -55,14 +55,34 @@ function extractKeywords(title) {
   return unique.slice(0, 8)
 }
 
+function thumbToOriginal(thumbUrl) {
+  if (!thumbUrl) return null
+  const match = thumbUrl.match(/^(https?:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/)thumb\/(.+?)\/\d+px-(.+)$/)
+  if (match) {
+    return match[1] + match[2]
+  }
+  const simpleMatch = thumbUrl.match(/^(https?:\/\/upload\.wikimedia\.org\/wikipedia\/(?:commons|[a-z]+)\/)\d+px-(.+)$/)
+  if (simpleMatch) {
+    return null
+  }
+  return thumbUrl
+}
+
 async function getWikipediaImage(title) {
   const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`
   try {
     const data = await fetchJson(url)
+    if (data.originalimage && data.originalimage.source) {
+      let src = data.originalimage.source
+      const orig = thumbToOriginal(src)
+      if (orig) src = orig
+      return { url: src, source: "wikipedia", width: data.originalimage.width || 1200, height: data.originalimage.height || 800, pageTitle: data.title }
+    }
     if (data.thumbnail && data.thumbnail.source) {
       let src = data.thumbnail.source
-      src = src.replace(/\/\d+px-/, "/1200px-")
-      return { url: src, source: "wikipedia", width: 1200, height: data.thumbnail.height || 800, pageTitle: data.title }
+      const orig = thumbToOriginal(src)
+      if (orig) src = orig
+      return { url: src, source: "wikipedia", width: data.thumbnail.width || 800, height: data.thumbnail.height || 600, pageTitle: data.title }
     }
     return null
   } catch {
@@ -83,8 +103,9 @@ async function searchWikipediaEntity(entity) {
     for (const page of Object.values(imgData.query.pages)) {
       if (page.thumbnail && page.thumbnail.source) {
         let src = page.thumbnail.source
-        src = src.replace(/\/\d+px-/, "/1200px-")
-        return { url: src, source: "wikipedia", width: 1200, height: page.thumbnail.height || 800, pageTitle: page.title }
+        const orig = thumbToOriginal(src)
+        if (orig) src = orig
+        return { url: src, source: "wikipedia", width: page.thumbnail.width || 800, height: page.thumbnail.height || 600, pageTitle: page.title }
       }
     }
     return null
