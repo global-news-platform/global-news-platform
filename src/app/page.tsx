@@ -134,7 +134,7 @@ export default async function HomePage() {
       excerpt: "واشنگٹن ڈی سی میں وفاقی عدالت میں دائر نئے مقدمے میں صدر ٹرمپ کی انتظامیہ پر الزام عائد کیا گیا ہے کہ انہوں نے محکمہ انصاف کو سیاسی مقاصد کے لیے استعمال کیا۔",
       category: "سیاست",
       categorySlug: "siasat",
-      image: "/images/fallbacks/politics.jpg",
+      image: "/images/articles/as-trump-politicizes-justice-dept-prosecutors-struggle-with-grand-juries--tu3cds.jpg",
     }),
     curatedArticle({
       slug: "georgia-governor-election",
@@ -158,7 +158,7 @@ export default async function HomePage() {
       excerpt: "امریکی صدر کی ایران کے ساتھ مذاکرات اور اسرائیل کے ساتھ تعلقات میں تبدیلیوں نے مشرقِ وسطیٰ میں طاقت کے توازن کو متاثر کیا ہے۔",
       category: "دنیا",
       categorySlug: "dunya",
-      image: "/images/fallbacks/world.jpg",
+      image: "/images/articles/deal-with-us-not-imminent-iran-says--h0ynt0.jpg",
     }),
     curatedArticle({
       slug: "ai-digital-courts",
@@ -166,7 +166,7 @@ export default async function HomePage() {
       excerpt: "عدلیہ میں مصنوعی ذہانت کے استعمال سے متعلق نئے قوانین ملک بھر کی عدالتوں میں نافذ کر دیے گئے ہیں جس سے قانونی کارروائیوں میں تیزی آئے گی۔",
       category: "ٹیکنالوجی",
       categorySlug: "technology",
-      image: "/images/fallbacks/technology.jpg",
+      image: "/images/articles/artificial-intelligence-floods-court-dockets-with-home-brewed-lawsuits--x3xkal.jpg",
     }),
   ]
 
@@ -202,7 +202,7 @@ export default async function HomePage() {
     excerpt: "مصنوعی ذہانت کے تیزی سے پھیلاؤ نے سائبر سیکیورٹی کے شعبے میں نئی ملازمتوں کے دروازے کھول دیے ہیں۔ ماہرین کے مطابق اگلے پانچ سالوں میں اس شعبے میں پچاس فیصد سے زائد اضافہ متوقع ہے۔",
     category: "ٹیکنالوجی",
     categorySlug: "technology",
-    image: "/images/fallbacks/technology.jpg",
+    image: "/images/articles/one-job-that-is-growing-in-the-a-i-era-cybersecurity-experts--y7p0ds.jpg",
     imageAlt: "مصنوعی ذہانت اور روزگار",
   })
 

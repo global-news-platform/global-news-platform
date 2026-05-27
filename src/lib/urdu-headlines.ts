@@ -52,6 +52,57 @@ const MANUAL_HEADLINE_OVERRIDES: Record<string, string> = {
     "علاقائی ثالث ایران اور امریکہ کے درمیان جنگ بندی بچانے میں مصروف",
   "U.S.-Iran Peace Deal Nearer but Could Take Days to Nail Down, U.S. Official Says":
     "امریکی ایران امن معاہدہ قریب، حتمی شکل دینے میں مزید وقت درکار",
+
+  "Iran's Khamenei warns Trump over nuclear threats":
+    "ایران کے رہبر معظم نے ٹرمپ کو جوہری دھمکیوں پر خبردار کر دیا",
+  "US Justice Department sues Apple over antitrust violations":
+    "امریکی محکمہ انصاف نے ایپل کے خلاف عدم اعتماد کے قوانین کی خلاف ورزی پر مقدمہ دائر کر دیا",
+  "Trump administration faces new legal challenges over immigration policy":
+    "ٹرمپ انتظامیہ کو امیگریشن پالیسی پر نئے قانونی چیلنجز کا سامنا",
+  "Israel kills senior Hamas commander in Gaza strike":
+    "اسرائیل نے غزہ حملے میں حماس کے سینئر کمانڈر کو ہلاک کر دیا",
+  "Pakistan seeks IMF bailout package to stabilize economy":
+    "پاکستان معیشت کو مستحکم کرنے کے لیے آئی ایم ایف سے بیل آؤٹ پیکج کا خواہاں",
+  "India rejects Pakistan's offer for peace talks":
+    "بھارت نے پاکستان کی امن مذاکرات کی پیشکش کو مسترد کر دیا",
+  "Saudi Arabia and Iran restore diplomatic relations":
+    "سعودی عرب اور ایران کے درمیان سفارتی تعلقات بحال",
+  "Climate change threatens global food security":
+    "موسمیاتی تبدیلی عالمی خوراک کی حفاظت کے لیے خطرہ بن گئی",
+  "Apple unveils new AI features at annual developer conference":
+    "ایپل نے سالانہ ڈیولپر کانفرنس میں نئی مصنوعی ذہانت کی خصوصیات متعارف کر دیں",
+  "Pakistan vs India cricket match draws millions of viewers":
+    "پاکستان اور بھارت کے درمیان کرکٹ میچ نے لاکھوں ناظرین کو اپنی طرف متوجہ کر لیا",
+  "Google faces antitrust probe in European Union":
+    "گوگل کو یورپی یونین میں عدم اعتماد کی تحقیقات کا سامنا",
+  "Russia warns NATO against military buildup in Eastern Europe":
+    "روس نے نیٹو کو مشرقی یورپ میں فوجی تعمیرات کے خلاف خبردار کر دیا",
+  "US Federal Reserve keeps interest rates steady":
+    "امریکی فیڈرل ریزرو نے سود کی شرحیں برقرار رکھی ہیں",
+  "China threatens retaliation over US tariff hikes":
+    "چین نے امریکی ٹیرف میں اضافے کے خلاف جوابی کارروائی کی دھمکی دے دی",
+  "World Health Organization declares end to global health emergency":
+    "عالمی ادارہ صحت نے عالمی صحت کی ہنگامی صورتحال کے خاتمے کا اعلان کر دیا",
+  "SpaceX successfully launches crew to International Space Station":
+    "اسپیس ایکس نے بین الاقوامی خلائی اسٹیشن کے لیے خلابازوں کو کامیابی سے روانہ کر دیا",
+  "European Union imposes new sanctions on Russia":
+    "یورپی یونین نے روس پر نئی پابندیاں عائد کر دیں",
+  "Oil prices surge as Middle East tensions escalate":
+    "مشرق وسطیٰ میں بڑھتی ہوئی کشیدگی کے باعث تیل کی قیمتوں میں اضافہ",
+  "UK Parliament debates new digital privacy laws":
+    "برطانوی پارلیمنٹ میں نئے ڈیجیٹل پرائیویسی قوانین پر بحث",
+  "Pakistan Army kills 12 militants in North Waziristan operation":
+    "شمالی وزیرستان میں آپریشن میں پاکستان فوج نے 12 دہشت گردوں کو ہلاک کر دیا",
+  "Afghanistan faces worsening humanitarian crisis":
+    "افغانستان کو بڑھتے ہوئے انسانی بحران کا سامنا",
+  "Japanese scientists develop breakthrough cancer treatment":
+    "جاپانی سائنسدانوں نے کینسر کے علاج میں اہم پیشرفت کر لی",
+  "Australia introduces strict new social media laws for teenagers":
+    "آسٹریلیا نے نوعمروں کے لیے سوشل میڈیا پر سخت نئے قوانین متعارف کرا دیے",
+  "Bitcoin price reaches new all-time high":
+    "بٹ کوائن کی قیمت اب تک کی بلند ترین سطح پر پہنچ گئی",
+  "UN Security Council passes resolution on Gaza ceasefire":
+    "اقوام متحدہ کی سلامتی کونسل نے غزہ جنگ بندی پر قرارداد منظور کر لی",
 }
 
 const MANUAL_EXCERPT_OVERRIDES: Record<string, string> = {
@@ -531,13 +582,12 @@ const WORD_TRANSLATION: Record<string, string> = {
   "Cost": "لاگت",
 }
 
-const PHRASE_PATTERNS: [RegExp, (matches: RegExpMatchArray) => string][] = [
-  [/(\w+) says (\w+) is (\w+)/gi, (m) => `${m[1]} نے کہا کہ ${m[2]} ${m[3]} ہے`],
-  [/(\w+) warns (\w+) about (\w+)/gi, (m) => `${m[1]} نے ${m[2]} کو ${m[3]} سے خبردار کیا`],
-  [/(\w+) calls for (\w+)/gi, (m) => `${m[1]} نے ${m[2]} کا مطالبہ کیا`],
-  [/(\w+) rejects (\w+)/gi, (m) => `${m[1]} نے ${m[2]} کو مسترد کیا`],
-  [/(\w+) faces (\w+) over (\w+)/gi, (m) => `${m[1]} کو ${m[3]} پر ${m[2]} کا سامنا`],
-  [/(\w+) to (\w+) in (\w+)/gi, (m) => `${m[3]} میں ${m[2]} کے لیے ${m[1]}`],
+const PHRASE_PATTERNS: [RegExp, (matches: RegExpMatchArray, fullText: string) => string][] = [
+  [/(\w+(?:\s+\w+)?)\s+says\s+(\w+(?:\s+\w+)?)\s+is\s+(\w+(?:\s+\w+)?)/gi, (m) => `${m[1]} نے کہا کہ ${m[2]} ${m[3]} ہے`],
+  [/(\w+(?:\s+\w+)?)\s+warns\s+(\w+(?:\s+\w+)?)\s+about\s+(\w+(?:\s+\w+)?)/gi, (m) => `${m[1]} نے ${m[2]} کو ${m[3]} سے خبردار کیا`],
+  [/(\w+(?:\s+\w+)?)\s+calls\s+for\s+(\w+(?:\s+\w+)?)/gi, (m) => `${m[1]} نے ${m[2]} کا مطالبہ کیا`],
+  [/(\w+(?:\s+\w+)?)\s+rejects\s+(\w+(?:\s+\w+)?)/gi, (m) => `${m[1]} نے ${m[2]} کو مسترد کیا`],
+  [/(\w+(?:\s+\w+)?)\s+faces\s+(\w+(?:\s+\w+)?)\s+over\s+(\w+(?:\s+\w+)?)/gi, (m) => `${m[1]} کو ${m[3]} پر ${m[2]} کا سامنا`],
   [/^(?:How|Why|What|When|Where|Who)\s(.+?)\?$/i, (m) => `${m[1]}: ایک جائزہ`],
 ]
 
@@ -599,7 +649,7 @@ function tryPhraseTranslation(text: string): string | null {
     const match = text.match(pattern)
     if (match) {
       try {
-        return replacement(match)
+        return replacement(match, text)
       } catch {
         continue
       }
@@ -639,6 +689,32 @@ function translateText(text: string): string {
 
 function escapeRegExp(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+}
+
+function fixBrokenUrduGrammar(text: string): string {
+  let result = text
+
+  result = result.replace(/([\u0600-\u06FF]+)\s+کے\s+کا\s+/g, "$1 کا ")
+  result = result.replace(/([\u0600-\u06FF]+)\s+کے\s+کی\s+/g, "$1 کی ")
+  result = result.replace(/([\u0600-\u06FF]+)\s+کا\s+کے\s+/g, "$1 کے ")
+  result = result.replace(/نے\s+کا\s+/g, "نے ")
+  result = result.replace(/نے\s+کی\s+/g, "نے ")
+  result = result.replace(/میں\s+کے\s+لیے/g, "کے لیے")
+  result = result.replace(/([\u0600-\u06FF]+)\s+میں\s+کے\b/g, "$1 کے")
+
+  result = result.replace(/([\u0600-\u06FF]+)\s+(ہلاک|قتل|زخمی)\s+([\u0600-\u06FF]+)/g, "$3 $2")
+
+  result = result.replace(/([\u0600-\u06FF]{2,})\s+([\u0600-\u06FF]{2,})\s+کے\s+/g, (match, w1, w2) => {
+    const postpositions = new Set(["نے", "کو", "سے", "پر", "میں", "کا", "کی", "کے"])
+    if (postpositions.has(w2)) {
+      return `${w1} ${w2} `
+    }
+    return match
+  })
+
+  result = result.replace(/\s{2,}/g, " ")
+  result = result.trim()
+  return result
 }
 
 export function hasSufficientUrdu(text: string): boolean {
@@ -683,6 +759,12 @@ function hasTranslationQuality(text: string): boolean {
     /,\s*,/,
     /[A-Za-z]{15,}/,
     /^\d+\s/,
+    /\bہلاک\s+[A-Za-z\u0600-\u06FF]/,
+    /\bمیں\s+کے\s+لیے\b/,
+    /\bکے\s+کا\b/,
+    /\bکے\s+کی\b/,
+    /\bکا\s+کے\b/,
+    /\bنے\s+کا\b/,
   ]
 
   const repeatedWordPattern = /\b(\w{3,})\s+\1\s+\1\b/i
@@ -739,6 +821,8 @@ function hasTranslationQuality(text: string): boolean {
 function makeUrduHeadlineNatural(title: string): string {
   let result = title
 
+  result = fixBrokenUrduGrammar(result)
+
   result = result.replace(/^کی\s+/i, "")
   result = result.replace(/^کا\s+/i, "")
   result = result.replace(/^کے\s+/i, "")
@@ -788,7 +872,7 @@ function formatAsUrduHeadline(title: string, cleaned: string): string {
           return title
         }
       }
-      return joined
+      return fixBrokenUrduGrammar(joined)
     }
   }
 
@@ -808,13 +892,15 @@ export async function generateUrduHeadline(title: string): Promise<string> {
   const baseForTranslation = phraseTranslated || processed
 
   const translated = translateText(baseForTranslation)
-  const cleaned = removeEnglishFromUrdu(translated)
+  const cleaned0 = removeEnglishFromUrdu(translated)
+  const cleaned = fixBrokenUrduGrammar(cleaned0)
 
   if (cleaned.length > 8 && hasSufficientUrdu(cleaned) && hasTranslationQuality(cleaned)) {
     return makeUrduHeadlineNatural(cleaned)
   }
 
-  const fallback = cleanEnglishResidue(translated)
+  const fallback0 = cleanEnglishResidue(translated)
+  const fallback = fixBrokenUrduGrammar(fallback0)
   if (fallback.length > 8 && hasSufficientUrdu(fallback) && hasTranslationQuality(fallback)) {
     return makeUrduHeadlineNatural(fallback)
   }
@@ -848,7 +934,7 @@ export async function generateUrduExcerpt(title: string, excerpt: string, body?:
 
   const processed = preprocessText(sourceExcerpt)
   const translated = translateText(processed)
-  const cleaned = removeEnglishFromUrdu(translated)
+  const cleaned = fixBrokenUrduGrammar(removeEnglishFromUrdu(translated))
 
   if (cleaned.length > 15 && hasSufficientUrdu(cleaned)) {
     return `${cleaned.substring(0, 160)}۔`
@@ -857,7 +943,7 @@ export async function generateUrduExcerpt(title: string, excerpt: string, body?:
   if (bodyText.length > 40) {
     const bodyProcessed = preprocessText(bodyText)
     const bodyTranslated = translateText(bodyProcessed)
-    const bodyCleaned = removeEnglishFromUrdu(bodyTranslated)
+    const bodyCleaned = fixBrokenUrduGrammar(removeEnglishFromUrdu(bodyTranslated))
     if (bodyCleaned.length > 20 && hasSufficientUrdu(bodyCleaned)) {
       return `${bodyCleaned.substring(0, 160)}۔`
     }
@@ -865,7 +951,7 @@ export async function generateUrduExcerpt(title: string, excerpt: string, body?:
 
   const titleProcessed = preprocessText(title)
   const titleTranslated = translateText(titleProcessed)
-  const titleCleaned = removeEnglishFromUrdu(titleTranslated)
+  const titleCleaned = fixBrokenUrduGrammar(removeEnglishFromUrdu(titleTranslated))
   if (titleCleaned.length > 15 && hasSufficientUrdu(titleCleaned)) {
     return `${titleCleaned.substring(0, 120)}۔`
   }

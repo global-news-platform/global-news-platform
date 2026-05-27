@@ -160,6 +160,7 @@ export default function RootLayout({
             <BackToTop />
           </div>
         </ThemeProvider>
+        <script src="/js/image-fallback.js" defer />
       </body>
     </html>
   )

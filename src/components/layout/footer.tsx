@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Globe, Rss, Twitter, Facebook, Linkedin, Mail } from "lucide-react"
+import { Globe, Mail } from "lucide-react"
+import { SocialIcons } from "@/components/layout/social-icons"
 
 const footerCategories = [
   { slug: "pakistan", name: "پاکستان" },
@@ -36,42 +37,7 @@ export function Footer() {
               پاکستان کا معتبر ترین خبروں کا پلیٹ فارم۔ پاکستان، دنیا، سیاست، کاروبار، ٹیکنالوجی، کھیل اور دیگر شعبوں کی تازہ ترین خبریں۔
             </p>
             <div className="mt-4 flex items-center gap-2">
-              <a
-                href="https://twitter.com/pakistannews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg bg-background/10 p-2 text-background/70 transition-colors hover:bg-background/20 hover:text-background"
-                aria-label="ٹویٹر"
-              >
-                <Twitter className="h-3.5 w-3.5" />
-              </a>
-              <a
-                href="https://facebook.com/pakistannews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg bg-background/10 p-2.5 text-background/70 transition-colors hover:bg-background/20 hover:text-background"
-                aria-label="فیس بک"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="https://linkedin.com/company/pakistannews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg bg-background/10 p-2.5 text-background/70 transition-colors hover:bg-background/20 hover:text-background"
-                aria-label="لنکڈ ان"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="/feed.xml"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg bg-background/10 p-2.5 text-background/70 transition-colors hover:bg-background/20 hover:text-background"
-                aria-label="آر ایس ایس فیڈ"
-              >
-                <Rss className="h-4 w-4" />
-              </a>
+              <SocialIcons variant="footer" />
             </div>
           </div>
 

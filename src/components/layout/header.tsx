@@ -3,17 +3,8 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect, useRef, useCallback } from "react"
-import {
-  Search,
-  Menu,
-  X,
-  Sun,
-  Moon,
-  Globe,
-  Rss,
-  Facebook,
-  Twitter,
-} from "lucide-react"
+import { Search, Menu, X, Sun, Moon, Globe } from "lucide-react"
+import { SocialIcons } from "@/components/layout/social-icons"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/components/common/theme-provider"
 import { navigation, categories } from "@/lib/constants"
@@ -104,33 +95,7 @@ export function Header() {
               </Link>
             </div>
             <div className="flex items-center gap-2.5">
-              <a
-                href="https://facebook.com/pakistannews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
-                aria-label="فیس بک"
-              >
-                <Facebook className="h-3 w-3" />
-              </a>
-              <a
-                href="https://twitter.com/pakistannews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
-                aria-label="ٹویٹر"
-              >
-                <Twitter className="h-3 w-3" />
-              </a>
-              <a
-                href="/feed.xml"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
-                aria-label="آر ایس ایس فیڈ"
-              >
-                <Rss className="h-3 w-3" />
-              </a>
+              <SocialIcons variant="header" />
               <span className="text-background/20">|</span>
               <button
                 onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}

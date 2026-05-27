@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { notFound } from "next/navigation"
+import Link from "next/link"
+import { Search, Home } from "lucide-react"
 
 import { ArticleHero } from "@/components/article/article-hero"
 import { AdSlot } from "@/components/common/ad-slot"
@@ -42,7 +43,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const article = await getArticleBySlug(slug)
-  if (!article) return {}
+  if (!article) return { title: "مضمون نہیں ملا" }
 
   return buildMetadata({
     title: article.title,
@@ -74,7 +75,38 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params
   const article = await getArticleBySlug(slug)
-  if (!article) notFound()
+  if (!article) {
+    return (
+      <Container size="sm" className="py-16 md:py-24">
+        <div className="mx-auto max-w-lg text-center">
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
+            <Search className="h-7 w-7 text-muted-foreground" />
+          </div>
+          <h1 className="font-headline text-3xl font-bold">مضمون نہیں ملا</h1>
+          <p className="mt-3 text-muted-foreground">
+            آپ جس مضمون کی تلاش کر رہے ہیں وہ موجود نہیں ہے۔
+            ہو سکتا ہے کہ یہ ہٹا دیا گیا ہو یا منتقل کر دیا گیا ہو۔
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 rounded bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90"
+            >
+              <Home className="h-4 w-4" />
+              صفحہ اول پر جائیں
+            </Link>
+            <Link
+              href="/search"
+              className="inline-flex items-center gap-2 rounded border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              <Search className="h-4 w-4" />
+              خبریں تلاش کریں
+            </Link>
+          </div>
+        </div>
+      </Container>
+    )
+  }
 
   const [related, { prev, next }, authorProfile] = await Promise.all([
     getRelatedArticles(slug, article.categorySlug, 3),

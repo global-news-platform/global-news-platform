@@ -25,7 +25,7 @@ export function SafeImage({
 }: SafeImageProps) {
   const hasRealImage = !!(
     src && typeof src === "string" &&
-    (src.startsWith("/images/articles/") || src.startsWith("http"))
+    (src.startsWith("/images/") || src.startsWith("http"))
   )
   const [showGradient, setShowGradient] = useState(!hasRealImage)
   const [hasError, setHasError] = useState(false)

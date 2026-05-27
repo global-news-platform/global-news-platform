@@ -27,7 +27,7 @@ function ArticleImage({
 }) {
   const hasRealImage = !!(
     src && typeof src === "string" &&
-    (src.startsWith("/images/articles/") || src.startsWith("http"))
+    (src.startsWith("/images/") || src.startsWith("http"))
   )
   const [showGradient, setShowGradient] = useState(!hasRealImage)
   const [hasError, setHasError] = useState(false)
@@ -44,24 +44,26 @@ function ArticleImage({
   }
 
   return (
-    <Image
-      src={src!}
-      alt={alt}
-      fill
-      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-      sizes={
-        priority
-          ? "100vw"
-          : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      }
-      loading={priority ? "eager" : "lazy"}
-      priority={priority}
-      quality={100}
-      onError={() => {
-        setShowGradient(true)
-        setHasError(true)
-      }}
-    />
+    <span suppressHydrationWarning className="absolute inset-0 w-full h-full">
+      <Image
+        src={src!}
+        alt={alt}
+        fill
+        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+        sizes={
+          priority
+            ? "100vw"
+            : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        }
+        loading={priority ? "eager" : "lazy"}
+        priority={priority}
+        quality={100}
+        onError={() => {
+          setShowGradient(true)
+          setHasError(true)
+        }}
+      />
+    </span>
   )
 }
 
@@ -108,7 +110,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
               {catName}
             </span>
           </div>
-          <h2 className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.7] line-clamp-3" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)" }}>
+          <h2 className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.9] line-clamp-3" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)" }}>
             <MixedText text={article.title} />
           </h2>
           {article.excerpt && (
@@ -164,7 +166,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
     return (
       <Link href={`/article/${article.slug}`} className="group flex gap-2.5 sm:gap-3 py-3 sm:py-3.5 border-b border-border/10 last:border-0 transition-colors hover:bg-muted/50 -mx-3 px-3 rounded-sm">
         <div className="w-[80px] sm:w-[88px] md:w-[100px] shrink-0">
-          <div className="relative aspect-square w-full overflow-hidden bg-muted rounded-md shadow-sm border border-border/10">
+          <div className="thumbnail-placeholder relative aspect-square w-full overflow-hidden bg-muted rounded-md shadow-sm border border-border/10">
             <ArticleImage
               src={article.image}
               alt={article.title || ""}
@@ -172,10 +174,15 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             />
           </div>
         </div>
-        <div className="flex flex-1 flex-col gap-1.5 pe-1 overflow-visible" style={{ minWidth: 0 }}>
+        <div className="flex flex-1 flex-col gap-1 pe-1 overflow-visible" style={{ minWidth: 0 }}>
           <h4 className="font-headline text-[12px] sm:text-[13px] md:text-[14px] font-bold leading-[2] text-foreground group-hover:text-destructive transition-colors duration-200" style={{ overflowWrap: "break-word", wordBreak: "break-word", whiteSpace: "normal" }}>
             <MixedText text={article.title} />
           </h4>
+          {article.excerpt && (
+            <p className="text-[11px] leading-[1.8] text-muted-foreground line-clamp-2">
+              {article.excerpt}
+            </p>
+          )}
           <span className="text-[10px] text-muted-foreground" suppressHydrationWarning>
             {formatDateRelative(article.publishedAt)}
           </span>
@@ -221,6 +228,11 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             <span className="text-[9px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
           </div>
           <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.9] line-clamp-2 group-hover:text-destructive transition-colors duration-200"><MixedText text={article.title} /></h3>
+          {article.excerpt && (
+            <p className="mt-1 text-[11px] leading-[1.8] text-muted-foreground line-clamp-2">
+              {article.excerpt}
+            </p>
+          )}
         </div>
       </Link>
     )
@@ -241,6 +253,11 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
         <span className="text-[9px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
       </div>
       <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.9] line-clamp-2 group-hover:text-destructive transition-colors duration-200"><MixedText text={article.title} /></h3>
+      {article.excerpt && (
+        <p className="mt-1 text-[11px] leading-[1.8] text-muted-foreground line-clamp-2">
+          {article.excerpt}
+        </p>
+      )}
     </Link>
   )
 }

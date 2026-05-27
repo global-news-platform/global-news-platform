@@ -1,4 +1,10 @@
-export const ALLOWED_ENGLISH_WORDS = new Set(["AI", "WhatsApp", "Facebook", "Google", "iPhone", "YouTube", "BBC", "CNN", "PDF", "CEO"])
+export const ALLOWED_ENGLISH_WORDS = new Set([
+  "AI", "A.I", "WhatsApp", "Facebook", "Google", "iPhone", "iPad", "iOS",
+  "YouTube", "BBC", "CNN", "PDF", "CEO", "CTO", "CFO", "NASA", "NATO",
+  "IMF", "UN", "UAE", "UK", "US", "USA", "U.S", "EU", "GDP", "AI",
+  "COVID", "SARS", "DNA", "RNA", "WiFi", "Wi-Fi", "GPS", "LED", "OLED",
+  "Peppa", "Pig", "Toy", "Story",
+])
 
 export function removeEnglishFromUrdu(text: string): string {
   let result = text
@@ -36,7 +42,11 @@ export interface MixedSegment {
 
 export function splitMixedLanguage(text: string): MixedSegment[] {
   if (!text) return [{ text, dir: "rtl" }]
-  if (!/[a-zA-Z]/.test(text) || !/[\u0600-\u06FF]/.test(text)) {
+
+  const hasLatin = /[a-zA-Z]/.test(text)
+  const hasUrdu = /[\u0600-\u06FF]/.test(text)
+
+  if (!hasLatin || !hasUrdu) {
     return [{ text, dir: "rtl" }]
   }
 
@@ -49,7 +59,6 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
     const ch = text[i]
     const isLatin = /[a-zA-Z]/.test(ch)
     const isUrdu = /[\u0600-\u06FF]/.test(ch)
-    const isNeutral = !isLatin && !isUrdu
 
     if (isLatin || isUrdu) {
       if (hasContent && (currentIsLatin !== isLatin)) {
@@ -78,7 +87,14 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
     }
   }
 
-  return merged.length > 0 ? merged : [{ text, dir: "rtl" }]
+  if (merged.length > 0) {
+    if (merged[0].dir === "ltr") {
+      merged[0].dir = "rtl"
+    }
+    return merged
+  }
+
+  return [{ text, dir: "rtl" }]
 }
 
 export const CATEGORY_URDU: Record<string, string> = {
