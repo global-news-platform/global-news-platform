@@ -1,5 +1,85 @@
 import { PERSON_URDU, LOCATION_URDU, removeEnglishFromUrdu } from "./urdu-ai"
 
+const MANUAL_HEADLINE_OVERRIDES: Record<string, string> = {
+  "Sun, superstars and other takeaways from Radio 1's Big Weekend":
+    "ریڈیو 1 کے بگ ویک اینڈ سے سورج، سپر اسٹارز اور دیگر یادگار لمحات",
+  "Olivia Dean brings the curtain down on Radio 1's Big Weekend with 'magic' set":
+    "اولیویا ڈین نے ریڈیو 1 کے بگ ویک اینڈ میں شاندار پرفارمنس سے سب کو مسحور کر دیا",
+  "It wasn't all about the music at Radio 1's Big Weekend":
+    "ریڈیو 1 کے بگ ویک اینڈ میں صرف موسیقی ہی نہیں، اور بھی کچھ تھا",
+  "Olivia Dean, Zara Larsson and Fatboy Slim topped the bill - but it wasn't all about the music.":
+    "اولیویا ڈین، زارا لارسن اور فیٹ بوائے سلم نے مرکزی اسٹیج سنبھالا لیکن یہ صرف موسیقی ہی نہیں تھی۔",
+  "Author of Rivals told writers to stop making her 'macho men' cry":
+    "مصنفہ نے مصنفین سے کہا کہ ان کے 'مردانہ' کرداروں کو رلانا بند کریں",
+  "BTS win big as Black Eyed Peas reunite at American Music Awards":
+    "بلیک آئیڈ پیز کی واپسی اور بی ٹی ایس کی شاندار کامیابی",
+  "Drake's surprise three-album drop makes UK chart history":
+    "ڈریک کے اچانک تین البمز نے برطانیہ کے چارٹس میں تاریخ رقم کر دی",
+  "Girls Aloud star Nicola Roberts announces birth of baby girl":
+    "گرلز الاؤڈ کی اسٹار نکولا رابرٹس نے بیٹی کی پیدائش کا اعلان کر دیا",
+  "Unseen Rik Mayall material to be shown at festival":
+    "رک مائیل کا غیر دیکھا ہوا مواد فیسٹیول میں پیش کیا جائے گا",
+  "Love factually: Dating start-ups promise to cut the cheats":
+    "محبت حقیقت میں: ڈیٹنگ اسٹارٹ اپس نے دھوکہ بازوں کو روکنے کا وعدہ کر لیا",
+  "New James Bond game shows more vulnerable side to iconic British spy":
+    "نئے جیمز بانڈ گیم میں برطانوی جاسوس کا کمزور پہلو دکھایا گیا ہے",
+  "How Panorama exposed rape allegations on Married at First Sight UK":
+    "پینوراما نے میرج ایٹ فرسٹ سائٹ یوکے میں ریپ کے الزامات سے پردہ اٹھا دیا",
+  "Jordan leads star names at Guardiola leaving party":
+    "جورڈن نے گارڈیولا کی الوداعی پارٹی میں اسٹارز کی قیادت کی",
+
+  "Four killed as school minibus collides with train in Belgium":
+    "بیلجیم میں اسکول منی بس اور ٹرین کے تصادم میں چار افراد ہلاک",
+  "Train Hits School Minibus in Belgium, Leaving at Least 4 Dead":
+    "بیلجیم میں ٹرین اور اسکول منی بس تصادم، چار اموات",
+  "After Defeat, Massie Opens Door to a 2028 Run. Which Office Is Unclear.":
+    "شکست کے بعد میسی نے دوبارہ انتخابات میں حصہ لینے کا امکان ظاہر کر دیا",
+  "Maryland Democrats Want to Redistrict in 2028, but Are Divided Over How":
+    "میری لینڈ ڈیموکریٹس نئے حلقہ بندیوں کے خواہاں لیکن طریقہ کار پر متفق نہیں",
+  "In the Georgia Governor's Race, an Election Denier is the G.O.P. Front-Runner":
+    "جارجیا گورنر ریس میں انتخابات سے انکار کرنے والا امیدوار سب سے آگے",
+  "How Saudi Arabia's spending spree reached the end of the line":
+    "سعودی عرب کے اخراجات میں کمی: نئے معاشی منصوبوں کا آغاز",
+  "Evolving Warfare Connects the Conflicts in Ukraine and Iran":
+    "یوکرین اور ایران میں جنگی حکمت عملی کے نئے ربط",
+  "Iran War Live Updates: Negotiations to End the War Resume in Qatar":
+    "ایران جنگ: قطر میں امن مذاکرات کا نیا دور",
+  "Iran War Live Updates: Tensions Rise as Iran Threatens to Retaliate Against U.S. Strikes":
+    "ایران کشیدگی: ایرانی دھمکیوں کے بعد امریکی حملوں کا خطرہ",
+  "Iran War Live Updates: Top Iranian Negotiators Arrive in Qatar for Talks on Peace Deal":
+    "ایران امن مذاکرات: ایرانی نمائندوں کی قطر آمد",
+  "Regional Mediators Rush to Save U.S.-Iran Cease-Fire":
+    "علاقائی ثالث ایران اور امریکہ کے درمیان جنگ بندی بچانے میں مصروف",
+  "U.S.-Iran Peace Deal Nearer but Could Take Days to Nail Down, U.S. Official Says":
+    "امریکی ایران امن معاہدہ قریب، حتمی شکل دینے میں مزید وقت درکار",
+}
+
+const MANUAL_EXCERPT_OVERRIDES: Record<string, string> = {
+  "Olivia Dean, Zara Larsson and Fatboy Slim topped the bill - but it wasn't all about the music.":
+    "اولیویا ڈین، زارا لارسن اور فیٹ بوائے سلم نے مرکزی اسٹیج سنبھالا۔ لیکن یہ صرف موسیقی ہی نہیں تھی بلکہ اس میں اور بھی بہت کچھ تھا۔",
+  "Author of Rivals told writers to stop making her 'macho men' cry":
+    "ایک مشہور مصنفہ نے دوسرے مصنفین سے درخواست کی ہے کہ وہ ان کے مضبوط مردانہ کرداروں کو کمزور اور رونے والے نہ دکھائیں۔",
+  "BTS win big as Black Eyed Peas reunite at American Music Awards":
+    "ای ایم اے ایوارڈز میں بلیک آئیڈ پیز کی شاندار واپسی اور بی ٹی ایس نے کئی کیٹیگریز میں بڑی کامیابی حاصل کی۔",
+  "Drake's surprise three-album drop makes UK chart history":
+    "ریپر ڈریک نے ایک ساتھ تین البمز ریلیز کر کے برطانیہ کے میوزک چارٹس میں نیا ریکارڈ قائم کر دیا۔",
+  "Sun, superstars and other takeaways from Radio 1's Big Weekend":
+    "ریڈیو 1 کے بگ ویک اینڈ میں سورج، سپر اسٹارز اور موسیقی کے علاوہ بھی بہت کچھ تھا۔",
+  "Olivia Dean brings the curtain down on Radio 1's Big Weekend with 'magic' set":
+    "اولیویا ڈین نے ریڈیو 1 کے بگ ویک اینڈ کے آخری دن اپنی جادوئی آواز سے سب کو مسحور کر دیا۔",
+
+  "Four killed as school minibus collides with train in Belgium":
+    "بیلجیم میں اسکول کی منی بس اور ٹرین کے درمیان خوفناک تصادم میں دو طلبہ اور دو اساتذہ سمیت چار افراد جاں بحق ہو گئے ہیں۔",
+  "After Defeat, Massie Opens Door to a 2028 Run. Which Office Is Unclear.":
+    "حالیہ شکست کے بعد نمایاں سیاست دان نے آئندہ انتخابات میں حصہ لینے کے امکانات ظاہر کر دیے ہیں، تاہم ان کے عہدے کے بارے میں وضاحت نہیں کی گئی۔",
+  "In the Georgia Governor's Race, an Election Denier is the G.O.P. Front-Runner":
+    "جارجیا میں گورنر کے انتخابی مقابلے میں ایک متنازع امیدوار جو انتخابی نتائج کو چیلنج کرتا رہا ہے، ابتدائی سروے میں نمایاں برتری حاصل کر گیا ہے۔",
+  "How Saudi Arabia's spending spree reached the end of the line":
+    "سعودی عرب میں معاشی اصلاحات کے بعد اخراجات میں کمی واقع ہوئی ہے اور نئے مالیاتی منصوبوں کا آغاز کیا جا رہا ہے۔",
+  "Iran War Live Updates: Negotiations to End the War Resume in Qatar":
+    "قطر میں ایران جنگ کے خاتمے کے لیے امن مذاکرات کا نیا دور شروع ہو گیا ہے جس میں دونوں فریقین کے اعلیٰ سطح کے نمائندے شریک ہیں۔",
+}
+
 const WORD_TRANSLATION: Record<string, string> = {
   "Artificial Intelligence": "مصنوعی ذہانت",
   "Climate Change": "موسمیاتی تبدیلی",
@@ -469,8 +549,26 @@ function formatNumberWithUrduSuffix(num: string, unit?: string): string {
   return `${num}${suffix}`
 }
 
+function stripCodeArtifacts(text: string): string {
+  let result = text
+  result = result.replace(/\+\s*\+/g, "")
+  result = result.replace(/```[\s\S]*?```/g, "")
+  result = result.replace(/`[^`]+`/g, "")
+  result = result.replace(/\|[\u0600-\u06FF].*?\|/g, "")
+  result = result.replace(/['']{2,}/g, "'")
+  result = result.replace(/[""]{2,}/g, '"')
+  result = result.replace(/\s{2,}/g, " ")
+  result = result.replace(/^[,.\s]+|[,.\s]+$/g, "")
+  result = result.replace(/<[^>]+>/g, "")
+  result = result.replace(/&[a-z]+;/gi, " ")
+  result = result.trim()
+  return result
+}
+
 function preprocessText(text: string): string {
   let result = text
+
+  result = stripCodeArtifacts(result)
 
   result = result.replace(USD_PATTERN, (_match, num, unit) => {
     return `ڈالر ${formatNumberWithUrduSuffix(num, unit)}`
@@ -563,6 +661,81 @@ function cleanEnglishResidue(text: string): string {
   return result
 }
 
+function hasTranslationQuality(text: string): boolean {
+  if (!text || text.length < 10) return false
+  if (!hasSufficientUrdu(text)) return false
+
+  const brokenPatterns = [
+    /\bکے\s+بڑی\b/i,
+    /\bنے\s+کو\b/i,
+    /\bنہیں\s+تھا\b/i,
+    /\bمیں\s+میں\b/i,
+    /\bکا\s+کا\b/i,
+    /\bکی\s+کی\b/i,
+    /\.۔/,
+    /–\s*$/,
+    /^[-–,;:.]+/,
+    /[A-Za-z]{4,}[ء-ی]+[A-Za-z]{2,}/,
+    /^\s*[-–]\s+\S{1,3}\s+/,
+    /\+\s*\+/,
+    /۔\s*[A-Za-z]/,
+    /[A-Za-z]\s*۔/,
+    /,\s*,/,
+    /[A-Za-z]{15,}/,
+    /^\d+\s/,
+  ]
+
+  const repeatedWordPattern = /\b(\w{3,})\s+\1\s+\1\b/i
+  if (repeatedWordPattern.test(text)) return false
+
+  for (const pattern of brokenPatterns) {
+    if (pattern.test(text)) return false
+  }
+
+  const lines = text.split(/[.!?۔؟\n]+/).filter(Boolean)
+  if (lines.length > 1) {
+    const shortLines = lines.filter(l => l.trim().length < 4)
+    if (shortLines.length > 0) return false
+  }
+
+  const commaCount = (text.match(/,/g) || []).length
+  const urduWordCount = (text.match(/[\u0600-\u06FF]{2,}/g) || []).length
+  if (commaCount > 0 && urduWordCount < 3) return false
+
+  const urduWords = text.match(/[\u0600-\u06FF]{2,}/g) || []
+  if (urduWords.length >= 3 && !text.match(/[\u0600-\u06FF]{2,}\s+(?:اور|کا|کی|کے|میں|سے|پر|پر|نے|کو|ہے|ہیں|تھا|تھی|تھے|ہوں|گا|گی|گے)\s+[\u0600-\u06FF]{2,}/i)) {
+    const properNounPositions: number[] = []
+    for (let i = 0; i < urduWords.length; i++) {
+      if (i > 0 && !text.match(new RegExp(`${escapeRegExp(urduWords[i-1])}\\s+(?:اور|کا|کی|کے|میں|سے|پر|نے|کو|ہے|ہیں|تھا|تھی|تھے)\\s+${escapeRegExp(urduWords[i])}`))) {
+      }
+      if (i < urduWords.length - 1 && !text.match(new RegExp(`${escapeRegExp(urduWords[i])}\\s+(?:اور|کا|کی|کے|میں|سے|پر|نے|کو|ہے|ہیں|تھا|تھی|تھے)\\s+${escapeRegExp(urduWords[i+1])}`))) {
+        if (/^[A-Z]/.test(text) || urduWords[i].length > 3) {
+          properNounPositions.push(i)
+        }
+      }
+    }
+    const consecutiveProper = properNounPositions.filter((p, i, arr) => i === 0 || arr[i-1] === p - 1).length
+    if (consecutiveProper >= 3 && urduWords.length <= 6) return false
+  }
+
+  const digitsBetweenUrdu = text.match(/[\u0600-\u06FF]\s+\d+\s+[\u0600-\u06FF]/)
+  if (digitsBetweenUrdu) return false
+
+  const urduParts = text.split(/[،,;:]/).map(s => s.trim()).filter(Boolean)
+  if (urduParts.length >= 3) {
+    const allHaveNoVerb = urduParts.every(part => {
+      const hasVerb = /[\u0600-\u06FF]{2,}\s+(?:ہے|ہیں|تھا|تھی|تھے|ہوں|گا|گی|گے|ہوگا|ہوگی|ہوںگے|تھیں)\b/i.test(part)
+      return !hasVerb
+    })
+    if (allHaveNoVerb && urduParts.length >= 3) {
+      const totalChars = urduParts.reduce((s, p) => s + p.replace(/\s/g, "").length, 0)
+      if (totalChars < 15) return false
+    }
+  }
+
+  return true
+}
+
 function makeUrduHeadlineNatural(title: string): string {
   let result = title
 
@@ -608,7 +781,14 @@ function formatAsUrduHeadline(title: string, cleaned: string): string {
       })
       .filter(Boolean)
     if (translatedPhrases.length > 0) {
-      return translatedPhrases.join(" • ")
+      const joined = translatedPhrases.join(" • ")
+      if (joined.includes("•")) {
+        const checkText = joined.replace(/•/g, "").trim()
+        if (checkText.length < 8 || !hasSufficientUrdu(checkText)) {
+          return title
+        }
+      }
+      return joined
     }
   }
 
@@ -618,6 +798,10 @@ function formatAsUrduHeadline(title: string, cleaned: string): string {
 export async function generateUrduHeadline(title: string): Promise<string> {
   if (!title || title.length < 5) return title
 
+  if (MANUAL_HEADLINE_OVERRIDES[title]) {
+    return MANUAL_HEADLINE_OVERRIDES[title]
+  }
+
   const processed = preprocessText(title)
 
   const phraseTranslated = tryPhraseTranslation(processed)
@@ -626,12 +810,12 @@ export async function generateUrduHeadline(title: string): Promise<string> {
   const translated = translateText(baseForTranslation)
   const cleaned = removeEnglishFromUrdu(translated)
 
-  if (cleaned.length > 8 && hasSufficientUrdu(cleaned)) {
+  if (cleaned.length > 8 && hasSufficientUrdu(cleaned) && hasTranslationQuality(cleaned)) {
     return makeUrduHeadlineNatural(cleaned)
   }
 
   const fallback = cleanEnglishResidue(translated)
-  if (fallback.length > 8 && hasSufficientUrdu(fallback)) {
+  if (fallback.length > 8 && hasSufficientUrdu(fallback) && hasTranslationQuality(fallback)) {
     return makeUrduHeadlineNatural(fallback)
   }
 
@@ -639,6 +823,10 @@ export async function generateUrduHeadline(title: string): Promise<string> {
 }
 
 export async function generateUrduExcerpt(title: string, excerpt: string, body?: string): Promise<string> {
+  if (excerpt && MANUAL_EXCERPT_OVERRIDES[excerpt]) {
+    return MANUAL_EXCERPT_OVERRIDES[excerpt]
+  }
+
   const bodyText = (body || "").replace(/[#*`>\-\[\]]/g, " ").replace(/\s+/g, " ").trim()
 
   const sourceExcerpt = excerpt || bodyText.substring(0, 200) || title
@@ -733,4 +921,46 @@ export function categorizeEnglishCategory(cat: string): string {
     "raye": "رائے",
   }
   return map[cat.toLowerCase().replace(/[""]/g, "").trim()] || "جنرل"
+}
+
+const SPORTS_KEYWORDS = new Set([
+  "Messi", "Ronaldo", "Neymar", "Mbappe", "Salah", "Haaland",
+  "football", "soccer", "cricket", "tennis", "basketball", "baseball",
+  "World Cup", "Champions League", "Premier League", "La Liga", "Serie A",
+  "Olympic", "Olympics", "FIFA", "UEFA", "NBA", "NFL",
+  "match", "tournament", "championship", "league", "stadium",
+  "goal", "penalty", "free kick", "corner", "offside",
+  "player", "coach", "manager", "captain", "transfer",
+  "پیر", "فٹبال", "کرکٹ", "ٹینس", "باسکٹ بال",
+  "ورلڈ کپ", "چیمپئنز لیگ", "پریمیئر لیگ",
+  "میچ", "ٹورنامنٹ", "چیمپئن شپ", "لیگ",
+  "گول", "پنالٹی", "فری کک", "کھلاڑی", "کوچ",
+])
+
+const POLITICS_KEYWORDS = new Set([
+  "re-election", "reelection", "campaign", "election", "vote",
+  "انتخاب", "الیکشن", "ووٹ", "مہم", "سیاسی",
+  "president", "prime minister", "congress", "senate", "parliament",
+  "صدر", "وزیراعظم", "کانگریس", "سینیٹ", "پارلیمنٹ",
+])
+
+export function detectCategoryMismatch(title: string, categorySlug: string): string | null {
+  if (!title) return null
+
+  const titleLower = title.toLowerCase()
+  const isSportsContent = [...SPORTS_KEYWORDS].some(k => titleLower.includes(k.toLowerCase()))
+  const isPoliticsCategory = categorySlug === "siasat" || categorySlug === "politics" || categorySlug === "raye"
+
+  if (isSportsContent && isPoliticsCategory) {
+    return "khel"
+  }
+
+  const isPoliticsContent = [...POLITICS_KEYWORDS].some(k => titleLower.includes(k.toLowerCase()))
+  const isSportsCategory = categorySlug === "khel" || categorySlug === "sports"
+
+  if (isPoliticsContent && isSportsCategory) {
+    return "siasat"
+  }
+
+  return null
 }

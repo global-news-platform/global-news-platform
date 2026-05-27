@@ -24,7 +24,7 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
                 اہم خبریں
               </h3>
             </div>
-            <div className="px-3 divide-y divide-border/10">
+            <div className="px-3 sm:px-4 divide-y divide-border/10" dir="rtl">
               {secondary.slice(0, 5).map((article) => (
                 <ArticleCard key={article.slug} article={article} variant="horizontal" />
               ))}

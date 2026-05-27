@@ -1,8 +1,22 @@
 export const ALLOWED_ENGLISH_WORDS = new Set(["AI", "WhatsApp", "Facebook", "Google", "iPhone", "YouTube", "BBC", "CNN", "PDF", "CEO"])
 
 export function removeEnglishFromUrdu(text: string): string {
-  const words = text.split(/\s+/)
-  const result = words
+  let result = text
+
+  result = result.replace(/[""''"']/g, "'")
+  result = result.replace(/[""]/g, '"')
+
+  result = result.replace(/,/g, "،")
+  result = result.replace(/،،+/g, "،")
+  result = result.replace(/\.{2,}/g, "۔")
+  result = result.replace(/;{2,}/g, "؛")
+  result = result.replace(/!{2,}/g, "!")
+  result = result.replace(/\+{2,}/g, "")
+
+  result = result.replace(/[\u200B-\u200F\uFEFF]/g, "")
+
+  const words = result.split(/\s+/)
+  const filtered = words
     .filter((w) => {
       if (!/[a-zA-Z]/.test(w)) return true
       const clean = w.replace(/[^a-zA-Z]/g, "")
@@ -11,7 +25,54 @@ export function removeEnglishFromUrdu(text: string): string {
     })
     .join(" ")
     .trim()
-  return result.replace(/\s+,/g, "،").replace(/,{2,}/g, "،").replace(/\s+\./g, "۔").replace(/\.{2,}/g, "۔").trim()
+
+  return filtered
+}
+
+export interface MixedSegment {
+  text: string
+  dir: "ltr" | "rtl"
+}
+
+export function splitMixedLanguage(text: string): MixedSegment[] {
+  if (!text || !/[a-zA-Z]/.test(text) || !/[\u0600-\u06FF]/.test(text)) {
+    return [{ text, dir: "rtl" }]
+  }
+
+  const rawParts: { text: string; isLatin: boolean }[] = []
+  let current = ""
+  let currentIsLatin = false
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i]
+    const isLatin = /[a-zA-Z]/.test(ch)
+    const isUrdu = /[\u0600-\u06FF]/.test(ch)
+    const isNeutral = !isLatin && !isUrdu
+
+    if (isLatin || isUrdu) {
+      if (current && (currentIsLatin !== isLatin)) {
+        rawParts.push({ text: current.trim(), isLatin: currentIsLatin })
+        current = ""
+      }
+      currentIsLatin = isLatin
+    } else if (isNeutral && current) {
+      if (/^[\s,.;:!?\-_]+$/.test(ch)) {
+      }
+    }
+
+    current += ch
+  }
+
+  if (current) {
+    rawParts.push({ text: current.trim(), isLatin: currentIsLatin })
+  }
+
+  return rawParts
+    .filter((p) => p.text.length > 0)
+    .map((p) => ({
+      text: p.text,
+      dir: p.isLatin ? ("ltr" as const) : ("rtl" as const),
+    }))
 }
 
 export const CATEGORY_URDU: Record<string, string> = {

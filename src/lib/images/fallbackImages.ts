@@ -64,4 +64,16 @@ export function getFallbackImageUrl(slug?: string): string {
   return `/images/fallbacks/${name}.jpg`
 }
 
+export function getFallbackCssGradient(slug?: string): string {
+  const g = CATEGORY_GRADIENTS[slug?.toLowerCase() || ""] || CATEGORY_GRADIENTS.general
+  const parts = g.match(/from-\[([^\]]+)\]\s+to-\[([^\]]+)\]/)
+  if (!parts) return "linear-gradient(135deg, #1a1a2d 0%, #0f0f1a 100%)"
+  return `linear-gradient(135deg, ${parts[1]} 0%, ${parts[2]} 100%)`
+}
+
+export function isFallbackImagePath(path?: string | null): boolean {
+  if (!path || typeof path !== "string") return false
+  return path.startsWith("/images/fallbacks/")
+}
+
 

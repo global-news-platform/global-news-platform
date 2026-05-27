@@ -42,12 +42,12 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       </div>
 
       {/* Title */}
-      <h1 className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
+      <h1 className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight" dir="auto">
         {article.title}
       </h1>
 
       {/* Excerpt */}
-      <p className="overflow-wrap-anywhere mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+      <p className="overflow-wrap-anywhere mt-4 text-base leading-relaxed text-muted-foreground md:text-lg" dir="auto">
         {article.excerpt}
       </p>
 

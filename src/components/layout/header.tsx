@@ -32,6 +32,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [inlineSearchOpen, setInlineSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
   const searchInputRef = useRef<HTMLInputElement>(null)
 
@@ -53,10 +54,10 @@ export function Header() {
   }, [pathname, mobileMenuOpen])
 
   useEffect(() => {
-    if (searchOpen && searchInputRef.current) {
+    if ((searchOpen || inlineSearchOpen) && searchInputRef.current) {
       setTimeout(() => searchInputRef.current?.focus(), 100)
     }
-  }, [searchOpen])
+  }, [searchOpen, inlineSearchOpen])
 
   const handleSearch = useCallback(
     (e: React.FormEvent) => {
@@ -231,13 +232,45 @@ export function Header() {
                   رائے
                 </Link>
                 <span className="h-4 w-px bg-white/20" />
-                <button
-                  onClick={() => setSearchOpen(true)}
-                  className="rounded-sm p-1.5 text-white/85 transition-colors hover:bg-white/10 hover:text-white"
-                  aria-label="تلاش"
-                >
-                  <Search className="h-4 w-4" />
-                </button>
+                <div className="flex items-center gap-0">
+                  {inlineSearchOpen ? (
+                    <form onSubmit={handleSearch} className="flex items-center" dir="rtl">
+                      <button
+                        type="submit"
+                        className="rounded-l-sm p-1.5 text-white/85 transition-colors hover:bg-white/10 hover:text-white"
+                        aria-label="تلاش کریں"
+                      >
+                        <Search className="h-4 w-4" />
+                      </button>
+                      <input
+                        ref={searchInputRef}
+                        type="search"
+                        placeholder="خبریں تلاش کریں..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onBlur={() => { if (!searchQuery) setTimeout(() => setInlineSearchOpen(false), 200) }}
+                        className="w-40 lg:w-52 bg-white/15 text-white placeholder:text-white/40 rounded-r-sm px-3 py-1.5 text-[12px] outline-none border border-white/10 focus:border-white/30 transition-colors"
+                        autoFocus
+                      />
+                      <button
+                        type="button"
+                        onClick={() => { setInlineSearchOpen(false); setSearchQuery("") }}
+                        className="p-1.5 text-white/60 hover:text-white/90 transition-colors me-0.5"
+                        aria-label="بند کریں"
+                      >
+                        <X className="h-3.5 w-3.5" />
+                      </button>
+                    </form>
+                  ) : (
+                    <button
+                      onClick={() => setInlineSearchOpen(true)}
+                      className="rounded-sm p-1.5 text-white/85 transition-colors hover:bg-white/10 hover:text-white"
+                      aria-label="تلاش"
+                    >
+                      <Search className="h-4 w-4" />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>

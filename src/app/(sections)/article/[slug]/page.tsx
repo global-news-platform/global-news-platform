@@ -11,6 +11,7 @@ import { MDXContent } from "@/components/article/mdx-content"
 import { ShareButtons } from "@/components/article/share-buttons"
 import { ReadingProgressClient } from "@/components/article/reading-progress-client"
 import { Container } from "@/components/common/container"
+import { cn } from "@/lib/utils"
 
 import {
   getArticleBySlug,
@@ -60,6 +61,12 @@ export async function generateMetadata({
   })
 }
 
+const SIDEBAR_ADS_ENABLED = false
+
+function hasSidebarContent(): boolean {
+  return SIDEBAR_ADS_ENABLED
+}
+
 export default async function ArticlePage({
   params,
 }: {
@@ -93,6 +100,8 @@ export default async function ArticlePage({
     articleUrl,
   )
 
+  const showRightSidebar = hasSidebarContent()
+
   return (
     <>
       <ReadingProgressClient />
@@ -115,7 +124,10 @@ export default async function ArticlePage({
           </aside>
 
           {/* Main content */}
-          <article className="min-w-0 max-w-reading-wide flex-1">
+          <article className={cn(
+            "min-w-0 flex-1",
+            showRightSidebar ? "max-w-reading-wide" : "max-w-full",
+          )}>
             <ArticleHero article={article} />
 
             <div className="mt-10">
@@ -132,7 +144,7 @@ export default async function ArticlePage({
 
             {authorProfile && (
               <div className="mt-10">
-                <AuthorCard author={authorProfile} />
+                <AuthorCard author={authorProfile} categorySlug={article.categorySlug} />
               </div>
             )}
 
@@ -151,13 +163,15 @@ export default async function ArticlePage({
             )}
           </article>
 
-          {/* Right sidebar ad */}
-          <aside className="sticky top-24 hidden h-fit xl:block xl:w-[260px]">
-            <div className="flex flex-col gap-6">
-              <AdSlot variant="skyscraper" className="w-full" label="آپ کو پسند آ سکتا ہے" />
-              <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
-            </div>
-          </aside>
+          {/* Right sidebar ad - collapsed when no real ad content */}
+          {showRightSidebar && (
+            <aside className="sticky top-24 hidden h-fit xl:block xl:w-[260px]">
+              <div className="flex flex-col gap-6">
+                <AdSlot variant="skyscraper" className="w-full" label="آپ کو پسند آ سکتا ہے" />
+                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
+              </div>
+            </aside>
+          )}
         </div>
 
         <div className="mx-auto mt-12 max-w-[88rem]">

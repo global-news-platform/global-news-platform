@@ -20,6 +20,7 @@ import {
   generateUrduExcerpt,
   categorizeEnglishCategory,
   hasSufficientUrdu,
+  detectCategoryMismatch,
 } from "@/lib/urdu-headlines"
 import { removeEnglishFromUrdu } from "@/lib/urdu-ai"
 
@@ -160,18 +161,28 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
       const sanitizedBody = removeEnglishFromUrdu(sanitizeBody(body))
 
       const rawCategory = safeString(frontmatter.category, "General")
-      const urduCategory = categorizeEnglishCategory(rawCategory)
-      const categoryInfo = categories.find(
+      let urduCategory = categorizeEnglishCategory(rawCategory)
+      let categoryInfo = categories.find(
         (c) => c.name === urduCategory,
       )
-      const categoryName = categoryInfo?.name || urduCategory
+      let categoryName = categoryInfo?.name || urduCategory
+      let categorySlug = categoryInfo?.slug || categoryName.toLowerCase()
+
+      const correctedSlug = detectCategoryMismatch(sanitizedTitle, categorySlug)
+      if (correctedSlug) {
+        const correctedCat = categories.find((c) => c.slug === correctedSlug)
+        if (correctedCat) {
+          categorySlug = correctedCat.slug
+          categoryName = correctedCat.name
+        }
+      }
 
       const rawAuthor = safeString(frontmatter.author, "Staff")
       const rawAuthorSlug = safeString(frontmatter.authorSlug) || slugify(rawAuthor)
 
       const resolvedImage = getImage({
         slug,
-        categorySlug: categoryInfo?.slug,
+        categorySlug,
         frontmatterImage: frontmatter.image as string | undefined | null,
         title: sanitizedTitle,
       })
@@ -182,7 +193,7 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
         excerpt: urduExcerpt,
         content: sanitizedBody,
         category: categoryName,
-        categorySlug: categoryInfo?.slug || categoryName.toLowerCase(),
+        categorySlug,
         author: rawAuthor,
         authorSlug: rawAuthorSlug,
         publishedAt: safeString(frontmatter.publishedAt, ""),

@@ -1,18 +1,9 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { getFallbackImageUrl } from "@/lib/images/fallbackImages"
-
-const FALLBACK_IMAGE = "/images/fallbacks/default.jpg"
-
-function normalizeImage(image: string | undefined | null): string {
-  if (!image || typeof image !== "string" || image.trim() === "") return FALLBACK_IMAGE
-  const trimmed = image.trim()
-  if (trimmed.startsWith("data:") || trimmed.startsWith("http://") || trimmed.startsWith("https://") || trimmed.startsWith("/")) return trimmed
-  return FALLBACK_IMAGE
-}
+import { getFallbackCssGradient } from "@/lib/images/fallbackImages"
 
 export interface SafeImageProps {
   src?: string
@@ -32,24 +23,25 @@ export function SafeImage({
   priority = false,
   categorySlug,
 }: SafeImageProps) {
-  const currentSrc = normalizeImage(src)
-  const [fallbackSrc, setFallbackSrc] = useState<string | null>(null)
-  const [fallbackLevel, setFallbackLevel] = useState(0)
+  const hasRealImage = !!(
+    src && typeof src === "string" &&
+    (src.startsWith("/images/articles/") || src.startsWith("http"))
+  )
+  const [showGradient, setShowGradient] = useState(!hasRealImage)
+  const gradientStyle = getFallbackCssGradient(categorySlug)
 
-  const handleError = useCallback(() => {
-    if (fallbackLevel === 0) {
-      setFallbackLevel(1)
-      setFallbackSrc(getFallbackImageUrl(categorySlug))
-    } else {
-      setFallbackLevel(2)
-      setFallbackSrc(FALLBACK_IMAGE)
-    }
-  }, [categorySlug, fallbackLevel])
+  if (showGradient) {
+    return (
+      <div className={cn("relative overflow-hidden w-full h-full", wrapperClassName)}>
+        <div className="w-full h-full" style={{ background: gradientStyle }} />
+      </div>
+    )
+  }
 
   return (
     <div className={cn("relative overflow-hidden w-full h-full", wrapperClassName)}>
       <Image
-        src={fallbackSrc || currentSrc}
+        src={src!}
         alt={alt}
         className={cn("w-full h-full object-cover object-center transition-opacity duration-300", className)}
         fill
@@ -57,7 +49,7 @@ export function SafeImage({
         priority={priority}
         loading={priority ? "eager" : "lazy"}
         quality={100}
-        onError={handleError}
+        onError={() => setShowGradient(true)}
       />
     </div>
   )
