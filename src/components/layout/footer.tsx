@@ -20,30 +20,30 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="mt-12 border-t border-border/40 bg-foreground text-background">
+    <footer className="mt-8 border-t border-border/40 bg-foreground text-background">
       {/* Main grid */}
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-5 lg:px-6 xl:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-5 lg:px-6 xl:px-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-lg">
-                <Globe className="h-5 w-5 text-primary-foreground" />
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-lg">
+                <Globe className="h-4 w-4 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold text-background">پاکستان نیوز</span>
+              <span className="text-lg font-bold text-background">پاکستان نیوز</span>
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-background/60">
+            <p className="mt-2 text-sm leading-[1.8] text-background/60">
               پاکستان کا معتبر ترین خبروں کا پلیٹ فارم۔ پاکستان، دنیا، سیاست، کاروبار، ٹیکنالوجی، کھیل اور دیگر شعبوں کی تازہ ترین خبریں۔
             </p>
-            <div className="mt-6 flex items-center gap-2.5">
+            <div className="mt-4 flex items-center gap-2">
               <a
                 href="https://twitter.com/pakistannews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg bg-background/10 p-2.5 text-background/70 transition-colors hover:bg-background/20 hover:text-background"
+                className="rounded-lg bg-background/10 p-2 text-background/70 transition-colors hover:bg-background/20 hover:text-background"
                 aria-label="ٹویٹر"
               >
-                <Twitter className="h-4 w-4" />
+                <Twitter className="h-3.5 w-3.5" />
               </a>
               <a
                 href="https://facebook.com/pakistannews"
@@ -77,10 +77,10 @@ export function Footer() {
 
           {/* Categories */}
           <div>
-            <h4 className="mb-5 text-[12px] font-bold uppercase tracking-[0.15em] text-background/50">
+            <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-background/50">
               زمرہ جات
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5">
               {footerCategories.slice(0, 6).map((cat) => (
                 <li key={cat.slug}>
                   <Link
@@ -96,10 +96,10 @@ export function Footer() {
 
           {/* More sections */}
           <div>
-            <h4 className="mb-5 text-[12px] font-bold uppercase tracking-[0.15em] text-background/50">
+            <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-background/50">
               مزید
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5">
               {footerCategories.slice(6, 12).map((cat) => (
                 <li key={cat.slug}>
                   <Link
@@ -115,10 +115,10 @@ export function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="mb-5 text-[12px] font-bold uppercase tracking-[0.15em] text-background/50">
+            <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-background/50">
               فوری لنکس
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5">
               <li>
                 <Link
                   href="/breaking"
@@ -159,12 +159,12 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-background/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 sm:flex-row sm:px-5 lg:px-6 xl:px-8">
-          <p className="text-xs text-background/50">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-1 px-4 py-3 sm:flex-row sm:px-5 lg:px-6 xl:px-8">
+          <p className="text-[11px] text-background/50">
             &copy; {currentYear} پاکستان نیوز. جملہ حقوق محفوظ ہیں۔
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-background/50">
+            <span className="text-[11px] text-background/50">
               پاکستان کی معتبر خبریں
             </span>
           </div>

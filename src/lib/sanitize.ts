@@ -164,6 +164,32 @@ function hasMalformedMarkdown(text: string): boolean {
   return parens !== closingParens
 }
 
+const BROKEN_URDU_PATTERNS = [
+  /\bنے\s+کا\s+مطالبہ\s+کا\b/i,
+  /\bنے\s+کے\s+مطالبہ\b/i,
+  /\bمیں\s+کے\s+لیے\b/i,
+  /\bکے\s+بڑی\b/i,
+  /\bنے\s+کو\b/i,
+  /\bمیں\s+میں\b/i,
+  /\bکا\s+کا\b/i,
+  /\bکی\s+کی\b/i,
+  /\bکے\s+کے\b/i,
+  /\.۔/,
+  /\+\s*\+/,
+  /\|{2,}/,
+  /[─•◦⁃]/,
+  /\b\w{1,2}\s+میں\s+کے\b/i,
+]
+
+function cleanBrokenUrdu(text: string): string {
+  let result = text
+  for (const pattern of BROKEN_URDU_PATTERNS) {
+    result = result.replace(pattern, " ")
+  }
+  result = result.replace(/\s{2,}/g, " ").trim()
+  return result
+}
+
 export function sanitizeTitle(title: string): string {
   if (!title) return ""
   let result = title
@@ -173,6 +199,7 @@ export function sanitizeTitle(title: string): string {
   result = result.replace(/[""]/g, '"').replace(/['']/g, "'")
   result = result.replace(/\s+/g, " ").trim()
   result = result.replace(/[^\S\r\n]+/g, " ")
+  result = cleanBrokenUrdu(result)
   if (result.length < TITLE_MIN_LENGTH) return ""
   const firstChar = result.charAt(0)
   if (!URDU_CHAR_RANGE.test(firstChar)) {
@@ -190,6 +217,7 @@ export function sanitizeExcerpt(excerpt: string): string {
   result = removeURLs(result)
   result = stripMalformedAIOutput(result)
   result = removeDuplicatedSentences(result)
+  result = cleanBrokenUrdu(result)
   result = normalizeWhitespace(result)
   if (result.length > EXCERPT_MAX_LENGTH) {
     const truncated = result.slice(0, EXCERPT_MAX_LENGTH)
@@ -214,6 +242,7 @@ export function sanitizeBody(body: string): string {
   result = removeMalformedChars(result)
   result = stripMalformedAIOutput(result)
   result = removeDuplicatedSentences(result)
+  result = cleanBrokenUrdu(result)
   result = normalizeWhitespace(result)
   return result.trim()
 }

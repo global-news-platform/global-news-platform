@@ -37,7 +37,7 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
               </div>
 
               <div className="flex flex-col md:grid md:grid-cols-4 gap-3 sm:gap-4">
-                <div className="w-full md:col-span-2">
+                <div className="w-full md:col-span-2 h-full">
                   <ArticleCard article={section.articles[0]} variant="featured" />
                 </div>
                 <div className="w-full md:col-span-2 bg-card border border-border/10 rounded-lg p-3 sm:p-4 shadow-sm">
@@ -52,7 +52,7 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
               {section.articles.length > 7 && (
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-3 sm:mt-4">
                   {section.articles.slice(7, 11).map((article) => (
-                    <ArticleCard key={article.slug} article={article} variant="compact" />
+                    <ArticleCard key={article.slug} article={article} variant="default" />
                   ))}
                 </div>
               )}

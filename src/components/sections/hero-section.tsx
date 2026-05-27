@@ -14,8 +14,8 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
           <div className="lg:col-span-3 w-full">
             <ArticleCard article={featured} variant="hero" />
           </div>
-          <div className="w-full bg-card">
-            <div className="bg-destructive px-4 py-3 flex items-center gap-2.5">
+          <div className="w-full bg-card flex flex-col">
+            <div className="bg-destructive px-4 py-2.5 flex items-center gap-2.5 shrink-0">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-destructive-foreground/60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-destructive-foreground" />
@@ -24,7 +24,7 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
                 اہم خبریں
               </h3>
             </div>
-            <div className="px-3 sm:px-4 divide-y divide-border/10" dir="rtl">
+            <div className="px-3 sm:px-4 divide-y divide-border/10 flex-1" dir="rtl">
               {secondary.slice(0, 5).map((article) => (
                 <ArticleCard key={article.slug} article={article} variant="horizontal" />
               ))}

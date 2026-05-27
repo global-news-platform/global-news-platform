@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { SafeImage } from "@/components/ui/safe-image"
+import { MixedText } from "@/components/ui/mixed-text"
 import { formatDate } from "@/lib/utils"
 import { categories } from "@/lib/constants"
 import type { ArticleMeta } from "@/types"
@@ -42,13 +43,13 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       </div>
 
       {/* Title */}
-      <h1 className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight" dir="auto">
-        {article.title}
+      <h1 className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-[1.7] md:text-4xl lg:text-5xl">
+        <MixedText text={article.title} />
       </h1>
 
       {/* Excerpt */}
-      <p className="overflow-wrap-anywhere mt-4 text-base leading-relaxed text-muted-foreground md:text-lg" dir="auto">
-        {article.excerpt}
+      <p className="overflow-wrap-anywhere mt-4 text-base leading-[2] text-muted-foreground md:text-lg">
+        <MixedText text={article.excerpt || ""} />
       </p>
 
       {/* Meta */}

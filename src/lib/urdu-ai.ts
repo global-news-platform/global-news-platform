@@ -35,13 +35,15 @@ export interface MixedSegment {
 }
 
 export function splitMixedLanguage(text: string): MixedSegment[] {
-  if (!text || !/[a-zA-Z]/.test(text) || !/[\u0600-\u06FF]/.test(text)) {
+  if (!text) return [{ text, dir: "rtl" }]
+  if (!/[a-zA-Z]/.test(text) || !/[\u0600-\u06FF]/.test(text)) {
     return [{ text, dir: "rtl" }]
   }
 
   const rawParts: { text: string; isLatin: boolean }[] = []
   let current = ""
   let currentIsLatin = false
+  let hasContent = false
 
   for (let i = 0; i < text.length; i++) {
     const ch = text[i]
@@ -50,14 +52,12 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
     const isNeutral = !isLatin && !isUrdu
 
     if (isLatin || isUrdu) {
-      if (current && (currentIsLatin !== isLatin)) {
+      if (hasContent && (currentIsLatin !== isLatin)) {
         rawParts.push({ text: current.trim(), isLatin: currentIsLatin })
         current = ""
       }
       currentIsLatin = isLatin
-    } else if (isNeutral && current) {
-      if (/^[\s,.;:!?\-_]+$/.test(ch)) {
-      }
+      hasContent = true
     }
 
     current += ch
@@ -67,12 +67,18 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
     rawParts.push({ text: current.trim(), isLatin: currentIsLatin })
   }
 
-  return rawParts
-    .filter((p) => p.text.length > 0)
-    .map((p) => ({
-      text: p.text,
-      dir: p.isLatin ? ("ltr" as const) : ("rtl" as const),
-    }))
+  const merged: MixedSegment[] = []
+  for (const part of rawParts) {
+    if (!part.text) continue
+    const last = merged[merged.length - 1]
+    if (last && ((part.isLatin && last.dir === "ltr") || (!part.isLatin && last.dir === "rtl"))) {
+      last.text += " " + part.text
+    } else {
+      merged.push({ text: part.text, dir: part.isLatin ? "ltr" : "rtl" })
+    }
+  }
+
+  return merged.length > 0 ? merged : [{ text, dir: "rtl" }]
 }
 
 export const CATEGORY_URDU: Record<string, string> = {
