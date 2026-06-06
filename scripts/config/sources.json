@@ -36,6 +36,48 @@
       "attributionUrl": "https://dailytimes.com.pk"
     },
     {
+      "url": "https://rss.guardian.co.uk/theguardian/world/rss",
+      "category": "dunya",
+      "label": "The Guardian World",
+      "attribution": "The Guardian",
+      "attributionUrl": "https://www.theguardian.com"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "dunya",
+      "label": "BBC World",
+      "attribution": "BBC News",
+      "attributionUrl": "https://www.bbc.com/news"
+    },
+    {
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "category": "dunya",
+      "label": "Al Jazeera",
+      "attribution": "Al Jazeera",
+      "attributionUrl": "https://www.aljazeera.com"
+    },
+    {
+      "url": "https://rss.cnn.com/rss/cnn_topstories.rss",
+      "category": "dunya",
+      "label": "CNN Top Stories",
+      "attribution": "CNN",
+      "attributionUrl": "https://www.cnn.com"
+    },
+    {
+      "url": "https://feeds.npr.org/1004/rss.xml",
+      "category": "dunya",
+      "label": "NPR World",
+      "attribution": "NPR",
+      "attributionUrl": "https://www.npr.org"
+    },
+    {
+      "url": "https://rss.dw.com/rdf/rss-en-world",
+      "category": "dunya",
+      "label": "Deutsche Welle",
+      "attribution": "Deutsche Welle",
+      "attributionUrl": "https://www.dw.com"
+    },
+    {
       "url": "https://www.dawn.com/feeds/world",
       "category": "dunya",
       "label": "Dawn World",
@@ -50,18 +92,32 @@
       "attributionUrl": "https://tribune.com.pk"
     },
     {
+      "url": "https://feeds.bbci.co.uk/news/politics/rss.xml",
+      "category": "siasat",
+      "label": "BBC Politics",
+      "attribution": "BBC News",
+      "attributionUrl": "https://www.bbc.com/news/politics"
+    },
+    {
       "url": "https://www.aljazeera.com/xml/rss/all.xml",
-      "category": "dunya",
-      "label": "Al Jazeera",
+      "category": "siasat",
+      "label": "Al Jazeera Politics",
       "attribution": "Al Jazeera",
       "attributionUrl": "https://www.aljazeera.com"
     },
     {
-      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
-      "category": "dunya",
-      "label": "BBC World",
+      "url": "https://www.dawn.com/feeds/opinion",
+      "category": "siasat",
+      "label": "Dawn Opinion",
+      "attribution": "Dawn",
+      "attributionUrl": "https://www.dawn.com"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "category": "karobar",
+      "label": "BBC Business",
       "attribution": "BBC News",
-      "attributionUrl": "https://www.bbc.com/news"
+      "attributionUrl": "https://www.bbc.com/news/business"
     },
     {
       "url": "https://www.dawn.com/feeds/business",
@@ -78,11 +134,11 @@
       "attributionUrl": "https://tribune.com.pk"
     },
     {
-      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
-      "category": "karobar",
-      "label": "BBC Business",
-      "attribution": "BBC News",
-      "attributionUrl": "https://www.bbc.com/news/business"
+      "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "category": "khel",
+      "label": "BBC Sport",
+      "attribution": "BBC Sport",
+      "attributionUrl": "https://www.bbc.com/sport"
     },
     {
       "url": "https://www.dawn.com/feeds/sport",
@@ -99,11 +155,11 @@
       "attributionUrl": "https://tribune.com.pk"
     },
     {
-      "url": "https://feeds.bbci.co.uk/sport/rss.xml",
-      "category": "khel",
-      "label": "BBC Sport",
-      "attribution": "BBC Sport",
-      "attributionUrl": "https://www.bbc.com/sport"
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "category": "technology",
+      "label": "BBC Technology",
+      "attribution": "BBC News",
+      "attributionUrl": "https://www.bbc.com/news/technology"
     },
     {
       "url": "https://www.dawn.com/feeds/tech",
@@ -111,13 +167,6 @@
       "label": "Dawn Tech",
       "attribution": "Dawn",
       "attributionUrl": "https://www.dawn.com"
-    },
-    {
-      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
-      "category": "technology",
-      "label": "BBC Technology",
-      "attribution": "BBC News",
-      "attributionUrl": "https://www.bbc.com/news/technology"
     },
     {
       "url": "https://health.economictimes.indiatimes.com/rss/topstories",
@@ -148,11 +197,11 @@
       "attributionUrl": "https://www.dawn.com"
     },
     {
-      "url": "https://www.aljazeera.com/xml/rss/all.xml",
-      "category": "siasat",
-      "label": "Al Jazeera Politics",
-      "attribution": "Al Jazeera",
-      "attributionUrl": "https://www.aljazeera.com"
+      "url": "https://tribune.com.pk/rss/opinion",
+      "category": "raye",
+      "label": "Express Tribune Opinion",
+      "attribution": "The Express Tribune",
+      "attributionUrl": "https://tribune.com.pk"
     },
     {
       "url": "https://www.dawn.com/feeds/opinion",
@@ -160,13 +209,6 @@
       "label": "Dawn Opinion",
       "attribution": "Dawn",
       "attributionUrl": "https://www.dawn.com"
-    },
-    {
-      "url": "https://tribune.com.pk/rss/opinion",
-      "category": "raye",
-      "label": "Express Tribune Opinion",
-      "attribution": "The Express Tribune",
-      "attributionUrl": "https://tribune.com.pk"
     }
   ]
 }

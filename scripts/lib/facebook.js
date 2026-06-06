@@ -6,14 +6,15 @@ const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.j
 
 const MAX_POSTS_PER_RUN = 4
 const MIN_DELAY_MS = 3000
-const TITLE_SIMILARITY_THRESHOLD = 0.6
+
+const POST_FORMATS = ["link", "photo", "text"]
 
 function loadTracker() {
-  if (!fs.existsSync(FB_TRACKER_PATH)) return { posted: [], lastRun: null }
+  if (!fs.existsSync(FB_TRACKER_PATH)) return { posted: [], lastRun: null, formatIndex: 0 }
   try {
     return JSON.parse(fs.readFileSync(FB_TRACKER_PATH, "utf-8"))
   } catch {
-    return { posted: [], lastRun: null }
+    return { posted: [], lastRun: null, formatIndex: 0 }
   }
 }
 
@@ -39,6 +40,14 @@ function markPosted(slug) {
   }
 }
 
+function getNextFormatIndex() {
+  const state = loadTracker()
+  const idx = state.formatIndex || 0
+  state.formatIndex = (idx + 1) % POST_FORMATS.length
+  saveTracker(state)
+  return idx
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
@@ -51,7 +60,7 @@ function graphApiRequest(url, method = "GET") {
       path: parsed.pathname + parsed.search,
       method,
       headers: {
-        "User-Agent": "PakistanNewsHub/2.0 (Facebook Auto-Poster; bot@pakistan-news.news)",
+        "User-Agent": "GlobalLens/1.0 (Facebook Auto-Poster; bot@thegloballens365.com)",
       },
     }
     const req = https.request(options, (res) => {
@@ -76,8 +85,9 @@ function graphApiRequest(url, method = "GET") {
 
 function selectTopArticles(articles, limit = MAX_POSTS_PER_RUN) {
   const sourcePriority = [
+    "reuters", "associated press", "ap news", "bbc", "bbc news",
+    "al jazeera", "the guardian", "the new york times", "washington post",
     "dawn", "dawn news", "express tribune", "the news international",
-    "bbc", "al jazeera", "reuters", "associated press",
     "pakistan today", "daily times", "the nation", "ary news",
   ]
 
@@ -115,38 +125,112 @@ function selectTopArticles(articles, limit = MAX_POSTS_PER_RUN) {
   return selected
 }
 
-async function postArticleLink({ pageId, pageAccessToken, article, siteUrl }) {
-  const articleUrl = `${siteUrl.replace(/\/$/, "")}/article/${article.slug}`
+function getArticleLink(article, siteUrl) {
+  return article.sourceUrl || article.canonicalUrl || `${siteUrl.replace(/\/$/, "")}/article/${article.slug}`
+}
 
-  const sourceName = article.sourceName || article.attribution || article.source || ""
-  const excerpt = (article.excerpt || article.description || "").substring(0, 200)
+function getArticleImageUrl(article, siteUrl) {
+  const img = article.image || article.imageUrl || ""
+  if (img.startsWith("http://") || img.startsWith("https://")) {
+    return img
+  }
+  if (img.startsWith("/")) {
+    return `${siteUrl.replace(/\/$/, "")}${img}`
+  }
+  return null
+}
 
-  let message = article.title
+function buildMessage(title, sourceName, excerpt, isBreaking) {
+  let msg = title
   if (sourceName) {
-    message += `\n\n— ${sourceName}`
+    msg += `\n\n— ${sourceName}`
   }
   if (excerpt) {
-    message += `\n\n${excerpt}`
+    msg += `\n\n${excerpt.substring(0, 200)}`
   }
-  message += `\n\n#Pakistan #News`
+  msg += `\n\n#GlobalNews #WorldNews`
+  if (isBreaking) {
+    msg = `BREAKING\n\n${msg}`
+  }
+  return msg.substring(0, 63206)
+}
+
+async function postLinkFormat({ pageId, pageAccessToken, article, siteUrl }) {
+  const linkUrl = getArticleLink(article, siteUrl)
+  const sourceName = article.sourceName || article.attribution || article.source || ""
+  const excerpt = (article.excerpt || article.description || "").substring(0, 200)
+  const message = buildMessage(article.title, sourceName, excerpt, article.breaking)
 
   const apiUrl =
     `https://graph.facebook.com/v22.0/${pageId}/feed` +
     `?access_token=${encodeURIComponent(pageAccessToken)}` +
-    `&message=${encodeURIComponent(message.substring(0, 63206))}` +
-    `&link=${encodeURIComponent(articleUrl)}` +
+    `&message=${encodeURIComponent(message)}` +
+    `&link=${encodeURIComponent(linkUrl)}` +
+    `&locale=en_US` +
     `&published=true`
 
   const result = await graphApiRequest(apiUrl, "POST")
-
   if (result.error) {
-    console.error(`    Facebook API error: ${result.error.message || JSON.stringify(result.error)}`)
+    console.error(`    Link post error: ${result.error.message || JSON.stringify(result.error)}`)
     return false
   }
-
-  markPosted(article.slug)
+  console.log(`    Link post: ${result.id} → ${linkUrl}`)
   return true
 }
+
+async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
+  const imageUrl = getArticleImageUrl(article, siteUrl)
+  const linkUrl = getArticleLink(article, siteUrl)
+  const sourceName = article.sourceName || article.attribution || article.source || ""
+  const excerpt = (article.excerpt || article.description || "").substring(0, 200)
+  const message = buildMessage(article.title, sourceName, excerpt, article.breaking) + `\n\n${linkUrl}`
+
+  if (!imageUrl) {
+    console.log(`    No image available, falling back to link format`)
+    return await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
+  }
+
+  const apiUrl =
+    `https://graph.facebook.com/v22.0/${pageId}/photos` +
+    `?access_token=${encodeURIComponent(pageAccessToken)}` +
+    `&url=${encodeURIComponent(imageUrl)}` +
+    `&caption=${encodeURIComponent(message)}` +
+    `&locale=en_US` +
+    `&published=true`
+
+  const result = await graphApiRequest(apiUrl, "POST")
+  if (result.error) {
+    console.error(`    Photo post error: ${result.error.message || JSON.stringify(result.error)} (falling back to link)`)
+    return await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
+  }
+  console.log(`    Photo post: ${result.id} (image: ${imageUrl})`)
+  return true
+}
+
+async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
+  const sourceName = article.sourceName || article.attribution || article.source || ""
+  const excerpt = (article.excerpt || article.description || "").substring(0, 200)
+  const linkUrl = getArticleLink(article, siteUrl)
+  const message = buildMessage(article.title, sourceName, excerpt, article.breaking) +
+    `\n\nFull story: ${linkUrl}`
+
+  const apiUrl =
+    `https://graph.facebook.com/v22.0/${pageId}/feed` +
+    `?access_token=${encodeURIComponent(pageAccessToken)}` +
+    `&message=${encodeURIComponent(message)}` +
+    `&locale=en_US` +
+    `&published=true`
+
+  const result = await graphApiRequest(apiUrl, "POST")
+  if (result.error) {
+    console.error(`    Text post error: ${result.error.message || JSON.stringify(result.error)}`)
+    return false
+  }
+  console.log(`    Text post: ${result.id}`)
+  return true
+}
+
+const FORMAT_POSTERS = [postLinkFormat, postPhotoFormat, postTextFormat]
 
 async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, limit = MAX_POSTS_PER_RUN, dryRun = false }) {
   if (!pageId || !pageAccessToken) {
@@ -161,24 +245,35 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
     return { posted: 0, skipped: 0, total: 0 }
   }
 
-  console.log(`  Facebook: posting ${top.length} top articles...`)
+  const startFormatIdx = getNextFormatIndex()
+  const formatNames = ["link", "photo", "text"]
+
+  console.log(`  Facebook: posting ${top.length} articles (starting format: ${formatNames[startFormatIdx]})...`)
   let posted = 0
   let skipped = 0
 
   for (let i = 0; i < top.length; i++) {
     const a = top[i]
+    const formatIdx = (startFormatIdx + i) % FORMAT_POSTERS.length
+    const formatName = formatNames[formatIdx]
     const sourceName = a.sourceName || a.attribution || a.source || ""
-    console.log(`    [${i + 1}/${top.length}] ${a.title.substring(0, 70)} (${sourceName})`)
+
+    const linkUrl = getArticleLink(a, siteUrl)
+    console.log(`    [${i + 1}/${top.length}] [${formatName}] ${a.title.substring(0, 65)} (${sourceName})`)
 
     if (dryRun) {
-      console.log(`      (dry-run — would post: ${siteUrl}/article/${a.slug})`)
+      const imgUrl = getArticleImageUrl(a, siteUrl)
+      console.log(`      (dry-run — would post as ${formatName}, link: ${linkUrl}${imgUrl ? `, image: ${imgUrl}` : ""})`)
       skipped++
       continue
     }
 
-    const success = await postArticleLink({ pageId, pageAccessToken, article: a, siteUrl })
+    const poster = FORMAT_POSTERS[formatIdx]
+    const success = await poster({ pageId, pageAccessToken, article: a, siteUrl })
+
     if (success) {
-      console.log(`      Posted: ${siteUrl}/article/${a.slug}`)
+      console.log(`      Posted as ${formatName}: ${linkUrl}`)
+      markPosted(a.slug)
       posted++
     } else {
       console.error(`      Failed to post: ${a.title.substring(0, 60)}`)
@@ -190,7 +285,7 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
     }
   }
 
-  console.log(`  Facebook: ${posted} posted, ${skipped} skipped`)
+  console.log(`  Facebook: ${posted} posted, ${skipped} skipped (${formatNames[startFormatIdx]} → ...)`)
   return { posted, skipped, total: top.length }
 }
 
