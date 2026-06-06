@@ -1,8 +1,9 @@
 import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 import { SafeImage } from "@/components/ui/safe-image"
 import { MixedText } from "@/components/ui/mixed-text"
 import { formatDate } from "@/lib/utils"
-import { categories } from "@/lib/constants"
+import { categories, DISCLAIMER_TEXT } from "@/lib/constants"
 import type { ArticleMeta } from "@/types"
 
 interface ArticleHeroProps {
@@ -43,7 +44,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       </div>
 
       {/* Title */}
-      <h1 className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-[1.7] md:text-4xl lg:text-5xl">
+      <h1 dir="rtl" className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-[1.7] md:text-4xl lg:text-5xl">
         <MixedText text={article.title} />
       </h1>
 
@@ -76,17 +77,35 @@ export function ArticleHero({ article }: ArticleHeroProps) {
         )}
       </div>
 
+      {/* Source attribution */}
+      {article.source && (
+        <div className="mt-4 flex items-center gap-2 rounded-lg bg-muted/50 px-4 py-3 text-[12px] text-muted-foreground border border-border/30">
+          <span>{DISCLAIMER_TEXT}</span>
+          <a
+            href={article.source.url}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="inline-flex items-center gap-1 font-medium text-foreground underline decoration-foreground/30 underline-offset-2 hover:decoration-foreground/60 transition-colors"
+          >
+            {article.source.name}
+            <ExternalLink className="h-3 w-3" />
+          </a>
+        </div>
+      )}
+
       {/* Image */}
-      <div className="relative mt-8 w-full h-[420px] md:h-[500px] lg:h-[560px] overflow-hidden rounded-xl shadow-lg">
-        <SafeImage
-          src={article.image}
-          alt={article.imageAlt || article.title}
-          categorySlug={article.categorySlug}
-          slug={article.slug}
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-      </div>
+      {article.image && (
+        <div className="relative mt-8 w-full h-[420px] md:h-[500px] lg:h-[560px] overflow-hidden rounded-xl shadow-lg">
+          <SafeImage
+            src={article.image}
+            alt={article.imageAlt || article.title}
+            categorySlug={article.categorySlug}
+            slug={article.slug}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+        </div>
+      )}
     </header>
   )
 }

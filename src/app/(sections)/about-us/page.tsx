@@ -5,9 +5,9 @@ import { generateMetadata } from "@/lib/seo"
 import { siteConfig } from "@/lib/constants"
 
 export const metadata: Metadata = generateMetadata({
-  title: "ہمارے بارے میں — ہمارا مشن اور ادارتی معیارات",
+  title: "ہمارے بارے میں — ہمارا مشن، ایگریگیشن ماڈل اور ادارتی معیارات",
   description:
-    "پاکستان نیوز کے بارے میں جانیں — ہمارا مشن، ادارتی معیارات، اور آزاد، قابل اعتماد صحافت سے وابستگی۔",
+    "پاکستان نیوز ہب کے بارے میں جانیں — ہمارا نیوز ایگریگیشن ماڈل، ذرائع کا انتساب، منصفانہ استعمال کے اصول، اور قابل اعتماد صحافت سے وابستگی۔",
   path: "/about-us",
 })
 
@@ -24,10 +24,49 @@ export default function AboutPage() {
           <section>
             <h2 className="font-headline text-xl font-semibold">ہمارا مشن</h2>
             <p className="mt-3">
-              {siteConfig.name} جامع اور آزاد کوریج فراہم کرتا ہے ان واقعات کی جو ہماری دنیا کو تشکیل دیتے ہیں۔
-              ہم یقین رکھتے ہیں کہ معیاری صحافت باخبر معاشروں اور جمہوری مکالمے کے لیے ضروری ہے۔
-              ہماری نیوز روم تجربہ کار نامہ نگاروں، ڈیٹا صحافیوں اور تجزیہ کاروں کو یکجا کرتی ہے
-              جو حقائق پر مبنی اور باریک بینی سے رپورٹنگ کے لیے پرعزم ہیں۔
+              {siteConfig.name} ایک جامع نیوز ایگریگیشن پلیٹ فارم ہے جو پاکستان اور دنیا بھر سے
+              تازہ ترین خبریں ایک جگہ پیش کرتا ہے۔ ہم مختلف پاکستانی اور بین الاقوامی خبروں کے
+              ذرائع سے خبروں کے خلاصے اور اقتباسات مرتب کرکے قارئین کو باخبر رکھنے میں مدد
+              دیتے ہیں۔ ہمارا مقصد صارفین کو ایک ہی پلیٹ فارم پر متنوع نقطہ نظر تک رسائی فراہم
+              کرنا ہے۔
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-headline text-xl font-semibold">نیوز ایگریگیشن ماڈل</h2>
+            <p className="mt-3">
+              {siteConfig.name} ایک خالص نیوز ایگریگیٹر ہے۔ ہم خبروں کے مضامین کو مکمل طور پر
+              دوبارہ شائع نہیں کرتے۔ اس کے بجائے:
+            </p>
+            <ul className="mt-4 space-y-3">
+              {[
+                {
+                  title: "مختصر خلاصے",
+                  desc: "ہم اصل مضامین کے مختصر خلاصے (عام طور پر 30-50 الفاظ) اپنے الفاظ میں پیش کرتے ہیں۔",
+                },
+                {
+                  title: "ماخذ کا انتساب",
+                  desc: "ہر خبر کے ساتھ اصل ناشر کا نام اور براہ راست لنک فراہم کیا جاتا ہے تاکہ قارئین مکمل مضمون پڑھ سکیں۔",
+                },
+                {
+                  title: "منصفانہ استعمال",
+                  desc: "ہم copyright law کے تحت منصفانہ استعمال (fair use) کے اصولوں پر عمل کرتے ہیں۔ ہمارے خلاصے اصل مضامین کے متبادل نہیں بلکہ ان کی طرف رہنمائی کرتے ہیں۔",
+                },
+              ].map((item) => (
+                <li key={item.title} className="border-r-[3px] border-border pr-4">
+                  <strong className="font-semibold">{item.title}:</strong> {item.desc}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="font-headline text-xl font-semibold">ہمارے ذرائع</h2>
+            <p className="mt-3">
+              ہم پاکستان اور دنیا بھر کے معروف خبروں کے اداروں سے خبریں جمع کرتے ہیں، جن میں
+              ڈان (Dawn)، ایکسپریس ٹریبیون (Express Tribune)، دی نیوز (The News International)،
+              جیو نیوز (Geo News)، بی بی سی اردو (BBC Urdu)، الجزیرہ اردو (Al Jazeera Urdu)،
+              اور دیگر شامل ہیں۔ تمام کاپی رائٹس بالترتیب ان کے اصل ناشروں کے پاس محفوظ ہیں۔
             </p>
           </section>
 
@@ -63,12 +102,22 @@ export default function AboutPage() {
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">ہماری کوریج</h2>
+            <h2 className="font-headline text-xl font-semibold">قانونی تعمیل</h2>
             <p className="mt-3">
-              بریکنگ نیوز اور عالمی امور سے لے کر ٹیکنالوجی، سائنس، کاروبار، ثقافت،
-              اور موسمیاتی تبدیلی تک — ہماری رپورٹنگ ہر اہم شعبے کا احاطہ کرتی ہے۔
-              ہم روایتی صحافتی معیار کو جدید ڈیجیٹل کہانی سنانے کے ساتھ جوڑتے ہیں
-              تاکہ آپ کو ایسی خبریں فراہم کر سکیں جو مستند اور قابل رسائی ہوں۔
+              ہم ڈیجیٹل ملینیم کاپی رائٹ ایکٹ (DMCA) اور قابل اطلاق کاپی رائٹ قوانین کی مکمل
+              تعمیل کرتے ہیں۔ ہماری{" "}
+              <a href="/copyright-policy" className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60">
+                کاپی رائٹ پالیسی
+              </a>
+              ،{" "}
+              <a href="/attribution-policy" className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60">
+                انتساب کی پالیسی
+              </a>
+              ، اور{" "}
+              <a href="/terms-of-service" className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60">
+                خدمات کی شرائط
+              </a>
+              {" "}کے بارے میں مزید جانیں۔
             </p>
           </section>
 
@@ -82,7 +131,7 @@ export default function AboutPage() {
               >
                 contact@{new URL(siteConfig.url).hostname}
               </a>
-              پر۔
+              {" "}پر۔
             </p>
           </section>
         </div>

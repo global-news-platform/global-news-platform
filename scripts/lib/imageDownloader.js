@@ -21,6 +21,16 @@ const FALLBACK_IMAGES = {
   entertainment: "entertainment.jpg",
 }
 
+const NORMALIZE_CATEGORY = {
+  karobar: "business", siasat: "politics", khel: "sports",
+  sehat: "health", shobiz: "entertainment", taleem: "education",
+  mausam: "weather", adalat: "justice", dunya: "world",
+  baynalaqwami: "world", raye: "opinion", mazhab: "religion",
+  business: "business", politics: "politics", sports: "sports",
+  health: "health", entertainment: "entertainment", world: "world",
+  technology: "technology", science: "science", pakistan: "pakistan",
+}
+
 const MIN_WIDTH = 600
 const MIN_HEIGHT = 300
 const MIN_FILE_SIZE = 10240
@@ -55,39 +65,55 @@ function getFallbackForCategory(categorySlug) {
   return "/images/fallbacks/default.jpg"
 }
 
+const STRICT_KEYWORD_MAP = {
+  sports: ["cricket", "football", "soccer", "nba", "nfl", "tennis", "golf", "olympic", "olympics", "premier league", "champions league", "grand slam", "world cup"],
+  politics: ["parliament", "congress", "senate", "election", "president", "governor race", "midterm", "primary", "vote", "campaign"],
+  technology: ["ai", "artificial intelligence", "google", "openai", "chatgpt", "robot", "software", "startup", "smartphone", "cyberattack"],
+  health: ["hospital", "doctor", "disease", "vaccine", "cancer", "medical", "patient", "surgery", "pandemic", "epidemic", "outbreak"],
+  business: ["stock market", "economy", "inflation", "trade war", "tariff", "interest rate", "central bank", "recession", "gdp"],
+  science: ["climate change", "environment", "space", "nasa", "planet", "research", "discovery", "experiment"],
+  entertainment: ["film", "movie", "music", "concert", "celebrity", "award show", "box office"],
+  world: ["iran war", "russia ukraine", "gaza", "middle east", "diplomatic", "sanctions", "ceasefire"],
+  pakistan: ["pakistan", "lahore", "karachi", "islamabad", "imran khan", "nawaz sharif"],
+}
+
 function getKeywordFallback(title) {
   if (!title) return null
   const lower = title.toLowerCase()
-  const map = {
-    cricket: "sports", football: "sports", soccer: "sports",
-    nba: "sports", nfl: "sports", tennis: "sports", golf: "sports",
-    olympic: "sports", premier: "sports", champion: "sports",
-    parliament: "politics", congress: "politics", senate: "politics",
-    election: "politics", president: "politics", vote: "politics",
-    government: "politics", political: "politics",
-    ai: "technology", google: "technology", openai: "technology",
-    chatbot: "technology", robot: "technology", cyber: "technology",
-    software: "technology", tech: "technology", startup: "technology",
-    digital: "technology", data: "technology", app: "technology",
-    hospital: "health", doctor: "health", health: "health",
-    disease: "health", vaccine: "health", drug: "health",
-    cancer: "health", medical: "health", patient: "health",
-    stock: "business", market: "business", economy: "business",
-    inflation: "business", trade: "business", tariff: "business",
-    bank: "business", oil: "business", price: "business",
-    business: "business", company: "business",
-    climate: "science", environment: "science", space: "science",
-    nasa: "science", planet: "science", research: "science",
-    film: "entertainment", movie: "entertainment", music: "entertainment",
-    celebrity: "entertainment", star: "entertainment",
+
+  for (const [cat, keywords] of Object.entries(STRICT_KEYWORD_MAP)) {
+    for (const keyword of keywords) {
+      if (lower.includes(keyword)) {
+        return { category: cat, image: getFallbackForCategory(cat) }
+      }
+    }
+  }
+
+  const broadMap = {
+    stock: "business", market: "business", bank: "business",
+    oil: "business", price: "business", company: "business",
+    trade: "business", tariff: "business", inflation: "business",
+    ai: "technology", google: "technology", data: "technology",
+    app: "technology", digital: "technology", robot: "technology",
+    health: "health", virus: "health", drug: "health",
+    climate: "science", space: "science", nasa: "science",
     iran: "world", russia: "world", ukraine: "world", china: "world",
-    israel: "world", gaza: "world", africa: "world", europe: "world",
-    pakistan: "pakistan", lahore: "pakistan", karachi: "pakistan",
+    israel: "world", gaza: "world",
+    film: "entertainment", music: "entertainment", star: "entertainment",
   }
-  for (const [keyword, cat] of Object.entries(map)) {
-    if (lower.includes(keyword)) return { category: cat, image: getFallbackForCategory(cat) }
+
+  const detectedCategories = new Map()
+  for (const [keyword, cat] of Object.entries(broadMap)) {
+    if (lower.includes(keyword)) {
+      detectedCategories.set(cat, (detectedCategories.get(cat) || 0) + 1)
+    }
   }
-  return null
+
+  if (detectedCategories.size === 0) return null
+
+  const sorted = [...detectedCategories.entries()].sort((a, b) => b[1] - a[1])
+  const bestCat = sorted[0][0]
+  return { category: bestCat, image: getFallbackForCategory(bestCat) }
 }
 
 function downloadImageBuffer(url) {
@@ -305,13 +331,21 @@ async function downloadArticleImage(article) {
     if (result) return result
   }
 
+  const articleCategory = article.categorySlug || article.category || "general"
+  const normalCat = NORMALIZE_CATEGORY[articleCategory] || articleCategory
+
   const kw = getKeywordFallback(article.title)
   if (kw) {
+    if (kw.category !== normalCat) {
+      const fallback = getFallbackForCategory(articleCategory)
+      console.log(`  ⚠ Keyword fallback "${kw.category}" doesn't match article category "${normalCat}", using category fallback: ${fallback}`)
+      return { path: fallback, source: "category-fallback", downloaded: false, width: 0, height: 0 }
+    }
     console.log(`  ⚠ Using keyword fallback for "${(article.title || "").substring(0, 50)}": ${kw.image}`)
     return { path: kw.image, source: "keyword-fallback", downloaded: false, width: 0, height: 0 }
   }
 
-  const fallback = getFallbackForCategory(article.categorySlug || article.category)
+  const fallback = getFallbackForCategory(articleCategory)
   console.log(`  ⚠ Using category fallback for "${(article.title || "").substring(0, 50)}": ${fallback}`)
   return { path: fallback, source: "category-fallback", downloaded: false, width: 0, height: 0 }
 }

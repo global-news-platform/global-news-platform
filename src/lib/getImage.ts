@@ -1,13 +1,16 @@
 import fs from "fs"
 import path from "path"
-import { getFallbackImageUrl } from "@/lib/images/fallbackImages"
+import { CATEGORY_FALLBACK_MAP } from "@/lib/images/fallbackImages"
 
 const ARTICLES_IMG_DIR = path.join(process.cwd(), "public/images/articles")
-const FALLBACKS_DIR = path.join(process.cwd(), "public/images/fallbacks")
 const MIN_FILE_SIZE = 5000
 
 function fileExists(fp: string): boolean {
   try { return fs.existsSync(fp) } catch { return false }
+}
+
+function isFallbackPath(imgPath: string): boolean {
+  return imgPath.startsWith("/images/fallbacks/")
 }
 
 function findLocalImage(slug: string): string | null {
@@ -28,27 +31,20 @@ function findLocalImage(slug: string): string | null {
   return null
 }
 
-function resolveFallbackImage(categorySlug?: string): string | undefined {
-  if (!fileExists(FALLBACKS_DIR)) return undefined
-  const url = getFallbackImageUrl(categorySlug)
-  const localPath = path.join(process.cwd(), "public", url)
-  if (fileExists(localPath) && fs.statSync(localPath).size > 0) {
-    return url
-  }
-  const defaultPath = path.join(FALLBACKS_DIR, "default.jpg")
-  if (fileExists(defaultPath) && fs.statSync(defaultPath).size > 0) {
-    return "/images/fallbacks/default.jpg"
-  }
-  return undefined
+function fallbackMatchesCategory(fallbackPath: string, categorySlug?: string): boolean {
+  if (!categorySlug || !fallbackPath) return false
+  const expectedFallback = CATEGORY_FALLBACK_MAP[categorySlug.toLowerCase()]
+  if (!expectedFallback) return false
+  const fileName = path.basename(fallbackPath).replace(/\.\w+$/, "")
+  return fileName === expectedFallback
 }
 
 export function getImage(options: {
   slug?: string
-  categorySlug?: string
   frontmatterImage?: string | null
-  title?: string
+  categorySlug?: string
 } = {}): string | undefined {
-  const { slug, categorySlug, frontmatterImage } = options
+  const { slug, frontmatterImage, categorySlug } = options
 
   if (slug) {
     const found = findLocalImage(slug)
@@ -56,6 +52,23 @@ export function getImage(options: {
   }
 
   if (frontmatterImage) {
+    if (frontmatterImage.startsWith("/images/articles/")) {
+      const localPath = path.join(process.cwd(), "public", frontmatterImage)
+      if (fileExists(localPath) && fs.statSync(localPath).size >= MIN_FILE_SIZE) {
+        return frontmatterImage
+      }
+    }
+
+    if (isFallbackPath(frontmatterImage)) {
+      if (fallbackMatchesCategory(frontmatterImage, categorySlug)) {
+        const localPath = path.join(process.cwd(), "public", frontmatterImage)
+        if (fileExists(localPath) && fs.statSync(localPath).size >= MIN_FILE_SIZE) {
+          return frontmatterImage
+        }
+      }
+      return undefined
+    }
+
     if (frontmatterImage.startsWith("/images/")) {
       const localPath = path.join(process.cwd(), "public", frontmatterImage)
       if (fileExists(localPath) && fs.statSync(localPath).size >= MIN_FILE_SIZE) {
@@ -64,13 +77,13 @@ export function getImage(options: {
     }
   }
 
-  return resolveFallbackImage(categorySlug)
+  return undefined
 }
 
 export async function verifyArticleImage(
   slug: string,
-  _categorySlug?: string,
-  _title?: string,
+  categorySlug?: string,
+  title?: string,
 ): Promise<string | undefined> {
   if (!fileExists(ARTICLES_IMG_DIR)) return undefined
   const files = fs.readdirSync(ARTICLES_IMG_DIR)

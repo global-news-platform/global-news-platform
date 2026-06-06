@@ -7,7 +7,7 @@ import { Search, Menu, X, Sun, Moon, Globe } from "lucide-react"
 import { SocialIcons } from "@/components/layout/social-icons"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/components/common/theme-provider"
-import { navigation, categories } from "@/lib/constants"
+import { navigation, categories, siteConfig } from "@/lib/constants"
 import {
   Dialog,
   DialogContent,
@@ -131,10 +131,10 @@ export function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold leading-tight tracking-tight md:text-3xl">
-                پاکستان نیوز
+                {siteConfig.nameUrdu}
               </span>
               <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground md:block">
-                پاکستان کی معتبر آواز
+                {siteConfig.taglineEn}
               </span>
             </div>
           </Link>
@@ -161,7 +161,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Navigation bar - deep red / primary */}
+        {/* Navigation bar */}
         <div className="hidden border-t border-primary/20 md:block">
           <div className="bg-primary">
             <div className="mx-auto flex h-11 max-w-7xl items-center px-4 sm:px-5 lg:px-6 xl:px-8">
@@ -255,7 +255,7 @@ export function Header() {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
                   <Globe className="h-4 w-4 text-primary-foreground" />
                 </div>
-                <span className="text-base font-bold">پاکستان نیوز</span>
+                <span className="text-base font-bold">{siteConfig.nameUrdu}</span>
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}

@@ -28,7 +28,7 @@ export function generateWebsiteSchema() {
     "@id": `${siteConfig.url}/#website`,
     url: siteConfig.url,
     name: siteConfig.name,
-    description: siteConfig.description,
+    description: siteConfig.descriptionEn || siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "ur-PK",
     potentialAction: {
@@ -45,16 +45,17 @@ export function generateWebsiteSchema() {
 export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "NewsMediaOrganization",
     "@id": `${siteConfig.url}/#organization`,
     url: siteConfig.url,
-    name: siteConfig.name,
+    name: siteConfig.nameUrdu,
+    alternateName: siteConfig.name,
     description: siteConfig.description,
     logo: {
       "@type": "ImageObject",
       "@id": `${siteConfig.url}/#logo`,
       url: absoluteUrl(siteConfig.logo),
-      caption: siteConfig.name,
+      caption: siteConfig.nameUrdu,
     },
     image: absoluteUrl(siteConfig.ogImage),
     sameAs: [
@@ -64,6 +65,11 @@ export function generateOrganizationSchema() {
       siteConfig.links.instagram,
     ].filter(Boolean),
     foundingDate: "2026",
+    ethicsPolicy: absoluteUrl("/attribution-policy"),
+    diversityPolicy: absoluteUrl("/attribution-policy"),
+    publishingPrinciples: absoluteUrl("/about-us"),
+    actionableFeedbackPolicy: absoluteUrl("/about-us"),
+    correctionsPolicy: absoluteUrl("/about-us"),
   }
 }
 
@@ -72,14 +78,13 @@ export function generateNewsArticleSchema(
   url: string,
   publisherLogo: string,
 ) {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     "@id": `${url}#article`,
     isAccessibleForFree: true,
     headline: article.title,
     description: article.excerpt,
-    image: article.image ? absoluteUrl(article.image) : undefined,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt || article.publishedAt,
     author: {
@@ -90,15 +95,32 @@ export function generateNewsArticleSchema(
     publisher: {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
-      name: siteConfig.name,
+      name: siteConfig.nameUrdu,
       logo: { "@type": "ImageObject", url: publisherLogo },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: article.tags.join(", "),
     articleSection: article.category,
-    wordCount: article.content.split(/\s+/).length,
     inLanguage: "ur-PK",
   }
+
+  if (article.image) {
+    schema.image = absoluteUrl(article.image)
+  }
+
+  if (article.source) {
+    schema["citation"] = {
+      "@type": "CreativeWork",
+      name: article.source.name,
+      url: article.source.url,
+    }
+    schema["isBasedOn"] = {
+      "@type": "CreativeWork",
+      url: article.source.canonicalUrl || article.source.url,
+    }
+  }
+
+  return schema
 }
 
 export function generateBreadcrumbSchema(
@@ -184,7 +206,7 @@ export function generateMetadata(
       title: overrides.title,
       description: overrides.description,
       url,
-      siteName: siteConfig.name,
+      siteName: siteConfig.nameUrdu,
       locale: siteConfig.locale,
       type: "website",
       images: ogImages,

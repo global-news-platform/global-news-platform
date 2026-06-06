@@ -50,6 +50,9 @@ const AI_HALLUCINATED_FORMATTING = [
 
 const URDU_CHAR_RANGE = /[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/
 
+const FRONTMATTER_LINE = /^[\w-]+\s*:\s*.+/m
+const FRONTMATTER_BLOCK = /^---\s*\n[\s\S]*?\n---\s*\n/gm
+
 function removeEscapedQuotes(text: string): string {
   let result = text
   for (const [pattern, replacement] of ESCAPED_QUOTE_PATTERNS) {
@@ -190,6 +193,47 @@ function cleanBrokenUrdu(text: string): string {
   return result
 }
 
+function stripFrontmatterBlocks(text: string): string {
+  let result = text
+
+  result = result.replace(FRONTMATTER_BLOCK, "")
+
+  result = result.replace(/^---\s*$/gm, "")
+
+  const lines = result.split("\n")
+  const filtered = lines.filter((line) => {
+    const trimmed = line.trim()
+    if (!trimmed) return true
+    if (FRONTMATTER_LINE.test(trimmed) && /^[a-zA-Z][\w-]+\s*:/.test(trimmed)) {
+      return false
+    }
+    return true
+  })
+
+  result = filtered.join("\n")
+  result = result.replace(/\n{3,}/g, "\n\n").trim()
+  return result
+}
+
+function removeDuplicateBodyTitle(body: string, title: string): string {
+  if (!title || !body) return body
+  const cleanedTitle = title.replace(/["""''""«»]/g, "").trim()
+  const lines = body.split("\n")
+  const filtered = lines.filter((line) => {
+    const trimmed = line.trim()
+    if (!trimmed) return true
+    const stripped = trimmed.replace(/["""''""«»]/g, "").trim()
+    if (stripped === cleanedTitle) return false
+    if (stripped.length > 20 && cleanedTitle.length > 20) {
+      const shortA = stripped.slice(0, 30).toLowerCase()
+      const shortB = cleanedTitle.slice(0, 30).toLowerCase()
+      if (shortA === shortB) return false
+    }
+    return true
+  })
+  return filtered.join("\n")
+}
+
 export function sanitizeTitle(title: string): string {
   if (!title) return ""
   let result = title
@@ -235,13 +279,17 @@ export function sanitizeExcerpt(excerpt: string): string {
   return result.trim()
 }
 
-export function sanitizeBody(body: string): string {
+export function sanitizeBody(body: string, title?: string): string {
   if (!body) return ""
   let result = body
   result = removeEscapedQuotes(result)
   result = removeMalformedChars(result)
   result = stripMalformedAIOutput(result)
   result = removeDuplicatedSentences(result)
+  result = stripFrontmatterBlocks(result)
+  if (title) {
+    result = removeDuplicateBodyTitle(result, title)
+  }
   result = cleanBrokenUrdu(result)
   result = normalizeWhitespace(result)
   return result.trim()

@@ -1,7 +1,15 @@
+export interface ArticleSource {
+  name: string
+  url: string
+  canonicalUrl?: string
+}
+
 export interface Category {
   slug: string
   name: string
+  nameEn: string
   description: string
+  descriptionEn?: string
   color?: string
 }
 
@@ -33,6 +41,9 @@ export interface ArticleMeta {
   featured: boolean
   breaking: boolean
   trending: boolean
+  source?: ArticleSource
+  attribution?: string
+  isSummary: boolean
 }
 
 export interface ArticleFrontmatter {
@@ -48,6 +59,11 @@ export interface ArticleFrontmatter {
   featured?: boolean
   breaking?: boolean
   trending?: boolean
+  sourceName?: string
+  sourceUrl?: string
+  canonicalUrl?: string
+  attribution?: string
+  isSummary?: boolean
 }
 
 export interface ArticleLink {
@@ -65,4 +81,6 @@ export interface ArticleLink {
   featured: boolean
   breaking: boolean
   trending: boolean
+  source?: ArticleSource
+  isSummary: boolean
 }

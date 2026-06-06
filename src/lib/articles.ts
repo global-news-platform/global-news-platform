@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import readingTime from "reading-time"
 
-import type { ArticleMeta, ArticleLink, Author } from "@/types"
+import type { ArticleMeta, ArticleLink, Author, ArticleSource } from "@/types"
 import { authors } from "@/data/authors/authors"
 import { categories } from "@/lib/constants"
 import { slugify } from "@/lib/utils"
@@ -22,7 +22,6 @@ import {
   hasSufficientUrdu,
   detectCategoryMismatch,
 } from "@/lib/urdu-headlines"
-import { removeEnglishFromUrdu } from "@/lib/urdu-ai"
 
 const MAX_DAILY_ARTICLES = 250
 
@@ -36,7 +35,7 @@ const _urduTitleCache = new Map<string, string>()
 const _urduExcerptCache = new Map<string, string>()
 
 function baseSlug(slug: string): string {
-  return slug.replace(/--[a-f0-9]+$/i, "")
+  return slug.replace(/--[a-z0-9]+$/i, "")
 }
 
 function hasLocalImage(slug: string): boolean {
@@ -158,11 +157,11 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
         _urduExcerptCache.set(cacheKey, urduExcerpt)
       }
 
-      const sanitizedBody = removeEnglishFromUrdu(sanitizeBody(body))
+      const sanitizedBody = sanitizeBody(body, sanitizedTitle)
 
       const rawCategory = safeString(frontmatter.category, "General")
-      let urduCategory = categorizeEnglishCategory(rawCategory)
-      let categoryInfo = categories.find(
+      const urduCategory = categorizeEnglishCategory(rawCategory)
+      const categoryInfo = categories.find(
         (c) => c.name === urduCategory,
       )
       let categoryName = categoryInfo?.name || urduCategory
@@ -182,10 +181,18 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
 
       const resolvedImage = getImage({
         slug,
-        categorySlug,
         frontmatterImage: frontmatter.image as string | undefined | null,
-        title: sanitizedTitle,
+        categorySlug,
       })
+
+      const sourceName = safeString(frontmatter.sourceName) || safeString(frontmatter.attribution)
+      const sourceUrl = safeString(frontmatter.sourceUrl)
+      const canonicalUrl = safeString(frontmatter.canonicalUrl) || sourceUrl
+
+      let source: ArticleSource | undefined
+      if (sourceName && sourceUrl) {
+        source = { name: sourceName, url: sourceUrl, canonicalUrl: canonicalUrl || undefined }
+      }
 
       return {
         slug,
@@ -209,6 +216,9 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
         featured: Boolean(frontmatter.featured),
         breaking: Boolean(frontmatter.breaking),
         trending: Boolean(frontmatter.trending),
+        source,
+        attribution: sourceName || undefined,
+        isSummary: Boolean(frontmatter.isSummary) || true,
       }
     }
   }
@@ -227,7 +237,6 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
       if (!a.title || a.title.length < 5) return false
       if (!a.excerpt || a.excerpt.length < 5) return false
       if (!hasSufficientUrdu(a.title)) return false
-      if (!a.image) return false
       return true
     })
     .sort(
@@ -255,6 +264,8 @@ export async function getArticleLinks(): Promise<ArticleLink[]> {
     featured: a.featured,
     breaking: a.breaking,
     trending: a.trending,
+    source: a.source,
+    isSummary: a.isSummary,
   }))
   return deduplicateArticles(all).slice(0, MAX_DAILY_ARTICLES)
 }

@@ -6,19 +6,23 @@ const parser = new RssParser({
   timeout: 15000,
   headers: {
     "User-Agent":
-      "Mozilla/5.0 (compatible; GlobalNewsBot/1.0; +https://pakistan-news.news)",
+      "PakistanNewsHub/2.0 (news aggregator; +https://pakistan-news.news; bot@pakistan-news.news)",
+    Accept: "application/rss+xml, application/xml, text/xml, */*",
+    "Accept-Language": "en,ur",
   },
   customFields: {
     item: [
       ["media:content", "media:content"],
       ["media:thumbnail", "media:thumbnail"],
-      ["media:group", "media:group"],
     ],
   },
 })
 
 const SOURCES_PATH = path.join(__dirname, "../config/sources.json")
-const ARTICLES_DIR = path.join(__dirname, "../../src/data/articles")
+const MAX_DESCRIPTION_LENGTH = 250
+const MIN_DESCRIPTION_LENGTH = 20
+
+const FETCH_INTERVAL_MS = 1200
 
 function loadSources() {
   const raw = fs.readFileSync(SOURCES_PATH, "utf-8")
@@ -42,120 +46,59 @@ function htmlToText(html) {
     .trim()
 }
 
-function extractOgImage(item) {
-  const content = item["content:encoded"] || item.content || ""
+function extractDescription(item) {
+  const content = item.contentSnippet || item.content || item.description || ""
+  const cleaned = htmlToText(content)
+  if (cleaned.length > MAX_DESCRIPTION_LENGTH) {
+    const truncated = cleaned.slice(0, MAX_DESCRIPTION_LENGTH)
+    const lastPeriod = truncated.lastIndexOf(".")
+    const lastSpace = truncated.lastIndexOf(" ")
+    if (lastPeriod > MAX_DESCRIPTION_LENGTH * 0.5) {
+      return truncated.slice(0, lastPeriod + 1)
+    } else if (lastSpace > 0) {
+      return truncated.slice(0, lastSpace) + "..."
+    }
+    return truncated + "..."
+  }
+  return cleaned.length >= MIN_DESCRIPTION_LENGTH ? cleaned : ""
+}
 
-  const patterns = [
+function extractImage(item) {
+  if (item.enclosure && item.enclosure.url) return item.enclosure.url
+
+  if (item["media:content"]) {
+    if (item["media:content"].$ && item["media:content"].$.url)
+      return item["media:content"].$.url
+    if (Array.isArray(item["media:content"])) {
+      for (const mc of item["media:content"]) {
+        if (mc.$ && mc.$.url) return mc.$.url
+      }
+    }
+  }
+
+  if (item["media:thumbnail"] && item["media:thumbnail"].$)
+    return item["media:thumbnail"].$.url
+
+  const content = item["content:encoded"] || item.content || ""
+  const ogPatterns = [
     /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
     /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
     /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
     /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
   ]
-
-  for (const pattern of patterns) {
+  for (const pattern of ogPatterns) {
     const match = content.match(pattern)
     if (match && match[1]) {
-      try {
-        new URL(match[1])
-        return match[1]
-      } catch {
-        continue
-      }
+      try { new URL(match[1]); return match[1] } catch { continue }
     }
+  }
+
+  const imgMatch = content.match(/<img[^>]+src=["']([^"']+)["']/i)
+  if (imgMatch && imgMatch[1]) {
+    try { new URL(imgMatch[1]); return imgMatch[1] } catch {}
   }
 
   return null
-}
-
-function extractImages(item) {
-  const urls = []
-
-  if (item.enclosure && item.enclosure.url) {
-    urls.push(item.enclosure.url)
-  }
-
-  if (item["media:content"]) {
-    if (item["media:content"].$ && item["media:content"].$.url) {
-      urls.push({ url: item["media:content"].$.url, type: "media:content" })
-    }
-    if (Array.isArray(item["media:content"])) {
-      for (const mc of item["media:content"]) {
-        if (mc.$ && mc.$.url) {
-          urls.push({ url: mc.$.url, type: "media:content" })
-        }
-      }
-    }
-  }
-
-  if (item["media:thumbnail"] && item["media:thumbnail"].$) {
-    urls.push({ url: item["media:thumbnail"].$.url, type: "media:thumbnail" })
-  }
-
-  if (item["media:group"] && item["media:group"]["media:content"]) {
-    const mc = item["media:group"]["media:content"]
-    if (Array.isArray(mc)) {
-      for (const m of mc) {
-        if (m.$ && m.$.url) urls.push({ url: m.$.url, type: "media:group" })
-      }
-    } else if (mc.$ && mc.$.url) {
-      urls.push({ url: mc.$.url, type: "media:group" })
-    }
-  }
-
-  const ogImage = extractOgImage(item)
-  if (ogImage) {
-    urls.push({ url: ogImage, type: "og:image" })
-  }
-
-  const content = item["content:encoded"] || item.content || ""
-  const imgMatches = content.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)
-  for (const match of imgMatches) {
-    if (match[1]) {
-      try {
-        new URL(match[1])
-        urls.push({ url: match[1], type: "content-img" })
-      } catch {
-        continue
-      }
-    }
-  }
-
-  const uniqueUrls = [...new Set(urls.map((u) => u.url))]
-  const valid = uniqueUrls.filter((u) => {
-    try {
-      const parsed = new URL(u)
-      return parsed.protocol === "http:" || parsed.protocol === "https:"
-    } catch {
-      return false
-    }
-  })
-
-  return valid
-}
-
-function extractImage(item) {
-  const images = extractImages(item)
-  if (images.length === 0) return null
-
-  const ogImage = extractOgImage(item)
-  if (ogImage) return ogImage
-
-  for (const url of images) {
-    const u = url.toLowerCase()
-    if (u.includes("featured") || u.includes("large") || u.includes("hero")) {
-      return url
-    }
-  }
-
-  return images[0]
-}
-
-function extractImageUrls(item) {
-  return extractImages(item)
-}
-
-function extractDescription(item) {
-  return htmlToText(item.contentSnippet || item.content || item.description || "")
 }
 
 function generateSlug(title) {
@@ -164,7 +107,6 @@ function generateSlug(title) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .substring(0, 80)
-
   const hash = Math.random().toString(36).substring(2, 8)
   return `${slug}--${hash}`
 }
@@ -172,13 +114,18 @@ function generateSlug(title) {
 function generateTags(title, description, category) {
   const words = (title + " " + description).toLowerCase()
   const tagKeywords = [
-    "trump", "biden", "congress", "senate", "supreme court",
-    "iran", "ukraine", "russia", "china", "taiwan",
-    "ebola", "hantavirus", "covid", "health", "vaccine",
-    "ai", "artificial intelligence", "openai", "musk", "elon",
-    "nba", "nfl", "premier league", "champions league", "cricket",
+    "pakistan", "imran khan", "nawaz sharif", "lahore", "karachi", "islamabad",
+    "iran", "ukraine", "russia", "china", "india", "afghanistan",
+    "cricket", "football", "hockey", "psl", "world cup",
+    "economy", "inflation", "stock market", "rupee", "imf",
+    "ai", "artificial intelligence", "technology", "digital",
     "climate", "environment", "energy", "oil", "gas",
-    "election", "midterm", "primary", "vote",
+    "election", "vote", "campaign", "parliament", "senate",
+    "health", "vaccine", "hospital", "disease",
+    "education", "school", "university", "student",
+    "crime", "police", "court", "justice", "supreme court",
+    "terrorism", "security", "defence", "army",
+    "trade", "tariff", "business", "market",
   ]
 
   const tags = []
@@ -188,13 +135,24 @@ function generateTags(title, description, category) {
     }
   }
 
-  if (tags.length === 0) tags.push(category.toLowerCase())
+  const categoryMap = {
+    pakistan: "pakistan", dunya: "world", siasat: "politics",
+    karobar: "business", technology: "technology", khel: "sports",
+    sehat: "health", science: "science", shobiz: "entertainment",
+    raye: "opinion",
+  }
+  const catTag = categoryMap[category]
+  if (catTag && !tags.includes(catTag)) tags.push(catTag)
 
-  return [...new Set(tags)]
+  return [...new Set(tags)].slice(0, 6)
+}
+
+async function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 async function fetchSource(source, maxPerSource = 5) {
-  const { url, category, label } = source
+  const { url, category, label, attribution, attributionUrl } = source
   console.log(`  [${label}] Fetching ${url}...`)
 
   let feed
@@ -211,26 +169,26 @@ async function fetchSource(source, maxPerSource = 5) {
   return items.map((item) => {
     const title = (item.title || "Untitled").trim()
     const description = extractDescription(item)
-    const ogImage = extractOgImage(item)
     const imageUrl = extractImage(item)
-    const imageUrls = extractImageUrls(item)
     const slug = generateSlug(title)
 
     return {
       source: label,
       sourceUrl: item.link || "",
+      attribution: attribution || label,
+      attributionUrl: attributionUrl || "",
+      canonicalUrl: item.link || "",
       slug,
       title,
-      description: description.substring(0, 300),
-      content: description,
+      description: description || title.substring(0, 120),
+      content: description || title.substring(0, 120),
       category,
       categorySlug: category,
-      ogImage,
-      imageUrl: ogImage || imageUrl,
-      imageUrls,
+      imageUrl,
       publishedAt: item.isoDate || item.pubDate || new Date().toISOString(),
       tags: generateTags(title, description, category),
       guid: item.guid || item.link || slug,
+      isSummary: true,
     }
   })
 }
@@ -243,6 +201,7 @@ async function fetchAllSources(maxPerSource = 5) {
   for (const source of sources) {
     const articles = await fetchSource(source, maxPerSource)
     allArticles.push(...articles)
+    await sleep(FETCH_INTERVAL_MS)
   }
 
   console.log(`\nTotal articles fetched: ${allArticles.length}`)
@@ -255,9 +214,6 @@ module.exports = {
   fetchAllSources,
   htmlToText,
   extractImage,
-  extractImages,
-  extractImageUrls,
-  extractOgImage,
   extractDescription,
   generateSlug,
   generateTags,

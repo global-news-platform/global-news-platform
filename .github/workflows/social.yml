@@ -1,0 +1,49 @@
+name: Social Media Posting
+
+on:
+  schedule:
+    - cron: "0 */8 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (preview only)"
+        default: "false"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      limit:
+        description: "Max posts"
+        default: "4"
+        type: number
+
+permissions:
+  contents: read
+
+jobs:
+  facebook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Post top articles to Facebook Page
+        run: |
+          node scripts/post-social.js \
+            --limit=${{ github.event.inputs.limit || '4' }} \
+            --page-id="${{ secrets.FB_PAGE_ID }}" \
+            --token="${{ secrets.FB_PAGE_ACCESS_TOKEN }}" \
+            --site-url="https://pakistan-news.news" \
+            ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          SITE_URL: "https://pakistan-news.news"

@@ -2,7 +2,7 @@ name: Automated News Ingestion
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
     inputs:
       max:
@@ -37,18 +37,26 @@ jobs:
           node scripts/lib/sitemap.js
           node scripts/lib/feed.js
 
+      - name: Compute metrics & trending
+        run: node -e "
+          const { computeTrending, computeDailyMetrics } = require('./scripts/lib/metrics');
+          computeTrending(20);
+          computeDailyMetrics();
+          console.log('✓ Metrics & trending updated');
+        "
+
       - name: Build & verify
         run: npx next build
 
       - name: Commit & push
         run: |
-          git config user.name "Global News Bot"
-          git config user.email "bot@globalnews.news"
+          git config user.name "Pakistan News Hub Bot"
+          git config user.email "bot@pakistan-news.news"
           git add -A
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Auto: ingest news articles $(date +%Y-%m-%d)"
+            git commit -m "Auto: ingest news articles $(date +%Y-%m-%d-%H)"
             git push
           fi
 
@@ -57,4 +65,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy out --project-name=global-news-platform --branch=main
+          command: pages deploy out --project-name=pakistan-news-hub --branch=main

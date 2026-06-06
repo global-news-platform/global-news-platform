@@ -1,12 +1,13 @@
 export const ALLOWED_ENGLISH_WORDS = new Set([
   "AI", "A.I", "WhatsApp", "Facebook", "Google", "iPhone", "iPad", "iOS",
   "YouTube", "BBC", "CNN", "PDF", "CEO", "CTO", "CFO", "NASA", "NATO",
-  "IMF", "UN", "UAE", "UK", "US", "USA", "U.S", "EU", "GDP", "AI",
+  "IMF", "UN", "UAE", "UK", "US", "USA", "U.S", "U.S.", "EU", "GDP", "AI",
   "COVID", "SARS", "DNA", "RNA", "WiFi", "Wi-Fi", "GPS", "LED", "OLED",
   "Peppa", "Pig", "Toy", "Story",
 ])
 
 export function removeEnglishFromUrdu(text: string): string {
+  if (!text) return text
   let result = text
 
   result = result.replace(/[""''"']/g, "'")
@@ -21,13 +22,17 @@ export function removeEnglishFromUrdu(text: string): string {
 
   result = result.replace(/[\u200B-\u200F\uFEFF]/g, "")
 
+  result = result.replace(/([A-Za-z])\.(?=[A-Za-z])/g, "$1.")
+
   const words = result.split(/\s+/)
   const filtered = words
     .filter((w) => {
       if (!/[a-zA-Z]/.test(w)) return true
       const clean = w.replace(/[^a-zA-Z]/g, "")
       if (!clean) return true
-      return ALLOWED_ENGLISH_WORDS.has(clean) || ALLOWED_ENGLISH_WORDS.has(clean.toLowerCase())
+      if (ALLOWED_ENGLISH_WORDS.has(clean) || ALLOWED_ENGLISH_WORDS.has(clean.toLowerCase())) return true
+      if (clean.length === 1 && /[A-Za-z]/.test(clean)) return true
+      return false
     })
     .join(" ")
     .trim()
@@ -47,7 +52,8 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
   const hasUrdu = /[\u0600-\u06FF]/.test(text)
 
   if (!hasLatin || !hasUrdu) {
-    return [{ text, dir: "rtl" }]
+    const isRtl = /[\u0600-\u06FF]/.test(text)
+    return [{ text, dir: isRtl ? "rtl" : "ltr" }]
   }
 
   const rawParts: { text: string; isLatin: boolean }[] = []
@@ -62,7 +68,8 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
 
     if (isLatin || isUrdu) {
       if (hasContent && (currentIsLatin !== isLatin)) {
-        rawParts.push({ text: current.trim(), isLatin: currentIsLatin })
+        const trimmed = current.trim()
+        if (trimmed) rawParts.push({ text: trimmed, isLatin: currentIsLatin })
         current = ""
       }
       currentIsLatin = isLatin
@@ -73,7 +80,8 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
   }
 
   if (current) {
-    rawParts.push({ text: current.trim(), isLatin: currentIsLatin })
+    const trimmed = current.trim()
+    if (trimmed) rawParts.push({ text: trimmed, isLatin: currentIsLatin })
   }
 
   const merged: MixedSegment[] = []
@@ -87,14 +95,12 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
     }
   }
 
-  if (merged.length > 0) {
-    if (merged[0].dir === "ltr") {
-      merged[0].dir = "rtl"
-    }
-    return merged
+  if (merged.length === 0) {
+    const isRtl = /[\u0600-\u06FF]/.test(text)
+    return [{ text, dir: isRtl ? "rtl" : "ltr" }]
   }
 
-  return [{ text, dir: "rtl" }]
+  return merged
 }
 
 export const CATEGORY_URDU: Record<string, string> = {

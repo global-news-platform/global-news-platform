@@ -12,14 +12,18 @@ const staticPages = [
   { url: "/breaking", priority: 0.9, changefreq: "hourly" },
   { url: "/search", priority: 0.6, changefreq: "weekly" },
   { url: "/about-us", priority: 0.5, changefreq: "monthly" },
-  { url: "/privacy-policy", priority: 0.3, changefreq: "monthly" },
+  { url: "/privacy-policy", priority: 0.4, changefreq: "monthly" },
+  { url: "/terms-of-service", priority: 0.4, changefreq: "monthly" },
+  { url: "/copyright-policy", priority: 0.3, changefreq: "monthly" },
+  { url: "/dmca", priority: 0.3, changefreq: "monthly" },
+  { url: "/attribution-policy", priority: 0.4, changefreq: "monthly" },
 ]
 
 const categories = [
   "pakistan", "dunya", "siasat", "karobar", "technology",
   "khel", "sehat", "science", "shobiz", "mazhab",
   "taleem", "mausam", "crime", "adalat", "baynalaqwami",
-  "videos", "raye", "general",
+  "raye", "general",
 ]
 
 function getArticleSlugs() {

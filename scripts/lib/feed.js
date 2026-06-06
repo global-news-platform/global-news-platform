@@ -6,8 +6,8 @@ const PUBLIC_DIR = path.join(__dirname, "../../public")
 const FEED_PATH = path.join(PUBLIC_DIR, "feed.xml")
 
 const SITE_URL = process.env.SITE_URL || "https://pakistan-news.news"
-const SITE_NAME = "پاکستان نیوز"
-const SITE_DESC = "پاکستان کا معتبر ترین خبروں کا پلیٹ فارم"
+const SITE_NAME = "پاکستان نیوز ہب"
+const SITE_DESC = "پاکستان اور دنیا کی تازہ ترین خبریں — اردو میں خبریں، تجزیہ اور رپورٹس"
 
 function getArticles(limit = 50) {
   if (!fs.existsSync(ARTICLES_DIR)) return []
@@ -35,6 +35,8 @@ function getArticles(limit = 50) {
       author: fm.author || "Staff",
       publishedAt: fm.publishedAt || new Date().toISOString(),
       image: fm.image || "",
+      sourceName: fm.sourceName || "",
+      sourceUrl: fm.sourceUrl || "",
     }
   })
 }
@@ -82,6 +84,7 @@ function generateFeed() {
     <author>${escapeXml(a.author)}</author>
     <pubDate>${new Date(a.publishedAt).toUTCString()}</pubDate>
     ${a.image ? `<enclosure url="${SITE_URL}${a.image}" type="image/jpeg" />` : ""}
+    ${a.sourceName ? `<source url="${SITE_URL}">${escapeXml(a.sourceName)}</source>` : ""}
   </item>`,
     )
     .join("\n")
@@ -96,6 +99,7 @@ function generateFeed() {
     <link>${SITE_URL}</link>
     <description>${escapeXml(SITE_DESC)}</description>
     <language>ur-pk</language>
+    <copyright>${new Date().getFullYear()} ${escapeXml(SITE_NAME)} — News summaries with attribution. All copyrights belong to respective owners.</copyright>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>

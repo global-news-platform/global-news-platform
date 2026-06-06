@@ -4,11 +4,17 @@
 .DESCRIPTION
     Creates a Windows Scheduled Task that runs scripts/run.bat
     every 4 hours. Requires Administrator privileges.
+
+    For Facebook auto-posting, set these environment variables:
+      FB_PAGE_ID=<your-facebook-page-id>
+      FB_PAGE_ACCESS_TOKEN=<your-page-access-token>
+
+    Or run separately: node scripts/post-social.js --page-id=... --token=... --site-url=https://pakistan-news.news
 #>
 
-$TaskName = "GlobalNewsPipeline"
+$TaskName = "PakistanNewsHubPipeline"
 $ScriptPath = Join-Path $PSScriptRoot "run.bat"
-$TaskPath = "\GlobalNews\"
+$TaskPath = "\PakistanNewsHub\"
 
 # Ensure we're running as admin
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
@@ -39,6 +45,11 @@ try {
     Write-Host "  Schedule: Every 4 hours"
     Write-Host "  Script: $ScriptPath"
     Write-Host "  To view: Get-ScheduledTask -TaskPath '$TaskPath' |fl"
+    Write-Host ""
+    Write-Host "  To enable Facebook auto-posting:"
+    Write-Host "    setx FB_PAGE_ID ""your-page-id"""
+    Write-Host "    setx FB_PAGE_ACCESS_TOKEN ""your-token"""
+    Write-Host "  Or run standalone: node scripts/post-social.js --page-id=... --token=... --site-url=https://pakistan-news.news"
 } catch {
     Write-Error "Failed to register task: $_"
     exit 1

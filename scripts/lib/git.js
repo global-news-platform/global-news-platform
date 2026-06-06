@@ -1,7 +1,7 @@
 const { execSync } = require("child_process")
 
-const BOT_NAME = "Global News Bot"
-const BOT_EMAIL = "bot@globalnews.news"
+const BOT_NAME = "Pakistan News Hub Bot"
+const BOT_EMAIL = "bot@pakistan-news.news"
 
 function isGitAvailable() {
   try {

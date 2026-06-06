@@ -2,9 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { formatDateRelative } from "@/lib/utils"
-import { categories } from "@/lib/constants"
+import { categories, DISCLAIMER_TEXT } from "@/lib/constants"
 import { getFallbackCssGradient } from "@/lib/images/fallbackImages"
 import { MixedText } from "@/components/ui/mixed-text"
 import type { ArticleLink } from "@/types"
@@ -27,9 +26,13 @@ function ArticleImage({
 }) {
   const hasRealImage = !!(
     src && typeof src === "string" &&
-    (src.startsWith("/images/") || src.startsWith("http"))
+    (src.startsWith("/images/articles/") || src.startsWith("http"))
   )
-  const [showGradient, setShowGradient] = useState(!hasRealImage)
+  const hasFallbackImage = !!(
+    src && typeof src === "string" &&
+    src.startsWith("/images/") && !src.startsWith("/images/articles/")
+  )
+  const [showGradient, setShowGradient] = useState(!hasRealImage && !hasFallbackImage)
   const [hasError, setHasError] = useState(false)
   const gradientStyle = getFallbackCssGradient(categorySlug)
 
@@ -43,27 +46,28 @@ function ArticleImage({
     )
   }
 
+  if (!src) {
+    return (
+      <div className="absolute inset-0 w-full h-full flex items-center justify-center" style={{ background: gradientStyle }}>
+        <svg className="w-5 h-5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+        </svg>
+      </div>
+    )
+  }
+
   return (
-    <span suppressHydrationWarning className="absolute inset-0 w-full h-full">
-      <Image
-        src={src!}
-        alt={alt}
-        fill
-        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-        sizes={
-          priority
-            ? "100vw"
-            : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        }
-        loading={priority ? "eager" : "lazy"}
-        priority={priority}
-        quality={100}
-        onError={() => {
-          setShowGradient(true)
-          setHasError(true)
-        }}
-      />
-    </span>
+    <img
+      src={src}
+      alt={alt}
+      suppressHydrationWarning
+      loading={priority ? "eager" : "lazy"}
+      onError={() => {
+        setShowGradient(true)
+        setHasError(true)
+      }}
+      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+    />
   )
 }
 
@@ -127,11 +131,14 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             </span>
             <span className="text-white/20">|</span>
             <span className="flex items-center gap-1">
-              <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
               {article.readingTime} منٹ
             </span>
+            {article.source && (
+              <>
+                <span className="text-white/20">|</span>
+                <span>{article.source.name}</span>
+              </>
+            )}
           </div>
         </div>
       </Link>
@@ -153,6 +160,12 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
           <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.06em] text-destructive">{catName}</span>
           <span className="text-[10px] sm:text-[11px] text-muted-foreground">•</span>
           <span className="text-[10px] sm:text-[11px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
+          {article.source && (
+            <>
+              <span className="text-[10px] text-muted-foreground">•</span>
+              <span className="text-[10px] text-muted-foreground">{article.source.name}</span>
+            </>
+          )}
         </div>
         <h3 className="font-headline text-sm sm:text-base lg:text-lg font-bold leading-[1.9] line-clamp-2 group-hover:text-destructive transition-colors duration-200"><MixedText text={article.title} /></h3>
         {article.excerpt && (

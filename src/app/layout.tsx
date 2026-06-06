@@ -37,28 +37,29 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.name}`,
+    default: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.nameUrdu}`,
   },
   description: siteConfig.description,
-  generator: "Pakistan News Platform",
-  applicationName: siteConfig.name,
+  generator: "Pakistan News Hub Platform",
+  applicationName: siteConfig.nameUrdu,
   referrer: "origin-when-cross-origin",
   keywords: [
     "پاکستان", "خبریں", "اردو خبریں", "پاکستان نیوز",
     "breaking news", "pakistan news", "urdu news",
-    "world news", "pakistan headlines",
+    "world news", "pakistan headlines", "global news",
+    "pakistan politics", "cricket news",
   ],
-  authors: [{ name: siteConfig.name, url: siteConfig.url }],
-  creator: siteConfig.name,
-  publisher: siteConfig.name,
+  authors: [{ name: siteConfig.nameUrdu, url: siteConfig.url }],
+  creator: siteConfig.nameUrdu,
+  publisher: siteConfig.nameUrdu,
   formatDetection: { telephone: false, address: false },
   alternates: { canonical: siteConfig.url },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    siteName: siteConfig.nameUrdu,
+    title: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     url: siteConfig.url,
     images: [
@@ -66,17 +67,17 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}${siteConfig.ogImage}`,
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: siteConfig.nameUrdu,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [`${siteConfig.url}${siteConfig.ogImage}`],
-    site: "@pakistannews",
-    creator: "@pakistannews",
+    site: "@pakistannewshub",
+    creator: "@pakistannewshub",
   },
   robots: {
     index: true,
@@ -94,7 +95,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: siteConfig.name,
+    title: siteConfig.nameUrdu,
     statusBarStyle: "default",
   },
   icons: {
@@ -139,7 +140,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title={`${siteConfig.name} — آر ایس ایس فیڈ`}
+          title={`${siteConfig.nameUrdu} — آر ایس ایس فیڈ`}
           href="/feed.xml"
         />
       </head>

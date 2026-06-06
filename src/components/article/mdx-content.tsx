@@ -85,6 +85,7 @@ export function MDXContent({ content, className }: MDXContentProps) {
 
   return (
     <div
+      dir="rtl"
       className={cn("prose-article", className)}
       dangerouslySetInnerHTML={{ __html: rendered }}
     />

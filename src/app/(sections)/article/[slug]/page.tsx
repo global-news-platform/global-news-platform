@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Search, Home } from "lucide-react"
+import { Search, Home, ExternalLink, Copyright } from "lucide-react"
 
 import { ArticleHero } from "@/components/article/article-hero"
 import { AdSlot } from "@/components/common/ad-slot"
@@ -27,7 +27,7 @@ import {
   generateNewsArticleSchema,
   generateBreadcrumbSchema,
 } from "@/lib/seo"
-import { siteConfig } from "@/lib/constants"
+import { siteConfig, DISCLAIMER_TEXT, DISCLAIMER_TEXT_EN } from "@/lib/constants"
 
 export const dynamic = "force-static"
 export const revalidate = 3600
@@ -45,10 +45,15 @@ export async function generateMetadata({
   const article = await getArticleBySlug(slug)
   if (!article) return { title: "مضمون نہیں ملا" }
 
+  const canonicalUrl = article.source?.canonicalUrl
+
   return buildMetadata({
     title: article.title,
     description: article.excerpt,
     path: `/article/${article.slug}`,
+    alternates: canonicalUrl ? {
+      canonical: absoluteUrl(`/article/${article.slug}`),
+    } : undefined,
     openGraph: {
       type: "article",
       publishedTime: article.publishedAt,
@@ -164,6 +169,34 @@ export default async function ArticlePage({
 
             <div className="mt-10">
               <MDXContent content={article.content} className="max-w-reading" />
+            </div>
+
+            {/* Source attribution & fair use notice */}
+            <div className="mt-8 rounded-lg border border-border/40 bg-muted/30 p-4">
+              <div className="flex items-start gap-3">
+                <Copyright className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+                <div className="space-y-2 text-[12px] leading-[1.8] text-muted-foreground">
+                  <p>{DISCLAIMER_TEXT}</p>
+                  {article.source && (
+                    <p>
+                      ماخذ:{" "}
+                      <a
+                        href={article.source.url}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="inline-flex items-center gap-1 font-medium text-foreground underline decoration-foreground/30 underline-offset-2 hover:decoration-foreground/60 transition-colors"
+                      >
+                        {article.source.name}
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </p>
+                  )}
+                  <p className="text-[11px] text-muted-foreground/60">{DISCLAIMER_TEXT_EN}</p>
+                  <p className="text-[11px] text-muted-foreground/60">
+                    تمام کاپی رائٹس متعلقہ اداروں کے پاس محفوظ ہیں۔
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="mt-10 space-y-6">

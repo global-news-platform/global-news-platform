@@ -8,6 +8,7 @@ const { generateSitemap } = require("./lib/sitemap")
 const { generateFeed } = require("./lib/feed")
 const { computeTrending, computeDailyMetrics } = require("./lib/metrics")
 const { commitAndPush, getCurrentBranch } = require("./lib/git")
+const { postTopArticles } = require("./lib/facebook")
 const path = require("path")
 const fs = require("fs")
 
@@ -20,6 +21,7 @@ function parseArgs() {
     else if (arg === "--dry-run") args.dryRun = true
     else if (arg === "--no-commit") args.noCommit = true
     else if (arg === "--no-build") args.noBuild = true
+    else if (arg === "--facebook") args.facebook = true
     else if (arg.startsWith("--max=")) args.max = parseInt(arg.split("=")[1], 10)
     else if (arg.startsWith("--concurrency="))
       args.concurrency = parseInt(arg.split("=")[1], 10)
@@ -34,10 +36,11 @@ async function main() {
   const dryRun = args.dryRun
 
   console.log("=".repeat(60))
-  console.log("  Global News Platform — Automation Pipeline")
+  console.log("  Pakistan News Hub — News Aggregation Pipeline")
   console.log(`  Branch: ${getCurrentBranch()}`)
   console.log(`  Mode: ${dryRun ? "DRY RUN" : ingestOnly ? "INGEST ONLY" : "FULL"}`)
   console.log(`  Max articles per source: ${maxPerSource}`)
+  console.log("  Notice: All articles are summaries with attribution to original sources.")
   console.log("=".repeat(60))
 
   const startTime = Date.now()
@@ -57,7 +60,6 @@ async function main() {
   resetBatchHashes()
 
   console.log(`\nWriting ${articles.length} articles to ${ARTICLES_DIR}...`)
-  console.log(`  Downloading article images from RSS feeds...`)
   const writeResult = await writeAllArticles(articles)
 
   console.log(
@@ -88,6 +90,21 @@ async function main() {
   console.log(`\nComputing metrics...`)
   computeDailyMetrics()
   computeTrending(20)
+
+  if (args.facebook && !dryRun) {
+    const siteUrl = process.env.SITE_URL || "https://pakistan-news.news"
+    const pageId = process.env.FB_PAGE_ID
+    const pageAccessToken = process.env.FB_PAGE_ACCESS_TOKEN
+    console.log(`\nPosting to Facebook (${pageId ? "configured" : "not configured"})...`)
+    const fbResult = await postTopArticles(articles, {
+      pageId,
+      pageAccessToken,
+      siteUrl,
+      limit: 6,
+      dryRun: args.dryRun,
+    })
+    console.log(`  Facebook: ${fbResult.posted} posted, ${fbResult.skipped} skipped`)
+  }
 
   if (!dryRun && !args.noCommit) {
     console.log(`\nCommitting and pushing changes...`)

@@ -21,32 +21,16 @@ function pickAuthor() {
 }
 
 const ENGLISH_TO_SLUG = {
-  dunya: "dunya",
-  siasat: "siasat",
-  karobar: "karobar",
-  technology: "technology",
-  khel: "khel",
-  sehat: "sehat",
-  science: "science",
-  shobiz: "shobiz",
-  mazhab: "mazhab",
-  taleem: "taleem",
-  mausam: "mausam",
-  crime: "crime",
-  adalat: "adalat",
-  baynalaqwami: "baynalaqwami",
-  videos: "videos",
-  raye: "raye",
-  general: "general",
-  world: "dunya",
-  politics: "siasat",
-  business: "karobar",
-  entertainment: "shobiz",
-  sports: "khel",
-  health: "sehat",
-  environment: "science",
-  opinion: "raye",
-  pakistan: "pakistan",
+  dunya: "dunya", siasat: "siasat", karobar: "karobar",
+  technology: "technology", khel: "khel", sehat: "sehat",
+  science: "science", shobiz: "shobiz", mazhab: "mazhab",
+  taleem: "taleem", mausam: "mausam", crime: "crime",
+  adalat: "adalat", baynalaqwami: "baynalaqwami",
+  videos: "videos", raye: "raye", general: "general",
+  world: "dunya", politics: "siasat", business: "karobar",
+  entertainment: "shobiz", sports: "khel", health: "sehat",
+  environment: "science", opinion: "raye", pakistan: "pakistan",
+  education: "taleem", religion: "mazhab",
 }
 
 function getCategorySlug(categoryName) {
@@ -56,18 +40,20 @@ function getCategorySlug(categoryName) {
 }
 
 const TOPIC_PATTERNS = [
-  { pattern: /trump|biden|election|congress|senate/i, topic: "politics" },
-  { pattern: /iran|israel|gaza|ukraine|russia|china|taiwan/i, topic: "geopolitics" },
-  { pattern: /ai|artificial.intelligence|openai|chatgpt|machine.learning/i, topic: "artificial-intelligence" },
-  { pattern: /ebola|hantavirus|covid|pandemic|outbreak/i, topic: "health-crisis" },
-  { pattern: /climate|environment|emissions|carbon|renewable/i, topic: "climate" },
-  { pattern: /stock|market|inflation|economy|rates|trade|tariff/i, topic: "economy" },
-  { pattern: /football|soccer|cricket|nba|nfl|tennis|golf|sport/i, topic: "sports" },
-  { pattern: /film|movie|music|concert|award|celebrity|star/i, topic: "entertainment" },
-  { pattern: /tech|digital|cyber|data|software|app|phone|internet/i, topic: "technology" },
-  { pattern: /supreme.court|judge|law|legal|justice/i, topic: "law" },
-  { pattern: /military|army|defense|war|strike|attack|missile/i, topic: "defense" },
-  { pattern: /space|nasa|moon|mars|satellite|astronomy/i, topic: "space" },
+  { pattern: /imran.khan|nawaz.sharif|asif.zardari|shehbaz|pti|pmln|ppp/i, topic: "pakistan-politics" },
+  { pattern: /election|vote|campaign|parliament|senate|assembly/i, topic: "politics" },
+  { pattern: /iran|israel|gaza|ukraine|russia|china|taiwan|afghanistan/i, topic: "geopolitics" },
+  { pattern: /ai|artificial.intelligence|openai|chatgpt|machine.learning|digital/i, topic: "artificial-intelligence" },
+  { pattern: /climate|environment|emissions|carbon|renewable|weather/i, topic: "climate" },
+  { pattern: /stock|market|inflation|economy|rupee|imf|trade|tariff|interest.rate/i, topic: "economy" },
+  { pattern: /cricket|psl|football|hockey|nba|tennis|olympic|sport|tournament/i, topic: "sports" },
+  { pattern: /film|movie|music|concert|award|celebrity|drama|artist/i, topic: "entertainment" },
+  { pattern: /tech|digital|cyber|data|software|app|phone|internet|startup/i, topic: "technology" },
+  { pattern: /supreme.court|judge|law|legal|justice|high.court/i, topic: "law" },
+  { pattern: /military|army|defense|war|strike|missile|security|border/i, topic: "defense" },
+  { pattern: /hospital|doctor|disease|vaccine|health|medical|patient|surgery/i, topic: "health" },
+  { pattern: /school|university|education|student|college|exam/i, topic: "education" },
+  { pattern: /space|nasa|moon|mars|satellite|astronomy|research/i, topic: "science" },
 ]
 
 function extractTopics(title, description, tags) {
@@ -87,6 +73,22 @@ async function resolveImageForArticle(article, categorySlug) {
   return result.path
 }
 
+function buildAttributionLine(article) {
+  const sourceName = article.attribution || article.source || "News Source"
+  const sourceUrl = article.canonicalUrl || article.sourceUrl
+
+  if (sourceUrl) {
+    return `یہ خبر ${sourceName} سے حاصل کردہ معلومات پر مبنی ہے۔ مکمل تفصیلات کے لیے [اصل ماخذ](${sourceUrl}) ملاحظہ کریں۔`
+  }
+  return `یہ خبر ${sourceName} سے حاصل کردہ معلومات پر مبنی ہے۔`
+}
+
+const FAIR_USE_NOTICE = `\n\n---
+
+*یہ خبر ایک خلاصہ ہے جو مختلف خبر رساں اداروں سے حاصل کردہ معلومات پر مبنی ہے۔ مکمل تفصیلات اور اصل رپورٹ کے لیے براہ کرم مذکورہ بالا ماخذ ملاحظہ کریں۔ ہم خبروں کو صرف اطلاعی مقاصد کے لیے پیش کرتے ہیں اور تمام کاپی رائٹس متعلقہ اداروں کے پاس محفوظ ہیں۔*
+
+*This is a summary based on reporting from various news sources. For the full report, please refer to the source mentioned above. We present news for informational purposes only and all copyrights belong to their respective owners.*`
+
 async function buildFrontmatter(article) {
   const author = pickAuthor()
   const categorySlug = getCategorySlug(article.categorySlug || article.category)
@@ -104,7 +106,11 @@ async function buildFrontmatter(article) {
     image: imagePath,
     imageAlt: article.title.substring(0, 120),
     tags: [...new Set([...topics, ...article.tags])].slice(0, 6),
+    sourceName: article.attribution || article.source || "",
     sourceUrl: article.sourceUrl || "",
+    canonicalUrl: article.canonicalUrl || article.sourceUrl || "",
+    attribution: article.attribution || article.source || "",
+    isSummary: true,
     featured: false,
     breaking: false,
     trending: false,
@@ -113,6 +119,7 @@ async function buildFrontmatter(article) {
 
 async function buildMdxContent(article) {
   const fm = await buildFrontmatter(article)
+  const attributionLine = buildAttributionLine(article)
 
   const frontmatter = `---
 title: "${escapeYamlString(fm.title)}"
@@ -123,7 +130,11 @@ authorSlug: "${fm.authorSlug}"
 publishedAt: "${fm.publishedAt}"
 image: "${fm.image}"
 imageAlt: "${escapeYamlString(fm.imageAlt)}"
+sourceName: "${escapeYamlString(fm.sourceName)}"
 sourceUrl: "${escapeYamlString(fm.sourceUrl)}"
+canonicalUrl: "${escapeYamlString(fm.canonicalUrl)}"
+attribution: "${escapeYamlString(fm.attribution)}"
+isSummary: true
 tags: [${fm.tags.map((t) => `"${t}"`).join(", ")}]
 featured: ${fm.featured}
 breaking: ${fm.breaking}
@@ -132,11 +143,10 @@ trending: ${fm.trending}
 
 `
 
-  const body = `${fm.title}
+  const body = `${article.description}
 
-${article.description}
-
-[Read more](${article.sourceUrl})
+${attributionLine}
+${FAIR_USE_NOTICE}
 `
 
   return frontmatter + body
