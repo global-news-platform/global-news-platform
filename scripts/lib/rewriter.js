@@ -143,12 +143,13 @@ function replaceSynonyms(text) {
   const entries = Object.entries(SYNONYMS).sort((a, b) => b[0].length - a[0].length)
 
   for (const [word, synonyms] of entries) {
-    const lowerResult = result.toLowerCase()
-    const idx = lowerResult.indexOf(word)
-    if (idx >= 0) {
+    const regex = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi')
+    result = result.replace(regex, (matched) => {
       const replacement = pickRandom(synonyms)
-      result = result.substring(0, idx) + replacement + result.substring(idx + word.length)
-    }
+      return matched === matched.toUpperCase() && matched.length > 1
+        ? replacement.charAt(0).toUpperCase() + replacement.slice(1)
+        : replacement
+    })
   }
 
   return result
