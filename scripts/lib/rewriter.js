@@ -1,5 +1,34 @@
 const SYNONYMS = {
   "killed": ["died", "fatally wounded", "lost their life", "perished"],
+  "forecast": ["prediction", "outlook", "projection", "estimate"],
+  "milder": ["calmer", "less intense", "weaker", "more moderate"],
+  "normal": ["usual", "typical", "average", "expected levels"],
+  "thanks to": ["due to", "because of", "attributed to", "driven by"],
+  "hurricane": ["tropical cyclone", "storm", "typhoon", "severe storm"],
+  "season": ["period", "cycle", "phase", "annual window"],
+  "storm": ["tempest", "cyclone", "weather system", "severe weather"],
+  "flood": ["inundation", "deluge", "overflow", "submersion"],
+  "fire": ["blaze", "inferno", "configration", "flames"],
+  "earthquake": ["temblor", "seismic event", "quake", "seismic activity"],
+  "death toll": ["casualty count", "fatality count", "number of dead", "body count"],
+  "injured": ["wounded", "hurt", "hospitalized", "casualties"],
+  "surge": ["spike", "upsurge", "rapid increase", "sharp rise"],
+  "emergency": ["crisis", "urgent situation", "critical incident", "disaster"],
+  "disaster": ["catastrophe", "tragedy", "calamity", "cataclysm"],
+  "warning": ["advisory", "alert", "cautionary notice", "red flag"],
+  "threat": ["danger", "menace", "risk", "peril"],
+  "deadly": ["lethal", "fatal", "mortal", "catastrophic"],
+  "powerful": ["mighty", "immense", "forceful", "devastating"],
+  "massive": ["enormous", "colossal", "vast", "large-scale"],
+  "major": ["significant", "substantial", "far-reaching", "wide-ranging"],
+  "destroy": ["devastate", "wreck", "ravage", "demolish"],
+  "damage": ["destruction", "devastation", "harm", "wreckage"],
+  "rescue": ["salvage", "recovery operation", "emergency response", "relief effort"],
+  "survivors": ["those rescued", "victims found alive", "the living victims", "rescued individuals"],
+  "official": ["authority", "representative", "spokesperson", "administration"],
+  "governor": ["state leader", "provincial chief", "state executive", "governorship"],
+  "state of emergency": ["emergency declaration", "crisis measures", "emergency rule", "disaster declaration"],
+  "chemical": ["toxic", "hazardous", "dangerous substances", "industrial chemicals"],
   "kills": ["claims", "results in the death of", "leads to the death of", "causes the death of"],
   "killing": ["deadly", "fatal", "lethal", "death-causing"],
   "attack": ["strike", "assault", "offensive", "onslaught"],
@@ -113,19 +142,12 @@ function replaceSynonyms(text) {
   let result = text
   const entries = Object.entries(SYNONYMS).sort((a, b) => b[0].length - a[0].length)
 
-  const replacedSpans = []
-  const lowerResult = result.toLowerCase()
-
   for (const [word, synonyms] of entries) {
+    const lowerResult = result.toLowerCase()
     const idx = lowerResult.indexOf(word)
     if (idx >= 0) {
-      const endIdx = idx + word.length
-      const isOverlapping = replacedSpans.some(([s, e]) => idx < e && endIdx > s)
-      if (!isOverlapping) {
-        const replacement = pickRandom(synonyms)
-        result = result.substring(0, idx) + replacement + result.substring(endIdx)
-        replacedSpans.push([idx, idx + replacement.length])
-      }
+      const replacement = pickRandom(synonyms)
+      result = result.substring(0, idx) + replacement + result.substring(idx + word.length)
     }
   }
 
@@ -156,19 +178,17 @@ function rewriteTitle(title) {
     return `${newPrefix} ${mainTitle}`
   }
 
-  const patterns = [
-    (t) => t,
-    (t) => replaceSynonyms(t),
-    (t) => {
-      if (t.length > 50 && !t.endsWith(".") && !t.endsWith("?") && !t.endsWith("!")) {
-        return t + " — What to Know"
-      }
-      return t
-    },
-  ]
+  const main = mainTitle || title
+  const synonymTitle = replaceSynonyms(main)
 
-  const pattern = pickRandom(patterns)
-  return pattern(mainTitle || title)
+  if (synonymTitle !== main) return synonymTitle
+
+  const words = main.split(" ")
+  if (words.length >= 3) {
+    return [words[1], words[0], ...words.slice(2)].join(" ")
+  }
+
+  return main
 }
 
 function rewriteExcerpt(title, excerpt, sourceName, isBreaking) {

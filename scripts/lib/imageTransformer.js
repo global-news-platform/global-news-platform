@@ -4,6 +4,51 @@ const https = require("https")
 const http = require("http")
 const sharp = require("sharp")
 
+function fetchOgImage(articleUrl) {
+  if (!articleUrl || !articleUrl.startsWith("http")) return Promise.resolve(null)
+  return new Promise((resolve) => {
+    const protocol = articleUrl.startsWith("https") ? https : http
+    const req = protocol.get(articleUrl, {
+      timeout: 10000,
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; GlobalLens/1.0)",
+        Accept: "text/html,application/xhtml+xml",
+      },
+    }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        fetchOgImage(res.headers.location).then(resolve)
+        return
+      }
+      if (res.statusCode !== 200) { resolve(null); return }
+      let html = ""
+      res.on("data", (chunk) => {
+        html += chunk.toString()
+        if (html.length > 100000) { req.destroy(); resolve(extractOgFromHtml(html)) }
+      })
+      res.on("end", () => resolve(extractOgFromHtml(html)))
+    })
+    req.on("error", () => resolve(null))
+    req.on("timeout", () => { req.destroy(); resolve(null) })
+  })
+}
+
+function extractOgFromHtml(html) {
+  const patterns = [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
+    /<link[^>]+rel=["']image_src["'][^>]+href=["']([^"']+)["']/i,
+  ]
+  for (const pattern of patterns) {
+    const m = html.match(pattern)
+    if (m && m[1]) {
+      try { new URL(m[1]); return m[1] } catch { continue }
+    }
+  }
+  return null
+}
+
 const TRANSFORMED_DIR = path.join(__dirname, "../../public/images/transformed")
 
 const FB_IMAGE_WIDTH = 1200
@@ -108,6 +153,14 @@ async function getTransformableImageUrl(article, siteUrl) {
   }
   if (img.startsWith("/")) {
     return `${siteUrl.replace(/\/$/, "")}${img}`
+  }
+  if (article.sourceUrl) {
+    console.log(`    No local image — fetching og:image from source URL...`)
+    const ogUrl = await fetchOgImage(article.sourceUrl)
+    if (ogUrl) {
+      console.log(`    Found og:image: ${ogUrl.substring(0, 80)}`)
+      return ogUrl
+    }
   }
   return null
 }
