@@ -13,11 +13,12 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
   if (dismissed || articles.length === 0) return null
 
   return (
-    <div className="bg-destructive border-b border-destructive/20 shadow-sm">
+    <div className="bg-gradient-to-r from-destructive via-destructive/95 to-destructive border-b border-destructive/30 shadow-lg relative overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.03)_50%,transparent_75%)] pointer-events-none" />
       <div className="mx-auto flex max-w-full items-stretch">
         <div className="flex shrink-0 items-center gap-1.5 bg-black/20 px-4 md:px-5 pr-3 md:pr-3">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/60" />
+            <span className="absolute inline-flex h-full w-full animate-live-pulse rounded-full bg-white" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
           </span>
           <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] text-white/90">LIVE</span>

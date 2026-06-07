@@ -154,7 +154,10 @@ export default async function HomePage() {
         ]}
       />
 
-      <div className="section-divider mx-auto max-w-7xl px-3 sm:px-4 lg:px-5" />
+      <div className="relative mx-auto max-w-7xl px-3 sm:px-4 lg:px-5">
+        <div className="section-divider" />
+        <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-16 h-[3px] bg-gradient-to-r from-transparent via-gold/60 to-transparent rounded-full animate-pulse-soft" />
+      </div>
 
       <CategoryGrid
         categories={[

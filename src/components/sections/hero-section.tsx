@@ -62,7 +62,8 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
   const hasImage = hasRealImage(featured)
 
   return (
-    <section className="bg-background border-b border-border/10 shadow-sm">
+    <section className="bg-background border-b border-border/10 shadow-sm relative animate-fade-in">
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent pointer-events-none" />
       <div className="mx-auto w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-3">
           {hasImage ? (
@@ -72,8 +73,9 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
           ) : (
             <TextOnlyHero featured={featured} />
           )}
-          <div className="w-full bg-card flex flex-col">
-            <div className="bg-destructive px-4 py-2.5 flex items-center gap-2.5 shrink-0">
+          <div className="w-full bg-card flex flex-col relative animate-fade-up [animation-delay:150ms] animate-fill-forwards" style={{ opacity: 0 }}>
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-primary/30 to-transparent lg:hidden pointer-events-none" />
+            <div className="bg-gradient-to-r from-destructive to-destructive/90 px-4 py-2.5 flex items-center gap-2.5 shrink-0">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-destructive-foreground/60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-destructive-foreground" />

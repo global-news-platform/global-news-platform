@@ -33,7 +33,8 @@ export function SectionTitle({
 
   return (
     <div className={cn("mb-6", className)}>
-      <div className="flex items-end justify-between border-b border-border/60 pb-2">
+      <div className="flex items-end justify-between border-b border-border/60 pb-2 relative">
+        <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-transparent rounded-full" />
         <div className="flex items-center gap-2.5">
           <div
             className={cn(
@@ -56,7 +57,7 @@ export function SectionTitle({
             className="group inline-flex items-center gap-1.5 text-xs font-semibold text-primary/80 transition-colors hover:text-primary"
           >
             <span>View All</span>
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         )}
       </div>
