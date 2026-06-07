@@ -36,7 +36,7 @@ async function main() {
   const dryRun = args.dryRun
 
   console.log("=".repeat(60))
-  console.log("  Pakistan News Hub — News Aggregation Pipeline")
+  console.log("  The Global Lens 365 — News Aggregation Pipeline")
   console.log(`  Branch: ${getCurrentBranch()}`)
   console.log(`  Mode: ${dryRun ? "DRY RUN" : ingestOnly ? "INGEST ONLY" : "FULL"}`)
   console.log(`  Max articles per source: ${maxPerSource}`)
@@ -92,7 +92,7 @@ async function main() {
   computeTrending(20)
 
   if (args.facebook && !dryRun) {
-    const siteUrl = process.env.SITE_URL || "https://pakistan-news.news"
+    const siteUrl = process.env.SITE_URL || "https://the-global-lens-365.vercel.app"
     const pageId = process.env.FB_PAGE_ID
     const pageAccessToken = process.env.FB_PAGE_ACCESS_TOKEN
     console.log(`\nPosting to Facebook (${pageId ? "configured" : "not configured"})...`)

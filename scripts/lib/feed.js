@@ -5,7 +5,7 @@ const ARTICLES_DIR = path.join(__dirname, "../../src/data/articles")
 const PUBLIC_DIR = path.join(__dirname, "../../public")
 const FEED_PATH = path.join(PUBLIC_DIR, "feed.xml")
 
-const SITE_URL = process.env.SITE_URL || "https://pakistan-news.news"
+const SITE_URL = process.env.SITE_URL || "https://the-global-lens-365.vercel.app"
 const SITE_NAME = "پاکستان نیوز ہب"
 const SITE_DESC = "پاکستان اور دنیا کی تازہ ترین خبریں — اردو میں خبریں، تجزیہ اور رپورٹس"
 

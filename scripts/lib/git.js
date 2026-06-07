@@ -1,7 +1,7 @@
 const { execSync } = require("child_process")
 
-const BOT_NAME = "Pakistan News Hub Bot"
-const BOT_EMAIL = "bot@pakistan-news.news"
+const BOT_NAME = "The Global Lens 365 Bot"
+const BOT_EMAIL = "bot@the-global-lens-365.vercel.app"
 
 function isGitAvailable() {
   try {

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.nameUrdu}`,
   },
   description: siteConfig.description,
-  generator: "Pakistan News Hub Platform",
+  generator: "The Global Lens 365 Platform",
   applicationName: siteConfig.nameUrdu,
   referrer: "origin-when-cross-origin",
   keywords: [

@@ -6,7 +6,7 @@ const parser = new RssParser({
   timeout: 15000,
   headers: {
     "User-Agent":
-      "PakistanNewsHub/2.0 (news aggregator; +https://pakistan-news.news; bot@pakistan-news.news)",
+      "TheGlobalLens365/2.0 (news aggregator; +https://the-global-lens-365.vercel.app; bot@the-global-lens-365.vercel.app)",
     Accept: "application/rss+xml, application/xml, text/xml, */*",
     "Accept-Language": "en,ur",
   },

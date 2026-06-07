@@ -76,7 +76,7 @@ async function main() {
   const siteUrl = args.siteUrl || process.env.SITE_URL || "https://the-global-lens-365.vercel.app"
 
   console.log("=".repeat(60))
-  console.log("  Social Media Poster — Pakistan News Hub")
+  console.log("  Social Media Poster — The Global Lens 365")
   console.log(`  Mode: ${args.dryRun ? "DRY RUN" : "LIVE"}`)
   console.log(`  Site URL: ${siteUrl}`)
   console.log(`  Facebook Page ID: ${pageId ? "✓ configured" : "✗ not set"}`)
@@ -85,7 +85,7 @@ async function main() {
 
   if (!pageId || !token) {
     console.log("\nFacebook not configured. Set FB_PAGE_ID and FB_PAGE_ACCESS_TOKEN.")
-    console.log("Usage: node scripts/post-social.js --page-id=YOUR_PAGE_ID --token=YOUR_TOKEN [--dry-run] [--site-url=https://pakistan-news.news]")
+    console.log("Usage: node scripts/post-social.js --page-id=YOUR_PAGE_ID --token=YOUR_TOKEN [--dry-run] [--site-url=https://the-global-lens-365.vercel.app]")
     process.exit(pageId || token ? 1 : 0)
   }
 

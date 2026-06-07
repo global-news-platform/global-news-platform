@@ -62,8 +62,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name "Pakistan News Hub Bot"
-          git config user.email "bot@pakistan-news.news"
+          git config user.name "The Global Lens 365 Bot"
+          git config user.email "bot@the-global-lens-365.vercel.app"
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit"

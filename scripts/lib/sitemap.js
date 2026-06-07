@@ -5,7 +5,7 @@ const ARTICLES_DIR = path.join(__dirname, "../../src/data/articles")
 const PUBLIC_DIR = path.join(__dirname, "../../public")
 const SITEMAP_PATH = path.join(PUBLIC_DIR, "sitemap.xml")
 
-const SITE_URL = process.env.SITE_URL || "https://pakistan-news.news"
+const SITE_URL = process.env.SITE_URL || "https://the-global-lens-365.vercel.app"
 
 const staticPages = [
   { url: "/", priority: 1.0, changefreq: "hourly" },
