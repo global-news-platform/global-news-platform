@@ -45,13 +45,19 @@ jobs:
           console.log('✓ Metrics & trending updated');
         "
 
+      - name: Fetch Facebook logo
+        run: node scripts/fetch-logo.js
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
       - name: Build & verify
         run: npx next build
 
       - name: Commit & push
         run: |
-          git config user.name "Pakistan News Hub Bot"
-          git config user.email "bot@pakistan-news.news"
+          git config user.name "The Global Lens 365 Bot"
+          git config user.email "bot@the-global-lens-365.vercel.app"
           git add -A
           if git diff --staged --quiet; then
             echo "No changes to commit."

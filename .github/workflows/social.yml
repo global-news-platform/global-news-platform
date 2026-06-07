@@ -32,6 +32,12 @@ jobs:
 
       - run: npm ci --no-audit --no-fund
 
+      - name: Fetch Facebook logo
+        run: node scripts/fetch-logo.js
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
       - name: Post top articles to Facebook Page
         run: |
           node scripts/post-social.js \

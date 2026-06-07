@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { Facebook, Mail, FileText, Shield, Copyright } from "lucide-react"
+import { Mail, FileText, Shield, Copyright } from "lucide-react"
 import { SocialIcons } from "@/components/layout/social-icons"
+import { SiteLogo } from "@/components/common/site-logo"
 import { siteConfig, categories, legalLinks } from "@/lib/constants"
 
 const footerCategories = categories.slice(0, 12)
@@ -28,10 +29,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#1877F2] shadow-lg">
-                <Facebook className="h-4 w-4 text-white" />
-              </div>
-              <span className="text-lg font-bold text-background">{siteConfig.name}</span>
+              <SiteLogo className="h-9 w-9" iconSize={4} textSize="text-lg font-bold text-background" />
             </Link>
             <p className="mt-2 text-sm leading-[1.8] text-background/60">
               {siteConfig.description}

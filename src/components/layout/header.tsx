@@ -3,8 +3,9 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect, useRef, useCallback } from "react"
-import { Search, Menu, X, Sun, Moon, Facebook } from "lucide-react"
+import { Search, Menu, X, Sun, Moon } from "lucide-react"
 import { SocialIcons } from "@/components/layout/social-icons"
+import { SiteLogo } from "@/components/common/site-logo"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/components/common/theme-provider"
 import { navigation, categories, siteConfig } from "@/lib/constants"
@@ -126,17 +127,7 @@ export function Header() {
             href="/"
             className="group flex items-center gap-3.5"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#1877F2] shadow-md">
-              <Facebook className="h-6 w-6 text-white" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold leading-tight tracking-tight md:text-3xl">
-                {siteConfig.name}
-              </span>
-              <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground md:block">
-                {siteConfig.tagline}
-              </span>
-            </div>
+            <SiteLogo showTagline />
           </Link>
 
           <div className="flex items-center gap-2 md:hidden">
@@ -252,10 +243,7 @@ export function Header() {
           <div className="absolute inset-y-0 right-0 z-50 w-[300px] max-w-[85vw] overflow-y-auto bg-background shadow-elevated">
             <div className="flex items-center justify-between border-b border-border p-4">
               <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#1877F2]">
-                  <Facebook className="h-4 w-4 text-white" />
-                </div>
-                <span className="text-base font-bold">{siteConfig.name}</span>
+                <SiteLogo className="h-8 w-8" iconSize={4} textSize="text-base font-bold" />
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
