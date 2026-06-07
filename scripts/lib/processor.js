@@ -2,11 +2,11 @@ const path = require("path")
 const { downloadArticleImage, getFallbackForCategory, getKeywordFallback, resetBatchHashes } = require("./imageDownloader")
 
 const FALLBACK_AUTHORS = [
-  { name: "علی احمد", slug: "ali-ahmed" },
-  { name: "سارہ خان", slug: "sara-khan" },
-  { name: "عمران ملک", slug: "imran-malik" },
-  { name: "فاطمہ حسین", slug: "fatima-hussain" },
-  { name: "بابر شاہ", slug: "babar-shah" },
+  { name: "Ali Ahmed", slug: "ali-ahmed" },
+  { name: "Sara Khan", slug: "sara-khan" },
+  { name: "Imran Malik", slug: "imran-malik" },
+  { name: "Fatima Hussain", slug: "fatima-hussain" },
+  { name: "Babar Shah", slug: "babar-shah" },
 ]
 
 const SEEN_AUTHORS = new Set()
