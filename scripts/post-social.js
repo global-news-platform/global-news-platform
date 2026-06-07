@@ -73,7 +73,7 @@ async function main() {
 
   const pageId = args.pageId || process.env.FB_PAGE_ID
   const token = args.token || process.env.FB_PAGE_ACCESS_TOKEN
-  const siteUrl = args.siteUrl || process.env.SITE_URL || "https://pakistan-news.news"
+  const siteUrl = args.siteUrl || process.env.SITE_URL || "https://the-global-lens-365.vercel.app"
 
   console.log("=".repeat(60))
   console.log("  Social Media Poster — Pakistan News Hub")

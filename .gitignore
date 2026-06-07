@@ -26,3 +26,4 @@ scripts/data/
 # Build output
 out/
 nul
+.vercel
