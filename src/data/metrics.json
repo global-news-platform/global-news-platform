@@ -1,68 +1,49 @@
 {
   "date": "2026-06-07",
-  "totalArticles": 1422,
-  "totalSizeKb": 1655,
+  "totalArticles": 176,
+  "totalSizeKb": 264,
   "categories": {
-    "dunya": 225,
-    "Technology": 47,
-    "karobar": 174,
-    "Health": 10,
-    "sehat": 174,
-    "siasat": 98,
-    "khel": 103,
-    "World": 37,
-    "science": 163,
-    "Science": 25,
-    "Sports": 14,
-    "pakistan": 43,
-    "technology": 170,
-    "Business": 26,
-    "Climate": 9,
-    "shobiz": 77,
-    "Culture": 5,
-    "Politics": 20,
-    "uncategorized": 2
+    "pakistan": 23,
+    "siasat": 29,
+    "dunya": 54,
+    "technology": 16,
+    "khel": 17,
+    "science": 10,
+    "sehat": 10,
+    "karobar": 17
   },
   "topCategories": [
     {
       "name": "dunya",
-      "count": 225
-    },
-    {
-      "name": "karobar",
-      "count": 174
-    },
-    {
-      "name": "sehat",
-      "count": 174
-    },
-    {
-      "name": "technology",
-      "count": 170
-    },
-    {
-      "name": "science",
-      "count": 163
-    },
-    {
-      "name": "khel",
-      "count": 103
+      "count": 54
     },
     {
       "name": "siasat",
-      "count": 98
-    },
-    {
-      "name": "shobiz",
-      "count": 77
-    },
-    {
-      "name": "Technology",
-      "count": 47
+      "count": 29
     },
     {
       "name": "pakistan",
-      "count": 43
+      "count": 23
+    },
+    {
+      "name": "khel",
+      "count": 17
+    },
+    {
+      "name": "karobar",
+      "count": 17
+    },
+    {
+      "name": "technology",
+      "count": 16
+    },
+    {
+      "name": "science",
+      "count": 10
+    },
+    {
+      "name": "sehat",
+      "count": 10
     }
   ]
 }
