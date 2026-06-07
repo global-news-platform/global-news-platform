@@ -7,7 +7,7 @@ const ARTICLES_DIR = path.join(__dirname, "../src/data/articles")
 const CONFIG_PATH = path.join(__dirname, "config/sources.json")
 
 function parseArgs() {
-  const args = { dryRun: false, limit: 6, pageId: null, token: null, siteUrl: null }
+  const args = { dryRun: false, limit: 1, pageId: null, token: null, siteUrl: null }
   for (const arg of process.argv.slice(2)) {
     if (arg === "--dry-run") args.dryRun = true
     else if (arg.startsWith("--limit=")) args.limit = parseInt(arg.split("=")[1], 10)

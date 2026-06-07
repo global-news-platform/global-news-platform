@@ -6,8 +6,8 @@ const { transformAndSave } = require("./imageTransformer")
 
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
 
-const MAX_POSTS_PER_RUN = 4
-const MIN_DELAY_MS = 3000
+const MAX_POSTS_PER_RUN = 1
+const MIN_DELAY_MS = 600000
 
 const POST_FORMATS = ["link", "photo", "text"]
 
@@ -143,17 +143,15 @@ function getArticleImageUrl(article, siteUrl) {
 }
 
 function buildMessage(title, sourceName, excerpt, isBreaking) {
-  let msg = title
+  const prefix = isBreaking ? "BREAKING: " : ""
+  let msg = `${prefix}${title}`
   if (sourceName) {
-    msg += `\n\n— ${sourceName}`
+    msg += ` — ${sourceName}`
   }
   if (excerpt) {
     msg += `\n\n${excerpt.substring(0, 200)}`
   }
   msg += `\n\n#GlobalNews #WorldNews`
-  if (isBreaking) {
-    msg = `BREAKING\n\n${msg}`
-  }
   return msg.substring(0, 63206)
 }
 
