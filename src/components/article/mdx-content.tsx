@@ -85,7 +85,7 @@ export function MDXContent({ content, className }: MDXContentProps) {
 
   return (
     <div
-      className={cn("prose-article", className)}
+      className={cn("prose-article overflow-hidden", className)}
       dangerouslySetInnerHTML={{ __html: rendered }}
     />
   )

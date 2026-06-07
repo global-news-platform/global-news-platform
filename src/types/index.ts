@@ -2,6 +2,7 @@ export interface ArticleSource {
   name: string
   url: string
   canonicalUrl?: string
+  logo?: string
 }
 
 export interface Category {

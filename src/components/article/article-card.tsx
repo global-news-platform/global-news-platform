@@ -13,6 +13,18 @@ interface ArticleCardProps {
   variant?: "hero" | "featured" | "horizontal" | "text-list" | "compact" | "default"
 }
 
+function PublisherLogo({ src, name }: { src?: string; name: string }) {
+  if (!src) return null
+  return (
+    <img
+      src={src}
+      alt=""
+      className="inline-block w-4 h-4 object-contain mr-1 rounded-sm"
+      onError={(e) => { e.currentTarget.style.display = "none" }}
+    />
+  )
+}
+
 function ArticleImage({
   src,
   alt,
@@ -117,11 +129,11 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
               {catName}
             </span>
           </div>
-          <h2 className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.9] line-clamp-3" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)" }}>
+          <h2 className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold tracking-wide text-white leading-[1.3] line-clamp-3" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)" }}>
             <MixedText text={article.title} />
           </h2>
           {article.excerpt && (
-            <p className="mt-2 sm:mt-3 max-w-2xl text-[13px] sm:text-[14px] md:text-[15px] leading-[1.8] sm:leading-[1.9] text-white/85 line-clamp-2 hidden sm:block" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
+            <p className="mt-2 sm:mt-3 max-w-2xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-white/80 line-clamp-2 hidden sm:block" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
               {article.excerpt}
             </p>
           )}
@@ -139,7 +151,10 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             {article.source && (
               <>
                 <span className="text-white/20">|</span>
-                <span>{article.source.name}</span>
+                <span className="flex items-center gap-1">
+                  <PublisherLogo src={article.source.logo} name={article.source.name} />
+                  {article.source.name}
+                </span>
               </>
             )}
           </div>
@@ -167,7 +182,10 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
               {article.source && (
                 <>
                   <span className="text-[10px] text-muted-foreground">•</span>
-                  <span className="text-[10px] text-muted-foreground">{article.source.name}</span>
+                  <span className="text-[10px] text-muted-foreground flex items-center gap-1">
+                    <PublisherLogo src={article.source.logo} name={article.source.name} />
+                    {article.source.name}
+                  </span>
                 </>
               )}
             </div>

@@ -44,7 +44,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       </div>
 
       {/* Title */}
-      <h1 dir="rtl" className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-[1.7] md:text-4xl lg:text-5xl">
+      <h1 className="overflow-wrap-anywhere font-headline text-3xl font-bold leading-[1.7] md:text-4xl lg:text-5xl">
         <MixedText text={article.title} />
       </h1>
 

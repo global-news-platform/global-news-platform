@@ -95,20 +95,22 @@ export function Header() {
                 Breaking
               </Link>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4">
               <SocialIcons variant="header" />
-              <span className="text-background/20 ms-2">|</span>
-              <button
-                onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-                className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
-                aria-label="Toggle theme"
-              >
-                {resolvedTheme === "dark" ? (
-                  <Sun className="h-3 w-3" />
-                ) : (
-                  <Moon className="h-3 w-3" />
-                )}
-              </button>
+              <span className="h-3 w-px bg-background/20" />
+              <div className="flex items-center gap-4 ml-6">
+                <button
+                  onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                  className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
+                  aria-label="Toggle theme"
+                >
+                  {resolvedTheme === "dark" ? (
+                    <Sun className="h-3 w-3" />
+                  ) : (
+                    <Moon className="h-3 w-3" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>

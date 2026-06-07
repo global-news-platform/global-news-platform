@@ -16,7 +16,7 @@ interface HeroSectionProps {
 function TextOnlyHero({ featured }: { featured: ArticleLink }) {
   const catName = categories.find((c) => c.slug === featured.categorySlug)?.name || featured.category
   return (
-    <div className="lg:col-span-4 flex items-center justify-center py-16 md:py-20 lg:py-24">
+    <div className="lg:col-span-2 flex items-center justify-center py-16 md:py-20 lg:py-24">
       <div className="w-full max-w-[800px] mx-auto text-center px-4">
         <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
           {featured.breaking && (
@@ -64,9 +64,9 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
   return (
     <section className="bg-background border-b border-border/10 shadow-sm">
       <div className="mx-auto w-full">
-        <div className="flex flex-col lg:grid lg:grid-cols-4">
+        <div className="flex flex-col lg:grid lg:grid-cols-3">
           {hasImage ? (
-            <div className="lg:col-span-3 w-full">
+            <div className="lg:col-span-2 w-full">
               <ArticleCard article={featured} variant="hero" />
             </div>
           ) : (
