@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 07 Jun 2026 19:16:02 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 20:47:00 GMT</lastBuildDate>
     <atom:link href="https://the-global-lens-365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://the-global-lens-365.vercel.app/images/logo.svg</url>
@@ -26,6 +26,17 @@
     <pubDate>Sun, 07 Jun 2026 18:19:17 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zverev-beats-cobolli-in-tense-french-open-final-for-first-grand-slam-title--ljoija.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/tennis/articles/c992081nnpko?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zelenskyy meets key allies in London aiming to build on strikes on Russia</title>
+    <link>https://the-global-lens-365.vercel.app/article/zelenskyy-meets-key-allies-in-london-aiming-to-build-on-strikes-on-russia--p6gbbp</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/zelenskyy-meets-key-allies-in-london-aiming-to-build-on-strikes-on-russia--p6gbbp</guid>
+    <description>Keir Starmer hosts Ukrainian, French and German leaders in Downing Street amid optimism in Kyiv over state of war Volodymyr Zelenskyy met his staunchest allies</description>
+    <category>siasat</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 07 Jun 2026 19:10:01 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zelenskyy-meets-key-allies-in-london-aiming-to-build-on-strikes-on-russia--p6gbbp.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/world/2026/jun/07/zelenskyy-starmer-macron-merz-ukraine-talks-london">The Guardian</source>
   </item>
   <item>
     <title>Zelensky in Downing Street for Ukraine war talks with European leaders</title>
@@ -193,6 +204,17 @@
     <source url="https://dailytimes.com.pk/1504218/uor-earns-ntc-thumbs-up-sets-new-benchmarks-in-technology-education/">Daily Times</source>
   </item>
   <item>
+    <title>Unofficial results show PPP leading the GB race with victory on 10 seats</title>
+    <link>https://the-global-lens-365.vercel.app/article/unofficial-results-show-ppp-leading-the-gb-race-with-victory-on-10-seats--yyvbgv</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/unofficial-results-show-ppp-leading-the-gb-race-with-victory-on-10-seats--yyvbgv</guid>
+    <description>Unofficial and preliminary results of elections for the 24 seats of the Gilgit-Baltistan Legislative Assembly show that the PPP is leading the race with success</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Sun, 07 Jun 2026 20:34:45 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/unofficial-results-show-ppp-leading-the-gb-race-with-victory-on-10-seats--yyvbgv.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2005670/unofficial-results-show-ppp-leading-the-gb-race-with-victory-on-10-seats">Dawn</source>
+  </item>
+  <item>
     <title>Ukraine fires wave of drones  at Russia on last day of key forum</title>
     <link>https://the-global-lens-365.vercel.app/article/ukraine-fires-wave-of-drones-at-russia-on-last-day-of-key-forum--xt9tq4</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/ukraine-fires-wave-of-drones-at-russia-on-last-day-of-key-forum--xt9tq4</guid>
@@ -268,6 +290,17 @@
     <pubDate>Sun, 07 Jun 2026 16:49:44 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/trump-says-will-not-unfreeze-iranian-assets-before-ceasefire-deal-reached--z3st4v.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/7/trump-says-will-not-unfreeze-iranian-assets-before-ceasefire-deal-reached?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Trump abruptly ends NBC interview after clash over &apos;rigged election&apos; claim</title>
+    <link>https://the-global-lens-365.vercel.app/article/trump-abruptly-ends-nbc-interview-after-clash-over-rigged-election-claim--08gywu</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/trump-abruptly-ends-nbc-interview-after-clash-over-rigged-election-claim--08gywu</guid>
+    <description>During the interview, the president was repeatedly challenged on several points by the show&apos;s presenter Kristen Welker.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Sun, 07 Jun 2026 19:55:49 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/trump-abruptly-ends-nbc-interview-after-clash-over-rigged-election-claim--08gywu.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/ce8k1xx6yzjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>TikToker held for ‘making AI-generated obscene video’ in Bahawalnagar</title>
@@ -413,6 +446,28 @@
     <source url="https://www.dawn.com/news/2005812/robinson-rocks-new-zealand-again-as-rain-frustrates-england-at-lords">Dawn</source>
   </item>
   <item>
+    <title>Reports: Iran uses war as cover for increased executions</title>
+    <link>https://the-global-lens-365.vercel.app/article/reports-iran-uses-war-as-cover-for-increased-executions--bwraea</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/reports-iran-uses-war-as-cover-for-increased-executions--bwraea</guid>
+    <description>Iran already had one of the highest rates of capital punishment in the world. Now, rights groups say, the country is using the current conflict to carry out eve</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Sun, 07 Jun 2026 19:28:00 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/reports-iran-uses-war-as-cover-for-increased-executions--bwraea.jpg" type="image/jpeg" />
+    <source url="https://www.dw.com/en/reports-iran-uses-war-as-cover-for-increased-executions/a-77451822?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Remarkable Tongue is England&apos;s premier bowler - Agnew</title>
+    <link>https://the-global-lens-365.vercel.app/article/remarkable-tongue-is-england-s-premier-bowler-agnew--vf6y5q</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/remarkable-tongue-is-england-s-premier-bowler-agnew--vf6y5q</guid>
+    <description>Gus Atkinson and Ollie Robinson showed their skills in victory over New Zealand, but Josh Tongue is now England&apos;s premier Test bowler, writes Jonathan Agnew.</description>
+    <category>khel</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sun, 07 Jun 2026 15:16:49 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/remarkable-tongue-is-england-s-premier-bowler-agnew--vf6y5q.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/cricket/articles/cly7966nwp5o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Rebel attacks in eastern DRC kill 30 people and hamper Ebola response</title>
     <link>https://the-global-lens-365.vercel.app/article/rebel-attacks-in-eastern-drc-kill-30-people-and-hamper-ebola-response--pdl1zy</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/rebel-attacks-in-eastern-drc-kill-30-people-and-hamper-ebola-response--pdl1zy</guid>
@@ -479,6 +534,17 @@
     <source url="https://dailytimes.com.pk/1504198/punjab-launches-qr-panic-button-system-for-transport-safety-upgrade/">Daily Times</source>
   </item>
   <item>
+    <title>PPP shares tax-related reservations in pre-budget meeting with Dar, say sources</title>
+    <link>https://the-global-lens-365.vercel.app/article/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources--72totb</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources--72totb</guid>
+    <description>ISLAMABAD: A PPP delegation, led by party Chairman Bilawal Bhutto-Zardari, expressed its reservations related to taxes during a pre-budget meeting with Deputy P</description>
+    <category>pakistan</category>
+    <author>Babar Shah</author>
+    <pubDate>Sun, 07 Jun 2026 19:23:46 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources--72totb.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2005897/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources">Dawn</source>
+  </item>
+  <item>
     <title>Poultry industry grows at consumers’ cost</title>
     <link>https://the-global-lens-365.vercel.app/article/poultry-industry-grows-at-consumers-cost--3fc3rw</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/poultry-industry-grows-at-consumers-cost--3fc3rw</guid>
@@ -499,72 +565,6 @@
     <pubDate>Sun, 07 Jun 2026 18:04:32 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/polling-concludes-for-gb-elections-on-24-seats-ppp-accuses-federal-govt-of-tryin--pbcn5z.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2005670/polling-concludes-for-gb-elections-on-24-seats-ppp-accuses-federal-govt-of-trying-to-influence-results">Dawn</source>
-  </item>
-  <item>
-    <title>Police say two suspects have been shot and killed in Israel gun attack</title>
-    <link>https://the-global-lens-365.vercel.app/article/police-say-two-suspects-have-been-shot-and-killed-in-israel-gun-attack--qgmsdt</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/police-say-two-suspects-have-been-shot-and-killed-in-israel-gun-attack--qgmsdt</guid>
-    <description>Police say two suspects have been shot and killed in Israel gun attack.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sun, 07 Jun 2026 16:17:59 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/police-say-two-suspects-have-been-shot-and-killed-in-israel-gun-attack--qgmsdt.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/7/police-say-two-suspects-have-been-shot-and-killed-in-israel-gun-attack?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>PlayStation comes out swinging with latest State of Play broadcast</title>
-    <link>https://the-global-lens-365.vercel.app/article/playstation-comes-out-swinging-with-latest-state-of-play-broadcast--uexob7</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/playstation-comes-out-swinging-with-latest-state-of-play-broadcast--uexob7</guid>
-    <description>In the latest edition of its ‘State of Play’ broadcast on Tuesday, PlayStation unveiled some intriguing new offerings, as well as expanded gameplay and release</description>
-    <category>technology</category>
-    <author>Sara Khan</author>
-    <pubDate>Thu, 04 Jun 2026 09:26:39 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/playstation-comes-out-swinging-with-latest-state-of-play-broadcast--uexob7.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2004936/playstation-comes-out-swinging-with-latest-state-of-play-broadcast">Dawn</source>
-  </item>
-  <item>
-    <title>Phone signal on trains not good enough most of the time, research says</title>
-    <link>https://the-global-lens-365.vercel.app/article/phone-signal-on-trains-not-good-enough-most-of-the-time-research-says--ntm58p</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/phone-signal-on-trains-not-good-enough-most-of-the-time-research-says--ntm58p</guid>
-    <description>Ofcom found the major phone networks were not providing good signal on trains, and train companies were slowing down wi-fi.</description>
-    <category>technology</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 03 Jun 2026 14:21:22 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/phone-signal-on-trains-not-good-enough-most-of-the-time-research-says--ntm58p.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c5yr1penq56o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Philp labels Hermer&apos;s small boats comment a &apos;disgraceful slur&apos;</title>
-    <link>https://the-global-lens-365.vercel.app/article/philp-labels-hermer-s-small-boats-comment-a-disgraceful-slur--jjga67</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/philp-labels-hermer-s-small-boats-comment-a-disgraceful-slur--jjga67</guid>
-    <description>The attorney general suggested some other politicians&apos; policies on small boats amounted to letting people \&quot;drown in the sea\&quot;.</description>
-    <category>siasat</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Fri, 05 Jun 2026 16:53:26 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/philp-labels-hermer-s-small-boats-comment-a-disgraceful-slur--jjga67.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c62x2d53w5vo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>PFF president hails national men’s team for ending 64-year wait</title>
-    <link>https://the-global-lens-365.vercel.app/article/pff-president-hails-national-men-s-team-for-ending-64-year-wait--2ph8ym</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/pff-president-hails-national-men-s-team-for-ending-64-year-wait--2ph8ym</guid>
-    <description>Pakistan Football Federation president Syed Mohsen Gilani has congratulated the national men’s team on ending the long wait for a final berth in a stand-alone f</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Sun, 07 Jun 2026 16:36:22 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/pff-president-hails-national-men-s-team-for-ending-64-year-wait--2ph8ym.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1504239/pff-president-hails-national-mens-team-for-ending-64-year-wait/">Daily Times</source>
-  </item>
-  <item>
-    <title>Peshawar-Torkham Highway reopens after protests against recent &apos;targeted attack&apos;</title>
-    <link>https://the-global-lens-365.vercel.app/article/peshawar-torkham-highway-reopens-after-protests-against-recent-targeted-attack--rfnhjr</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/peshawar-torkham-highway-reopens-after-protests-against-recent-targeted-attack--rfnhjr</guid>
-    <description>KHYBER: The Peshawar-Torkham Highway was reopened on Sunday following a temporary closure by Sultan Khel tribesmen protesting the handling of ‘targeted killings</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Sun, 07 Jun 2026 11:04:15 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/peshawar-torkham-highway-reopens-after-protests-against-recent-targeted-attack--rfnhjr.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005858/peshawar-torkham-highway-reopens-after-protests-against-recent-targeted-attack">Dawn</source>
   </item>
   </channel>
 </rss>
