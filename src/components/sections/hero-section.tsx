@@ -21,7 +21,7 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-destructive-foreground" />
               </span>
               <h3 className="text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.1em] text-destructive-foreground">
-                اہم خبریں
+                Top Stories
               </h3>
             </div>
             <div className="px-3 sm:px-4 divide-y divide-border/10 flex-1" dir="rtl">

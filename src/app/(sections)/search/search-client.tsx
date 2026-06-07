@@ -67,31 +67,31 @@ export function SearchPageClient({ articles }: SearchPageClientProps) {
     <>
       <div className="border-b border-border bg-secondary/30 py-6 md:py-8">
         <Container>
-          <nav aria-label="بریڈ کرمب" className="mb-6">
+          <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-1.5 text-[12px] text-muted-foreground">
               <li>
                 <Link href="/" className="transition-colors hover:text-foreground">
-                  ہوم
+                  Home
                 </Link>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronLeft className="h-3 w-3" />
                 <span className="text-foreground/60">
-                  {query ? `تلاش: ${query}` : "تلاش"}
+                  {query ? `Search: ${query}` : "Search"}
                 </span>
               </li>
             </ol>
           </nav>
           <div className="border-b-[3px] border-foreground pb-4">
             <h1 className="font-headline text-3xl font-bold md:text-4xl">
-              {query ? `"${query}" کے نتائج` : showLive ? `"${debouncedInput}" براہ راست` : "تلاش"}
+              {query ? `Results for "${query}"` : showLive ? `Live: "${debouncedInput}"` : "Search"}
             </h1>
             <p className="mt-2 text-muted-foreground">
-              {searching ? "تلاش جاری..." : displayResults.length > 0
-                ? `${displayResults.length} مضمون${displayResults.length === 1 ? "" : "یں"} مل گئے`
-                : (query || showLive)
-                  ? "کوئی مضمون نہیں ملا۔ مختلف اصطلاح سے تلاش کریں۔"
-                  : "مضامین تلاش کرنے کے لیے اصطلاح درج کریں۔"}
+{searching ? "Searching..." : displayResults.length > 0
+    ? `${displayResults.length} Article${displayResults.length === 1 ? "" : "s"} found`
+    : (query || showLive)
+      ? "No articles found. Try a different search term."
+      : "Enter a term to search articles."}
             </p>
           </div>
         </Container>
@@ -109,7 +109,7 @@ export function SearchPageClient({ articles }: SearchPageClientProps) {
                   window.location.href = `/search?q=${encodeURIComponent(input.trim())}`
                 }
               }}
-              placeholder="خبریں تلاش کریں..."
+              placeholder="Search news..."
               className="flex h-10 w-full max-w-md rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             />
             <Link
@@ -117,7 +117,7 @@ export function SearchPageClient({ articles }: SearchPageClientProps) {
               className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90"
             >
               <Search className="ml-2 h-4 w-4" />
-              تلاش
+              Search
             </Link>
           </div>
           <AdSlot variant="leaderboard" className="mb-8 hidden md:flex" />
@@ -126,7 +126,7 @@ export function SearchPageClient({ articles }: SearchPageClientProps) {
             <div className="min-w-0 flex-1">
               {searching ? (
                 <div className="py-20 text-center">
-                  <p className="text-lg text-muted-foreground">تلاش جاری...</p>
+                  <p className="text-lg text-muted-foreground">Searching...</p>
                 </div>
               ) : displayResults.length > 0 ? (
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -142,8 +142,8 @@ export function SearchPageClient({ articles }: SearchPageClientProps) {
                 <div className="py-20 text-center">
                   <p className="text-lg text-muted-foreground">
                     {(query || showLive)
-                      ? `"${query || debouncedInput}" سے ملنے والا کوئی مضمون نہیں۔ مختلف اصطلاح استعمال کریں۔`
-                      : "مضامین تلاش کرنے کے لیے اوپر اصطلاح درج کریں۔"}
+                      ? `No articles found for "${query || debouncedInput}". Try a different term.`
+                      : "Enter a term above to search articles."}
                   </p>
                 </div>
               )}
@@ -151,8 +151,8 @@ export function SearchPageClient({ articles }: SearchPageClientProps) {
 
             <aside className="hidden w-[260px] shrink-0 xl:block">
               <div className="sticky top-28 flex flex-col gap-6">
-                <AdSlot variant="skyscraper" className="w-full" label="اشتہار" />
-                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
+                <AdSlot variant="skyscraper" className="w-full" label="Advertisement" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
               </div>
             </aside>
           </div>

@@ -16,8 +16,8 @@ const BEAT_MAP: Record<string, string[]> = {
   "babar-shah": ["technology", "science", "general"],
 }
 
-const GENERIC_BIO = "پاکستان نیوز کے صحافی۔ مختلف موضوعات اور شعبوں پر رپورٹنگ کرتے ہیں۔"
-const GENERIC_ROLE = "صحافی"
+const GENERIC_BIO = "Journalist at Pakistan News. Reports on various topics and fields."
+const GENERIC_ROLE = "Journalist"
 
 function getEffectiveBio(author: Author, categorySlug?: string): { bio: string; role: string } {
   if (!categorySlug) {

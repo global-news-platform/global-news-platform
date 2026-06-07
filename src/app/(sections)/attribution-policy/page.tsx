@@ -5,9 +5,9 @@ import { generateMetadata } from "@/lib/seo"
 import { siteConfig } from "@/lib/constants"
 
 export const metadata: Metadata = generateMetadata({
-  title: "انتساب کی پالیسی — خبروں کے ذرائع کا سہرا",
+  title: "Attribution Policy — Crediting News Sources",
   description:
-    "پاکستان نیوز ہب کی انتساب کی پالیسی — ہم خبروں کے اصل ذرائع کو کیسے کریڈٹ دیتے ہیں اور ان سے منسلک ہوتے ہیں۔",
+    "The Global Lens 365 attribution policy — how we credit and link to original news sources.",
   path: "/attribution-policy",
 })
 
@@ -16,117 +16,114 @@ export default function AttributionPolicyPage() {
     <div className="py-8 md:py-12">
       <Container size="sm">
         <h1 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-          انتساب کی پالیسی
+          Attribution Policy
         </h1>
         <div className="mt-2 h-1 w-16 bg-foreground" />
         <div className="mt-8 space-y-8 text-base leading-relaxed text-foreground/90">
           <section>
-            <h2 className="font-headline text-xl font-semibold">ہمارا عزم</h2>
+            <h2 className="font-headline text-xl font-semibold">Our Commitment</h2>
             <p className="mt-3">
-              {siteConfig.name} میں، ہم صحافتی اخلاقیات اور دانشورانہ املاک کے حقوق کا احترام
-              کرتے ہیں۔ ہم سمجھتے ہیں کہ خبروں کی جمع آوری صرف اس وقت معنی رکھتی ہے جب اصل
-              ذرائع کو مناسب طور پر کریڈٹ دیا جائے۔ یہ پالیسی بتاتی ہے کہ ہم اپنے مواد میں
-              ذرائع کو کیسے منسوب کرتے ہیں۔
+              At {siteConfig.name}, we respect journalistic ethics and intellectual property
+              rights. We believe news aggregation is meaningful only when original sources are
+              properly credited. This policy explains how we attribute sources in our content.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">ہم کن ذرائع سے خبریں لیتے ہیں</h2>
+            <h2 className="font-headline text-xl font-semibold">Sources We Use</h2>
             <p className="mt-3">
-              ہم مندرجہ ذیل قسم کے ذرائع سے خبریں جمع کرتے ہیں:
+              We aggregate news from the following types of sources:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pr-6">
+            <ul className="mt-3 list-disc space-y-2 pl-6">
               <li>
-                <strong>پاکستانی خبروں کے ادارے:</strong> ڈان (Dawn)، ایکسپریس ٹریبیون (Express Tribune)،
-                دی نیوز (The News International)، جیو نیوز (Geo News)، سماء ٹی وی (Samaa TV)،
-                اے آر وائی نیوز (ARY News)، 92 نیوز (92 News)، اور دیگر
+                <strong>Pakistani news outlets:</strong> Dawn, Express Tribune,
+                The News International, Geo News, Samaa TV,
+                ARY News, 92 News, and others
               </li>
               <li>
-                <strong>بین الاقوامی خبروں کے ادارے:</strong> بی بی سی (BBC)، الجزیرہ (Al Jazeera)،
-                سی این این (CNN)، دی گارڈین (The Guardian)، روئٹرز (Reuters)، اے ایف پی (AFP)،
-                اور دیگر
+                <strong>International news outlets:</strong> BBC, Al Jazeera,
+                CNN, The Guardian, Reuters, AFP,
+                and others
               </li>
               <li>
-                <strong>خصوصی شعبوں کے ذرائع:</strong> سرکاری پریس ریلیز، تحقیقی رپورٹس،
-                اور دیگر قابل اعتماد ذرائع
+                <strong>Specialized sources:</strong> Government press releases, research reports,
+                and other reputable sources
               </li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">انتساب کے اصول</h2>
+            <h2 className="font-headline text-xl font-semibold">Attribution Principles</h2>
             <p className="mt-3">
-              ہم انتساب کے لیے درج ذیل اصولوں پر عمل کرتے ہیں:
+              We follow these principles for attribution:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pr-6">
+            <ul className="mt-3 list-disc space-y-2 pl-6">
               <li>
-                <strong>واضح نام:</strong> ہر خبر کے خلاصے پر اصل ناشر کا نام واضح طور پر
-                ظاہر کیا جاتا ہے (مثلاً "ماخذ: ڈان")
+                <strong>Clear naming:</strong> Each news summary displays the original
+                publisher's name prominently (e.g., "Source: Dawn")
               </li>
               <li>
-                <strong>براہ راست لنک:</strong> ہر خلاصے کے ساتھ اصل مضمون کا براہ راست لنک
-                فراہم کیا جاتا ہے تاکہ قارئین مکمل مضمون پڑھ سکیں
+                <strong>Direct link:</strong> Every summary includes a direct link to the
+                original article so readers can read the full piece
               </li>
               <li>
-                <strong>تاریخ:</strong> اصل اشاعت کی تاریخ درج کی جاتی ہے
+                <strong>Date:</strong> The original publication date is recorded
               </li>
               <li>
-                <strong>مصنف:</strong> جہاں ممکن ہو، اصل مصنف کا نام بھی شامل کیا جاتا ہے
+                <strong>Author:</strong> Where possible, the original author's name is included
               </li>
               <li>
-                <strong>مناسب فاصلہ:</strong> انتساب اس طرح رکھا جاتا ہے کہ قارئین آسانی سے
-                دیکھ سکیں کہ معلومات کہاں سے آئی ہیں
+                <strong>Prominent placement:</strong> Attribution is positioned so readers can
+                easily see where the information originated
               </li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">خلاصے اور اقتباسات</h2>
+            <h2 className="font-headline text-xl font-semibold">Summaries and Excerpts</h2>
             <p className="mt-3">
-              ہم اصل مضامین کے صرف مختصر خلاصے (عام طور پر 30-50 الفاظ) یا اقتباسات استعمال
-              کرتے ہیں۔ ہم اصل مضمون کے مرکزی نکات کو اپنے الفاظ میں پیش کرتے ہیں اور کبھی
-              بھی کسی مضمون کو مکمل طور پر دوبارہ شائع نہیں کرتے۔ جہاں کوئی جملہ براہ راست
-              نقل کیا جاتا ہے، اسے کوٹیشن مارکس میں رکھا جاتا ہے اور مناسب انتساب دیا جاتا ہے۔
+              We use only brief summaries (typically 30–50 words) or excerpts from original
+              articles. We present the key points of the original article in our own words and
+              never republish an article in full. Where any sentence is quoted directly, it is
+              placed in quotation marks with proper attribution.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">منصفانہ استعمال اور انتساب</h2>
+            <h2 className="font-headline text-xl font-semibold">Fair Use and Attribution</h2>
             <p className="mt-3">
-              ہمارا انتساب کا طریقہ کار منصفانہ استعمال (fair use) کے اصولوں کے مطابق ہے:
+              Our attribution practices align with fair use principles:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pr-6">
-              <li>ہم اصل کام کو تبدیل کرکے اسے خلاصے کی شکل میں پیش کرتے ہیں</li>
-              <li>ہمارا استعمال غیر تجارتی اور معلوماتی ہے</li>
-              <li>ہم صرف وہی حصہ استعمال کرتے ہیں جو خبر کا خلاصہ پیش کرنے کے لیے ضروری ہے</li>
-              <li>ہماری سائٹ اصل ناشروں کو اضافی ٹریفک بھیجتی ہے</li>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>We transform the original work by presenting it as a summary</li>
+              <li>Our use is non-commercial and informational</li>
+              <li>We use only the portion necessary to summarize the news</li>
+              <li>Our site drives additional traffic to original publishers</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">اگر آپ کو انتساب کا مسئلہ درپیش ہے</h2>
+            <h2 className="font-headline text-xl font-semibold">If You Have an Attribution Concern</h2>
             <p className="mt-3">
-              اگر آپ کو یقین ہے کہ کسی خبر میں مناسب انتساب نہیں کیا گیا ہے یا کسی بھی طرح
-              سے آپ کے حقوق کی خلاف ورزی ہو رہی ہے، تو براہ کرم ہم سے فوری رابطہ کریں۔ ہم
-              درست معلومات کی تصدیق کرنے اور فوری طور پر کوئی بھی ضروری تبدیلیاں کرنے کے لیے
-              پرعزم ہیں۔
+              If you believe a news item has not been properly attributed or is otherwise
+                infringing your rights, please contact us promptly. We are committed to
+                verifying the correct information and making any necessary changes immediately.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">رابطہ</h2>
+            <h2 className="font-headline text-xl font-semibold">Contact</h2>
             <p className="mt-3">
-              انتساب سے متعلقہ سوالات کے لیے براہ کرم ہم سے
-              {" "}<a
-                href={`mailto:attribution@${new URL(siteConfig.url).hostname}`}
+              For attribution-related questions, please contact us at{" "}
+              <a
+                href={`mailto:contact@${new URL(siteConfig.url).hostname}`}
                 className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60"
-              >attribution@{new URL(siteConfig.url).hostname}</a>
-              {" "}پر رابطہ کریں۔
+              >contact@{new URL(siteConfig.url).hostname}</a>.
             </p>
           </section>
 
           <p className="pt-4 text-sm text-foreground/60">
-            آخری تازہ کاری: 1 جون 2026
+            Last updated: June 1, 2026
           </p>
         </div>
       </Container>

@@ -38,7 +38,7 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
         <button
           onClick={() => setDismissed(true)}
           className="shrink-0 px-3 text-white/40 hover:text-white transition-colors text-[18px] leading-none"
-          aria-label="بند کریں"
+          aria-label="Close"
         >
           ✕
         </button>

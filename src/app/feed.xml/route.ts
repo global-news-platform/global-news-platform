@@ -43,7 +43,7 @@ export async function GET() {
     <link>${siteConfig.url}</link>
     <description>${escapeXml(siteConfig.description)}</description>
     <language>${siteConfig.locale.replace("_", "-")}</language>
-    <copyright>${new Date().getFullYear()} ${escapeXml(siteConfig.name)} — جملہ حقوق محفوظ ہیں</copyright>
+    <copyright>${new Date().getFullYear()} ${escapeXml(siteConfig.name)} — All rights reserved</copyright>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <image>
       <url>${siteConfig.url}${siteConfig.ogImage}</url>

@@ -47,21 +47,21 @@ export function MDXContent({ content, className }: MDXContentProps) {
       }
       if (block.startsWith("> ")) {
         const lines = block.split("\n").map((l) => l.replace(/^>\s?/, "")).join("\n")
-        return `<blockquote class="border-r-[3px] border-accent/50 pr-4 pl-0 my-8 italic text-[17px] md:text-[19px] text-foreground/80 font-urdu leading-[2]">${renderInlineMarkdown(lines)}</blockquote>`
+        return `<blockquote class="border-l-[3px] border-accent/50 pl-4 pr-0 my-8 italic text-[17px] md:text-[19px] text-foreground/80 font-sans leading-[2]">${renderInlineMarkdown(lines)}</blockquote>`
       }
       if (block.startsWith("### ")) {
-        return `<h3 class="font-urdu text-xl md:text-2xl font-bold mt-8 mb-3 text-foreground leading-[1.8]">${renderInlineMarkdown(block.replace("### ", ""))}</h3>`
+        return `<h3 class="font-sans text-xl md:text-2xl font-bold mt-8 mb-3 text-foreground leading-[1.8]">${renderInlineMarkdown(block.replace("### ", ""))}</h3>`
       }
       if (block.startsWith("## ")) {
-        return `<h2 class="font-urdu text-2xl md:text-3xl font-bold mt-12 mb-4 text-foreground leading-[1.8]">${renderInlineMarkdown(block.replace("## ", ""))}</h2>`
+        return `<h2 class="font-sans text-2xl md:text-3xl font-bold mt-12 mb-4 text-foreground leading-[1.8]">${renderInlineMarkdown(block.replace("## ", ""))}</h2>`
       }
       if (block.split("\n").every((l) => l.startsWith("- "))) {
-        const items = block.split("\n").map((l) => `<li class="md:text-[16px] text-foreground/85 leading-[2] font-urdu">${renderInlineMarkdown(l.replace(/^- /, ""))}</li>`).join("")
-        return `<ul class="mb-5 pr-5 pl-0 space-y-1.5">${items}</ul>`
+        const items = block.split("\n").map((l) => `<li class="md:text-[16px] text-foreground/85 leading-[2] font-sans">${renderInlineMarkdown(l.replace(/^- /, ""))}</li>`).join("")
+        return `<ul class="mb-5 pl-5 pr-0 space-y-1.5">${items}</ul>`
       }
       if (block.split("\n").every((l) => /^\d+\.\s/.test(l))) {
-        const items = block.split("\n").map((l) => `<li class="md:text-[16px] text-foreground/85 leading-[2] font-urdu">${renderInlineMarkdown(l.replace(/^\d+\.\s/, ""))}</li>`).join("")
-        return `<ol class="mb-5 pr-5 pl-0 space-y-1.5">${items}</ol>`
+        const items = block.split("\n").map((l) => `<li class="md:text-[16px] text-foreground/85 leading-[2] font-sans">${renderInlineMarkdown(l.replace(/^\d+\.\s/, ""))}</li>`).join("")
+        return `<ol class="mb-5 pl-5 pr-0 space-y-1.5">${items}</ol>`
       }
       if (block === "---") {
         return `<hr class="my-12 border-border" />`
@@ -69,23 +69,22 @@ export function MDXContent({ content, className }: MDXContentProps) {
       const processed = block
         .split("\n")
         .map((line) => {
-          if (line.startsWith("### ")) return `<h3 class="font-urdu text-xl md:text-2xl font-bold mt-8 mb-3 text-foreground leading-[1.8]">${renderInlineMarkdown(line.replace("### ", ""))}</h3>`
-          if (line.startsWith("## ")) return `<h2 class="font-urdu text-2xl md:text-3xl font-bold mt-12 mb-4 text-foreground leading-[1.8]">${renderInlineMarkdown(line.replace("## ", ""))}</h2>`
-          if (line.startsWith("> ")) return `<blockquote class="border-r-[3px] border-accent/50 pr-4 pl-0 my-8 italic text-[17px] md:text-[19px] text-foreground/80 font-urdu leading-[2]">${renderInlineMarkdown(line.replace(/^>\s?/, ""))}</blockquote>`
-          if (line.startsWith("#### ")) return `<h4 class="font-urdu text-lg font-bold mt-6 mb-2 text-foreground leading-[1.8]">${renderInlineMarkdown(line.replace("#### ", ""))}</h4>`
+          if (line.startsWith("### ")) return `<h3 class="font-sans text-xl md:text-2xl font-bold mt-8 mb-3 text-foreground leading-[1.8]">${renderInlineMarkdown(line.replace("### ", ""))}</h3>`
+          if (line.startsWith("## ")) return `<h2 class="font-sans text-2xl md:text-3xl font-bold mt-12 mb-4 text-foreground leading-[1.8]">${renderInlineMarkdown(line.replace("## ", ""))}</h2>`
+          if (line.startsWith("> ")) return `<blockquote class="border-l-[3px] border-accent/50 pl-4 pr-0 my-8 italic text-[17px] md:text-[19px] text-foreground/80 font-sans leading-[2]">${renderInlineMarkdown(line.replace(/^>\s?/, ""))}</blockquote>`
+          if (line.startsWith("#### ")) return `<h4 class="font-sans text-lg font-bold mt-6 mb-2 text-foreground leading-[1.8]">${renderInlineMarkdown(line.replace("#### ", ""))}</h4>`
           const inlineImg = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
           if (inlineImg) return `<figure class="my-8"><img src="${escapeHtml(inlineImg[2])}" alt="${escapeHtml(inlineImg[1])}" class="w-full rounded-xl shadow-md" loading="lazy" decoding="async" style="object-fit:cover;aspect-ratio:16/9" /></figure>`
           return renderInlineMarkdown(line)
         })
         .join("<br/>")
 
-      return `<p class="mb-5 leading-[2] text-[16.5px] md:text-[18px] text-foreground/85 font-urdu">${processed}</p>`
+      return `<p class="mb-5 leading-[2] text-[16.5px] md:text-[18px] text-foreground/85 font-sans">${processed}</p>`
     })
     .join("\n")
 
   return (
     <div
-      dir="rtl"
       className={cn("prose-article", className)}
       dangerouslySetInnerHTML={{ __html: rendered }}
     />

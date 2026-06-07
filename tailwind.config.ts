@@ -27,13 +27,9 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "Noto Sans Arabic", "system-ui", "sans-serif"],
-        serif: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "Noto Sans Arabic", "serif"],
-        headline: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "serif"],
-        urdu: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "serif"],
-        urduBody: ["var(--font-noto-nastaliq)", "Noto Nastaliq Urdu", "serif"],
-        arabic: ["var(--font-noto-arabic)", "Noto Sans Arabic", "sans-serif"],
-        kufi: ["var(--font-noto-arabic)", "Noto Sans Arabic", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        serif: ["Georgia", "Cambria", "Times New Roman", "serif"],
+        headline: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       fontSize: {
         "2xs": ["0.625rem", { lineHeight: "1rem" }],

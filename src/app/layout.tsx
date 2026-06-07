@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Noto_Nastaliq_Urdu, Noto_Sans_Arabic } from "next/font/google"
+import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/common/theme-provider"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
@@ -7,22 +7,12 @@ import { BackToTop } from "@/components/common/back-to-top"
 import { siteConfig } from "@/lib/constants"
 import "./globals.css"
 
-const notoNastaliq = Noto_Nastaliq_Urdu({
-  subsets: ["arabic"],
+const inter = Inter({
+  subsets: ["latin"],
   display: "swap",
-  variable: "--font-noto-nastaliq",
+  variable: "--font-inter",
   preload: true,
   weight: ["400", "500", "600", "700"],
-  fallback: ["system-ui", "sans-serif"],
-})
-
-const notoArabic = Noto_Sans_Arabic({
-  subsets: ["arabic"],
-  display: "swap",
-  variable: "--font-noto-arabic",
-  preload: true,
-  weight: ["400", "500", "600", "700"],
-  fallback: ["sans-serif"],
 })
 
 export const viewport: Viewport = {
@@ -37,29 +27,28 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.nameUrdu}`,
+    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   generator: "The Global Lens 365 Platform",
-  applicationName: siteConfig.nameUrdu,
+  applicationName: siteConfig.name,
   referrer: "origin-when-cross-origin",
   keywords: [
-    "پاکستان", "خبریں", "اردو خبریں", "پاکستان نیوز",
-    "breaking news", "pakistan news", "urdu news",
-    "world news", "pakistan headlines", "global news",
-    "pakistan politics", "cricket news",
+    "pakistan news", "world news", "breaking news",
+    "global headlines", "pakistan politics", "international news",
+    "daily news", "news aggregator",
   ],
-  authors: [{ name: siteConfig.nameUrdu, url: siteConfig.url }],
-  creator: siteConfig.nameUrdu,
-  publisher: siteConfig.nameUrdu,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   formatDetection: { telephone: false, address: false },
   alternates: { canonical: siteConfig.url },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
-    siteName: siteConfig.nameUrdu,
-    title: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     url: siteConfig.url,
     images: [
@@ -67,17 +56,17 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}${siteConfig.ogImage}`,
         width: 1200,
         height: 630,
-        alt: siteConfig.nameUrdu,
+        alt: siteConfig.name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [`${siteConfig.url}${siteConfig.ogImage}`],
-    site: "@pakistannewshub",
-    creator: "@pakistannewshub",
+    site: "@thegloballens365",
+    creator: "@thegloballens365",
   },
   robots: {
     index: true,
@@ -95,7 +84,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: siteConfig.nameUrdu,
+    title: siteConfig.name,
     statusBarStyle: "default",
   },
   icons: {
@@ -114,10 +103,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const fontVariables = `${notoNastaliq.variable} ${notoArabic.variable}`
+  const fontVariables = `${inter.variable}`
 
   return (
-    <html lang="ur" dir="rtl" suppressHydrationWarning className={fontVariables}>
+    <html lang="en" dir="ltr" suppressHydrationWarning className={fontVariables}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -140,18 +129,18 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title={`${siteConfig.nameUrdu} — آر ایس ایس فیڈ`}
+          title={`${siteConfig.name} — RSS Feed`}
           href="/feed.xml"
         />
       </head>
-      <body className="bg-background font-urdu antialiased">
+      <body className="bg-background font-sans antialiased">
         <ThemeProvider defaultTheme="system" storageKey="pakistan-news-theme">
           <div className="relative flex min-h-dvh flex-col">
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-foreground focus:px-4 focus:py-2 focus:text-background focus:outline-none"
             >
-              مواد پر جائیں
+              Skip to main content
             </a>
             <Header />
             <main id="main-content">

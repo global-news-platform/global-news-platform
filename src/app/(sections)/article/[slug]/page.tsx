@@ -27,7 +27,7 @@ import {
   generateNewsArticleSchema,
   generateBreadcrumbSchema,
 } from "@/lib/seo"
-import { siteConfig, DISCLAIMER_TEXT, DISCLAIMER_TEXT_EN } from "@/lib/constants"
+import { siteConfig, DISCLAIMER_TEXT } from "@/lib/constants"
 
 export const dynamic = "force-static"
 export const revalidate = 3600
@@ -43,7 +43,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const article = await getArticleBySlug(slug)
-  if (!article) return { title: "مضمون نہیں ملا" }
+  if (!article) return { title: "Article not found" }
 
   const canonicalUrl = article.source?.canonicalUrl
 
@@ -87,10 +87,10 @@ export default async function ArticlePage({
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
             <Search className="h-7 w-7 text-muted-foreground" />
           </div>
-          <h1 className="font-headline text-3xl font-bold">مضمون نہیں ملا</h1>
+          <h1 className="font-headline text-3xl font-bold">Article not found</h1>
           <p className="mt-3 text-muted-foreground">
-            آپ جس مضمون کی تلاش کر رہے ہیں وہ موجود نہیں ہے۔
-            ہو سکتا ہے کہ یہ ہٹا دیا گیا ہو یا منتقل کر دیا گیا ہو۔
+            The article you are looking for does not exist.
+            It may have been removed or moved.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
@@ -98,14 +98,14 @@ export default async function ArticlePage({
               className="inline-flex items-center gap-2 rounded bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90"
             >
               <Home className="h-4 w-4" />
-              صفحہ اول پر جائیں
+              Go to Home
             </Link>
             <Link
               href="/search"
               className="inline-flex items-center gap-2 rounded border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
             >
               <Search className="h-4 w-4" />
-              خبریں تلاش کریں
+              Search News
             </Link>
           </div>
         </div>
@@ -130,7 +130,7 @@ export default async function ArticlePage({
 
   const breadcrumbSchema = generateBreadcrumbSchema(
     [
-      { name: "ہوم", url: siteConfig.url },
+      { name: "Home", url: siteConfig.url },
       { name: article.category, url: absoluteUrl(`/category/${article.categorySlug}`) },
       { name: article.title, url: articleUrl },
     ],
@@ -179,7 +179,7 @@ export default async function ArticlePage({
                   <p>{DISCLAIMER_TEXT}</p>
                   {article.source && (
                     <p>
-                      ماخذ:{" "}
+                      Source:{" "}
                       <a
                         href={article.source.url}
                         target="_blank"
@@ -191,9 +191,9 @@ export default async function ArticlePage({
                       </a>
                     </p>
                   )}
-                  <p className="text-[11px] text-muted-foreground/60">{DISCLAIMER_TEXT_EN}</p>
+
                   <p className="text-[11px] text-muted-foreground/60">
-                    تمام کاپی رائٹس متعلقہ اداروں کے پاس محفوظ ہیں۔
+                    All copyrights are reserved by respective owners.
                   </p>
                 </div>
               </div>
@@ -204,7 +204,7 @@ export default async function ArticlePage({
             </div>
 
             <div className="mt-10">
-              <AdSlot variant="rectangle" className="hidden sm:flex" label="مزید پڑھیں" />
+              <AdSlot variant="rectangle" className="hidden sm:flex" label="Read more" />
             </div>
 
             {authorProfile && (
@@ -232,15 +232,15 @@ export default async function ArticlePage({
           {showRightSidebar && (
             <aside className="sticky top-24 hidden h-fit xl:block xl:w-[260px]">
               <div className="flex flex-col gap-6">
-                <AdSlot variant="skyscraper" className="w-full" label="آپ کو پسند آ سکتا ہے" />
-                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
+                <AdSlot variant="skyscraper" className="w-full" label="You may also like" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
               </div>
             </aside>
           )}
         </div>
 
         <div className="mx-auto mt-12 max-w-[88rem]">
-          <AdSlot variant="billboard" className="hidden md:flex" label="تجویز کردہ پڑھنا" />
+          <AdSlot variant="billboard" className="hidden md:flex" label="Recommended Reading" />
         </div>
 
         {related.length > 0 && (

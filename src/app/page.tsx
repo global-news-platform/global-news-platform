@@ -11,7 +11,7 @@ import {
   getFeaturedArticle,
   getArticlesByCategory,
 } from "@/lib/articles"
-import { hasSufficientUrdu } from "@/lib/urdu-headlines"
+
 
 import {
   generateWebsiteSchema,
@@ -23,10 +23,10 @@ export const dynamic = "force-static"
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
+  title: `${siteConfig.name} — ${siteConfig.tagline}`,
   description: siteConfig.description,
   openGraph: {
-    title: `${siteConfig.nameUrdu} — ${siteConfig.tagline}`,
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
   },
 }
@@ -38,7 +38,6 @@ function hasValidImage(a: ArticleLink): boolean {
 function filterQualityArticles(articles: ArticleLink[]): ArticleLink[] {
   return articles.filter((a) => {
     if (!a.title || a.title.length < 8) return false
-    if (!hasSufficientUrdu(a.title)) return false
     return true
   })
 }
@@ -71,7 +70,7 @@ function curatedArticle(overrides: Partial<ArticleLink> & { slug?: string; title
     excerpt: overrides.excerpt,
     category: overrides.category,
     categorySlug: overrides.categorySlug,
-    author: overrides.author || "علی احمد",
+    author: overrides.author || "Ali Ahmed",
     authorSlug: overrides.authorSlug || "ali-ahmed",
     publishedAt: overrides.publishedAt || now,
     image: overrides.image || "/images/fallbacks/default.jpg",
@@ -117,12 +116,12 @@ export default async function HomePage() {
 
   const featuredHero = allArticles[0] || curatedArticle({
     slug: "pakistan-news-welcome",
-    title: "پاکستان نیوز ہب میں خوش آمدید — پاکستان اور دنیا کی تازہ ترین خبریں",
-    excerpt: "پاکستان نیوز ہب آپ کے لیے پاکستان اور دنیا بھر سے تازہ ترین خبریں، تجزیہ اور رپورٹس پیش کرتا ہے۔ سیاست، کاروبار، کھیل، ٹیکنالوجی، صحت اور دیگر شعبوں کی مستند کوریج۔",
-    category: "پاکستان",
+    title: "Welcome to Pakistan News Hub — Latest news from Pakistan and the world",
+    excerpt: "Pakistan News Hub brings you the latest news, analysis and reports from Pakistan and around the world. Authoritative coverage of politics, business, sports, technology, health and other sectors.",
+    category: "Pakistan",
     categorySlug: "pakistan",
     image: "/images/fallbacks/pakistan.jpg",
-    imageAlt: "پاکستان نیوز ہب",
+    imageAlt: "Pakistan News Hub",
     featured: true,
   })
 
@@ -148,19 +147,19 @@ export default async function HomePage() {
 
       <CategoryGrid
         categories={[
-          { slug: "pakistan", name: "پاکستان", articles: filterQualityArticles(pakistanArticles) },
-          { slug: "dunya", name: "دنیا", articles: filterQualityArticles(worldArticles) },
-          { slug: "siasat", name: "سیاست", articles: filterQualityArticles(siasatArticles) },
-          { slug: "karobar", name: "کاروبار", articles: filterQualityArticles(karobarArticles) },
+          { slug: "pakistan", name: "Pakistan", articles: filterQualityArticles(pakistanArticles) },
+          { slug: "dunya", name: "World", articles: filterQualityArticles(worldArticles) },
+          { slug: "siasat", name: "Politics", articles: filterQualityArticles(siasatArticles) },
+          { slug: "karobar", name: "Business", articles: filterQualityArticles(karobarArticles) },
         ]}
       />
 
       <CategoryGrid
         categories={[
-          { slug: "khel", name: "کھیل", articles: filterQualityArticles(khelArticles) },
-          { slug: "technology", name: "ٹیکنالوجی", articles: filterQualityArticles(techArticles) },
-          { slug: "sehat", name: "صحت", articles: filterQualityArticles(sehatArticles) },
-          { slug: "shobiz", name: "شوبز", articles: filterQualityArticles(shobizArticles) },
+          { slug: "khel", name: "Sports", articles: filterQualityArticles(khelArticles) },
+          { slug: "technology", name: "Technology", articles: filterQualityArticles(techArticles) },
+          { slug: "sehat", name: "Health", articles: filterQualityArticles(sehatArticles) },
+          { slug: "shobiz", name: "Showbiz", articles: filterQualityArticles(shobizArticles) },
         ]}
       />
     </>

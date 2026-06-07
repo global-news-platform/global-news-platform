@@ -6,19 +6,13 @@ export function absoluteUrl(path: string): string {
   return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`
 }
 
-export function generateUrduSlug(title: string): string {
-  const urduChars = title.match(/[\u0600-\u06FF]+/g) || []
-  if (urduChars.length > 0) {
-    const keyWords = urduChars.slice(0, 4).join("-")
-    return encodeURIComponent(keyWords)
-  }
-  let hash = 0
-  for (let i = 0; i < title.length; i++) {
-    const char = title.charCodeAt(i)
-    hash = (hash << 5) - hash + char
-    hash = hash & hash
-  }
-  return `article-${Math.abs(hash).toString(36)}`
+export function generateSeoSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
 }
 
 export function generateWebsiteSchema() {
@@ -28,9 +22,9 @@ export function generateWebsiteSchema() {
     "@id": `${siteConfig.url}/#website`,
     url: siteConfig.url,
     name: siteConfig.name,
-    description: siteConfig.descriptionEn || siteConfig.description,
+    description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
-    inLanguage: "ur-PK",
+    inLanguage: "en-US",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -48,14 +42,14 @@ export function generateOrganizationSchema() {
     "@type": "NewsMediaOrganization",
     "@id": `${siteConfig.url}/#organization`,
     url: siteConfig.url,
-    name: siteConfig.nameUrdu,
+    name: siteConfig.name,
     alternateName: siteConfig.name,
     description: siteConfig.description,
     logo: {
       "@type": "ImageObject",
       "@id": `${siteConfig.url}/#logo`,
       url: absoluteUrl(siteConfig.logo),
-      caption: siteConfig.nameUrdu,
+      caption: siteConfig.name,
     },
     image: absoluteUrl(siteConfig.ogImage),
     sameAs: [
@@ -95,13 +89,13 @@ export function generateNewsArticleSchema(
     publisher: {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
-      name: siteConfig.nameUrdu,
+      name: siteConfig.name,
       logo: { "@type": "ImageObject", url: publisherLogo },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     keywords: article.tags.join(", "),
     articleSection: article.category,
-    inLanguage: "ur-PK",
+    inLanguage: "en-US",
   }
 
   if (article.image) {
@@ -166,7 +160,7 @@ export function generateCollectionSchema(
     name,
     description,
     numberOfItems,
-    inLanguage: "ur-PK",
+    inLanguage: "en-US",
   }
 }
 
@@ -206,7 +200,7 @@ export function generateMetadata(
       title: overrides.title,
       description: overrides.description,
       url,
-      siteName: siteConfig.nameUrdu,
+      siteName: siteConfig.name,
       locale: siteConfig.locale,
       type: "website",
       images: ogImages,

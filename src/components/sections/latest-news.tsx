@@ -12,7 +12,7 @@ export function LatestNews({ articles }: LatestNewsProps) {
     <section className="py-5 md:py-6">
       <div className="mx-auto max-w-full px-3 md:px-4 lg:px-5">
         <div className="cat-bar mb-4">
-          <span className="cat-bar-title">تازہ ترین خبریں</span>
+          <span className="cat-bar-title">Latest News</span>
           <svg className="h-3 w-3 text-destructive-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>

@@ -6,22 +6,22 @@ import { siteConfig } from "@/lib/constants"
 const socialLinks = [
   {
     href: siteConfig.links.twitter,
-    label: "ٹویٹر",
+    label: "Twitter",
     icon: Twitter,
   },
   {
     href: siteConfig.links.facebook,
-    label: "فیس بک",
+    label: "Facebook",
     icon: Facebook,
   },
   {
     href: siteConfig.links.linkedin,
-    label: "لنکڈ ان",
+    label: "LinkedIn",
     icon: Linkedin,
   },
   {
     href: siteConfig.links.rss,
-    label: "آر ایس ایس فیڈ",
+    label: "RSS Feed",
     icon: Rss,
   },
 ]

@@ -32,7 +32,7 @@ export async function generateMetadata({
   if (!category) return {}
 
   return buildMetadata({
-    title: `${category.name} — تازہ ترین خبریں و تجزیہ`,
+    title: `${category.name} — Latest News & Analysis`,
     description: category.description,
     path: `/category/${category.slug}`,
     openGraph: {
@@ -58,7 +58,7 @@ export default async function CategoryPage({
   const pageUrl = absoluteUrl(`/category/${slug}`)
 
   const collectionSchema = generateCollectionSchema(
-    `${category.name} خبریں`,
+    `${category.name} News`,
     category.description,
     pageUrl,
     articles.length,
@@ -66,7 +66,7 @@ export default async function CategoryPage({
 
   const breadcrumbSchema = generateBreadcrumbSchema(
     [
-      { name: "ہوم", url: absoluteUrl("/") },
+      { name: "Home", url: absoluteUrl("/") },
       { name: category.name, url: pageUrl },
     ],
     pageUrl,
@@ -133,7 +133,7 @@ export default async function CategoryPage({
               ) : (
                 <div className="py-20 text-center">
                   <p className="text-lg text-muted-foreground">
-                    اس زمرے میں ابھی کوئی مضمون نہیں ہے۔
+                    No articles in this category yet.
                   </p>
                 </div>
               )}
@@ -141,7 +141,7 @@ export default async function CategoryPage({
               {otherArticles.length > 0 && (
                 <div className="mt-16 border-t border-border pt-10">
                   <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                    مزید خبریں
+                    More News
                   </h2>
                   <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {otherArticles.slice(0, 4).map((article) => (
@@ -154,8 +154,8 @@ export default async function CategoryPage({
 
             <aside className="hidden w-[260px] shrink-0 xl:block">
               <div className="sticky top-28 flex flex-col gap-6">
-                <AdSlot variant="skyscraper" className="w-full" label="اشتہار" />
-                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
+                <AdSlot variant="skyscraper" className="w-full" label="Advertisement" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
               </div>
             </aside>
           </div>

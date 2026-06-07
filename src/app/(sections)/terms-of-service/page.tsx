@@ -5,9 +5,9 @@ import { generateMetadata } from "@/lib/seo"
 import { siteConfig } from "@/lib/constants"
 
 export const metadata: Metadata = generateMetadata({
-  title: "خدمات کی شرائط — طے شدہ شرائط و ضوابط",
+  title: "Terms of Service — Terms & Conditions",
   description:
-    "پاکستان نیوز ہب کے خدمات کی شرائط — ہماری ویب سائٹ کے استعمال کے قواعد، ذمہ داریاں اور صارف کے حقوق۔",
+    "The Global Lens 365 terms of service — rules, responsibilities, and user rights for using our website.",
   path: "/terms-of-service",
 })
 
@@ -16,84 +16,86 @@ export default function TermsOfServicePage() {
     <div className="py-8 md:py-12">
       <Container size="sm">
         <h1 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-          خدمات کی شرائط
+          Terms of Service
         </h1>
         <div className="mt-2 h-1 w-16 bg-foreground" />
         <div className="mt-8 space-y-8 text-base leading-relaxed text-foreground/90">
           <section>
-            <h2 className="font-headline text-xl font-semibold">تعارف</h2>
+            <h2 className="font-headline text-xl font-semibold">Introduction</h2>
             <p className="mt-3">
-              {siteConfig.name} ("ہم"، "ہمارا"، "ہماری") میں خوش آمدید۔ یہ خدمات کی شرائط ("شرائط") آپ کے
-              {siteConfig.url} ویب سائٹ کے استعمال کو کنٹرول کرتی ہیں۔ ہماری سائٹ تک رسائی حاصل کرکے، آپ
-              ان شرائط سے اتفاق کرتے ہیں۔ اگر آپ ان شرائط سے متفق نہیں ہیں تو براہ کرم سائٹ استعمال نہ کریں۔
+              Welcome to {siteConfig.name} (&quot;we,&quot; &quot;our,&quot; &quot;us&quot;). These
+              Terms of Service (&quot;Terms&quot;) govern your use of{" "}
+              {siteConfig.url}. By accessing our site, you agree to these Terms.
+              If you do not agree with these Terms, please do not use the site.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">خبروں کی جمع آوری کا ماڈل</h2>
+            <h2 className="font-headline text-xl font-semibold">News Aggregation Model</h2>
             <p className="mt-3">
-              {siteConfig.name} ایک نیوز ایگریگیٹر ہے۔ ہم مختلف پاکستانی اور بین الاقوامی خبروں کے ذرائع
-              (بشمول ڈان، ایکسپریس ٹریبیون، دی نیوز، بی بی سی، الجزیرہ، اور دیگر) سے خبروں کے خلاصے اور
-              اقتباسات شائع کرتے ہیں۔ ہم اصل مضامین کو مکمل طور پر دوبارہ پیش نہیں کرتے۔ ہر خلاصے کے ساتھ
-              اصل ماخذ کا لنک اور انتساب فراہم کیا جاتا ہے۔ تمام کاپی رائٹس متعلقہ اصل ناشروں کے پاس محفوظ ہیں۔
+              {siteConfig.name} is a news aggregator. We publish summaries and excerpts from
+              various Pakistani and international news sources (including Dawn, Express Tribune,
+              The News International, BBC, Al Jazeera, and others). We do not republish full
+              original articles. Every summary includes a link to the original source and proper
+              attribution. All copyrights are held by the respective original publishers.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">قابل قبول استعمال</h2>
+            <h2 className="font-headline text-xl font-semibold">Acceptable Use</h2>
             <p className="mt-3">
-              آپ اس سائٹ کو صرف قانونی مقاصد کے لیے اور ان شرائط کی تعمیل میں استعمال کرنے پر اتفاق کرتے ہیں۔
-              آپ اس بات سے اتفاق کرتے ہیں کہ:
+              You agree to use this site only for lawful purposes and in compliance with these
+              Terms. You agree that:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pr-6">
-              <li>آپ سائٹ کے مواد کو کسی بھی غیر قانونی مقصد کے لیے استعمال نہیں کریں گے</li>
-              <li>آپ سائٹ کے کام کو خلل انداز کرنے کی کوشش نہیں کریں گے</li>
-              <li>آپ خودکار نظام (bots) کے ذریعے سائٹ سے ڈیٹا اکٹھا نہیں کریں گے</li>
-              <li>آپ ہمارے انتساب کے لنکس کو ہٹانے یا تبدیل کرنے کی کوشش نہیں کریں گے</li>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>You will not use the site's content for any unlawful purpose</li>
+              <li>You will not attempt to disrupt the site's operation</li>
+              <li>You will not collect data from the site via automated systems (bots)</li>
+              <li>You will not remove or alter our attribution links</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">دانشورانہ املاک کے حقوق</h2>
+            <h2 className="font-headline text-xl font-semibold">Intellectual Property Rights</h2>
             <p className="mt-3">
-              {siteConfig.name} پر شائع ہونے والے خبروں کے خلاصے اور انتخاب ہمارے اپنے اصل کام ہیں اور
-              کاپی رائٹ قانون کے ذریعے محفوظ ہیں۔ تاہم، وہ خبریں جن کا ہم خلاصہ پیش کرتے ہیں ان کے
-              کاپی رائٹس بالترتیب ان کے اصل ناشروں کے پاس محفوظ ہیں۔ ہم منصفانہ استعمال (fair use) کے
-              اصولوں کے تحت خبروں کے خلاصے اور اقتباسات پیش کرتے ہیں۔
+              The news summaries and selections published on {siteConfig.name} are our own
+              original work and are protected by copyright law. However, the news articles we
+              summarize are copyrighted by their respective original publishers. We present news
+              summaries and excerpts under fair use principles.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">ذمہ داری سے انکار</h2>
+            <h2 className="font-headline text-xl font-semibold">Disclaimer of Liability</h2>
             <p className="mt-3">
-              یہ ویب سائٹ "جیسا ہے" فراہم کی گئی ہے۔ ہم معلومات کی درستگی، مکمل ہونے، یا بروقت ہونے کی
-              کوئی ضمانت نہیں دیتے۔ ہم کسی بھی قسم کے نقصان یا نقصان کے لیے ذمہ دار نہیں ہوں گے جو اس
-              سائٹ کے استعمال سے پیدا ہو۔ ہمیشہ اصل ذرائع سے معلومات کی تصدیق کریں۔
+              This website is provided &quot;as is.&quot; We make no guarantees regarding the
+              accuracy, completeness, or timeliness of the information. We will not be liable
+              for any loss or damage arising from the use of this site. Always verify
+              information from original sources.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">تبدیلیاں</h2>
+            <h2 className="font-headline text-xl font-semibold">Changes</h2>
             <p className="mt-3">
-              ہم کسی بھی وقت ان شرائط میں ترمیم کرنے کا حق محفوظ رکھتے ہیں۔ تبدیلیوں کے بعد سائٹ کا
-              استعمال جاری رکھنا نئی شرائط کی قبولیت سمجھا جائے گا۔
+              We reserve the right to modify these Terms at any time. Continuing to use the
+              site after changes are posted constitutes acceptance of the new Terms.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">رابطہ</h2>
+            <h2 className="font-headline text-xl font-semibold">Contact</h2>
             <p className="mt-3">
-              ان شرائط کے بارے میں سوالات کے لیے براہ کرم ہم سے
-              {" "}<a
-                href={`mailto:legal@${new URL(siteConfig.url).hostname}`}
+              For questions about these Terms, please contact us at{" "}
+              <a
+                href={`mailto:contact@${new URL(siteConfig.url).hostname}`}
                 className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60"
-              >legal@{new URL(siteConfig.url).hostname}</a>
-              {" "}پر رابطہ کریں۔
+              >contact@{new URL(siteConfig.url).hostname}</a>.
             </p>
           </section>
 
           <p className="pt-4 text-sm text-foreground/60">
-            آخری تازہ کاری: 1 جون 2026
+            Last updated: June 1, 2026
           </p>
         </div>
       </Container>

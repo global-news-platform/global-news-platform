@@ -1,18 +1,18 @@
 {
   "sources": [
     {
-      "url": "https://www.dawn.com/feeds/home",
-      "category": "pakistan",
-      "label": "Dawn Pakistan",
-      "attribution": "Dawn",
-      "attributionUrl": "https://www.dawn.com"
-    },
-    {
       "url": "https://tribune.com.pk/rss/home",
       "category": "pakistan",
       "label": "Express Tribune",
       "attribution": "The Express Tribune",
       "attributionUrl": "https://tribune.com.pk"
+    },
+    {
+      "url": "https://www.dawn.com/feeds/home",
+      "category": "pakistan",
+      "label": "Dawn Pakistan",
+      "attribution": "Dawn",
+      "attributionUrl": "https://www.dawn.com"
     },
     {
       "url": "https://www.thenews.com.pk/rss/home",
@@ -22,13 +22,6 @@
       "attributionUrl": "https://www.thenews.com.pk"
     },
     {
-      "url": "https://www.pakistantoday.com.pk/feed/",
-      "category": "pakistan",
-      "label": "Pakistan Today",
-      "attribution": "Pakistan Today",
-      "attributionUrl": "https://www.pakistantoday.com.pk"
-    },
-    {
       "url": "https://dailytimes.com.pk/feed/",
       "category": "pakistan",
       "label": "Daily Times",
@@ -36,11 +29,25 @@
       "attributionUrl": "https://dailytimes.com.pk"
     },
     {
-      "url": "https://rss.guardian.co.uk/theguardian/world/rss",
-      "category": "dunya",
-      "label": "The Guardian World",
-      "attribution": "The Guardian",
-      "attributionUrl": "https://www.theguardian.com"
+      "url": "https://www.pakistantoday.com.pk/feed/",
+      "category": "pakistan",
+      "label": "Pakistan Today",
+      "attribution": "Pakistan Today",
+      "attributionUrl": "https://www.pakistantoday.com.pk"
+    },
+    {
+      "url": "https://tribune.com.pk/rss/pakistan",
+      "category": "pakistan",
+      "label": "Express Tribune Pakistan",
+      "attribution": "The Express Tribune",
+      "attributionUrl": "https://tribune.com.pk"
+    },
+    {
+      "url": "https://www.dawn.com/feeds/pakistan",
+      "category": "pakistan",
+      "label": "Dawn Pakistan News",
+      "attribution": "Dawn",
+      "attributionUrl": "https://www.dawn.com"
     },
     {
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
@@ -55,6 +62,13 @@
       "label": "Al Jazeera",
       "attribution": "Al Jazeera",
       "attributionUrl": "https://www.aljazeera.com"
+    },
+    {
+      "url": "https://www.theguardian.com/world/rss",
+      "category": "dunya",
+      "label": "The Guardian World",
+      "attribution": "The Guardian",
+      "attributionUrl": "https://www.theguardian.com"
     },
     {
       "url": "https://rss.cnn.com/rss/cnn_topstories.rss",
@@ -78,18 +92,18 @@
       "attributionUrl": "https://www.dw.com"
     },
     {
-      "url": "https://www.dawn.com/feeds/world",
-      "category": "dunya",
-      "label": "Dawn World",
-      "attribution": "Dawn",
-      "attributionUrl": "https://www.dawn.com"
-    },
-    {
       "url": "https://tribune.com.pk/rss/world",
       "category": "dunya",
       "label": "Express Tribune World",
       "attribution": "The Express Tribune",
       "attributionUrl": "https://tribune.com.pk"
+    },
+    {
+      "url": "https://www.dawn.com/feeds/world",
+      "category": "dunya",
+      "label": "Dawn World",
+      "attribution": "Dawn",
+      "attributionUrl": "https://www.dawn.com"
     },
     {
       "url": "https://feeds.bbci.co.uk/news/politics/rss.xml",
@@ -99,11 +113,11 @@
       "attributionUrl": "https://www.bbc.com/news/politics"
     },
     {
-      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "url": "https://www.theguardian.com/politics/rss",
       "category": "siasat",
-      "label": "Al Jazeera Politics",
-      "attribution": "Al Jazeera",
-      "attributionUrl": "https://www.aljazeera.com"
+      "label": "The Guardian Politics",
+      "attribution": "The Guardian",
+      "attributionUrl": "https://www.theguardian.com"
     },
     {
       "url": "https://www.dawn.com/feeds/opinion",
@@ -169,13 +183,6 @@
       "attributionUrl": "https://www.dawn.com"
     },
     {
-      "url": "https://health.economictimes.indiatimes.com/rss/topstories",
-      "category": "sehat",
-      "label": "ET Health",
-      "attribution": "Economic Times Health",
-      "attributionUrl": "https://health.economictimes.indiatimes.com"
-    },
-    {
       "url": "https://feeds.bbci.co.uk/news/health/rss.xml",
       "category": "sehat",
       "label": "BBC Health",
@@ -202,13 +209,6 @@
       "label": "Express Tribune Opinion",
       "attribution": "The Express Tribune",
       "attributionUrl": "https://tribune.com.pk"
-    },
-    {
-      "url": "https://www.dawn.com/feeds/opinion",
-      "category": "raye",
-      "label": "Dawn Opinion",
-      "attribution": "Dawn",
-      "attributionUrl": "https://www.dawn.com"
     }
   ]
 }

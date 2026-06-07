@@ -46,7 +46,7 @@ export function ShareButtons({
     return (
       <div className="flex flex-col items-center gap-3">
         <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-          شیئر کریں
+          Share
         </span>
         <div className="flex flex-col gap-2">
           {shareLinks.map((link) => {
@@ -58,7 +58,7 @@ export function ShareButtons({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-                aria-label={`${link.name} پر شیئر کریں`}
+                aria-label={`Share on ${link.name}`}
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -67,10 +67,10 @@ export function ShareButtons({
           <button
             onClick={() => copy(fullUrl)}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-            aria-label="لنک کاپی کریں"
+            aria-label="Copy link"
           >
             {copied ? (
-              <span className="text-[10px] font-medium">ہو گیا</span>
+              <span className="text-[10px] font-medium">Done</span>
             ) : (
               <Link2 className="h-4 w-4" />
             )}
@@ -82,7 +82,7 @@ export function ShareButtons({
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-[12px] text-muted-foreground">شیئر کریں:</span>
+      <span className="text-[12px] text-muted-foreground">Share:</span>
       {shareLinks.map((link) => {
         const Icon = link.icon
         return (
@@ -92,7 +92,7 @@ export function ShareButtons({
             target="_blank"
             rel="noopener noreferrer"
             className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-            aria-label={`${link.name} پر شیئر کریں`}
+            aria-label={`Share on ${link.name}`}
           >
             <Icon className="h-4 w-4" />
           </a>
@@ -101,10 +101,10 @@ export function ShareButtons({
       <button
         onClick={() => copy(fullUrl)}
         className="rounded p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-        aria-label="لنک کاپی کریں"
+        aria-label="Copy link"
       >
         {copied ? (
-          <span className="text-[10px] font-medium">کاپی!</span>
+          <span className="text-[10px] font-medium">Copied!</span>
         ) : (
           <Link2 className="h-4 w-4" />
         )}

@@ -12,11 +12,11 @@ interface BreadcrumbsProps {
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav aria-label="بریڈکرمب" className="mb-6">
+    <nav aria-label="Breadcrumb" className="mb-6">
       <ol className="flex items-center gap-1.5 text-[12px] text-muted-foreground">
         <li>
               <Link href="/" className="transition-colors hover:text-foreground">
-                ہوم
+                Home
               </Link>
         </li>
         {items.map((item, i) => (

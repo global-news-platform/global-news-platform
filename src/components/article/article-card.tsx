@@ -107,7 +107,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/60" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
                 </span>
-                بریکنگ
+                Breaking
               </span>
             )}
             <span className="rounded bg-white/20 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm border border-white/20">
@@ -131,7 +131,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             </span>
             <span className="text-white/20">|</span>
             <span className="flex items-center gap-1">
-              {article.readingTime} منٹ
+              {article.readingTime} min
             </span>
             {article.source && (
               <>

@@ -31,7 +31,7 @@ export function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-lg">
                 <Globe className="h-4 w-4 text-primary-foreground" />
               </div>
-              <span className="text-lg font-bold text-background">{siteConfig.nameUrdu}</span>
+              <span className="text-lg font-bold text-background">{siteConfig.name}</span>
             </Link>
             <p className="mt-2 text-sm leading-[1.8] text-background/60">
               {siteConfig.description}
@@ -44,7 +44,7 @@ export function Footer() {
           {/* Categories */}
           <div>
             <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-background/50">
-              زمرہ جات
+              Categories
             </h4>
             <ul className="space-y-1.5">
               {footerCategories.slice(0, 6).map((cat) => (
@@ -63,7 +63,7 @@ export function Footer() {
           {/* More sections */}
           <div>
             <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-background/50">
-              مزید
+              More
             </h4>
             <ul className="space-y-1.5">
               {footerCategories.slice(6, 12).map((cat) => (
@@ -82,7 +82,7 @@ export function Footer() {
           {/* Legal & Quick links */}
           <div>
             <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-background/50">
-              قانونی
+              Legal
             </h4>
             <ul className="space-y-1.5">
               {legalLinks.slice(0, 4).map((link) => (
@@ -97,16 +97,16 @@ export function Footer() {
               ))}
             </ul>
             <h4 className="mb-3 mt-4 text-[11px] font-bold uppercase tracking-[0.15em] text-background/50">
-              رابطہ
+              Contact
             </h4>
             <ul className="space-y-1.5">
               <li>
                 <a
-                  href={`mailto:contact@pakistan-news.news`}
+                  href={`mailto:contact@the-global-lens-365.vercel.app`}
                   className="flex items-center gap-2 text-sm text-background/70 transition-colors hover:text-background"
                 >
                   <Mail className="h-3.5 w-3.5" />
-                  contact@pakistan-news.news
+                  contact@the-global-lens-365.vercel.app
                 </a>
               </li>
             </ul>
@@ -118,19 +118,19 @@ export function Footer() {
       <div className="border-t border-background/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 sm:flex-row sm:px-5 lg:px-6 xl:px-8">
           <p className="text-[11px] text-background/50">
-            &copy; {currentYear} {siteConfig.nameUrdu}. جملہ حقوق محفوظ ہیں۔
+            &copy; {currentYear} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link href="/attribution-policy" className="text-[11px] text-background/50 hover:text-background/80 transition-colors">
-              انتساب
+              Attribution
             </Link>
             <span className="text-background/20">|</span>
             <Link href="/terms-of-service" className="text-[11px] text-background/50 hover:text-background/80 transition-colors">
-              شرائط
+              Terms
             </Link>
             <span className="text-background/20">|</span>
             <Link href="/privacy-policy" className="text-[11px] text-background/50 hover:text-background/80 transition-colors">
-              رازداری
+              Privacy
             </Link>
             <span className="text-background/20">|</span>
             <span className="text-[11px] text-background/50">

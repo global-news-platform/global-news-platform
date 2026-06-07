@@ -60,7 +60,7 @@ export function Header() {
     [searchQuery],
   )
 
-  const today = new Date().toLocaleDateString("ur-PK", {
+  const today = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
     day: "numeric",
@@ -91,7 +91,7 @@ export function Header() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400/60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
                 </span>
-                بریکنگ
+                Breaking
               </Link>
             </div>
             <div className="flex items-center gap-2.5">
@@ -100,7 +100,7 @@ export function Header() {
               <button
                 onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
                 className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
-                aria-label="تھیم تبدیل کریں"
+                aria-label="Toggle theme"
               >
                 {resolvedTheme === "dark" ? (
                   <Sun className="h-3 w-3" />
@@ -117,7 +117,7 @@ export function Header() {
           <button
             onClick={() => setMobileMenuOpen(true)}
             className="rounded p-2 text-foreground transition-colors hover:bg-secondary md:hidden"
-            aria-label="مینیو کھولیں"
+            aria-label="Open menu"
           >
             <Menu className="h-5 w-5" />
           </button>
@@ -131,10 +131,10 @@ export function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold leading-tight tracking-tight md:text-3xl">
-                {siteConfig.nameUrdu}
+                {siteConfig.name}
               </span>
               <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground md:block">
-                {siteConfig.taglineEn}
+                {siteConfig.tagline}
               </span>
             </div>
           </Link>
@@ -143,20 +143,20 @@ export function Header() {
             <button
               onClick={() => setSearchOpen(true)}
               className="rounded p-2 text-foreground transition-colors hover:bg-secondary"
-              aria-label="تلاش"
+              aria-label="Search"
             >
               <Search className="h-5 w-5" />
             </button>
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               className="rounded p-2 text-foreground transition-colors hover:bg-secondary"
-              aria-label="تھیم تبدیل کریں"
-            >
-              {resolvedTheme === "dark" ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
+                aria-label="Toggle theme"
+              >
+                {resolvedTheme === "dark" ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
             </button>
           </div>
         </div>
@@ -194,23 +194,23 @@ export function Header() {
                       : "text-white/85 hover:bg-white/10 hover:text-white",
                   )}
                 >
-                  رائے
+                  Opinion
                 </Link>
                 <span className="h-4 w-px bg-white/20" />
                 <div className="flex items-center gap-0">
                   {inlineSearchOpen ? (
-                    <form onSubmit={handleSearch} className="flex items-center" dir="rtl">
+                    <form onSubmit={handleSearch} className="flex items-center">
                       <button
                         type="submit"
                         className="rounded-l-sm p-1.5 text-white/85 transition-colors hover:bg-white/10 hover:text-white"
-                        aria-label="تلاش کریں"
+                        aria-label="Search"
                       >
                         <Search className="h-4 w-4" />
                       </button>
                       <input
                         ref={searchInputRef}
                         type="search"
-                        placeholder="خبریں تلاش کریں..."
+                        placeholder="Search news..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onBlur={() => { if (!searchQuery) setTimeout(() => setInlineSearchOpen(false), 200) }}
@@ -220,8 +220,8 @@ export function Header() {
                       <button
                         type="button"
                         onClick={() => { setInlineSearchOpen(false); setSearchQuery("") }}
-                        className="p-1.5 text-white/60 hover:text-white/90 transition-colors me-0.5"
-                        aria-label="بند کریں"
+                        className="p-1.5 text-white/60 hover:text-white/90 transition-colors ms-0.5"
+                        aria-label="Close"
                       >
                         <X className="h-3.5 w-3.5" />
                       </button>
@@ -230,7 +230,7 @@ export function Header() {
                     <button
                       onClick={() => setInlineSearchOpen(true)}
                       className="rounded-sm p-1.5 text-white/85 transition-colors hover:bg-white/10 hover:text-white"
-                      aria-label="تلاش"
+                      aria-label="Search"
                     >
                       <Search className="h-4 w-4" />
                     </button>
@@ -255,7 +255,7 @@ export function Header() {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
                   <Globe className="h-4 w-4 text-primary-foreground" />
                 </div>
-                <span className="text-base font-bold">{siteConfig.nameUrdu}</span>
+                <span className="text-base font-bold">{siteConfig.name}</span>
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -267,7 +267,7 @@ export function Header() {
             <div className="p-4">
               <div className="mb-4">
                 <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-                  زمرہ جات
+                  Categories
                 </p>
                 <nav className="space-y-1">
                   {navigation.map((item) => {
@@ -299,22 +299,22 @@ export function Header() {
       <Dialog open={searchOpen} onOpenChange={setSearchOpen}>
         <DialogContent className="top-[15%] max-w-xl -translate-y-0 sm:top-[20%]">
           <DialogHeader>
-            <DialogTitle>تلاش</DialogTitle>
+            <DialogTitle>Search</DialogTitle>
           </DialogHeader>
           <form onSubmit={handleSearch} className="mt-2">
             <div className="relative">
-              <Search className="absolute end-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Search className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 ref={searchInputRef}
                 type="search"
-                placeholder="خبریں تلاش کریں..."
+                placeholder="Search news..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full rounded border border-border bg-background py-3 pe-10 ps-4 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring"
+                className="w-full rounded border border-border bg-background py-3 pr-10 pl-4 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
-              <span className="text-[11px] text-muted-foreground">فوری لنکس:</span>
+              <span className="text-[11px] text-muted-foreground">Quick links:</span>
               {featuredCategories.slice(0, 4).map((slug) => {
                 const cat = categories.find((c) => c.slug === slug)
                 return (

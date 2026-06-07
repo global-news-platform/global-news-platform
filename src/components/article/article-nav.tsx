@@ -21,7 +21,7 @@ export function ArticleNav({ prev, next }: ArticleNavProps) {
             <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground rtl:rotate-180" />
             <div>
               <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                پچھلا
+                Previous
               </span>
               <p className="mt-1 text-sm font-medium leading-snug">
                 {next.title}
@@ -38,7 +38,7 @@ export function ArticleNav({ prev, next }: ArticleNavProps) {
           >
             <div className="flex-1">
               <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                اگلا
+                Next
               </span>
               <p className="mt-1 text-sm font-medium leading-snug">
                 {prev.title}

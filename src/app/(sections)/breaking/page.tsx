@@ -7,12 +7,12 @@ import { getBreakingArticles } from "@/lib/articles"
 import { generateMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = generateMetadata({
-  title: "بریکنگ نیوز — تازہ ترین اپ ڈیٹس و پیش رفت",
+  title: "Breaking News — Latest Updates & Developments",
   description:
-    "پاکستان اور دنیا سے تازہ ترین بریکنگ خبریں اور ترقی پذیر کہانیاں۔ جیسے جیسے ہو رہا ہے ویسے ہی باخبر رہیں۔",
+    "Latest breaking news and developing stories from Pakistan and around the world. Stay informed as it happens.",
   path: "/breaking",
   openGraph: {
-    title: "بریکنگ نیوز — پاکستان نیوز",
+    title: "Breaking News — Pakistan News",
   },
 })
 
@@ -31,11 +31,11 @@ export default async function BreakingPage() {
               <span className="relative inline-flex h-3 w-3 rounded-full bg-red-600" />
             </span>
             <h1 className="font-headline text-3xl font-bold uppercase tracking-wide md:text-4xl">
-              بریکنگ نیوز
+              Breaking News
             </h1>
           </div>
           <p className="mt-2 text-muted-foreground">
-            پاکستان اور دنیا سے تازہ ترین بریکنگ خبریں
+            Latest breaking news from Pakistan and around the world
           </p>
         </div>
 
@@ -48,20 +48,20 @@ export default async function BreakingPage() {
                 ))}
               </div>
 
-              <AdSlot variant="billboard" className="mt-10 hidden md:flex" label="باخبر رہیں" />
+              <AdSlot variant="billboard" className="mt-10 hidden md:flex" label="Stay Informed" />
             </div>
 
             <aside className="hidden w-[260px] shrink-0 xl:block">
               <div className="sticky top-28 flex flex-col gap-6">
-                <AdSlot variant="skyscraper" className="w-full" label="اشتہار" />
-                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ" />
+                <AdSlot variant="skyscraper" className="w-full" label="Advertisement" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored" />
               </div>
             </aside>
           </div>
         ) : (
           <div className="py-20 text-center">
             <p className="text-lg text-muted-foreground">
-              اس وقت کوئی بریکنگ نیوز نہیں ہے۔
+              No breaking news at this time.
             </p>
           </div>
         )}

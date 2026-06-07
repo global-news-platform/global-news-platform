@@ -52,7 +52,7 @@ export function getCategoryGradient(categorySlug?: string): string {
 }
 
 export function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("ur-PK", {
+  return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -60,7 +60,7 @@ export function formatDate(date: string): string {
 }
 
 export function formatDateShort(date: string): string {
-  return new Date(date).toLocaleDateString("ur-PK", {
+  return new Date(date).toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -74,9 +74,9 @@ export function formatDateRelative(date: string): string {
   const hours = Math.floor(diff / (1000 * 60 * 60))
   const days = Math.floor(hours / 24)
 
-  if (hours < 1) return "ابھی"
-  if (hours < 24) return `${hours} گھنٹے پہلے`
-  if (days < 7) return `${days} دن پہلے`
+  if (hours < 1) return "just now"
+  if (hours < 24) return `${hours} hours ago`
+  if (days < 7) return `${days} days ago`
   return formatDateShort(date)
 }
 

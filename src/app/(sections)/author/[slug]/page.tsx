@@ -35,8 +35,8 @@ export async function generateMetadata({
   if (!author) return {}
 
   return buildMetadata({
-    title: `${author.name} — مضامین، خبریں و تجزیہ`,
-    description: author.bio || `${author.name} کے مضامین`,
+    title: `${author.name} — Articles, News & Analysis`,
+    description: author.bio || `${author.name}'s Articles`,
     path: `/author/${slug}`,
   })
 }
@@ -117,7 +117,7 @@ export default async function AuthorPage({
                 )}
                 <span className="h-1 w-1 rounded-full bg-border" />
                 <span>
-                  {articles.length} مضمون{articles.length === 1 ? "" : "یں"}
+                  {articles.length} Article{articles.length === 1 ? "" : "s"}
                 </span>
               </div>
             </div>
@@ -127,12 +127,12 @@ export default async function AuthorPage({
 
       <div className="py-8 md:py-12">
         <Container>
-          <AdSlot variant="leaderboard" className="mb-8 hidden md:flex" label="اشتہار" />
+          <AdSlot variant="leaderboard" className="mb-8 hidden md:flex" label="Advertisement" />
 
           <div className="flex gap-8">
             <div className="min-w-0 flex-1">
               <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                {author.name} کے مضامین
+                {author.name}'s Articles
               </h2>
               {articles.length > 0 ? (
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -146,15 +146,15 @@ export default async function AuthorPage({
                 </div>
               ) : (
                 <div className="py-16 text-center">
-                  <p className="text-muted-foreground">کوئی مضمون نہیں ملا۔</p>
+                  <p className="text-muted-foreground">No articles found.</p>
                 </div>
               )}
             </div>
 
             <aside className="hidden w-[260px] shrink-0 xl:block">
               <div className="sticky top-28 flex flex-col gap-6">
-                <AdSlot variant="skyscraper" className="w-full" label="آپ کو پسند آ سکتا ہے" />
-                <AdSlot variant="rectangle" className="w-full" label="سپانسر شدہ مواد" />
+                <AdSlot variant="skyscraper" className="w-full" label="You may also like" />
+                <AdSlot variant="rectangle" className="w-full" label="Sponsored Content" />
               </div>
             </aside>
           </div>

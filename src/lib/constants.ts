@@ -1,11 +1,7 @@
 export const siteConfig = {
   name: "The Global Lens 365",
-  nameUrdu: "دی گلوبل لینس 365",
-  tagline: "عالمی خبریں، آپ کی زبان میں",
-  taglineEn: "Global News Through a Clear Lens",
+  tagline: "Global News Through a Clear Lens",
   description:
-    "The Global Lens 365 — Your window to world news. Curated global headlines, analysis, and reports from trusted international sources. Politics, business, technology, science, health, and more.",
-  descriptionEn:
     "The Global Lens 365 — Your window to world news. Curated global headlines, analysis, and reports from trusted international sources. Politics, business, technology, science, health, and more.",
   url: "https://the-global-lens-365.vercel.app",
   locale: "en_US",
@@ -35,49 +31,48 @@ export const siteConfig = {
 }
 
 export const categories = [
-  { slug: "pakistan", name: "پاکستان", nameEn: "Pakistan", description: "پاکستان کی تازہ ترین خبریں اور قومی امور", descriptionEn: "Latest news and national affairs from Pakistan" },
-  { slug: "dunya", name: "دنیا", nameEn: "World", description: "بین الاقوامی خبریں اور عالمی امور", descriptionEn: "International news and global affairs" },
-  { slug: "siasat", name: "سیاست", nameEn: "Politics", description: "سیاسی خبریں اور تجزیہ", descriptionEn: "Political news and analysis" },
-  { slug: "karobar", name: "کاروبار", nameEn: "Business", description: "کاروبار، مالیات اور معیشت", descriptionEn: "Business, finance and economy" },
-  { slug: "technology", name: "ٹیکنالوجی", nameEn: "Technology", description: "ٹیکنالوجی اور ڈیجیٹل کلچر", descriptionEn: "Technology and digital culture" },
-  { slug: "khel", name: "کھیل", nameEn: "Sports", description: "کھیلوں کی خبریں اور مقابلے", descriptionEn: "Sports news and competitions" },
-  { slug: "sehat", name: "صحت", nameEn: "Health", description: "صحت اور علاج معالجہ", descriptionEn: "Health and medical news" },
-  { slug: "science", name: "سائنس", nameEn: "Science", description: "سائنسی تحقیق اور دریافتیں", descriptionEn: "Scientific research and discoveries" },
-  { slug: "shobiz", name: "شوبز", nameEn: "Entertainment", description: "فن، تفریح اور شوبز", descriptionEn: "Art, entertainment and showbiz" },
-  { slug: "mazhab", name: "مذہب", nameEn: "Religion", description: "مذہبی خبریں اور معلومات", descriptionEn: "Religious news and information" },
-  { slug: "taleem", name: "تعلیم", nameEn: "Education", description: "تعلیم اور طلبہ کی خبریں", descriptionEn: "Education and student news" },
-  { slug: "mausam", name: "موسم", nameEn: "Weather", description: "موسم کی تازہ ترین صورتحال", descriptionEn: "Latest weather updates" },
-  { slug: "crime", name: "کرائم", nameEn: "Crime", description: "جرائم اور قانون نافذ کرنے والے ادارے", descriptionEn: "Crime and law enforcement" },
-  { slug: "adalat", name: "عدالت", nameEn: "Justice", description: "عدالتی فیصلے اور قانونی خبریں", descriptionEn: "Court decisions and legal news" },
-  { slug: "baynalaqwami", name: "بین الاقوامی", nameEn: "International", description: "بین الاقوامی تعلقات اور عالمی خبریں", descriptionEn: "International relations and global news" },
-  { slug: "raye", name: "رائے", nameEn: "Opinion", description: "تبصرہ اور تجزیہ", descriptionEn: "Commentary and analysis" },
-  { slug: "general", name: "جنرل", nameEn: "General", description: "عام دلچسپی کی خبریں", descriptionEn: "General interest news" },
+  { slug: "pakistan", name: "Pakistan", description: "Latest news and national affairs from Pakistan" },
+  { slug: "dunya", name: "World", description: "International news and global affairs" },
+  { slug: "siasat", name: "Politics", description: "Political news and analysis" },
+  { slug: "karobar", name: "Business", description: "Business, finance and economy" },
+  { slug: "technology", name: "Technology", description: "Technology and digital culture" },
+  { slug: "khel", name: "Sports", description: "Sports news and competitions" },
+  { slug: "sehat", name: "Health", description: "Health and medical news" },
+  { slug: "science", name: "Science", description: "Scientific research and discoveries" },
+  { slug: "shobiz", name: "Entertainment", description: "Art, entertainment and showbiz" },
+  { slug: "mazhab", name: "Religion", description: "Religious news and information" },
+  { slug: "taleem", name: "Education", description: "Education and student news" },
+  { slug: "mausam", name: "Weather", description: "Latest weather updates" },
+  { slug: "crime", name: "Crime", description: "Crime and law enforcement" },
+  { slug: "adalat", name: "Justice", description: "Court decisions and legal news" },
+  { slug: "baynalaqwami", name: "International", description: "International relations and global news" },
+  { slug: "raye", name: "Opinion", description: "Commentary and analysis" },
+  { slug: "general", name: "General", description: "General interest news" },
 ] as const
 
 export const navigation = [
-  { label: "ہوم", href: "/" },
-  { label: "پاکستان", href: "/category/pakistan" },
-  { label: "دنیا", href: "/category/dunya" },
-  { label: "سیاست", href: "/category/siasat" },
-  { label: "کاروبار", href: "/category/karobar" },
-  { label: "ٹیکنالوجی", href: "/category/technology" },
-  { label: "کھیل", href: "/category/khel" },
-  { label: "صحت", href: "/category/sehat" },
-  { label: "سائنس", href: "/category/science" },
-  { label: "شوبز", href: "/category/shobiz" },
-  { label: "رائے", href: "/category/raye" },
+  { label: "Home", href: "/" },
+  { label: "Pakistan", href: "/category/pakistan" },
+  { label: "World", href: "/category/dunya" },
+  { label: "Politics", href: "/category/siasat" },
+  { label: "Business", href: "/category/karobar" },
+  { label: "Technology", href: "/category/technology" },
+  { label: "Sports", href: "/category/khel" },
+  { label: "Health", href: "/category/sehat" },
+  { label: "Science", href: "/category/science" },
+  { label: "Entertainment", href: "/category/shobiz" },
+  { label: "Opinion", href: "/category/raye" },
 ] as const
 
 export const legalLinks = [
-  { label: "ہمارے بارے میں", href: "/about-us", labelEn: "About Us" },
-  { label: "رازداری کی پالیسی", href: "/privacy-policy", labelEn: "Privacy Policy" },
-  { label: "خدمات کی شرائط", href: "/terms-of-service", labelEn: "Terms of Service" },
-  { label: "کاپی رائٹ پالیسی", href: "/copyright-policy", labelEn: "Copyright Policy" },
-  { label: "ڈی ایم سی اے نوٹس", href: "/dmca", labelEn: "DMCA Notice" },
-  { label: "انتساب کی پالیسی", href: "/attribution-policy", labelEn: "Attribution Policy" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Copyright Policy", href: "/copyright-policy" },
+  { label: "DMCA Notice", href: "/dmca" },
+  { label: "Attribution Policy", href: "/attribution-policy" },
 ] as const
 
 export const BREAKING_NEWS_INTERVAL = 300000
 
-export const DISCLAIMER_TEXT = "یہ خبر مختلف ذرائع سے حاصل کردہ معلومات پر مبنی ہے۔ مکمل تفصیلات کے لیے براہ کرم اصل ماخذ ملاحظہ کریں۔"
-export const DISCLAIMER_TEXT_EN = "This news is based on information obtained from various sources. For full details, please refer to the original source."
+export const DISCLAIMER_TEXT = "This news is based on information obtained from various sources. For full details, please refer to the original source."

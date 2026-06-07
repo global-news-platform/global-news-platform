@@ -18,7 +18,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       {/* Breadcrumbs */}
       <nav className="mb-4 flex items-center gap-2 overflow-hidden text-[12px] text-muted-foreground">
         <Link href="/" className="shrink-0 transition-colors hover:text-foreground">
-          ہوم
+          Home
         </Link>
         <span className="shrink-0">/</span>
         <Link
@@ -66,12 +66,12 @@ export function ArticleHero({ article }: ArticleHeroProps) {
           {formatDate(article.publishedAt)}
         </time>
         <span className="text-muted-foreground/40">&middot;</span>
-        <span>{article.readingTime} منٹ</span>
+        <span>{article.readingTime} min</span>
         {article.updatedAt && (
           <>
             <span className="text-muted-foreground/40">&middot;</span>
             <span className="text-muted-foreground/60">
-              اپ ڈیٹ: {formatDate(article.updatedAt)}
+              Updated: {formatDate(article.updatedAt)}
             </span>
           </>
         )}

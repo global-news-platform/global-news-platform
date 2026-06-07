@@ -78,16 +78,14 @@ function buildAttributionLine(article) {
   const sourceUrl = article.canonicalUrl || article.sourceUrl
 
   if (sourceUrl) {
-    return `یہ خبر ${sourceName} سے حاصل کردہ معلومات پر مبنی ہے۔ مکمل تفصیلات کے لیے [اصل ماخذ](${sourceUrl}) ملاحظہ کریں۔`
+    return `This news is based on information obtained from ${sourceName}. For full details, [visit the original source](${sourceUrl}).`
   }
-  return `یہ خبر ${sourceName} سے حاصل کردہ معلومات پر مبنی ہے۔`
+  return `This news is based on information obtained from ${sourceName}.`
 }
 
 const FAIR_USE_NOTICE = `\n\n---
 
-*یہ خبر ایک خلاصہ ہے جو مختلف خبر رساں اداروں سے حاصل کردہ معلومات پر مبنی ہے۔ مکمل تفصیلات اور اصل رپورٹ کے لیے براہ کرم مذکورہ بالا ماخذ ملاحظہ کریں۔ ہم خبروں کو صرف اطلاعی مقاصد کے لیے پیش کرتے ہیں اور تمام کاپی رائٹس متعلقہ اداروں کے پاس محفوظ ہیں۔*
-
-*This is a summary based on reporting from various news sources. For the full report, please refer to the source mentioned above. We present news for informational purposes only and all copyrights belong to their respective owners.*`
+*This news is a summary based on information obtained from various news agencies. For full details and the original report, please refer to the source mentioned above. We present news for informational purposes only and all copyrights belong to their respective owners.*`
 
 async function buildFrontmatter(article) {
   const author = pickAuthor()

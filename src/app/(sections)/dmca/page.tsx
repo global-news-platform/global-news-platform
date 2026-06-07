@@ -5,9 +5,9 @@ import { generateMetadata } from "@/lib/seo"
 import { siteConfig } from "@/lib/constants"
 
 export const metadata: Metadata = generateMetadata({
-  title: "ڈی ایم سی اے نوٹس — کاپی رائٹ کے خلاف ورزی کی اطلاع دیں",
+  title: "DMCA Notice — Report Copyright Infringement",
   description:
-    "پاکستان نیوز ہب کے لیے ڈی ایم سی اے نوٹس — اگر آپ کو یقین ہے کہ آپ کے کاپی رائٹ والے مواد کی خلاف ورزی ہو رہی ہے تو ہم سے رابطہ کریں۔",
+    "DMCA notice for The Global Lens 365 — contact us if you believe your copyrighted material is being infringed.",
   path: "/dmca",
 })
 
@@ -16,80 +16,79 @@ export default function DmcaPage() {
     <div className="py-8 md:py-12">
       <Container size="sm">
         <h1 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-          ڈی ایم سی اے نوٹس
+          DMCA Notice
         </h1>
         <div className="mt-2 h-1 w-16 bg-foreground" />
         <div className="mt-8 space-y-8 text-base leading-relaxed text-foreground/90">
           <section>
-            <h2 className="font-headline text-xl font-semibold">ڈیجیٹل ملینیم کاپی رائٹ ایکٹ</h2>
+            <h2 className="font-headline text-xl font-semibold">Digital Millennium Copyright Act</h2>
             <p className="mt-3">
-              {siteConfig.name} ڈیجیٹل ملینیم کاپی رائٹ ایکٹ (DMCA) کی تعمیل کرتا ہے۔ اگر آپ
-              کو یقین ہے کہ ہماری ویب سائٹ پر موجود کوئی مواد آپ کے کاپی رائٹ کی خلاف ورزی کرتا
-              ہے، تو آپ ذیل میں دی گئی ہدایات کے مطابق DMCA نوٹس دائر کر سکتے ہیں۔ ہم جائز
-              نوٹسوں کا فوری جواب دیں گے۔
+              {siteConfig.name} complies with the Digital Millennium Copyright Act (DMCA). If you
+              believe that any content on our website infringes your copyright, you may file a
+              DMCA notice in accordance with the instructions below. We will respond promptly to
+              valid notices.
             </p>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">نوٹس کیسے دائر کریں</h2>
+            <h2 className="font-headline text-xl font-semibold">How to File a Notice</h2>
             <p className="mt-3">
-              DMCA نوٹس دائر کرنے کے لیے، براہ کرم درج ذیل معلومات فراہم کریں (یہ معلومات
-              کاپی رائٹ قانون کی ضروریات کے مطابق ہونی چاہئیں):
+              To file a DMCA notice, please provide the following information (which must conform
+              to copyright law requirements):
             </p>
-            <ol className="mt-3 list-decimal space-y-3 pr-6">
+            <ol className="mt-3 list-decimal space-y-3 pl-6">
               <li>
-                <strong>کاپی رائٹ شدہ کام کی شناخت:</strong> اس کام (کاموں) کی تفصیل فراہم
-                کریں جس کے بارے میں آپ کو یقین ہے کہ خلاف ورزی ہو رہی ہے۔
+                <strong>Identification of the copyrighted work:</strong> A description of the
+                work(s) you believe are being infringed.
               </li>
               <li>
-                <strong>خلاف ورزی کرنے والے مواد کی شناخت:</strong> {siteConfig.name} پر اس
-                مواد کا براہ راست URL فراہم کریں جس کے بارے میں آپ کو یقین ہے کہ خلاف ورزی
-                کر رہا ہے۔
+                <strong>Identification of the infringing material:</strong> The direct URL on{" "}
+                {siteConfig.name} of the material you believe is infringing.
               </li>
               <li>
-                <strong>آپ کی رابطہ معلومات:</strong> آپ کا نام، پتہ، فون نمبر، اور ای میل
-                ایڈریس فراہم کریں۔
+                <strong>Your contact information:</strong> Your name, address, phone number, and
+                email address.
               </li>
               <li>
-                <strong>نیک نیتی کا بیان:</strong> ایک بیان کہ آپ نیک نیتی سے یقین رکھتے
-                ہیں کہ مواد کا استعمال کاپی رائٹ کے مالک، اس کے ایجنٹ، یا قانون کے ذریعے
-                مجاز نہیں ہے۔
+                <strong>Good faith statement:</strong> A statement that you believe in good faith
+                that the use of the material is not authorized by the copyright owner, its agent,
+                or the law.
               </li>
               <li>
-                <strong>درستگی کا بیان:</strong> ایک بیان کہ نوٹس میں دی گئی معلومات درست
-                ہے اور، غلط بیانی کے انجام سے آگاہ ہوتے ہوئے، کہ آپ کاپی رائٹ کے مالک ہیں
-                یا مالک کی طرف سے کام کرنے کے مجاز ہیں۔
+                <strong>Accuracy statement:</strong> A statement that the information in the
+                notice is accurate and, under penalty of perjury, that you are the copyright
+                owner or authorized to act on the owner's behalf.
               </li>
               <li>
-                <strong>دستخط:</strong> آپ کے جسمانی یا الیکٹرانک دستخط۔
+                <strong>Signature:</strong> Your physical or electronic signature.
               </li>
             </ol>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">مقابلہ نوٹس (Counter-Notice)</h2>
+            <h2 className="font-headline text-xl font-semibold">Counter-Notice</h2>
             <p className="mt-3">
-              اگر آپ کو یقین ہے کہ آپ کا مواد غلطی سے یا غلط شناخت کی وجہ سے ہٹا دیا گیا تھا،
-              تو آپ مقابلہ نوٹس دائر کر سکتے ہیں۔ مقابلہ نوٹس میں درج ذیل شامل ہونا چاہیے:
+              If you believe your material was removed by mistake or misidentification, you may
+              file a counter-notice. The counter-notice must include:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pr-6">
-              <li>ہٹائے گئے مواد کی شناخت اور وہ مقام جہاں وہ ہٹائے جانے سے پہلے ظاہر ہوا تھا</li>
-              <li>ایک بیان کہ آپ نیک نیتی سے یقین رکھتے ہیں کہ مواد غلطی سے یا غلط شناخت کی وجہ سے ہٹایا گیا تھا</li>
-              <li>آپ کا نام، پتہ، اور فون نمبر</li>
-              <li>ایک بیان کہ آپ اپنے علاقے کی وفاقی عدالت کے دائرہ اختیار سے اتفاق کرتے ہیں</li>
-              <li>آپ کے جسمانی یا الیکٹرانک دستخط</li>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>Identification of the removed material and where it appeared before removal</li>
+              <li>A statement that you believe in good faith the material was removed by mistake or misidentification</li>
+              <li>Your name, address, and phone number</li>
+              <li>A statement that you consent to the jurisdiction of the federal court in your district</li>
+              <li>Your physical or electronic signature</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">ہمارے مجاز DMCA ایجنٹ سے رابطہ کریں</h2>
+            <h2 className="font-headline text-xl font-semibold">Contact Our Designated DMCA Agent</h2>
             <p className="mt-3">
-              براہ کرم اپنے DMCA نوٹس یا مقابلہ نوٹس مندرجہ ذیل پتے پر بھیجیں:
+              Please send your DMCA notice or counter-notice to the following address:
             </p>
             <div className="mt-4 rounded-lg border border-border bg-muted/30 p-4">
-              <p className="font-semibold">DMCA ایجنٹ — {siteConfig.name}</p>
+              <p className="font-semibold">DMCA Agent — {siteConfig.name}</p>
               <p className="mt-1">
-                ای میل:{" "}
+                Email:{" "}
                 <a
                   href={`mailto:dmca@${new URL(siteConfig.url).hostname}`}
                   className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60"
@@ -98,7 +97,7 @@ export default function DmcaPage() {
                 </a>
               </p>
               <p className="mt-1">
-                متبادل ای میل:{" "}
+                Alternate email:{" "}
                 <a
                   href={`mailto:legal@${new URL(siteConfig.url).hostname}`}
                   className="underline decoration-foreground/20 underline-offset-2 transition-colors hover:decoration-foreground/60"
@@ -110,28 +109,29 @@ export default function DmcaPage() {
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">نوٹس پر کارروائی</h2>
+            <h2 className="font-headline text-xl font-semibold">Notice Processing</h2>
             <p className="mt-3">
-              جب ہمیں ایک مکمل اور درست DMCA نوٹس موصول ہوتا ہے تو ہم:
+              When we receive a complete and valid DMCA notice, we will:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pr-6">
-              <li>فوری طور پر مبینہ خلاف ورزی کرنے والے مواد تک رسائی کو ہٹا دیں گے یا غیر فعال کر دیں گے</li>
-              <li>مواد فراہم کرنے والے کو مطلع کریں گے (اگر قابل اطلاق ہو)</li>
-              <li>متاثرہ فریقوں کو مقابلہ نوٹس دائر کرنے کا موقع فراہم کریں گے</li>
-              <li>قانون کے ذریعے درکار تمام ریکارڈز کو برقرار رکھیں گے</li>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>Promptly remove or disable access to the allegedly infringing material</li>
+              <li>Notify the content provider (if applicable)</li>
+              <li>Provide affected parties the opportunity to file a counter-notice</li>
+              <li>Maintain all records as required by law</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-headline text-xl font-semibold">تکرار کرنے والے خلاف ورزی کرنے والوں کی پالیسی</h2>
+            <h2 className="font-headline text-xl font-semibold">Repeat Infringer Policy</h2>
             <p className="mt-3">
-              {siteConfig.name} مناسب حالات میں ان صارفین یا مواد فراہم کرنے والوں کے اکاؤنٹس
-              کو ختم کرنے کی پالیسی رکھتا ہے جو بار بار کاپی رائٹ کی خلاف ورزی کرتے پائے جائیں۔
+              {siteConfig.name} maintains a policy of terminating the accounts of users or content
+              providers who are found to be repeat copyright infringers, under appropriate
+              circumstances.
             </p>
           </section>
 
           <p className="pt-4 text-sm text-foreground/60">
-            آخری تازہ کاری: 1 جون 2026
+            Last updated: June 1, 2026
           </p>
         </div>
       </Container>

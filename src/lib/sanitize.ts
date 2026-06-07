@@ -2,7 +2,7 @@ const TITLE_MIN_LENGTH = 8
 const EXCERPT_MAX_LENGTH = 180
 const EXCESSIVE_PUNCTUATION_THRESHOLD = 0.15
 
-const BROKEN_PREFIXES = [/^[a-z]{1,3}\b(?:\s+[a-z]{1,3}\b)*\s+\d+[:.]?\s*/i, /^[-\s]+\w/, /^[^a-zA-Z0-9\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]{2,}/]
+const BROKEN_PREFIXES = [/^[a-z]{1,3}\b(?:\s+[a-z]{1,3}\b)*\s+\d+[:.]?\s*/i, /^[-\s]+\w/, /^[^a-zA-Z0-9]{2,}/]
 
 const MALFORMED_CHAR_PATTERN = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/
 
@@ -48,7 +48,7 @@ const AI_HALLUCINATED_FORMATTING = [
   /\^\^[^\^]+\^\^/g,
 ]
 
-const URDU_CHAR_RANGE = /[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/
+
 
 const FRONTMATTER_LINE = /^[\w-]+\s*:\s*.+/m
 const FRONTMATTER_BLOCK = /^---\s*\n[\s\S]*?\n---\s*\n/gm
@@ -152,7 +152,7 @@ function hasCorruptedUnicode(text: string): boolean {
   const replacementCount = (text.match(/\uFFFD/g) || []).length
   if (replacementCount > 3) return true
   const nonLatinRatio =
-    text.replace(/[\w\s.,!?;:'"\-\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g, "").length / Math.max(text.length, 1)
+    text.replace(/[\w\s.,!?;:'"\-]/g, "").length / Math.max(text.length, 1)
   return nonLatinRatio > 0.3
 }
 
@@ -167,31 +167,7 @@ function hasMalformedMarkdown(text: string): boolean {
   return parens !== closingParens
 }
 
-const BROKEN_URDU_PATTERNS = [
-  /\bنے\s+کا\s+مطالبہ\s+کا\b/i,
-  /\bنے\s+کے\s+مطالبہ\b/i,
-  /\bمیں\s+کے\s+لیے\b/i,
-  /\bکے\s+بڑی\b/i,
-  /\bنے\s+کو\b/i,
-  /\bمیں\s+میں\b/i,
-  /\bکا\s+کا\b/i,
-  /\bکی\s+کی\b/i,
-  /\bکے\s+کے\b/i,
-  /\.۔/,
-  /\+\s*\+/,
-  /\|{2,}/,
-  /[─•◦⁃]/,
-  /\b\w{1,2}\s+میں\s+کے\b/i,
-]
 
-function cleanBrokenUrdu(text: string): string {
-  let result = text
-  for (const pattern of BROKEN_URDU_PATTERNS) {
-    result = result.replace(pattern, " ")
-  }
-  result = result.replace(/\s{2,}/g, " ").trim()
-  return result
-}
 
 function stripFrontmatterBlocks(text: string): string {
   let result = text
@@ -243,12 +219,8 @@ export function sanitizeTitle(title: string): string {
   result = result.replace(/[""]/g, '"').replace(/['']/g, "'")
   result = result.replace(/\s+/g, " ").trim()
   result = result.replace(/[^\S\r\n]+/g, " ")
-  result = cleanBrokenUrdu(result)
   if (result.length < TITLE_MIN_LENGTH) return ""
-  const firstChar = result.charAt(0)
-  if (!URDU_CHAR_RANGE.test(firstChar)) {
-    result = result.charAt(0).toUpperCase() + result.slice(1)
-  }
+  result = result.charAt(0).toUpperCase() + result.slice(1)
   return result
 }
 
@@ -261,7 +233,6 @@ export function sanitizeExcerpt(excerpt: string): string {
   result = removeURLs(result)
   result = stripMalformedAIOutput(result)
   result = removeDuplicatedSentences(result)
-  result = cleanBrokenUrdu(result)
   result = normalizeWhitespace(result)
   if (result.length > EXCERPT_MAX_LENGTH) {
     const truncated = result.slice(0, EXCERPT_MAX_LENGTH)
@@ -290,7 +261,6 @@ export function sanitizeBody(body: string, title?: string): string {
   if (title) {
     result = removeDuplicateBodyTitle(result, title)
   }
-  result = cleanBrokenUrdu(result)
   result = normalizeWhitespace(result)
   return result.trim()
 }
@@ -350,7 +320,7 @@ export function deduplicateArticles<T extends { title: string; slug?: string }>(
     if (seenSlugs.has(article.slug || "")) continue
     const normalized = article.title
       .toLowerCase()
-      .replace(/[^a-z0-9\s\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g, "")
+      .replace(/[^a-z0-9\s]/g, "")
       .replace(/\s+/g, " ")
       .trim()
     if (normalized.length < 5) continue

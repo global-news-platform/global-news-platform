@@ -11,7 +11,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
 
   return (
     <section className="border-t border-border pt-8">
-      <SectionTitle label="متعلقہ خبریں" variant="featured" />
+      <SectionTitle label="Related News" variant="featured" />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {articles.slice(0, 3).map((article) => (
           <ArticleCard key={article.slug} article={article} variant="default" />

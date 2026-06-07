@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/constants"
 export const dynamic = "force-static"
 
 export async function GET() {
-  const content = `# robots.txt for ${siteConfig.nameUrdu}
+  const content = `# robots.txt for ${siteConfig.name}
 # https://developers.google.com/search/docs/crawling-indexing/robots/create-robots
 
 # Allow all crawlers to access news content

@@ -55,7 +55,7 @@ export function SectionTitle({
             href={href}
             className="group inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
           >
-            سب دیکھیں
+            View All
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1 rtl:rotate-180 rtl:group-hover:translate-x-1" />
           </Link>
         )}

@@ -15,13 +15,6 @@ import {
   safeString,
   safeNumber,
 } from "@/lib/sanitize"
-import {
-  generateUrduHeadline,
-  generateUrduExcerpt,
-  categorizeEnglishCategory,
-  hasSufficientUrdu,
-  detectCategoryMismatch,
-} from "@/lib/urdu-headlines"
 
 const MAX_DAILY_ARTICLES = 250
 
@@ -31,8 +24,6 @@ const articleImgDir = path.join(process.cwd(), "public/images/articles")
 let _allArticlesCache: ArticleMeta[] | null = null
 let _slugCache: string[] | null = null
 
-const _urduTitleCache = new Map<string, string>()
-const _urduExcerptCache = new Map<string, string>()
 
 function baseSlug(slug: string): string {
   return slug.replace(/--[a-z0-9]+$/i, "")
@@ -143,38 +134,14 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
       if (!validation.valid) return null
       if (!sanitizedTitle) return null
 
-      let urduTitle: string
-      let urduExcerpt: string
-
-      const cacheKey = slug
-      if (_urduTitleCache.has(cacheKey)) {
-        urduTitle = _urduTitleCache.get(cacheKey)!
-        urduExcerpt = _urduExcerptCache.get(cacheKey)!
-      } else {
-        urduTitle = await generateUrduHeadline(sanitizedTitle)
-        urduExcerpt = await generateUrduExcerpt(urduTitle, safeString(frontmatter.excerpt), body)
-        _urduTitleCache.set(cacheKey, urduTitle)
-        _urduExcerptCache.set(cacheKey, urduExcerpt)
-      }
-
       const sanitizedBody = sanitizeBody(body, sanitizedTitle)
 
       const rawCategory = safeString(frontmatter.category, "General")
-      const urduCategory = categorizeEnglishCategory(rawCategory)
       const categoryInfo = categories.find(
-        (c) => c.name === urduCategory,
+        (c) => c.name.toLowerCase() === rawCategory.toLowerCase(),
       )
-      let categoryName = categoryInfo?.name || urduCategory
-      let categorySlug = categoryInfo?.slug || categoryName.toLowerCase()
-
-      const correctedSlug = detectCategoryMismatch(sanitizedTitle, categorySlug)
-      if (correctedSlug) {
-        const correctedCat = categories.find((c) => c.slug === correctedSlug)
-        if (correctedCat) {
-          categorySlug = correctedCat.slug
-          categoryName = correctedCat.name
-        }
-      }
+      let categoryName = categoryInfo?.name || rawCategory
+      let categorySlug = categoryInfo?.slug || rawCategory.toLowerCase()
 
       const rawAuthor = safeString(frontmatter.author, "Staff")
       const rawAuthorSlug = safeString(frontmatter.authorSlug) || slugify(rawAuthor)
@@ -196,8 +163,8 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
 
       return {
         slug,
-        title: urduTitle,
-        excerpt: urduExcerpt,
+        title: sanitizedTitle,
+        excerpt: safeString(frontmatter.excerpt) || sanitizedTitle,
         content: sanitizedBody,
         category: categoryName,
         categorySlug,
@@ -236,7 +203,6 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
       if (!a) return false
       if (!a.title || a.title.length < 5) return false
       if (!a.excerpt || a.excerpt.length < 5) return false
-      if (!hasSufficientUrdu(a.title)) return false
       return true
     })
     .sort(
@@ -386,6 +352,4 @@ export function clearArticleCaches(): void {
   _breakingCache = null
   _trendingCache = null
   _categoryCache = null
-  _urduTitleCache.clear()
-  _urduExcerptCache.clear()
 }
