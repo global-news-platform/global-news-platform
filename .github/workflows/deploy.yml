@@ -28,6 +28,24 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
 
+      - name: Rename Vercel project to TGL365
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          CURRENT_NAME=$(curl -s "https://api.vercel.com/v2/projects/${VERCEL_PROJECT_ID}?teamId=${VERCEL_ORG_ID}" \
+            -H "Authorization: Bearer ${VERCEL_TOKEN}" | npx -y node -e "process.stdin.on('data', d => { try { console.log(JSON.parse(d).name) } catch(e) { console.log('error') } })")
+          if [ "$CURRENT_NAME" = "the-global-lens-365" ]; then
+            echo "Renaming project to tgl365..."
+            curl -s -X PATCH "https://api.vercel.com/v2/projects/${VERCEL_PROJECT_ID}?teamId=${VERCEL_ORG_ID}" \
+              -H "Authorization: Bearer ${VERCEL_TOKEN}" \
+              -H "Content-Type: application/json" \
+              -d '{"name":"tgl365"}' | npx -y node -e "process.stdin.on('data', d => { const r = JSON.parse(d); console.log('Renamed to:', r.name) })"
+          else
+            echo "Project already renamed to: $CURRENT_NAME"
+          fi
+
       - name: Build
         run: npm run build
 
