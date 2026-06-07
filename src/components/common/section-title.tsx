@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { ArrowLeft } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 interface SectionTitleProps {
   label: string
@@ -33,39 +33,30 @@ export function SectionTitle({
 
   return (
     <div className={cn("mb-6", className)}>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div
-            className={cn(
-              "h-8 w-1.5 rounded-sm",
-              isEditorial ? "bg-gold" : "bg-primary",
-            )}
-          />
-          <h2
-            className={cn(
-              "text-xl font-bold md:text-2xl",
-              isEditorial ? "text-foreground" : "text-foreground",
-            )}
-          >
-            {label}
-          </h2>
-        </div>
+      <div
+        className={cn(
+          "flex items-center justify-between border-b pb-2",
+          isEditorial ? "border-gold/20" : "border-gray-200",
+        )}
+      >
+        <h2
+          className={cn(
+            "text-xl font-bold md:text-2xl relative",
+            isEditorial ? "text-foreground" : "text-foreground",
+          )}
+        >
+          {label}
+        </h2>
         {href && (
           <Link
             href={href}
-            className="group inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+            className="group inline-flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
             View All
-            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         )}
       </div>
-      <div
-        className={cn(
-          "mt-2 h-[2px] w-full rounded-full",
-          isEditorial ? "bg-gradient-to-l from-gold/40 to-transparent" : "bg-gradient-to-l from-primary/30 to-transparent",
-        )}
-      />
     </div>
   )
 }

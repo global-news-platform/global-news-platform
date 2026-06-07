@@ -151,7 +151,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
   if (variant === "featured") {
     return (
       <Link href={`/article/${article.slug}`} className="group block w-full h-full">
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted rounded-lg shadow-sm border border-border/10">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted rounded-lg shadow-sm border border-border/10">
           <ArticleImage
             src={article.image}
             alt={article.title || ""}
@@ -193,7 +193,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
           </div>
         </div>
         <div className="flex flex-1 flex-col gap-1 pe-1 overflow-visible" style={{ minWidth: 0 }}>
-          <h4 className="font-headline text-[12px] sm:text-[13px] md:text-[14px] font-bold leading-[2] text-foreground group-hover:text-destructive transition-colors duration-200" style={{ overflowWrap: "break-word", wordBreak: "break-word", whiteSpace: "normal" }}>
+          <h4 className="font-headline text-[12px] sm:text-[13px] md:text-[14px] font-bold leading-[1.4] text-foreground group-hover:text-destructive transition-colors duration-200 line-clamp-2">
             <MixedText text={article.title} />
           </h4>
           {article.excerpt && (
@@ -211,7 +211,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
 
   if (variant === "text-list") {
     return (
-      <div className="border-b border-border/10 py-2 sm:py-2.5 last:border-0">
+      <div className="border-b border-border/10 pb-3 pt-2 last:border-0">
         <Link href={`/article/${article.slug}`} className="headline-link group">
           <span className="headline-dot" />
           <div className="min-w-0 flex-1 flex flex-col gap-0.5">
@@ -232,7 +232,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
   if (isDefault) {
     return (
       <Link href={`/article/${article.slug}`} className="group block card-article w-full h-full">
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
           <ArticleImage
             src={article.image}
             alt={article.title || ""}
@@ -258,7 +258,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
 
   return (
     <Link href={`/article/${article.slug}`} className="group block w-full h-full">
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted rounded-lg shadow-sm border border-border/10 mb-2 sm:mb-2.5">
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted rounded-lg shadow-sm border border-border/10 mb-2 sm:mb-2.5">
         <ArticleImage
           src={article.image}
           alt={article.title || ""}

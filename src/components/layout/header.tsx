@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect, useRef, useCallback } from "react"
-import { Search, Menu, X, Sun, Moon, Globe } from "lucide-react"
+import { Search, Menu, X, Sun, Moon, Facebook } from "lucide-react"
 import { SocialIcons } from "@/components/layout/social-icons"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/components/common/theme-provider"
@@ -94,9 +94,9 @@ export function Header() {
                 Breaking
               </Link>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-5">
               <SocialIcons variant="header" />
-              <span className="text-background/20">|</span>
+              <span className="text-background/20 ms-2">|</span>
               <button
                 onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
                 className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
@@ -126,8 +126,8 @@ export function Header() {
             href="/"
             className="group flex items-center gap-3.5"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary shadow-md">
-              <Globe className="h-6 w-6 text-primary-foreground" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#1877F2] shadow-md">
+              <Facebook className="h-6 w-6 text-white" />
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold leading-tight tracking-tight md:text-3xl">
@@ -252,8 +252,8 @@ export function Header() {
           <div className="absolute inset-y-0 right-0 z-50 w-[300px] max-w-[85vw] overflow-y-auto bg-background shadow-elevated">
             <div className="flex items-center justify-between border-b border-border p-4">
               <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                  <Globe className="h-4 w-4 text-primary-foreground" />
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#1877F2]">
+                  <Facebook className="h-4 w-4 text-white" />
                 </div>
                 <span className="text-base font-bold">{siteConfig.name}</span>
               </Link>

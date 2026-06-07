@@ -26,12 +26,12 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
             <div className="mx-auto w-full max-w-7xl px-3 sm:px-4 lg:px-5">
               <SectionTitle label={section.name} href={`/category/${section.slug}`} />
 
-              <div className="flex flex-col md:grid md:grid-cols-4 gap-3 sm:gap-4">
-                <div className="w-full md:col-span-2 h-full">
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+                <div className="w-full">
                   <ArticleCard article={section.articles[0]} variant="featured" />
                 </div>
-                <div className="w-full md:col-span-2 bg-card border border-border/10 rounded-lg p-3 sm:p-4 shadow-sm">
-                  <div className="divide-y divide-border/10">
+                <div className="w-full bg-card border border-border/10 rounded-lg p-3 sm:p-4 shadow-sm flex flex-col justify-between">
+                  <div className="flex flex-col">
                     {listArticles.map((article) => (
                       <ArticleCard key={article.slug} article={article} variant="text-list" />
                     ))}
