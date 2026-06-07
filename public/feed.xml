@@ -9,13 +9,24 @@
     <description>پاکستان اور دنیا کی تازہ ترین خبریں — اردو میں خبریں، تجزیہ اور رپورٹس</description>
     <language>ur-pk</language>
     <copyright>2026 پاکستان نیوز ہب — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 07 Jun 2026 09:57:37 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 15:16:26 GMT</lastBuildDate>
     <atom:link href="https://pakistan-news.news/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://pakistan-news.news/images/logo.svg</url>
       <title>پاکستان نیوز ہب</title>
       <link>https://pakistan-news.news</link>
     </image>
+  <item>
+    <title>Zelensky criticises &apos;vile&apos; Chornobyl drone strike ahead of London talks</title>
+    <link>https://pakistan-news.news/article/zelensky-criticises-vile-chornobyl-drone-strike-ahead-of-london-talks--fd6n1n</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/zelensky-criticises-vile-chornobyl-drone-strike-ahead-of-london-talks--fd6n1n</guid>
+    <description>Ukrainian officials say a Russian drone hit a storage facility for spent nuclear fuel near the Chornobyl nuclear plant.</description>
+    <category>dunya</category>
+    <author>بابر شاہ</author>
+    <pubDate>Sun, 07 Jun 2026 12:09:57 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/zelensky-criticises-vile-chornobyl-drone-strike-ahead-of-london-talks--fd6n1n.jpg" type="image/jpeg" />
+    <source url="https://pakistan-news.news">BBC News</source>
+  </item>
   <item>
     <title>‘You can’t control everything’: the rise in plastic surgeons asked to create ‘AI face’</title>
     <link>https://pakistan-news.news/article/you-cant-control-everything-the-rise-in-plastic-surgeons-ask</link>
@@ -103,6 +114,17 @@
     <pubDate>Sun, 07 Jun 2026 07:35:43 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/images/articles/world-cup-fever-muted-in-iran-under-shadow-of-war-hardship--i7f5uw.jpg" type="image/jpeg" />
     <source url="https://pakistan-news.news">Dawn</source>
+  </item>
+  <item>
+    <title>World Cup 2026: All 48 squads confirmed</title>
+    <link>https://pakistan-news.news/article/world-cup-2026-all-48-squads-confirmed--5gzgw6</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/world-cup-2026-all-48-squads-confirmed--5gzgw6</guid>
+    <description>All 48 confirmed squads for the 2026 World Cup in the US, Canada and Mexico.</description>
+    <category>khel</category>
+    <author>بابر شاہ</author>
+    <pubDate>Tue, 02 Jun 2026 12:43:21 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/world-cup-2026-all-48-squads-confirmed--5gzgw6.jpg" type="image/jpeg" />
+    <source url="https://pakistan-news.news">BBC Sport</source>
   </item>
   <item>
     <title>Women’s better memories may delay Alzheimer’s diagnosis by years</title>
@@ -245,6 +267,17 @@
     <author>بابر شاہ</author>
     <pubDate>Sun, 07 Jun 2026 04:30:44 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/images/articles/why-is-chinese-president-xi-jinping-visiting-north-korea-now--vmzcny.jpg" type="image/jpeg" />
+    <source url="https://pakistan-news.news">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Why has the Pentagon raised the risk of Israeli spying to the highest level?</title>
+    <link>https://pakistan-news.news/article/why-has-the-pentagon-raised-the-risk-of-israeli-spying-to-the-highest-level--u7anbj</link>
+    <guid isPermaLink="true">https://pakistan-news.news/article/why-has-the-pentagon-raised-the-risk-of-israeli-spying-to-the-highest-level--u7anbj</guid>
+    <description>The US agencies warn against Israeli efforts to collect information on the talks to end the war, according to reports.</description>
+    <category>dunya</category>
+    <author>سارہ خان</author>
+    <pubDate>Sun, 07 Jun 2026 13:47:19 GMT</pubDate>
+    <enclosure url="https://pakistan-news.news/images/articles/why-has-the-pentagon-raised-the-risk-of-israeli-spying-to-the-highest-level--u7anbj.jpg" type="image/jpeg" />
     <source url="https://pakistan-news.news">Al Jazeera</source>
   </item>
   <item>
@@ -531,39 +564,6 @@
     <author>فاطمہ حسین</author>
     <pubDate>Tue, 26 May 2026 09:00:16 GMT</pubDate>
     <enclosure url="https://pakistan-news.news/images/articles/where-to-see-the-total-solar-eclipse-on-aug-12--b5ujb5.jpg" type="image/jpeg" />
-    
-  </item>
-  <item>
-    <title>Where to See the Total Solar Eclipse on Aug. 12</title>
-    <link>https://pakistan-news.news/article/where-to-see-the-total-solar-eclipse-on-aug-12--34tdl4</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/where-to-see-the-total-solar-eclipse-on-aug-12--34tdl4</guid>
-    <description>On Aug. 12, parts of Greenland, Iceland, Spain and Portugal will experience the thrill of daytime darkness. Here’s where you can witness the cosmic spectacle.</description>
-    <category>science</category>
-    <author>فاطمہ حسین</author>
-    <pubDate>Tue, 26 May 2026 09:00:16 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/where-to-see-the-total-solar-eclipse-on-aug-12--34tdl4.jpg" type="image/jpeg" />
-    
-  </item>
-  <item>
-    <title>Where Time Is Always 15 Minutes Apart From Everywhere Else</title>
-    <link>https://pakistan-news.news/article/where-time-is-always-15-minutes-apart-from-everywhere-else--ls2sqr</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/where-time-is-always-15-minutes-apart-from-everywhere-else--ls2sqr</guid>
-    <description>In Nepal, a nation wedged between India and China, a unique time zone is just one expression of a singular national identity.</description>
-    <category>dunya</category>
-    <author>علی احمد</author>
-    <pubDate>Wed, 27 May 2026 04:01:12 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/where-time-is-always-15-minutes-apart-from-everywhere-else--ls2sqr.jpg" type="image/jpeg" />
-    
-  </item>
-  <item>
-    <title>When Two Heated Political Issues Descended on One Swing District Town</title>
-    <link>https://pakistan-news.news/article/when-two-heated-political-issues-descended-on-one-swing-district-town--pxcsjz</link>
-    <guid isPermaLink="true">https://pakistan-news.news/article/when-two-heated-political-issues-descended-on-one-swing-district-town--pxcsjz</guid>
-    <description>Marana, Ariz., is used to placid local politics, but the town, in a congressional district held by Juan Ciscomani, has been convulsed by two national issues, A.</description>
-    <category>siasat</category>
-    <author>عمران ملک</author>
-    <pubDate>Wed, 27 May 2026 09:01:39 GMT</pubDate>
-    <enclosure url="https://pakistan-news.news/images/articles/when-two-heated-political-issues-descended-on-one-swing-district-town--pxcsjz.jpg" type="image/jpeg" />
     
   </item>
   </channel>

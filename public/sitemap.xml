@@ -132,6 +132,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/1-million-people-flood-madrid-streets-to-see-the-pope-s-flower-carpeted-processi--wsepyi</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/14-new-tools-for-taking-on-the-great-outdoors-properly</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -777,6 +782,16 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/armenia-votes-as-russia-piles-pressure-on-pro-west-government--0b88xw</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/army-frees-360-abductees-after-clashes-with-boko-haram-in-nigeria-s-borno--x4jfz6</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/artificial-intelligence-floods-court-dockets-with-home-brewed-lawsuits--7opgc7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -972,6 +987,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/atkinson-finishes-with-five-as-england-beat-nz-to-win-opening-test--z8ykm4</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/atlantic-hurricane-season-forecast-to-be-milder-than-normal-</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -1043,6 +1063,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/bad-bunny-to-joins-toy-story-5-cast-as-voice-of-forgotten-pizza-toy--2gxav1</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/balochistan-cm-announces-civil-award-to-be-conferred-on-man-who-helped-female-do--i2o5r1</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -1132,6 +1157,21 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/bilawal-calls-urgent-ppp-meeting-over-ajk-tensions--jvmk0i</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/bilawal-says-will-meet-pm-shehbaz-over-ajk-situation-issues-to-be-resolved-throu--gbk7w3</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/biles-reveals-health-scare-after-almost-dying--co59s3</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/billam-smith-stops-rozicki-in-zuffa-boxing-s-uk-debut--yoj49i</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -1182,12 +1222,22 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/born-in-leeds-crafted-in-norway-how-haaland-became-nation-s-superstar--2crz23</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/bosnia-s-world-cup-pursuit-begins-at-a-home-away-from-home-in-the-american-midwe--v5duk5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://pakistan-news.news/article/bp-s-former-chairman-albert-manifold-disputes-how-company-characterized-his-dism--1xee7q</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/brad-pitt-enjoys-french-open-outing-with-girlfriend-ines-de-ramon--zldwgj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -1382,12 +1432,27 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/comebacks-don-t-get-much-better-first-test-ratings--7q8fob</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/constitutional-amendment-not-a-concession-to-be-wrested-says-ajk-sc-on-president--n8l8nf</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/cooling-cities--zroa5i</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://pakistan-news.news/article/cornyn-crushed-7-takeaways-from-tuesday-s-runoffs-in-texas--h22xrl</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/cosmeticorexia-how-girls-are-falling-down-a-skincare-rabbit-hole--t2bh1k</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -1527,6 +1592,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/does-israel-really-think-it-can-get-rid-of-hezbollah-in-lebanon--qsz7pr</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/don-t-be-too-kind-maternity-staff-used-offensive-terms-to-refer-to-pregnant-wome--357qve</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -1543,6 +1613,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/downing-street-hits-out-after-vance-post-about-henry-nowak--mg7env</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/download-your-world-cup-2026-wallchart--4cf30p</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -1938,6 +2013,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/fifa-to-allow-disposable-water-bottles-at-world-cup-games-after-outcry--20wxn6</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/fifty-two-hours-on-an-israeli-prison-ship--e6sm4m</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -2547,6 +2627,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/how-to-follow-the-world-cup-on-the-bbc--0j5e0r</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/how-to-keep-cool-at-your-summer-festivals--49l3ed</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -2703,6 +2788,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/huge-crowds-throng-madrid-streets-for-pope-s-open-air-mass--2fazwi</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/hundreds-of-captives-freed-from-boko-haram-mountain-hideout--xpbb4d</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3022,6 +3112,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/iran-s-world-cup-team-lands-in-mexico-amid-us-visa-row--m1eywq</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/iran-says-staff-blocked-from-entering-us-after-players-given-world-cup-visas--2182g5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -3127,7 +3222,17 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/israel-kills-nine-in-gaza-as-egypt-hosts-renewed-ceasefire-talks--vtdr4b</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/israel-says-new-head-of-hamas-military-wing-killed-in-gaza-city-strikes--49wsf7</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/israel-strikes-southern-suburbs-of-lebanon-s-capital-beirut--fe784m</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3158,6 +3263,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/it-leads-services-export-surge-to-8-27bn--o5yu2n</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/it-s-one-of-the-world-s-most-isolated-islands-here-come-the-bulldozers--2ak27d</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3227,12 +3337,22 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/katie-price-reaffirms-support-for-husband-amid-relationship-speculation--8pdh7z</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/kenyan-graduates-turn-to-ai-tools-for-farming-as-jobs-dry-up--b1ris7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://pakistan-news.news/article/killer-fungus-could-be-good-news-for-habitats-decimated-by-invasive-moss--p2rizs</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/king-charles-signals-unity-as-royals-gather-at-wedding--dixby1</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3273,6 +3393,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/lamine-yamal-in-spain-squad-but-no-real-madrid-players--1ocfcf</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/lammy-says-he-told-jd-vance-his-nowak-comments-were-wrong--ko84nn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3338,6 +3463,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/lng-tanker-exits-hormuz-for-india-for-first-time-since-war-b</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/lord-s-pitch-does-not-benefit-test-format-stokes--dgezur</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3413,6 +3543,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/lyari-kicks-its-troubles-aside-as-world-cup-mania-strikes--qng5yo</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/m-s-launches-new-traineeship-for-1-000-young-people--1mp3rb</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3502,7 +3637,17 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/marc-marquez-hits-100-career-wins-with-hungarian-motogp-victory--ab58cw</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/mark-zuckerberg-s-longest-serving-employee-on-ai-jobs-and-her-boss--0j82ot</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/maryam-nawaz-unveils-major-lahore-urban-renewal-project--z0ydrt</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -3543,6 +3688,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/mirra-andreeva-wins-french-open-to-claim-first-grand-slam-title--w43jp6</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/missiles-and-negotiations-iran-100-days-into-the-war-with-us-and-israel--2tlz1h</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -4257,6 +4407,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/one-killed-5-wounded-in-israel-shooting-attacks-suspect-dead--vj9ce8</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/osteoarthritis-increasingly-affecting-people-in-their-30s-personalised-treatment--1376as</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -4357,6 +4512,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/pakistan-tells-un-kashmir-dispute-remains-unresolved-integral-issue--n4c04n</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/palantir-hits-back-at-sadiq-khan-after-50m-contract-with-met</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -4388,6 +4548,16 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/peru-is-set-to-elect-its-10th-president-in-a-decade--57lko8</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/peru-polls-open-in-keiko-fujimori-roberto-sanchez-presidential-runoff--di69q5</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/peshawar-torkham-highway-reopens-after-protests-against-recent-targeted-attack--qzy0pr</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -4528,6 +4698,16 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/pressure-from-silicon-valley-helped-block-trumps-expected-or</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/punjab-launches-qr-panic-button-system-for-transport-safety-upgrade--9b6e2p</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/punjab-shifts-to-digital-land-ownership-system-from-july--o4oxy0</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -4778,6 +4958,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/russia-pounds-ukraines-capital-with-hypersonic-missile</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/russia-s-elite-gather-for-putin-s-pet-project-an-economic-forum-in-st-petersburg--dw89ki</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -5457,6 +5642,16 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/sweden-mulls-prison-for-young-teens-as-violent-crime-rises--5akayo</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/tata-steel-says-new-1-25bn-furnace-may-be-delayed-due-to-electrical-issue--wjqt4j</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/teachers-union-urges-schools-to-curb-a-i-chatbots-and-screen-time--vc7a0v</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -5648,6 +5843,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/the-space-race-to-create-gym-equipment-for-future-astronauts</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/the-taiz-transplant-team-looking-to-begin-a-medical-revolution-in-yemen--ieam02</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -6527,6 +6727,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/uor-earns-ntc-thumbs-up-sets-new-benchmarks-in-technology-education--8dc3pd</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/us-adds-security-measures-at-dulles-to-receive-citizens-who-</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -6558,6 +6763,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/us-stocks-slump-as-fears-over-big-tech-shake-wall-street--6wzylq</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/us-weighs-iranian-assets-plan-as-gulf-tensions-rise--bj5651</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -6767,6 +6977,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/when-u-s-foreign-aid-changed-aids-workers-in-africa-felt-it--eei1ty</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/where-time-is-always-15-minutes-apart-from-everywhere-else--ls2sqr</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -6907,6 +7122,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/why-has-the-pentagon-raised-the-risk-of-israeli-spying-to-the-highest-level--u7anbj</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/why-is-chinese-president-xi-jinping-visiting-north-korea-now--vmzcny</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -6972,6 +7192,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pakistan-news.news/article/world-cup-2026-all-48-squads-confirmed--5gzgw6</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pakistan-news.news/article/world-cup-fever-muted-in-iran-under-shadow-of-war-hardship--i7f5uw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
@@ -7008,6 +7233,11 @@
   </url>
   <url>
     <loc>https://pakistan-news.news/article/you-cant-control-everything-the-rise-in-plastic-surgeons-ask</loc>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pakistan-news.news/article/zelensky-criticises-vile-chornobyl-drone-strike-ahead-of-london-talks--fd6n1n</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
