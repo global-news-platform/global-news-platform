@@ -1,7 +1,7 @@
 {
   "date": "2026-06-07",
-  "totalArticles": 1358,
-  "totalSizeKb": 1528,
+  "totalArticles": 1376,
+  "totalSizeKb": 1564,
   "categories": {
     "Technology": 47,
     "karobar": 171,
@@ -10,12 +10,12 @@
     "siasat": 97,
     "khel": 95,
     "World": 37,
-    "dunya": 196,
+    "dunya": 206,
     "science": 163,
     "Science": 25,
     "Sports": 14,
+    "pakistan": 28,
     "technology": 170,
-    "pakistan": 20,
     "Business": 26,
     "Climate": 9,
     "shobiz": 77,
@@ -26,7 +26,7 @@
   "topCategories": [
     {
       "name": "dunya",
-      "count": 196
+      "count": 206
     },
     {
       "name": "sehat",
