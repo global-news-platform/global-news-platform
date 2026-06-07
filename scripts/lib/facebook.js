@@ -5,11 +5,8 @@ const { rewriteBatch } = require("./rewriter")
 const { transformAndSave } = require("./imageTransformer")
 
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
-
-const MAX_POSTS_PER_RUN = 1
-const MIN_DELAY_MS = 600000
-
 const POST_FORMATS = ["link", "photo", "text"]
+const MIN_INTERVAL_MS = 120 * 60 * 1000
 
 function loadTracker() {
   if (!fs.existsSync(FB_TRACKER_PATH)) return { posted: [], lastRun: null, formatIndex: 0 }
@@ -26,8 +23,7 @@ function saveTracker(state) {
 }
 
 function hasBeenPosted(slug) {
-  const state = loadTracker()
-  return state.posted.includes(slug)
+  return loadTracker().posted.includes(slug)
 }
 
 function markPosted(slug) {
@@ -48,6 +44,12 @@ function getNextFormatIndex() {
   state.formatIndex = (idx + 1) % POST_FORMATS.length
   saveTracker(state)
   return idx
+}
+
+function isWithinThrottleWindow() {
+  const state = loadTracker()
+  if (!state.lastRun) return false
+  return Date.now() - new Date(state.lastRun).getTime() < MIN_INTERVAL_MS
 }
 
 function sleep(ms) {
@@ -85,7 +87,7 @@ function graphApiRequest(url, method = "GET") {
   })
 }
 
-function selectTopArticles(articles, limit = MAX_POSTS_PER_RUN) {
+function selectTopArticles(articles, limit = 1) {
   const sourcePriority = [
     "reuters", "associated press", "ap news", "bbc", "bbc news",
     "al jazeera", "the guardian", "the new york times", "washington post",
@@ -142,24 +144,14 @@ function getArticleImageUrl(article, siteUrl) {
   return null
 }
 
-function buildMessage(title, sourceName, excerpt, isBreaking) {
+function cleanMessage(title, isBreaking) {
   const prefix = isBreaking ? "BREAKING: " : ""
-  let msg = `${prefix}${title}`
-  if (sourceName) {
-    msg += ` — ${sourceName}`
-  }
-  if (excerpt) {
-    msg += `\n\n${excerpt.substring(0, 200)}`
-  }
-  msg += `\n\n#GlobalNews #WorldNews`
-  return msg.substring(0, 63206)
+  return `${prefix}${title}\n\n#GlobalNews #WorldNews`
 }
 
 async function postLinkFormat({ pageId, pageAccessToken, article, siteUrl }) {
   const linkUrl = getArticleLink(article, siteUrl)
-  const sourceName = article.sourceName || article.attribution || article.source || ""
-  const excerpt = (article.excerpt || article.description || "").substring(0, 200)
-  const message = buildMessage(article.title, sourceName, excerpt, article.breaking)
+  const message = cleanMessage(article.title, article.breaking)
 
   const apiUrl =
     `https://graph.facebook.com/v22.0/${pageId}/feed` +
@@ -181,9 +173,7 @@ async function postLinkFormat({ pageId, pageAccessToken, article, siteUrl }) {
 async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
   const imageUrl = getArticleImageUrl(article, siteUrl)
   const linkUrl = getArticleLink(article, siteUrl)
-  const sourceName = article.sourceName || article.attribution || article.source || ""
-  const excerpt = (article.excerpt || article.description || "").substring(0, 200)
-  const message = buildMessage(article.title, sourceName, excerpt, article.breaking) + `\n\n${linkUrl}`
+  const message = cleanMessage(article.title, article.breaking)
 
   if (!imageUrl) {
     console.log(`    No image available, falling back to link format`)
@@ -194,7 +184,7 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
     `https://graph.facebook.com/v22.0/${pageId}/photos` +
     `?access_token=${encodeURIComponent(pageAccessToken)}` +
     `&url=${encodeURIComponent(imageUrl)}` +
-    `&caption=${encodeURIComponent(message)}` +
+    `&caption=${encodeURIComponent(message + `\n\n${linkUrl}`)}` +
     `&locale=en_US` +
     `&published=true`
 
@@ -208,16 +198,14 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
 }
 
 async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
-  const sourceName = article.sourceName || article.attribution || article.source || ""
-  const excerpt = (article.excerpt || article.description || "").substring(0, 200)
   const linkUrl = getArticleLink(article, siteUrl)
-  const message = buildMessage(article.title, sourceName, excerpt, article.breaking) +
-    `\n\nFull story: ${linkUrl}`
+  const message = cleanMessage(article.title, article.breaking)
 
   const apiUrl =
     `https://graph.facebook.com/v22.0/${pageId}/feed` +
     `?access_token=${encodeURIComponent(pageAccessToken)}` +
     `&message=${encodeURIComponent(message)}` +
+    `&link=${encodeURIComponent(linkUrl)}` +
     `&locale=en_US` +
     `&published=true`
 
@@ -232,16 +220,23 @@ async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
 
 const FORMAT_POSTERS = [postLinkFormat, postPhotoFormat, postTextFormat]
 
-async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, limit = MAX_POSTS_PER_RUN, dryRun = false }) {
+async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, limit = 1, dryRun = false }) {
   if (!pageId || !pageAccessToken) {
     console.log("  Facebook: skipped (missing PAGE_ID or PAGE_ACCESS_TOKEN)")
+    return { posted: 0, skipped: 0, total: 0 }
+  }
+
+  if (isWithinThrottleWindow()) {
+    const state = loadTracker()
+    const nextPostAt = new Date(new Date(state.lastRun).getTime() + MIN_INTERVAL_MS)
+    console.log(`  Facebook: throttled — last post was at ${state.lastRun}. Next post allowed at ${nextPostAt.toISOString()}`)
     return { posted: 0, skipped: 0, total: 0 }
   }
 
   const top = selectTopArticles(articles, limit)
 
   if (top.length === 0) {
-    console.log("  Facebook: no new articles to post (all already posted or no articles)")
+    console.log("  Facebook: no new articles to post (all already posted)")
     return { posted: 0, skipped: 0, total: 0 }
   }
 
@@ -253,8 +248,6 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
         console.log(`    [${i + 1}] "${(top[i].title || "").substring(0, 50)}" → "${(rewritten[i].title || "").substring(0, 50)}"`)
       }
       top[i].title = rewritten[i].title
-      top[i].excerpt = rewritten[i].excerpt
-      top[i].description = rewritten[i].excerpt
     }
     console.log(`  Rewrite done`)
   }
@@ -262,7 +255,7 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
   const startFormatIdx = getNextFormatIndex()
   const formatNames = ["link", "photo", "text"]
 
-  console.log(`  Facebook: posting ${top.length} articles (starting format: ${formatNames[startFormatIdx]})...`)
+  console.log(`  Facebook: posting ${top.length} article(s) (starting format: ${formatNames[startFormatIdx]})...`)
   let posted = 0
   let skipped = 0
 
@@ -271,20 +264,17 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
     const formatIdx = (startFormatIdx + i) % FORMAT_POSTERS.length
     const formatName = formatNames[formatIdx]
     const sourceName = a.sourceName || a.attribution || a.source || ""
-
     const linkUrl = getArticleLink(a, siteUrl)
+
     console.log(`    [${i + 1}/${top.length}] [${formatName}] ${(a.title || "").substring(0, 65)} (${sourceName})`)
 
     if (dryRun) {
-      const imgUrl = getArticleImageUrl(a, siteUrl)
-      const transformedUrl = formatName === "photo" && imgUrl ? ` (would transform)` : ""
-      console.log(`      (dry-run — would post as ${formatName}, link: ${linkUrl}${imgUrl ? `, image: ${imgUrl}${transformedUrl}` : ""})`)
+      console.log(`      (dry-run — would post as ${formatName}, link: ${linkUrl})`)
       skipped++
       continue
     }
 
     let articleForPost = a
-
     if (formatName === "photo") {
       const transformed = await transformAndSave(a, siteUrl)
       if (transformed) {
@@ -303,10 +293,6 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
       console.error(`      Failed to post: ${(a.title || "").substring(0, 60)}`)
       skipped++
     }
-
-    if (i < top.length - 1) {
-      await sleep(MIN_DELAY_MS)
-    }
   }
 
   console.log(`  Facebook: ${posted} posted, ${skipped} skipped (${formatNames[startFormatIdx]} → ...)`)
@@ -319,4 +305,5 @@ module.exports = {
   hasBeenPosted,
   markPosted,
   loadTracker,
+  isWithinThrottleWindow,
 }
