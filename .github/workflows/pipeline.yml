@@ -50,7 +50,7 @@ jobs:
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
-          SITE_URL: "https://the-global-lens-365.vercel.app"
+          SITE_URL: "https://TGL365.vercel.app"
 
       - name: Fetch Facebook logo
         run: node scripts/fetch-logo.js
@@ -69,7 +69,7 @@ jobs:
       - name: Commit changes
         run: |
           git config user.name "The Global Lens 365 Bot"
-          git config user.email "bot@the-global-lens-365.vercel.app"
+          git config user.email "bot@TGL365.vercel.app"
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit"
