@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils"
 import { ArticleCard } from "@/components/article/article-card"
 import { SectionTitle } from "@/components/common/section-title"
 import type { ArticleLink } from "@/types"
@@ -17,12 +18,12 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
 
   return (
     <div className="w-full">
-      {sections.map((section) => {
+      {sections.map((section, idx) => {
         if (section.articles.length === 0) return null
         const listArticles = section.articles.slice(1, 7)
 
         return (
-          <section key={section.slug} className="w-full py-4 sm:py-5 md:py-6">
+          <section key={section.slug} className={cn("w-full py-5 sm:py-6 md:py-8", idx % 2 === 1 && "section-alt")}>
             <div className="mx-auto w-full max-w-7xl px-3 sm:px-4 lg:px-5">
               <SectionTitle label={section.name} href={`/category/${section.slug}`} />
 

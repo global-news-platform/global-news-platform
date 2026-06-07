@@ -238,11 +238,51 @@
   }
 
   .card-article {
-    @apply bg-card border border-border/10 rounded-lg overflow-hidden shadow-sm transition-all duration-300;
+    @apply relative bg-card border border-border/10 rounded-lg overflow-hidden shadow-sm transition-all duration-300;
+  }
+  .card-article::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-0.5 bg-primary/60 opacity-0 transition-opacity duration-300 rounded-t-lg;
   }
   .card-article:hover {
-    @apply shadow-card-hover border-border/20;
-    transform: translateY(-2px);
+    @apply shadow-card-hover border-primary/15;
+    transform: translateY(-3px);
+  }
+  .card-article:hover::before {
+    @apply opacity-100;
+  }
+
+  .card-featured {
+    @apply relative bg-card border border-border/10 rounded-lg overflow-hidden shadow-sm transition-all duration-300;
+  }
+  .card-featured::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-primary rounded-t-lg z-10;
+  }
+  .card-featured:hover {
+    @apply shadow-lg border-primary/20;
+    transform: translateY(-4px);
+  }
+
+  .card-horizontal {
+    @apply transition-all duration-300;
+  }
+  .card-horizontal:hover {
+    @apply bg-muted/30;
+    transform: translateX(2px);
+  }
+  .card-horizontal .thumbnail-accent {
+    @apply ring-1 ring-transparent transition-all duration-300 rounded-md;
+  }
+  .card-horizontal:hover .thumbnail-accent {
+    @apply ring-primary/30;
+  }
+
+  .section-alt {
+    @apply bg-gradient-to-b from-secondary/40 to-transparent;
+  }
+  .section-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-border/40 to-transparent my-2;
   }
 
   .img-container {

@@ -154,6 +154,8 @@ export default async function HomePage() {
         ]}
       />
 
+      <div className="section-divider mx-auto max-w-7xl px-3 sm:px-4 lg:px-5" />
+
       <CategoryGrid
         categories={[
           { slug: "khel", name: "Sports", articles: filterQualityArticles(khelArticles) },
