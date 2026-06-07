@@ -1,6 +1,8 @@
 const fs = require("fs")
 const path = require("path")
 const https = require("https")
+const { rewriteBatch } = require("./rewriter")
+const { transformAndSave } = require("./imageTransformer")
 
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
 
@@ -245,6 +247,20 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
     return { posted: 0, skipped: 0, total: 0 }
   }
 
+  {
+    console.log(`  Rewriting ${top.length} articles with local rewriter...`)
+    const rewritten = await rewriteBatch(top)
+    for (let i = 0; i < rewritten.length; i++) {
+      if (rewritten[i].title && rewritten[i].title !== top[i].title) {
+        console.log(`    [${i + 1}] "${(top[i].title || "").substring(0, 50)}" → "${(rewritten[i].title || "").substring(0, 50)}"`)
+      }
+      top[i].title = rewritten[i].title
+      top[i].excerpt = rewritten[i].excerpt
+      top[i].description = rewritten[i].excerpt
+    }
+    console.log(`  Rewrite done`)
+  }
+
   const startFormatIdx = getNextFormatIndex()
   const formatNames = ["link", "photo", "text"]
 
@@ -259,24 +275,34 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
     const sourceName = a.sourceName || a.attribution || a.source || ""
 
     const linkUrl = getArticleLink(a, siteUrl)
-    console.log(`    [${i + 1}/${top.length}] [${formatName}] ${a.title.substring(0, 65)} (${sourceName})`)
+    console.log(`    [${i + 1}/${top.length}] [${formatName}] ${(a.title || "").substring(0, 65)} (${sourceName})`)
 
     if (dryRun) {
       const imgUrl = getArticleImageUrl(a, siteUrl)
-      console.log(`      (dry-run — would post as ${formatName}, link: ${linkUrl}${imgUrl ? `, image: ${imgUrl}` : ""})`)
+      const transformedUrl = formatName === "photo" && imgUrl ? ` (would transform)` : ""
+      console.log(`      (dry-run — would post as ${formatName}, link: ${linkUrl}${imgUrl ? `, image: ${imgUrl}${transformedUrl}` : ""})`)
       skipped++
       continue
     }
 
+    let articleForPost = a
+
+    if (formatName === "photo") {
+      const transformed = await transformAndSave(a, siteUrl)
+      if (transformed) {
+        articleForPost = { ...a, image: transformed, imageUrl: transformed }
+      }
+    }
+
     const poster = FORMAT_POSTERS[formatIdx]
-    const success = await poster({ pageId, pageAccessToken, article: a, siteUrl })
+    const success = await poster({ pageId, pageAccessToken, article: articleForPost, siteUrl })
 
     if (success) {
       console.log(`      Posted as ${formatName}: ${linkUrl}`)
       markPosted(a.slug)
       posted++
     } else {
-      console.error(`      Failed to post: ${a.title.substring(0, 60)}`)
+      console.error(`      Failed to post: ${(a.title || "").substring(0, 60)}`)
       skipped++
     }
 
