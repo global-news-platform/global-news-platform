@@ -241,7 +241,7 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
 
 async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
   const linkUrl = getArticleLink(article, siteUrl)
-  const message = cleanMessage(article.title, article.breaking)
+  const message = cleanMessage(article.title, true)
 
   const apiUrl =
     `https://graph.facebook.com/v22.0/${pageId}/feed` +
