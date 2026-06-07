@@ -111,7 +111,10 @@ function selectTopArticles(articles) {
       if (a.publishedAt) {
         const ageHours = (Date.now() - new Date(a.publishedAt).getTime()) / 3600000
         if (ageHours < 48) score += Math.max(0, 48 - ageHours)
+        if (ageHours >= 168) score -= 500
       }
+
+      if (a.sourceUrl) score += 200
 
       return { ...a, score }
     })
