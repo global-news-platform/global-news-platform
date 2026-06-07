@@ -53,8 +53,10 @@ const TRANSFORMED_DIR = path.join(__dirname, "../../public/images/transformed")
 
 const FB_IMAGE_WIDTH = 1200
 const FB_IMAGE_HEIGHT = 630
-const CROP_PERCENT = 0.03
-const MAX_ROTATION_ANGLE = 2.5
+const CROP_PERCENT = 0.10
+const MAX_ROTATION_ANGLE = 5
+const ZOOM_FACTOR_MIN = 1.08
+const ZOOM_FACTOR_MAX = 1.18
 const JPEG_QUALITY = 88
 
 function ensureDir(dir) {
@@ -115,26 +117,36 @@ async function transformImage(sourceBuffer) {
 
   const cropPxW = Math.round(w * CROP_PERCENT)
   const cropPxH = Math.round(h * CROP_PERCENT)
+  const cropPxW2 = Math.round(w * (CROP_PERCENT + (Math.random() - 0.5) * 0.06))
+  const cropPxH2 = Math.round(h * (CROP_PERCENT + (Math.random() - 0.5) * 0.06))
 
   const angle = randomAngle()
   const brightness = randomBrightness()
   const contrast = randomContrast()
   const saturation = randomSaturation()
+  const zoom = ZOOM_FACTOR_MIN + Math.random() * (ZOOM_FACTOR_MAX - ZOOM_FACTOR_MIN)
 
   let pipeline = sharp(sourceBuffer)
 
   pipeline = pipeline.rotate(angle, { background: { r: 0, g: 0, b: 0, alpha: 0 } })
 
-  const cropLeft = cropPxW
-  const cropTop = cropPxH
-  const cropWidth = w - cropPxW * 2
-  const cropHeight = h - cropPxH * 2
-  if (cropWidth > 0 && cropHeight > 0) {
+  const origW = meta.width || FB_IMAGE_WIDTH
+  const origH = meta.height || FB_IMAGE_HEIGHT
+  const cropLeft = Math.max(0, Math.min(cropPxW, Math.round(origW * 0.3)))
+  const cropTop = Math.max(0, Math.min(cropPxH, Math.round(origH * 0.3)))
+  const cropLeft2 = Math.max(0, Math.min(cropPxW2, Math.round(origW * 0.3)))
+  const cropTop2 = Math.max(0, Math.min(cropPxH2, Math.round(origH * 0.3)))
+  const cropWidth = origW - cropLeft - cropLeft2
+  const cropHeight = origH - cropTop - cropTop2
+  if (cropWidth > 100 && cropHeight > 100) {
     pipeline = pipeline.extract({ left: cropLeft, top: cropTop, width: cropWidth, height: cropHeight })
   }
 
+  const resizeW = Math.round(FB_IMAGE_WIDTH * zoom)
+  const resizeH = Math.round(FB_IMAGE_HEIGHT * zoom)
+
   pipeline = pipeline
-    .resize(FB_IMAGE_WIDTH, FB_IMAGE_HEIGHT, {
+    .resize(resizeW, resizeH, {
       fit: "cover",
       position: "centre",
       withoutEnlargement: false,
@@ -180,7 +192,7 @@ async function transformAndSave(article, siteUrl) {
     fs.writeFileSync(outPath, transformed)
     const transformedUrl = `/images/transformed/${slug}.jpg`
 
-    console.log(`    Image transformed: ${imageUrl.substring(0, 80)} → ${transformedUrl} (angle: ${randomAngle().toFixed(1)}°, crop: ${Math.round(CROP_PERCENT * 100)}%)`)
+    console.log(`    Image transformed: ${imageUrl.substring(0, 80)} → ${transformedUrl} (crop: ${Math.round(CROP_PERCENT * 100)}%, zoom: 1.08-1.18x)`)
     return `${siteUrl.replace(/\/$/, "")}${transformedUrl}`
   } catch (err) {
     console.log(`    Image transform failed: ${err.message}. Using original.`)

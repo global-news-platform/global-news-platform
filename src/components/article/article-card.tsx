@@ -57,17 +57,20 @@ function ArticleImage({
   }
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      suppressHydrationWarning
-      loading={priority ? "eager" : "lazy"}
-      onError={() => {
-        setShowGradient(true)
-        setHasError(true)
-      }}
-      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-    />
+    <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ transform: "scale(1.12)", transformOrigin: "center" }}>
+      <img
+        src={src}
+        alt={alt}
+        suppressHydrationWarning
+        loading={priority ? "eager" : "lazy"}
+        onError={() => {
+          setShowGradient(true)
+          setHasError(true)
+        }}
+        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+        style={{ objectPosition: "52% 48%" }}
+      />
+    </div>
   )
 }
 
