@@ -1,5 +1,5 @@
-import Link from "next/link"
 import { ArticleCard } from "@/components/article/article-card"
+import { SectionTitle } from "@/components/common/section-title"
 import type { ArticleLink } from "@/types"
 
 interface CatSection {
@@ -24,17 +24,7 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
         return (
           <section key={section.slug} className="w-full py-4 sm:py-5 md:py-6">
             <div className="mx-auto w-full max-w-7xl px-3 sm:px-4 lg:px-5">
-              <div className="cat-bar mb-3 sm:mb-4">
-                <Link href={`/category/${section.slug}`} className="cat-bar-title">
-                  {section.name}
-                </Link>
-                <Link href={`/category/${section.slug}`} className="cat-bar-link">
-                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                  </svg>
-                  More
-                </Link>
-              </div>
+              <SectionTitle label={section.name} href={`/category/${section.slug}`} />
 
               <div className="flex flex-col md:grid md:grid-cols-4 gap-3 sm:gap-4">
                 <div className="w-full md:col-span-2 h-full">

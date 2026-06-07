@@ -24,7 +24,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.tagline}`,
-  description: siteConfig.description,
+  description: `${siteConfig.name} — ${siteConfig.description}`,
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
@@ -115,13 +115,13 @@ export default async function HomePage() {
   for (const a of breaking) usedSlugs.add(a.slug)
 
   const featuredHero = allArticles[0] || curatedArticle({
-    slug: "pakistan-news-welcome",
-    title: "Welcome to Pakistan News Hub — Latest news from Pakistan and the world",
-    excerpt: "Pakistan News Hub brings you the latest news, analysis and reports from Pakistan and around the world. Authoritative coverage of politics, business, sports, technology, health and other sectors.",
+    slug: "welcome-to-global-lens-365",
+    title: "Welcome to The Global Lens 365 — Your Window to World News",
+    excerpt: "Curated global headlines, analysis, and reports from trusted international sources. Stay informed with breaking news from Pakistan and around the world.",
     category: "Pakistan",
     categorySlug: "pakistan",
-    image: "/images/fallbacks/pakistan.jpg",
-    imageAlt: "Pakistan News Hub",
+    image: "",
+    imageAlt: "The Global Lens 365",
     featured: true,
   })
 

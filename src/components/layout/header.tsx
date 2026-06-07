@@ -94,7 +94,7 @@ export function Header() {
                 Breaking
               </Link>
             </div>
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-6">
               <SocialIcons variant="header" />
               <span className="text-background/20">|</span>
               <button
