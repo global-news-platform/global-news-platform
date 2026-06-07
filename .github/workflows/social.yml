@@ -12,10 +12,7 @@ on:
         options:
           - "true"
           - "false"
-      limit:
-        description: "Max posts"
-        default: "1"
-        type: number
+
 
 permissions:
   contents: write
@@ -38,7 +35,6 @@ jobs:
       - name: Post top articles to Facebook Page
         run: |
           node scripts/post-social.js \
-            --limit=${{ github.event.inputs.limit || '1' }} \
             --page-id="${{ secrets.FB_PAGE_ID }}" \
             --token="${{ secrets.FB_PAGE_ACCESS_TOKEN }}" \
             --site-url="https://pakistan-news.news" \

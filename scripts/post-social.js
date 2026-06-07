@@ -7,10 +7,9 @@ const ARTICLES_DIR = path.join(__dirname, "../src/data/articles")
 const CONFIG_PATH = path.join(__dirname, "config/sources.json")
 
 function parseArgs() {
-  const args = { dryRun: false, limit: 1, pageId: null, token: null, siteUrl: null }
+  const args = { dryRun: false, pageId: null, token: null, siteUrl: null }
   for (const arg of process.argv.slice(2)) {
     if (arg === "--dry-run") args.dryRun = true
-    else if (arg.startsWith("--limit=")) args.limit = parseInt(arg.split("=")[1], 10)
     else if (arg.startsWith("--page-id=")) args.pageId = arg.split("=")[1]
     else if (arg.startsWith("--token=")) args.token = arg.split("=")[1]
     else if (arg.startsWith("--site-url=")) args.siteUrl = arg.split("=")[1]
@@ -82,12 +81,11 @@ async function main() {
   console.log(`  Site URL: ${siteUrl}`)
   console.log(`  Facebook Page ID: ${pageId ? "✓ configured" : "✗ not set"}`)
   console.log(`  FB Access Token: ${token ? "✓ configured" : "✗ not set"}`)
-  console.log(`  Max posts: ${args.limit}`)
   console.log("=".repeat(60))
 
   if (!pageId || !token) {
     console.log("\nFacebook not configured. Set FB_PAGE_ID and FB_PAGE_ACCESS_TOKEN.")
-    console.log("Usage: node scripts/post-social.js --page-id=YOUR_PAGE_ID --token=YOUR_TOKEN [--dry-run] [--limit=6] [--site-url=https://pakistan-news.news]")
+    console.log("Usage: node scripts/post-social.js --page-id=YOUR_PAGE_ID --token=YOUR_TOKEN [--dry-run] [--site-url=https://pakistan-news.news]")
     process.exit(pageId || token ? 1 : 0)
   }
 
@@ -101,7 +99,6 @@ async function main() {
     pageId,
     pageAccessToken: token,
     siteUrl,
-    limit: args.limit,
     dryRun: args.dryRun,
   })
 

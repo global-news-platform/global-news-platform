@@ -7,6 +7,7 @@ const { transformAndSave } = require("./imageTransformer")
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
 const POST_FORMATS = ["link", "photo", "text"]
 const MIN_INTERVAL_MS = 120 * 60 * 1000
+const MAX_POSTS_PER_RUN = 1
 
 function loadTracker() {
   if (!fs.existsSync(FB_TRACKER_PATH)) return { posted: [], lastRun: null, formatIndex: 0 }
@@ -49,7 +50,8 @@ function getNextFormatIndex() {
 function isWithinThrottleWindow() {
   const state = loadTracker()
   if (!state.lastRun) return false
-  return Date.now() - new Date(state.lastRun).getTime() < MIN_INTERVAL_MS
+  const elapsed = Date.now() - new Date(state.lastRun).getTime()
+  return elapsed < MIN_INTERVAL_MS
 }
 
 function sleep(ms) {
@@ -87,7 +89,7 @@ function graphApiRequest(url, method = "GET") {
   })
 }
 
-function selectTopArticles(articles, limit = 1) {
+function selectTopArticles(articles) {
   const sourcePriority = [
     "reuters", "associated press", "ap news", "bbc", "bbc news",
     "al jazeera", "the guardian", "the new york times", "washington post",
@@ -115,18 +117,14 @@ function selectTopArticles(articles, limit = 1) {
     })
     .sort((a, b) => b.score - a.score)
 
-  const selected = []
-  const seenSlugs = new Set()
   for (const article of scored) {
-    if (selected.length >= limit) break
     const baseSlug = (article.slug || "").replace(/--[a-z0-9]+$/i, "")
-    if (!hasBeenPosted(article.slug) && !seenSlugs.has(baseSlug)) {
-      selected.push(article)
-      seenSlugs.add(baseSlug)
+    if (!hasBeenPosted(article.slug)) {
+      return article
     }
   }
 
-  return selected
+  return null
 }
 
 function getArticleLink(article, siteUrl) {
@@ -214,89 +212,78 @@ async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
     console.error(`    Text post error: ${result.error.message || JSON.stringify(result.error)}`)
     return false
   }
-  console.log(`    Text post: ${result.id}`)
+  console.log(`    Text post: ${result.id} → ${linkUrl}`)
   return true
 }
 
 const FORMAT_POSTERS = [postLinkFormat, postPhotoFormat, postTextFormat]
 
-async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, limit = 1, dryRun = false }) {
+async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dryRun = false }) {
   if (!pageId || !pageAccessToken) {
     console.log("  Facebook: skipped (missing PAGE_ID or PAGE_ACCESS_TOKEN)")
     return { posted: 0, skipped: 0, total: 0 }
   }
 
-  if (isWithinThrottleWindow()) {
-    const state = loadTracker()
-    const nextPostAt = new Date(new Date(state.lastRun).getTime() + MIN_INTERVAL_MS)
-    console.log(`  Facebook: throttled — last post was at ${state.lastRun}. Next post allowed at ${nextPostAt.toISOString()}`)
-    return { posted: 0, skipped: 0, total: 0 }
+  const state = loadTracker()
+
+  if (state.lastRun) {
+    const elapsed = Date.now() - new Date(state.lastRun).getTime()
+    if (elapsed < MIN_INTERVAL_MS) {
+      const remaining = Math.ceil((MIN_INTERVAL_MS - elapsed) / 60000)
+      console.log(`  Facebook: throttled — last post was ${Math.floor(elapsed / 60000)}m ago. Next post allowed in ${remaining}m (${MIN_INTERVAL_MS / 60000}min interval).`)
+      return { posted: 0, skipped: 0, total: 0 }
+    }
   }
 
-  const top = selectTopArticles(articles, limit)
+  const article = selectTopArticles(articles)
 
-  if (top.length === 0) {
+  if (!article) {
     console.log("  Facebook: no new articles to post (all already posted)")
     return { posted: 0, skipped: 0, total: 0 }
   }
 
+  const articleArray = [article]
   {
-    console.log(`  Rewriting ${top.length} articles with local rewriter...`)
-    const rewritten = await rewriteBatch(top)
-    for (let i = 0; i < rewritten.length; i++) {
-      if (rewritten[i].title && rewritten[i].title !== top[i].title) {
-        console.log(`    [${i + 1}] "${(top[i].title || "").substring(0, 50)}" → "${(rewritten[i].title || "").substring(0, 50)}"`)
-      }
-      top[i].title = rewritten[i].title
+    console.log(`  Rewriting article with local rewriter...`)
+    const rewritten = await rewriteBatch(articleArray)
+    if (rewritten[0].title && rewritten[0].title !== article.title) {
+      console.log(`    "${(article.title || "").substring(0, 50)}" → "${(rewritten[0].title || "").substring(0, 50)}"`)
     }
+    article.title = rewritten[0].title
     console.log(`  Rewrite done`)
   }
 
-  const startFormatIdx = getNextFormatIndex()
-  const formatNames = ["link", "photo", "text"]
+  const formatIdx = getNextFormatIndex()
+  const formatName = POST_FORMATS[formatIdx]
+  const sourceName = article.sourceName || article.attribution || article.source || ""
+  const linkUrl = getArticleLink(article, siteUrl)
 
-  console.log(`  Facebook: posting ${top.length} article(s) (starting format: ${formatNames[startFormatIdx]})...`)
-  let posted = 0
-  let skipped = 0
+  console.log(`  [${formatName}] ${(article.title || "").substring(0, 65)} (${sourceName})`)
 
-  for (let i = 0; i < top.length; i++) {
-    const a = top[i]
-    const formatIdx = (startFormatIdx + i) % FORMAT_POSTERS.length
-    const formatName = formatNames[formatIdx]
-    const sourceName = a.sourceName || a.attribution || a.source || ""
-    const linkUrl = getArticleLink(a, siteUrl)
+  if (dryRun) {
+    console.log(`    (dry-run — would post as ${formatName}, link: ${linkUrl})`)
+    return { posted: 0, skipped: 0, total: 1 }
+  }
 
-    console.log(`    [${i + 1}/${top.length}] [${formatName}] ${(a.title || "").substring(0, 65)} (${sourceName})`)
-
-    if (dryRun) {
-      console.log(`      (dry-run — would post as ${formatName}, link: ${linkUrl})`)
-      skipped++
-      continue
-    }
-
-    let articleForPost = a
-    if (formatName === "photo") {
-      const transformed = await transformAndSave(a, siteUrl)
-      if (transformed) {
-        articleForPost = { ...a, image: transformed, imageUrl: transformed }
-      }
-    }
-
-    const poster = FORMAT_POSTERS[formatIdx]
-    const success = await poster({ pageId, pageAccessToken, article: articleForPost, siteUrl })
-
-    if (success) {
-      console.log(`      Posted as ${formatName}: ${linkUrl}`)
-      markPosted(a.slug)
-      posted++
-    } else {
-      console.error(`      Failed to post: ${(a.title || "").substring(0, 60)}`)
-      skipped++
+  let articleForPost = article
+  if (formatName === "photo") {
+    const transformed = await transformAndSave(article, siteUrl)
+    if (transformed) {
+      articleForPost = { ...article, image: transformed, imageUrl: transformed }
     }
   }
 
-  console.log(`  Facebook: ${posted} posted, ${skipped} skipped (${formatNames[startFormatIdx]} → ...)`)
-  return { posted, skipped, total: top.length }
+  const poster = FORMAT_POSTERS[formatIdx]
+  const success = await poster({ pageId, pageAccessToken, article: articleForPost, siteUrl })
+
+  if (success) {
+    console.log(`    Posted as ${formatName}: ${linkUrl}`)
+    markPosted(article.slug)
+    return { posted: 1, skipped: 0, total: 1 }
+  } else {
+    console.error(`    Failed to post: ${(article.title || "").substring(0, 60)}`)
+    return { posted: 0, skipped: 1, total: 1 }
+  }
 }
 
 module.exports = {
