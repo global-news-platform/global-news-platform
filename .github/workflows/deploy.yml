@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to thegloballens365
+      - name: Deploy via gitSource
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -38,11 +38,10 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{
               "name": "thegloballens365",
-              "project": "thegloballens365",
               "gitSource": {
                 "type": "github",
                 "ref": "main",
                 "repoId": 1235422354
               },
               "target": "production"
-            }' 2>&1 | head -5
+            }' 2>&1 | head -20
