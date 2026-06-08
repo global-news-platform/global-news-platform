@@ -32,12 +32,11 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
-          set -e
           API="https://api.vercel.com"
           AUTH="Authorization: Bearer $VERCEL_TOKEN"
           TEAM="x-vercel-team-id: $VERCEL_ORG_ID"
 
-          # Create project if missing (idempotent)
+          # Create project if missing
           curl -sf -X POST "$API/v1/projects" \
             -H "$AUTH" -H "$TEAM" \
             -H "Content-Type: application/json" \
@@ -45,14 +44,14 @@ jobs:
                  "buildCommand":"npm run build","outputDirectory":".next",
                  "installCommand":"npm ci"}' > /dev/null || true
 
-          # Ensure project has correct settings
+          # Ensure correct Next.js settings
           curl -sf -X PATCH "$API/v1/projects/thegloballens365" \
             -H "$AUTH" -H "$TEAM" \
             -H "Content-Type: application/json" \
             -d '{"framework":"nextjs","buildCommand":"npm run build",
                  "outputDirectory":".next","installCommand":"npm ci"}' > /dev/null || true
 
-          # Deploy via CLI (creates/updates .vercel/project.json and uploads source)
+          # Deploy source (Vercel builds on their servers)
           npx vercel deploy --prod --token="$VERCEL_TOKEN" \
             --scope="$VERCEL_ORG_ID" --yes \
-            --project=thegloballens365 --debug 2>&1
+            --project=thegloballens365 2>&1
