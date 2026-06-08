@@ -22,14 +22,6 @@ jobs:
 
       - run: npm ci
 
-      - name: Rename project to tgl365
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          npx vercel project rename the-global-lens-365 tgl365 \
-            --token="$VERCEL_TOKEN" \
-            --scope=team_iIyucwp2ONoFz0gqDcxSfbK9 2>&1 || echo "Rename attempt completed"
-
       - name: Fetch Facebook logo
         run: node scripts/fetch-logo.js
         env:
