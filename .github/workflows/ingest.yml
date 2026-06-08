@@ -57,7 +57,7 @@ jobs:
       - name: Commit & push
         run: |
           git config user.name "The Global Lens 365 Bot"
-          git config user.email "bot@TGL365.vercel.app"
+          git config user.email "bot@thegloballens365.vercel.app"
           git add -A
           if git diff --staged --quiet; then
             echo "No changes to commit."
