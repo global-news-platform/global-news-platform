@@ -45,4 +45,16 @@ jobs:
                 "repoId": 1235422354
               },
               "target": "production"
-            }' 2>&1 | head -20
+            }' 2>&1 | head -5
+
+      - name: Rename project to thegloballens365
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: |
+          curl -sf -X PATCH "https://api.vercel.com/v1/projects/the-global-lens-365" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
+            -H "Content-Type: application/json" \
+            -d '{"name":"thegloballens365"}' 2>&1 | head -5
+          echo "--- Renamed to thegloballens365 ---"
