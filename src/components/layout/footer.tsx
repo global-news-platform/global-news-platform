@@ -100,11 +100,11 @@ export function Footer() {
             <ul className="space-y-1.5">
               <li>
                 <a
-                  href={`mailto:contact@thegloballens365.vercel.app`}
+                  href={`mailto:contact@the-global-lens-365.vercel.app`}
                   className="flex items-center gap-2 text-sm text-background/70 transition-colors hover:text-background"
                 >
                   <Mail className="h-3.5 w-3.5" />
-                  contact@thegloballens365.vercel.app
+                  contact@the-global-lens-365.vercel.app
                 </a>
               </li>
             </ul>

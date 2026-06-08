@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "Global News Through a Clear Lens",
   description:
     "The Global Lens 365 — Your window to world news. Curated global headlines, analysis, and reports from trusted international sources. Politics, business, technology, science, health, and more.",
-  url: "https://thegloballens365.vercel.app",
+  url: "https://the-global-lens-365.vercel.app",
   locale: "en_US",
   localeFull: "en-US",
   logo: "/images/logo.png",

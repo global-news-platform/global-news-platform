@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to production
+      - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -39,38 +39,6 @@ jobs:
             -d '{
               "name": "the-global-lens-365",
               "project": "the-global-lens-365",
-              "gitSource": {
-                "type": "github",
-                "ref": "main",
-                "repoId": 1235422354
-              },
-              "target": "production"
-            }' 2>&1 | head -5
-
-      - name: Rename project
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          echo "=== Renaming project ==="
-          curl -s -X PATCH "https://api.vercel.com/v1/projects/the-global-lens-365" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
-            -H "Content-Type: application/json" \
-            -d '{"name":"thegloballens365"}' 2>&1
-
-      - name: Deploy to new name
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          curl -sf -X POST "https://api.vercel.com/v13/deployments" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "name": "thegloballens365",
-              "project": "thegloballens365",
               "gitSource": {
                 "type": "github",
                 "ref": "main",
