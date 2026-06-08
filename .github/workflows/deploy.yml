@@ -31,12 +31,10 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npx vercel link --yes --non-interactive 2>&1
-          echo "--- LINKED ---"
+          npx vercel link --project=global-news-platform --yes 2>&1
 
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npx vercel --prod --non-interactive --force 2>&1
-          echo "--- DEPLOY EXIT CODE: $? ---"
+          npx vercel --prod --force 2>&1
