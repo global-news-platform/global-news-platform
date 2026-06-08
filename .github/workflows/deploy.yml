@@ -27,11 +27,22 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: prj_Wb16ArTe2jU5c0aGhf5JlvssvXu7
-          vercel-args: "--prod"
-          working-directory: ./
+      - name: Deploy via API
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: |
+          curl -sf -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "name": "the-global-lens-365",
+              "project": "the-global-lens-365",
+              "gitSource": {
+                "type": "github",
+                "ref": "main",
+                "repoId": 1235422354
+              },
+              "target": "production"
+            }' 2>&1 | head -20
