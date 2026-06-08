@@ -31,9 +31,45 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create Vercel project (if not exists)
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel project add thegloballens365 \
+            --token="$VERCEL_TOKEN" \
+            --scope=${{ secrets.VERCEL_ORG_ID }} 2>&1 || echo "Project exists"
+
+      - name: Configure project as Next.js
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          curl -s -X PATCH "https://api.vercel.com/v1/projects/thegloballens365" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"framework":"nextjs","buildCommand":"npm run build","outputDirectory":".next","installCommand":"npm ci"}' > /dev/null
+
+      - name: Link and Build
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel link --project=thegloballens365 \
+            --token="$VERCEL_TOKEN" \
+            --scope=${{ secrets.VERCEL_ORG_ID }} --yes
+          npx vercel build --prod \
+            --token="$VERCEL_TOKEN" \
+            --scope=${{ secrets.VERCEL_ORG_ID }}
+
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npx vercel --prod --token="$VERCEL_TOKEN" \
+          npx vercel deploy --prebuilt --prod \
+            --token="$VERCEL_TOKEN" \
             --scope=${{ secrets.VERCEL_ORG_ID }} --yes
+
+      - name: Delete old project
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel project remove the-global-lens-365 \
+            --token="$VERCEL_TOKEN" --scope=${{ secrets.VERCEL_ORG_ID }} -y 2>&1 || true
