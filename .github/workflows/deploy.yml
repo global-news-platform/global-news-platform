@@ -34,25 +34,10 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          echo "Fetching current project name..."
-          HTTP_RESPONSE=$(curl -s -w "\\n%{http_code}" "https://api.vercel.com/v2/projects/${VERCEL_PROJECT_ID}?teamId=${VERCEL_ORG_ID}" \
-            -H "Authorization: Bearer ${VERCEL_TOKEN}")
-          HTTP_CODE=$(echo "$HTTP_RESPONSE" | tail -1)
-          HTTP_BODY=$(echo "$HTTP_RESPONSE" | sed '$d')
-          echo "API status: $HTTP_CODE"
-          CURRENT_NAME=$(echo "$HTTP_BODY" | grep -o '"name":"[^"]*"' | head -1 | cut -d'"' -f4)
-          echo "Current name: $CURRENT_NAME"
-          if [ "$CURRENT_NAME" = "the-global-lens-365" ]; then
-            echo "Renaming to tgl365..."
-            RENAME_RESPONSE=$(curl -s -w "\\n%{http_code}" -X PATCH "https://api.vercel.com/v2/projects/${VERCEL_PROJECT_ID}?teamId=${VERCEL_ORG_ID}" \
-              -H "Authorization: Bearer ${VERCEL_TOKEN}" \
-              -H "Content-Type: application/json" \
-              -d '{"name":"tgl365"}')
-            RENAME_CODE=$(echo "$RENAME_RESPONSE" | tail -1)
-            echo "Rename API status: $RENAME_CODE"
-          else
-            echo "No rename needed"
-          fi
+          echo "Triggering Vercel CLI rename..."
+          npx vercel api /v2/projects/${VERCEL_PROJECT_ID} -X PATCH \
+            --body '{"name":"tgl365"}' \
+            --json 2>&1 || echo "Rename not needed or failed"
 
       - name: Build
         run: npm run build
