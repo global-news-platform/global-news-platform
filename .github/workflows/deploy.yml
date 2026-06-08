@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy via API
+      - name: Deploy to thegloballens365
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -37,8 +37,8 @@ jobs:
             -H "x-vercel-team-id: $VERCEL_ORG_ID" \
             -H "Content-Type: application/json" \
             -d '{
-              "name": "the-global-lens-365",
-              "project": "the-global-lens-365",
+              "name": "thegloballens365",
+              "project": "thegloballens365",
               "gitSource": {
                 "type": "github",
                 "ref": "main",
@@ -46,15 +46,3 @@ jobs:
               },
               "target": "production"
             }' 2>&1 | head -5
-
-      - name: Rename project to thegloballens365
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          curl -sf -X PATCH "https://api.vercel.com/v1/projects/the-global-lens-365" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
-            -H "Content-Type: application/json" \
-            -d '{"name":"thegloballens365"}' 2>&1 | head -5
-          echo "--- Renamed to thegloballens365 ---"
