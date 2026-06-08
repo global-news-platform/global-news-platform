@@ -33,8 +33,14 @@ jobs:
         run: |
           npx vercel link --project=global-news-platform --yes 2>&1
 
+      - name: Build for Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel build --prod 2>&1
+
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npx vercel --prod --force 2>&1
+          npx vercel deploy --prebuilt --prod --yes 2>&1
