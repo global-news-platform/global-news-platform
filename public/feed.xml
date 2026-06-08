@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 08 Jun 2026 13:57:43 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 21:21:59 GMT</lastBuildDate>
     <atom:link href="https://the-global-lens-365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://the-global-lens-365.vercel.app/images/logo.svg</url>
@@ -48,6 +48,17 @@
     <pubDate>Sun, 07 Jun 2026 19:10:01 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zelenskyy-meets-key-allies-in-london-aiming-to-build-on-strikes-on-russia--p6gbbp.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/world/2026/jun/07/zelenskyy-starmer-macron-merz-ukraine-talks-london">The Guardian</source>
+  </item>
+  <item>
+    <title>Zelenskyy hopes Reform UK councils will allow Ukraine flags to be flown again</title>
+    <link>https://the-global-lens-365.vercel.app/article/zelenskyy-hopes-reform-uk-councils-will-allow-ukraine-flags-to-be-flown-again--v2p6n3</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/zelenskyy-hopes-reform-uk-councils-will-allow-ukraine-flags-to-be-flown-again--v2p6n3</guid>
+    <description>Exclusive: Ukrainian president says ‘small mistake can break a big friendship’ in wide-ranging interview with Guardian Volodymyr Zelenskyy has said the decision</description>
+    <category>siasat</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 19:00:32 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zelenskyy-hopes-reform-uk-councils-will-allow-ukraine-flags-to-be-flown-again--v2p6n3.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/world/2026/jun/08/volodymyr-zelenskyy-reform-uk-councils-ukraine-flags">The Guardian</source>
   </item>
   <item>
     <title>Zelenskyy angers Poland with WWII-era name for army unit</title>
@@ -94,6 +105,17 @@
     <source url="https://www.bbc.com/news/articles/c1k2kpdzjdzo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Xi calls China–North Korea ties \&quot;unbreakable,\&quot; but Pyongyang&apos;s Russia pivot is testing Beijing&apos;s leverage.</title>
+    <link>https://the-global-lens-365.vercel.app/article/xi-calls-china-north-korea-ties-unbreakable-but-pyongyang-s-russia-pivot-is-test--7q18tm</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/xi-calls-china-north-korea-ties-unbreakable-but-pyongyang-s-russia-pivot-is-test--7q18tm</guid>
+    <description>The Chinese leader&apos;s first trip to North Korea in 7 years comes as Pyongyang has moved closer to Russia. Kim Jong Un is likely to seek more access to China&apos;s ec</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 08 Jun 2026 12:47:00 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
+    <source url="https://www.dw.com/en/xi-calls-china-north-korea-ties-unbreakable-but-pyongyang-s-russia-pivot-is-testing-beijing-s-leverage/a-77460576?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
     <title>Xi and Kim express hopes for greater ties between China and North Korea</title>
     <link>https://the-global-lens-365.vercel.app/article/xi-and-kim-express-hopes-for-greater-ties-between-china-and-north-korea--we7lo4</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/xi-and-kim-express-hopes-for-greater-ties-between-china-and-north-korea--we7lo4</guid>
@@ -125,6 +147,28 @@
     <pubDate>Sun, 07 Jun 2026 07:35:43 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/world-cup-fever-muted-in-iran-under-shadow-of-war-hardship--q7gyvg.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2005850/world-cup-fever-muted-in-iran-under-shadow-of-war-hardship">Dawn</source>
+  </item>
+  <item>
+    <title>Women detained in Afghanistan&apos;s Herat in clothing crackdown</title>
+    <link>https://the-global-lens-365.vercel.app/article/women-detained-in-afghanistan-s-herat-in-clothing-crackdown--rscti4</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/women-detained-in-afghanistan-s-herat-in-clothing-crackdown--rscti4</guid>
+    <description>Afghan residents in the western city of Herat have told AFP of witnessing multiple women detained by the Taliban government’s morality police, in a crackdown ov</description>
+    <category>pakistan</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 08 Jun 2026 14:55:02 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/women-detained-in-afghanistan-s-herat-in-clothing-crackdown--rscti4.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2006152/women-detained-in-afghanistans-herat-in-clothing-crackdown">Dawn</source>
+  </item>
+  <item>
+    <title>Will the FIFA World Cup be the economic bonanza US cities were promised?</title>
+    <link>https://the-global-lens-365.vercel.app/article/will-the-fifa-world-cup-be-the-economic-bonanza-us-cities-were-promised--o7fuj9</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/will-the-fifa-world-cup-be-the-economic-bonanza-us-cities-were-promised--o7fuj9</guid>
+    <description>Cities remain optimistic despite lagging hotel bookings and high ticket prices that might deter foreign travellers.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 08 Jun 2026 20:35:01 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/will-the-fifa-world-cup-be-the-economic-bonanza-us-cities-were-promised--o7fuj9.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/economy/2026/6/8/will-the-fifa-world-cup-be-the-economic-bonanza-us-cities-were-promised?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Why temperature records are being not only broken but smashed</title>
@@ -237,6 +281,28 @@
     <source url="https://www.bbc.com/news/articles/cwy2y9n11pyo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>‘We basically lost’: Tel Aviv residents react after Israel-Iran strikes</title>
+    <link>https://the-global-lens-365.vercel.app/article/we-basically-lost-tel-aviv-residents-react-after-israel-iran-strikes--n5rcfy</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/we-basically-lost-tel-aviv-residents-react-after-israel-iran-strikes--n5rcfy</guid>
+    <description>Residents in Tel Aviv voiced mixed reactions after a day of missile exchanges between Israel and Iran.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 20:54:57 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/we-basically-lost-tel-aviv-residents-react-after-israel-iran-strikes--n5rcfy.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/8/we-basically-lost-tel-aviv-residents-react-after-israel-iran-strikes?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Watch: Southern Lights timelapse filmed from space</title>
+    <link>https://the-global-lens-365.vercel.app/article/watch-southern-lights-timelapse-filmed-from-space--99p3lf</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/watch-southern-lights-timelapse-filmed-from-space--99p3lf</guid>
+    <description>This occurrence of aurora australis, or Southern Lights, was captured by NASA astronaut Jessica Meir.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 08 Jun 2026 18:58:57 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/watch-southern-lights-timelapse-filmed-from-space--99p3lf.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/videos/cr5j4e4r3v9o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Vulnerable families illegally ‘dumped’ hundreds of miles away by London councils</title>
     <link>https://the-global-lens-365.vercel.app/article/vulnerable-families-illegally-dumped-hundreds-of-miles-away-by-london-councils--xeasyb</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/vulnerable-families-illegally-dumped-hundreds-of-miles-away-by-london-councils--xeasyb</guid>
@@ -312,6 +378,17 @@
     <pubDate>Fri, 05 Jun 2026 01:07:15 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/us-imposes-new-sanctions-on-cuban-president-and-castro-family-members--zhnc13.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/world/2026/jun/05/us-sanctions-cuba-president-castro-family">The Guardian</source>
+  </item>
+  <item>
+    <title>US congressman demands probe into Israel’s 1967 attack on USS Liberty</title>
+    <link>https://the-global-lens-365.vercel.app/article/us-congressman-demands-probe-into-israel-s-1967-attack-on-uss-liberty--r9d6wu</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/us-congressman-demands-probe-into-israel-s-1967-attack-on-uss-liberty--r9d6wu</guid>
+    <description>Thomas Massie suggests the deadly assault was not an accident and calls on the US government to honour its survivors.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 20:03:15 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/us-congressman-demands-probe-into-israel-s-1967-attack-on-uss-liberty--r9d6wu.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/8/us-congressman-demands-probe-into-israels-1967-attack-on-uss-liberty?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>UoR earns NTC thumbs-up, sets new benchmarks in technology education</title>
@@ -413,6 +490,17 @@
     <source url="https://www.npr.org/2026/06/07/nx-s1-5849212/u-k-deputy-prime-minister-jd-vance-was-wrong-to-blame-teens-murder-on-immigration">NPR</source>
   </item>
   <item>
+    <title>Two US pilots killed after plane bound to pick up former MLB star crashes</title>
+    <link>https://the-global-lens-365.vercel.app/article/two-us-pilots-killed-after-plane-bound-to-pick-up-former-mlb-star-crashes--l0hgv9</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/two-us-pilots-killed-after-plane-bound-to-pick-up-former-mlb-star-crashes--l0hgv9</guid>
+    <description>Plane on way to pick up Yadier Molina and his family crashed in Dominican Republic, killing pilot and co-pilot A pilot and co-pilot from the United States have</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 08 Jun 2026 16:44:08 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/two-us-pilots-killed-after-plane-bound-to-pick-up-former-mlb-star-crashes--l0hgv9.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/us-news/2026/jun/08/us-pilots-killed-plane-crash-dominican-republic">The Guardian</source>
+  </item>
+  <item>
     <title>Trump to meet AI leaders to discuss US investment in their companies</title>
     <link>https://the-global-lens-365.vercel.app/article/trump-to-meet-ai-leaders-to-discuss-us-investment-in-their-companies--iwvuiy</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/trump-to-meet-ai-leaders-to-discuss-us-investment-in-their-companies--iwvuiy</guid>
@@ -477,94 +565,6 @@
     <pubDate>Mon, 08 Jun 2026 08:00:13 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/top-five-a-day-foods-new-study-says-your-heart-needs--9b7obv.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/ce3p3z5d63po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Top chefs back Andy Burnham for prime minister to cut VAT on hospitality</title>
-    <link>https://the-global-lens-365.vercel.app/article/top-chefs-back-andy-burnham-for-prime-minister-to-cut-vat-on-hospitality--eh2yzt</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/top-chefs-back-andy-burnham-for-prime-minister-to-cut-vat-on-hospitality--eh2yzt</guid>
-    <description>Tom Kerridge says ‘whole of hospitality’ should get behind Burnham who has called for VAT cut from 20% to 10% Chefs and restaurateurs have said they hope Andy B</description>
-    <category>siasat</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 08 Jun 2026 05:00:19 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/top-chefs-back-andy-burnham-for-prime-minister-to-cut-vat-on-hospitality--eh2yzt.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/business/2026/jun/08/chefs-back-andy-burnham-vat-cut-hospitality">The Guardian</source>
-  </item>
-  <item>
-    <title>TikToker held for ‘making AI-generated obscene video’ in Bahawalnagar</title>
-    <link>https://the-global-lens-365.vercel.app/article/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--tjw2x5</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--tjw2x5</guid>
-    <description>BAHAWALNAGAR: A male TikToker was arrested on Friday for allegedly making an AI-generated obscene video of a rival female TikToker and uploading it on social me</description>
-    <category>technology</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 06 Jun 2026 03:55:31 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--tjw2x5.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005494/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar">Dawn</source>
-  </item>
-  <item>
-    <title>Three Ebola vaccines in development amid growing outbreak fears</title>
-    <link>https://the-global-lens-365.vercel.app/article/three-ebola-vaccines-in-development-amid-growing-outbreak-fears--sotjwu</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/three-ebola-vaccines-in-development-amid-growing-outbreak-fears--sotjwu</guid>
-    <description>IAVI, Moderna and the University of Oxford are all working on new vaccines.</description>
-    <category>sehat</category>
-    <author>Imran Malik</author>
-    <pubDate>Mon, 01 Jun 2026 14:30:39 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/three-ebola-vaccines-in-development-amid-growing-outbreak-fears--sotjwu.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cn8pw93929wo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>The retaking of Cuba</title>
-    <link>https://the-global-lens-365.vercel.app/article/the-retaking-of-cuba--l8uonl</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/the-retaking-of-cuba--l8uonl</guid>
-    <description>Decades-old property claims, frozen since the 1960s, are being turned into live instruments of reconquest.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 08 Jun 2026 12:49:58 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/the-retaking-of-cuba--l8uonl.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/opinions/2026/6/8/the-retaking-of-cuba?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>The gamers taking on the industry to stop it switching off games</title>
-    <link>https://the-global-lens-365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--j5vxjj</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--j5vxjj</guid>
-    <description>Stop Killing Games is challenging the idea publishers can shut down a game without making sure it&apos;s still playable.</description>
-    <category>technology</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 06 Jun 2026 23:25:51 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--j5vxjj.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c8e8e7g0r82o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>The ancient trick making food waste useful and tasty</title>
-    <link>https://the-global-lens-365.vercel.app/article/the-ancient-trick-making-food-waste-useful-and-tasty--50uanr</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/the-ancient-trick-making-food-waste-useful-and-tasty--50uanr</guid>
-    <description>Instead of throwing away byproducts of food processing, fermentation is making them valuable.</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 04 Jun 2026 23:10:26 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/the-ancient-trick-making-food-waste-useful-and-tasty--50uanr.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Texas-bound jet crashes during emergency landing in Dominican Republic</title>
-    <link>https://the-global-lens-365.vercel.app/article/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic--r3a81q</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic--r3a81q</guid>
-    <description>Texas-bound private jet crashes during emergency landing in Dominican Republic.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Mon, 08 Jun 2026 13:22:18 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic--r3a81q.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/8/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Teenage sensation Vaibhav Sooryavanshi called up to India&apos;s T20I squad, Shreyas Iyer named captain</title>
-    <link>https://the-global-lens-365.vercel.app/article/teenage-sensation-vaibhav-sooryavanshi-called-up-to-india-s-t20i-squad-shreyas-i--5ky9oo</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/teenage-sensation-vaibhav-sooryavanshi-called-up-to-india-s-t20i-squad-shreyas-i--5ky9oo</guid>
-    <description>India have called up teenager Vaibhav Sooryavanshi for their upcoming Twenty20 international series against Ireland and England, the country’s cricket board (BC</description>
-    <category>khel</category>
-    <author>Sara Khan</author>
-    <pubDate>Sat, 06 Jun 2026 08:58:00 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/teenage-sensation-vaibhav-sooryavanshi-called-up-to-india-s-t20i-squad-shreyas-i--5ky9oo.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005640/teenage-sensation-vaibhav-sooryavanshi-called-up-to-indias-t20i-squad-shreyas-iyer-named-captain">Dawn</source>
   </item>
   </channel>
 </rss>
