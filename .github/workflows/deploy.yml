@@ -47,17 +47,10 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
 
-      - name: Vercel Build
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          npx vercel build --prod --token="$VERCEL_TOKEN" \
-            --scope=${{ secrets.VERCEL_ORG_ID }} \
-            --project=thegloballens365
-
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN" \
-            --scope=${{ secrets.VERCEL_ORG_ID }} --yes
+          npx vercel deploy --prod --token="$VERCEL_TOKEN" \
+            --scope=${{ secrets.VERCEL_ORG_ID }} --yes \
+            --project=thegloballens365
