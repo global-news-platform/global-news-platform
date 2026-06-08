@@ -9,13 +9,24 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 07 Jun 2026 20:47:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 13:57:43 GMT</lastBuildDate>
     <atom:link href="https://the-global-lens-365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://the-global-lens-365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://the-global-lens-365.vercel.app</link>
     </image>
+  <item>
+    <title>Zverev ends wait for Grand Slam title with French Open triumph</title>
+    <link>https://the-global-lens-365.vercel.app/article/zverev-ends-wait-for-grand-slam-title-with-french-open-triumph--zi9hpe</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/zverev-ends-wait-for-grand-slam-title-with-french-open-triumph--zi9hpe</guid>
+    <description>PARIS: Alexander Zverev finally secured his maiden Grand Slam title with a dramatic five-set victory over Italy’s Flavio Cobolli in the French Open final on Sun</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 05:09:43 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zverev-ends-wait-for-grand-slam-title-with-french-open-triumph--zi9hpe.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2005986/zverev-ends-wait-for-grand-slam-title-with-french-open-triumph">Dawn</source>
+  </item>
   <item>
     <title>Zverev beats Cobolli in tense French Open final for first Grand Slam title</title>
     <link>https://the-global-lens-365.vercel.app/article/zverev-beats-cobolli-in-tense-french-open-final-for-first-grand-slam-title--ljoija</link>
@@ -39,6 +50,28 @@
     <source url="https://www.theguardian.com/world/2026/jun/07/zelenskyy-starmer-macron-merz-ukraine-talks-london">The Guardian</source>
   </item>
   <item>
+    <title>Zelenskyy angers Poland with WWII-era name for army unit</title>
+    <link>https://the-global-lens-365.vercel.app/article/zelenskyy-angers-poland-with-wwii-era-name-for-army-unit--vk5lo7</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/zelenskyy-angers-poland-with-wwii-era-name-for-army-unit--vk5lo7</guid>
+    <description>Ukraine&apos;s President Volodymyr Zelenskyy has sparked outrage in Poland by choosing a name that carries Nazi connotations for a Ukrainian army unit. Can Polish PM</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 07 Jun 2026 19:39:00 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zelenskyy-angers-poland-with-wwii-era-name-for-army-unit--vk5lo7.jpg" type="image/jpeg" />
+    <source url="https://www.dw.com/en/zelenskyy-angers-poland-with-wwii-era-name-for-army-unit/a-77412975?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Zelensky&apos;s close European allies set out five conditions for peace talks</title>
+    <link>https://the-global-lens-365.vercel.app/article/zelensky-s-close-european-allies-set-out-five-conditions-for-peace-talks--f8fjrc</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/zelensky-s-close-european-allies-set-out-five-conditions-for-peace-talks--f8fjrc</guid>
+    <description>The Ukrainian president&apos;s meeting with his staunchest European allies came as US President Donald Trump&apos;s focus shifts to the war with Iran.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 07 Jun 2026 21:39:43 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zelensky-s-close-european-allies-set-out-five-conditions-for-peace-talks--f8fjrc.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cr7xr1g3nvvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zelensky in Downing Street for Ukraine war talks with European leaders</title>
     <link>https://the-global-lens-365.vercel.app/article/zelensky-in-downing-street-for-ukraine-war-talks-with-european-leaders--ve87lw</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/zelensky-in-downing-street-for-ukraine-war-talks-with-european-leaders--ve87lw</guid>
@@ -48,6 +81,28 @@
     <pubDate>Sun, 07 Jun 2026 18:49:17 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/zelensky-in-downing-street-for-ukraine-war-talks-with-european-leaders--ve87lw.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cr7xr1g3nvvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>You may be saving for retirement without realising it. Here&apos;s how to check</title>
+    <link>https://the-global-lens-365.vercel.app/article/you-may-be-saving-for-retirement-without-realising-it-here-s-how-to-check--pgycsd</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/you-may-be-saving-for-retirement-without-realising-it-here-s-how-to-check--pgycsd</guid>
+    <description>One simple check could ensure you are not missing out on free money which could help in later life.</description>
+    <category>karobar</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 08 Jun 2026 09:48:10 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/you-may-be-saving-for-retirement-without-realising-it-here-s-how-to-check--pgycsd.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c1k2kpdzjdzo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Xi and Kim express hopes for greater ties between China and North Korea</title>
+    <link>https://the-global-lens-365.vercel.app/article/xi-and-kim-express-hopes-for-greater-ties-between-china-and-north-korea--we7lo4</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/xi-and-kim-express-hopes-for-greater-ties-between-china-and-north-korea--we7lo4</guid>
+    <description>Xi traveled to Pyongyang on Monday in a likely attempt to reassert China&apos;s unique influence over its socialist neighbor.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 12:49:50 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/xi-and-kim-express-hopes-for-greater-ties-between-china-and-north-korea--we7lo4.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/06/08/g-s1-126863/xi-and-kim-express-hopes-for-greater-ties-between-china-and-north-korea">NPR</source>
   </item>
   <item>
     <title>&apos;World-first&apos; vaccine designed by artificial intelligence</title>
@@ -83,6 +138,17 @@
     <source url="https://www.bbc.com/news/articles/c62rrj66p3eo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Why Hull&apos;s US Open near-miss shows major win is close</title>
+    <link>https://the-global-lens-365.vercel.app/article/why-hull-s-us-open-near-miss-shows-major-win-is-close--4o85qb</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/why-hull-s-us-open-near-miss-shows-major-win-is-close--4o85qb</guid>
+    <description>BBC golf correspondent Iain Carter examines Charley Hull’s US Open performance after she came close to landing a first major title.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 12:09:31 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/why-hull-s-us-open-near-miss-shows-major-win-is-close--4o85qb.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/golf/articles/cj4gd54825lo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Who is Elon Musk and what is his net worth?</title>
     <link>https://the-global-lens-365.vercel.app/article/who-is-elon-musk-and-what-is-his-net-worth--tx0nkl</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/who-is-elon-musk-and-what-is-his-net-worth--tx0nkl</guid>
@@ -92,6 +158,17 @@
     <pubDate>Thu, 04 Jun 2026 10:25:06 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/who-is-elon-musk-and-what-is-his-net-worth--tx0nkl.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c0r1975ded7o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Who am I? Guess World Cup star No 1</title>
+    <link>https://the-global-lens-365.vercel.app/article/who-am-i-guess-world-cup-star-no-1--abhzli</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/who-am-i-guess-world-cup-star-no-1--abhzli</guid>
+    <description>Will you get today&apos;s player in as few attempts as possible?</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 08 Jun 2026 05:47:05 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/who-am-i-guess-world-cup-star-no-1--abhzli.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/football/articles/cpwpn4kvd2do?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>White House AI policy adviser Krishnan to leave position</title>
@@ -105,6 +182,17 @@
     <source url="https://www.dawn.com/news/2005854/white-house-ai-policy-adviser-krishnan-to-leave-position">Dawn</source>
   </item>
   <item>
+    <title>Which European nation has the best chance to win World Cup 2026?</title>
+    <link>https://the-global-lens-365.vercel.app/article/which-european-nation-has-the-best-chance-to-win-world-cup-2026--ovazg1</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/which-european-nation-has-the-best-chance-to-win-world-cup-2026--ovazg1</guid>
+    <description>Europe has the most World Cup winners in the event&apos;s history, but what are the continent&apos;s chances at the 2026 edition?</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 08 Jun 2026 11:48:58 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/which-european-nation-has-the-best-chance-to-win-world-cup-2026--ovazg1.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/6/8/which-european-nation-has-the-best-chance-to-win-world-cup-2026?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>When U.S. foreign aid changed, AIDS workers in Africa felt it</title>
     <link>https://the-global-lens-365.vercel.app/article/when-u-s-foreign-aid-changed-aids-workers-in-africa-felt-it--ckvlri</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/when-u-s-foreign-aid-changed-aids-workers-in-africa-felt-it--ckvlri</guid>
@@ -114,6 +202,17 @@
     <pubDate>Sun, 07 Jun 2026 10:00:00 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/when-u-s-foreign-aid-changed-aids-workers-in-africa-felt-it--ckvlri.jpg" type="image/jpeg" />
     <source url="https://www.npr.org/2026/06/07/nx-s1-5837324/usaid-aids-africa">NPR</source>
+  </item>
+  <item>
+    <title>What to do as murder is exploited to spread lies about race and privilege? Stand firm – fight back | Nesrine Malik</title>
+    <link>https://the-global-lens-365.vercel.app/article/what-to-do-as-murder-is-exploited-to-spread-lies-about-race-and-privilege-stand---g78bop</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/what-to-do-as-murder-is-exploited-to-spread-lies-about-race-and-privilege-stand---g78bop</guid>
+    <description>Too many leaders have appeased the rightwing culture warriors. In the wake of the Henry Nowak rioting, the time for a push against toxicity and untruths is now</description>
+    <category>siasat</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 08 Jun 2026 05:00:18 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/what-to-do-as-murder-is-exploited-to-spread-lies-about-race-and-privilege-stand---g78bop.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/commentisfree/2026/jun/08/murder-exploited-lies-race-privilege-henry-nowak">The Guardian</source>
   </item>
   <item>
     <title>We need to stop AI developing without humans, says Anthropic co-founder</title>
@@ -127,6 +226,17 @@
     <source url="https://www.bbc.com/news/articles/cx2124z7g45o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>&apos;We don&apos;t look at the sky anymore&apos;: The Air India crash victims who were not on the plane</title>
+    <link>https://the-global-lens-365.vercel.app/article/we-don-t-look-at-the-sky-anymore-the-air-india-crash-victims-who-were-not-on-the--jw6ot7</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/we-don-t-look-at-the-sky-anymore-the-air-india-crash-victims-who-were-not-on-the--jw6ot7</guid>
+    <description>A grandfather, a survivor, a witness: one year after the crash, the people on the ground tell their stories.</description>
+    <category>karobar</category>
+    <author>Babar Shah</author>
+    <pubDate>Sun, 07 Jun 2026 22:01:06 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/we-don-t-look-at-the-sky-anymore-the-air-india-crash-victims-who-were-not-on-the--jw6ot7.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cwy2y9n11pyo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Vulnerable families illegally ‘dumped’ hundreds of miles away by London councils</title>
     <link>https://the-global-lens-365.vercel.app/article/vulnerable-families-illegally-dumped-hundreds-of-miles-away-by-london-councils--xeasyb</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/vulnerable-families-illegally-dumped-hundreds-of-miles-away-by-london-councils--xeasyb</guid>
@@ -136,6 +246,17 @@
     <pubDate>Sun, 07 Jun 2026 16:00:01 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/vulnerable-families-illegally-dumped-hundreds-of-miles-away-by-london-councils--xeasyb.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/society/2026/jun/07/vulnerable-families-illegally-dumped-hundreds-miles-away-london-councils">The Guardian</source>
+  </item>
+  <item>
+    <title>Video: Israel claims strike on Iranian petrochemical complex</title>
+    <link>https://the-global-lens-365.vercel.app/article/video-israel-claims-strike-on-iranian-petrochemical-complex--dx90sz</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/video-israel-claims-strike-on-iranian-petrochemical-complex--dx90sz</guid>
+    <description>Video shows plumes of smoke rising from Mahshahr Petrochemical Complex in Iran’s Khuzestan Province on Monday.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 11:50:00 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/video-israel-claims-strike-on-iranian-petrochemical-complex--dx90sz.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/8/video-israel-claims-strike-on-iranian-petrochemical-complex?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Vast astronaut mission kicks off commercial race to replace ISS</title>
@@ -215,6 +336,17 @@
     <source url="https://www.dawn.com/news/2005670/unofficial-results-show-ppp-leading-the-gb-race-with-victory-on-10-seats">Dawn</source>
   </item>
   <item>
+    <title>Unions attack ‘year-long delay’ for Tata Steel furnace’s grid connection in south Wales</title>
+    <link>https://the-global-lens-365.vercel.app/article/unions-attack-year-long-delay-for-tata-steel-furnace-s-grid-connection-in-south---cfcefm</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/unions-attack-year-long-delay-for-tata-steel-furnace-s-grid-connection-in-south---cfcefm</guid>
+    <description>Government urged to help speed up vital industrial project amid growing alarm over National Grid delays Business live – latest updates Trade unions have called</description>
+    <category>siasat</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 11:45:35 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/unions-attack-year-long-delay-for-tata-steel-furnace-s-grid-connection-in-south---cfcefm.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/business/2026/jun/08/unions-attack-delay-tata-steel-furnaces-grid-connection-south-wales">The Guardian</source>
+  </item>
+  <item>
     <title>Ukraine fires wave of drones  at Russia on last day of key forum</title>
     <link>https://the-global-lens-365.vercel.app/article/ukraine-fires-wave-of-drones-at-russia-on-last-day-of-key-forum--xt9tq4</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/ukraine-fires-wave-of-drones-at-russia-on-last-day-of-key-forum--xt9tq4</guid>
@@ -246,6 +378,17 @@
     <pubDate>Sun, 07 Jun 2026 16:43:49 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/uk-readies-sanctions-against-israel-to-deter-proposed-illegal-west-bank-settleme--3du0ej.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/world/2026/jun/07/uk-sanctions-israel-deter-proposed-west-bank-settlement-palestine">The Guardian</source>
+  </item>
+  <item>
+    <title>UK companies opting to hire temporary workers over permanent staff, recruitment firms say</title>
+    <link>https://the-global-lens-365.vercel.app/article/uk-companies-opting-to-hire-temporary-workers-over-permanent-staff-recruitment-f--bzzyb6</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/uk-companies-opting-to-hire-temporary-workers-over-permanent-staff-recruitment-f--bzzyb6</guid>
+    <description>Report blames Middle East conflict and rising business costs for fragile jobs market and steep fall in recruitment UK companies are increasingly hiring temporar</description>
+    <category>siasat</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 08 Jun 2026 05:00:17 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/uk-companies-opting-to-hire-temporary-workers-over-permanent-staff-recruitment-f--bzzyb6.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/money/2026/jun/08/uk-companies-opting-to-hire-temporary-workers-over-permanent-staff-recruitment-firms-say">The Guardian</source>
   </item>
   <item>
     <title>UK asylum system is on &apos;the brink&apos;, cross-party MPs&apos; report warns</title>
@@ -292,6 +435,17 @@
     <source url="https://www.aljazeera.com/news/2026/6/7/trump-says-will-not-unfreeze-iranian-assets-before-ceasefire-deal-reached?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>Trump is remaking U.S. policy in Latin America</title>
+    <link>https://the-global-lens-365.vercel.app/article/trump-is-remaking-u-s-policy-in-latin-america--ua6899</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/trump-is-remaking-u-s-policy-in-latin-america--ua6899</guid>
+    <description>Military strikes, sanctions and political pressure are becoming hallmarks of Trump&apos;s Latin America policy. NPR&apos;s Adrian Florido speaks with historian Greg Grand</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Sun, 07 Jun 2026 20:53:20 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/trump-is-remaking-u-s-policy-in-latin-america--ua6899.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/06/07/nx-s1-5845137/trump-is-remaking-u-s-policy-in-latin-america">NPR</source>
+  </item>
+  <item>
     <title>Trump abruptly ends NBC interview after clash over &apos;rigged election&apos; claim</title>
     <link>https://the-global-lens-365.vercel.app/article/trump-abruptly-ends-nbc-interview-after-clash-over-rigged-election-claim--08gywu</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/trump-abruptly-ends-nbc-interview-after-clash-over-rigged-election-claim--08gywu</guid>
@@ -301,6 +455,39 @@
     <pubDate>Sun, 07 Jun 2026 19:55:49 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/trump-abruptly-ends-nbc-interview-after-clash-over-rigged-election-claim--08gywu.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/ce8k1xx6yzjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Transport leader injured in Swat armed attack; son among 3 killed</title>
+    <link>https://the-global-lens-365.vercel.app/article/transport-leader-injured-in-swat-armed-attack-son-among-3-killed--o5tmlz</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/transport-leader-injured-in-swat-armed-attack-son-among-3-killed--o5tmlz</guid>
+    <description>SWAT: Local transport leader Afzal Gujjar was injured while his son, nephew and guard were killed after unidentified assailants opened fire on his vehicle in th</description>
+    <category>pakistan</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 08 Jun 2026 11:36:35 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/transport-leader-injured-in-swat-armed-attack-son-among-3-killed--o5tmlz.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2006119/transport-leader-injured-in-swat-armed-attack-son-among-3-killed">Dawn</source>
+  </item>
+  <item>
+    <title>Top five-a-day foods new study says your heart needs</title>
+    <link>https://the-global-lens-365.vercel.app/article/top-five-a-day-foods-new-study-says-your-heart-needs--9b7obv</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/top-five-a-day-foods-new-study-says-your-heart-needs--9b7obv</guid>
+    <description>Not all fruit and veg is equal for getting nutrients called flavanols, say researchers.</description>
+    <category>sehat</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 08 Jun 2026 08:00:13 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/top-five-a-day-foods-new-study-says-your-heart-needs--9b7obv.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/ce3p3z5d63po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Top chefs back Andy Burnham for prime minister to cut VAT on hospitality</title>
+    <link>https://the-global-lens-365.vercel.app/article/top-chefs-back-andy-burnham-for-prime-minister-to-cut-vat-on-hospitality--eh2yzt</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/top-chefs-back-andy-burnham-for-prime-minister-to-cut-vat-on-hospitality--eh2yzt</guid>
+    <description>Tom Kerridge says ‘whole of hospitality’ should get behind Burnham who has called for VAT cut from 20% to 10% Chefs and restaurateurs have said they hope Andy B</description>
+    <category>siasat</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 08 Jun 2026 05:00:19 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/top-chefs-back-andy-burnham-for-prime-minister-to-cut-vat-on-hospitality--eh2yzt.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/business/2026/jun/08/chefs-back-andy-burnham-vat-cut-hospitality">The Guardian</source>
   </item>
   <item>
     <title>TikToker held for ‘making AI-generated obscene video’ in Bahawalnagar</title>
@@ -325,6 +512,17 @@
     <source url="https://www.bbc.com/news/articles/cn8pw93929wo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>The retaking of Cuba</title>
+    <link>https://the-global-lens-365.vercel.app/article/the-retaking-of-cuba--l8uonl</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/the-retaking-of-cuba--l8uonl</guid>
+    <description>Decades-old property claims, frozen since the 1960s, are being turned into live instruments of reconquest.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 08 Jun 2026 12:49:58 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/the-retaking-of-cuba--l8uonl.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/opinions/2026/6/8/the-retaking-of-cuba?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>The gamers taking on the industry to stop it switching off games</title>
     <link>https://the-global-lens-365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--j5vxjj</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--j5vxjj</guid>
@@ -347,6 +545,17 @@
     <source url="https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Texas-bound jet crashes during emergency landing in Dominican Republic</title>
+    <link>https://the-global-lens-365.vercel.app/article/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic--r3a81q</link>
+    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic--r3a81q</guid>
+    <description>Texas-bound private jet crashes during emergency landing in Dominican Republic.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 08 Jun 2026 13:22:18 GMT</pubDate>
+    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic--r3a81q.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/8/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Teenage sensation Vaibhav Sooryavanshi called up to India&apos;s T20I squad, Shreyas Iyer named captain</title>
     <link>https://the-global-lens-365.vercel.app/article/teenage-sensation-vaibhav-sooryavanshi-called-up-to-india-s-t20i-squad-shreyas-i--5ky9oo</link>
     <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/teenage-sensation-vaibhav-sooryavanshi-called-up-to-india-s-t20i-squad-shreyas-i--5ky9oo</guid>
@@ -356,215 +565,6 @@
     <pubDate>Sat, 06 Jun 2026 08:58:00 GMT</pubDate>
     <enclosure url="https://the-global-lens-365.vercel.app/images/articles/teenage-sensation-vaibhav-sooryavanshi-called-up-to-india-s-t20i-squad-shreyas-i--5ky9oo.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2005640/teenage-sensation-vaibhav-sooryavanshi-called-up-to-indias-t20i-squad-shreyas-iyer-named-captain">Dawn</source>
-  </item>
-  <item>
-    <title>Tata Steel says new £1.25bn furnace may be delayed due to electrical issue</title>
-    <link>https://the-global-lens-365.vercel.app/article/tata-steel-says-new-1-25bn-furnace-may-be-delayed-due-to-electrical-issue--3gckxc</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/tata-steel-says-new-1-25bn-furnace-may-be-delayed-due-to-electrical-issue--3gckxc</guid>
-    <description>Plans for £1.25bn steel-making furnace may be delayed by electrical connectivity problem, Tata says.</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 07 Jun 2026 12:56:07 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/tata-steel-says-new-1-25bn-furnace-may-be-delayed-due-to-electrical-issue--3gckxc.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/ckg0w0lw451o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Sweden mulls prison for young teens as violent crime rises</title>
-    <link>https://the-global-lens-365.vercel.app/article/sweden-mulls-prison-for-young-teens-as-violent-crime-rises--kon6p3</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/sweden-mulls-prison-for-young-teens-as-violent-crime-rises--kon6p3</guid>
-    <description>In the fight against escalating gang crime, Sweden&apos;s parliament will vote on plans to hold 13-year-olds criminally responsible and, in serious cases, imprison t</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Sun, 07 Jun 2026 13:50:00 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/sweden-mulls-prison-for-young-teens-as-violent-crime-rises--kon6p3.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/sweden-mulls-prison-for-young-teens-as-violent-crime-rises/a-77435410?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Successive elections take a hit on Kosovo&apos;s coffers</title>
-    <link>https://the-global-lens-365.vercel.app/article/successive-elections-take-a-hit-on-kosovo-s-coffers--u1wvsa</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/successive-elections-take-a-hit-on-kosovo-s-coffers--u1wvsa</guid>
-    <description>Sunday&apos;s election in Kosovo — the third in under 16 months — is marked by a clash between former allies PM Albin Kurti and ex-President Vjosa Osmani, deadlock i</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Fri, 05 Jun 2026 14:55:00 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/successive-elections-take-a-hit-on-kosovo-s-coffers/a-77390725?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Starmer tells supporters he will fight any leadership contest</title>
-    <link>https://the-global-lens-365.vercel.app/article/starmer-tells-supporters-he-will-fight-any-leadership-contest--3n7qp3</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/starmer-tells-supporters-he-will-fight-any-leadership-contest--3n7qp3</guid>
-    <description>The prime minister&apos;s position has hardened since Andy Burnham said he would seek to enter any potential Labour contest.</description>
-    <category>siasat</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 07 Jun 2026 01:03:55 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/starmer-tells-supporters-he-will-fight-any-leadership-contest--3n7qp3.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c3vyxzl625po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Sikh MPs say Nowak murder was not about their religion</title>
-    <link>https://the-global-lens-365.vercel.app/article/sikh-mps-say-nowak-murder-was-not-about-their-religion--vzaycm</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/sikh-mps-say-nowak-murder-was-not-about-their-religion--vzaycm</guid>
-    <description>11 Sikh MPs say the killing was about \&quot;a man carrying an offensive weapon and committing a brutal murder\&quot;.</description>
-    <category>siasat</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Fri, 05 Jun 2026 16:26:57 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/sikh-mps-say-nowak-murder-was-not-about-their-religion--vzaycm.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c3v2v6rrxq9o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Shaheen defends pitches made for Australia ODI series</title>
-    <link>https://the-global-lens-365.vercel.app/article/shaheen-defends-pitches-made-for-australia-odi-series--8je12a</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/shaheen-defends-pitches-made-for-australia-odi-series--8je12a</guid>
-    <description>LAHORE: Pakistan skipper Shaheen Shah Afridi has defended the pitch strategy following his team’s One-day International series victory over Australia at home.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 06 Jun 2026 04:12:04 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/shaheen-defends-pitches-made-for-australia-odi-series--8je12a.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005539/shaheen-defends-pitches-made-for-australia-odi-series">Dawn</source>
-  </item>
-  <item>
-    <title>Russia&apos;s elite gather for Putin&apos;s pet project — an economic forum in St Petersburg</title>
-    <link>https://the-global-lens-365.vercel.app/article/russia-s-elite-gather-for-putin-s-pet-project-an-economic-forum-in-st-petersburg--ys9p7e</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/russia-s-elite-gather-for-putin-s-pet-project-an-economic-forum-in-st-petersburg--ys9p7e</guid>
-    <description>At the St. Petersburg International Economic Forum, Russia shows its most optimistic face as the war in Ukraine drags on.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Sun, 07 Jun 2026 13:21:24 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
-    <source url="https://www.npr.org/2026/06/07/nx-s1-5847010/russias-elite-gather-for-putins-pet-project-an-economic-forum-in-st-petersburg">NPR</source>
-  </item>
-  <item>
-    <title>Robinson rocks New Zealand again as rain frustrates England at Lord’s</title>
-    <link>https://the-global-lens-365.vercel.app/article/robinson-rocks-new-zealand-again-as-rain-frustrates-england-at-lord-s--td9syh</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/robinson-rocks-new-zealand-again-as-rain-frustrates-england-at-lord-s--td9syh</guid>
-    <description>LONDON: New Zealand batter Rachin Ravindra is bowled by England pacer Ollie Robinson during the first Test at Lord’s on Saturday.</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 07 Jun 2026 00:53:01 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/robinson-rocks-new-zealand-again-as-rain-frustrates-england-at-lord-s--td9syh.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005812/robinson-rocks-new-zealand-again-as-rain-frustrates-england-at-lords">Dawn</source>
-  </item>
-  <item>
-    <title>Reports: Iran uses war as cover for increased executions</title>
-    <link>https://the-global-lens-365.vercel.app/article/reports-iran-uses-war-as-cover-for-increased-executions--bwraea</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/reports-iran-uses-war-as-cover-for-increased-executions--bwraea</guid>
-    <description>Iran already had one of the highest rates of capital punishment in the world. Now, rights groups say, the country is using the current conflict to carry out eve</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Sun, 07 Jun 2026 19:28:00 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/reports-iran-uses-war-as-cover-for-increased-executions--bwraea.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/reports-iran-uses-war-as-cover-for-increased-executions/a-77451822?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Remarkable Tongue is England&apos;s premier bowler - Agnew</title>
-    <link>https://the-global-lens-365.vercel.app/article/remarkable-tongue-is-england-s-premier-bowler-agnew--vf6y5q</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/remarkable-tongue-is-england-s-premier-bowler-agnew--vf6y5q</guid>
-    <description>Gus Atkinson and Ollie Robinson showed their skills in victory over New Zealand, but Josh Tongue is now England&apos;s premier Test bowler, writes Jonathan Agnew.</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 07 Jun 2026 15:16:49 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/remarkable-tongue-is-england-s-premier-bowler-agnew--vf6y5q.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/cricket/articles/cly7966nwp5o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Rebel attacks in eastern DRC kill 30 people and hamper Ebola response</title>
-    <link>https://the-global-lens-365.vercel.app/article/rebel-attacks-in-eastern-drc-kill-30-people-and-hamper-ebola-response--pdl1zy</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/rebel-attacks-in-eastern-drc-kill-30-people-and-hamper-ebola-response--pdl1zy</guid>
-    <description>Islamic State-linked militia blamed for raids in North Kivu as governor says three patients with disease fled clinics Rebel attacks around a town that is one of</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Thu, 04 Jun 2026 04:00:25 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/rebel-attacks-in-eastern-drc-kill-30-people-and-hamper-ebola-response--pdl1zy.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/global-development/2026/jun/04/allied-democratic-forces-adf-rebel-attacks-massacre-eastern-drc-ebola-response">The Guardian</source>
-  </item>
-  <item>
-    <title>Raspberry Pi raises profit forecast as AI demand grows</title>
-    <link>https://the-global-lens-365.vercel.app/article/raspberry-pi-raises-profit-forecast-as-ai-demand-grows--9ekxqs</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/raspberry-pi-raises-profit-forecast-as-ai-demand-grows--9ekxqs</guid>
-    <description>The firm said it expected to deliver adjusted earnings of at least $38m (£28.2m) for the first half of 2026.</description>
-    <category>technology</category>
-    <author>Imran Malik</author>
-    <pubDate>Fri, 05 Jun 2026 12:27:52 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/raspberry-pi-raises-profit-forecast-as-ai-demand-grows--9ekxqs.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/czx2x3yl9rgo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Rachel Reeves may be unpopular, but she is quietly rebalancing UK plc | Heather Stewart</title>
-    <link>https://the-global-lens-365.vercel.app/article/rachel-reeves-may-be-unpopular-but-she-is-quietly-rebalancing-uk-plc-heather-ste--azv3ik</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/rachel-reeves-may-be-unpopular-but-she-is-quietly-rebalancing-uk-plc-heather-ste--azv3ik</guid>
-    <description>Policy U-turns could define her stint at No 11 despite many sure-footed advances on devolved spending to help kickstart growth An air of unreality settled on a</description>
-    <category>siasat</category>
-    <author>Imran Malik</author>
-    <pubDate>Sun, 07 Jun 2026 11:13:20 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/rachel-reeves-may-be-unpopular-but-she-is-quietly-rebalancing-uk-plc-heather-ste--azv3ik.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/politics/2026/jun/07/rachel-reeves-unpopular-quietly-rebalancing-uk-plc">The Guardian</source>
-  </item>
-  <item>
-    <title>Putin’s Pakistan puzzle</title>
-    <link>https://the-global-lens-365.vercel.app/article/putin-s-pakistan-puzzle--kggogm</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/putin-s-pakistan-puzzle--kggogm</guid>
-    <description>LAST week, Russian President Vladimir Putin talked on several geopolitical issues in St Petersburg, which also define Moscow’s approach to China, India and Paki</description>
-    <category>siasat</category>
-    <author>Sara Khan</author>
-    <pubDate>Sun, 07 Jun 2026 13:37:20 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005806/putins-pakistan-puzzle">Dawn</source>
-  </item>
-  <item>
-    <title>Punjab shifts to digital land ownership system from July</title>
-    <link>https://the-global-lens-365.vercel.app/article/punjab-shifts-to-digital-land-ownership-system-from-july--7gr1nu</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/punjab-shifts-to-digital-land-ownership-system-from-july--7gr1nu</guid>
-    <description>The Punjab government and the Board of Revenue have launched a major reform to modernise the province’s land management system, announcing the complete disconti</description>
-    <category>pakistan</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 07 Jun 2026 12:53:00 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/punjab-shifts-to-digital-land-ownership-system-from-july--7gr1nu.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1504211/punjab-shifts-to-digital-land-ownership-system-from-july/">Daily Times</source>
-  </item>
-  <item>
-    <title>Punjab launches QR panic button system for transport safety upgrade</title>
-    <link>https://the-global-lens-365.vercel.app/article/punjab-launches-qr-panic-button-system-for-transport-safety-upgrade--w5rdo4</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/punjab-launches-qr-panic-button-system-for-transport-safety-upgrade--w5rdo4</guid>
-    <description>Punjab has launched a QR-based panic button system to improve public transport safety across the province by linking vehicles with digital emergency response ne</description>
-    <category>pakistan</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sun, 07 Jun 2026 12:13:54 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/punjab-launches-qr-panic-button-system-for-transport-safety-upgrade--w5rdo4.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1504198/punjab-launches-qr-panic-button-system-for-transport-safety-upgrade/">Daily Times</source>
-  </item>
-  <item>
-    <title>PPP shares tax-related reservations in pre-budget meeting with Dar, say sources</title>
-    <link>https://the-global-lens-365.vercel.app/article/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources--72totb</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources--72totb</guid>
-    <description>ISLAMABAD: A PPP delegation, led by party Chairman Bilawal Bhutto-Zardari, expressed its reservations related to taxes during a pre-budget meeting with Deputy P</description>
-    <category>pakistan</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 07 Jun 2026 19:23:46 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources--72totb.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005897/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources">Dawn</source>
-  </item>
-  <item>
-    <title>Poultry industry grows at consumers’ cost</title>
-    <link>https://the-global-lens-365.vercel.app/article/poultry-industry-grows-at-consumers-cost--3fc3rw</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/poultry-industry-grows-at-consumers-cost--3fc3rw</guid>
-    <description>• Prices stay high despite export disruptions • Beef hits Rs1,500-1,800 per kg, mutton Rs2,700-2,900 KARACHI: Amid disease outbreaks, export suspensions, volati</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 07 Jun 2026 04:33:23 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/poultry-industry-grows-at-consumers-cost--3fc3rw.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005767/poultry-industry-grows-at-consumers-cost">Dawn</source>
-  </item>
-  <item>
-    <title>Polling concludes for GB elections on 24 seats; PPP accuses federal govt of trying to influence results</title>
-    <link>https://the-global-lens-365.vercel.app/article/polling-concludes-for-gb-elections-on-24-seats-ppp-accuses-federal-govt-of-tryin--pbcn5z</link>
-    <guid isPermaLink="true">https://the-global-lens-365.vercel.app/article/polling-concludes-for-gb-elections-on-24-seats-ppp-accuses-federal-govt-of-tryin--pbcn5z</guid>
-    <description>Polling for 24 seats of the Gilgit-Baltistan Legislative Assembly concluded peacefully on Sunday amid tight security arrangements. The general elections for GB</description>
-    <category>pakistan</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 07 Jun 2026 18:04:32 GMT</pubDate>
-    <enclosure url="https://the-global-lens-365.vercel.app/images/articles/polling-concludes-for-gb-elections-on-24-seats-ppp-accuses-federal-govt-of-tryin--pbcn5z.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2005670/polling-concludes-for-gb-elections-on-24-seats-ppp-accuses-federal-govt-of-trying-to-influence-results">Dawn</source>
   </item>
   </channel>
 </rss>
