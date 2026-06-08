@@ -22,7 +22,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Delete old Vercel projects (clean slate)
+      - name: Delete old Vercel projects
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
@@ -33,17 +33,31 @@ jobs:
               -y 2>&1 || true
           done
 
+      - name: Create new Vercel project
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel project add thegloballens365 \
+            --token="$VERCEL_TOKEN" \
+            --scope=${{ secrets.VERCEL_ORG_ID }} 2>&1 || echo "Project may already exist"
+
       - name: Fetch Facebook logo
         run: node scripts/fetch-logo.js
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
 
-      - name: Build
-        run: npm run build
+      - name: Vercel Build
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel build --prod --token="$VERCEL_TOKEN" \
+            --scope=${{ secrets.VERCEL_ORG_ID }} \
+            --project=thegloballens365
 
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npx vercel --prod --token="$VERCEL_TOKEN" --scope=${{ secrets.VERCEL_ORG_ID }} --yes --project="thegloballens365"
+          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN" \
+            --scope=${{ secrets.VERCEL_ORG_ID }} --yes
