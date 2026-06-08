@@ -27,9 +27,16 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Link project
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel link --yes --non-interactive 2>&1
+          echo "--- LINKED ---"
+
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          # Deploy source (Vercel builds on their servers)
-          npx vercel --prod --yes --force 2>&1
+          npx vercel --prod --non-interactive --force 2>&1
+          echo "--- DEPLOY EXIT CODE: $? ---"
