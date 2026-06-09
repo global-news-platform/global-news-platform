@@ -9,6 +9,7 @@ const { generateFeed } = require("./lib/feed")
 const { computeTrending, computeDailyMetrics } = require("./lib/metrics")
 const { commitAndPush, getCurrentBranch } = require("./lib/git")
 const { postTopArticles } = require("./lib/facebook")
+const { rewriteAllArticles, AI_ENABLED } = require("./lib/aiRewriter")
 const path = require("path")
 const fs = require("fs")
 
@@ -52,6 +53,9 @@ async function main() {
     return
   }
 
+  const rewritten = await rewriteAllArticles(articles, args.concurrency || 5)
+  const finalArticles = rewritten
+
   const articleImgCount = fs.existsSync(path.join(__dirname, "../public/images/articles"))
     ? fs.readdirSync(path.join(__dirname, "../public/images/articles")).filter((f) => f.endsWith(".jpg")).length
     : 0
@@ -59,14 +63,14 @@ async function main() {
 
   resetBatchHashes()
 
-  console.log(`\nWriting ${articles.length} articles to ${ARTICLES_DIR}...`)
-  const writeResult = await writeAllArticles(articles)
+  console.log(`\nWriting ${finalArticles.length} articles to ${ARTICLES_DIR}...`)
+  const writeResult = await writeAllArticles(finalArticles)
 
   console.log(
     `\nWrite results: ${writeResult.written} written, ${writeResult.skipped} skipped, ${writeResult.failed} failed`,
   )
 
-  for (const article of articles) {
+  for (const article of finalArticles) {
     markProcessed(article.guid)
   }
 
@@ -96,7 +100,7 @@ async function main() {
     const pageId = process.env.FB_PAGE_ID
     const pageAccessToken = process.env.FB_PAGE_ACCESS_TOKEN
     console.log(`\nPosting to Facebook (${pageId ? "configured" : "not configured"})...`)
-    const fbResult = await postTopArticles(articles, {
+    const fbResult = await postTopArticles(finalArticles, {
       pageId,
       pageAccessToken,
       siteUrl,
@@ -121,6 +125,7 @@ async function main() {
   console.log("=".repeat(60))
   console.log(`  Total articles in store: ${articleCount}`)
   console.log(`  This run: ${writeResult.written} new, ${writeResult.skipped} duplicates`)
+  console.log(`  AI rewriting: ${AI_ENABLED ? "enabled" : "disabled (set AI_REWRITE_ENABLED=true + AI_API_KEY)"}`)
   console.log(`  All-time processed: ${stats.totalProcessed}`)
   console.log(`  Local article images: ${articleImgCount}`)
   console.log(`  Time elapsed: ${Math.round((Date.now() - startTime) / 1000)}s`)

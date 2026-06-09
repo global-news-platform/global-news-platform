@@ -51,6 +51,13 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           SITE_URL: "https://thegloballens365.vercel.app"
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_REWRITE_ENABLED: ${{ secrets.AI_API_KEY != '' && 'true' || 'false' }}
+          AI_REWRITE_MODEL: ${{ secrets.AI_REWRITE_MODEL || 'gpt-4o-mini' }}
+          AI_BASE_URL: ${{ secrets.AI_BASE_URL || 'https://api.openai.com/v1' }}
+          AI_IMAGE_ENABLED: ${{ secrets.AI_IMAGE_API_KEY != '' && 'true' || 'false' }}
+          AI_IMAGE_API_KEY: ${{ secrets.AI_IMAGE_API_KEY }}
+          AI_IMAGE_MODEL: ${{ secrets.AI_IMAGE_MODEL || 'black-forest-labs/flux-schnell' }}
 
       - name: Fetch Facebook logo
         run: node scripts/fetch-logo.js

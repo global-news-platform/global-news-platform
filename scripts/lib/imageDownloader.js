@@ -5,6 +5,7 @@ const https = require("https")
 const crypto = require("crypto")
 const sharp = require("sharp")
 const { searchImage } = require("./imageSearch")
+const { applyWatermarks } = require("./watermark")
 
 const ARTICLES_DIR = path.join(__dirname, "../../public/images/articles")
 const FALLBACKS_DIR = path.join(__dirname, "../../public/images/fallbacks")
@@ -375,6 +376,12 @@ async function tryDownload(slug, imageUrl, article) {
       try {
         processed = await sharp(buffer).jpeg({ quality: 92, progressive: true }).toBuffer()
       } catch {}
+    }
+
+    try {
+      processed = await applyWatermarks(processed)
+    } catch (err) {
+      console.log(`  ~ Watermark skipped: ${err.message}`)
     }
 
     const finalMeta = await sharp(processed).metadata()
