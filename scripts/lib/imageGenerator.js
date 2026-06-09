@@ -2,6 +2,7 @@ const fs = require("fs")
 const path = require("path")
 const sharp = require("sharp")
 const { applyWatermarks } = require("./watermark")
+const { cleanImage } = require("./imageCleaner")
 
 const AI_IMAGE_API_KEY = process.env.AI_IMAGE_API_KEY || ""
 const AI_IMAGE_MODEL = process.env.AI_IMAGE_MODEL || "black-forest-labs/flux-schnell"
@@ -121,7 +122,9 @@ async function processArticleImage(article) {
 
     const regenerated = await regenerateViaAI(original, title)
 
-    let pipeline = sharp(regenerated)
+    let cleaned = await cleanImage(regenerated)
+
+    let pipeline = sharp(cleaned)
     const meta = await pipeline.metadata()
     const w = meta.width || IMAGE_WIDTH
     const h = meta.height || IMAGE_HEIGHT

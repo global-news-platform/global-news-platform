@@ -6,6 +6,7 @@ const crypto = require("crypto")
 const sharp = require("sharp")
 const { searchImage } = require("./imageSearch")
 const { applyWatermarks } = require("./watermark")
+const { cleanImage } = require("./imageCleaner")
 
 const ARTICLES_DIR = path.join(__dirname, "../../public/images/articles")
 const FALLBACKS_DIR = path.join(__dirname, "../../public/images/fallbacks")
@@ -311,13 +312,13 @@ async function downloadArticleImage(article) {
   const imageUrl = getBestImageUrl(article)
 
   if (imageUrl) {
-    console.log(`  → Trying RSS image for "${(article.title || "").substring(0, 50)}"`)
+    console.log(`  ? Trying RSS image for "${(article.title || "").substring(0, 50)}"`)
     const result = await tryDownload(slug, imageUrl, article)
     if (result) return result
   }
 
   if (article.sourceUrl) {
-    console.log(`  → Fetching og:image from article page for "${(article.title || "").substring(0, 50)}"`)
+    console.log(`  ? Fetching og:image from article page for "${(article.title || "").substring(0, 50)}"`)
     const ogUrl = await fetchOgImage(article.sourceUrl)
     if (ogUrl) {
       const result = await tryDownload(slug, ogUrl, article)
@@ -327,7 +328,7 @@ async function downloadArticleImage(article) {
 
   const wikiResult = await searchImage(article.title)
   if (wikiResult && wikiResult.url) {
-    console.log(`  → Trying Wikipedia image for "${(article.title || "").substring(0, 50)}": ${wikiResult.url}`)
+    console.log(`  ? Trying Wikipedia image for "${(article.title || "").substring(0, 50)}": ${wikiResult.url}`)
     const result = await tryDownload(slug, wikiResult.url, article)
     if (result) return result
   }
@@ -339,15 +340,15 @@ async function downloadArticleImage(article) {
   if (kw) {
     if (kw.category !== normalCat) {
       const fallback = getFallbackForCategory(articleCategory)
-      console.log(`  ⚠ Keyword fallback "${kw.category}" doesn't match article category "${normalCat}", using category fallback: ${fallback}`)
+      console.log(`  ? Keyword fallback "${kw.category}" doesn't match article category "${normalCat}", using category fallback: ${fallback}`)
       return { path: fallback, source: "category-fallback", downloaded: false, width: 0, height: 0 }
     }
-    console.log(`  ⚠ Using keyword fallback for "${(article.title || "").substring(0, 50)}": ${kw.image}`)
+    console.log(`  ? Using keyword fallback for "${(article.title || "").substring(0, 50)}": ${kw.image}`)
     return { path: kw.image, source: "keyword-fallback", downloaded: false, width: 0, height: 0 }
   }
 
   const fallback = getFallbackForCategory(articleCategory)
-  console.log(`  ⚠ Using category fallback for "${(article.title || "").substring(0, 50)}": ${fallback}`)
+  console.log(`  ? Using category fallback for "${(article.title || "").substring(0, 50)}": ${fallback}`)
   return { path: fallback, source: "category-fallback", downloaded: false, width: 0, height: 0 }
 }
 
@@ -363,7 +364,7 @@ async function tryDownload(slug, imageUrl, article) {
 
     const validation = await validateImage(buffer)
     if (!validation.valid) {
-      console.log(`  ✗ Image validation failed: ${validation.reason} for "${(article.title || "").substring(0, 50)}"`)
+      console.log(`  ? Image validation failed: ${validation.reason} for "${(article.title || "").substring(0, 50)}"`)
       return null
     }
 
@@ -379,15 +380,16 @@ async function tryDownload(slug, imageUrl, article) {
     }
 
     try {
+      processed = await cleanImage(processed)
       processed = await applyWatermarks(processed)
     } catch (err) {
-      console.log(`  ~ Watermark skipped: ${err.message}`)
+      console.log(`  ~ Image processing skipped: ${err.message}`)
     }
 
     const finalMeta = await sharp(processed).metadata()
 
     fs.writeFileSync(filePath, processed)
-    console.log(`  ✓ Downloaded & validated image ${validation.width}x${validation.height} for "${(article.title || "").substring(0, 50)}"`)
+    console.log(`  ? Downloaded & validated image ${validation.width}x${validation.height} for "${(article.title || "").substring(0, 50)}"`)
     return {
       path: `/images/articles/${filename}`,
       source: "downloaded",
@@ -396,7 +398,7 @@ async function tryDownload(slug, imageUrl, article) {
       height: finalMeta.height || validation.height,
     }
   } catch (err) {
-    console.log(`  ✗ Download failed: ${err.message} for "${(article.title || "").substring(0, 50)}"`)
+    console.log(`  ? Download failed: ${err.message} for "${(article.title || "").substring(0, 50)}"`)
     return null
   }
 }
