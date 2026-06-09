@@ -5,7 +5,7 @@ const { buildMdxContent } = require("./processor")
 const ARTICLES_DIR = path.join(__dirname, "../../src/data/articles")
 
 const MAX_ARTICLES = 2000
-const EXCERPT_SIMILARITY_THRESHOLD = 0.7
+const EXCERPT_SIMILARITY_THRESHOLD = 0.6
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) {
@@ -52,7 +52,7 @@ function cosineSimilarity(a, b) {
 function normalizeText(text) {
   return text
     .toLowerCase()
-    .replace(/[^a-z0-9\s\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g, "")
+    .replace(/[^a-z0-9\s]/g, "")
     .replace(/\s+/g, " ")
     .trim()
 }

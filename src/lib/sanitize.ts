@@ -234,17 +234,16 @@ export function sanitizeExcerpt(excerpt: string): string {
   result = stripMalformedAIOutput(result)
   result = removeDuplicatedSentences(result)
   result = normalizeWhitespace(result)
-  if (result.length > EXCERPT_MAX_LENGTH) {
-    const truncated = result.slice(0, EXCERPT_MAX_LENGTH)
+  const truncateAt = (max: number) => {
+    const truncated = result.slice(0, max)
     const lastPeriod = truncated.lastIndexOf(".")
     const lastSpace = truncated.lastIndexOf(" ")
-    if (lastPeriod > EXCERPT_MAX_LENGTH * 0.6) {
-      result = result.slice(0, lastPeriod + 1)
-    } else if (lastSpace > 0) {
-      result = result.slice(0, lastSpace) + "..."
-    } else {
-      result = truncated.slice(0, EXCERPT_MAX_LENGTH - 3) + "..."
-    }
+    if (lastPeriod > max * 0.5) return truncated.slice(0, lastPeriod + 1)
+    if (lastSpace > 0) return truncated.slice(0, lastSpace) + "..."
+    return truncated.slice(0, max - 3) + "..."
+  }
+  if (result.length > EXCERPT_MAX_LENGTH) {
+    result = truncateAt(EXCERPT_MAX_LENGTH)
   }
   result = stripIncompleteSentence(result)
   return result.trim()

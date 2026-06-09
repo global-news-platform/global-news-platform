@@ -209,6 +209,34 @@
       "label": "Express Tribune Opinion",
       "attribution": "The Express Tribune",
       "attributionUrl": "https://tribune.com.pk"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/10628494",
+      "category": "shobiz",
+      "label": "BBC Entertainment",
+      "attribution": "BBC News",
+      "attributionUrl": "https://www.bbc.com/news/entertainment_and_arts"
+    },
+    {
+      "url": "https://www.hollywoodreporter.com/feed/",
+      "category": "shobiz",
+      "label": "Hollywood Reporter",
+      "attribution": "The Hollywood Reporter",
+      "attributionUrl": "https://www.hollywoodreporter.com"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/education/rss.xml",
+      "category": "taleem",
+      "label": "BBC Education",
+      "attribution": "BBC News",
+      "attributionUrl": "https://www.bbc.com/news/education"
+    },
+    {
+      "url": "https://tribune.com.pk/rss/science",
+      "category": "science",
+      "label": "Express Tribune Science",
+      "attribution": "The Express Tribune",
+      "attributionUrl": "https://tribune.com.pk"
     }
   ]
 }

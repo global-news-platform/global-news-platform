@@ -24,7 +24,7 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
           <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] text-white/90">LIVE</span>
         </div>
         <div className="flex-1 min-w-0 overflow-hidden py-2.5">
-          <div className="flex animate-marquee gap-12 whitespace-nowrap will-change-transform">
+          <div className="flex animate-marquee-rtl gap-12 whitespace-nowrap will-change-transform">
             {[...articles, ...articles].map((article, i) => (
               <Link
                 key={`${article.slug}-${i}`}

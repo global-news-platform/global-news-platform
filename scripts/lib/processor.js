@@ -96,7 +96,16 @@ async function buildFrontmatter(article) {
 
   return {
     title: article.title,
-    excerpt: article.description.substring(0, 160),
+    excerpt: (function truncate(text, max=160) {
+      if (!text) return ""
+      if (text.length <= max) return text
+      const truncated = text.slice(0, max)
+      const lastPeriod = truncated.lastIndexOf(".")
+      const lastSpace = truncated.lastIndexOf(" ")
+      if (lastPeriod > max * 0.5) return truncated.slice(0, lastPeriod + 1)
+      if (lastSpace > 0) return truncated.slice(0, lastSpace) + "..."
+      return truncated.slice(0, max - 3) + "..."
+    })(article.description),
     category: categorySlug,
     author: author.name,
     authorSlug: author.slug,

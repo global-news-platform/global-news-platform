@@ -96,6 +96,8 @@ export default async function HomePage() {
     khelArticles,
     sehatArticles,
     shobizArticles,
+    scienceArticles,
+    taleemArticles,
   ] = await Promise.all([
     getArticleLinks(),
     getBreakingArticles(),
@@ -108,11 +110,23 @@ export default async function HomePage() {
     getArticlesByCategory("khel"),
     getArticlesByCategory("sehat"),
     getArticlesByCategory("shobiz"),
+    getArticlesByCategory("science"),
+    getArticlesByCategory("taleem"),
   ])
 
   const usedSlugs = new Set<string>()
   if (featured) usedSlugs.add(featured.slug)
   for (const a of breaking) usedSlugs.add(a.slug)
+
+  const allSecondary = sortByEditorialPriority(
+    filterQualityArticles(allArticles).filter((a) => !usedSlugs.has(a.slug))
+  ).slice(0, 5)
+
+  for (const a of allSecondary) usedSlugs.add(a.slug)
+
+  function dedupe(articles: ArticleLink[]): ArticleLink[] {
+    return filterQualityArticles(articles).filter((a) => !usedSlugs.has(a.slug))
+  }
 
   const featuredHero = allArticles[0] || curatedArticle({
     slug: "welcome-to-global-lens-365",
@@ -124,10 +138,6 @@ export default async function HomePage() {
     imageAlt: "The Global Lens 365",
     featured: true,
   })
-
-  const allSecondary = sortByEditorialPriority(
-    filterQualityArticles(allArticles).filter((a) => !usedSlugs.has(a.slug))
-  ).slice(0, 5)
 
   const websiteSchema = generateWebsiteSchema()
   const organizationSchema = generateOrganizationSchema()
@@ -147,10 +157,10 @@ export default async function HomePage() {
 
       <CategoryGrid
         categories={[
-          { slug: "pakistan", name: "Pakistan", articles: filterQualityArticles(pakistanArticles) },
-          { slug: "dunya", name: "World", articles: filterQualityArticles(worldArticles) },
-          { slug: "siasat", name: "Politics", articles: filterQualityArticles(siasatArticles) },
-          { slug: "karobar", name: "Business", articles: filterQualityArticles(karobarArticles) },
+          { slug: "pakistan", name: "Pakistan", articles: dedupe(pakistanArticles) },
+          { slug: "dunya", name: "World", articles: dedupe(worldArticles) },
+          { slug: "siasat", name: "Politics", articles: dedupe(siasatArticles) },
+          { slug: "karobar", name: "Business", articles: dedupe(karobarArticles) },
         ]}
       />
 
@@ -161,12 +171,28 @@ export default async function HomePage() {
 
       <CategoryGrid
         categories={[
-          { slug: "khel", name: "Sports", articles: filterQualityArticles(khelArticles) },
-          { slug: "technology", name: "Technology", articles: filterQualityArticles(techArticles) },
-          { slug: "sehat", name: "Health", articles: filterQualityArticles(sehatArticles) },
-          { slug: "shobiz", name: "Showbiz", articles: filterQualityArticles(shobizArticles) },
+          { slug: "khel", name: "Sports", articles: dedupe(khelArticles) },
+          { slug: "technology", name: "Technology", articles: dedupe(techArticles) },
+          { slug: "sehat", name: "Health", articles: dedupe(sehatArticles) },
+          { slug: "shobiz", name: "Showbiz", articles: dedupe(shobizArticles) },
         ]}
       />
+
+      {(dedupe(scienceArticles).length > 0 || dedupe(taleemArticles).length > 0) && (
+        <>
+          <div className="relative mx-auto max-w-7xl px-3 sm:px-4 lg:px-5">
+            <div className="section-divider" />
+            <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-16 h-[3px] bg-gradient-to-r from-transparent via-gold/60 to-transparent rounded-full animate-pulse-soft" />
+          </div>
+
+          <CategoryGrid
+            categories={[
+              ...(dedupe(scienceArticles).length > 0 ? [{ slug: "science", name: "Science", articles: dedupe(scienceArticles) }] : []),
+              ...(dedupe(taleemArticles).length > 0 ? [{ slug: "taleem", name: "Education", articles: dedupe(taleemArticles) }] : []),
+            ]}
+          />
+        </>
+      )}
     </>
   )
 }
