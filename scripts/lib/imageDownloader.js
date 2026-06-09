@@ -6,7 +6,7 @@ const crypto = require("crypto")
 const sharp = require("sharp")
 const { searchImage } = require("./imageSearch")
 const { applyWatermarks } = require("./watermark")
-const { cleanImage } = require("./imageCleaner")
+const { regenerateViaAI, AI_IMAGE_ENABLED } = require("./imageGenerator")
 
 const ARTICLES_DIR = path.join(__dirname, "../../public/images/articles")
 const FALLBACKS_DIR = path.join(__dirname, "../../public/images/fallbacks")
@@ -333,6 +333,11 @@ async function downloadArticleImage(article) {
     if (result) return result
   }
 
+  if (AI_IMAGE_ENABLED) {
+    console.log(`  ? ALL image sources exhausted for "${(article.title || "").substring(0, 50)}" — SKIPPING article (strict mode)`)
+    return null
+  }
+
   const articleCategory = article.categorySlug || article.category || "general"
   const normalCat = NORMALIZE_CATEGORY[articleCategory] || articleCategory
 
@@ -375,16 +380,12 @@ async function tryDownload(slug, imageUrl, article) {
     let processed = buffer
     if (validation.format !== "jpeg" && validation.format !== "jpg") {
       try {
-        processed = await sharp(buffer).jpeg({ quality: 92, progressive: true }).toBuffer()
+        processed = await sharp(buffer).jpeg({ quality: 95, progressive: true }).toBuffer()
       } catch {}
     }
 
-    try {
-      processed = await cleanImage(processed)
-      processed = await applyWatermarks(processed)
-    } catch (err) {
-      console.log(`  ~ Image processing skipped: ${err.message}`)
-    }
+    processed = await regenerateViaAI(processed, article.title, article.description)
+    processed = await applyWatermarks(processed)
 
     const finalMeta = await sharp(processed).metadata()
 

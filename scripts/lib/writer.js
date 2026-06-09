@@ -116,7 +116,14 @@ async function writeArticle(article) {
     return false
   }
 
-  const mdxContent = await buildMdxContent(article)
+  let mdxContent
+  try {
+    mdxContent = await buildMdxContent(article)
+  } catch (err) {
+    console.log(`  \u2717 Skipped (${err.message})`)
+    return false
+  }
+
   const filePath = path.join(ARTICLES_DIR, `${article.slug}.mdx`)
 
   try {

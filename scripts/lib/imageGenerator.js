@@ -9,11 +9,9 @@ const AI_IMAGE_MODEL = process.env.AI_IMAGE_MODEL || "black-forest-labs/flux-sch
 const AI_IMAGE_BASE_URL = process.env.AI_IMAGE_BASE_URL || "https://api.replicate.com/v1"
 const AI_IMAGE_ENABLED = !!(AI_IMAGE_API_KEY && process.env.AI_IMAGE_ENABLED === "true")
 
-const ARTICLES_IMG_DIR = path.join(__dirname, "../../public/images/articles")
 const TRANSFORMED_DIR = path.join(__dirname, "../../public/images/transformed")
-
-const IMAGE_WIDTH = 1200
-const IMAGE_HEIGHT = 630
+const TARGET_WIDTH = 1200
+const TARGET_HEIGHT = 630
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
@@ -30,16 +28,32 @@ async function downloadImage(url) {
   return buffer
 }
 
-async function regenerateViaAI(originalBuffer, title) {
-  if (!AI_IMAGE_ENABLED) return originalBuffer
+function buildPrompt(title, description) {
+  const topic = (title + " " + (description || "")).slice(0, 200)
+  return `Regenerate this news photograph exactly as a professional photojournalism image. Topic: ${topic}. High quality, 4K resolution, sharp details, accurate colors, natural lighting, realistic textures. CRITICAL: Remove all text, logos, watermarks, channel overlays, badges, banners, labels, subtitles, and captions from the image. Output must be a clean news photograph with no superimposed elements.`
+}
 
-  const ext = AI_IMAGE_MODEL.includes("flux") ? ".png" : ".jpg"
-  const tempPath = path.join(TRANSFORMED_DIR, `_ai_ref${ext}`)
+async function regenerateViaAI(originalBuffer, title, description) {
+  if (!AI_IMAGE_ENABLED) {
+    console.log("    AI image regeneration disabled, using inpainting fallback")
+    const cleaned = await cleanImage(originalBuffer)
+    return cleaned
+  }
+
   ensureDir(TRANSFORMED_DIR)
-  await sharp(originalBuffer).resize(1024, 1024, { fit: "inside" }).toFile(tempPath)
+  const tempPath = path.join(TRANSFORMED_DIR, `_ai_input_${Date.now()}.png`)
+  const outputPath = path.join(TRANSFORMED_DIR, `_ai_output_${Date.now()}.jpg`)
 
   try {
-    const data = await readBinary(tempPath)
+    await sharp(originalBuffer)
+      .resize(1024, 1024, { fit: "inside", withoutEnlargement: false })
+      .png()
+      .toFile(tempPath)
+
+    const imageData = fs.readFileSync(tempPath)
+    const prompt = buildPrompt(title, description)
+
+    console.log(`    Sending to AI for watermark-free regeneration (model: ${AI_IMAGE_MODEL})...`)
 
     const response = await fetch(`${AI_IMAGE_BASE_URL}/predictions`, {
       method: "POST",
@@ -50,26 +64,30 @@ async function regenerateViaAI(originalBuffer, title) {
       body: JSON.stringify({
         version: AI_IMAGE_MODEL,
         input: {
-          prompt: `News photograph: ${title.slice(0, 100)}. Professional photojournalism, high quality, no text, no watermark, clean image`,
-          image: data.toString("base64"),
+          prompt,
+          image: `data:image/png;base64,${imageData.toString("base64")}`,
           num_outputs: 1,
-          num_inference_steps: 25,
+          num_inference_steps: 30,
           guidance_scale: 7.5,
           output_format: "jpg",
+          output_quality: 95,
+          width: 1024,
+          height: 1024,
         },
       }),
     })
 
     if (!response.ok) {
       const err = await response.text().catch(() => "")
-      throw new Error(`AI Image API error: ${response.status} ${err.slice(0, 100)}`)
+      throw new Error(`AI API responded ${response.status}: ${err.slice(0, 150)}`)
     }
 
     const prediction = await response.json()
     const predictionId = prediction.id
 
+    console.log("    Waiting for AI generation to complete...")
     let result
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 90; i++) {
       await new Promise((r) => setTimeout(r, 2000))
       const statusResp = await fetch(`${AI_IMAGE_BASE_URL}/predictions/${predictionId}`, {
         headers: { "Authorization": `Token ${AI_IMAGE_API_KEY}` },
@@ -80,54 +98,62 @@ async function regenerateViaAI(originalBuffer, title) {
         break
       }
       if (status.status === "failed") {
-        throw new Error(`AI image generation failed: ${status.error || "unknown"}`)
+        throw new Error(`AI generation failed: ${status.error || "unknown"}`)
       }
+      if (i % 15 === 0) console.log(`    Still waiting... (${Math.round(i * 2)}s)`)
     }
 
-    if (!result) throw new Error("AI image generation timed out")
+    if (!result) throw new Error("AI image generation timed out after 3 minutes")
 
     const imageUrl = Array.isArray(result) ? result[0] : result
     const regenerated = await downloadImage(imageUrl)
-    console.log(`    AI regenerated image (model: ${AI_IMAGE_MODEL})`)
-    return regenerated
-  } catch (err) {
-    console.log(`    AI image regeneration skipped: ${err.message}`)
-    return originalBuffer
-  }
-}
 
-function readBinary(filePath) {
-  return new Promise((resolve, reject) => {
-    fs.readFile(filePath, (err, data) => {
-      if (err) reject(err)
-      else resolve(data)
-    })
-  })
+    await sharp(regenerated)
+      .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
+      .jpeg({ quality: 95, progressive: true })
+      .toFile(outputPath)
+
+    console.log("    AI regeneration complete — source watermark removed")
+    return fs.readFileSync(outputPath)
+  } catch (err) {
+    console.log(`    AI regeneration failed: ${err.message}`)
+    console.log("    Falling back to inpainting-based watermark removal")
+    try {
+      const cleaned = await cleanImage(originalBuffer)
+      return cleaned
+    } catch (fallbackErr) {
+      throw new Error(`All image processing failed: ${err.message}; fallback also failed: ${fallbackErr.message}`)
+    }
+  } finally {
+    try { if (fs.existsSync(tempPath)) fs.unlinkSync(tempPath) } catch {}
+    try { if (fs.existsSync(outputPath)) fs.unlinkSync(outputPath) } catch {}
+  }
 }
 
 async function processArticleImage(article) {
   const slug = article.slug || `article-${Date.now()}`
   const imageUrl = article.image || article.imageUrl || ""
   const title = article.title || "News"
+  const description = article.description || article.excerpt || ""
 
   if (!imageUrl) {
     console.log(`  No image URL for ${slug}`)
     return null
   }
 
-  ensureDir(ARTICLES_IMG_DIR)
+  ensureDir(path.join(__dirname, "../../public/images/articles"))
 
   try {
     const original = await downloadImage(imageUrl)
 
-    const regenerated = await regenerateViaAI(original, title)
+    const processed = await regenerateViaAI(original, title, description)
 
-    let cleaned = await cleanImage(regenerated)
+    const withWatermark = await applyWatermarks(processed)
 
-    let pipeline = sharp(cleaned)
+    let pipeline = sharp(withWatermark)
     const meta = await pipeline.metadata()
-    const w = meta.width || IMAGE_WIDTH
-    const h = meta.height || IMAGE_HEIGHT
+    const w = meta.width || TARGET_WIDTH
+    const h = meta.height || TARGET_HEIGHT
 
     const cropLeft = Math.round(w * 0.08)
     const cropTop = Math.round(h * 0.06)
@@ -136,7 +162,7 @@ async function processArticleImage(article) {
     const cropW = w - cropLeft - cropRight
     const cropH = h - cropTop - cropBottom
     if (cropW > 200 && cropH > 200) {
-      pipeline = sharp(regenerated).extract({
+      pipeline = sharp(withWatermark).extract({
         left: cropLeft,
         top: cropTop,
         width: cropW,
@@ -145,19 +171,17 @@ async function processArticleImage(article) {
     }
 
     const resized = await pipeline
-      .resize(IMAGE_WIDTH, IMAGE_HEIGHT, { fit: "cover", position: "centre" })
-      .jpeg({ quality: 85, progressive: true })
+      .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
+      .jpeg({ quality: 95, progressive: true })
       .toBuffer()
 
-    const watermarked = await applyWatermarks(resized)
-
-    const outPath = path.join(ARTICLES_IMG_DIR, `${slug}.jpg`)
-    fs.writeFileSync(outPath, watermarked)
-    console.log(`  Image processed: ${slug}.jpg (AI regen: ${AI_IMAGE_ENABLED}, watermark: The Global Lens 365)`)
+    const outPath = path.join(__dirname, "../../public/images/articles", `${slug}.jpg`)
+    fs.writeFileSync(outPath, resized)
+    console.log(`  Image ready: ${slug}.jpg (AI regen: ${AI_IMAGE_ENABLED}, watermark: The Global Lens 365)`)
 
     return `/images/articles/${slug}.jpg`
   } catch (err) {
-    console.log(`  Image processing failed for ${slug}: ${err.message}`)
+    console.log(`  Image processing FAILED for ${slug}: ${err.message}`)
     return null
   }
 }
@@ -179,9 +203,9 @@ async function processAllArticleImages(articles, concurrency = 3) {
   }
 
   const processed = results.filter(Boolean).length
-  console.log(`Images processed: ${processed}/${articles.length}`)
+  console.log(`Images processed successfully: ${processed}/${articles.length}`)
 
   return results
 }
 
-module.exports = { processArticleImage, processAllArticleImages, AI_IMAGE_ENABLED }
+module.exports = { processArticleImage, processAllArticleImages, regenerateViaAI, AI_IMAGE_ENABLED }

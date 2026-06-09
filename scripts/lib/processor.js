@@ -70,6 +70,7 @@ function extractTopics(title, description, tags) {
 
 async function resolveImageForArticle(article, categorySlug) {
   const result = await downloadArticleImage(article)
+  if (!result) return null
   return result.path
 }
 
@@ -93,6 +94,9 @@ async function buildFrontmatter(article) {
   const topics = extractTopics(article.title, article.description, article.tags)
 
   const imagePath = await resolveImageForArticle(article, categorySlug)
+  if (!imagePath) {
+    throw new Error(`No valid image — skipping article "${(article.title || "").substring(0, 60)}"`)
+  }
 
   return {
     title: article.title,
