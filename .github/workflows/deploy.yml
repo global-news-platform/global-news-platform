@@ -27,25 +27,32 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Check token and deploy
+      - name: Check Vercel setup
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
-          echo "=== VERCEL_TOKEN length: ${#VERCEL_TOKEN} ==="
-          echo "=== VERCEL_ORG_ID: ${VERCEL_ORG_ID} ==="
+          {
+            echo "## Vercel Debug"
+            echo ""
+            echo "**Token length:** ${#VERCEL_TOKEN}"
+            echo "**Org ID:** ${VERCEL_ORG_ID}"
+            echo ""
+            echo "### User info"
+            curl -sS "https://api.vercel.com/v2/user" \
+              -H "Authorization: Bearer $VERCEL_TOKEN" | head -5
+            echo ""
+            echo "### Teams"
+            curl -sS "https://api.vercel.com/v2/teams" \
+              -H "Authorization: Bearer $VERCEL_TOKEN" | head -10
+            echo ""
+          } >> "$GITHUB_STEP_SUMMARY"
 
-          echo "=== Testing Vercel API auth ==="
-          curl -sS "https://api.vercel.com/v2/user" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" 2>&1 | head -5
-          echo "--- exit: $? ---"
-
-          echo "=== Testing team scope ==="
-          curl -sS "https://api.vercel.com/v2/teams" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" 2>&1 | head -10
-          echo "--- exit: $? ---"
-
-          echo "=== Creating project ==="
+      - name: Create project
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: |
           curl -sS -X POST "https://api.vercel.com/v1/projects" \
             -H "Authorization: Bearer $VERCEL_TOKEN" \
             -H "x-vercel-team-id: $VERCEL_ORG_ID" \
@@ -60,11 +67,15 @@ jobs:
                 "type": "github",
                 "repoId": 1235422354
               }
-            }' 2>&1 | head -20
-          echo "--- exit: $? ---"
+            }' 2>&1 | head -5
+          echo "--- Create exit: $? ---"
 
-          echo "=== Deploying ==="
-          curl -sS -X POST "https://api.vercel.com/v13/deployments" \
+      - name: Deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: |
+          OUT=$(curl -sS -X POST "https://api.vercel.com/v13/deployments" \
             -H "Authorization: Bearer $VERCEL_TOKEN" \
             -H "x-vercel-team-id: $VERCEL_ORG_ID" \
             -H "Content-Type: application/json" \
@@ -77,5 +88,7 @@ jobs:
                 "repoId": 1235422354
               },
               "target": "production"
-            }' 2>&1 | head -30
-          echo "--- exit: $? ---"
+            }' 2>&1)
+          echo "$OUT" | head -30
+          echo "--- Deploy exit: $? ---"
+          echo "$OUT" >> "$GITHUB_STEP_SUMMARY"
