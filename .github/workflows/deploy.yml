@@ -27,18 +27,33 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Vercel
+      - name: Create Vercel project & deploy
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
+          # Create project with GitHub integration (idempotent)
+          curl -sf -X POST "https://api.vercel.com/v1/projects" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "name": "TheGlobalLens365",
+              "framework": "nextjs",
+              "gitRepository": {
+                "type": "github",
+                "repoId": 1235422354
+              }
+            }' 2>&1 | head -3 || echo "Project may already exist"
+
+          # Deploy from GitHub
           curl -sf -X POST "https://api.vercel.com/v13/deployments" \
             -H "Authorization: Bearer $VERCEL_TOKEN" \
             -H "x-vercel-team-id: $VERCEL_ORG_ID" \
             -H "Content-Type: application/json" \
             -d '{
-              "name": "the-global-lens-365",
-              "project": "the-global-lens-365",
+              "name": "TheGlobalLens365",
+              "project": "TheGlobalLens365",
               "gitSource": {
                 "type": "github",
                 "ref": "main",
