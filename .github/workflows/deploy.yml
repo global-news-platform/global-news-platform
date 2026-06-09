@@ -48,12 +48,13 @@ jobs:
             echo ""
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Create project
+      - name: Create project & deploy
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
-          curl -sS -X POST "https://api.vercel.com/v1/projects" \
+          # Create project
+          PROJ=$(curl -sS -X POST "https://api.vercel.com/v1/projects" \
             -H "Authorization: Bearer $VERCEL_TOKEN" \
             -H "x-vercel-team-id: $VERCEL_ORG_ID" \
             -H "Content-Type: application/json" \
@@ -63,32 +64,37 @@ jobs:
               "buildCommand": "npm run build",
               "outputDirectory": ".next",
               "installCommand": "npm ci",
-              "gitRepository": {
-                "type": "github",
-                "repoId": 1235422354
-              }
-            }' 2>&1 | head -5
-          echo "--- Create exit: $? ---"
+              "gitRepository": {"type": "github", "repoId": 1235422354}
+            }' 2>&1)
+          echo "--- Project create exit: $? ---"
 
-      - name: Deploy
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          OUT=$(curl -sS -X POST "https://api.vercel.com/v13/deployments" \
+          # Create deployment
+          DEP=$(curl -sS -X POST "https://api.vercel.com/v13/deployments" \
             -H "Authorization: Bearer $VERCEL_TOKEN" \
             -H "x-vercel-team-id: $VERCEL_ORG_ID" \
             -H "Content-Type: application/json" \
             -d '{
               "name": "TheGlobalLens365",
               "project": "TheGlobalLens365",
-              "gitSource": {
-                "type": "github",
-                "ref": "main",
-                "repoId": 1235422354
-              },
+              "gitSource": {"type": "github", "ref": "main", "repoId": 1235422354},
               "target": "production"
             }' 2>&1)
-          echo "$OUT" | head -30
-          echo "--- Deploy exit: $? ---"
-          echo "$OUT" >> "$GITHUB_STEP_SUMMARY"
+          echo "--- Deploy create exit: $? ---"
+
+          # Extract URL and ID
+          URL=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('url','no-url'))" 2>/dev/null || echo "parse-failed")
+          ID=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('id','no-id'))" 2>/dev/null || echo "parse-failed")
+          echo "URL=$URL ID=$ID"
+
+          # Wait for build, poll every 30s up to 10min
+          if [ "$ID" != "no-id" ]; then
+            for i in $(seq 1 20); do
+              sleep 30
+              STATUS=$(curl -sS "https://api.vercel.com/v13/deployments/$ID" \
+                -H "Authorization: Bearer $VERCEL_TOKEN" \
+                -H "x-vercel-team-id: $VERCEL_ORG_ID" 2>/dev/null | \
+                python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('readyState','unknown'))" 2>/dev/null || echo "unknown")
+              echo "  Check $i: $STATUS"
+              if [ "$STATUS" = "READY" ] || [ "$STATUS" = "ERROR" ]; then break; fi
+            done
+          fi
