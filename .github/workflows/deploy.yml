@@ -32,36 +32,5 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
-          set -x
-          # Create project with full settings
-          curl -sS -X POST "https://api.vercel.com/v1/projects" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "name": "TheGlobalLens365",
-              "framework": "nextjs",
-              "buildCommand": "npm run build",
-              "outputDirectory": ".next",
-              "installCommand": "npm ci",
-              "gitRepository": {
-                "type": "github",
-                "repo": "global-news-platform/global-news-platform"
-              }
-            }' 2>&1; echo "--- project create exit: $? ---"
-
-          # Deploy from repo
-          curl -sS -X POST "https://api.vercel.com/v13/deployments" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "name": "TheGlobalLens365",
-              "project": "TheGlobalLens365",
-              "gitSource": {
-                "type": "github",
-                "ref": "main",
-                "repoId": 1235422354
-              },
-              "target": "production"
-            }' 2>&1; echo "--- deploy exit: $? ---"
+          npx vercel deploy --prod --token="$VERCEL_TOKEN" \
+            --scope="$VERCEL_ORG_ID" --yes --force --json 2>&1
