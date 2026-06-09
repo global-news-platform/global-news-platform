@@ -2,1867 +2,1542 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://the-global-lens-365.vercel.app/</loc>
+    <loc>https://thegloballens365.vercel.app/</loc>
     <priority>1</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/breaking</loc>
+    <loc>https://thegloballens365.vercel.app/breaking</loc>
     <priority>0.9</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/search</loc>
+    <loc>https://thegloballens365.vercel.app/search</loc>
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/about-us</loc>
+    <loc>https://thegloballens365.vercel.app/about-us</loc>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/privacy-policy</loc>
+    <loc>https://thegloballens365.vercel.app/privacy-policy</loc>
     <priority>0.4</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/terms-of-service</loc>
+    <loc>https://thegloballens365.vercel.app/terms-of-service</loc>
     <priority>0.4</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/copyright-policy</loc>
+    <loc>https://thegloballens365.vercel.app/copyright-policy</loc>
     <priority>0.3</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/dmca</loc>
+    <loc>https://thegloballens365.vercel.app/dmca</loc>
     <priority>0.3</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/attribution-policy</loc>
+    <loc>https://thegloballens365.vercel.app/attribution-policy</loc>
     <priority>0.4</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/pakistan</loc>
+    <loc>https://thegloballens365.vercel.app/category/pakistan</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/dunya</loc>
+    <loc>https://thegloballens365.vercel.app/category/dunya</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/siasat</loc>
+    <loc>https://thegloballens365.vercel.app/category/siasat</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/karobar</loc>
+    <loc>https://thegloballens365.vercel.app/category/karobar</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/technology</loc>
+    <loc>https://thegloballens365.vercel.app/category/technology</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/khel</loc>
+    <loc>https://thegloballens365.vercel.app/category/khel</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/sehat</loc>
+    <loc>https://thegloballens365.vercel.app/category/sehat</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/science</loc>
+    <loc>https://thegloballens365.vercel.app/category/science</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/shobiz</loc>
+    <loc>https://thegloballens365.vercel.app/category/shobiz</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/mazhab</loc>
+    <loc>https://thegloballens365.vercel.app/category/mazhab</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/taleem</loc>
+    <loc>https://thegloballens365.vercel.app/category/taleem</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/mausam</loc>
+    <loc>https://thegloballens365.vercel.app/category/mausam</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/crime</loc>
+    <loc>https://thegloballens365.vercel.app/category/crime</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/adalat</loc>
+    <loc>https://thegloballens365.vercel.app/category/adalat</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/baynalaqwami</loc>
+    <loc>https://thegloballens365.vercel.app/category/baynalaqwami</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/raye</loc>
+    <loc>https://thegloballens365.vercel.app/category/raye</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/category/general</loc>
+    <loc>https://thegloballens365.vercel.app/category/general</loc>
     <priority>0.8</priority>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/27-terrorists-killed-in-north-waziristan-ibos-ispr--0t0eln</loc>
+    <loc>https://thegloballens365.vercel.app/article/28th-amendment--lod2f2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/28th-amendment--wlev66</loc>
+    <loc>https://thegloballens365.vercel.app/article/300-migrants-bound-for-uk-kidnapped-and-threatened-with-kidney-removal--17ji96</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/a-7-8-magnitude-quake-in-the-philippines-kills-at-least-32--15dtc4</loc>
+    <loc>https://thegloballens365.vercel.app/article/4-states-head-to-the-polls-and-global-conflicts-are-on-the-rise-new-report-says--r834ul</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/a-world-cup-for-them-not-us-fans-anger-at-us-travel-bans-and-visa-restrictions--shmh0g</loc>
+    <loc>https://thegloballens365.vercel.app/article/6-personnel-martyred-as-terrorists-bid-to-capture-frontier-constabulary-post-in---8wpf0e</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/acid-attack-more-heinous-than-homicide-tool-of-patriarchal-violence-sc--s5jg4z</loc>
+    <loc>https://thegloballens365.vercel.app/article/a-good-girl-s-guide-to-murder-will-end-with-season-3-at-netflix--kieb7h</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/action-replay-of-2024-elections-pti-ttap-reject-gb-election-results-level-riggin--t52iek</loc>
+    <loc>https://thegloballens365.vercel.app/article/a-level-maths-exam-marking-to-be-watched-closely-by-regulator-after-students-say--1olk4p</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/after-trading-missile-fire-israel-and-iran-pull-back-for-now--ydztqb</loc>
+    <loc>https://thegloballens365.vercel.app/article/afghanistan-police-crack-down-on-anti-hijab-protests-in-herat--hjprws</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ajk-govt-cracks-down-on-jaac-after-imposition-of-ban--7vn67l</loc>
+    <loc>https://thegloballens365.vercel.app/article/ai-giants-race-to-raise-funds-heats-up-as-chatgpt-owner-plans-stock-market-debut--5rezmw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/al-jazeera-explains-china-north-korea-ties-as-xi-visits-pyongyang--gtlmnn</loc>
+    <loc>https://thegloballens365.vercel.app/article/ajk-braces-for-jaac-long-march-as-tensions-persist--x1moci</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/al-jazeera-reports-from-beirut-after-israeli-attack--7wqmid</loc>
+    <loc>https://thegloballens365.vercel.app/article/ajk-flare-up--hs81jk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/albanian-pm-rama-vows-to-push-on-with-kushner-linked-luxury-resort--uyh093</loc>
+    <loc>https://thegloballens365.vercel.app/article/anthony-guidera-actor-who-had-a-memorable-kiss-in-species-dies-at-65--azdim8</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/alexander-zverev-wins-french-open-to-claim-first-grand-slam-title--xmeffz</loc>
+    <loc>https://thegloballens365.vercel.app/article/anthropic-urges-ai-labs-to-pause-development-warns-humans-risk-losing-control--8r30ll</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/anthropic-urges-ai-labs-to-pause-development-warns-humans-risk-losing-control--s7aaii</loc>
+    <loc>https://thegloballens365.vercel.app/article/anti-state-remarks-case-non-bailable-warrants-reissued-for-cm-afridi-in-peca-cas--bb8tl3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/antonelli-russell-contrast-could-hardly-be-more-stark--rf3fzx</loc>
+    <loc>https://thegloballens365.vercel.app/article/any-cat-to-catch-the-mice--cwyimm</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/antonelli-wins-monaco-from-hamilton-after-dramatic-ending--lb15hw</loc>
+    <loc>https://thegloballens365.vercel.app/article/apple-unveils-siri-ai-makeover-as-tim-cook-bids-farewell--5o42mz</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/apple-unveils-siri-ai-makeover-as-tim-cook-bids-farewell--474u75</loc>
+    <loc>https://thegloballens365.vercel.app/article/ariana-grande-and-ethan-slater-split-after-three-years--tsuxqm</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/are-portugal-better-without-ronaldo--y39jeo</loc>
+    <loc>https://thegloballens365.vercel.app/article/armenia-once-russia-s-reliable-ally-considers-an-eu-future--xahsq5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/armenia-once-russia-s-reliable-ally-considers-an-eu-future--ezvvg9</loc>
+    <loc>https://thegloballens365.vercel.app/article/astronauts-return-to-iss-after-sheltering-during-air-leak-repair-attempt--e0nir7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/armenia-s-pro-west-government-wins-election-despite-russian-pressure--addrsg</loc>
+    <loc>https://thegloballens365.vercel.app/article/at-least-35-dead-as-deadly-earthquake-rocks-philippines--yz08vn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/armenia-votes-as-russia-piles-pressure-on-pro-west-government--x76go6</loc>
+    <loc>https://thegloballens365.vercel.app/article/author-of-home-office-report-on-china-reveals-attempts-to-compromise-him--f2v2kn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/armenian-pm-pashinyan-declares-victory-in-parliamentary-elections--vs2prl</loc>
+    <loc>https://thegloballens365.vercel.app/article/aviation-industry-looks-skywards-as-leaders-fly-in-for-rio-summit--nuayg2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/armenians-vote-in-general-election-watched-closely-by-russia-and-the-west--wgpy6n</loc>
+    <loc>https://thegloballens365.vercel.app/article/backlash-over-department-for-education-videos-with-gemma-collins--fur1uk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/as-hot-summer-blackouts-loom-iraq-looks-to-solar-power--ap37dt</loc>
+    <loc>https://thegloballens365.vercel.app/article/badenoch-criticises-macpherson-report-and-calls-for-more-stop-and-search--hfkrsy</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/astronauts-return-to-iss-after-sheltering-during-air-leak-repair-attempt--ekac6t</loc>
+    <loc>https://thegloballens365.vercel.app/article/bahrain-commander-meets-cdf-munir-discusses-strengthening-military-collaboration--2rdpp8</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/at-least-11-killed-in-pakistan-administered-kashmir-clashes-before-rally--vctz4n</loc>
+    <loc>https://thegloballens365.vercel.app/article/bandits-in-north-west-nigeria-abduct-villagers-they-invited-to-discuss-peace-tal--upnfli</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/at-least-32-dead-after-major-earthquake-strikes-southern-philippines--nldj6n</loc>
+    <loc>https://thegloballens365.vercel.app/article/bank-of-england-warns-of-ai-scams-as-deepfakes-of-farage-bailey-fight-spread--pzx544</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/at-least-7-civilians-killed-during-sunday-clash-between-police-jaac-protesters-i--bq15s0</loc>
+    <loc>https://thegloballens365.vercel.app/article/barack-obama-surprised-the-disclosure-day-set-imagine-your-scariest-day-at-work---h2oq2x</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/authenticity-is-what-american-voters-want--t8q8rm</loc>
+    <loc>https://thegloballens365.vercel.app/article/beyond-the-herd--urscqm</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/author-of-home-office-report-on-china-reveals-attempts-to-compromise-him--dllk26</loc>
+    <loc>https://thegloballens365.vercel.app/article/black-bear-caught-in-japan-after-days-of-sightings--36ocgk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/aviation-industry-looks-skywards-as-leaders-fly-in-for-rio-summit--oacbr7</loc>
+    <loc>https://thegloballens365.vercel.app/article/brazil-argentina-germany-win-friendlies-days-before-world-cup--ismh8r</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ba-boss-warns-costly-aviation-taxes-and-rail-tickets-are-stunting-uk-growth--hnslh5</loc>
+    <loc>https://thegloballens365.vercel.app/article/breakthrough-ovarian-cancer-drug-offers-patients-more-time-and-better-quality-of--18axew</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/badenoch-to-vow-to-scrap-public-sector-equality-duty-in-effort-to-fend-off-refor--00yt8l</loc>
+    <loc>https://thegloballens365.vercel.app/article/british-firms-to-be-favoured-in-defence-spending--5wempc</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/balochistan-cm-announces-civil-award-to-be-conferred-on-man-who-helped-female-do--pfl5i1</loc>
+    <loc>https://thegloballens365.vercel.app/article/budget-blues--z74wdf</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/bangladesh-target-upset-in-australia-odis--ngdssv</loc>
+    <loc>https://thegloballens365.vercel.app/article/budget-likely-to-be-announced-on-june-12-says-minister--0nzcmg</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/bellingham-has-fight-to-start-for-england-tuchel--d2jmq2</loc>
+    <loc>https://thegloballens365.vercel.app/article/budget-timing-in-doubt-after-national-economic-council-meeting-put-off-again--tgyh1s</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/beyond-the-herd--5oe2x8</loc>
+    <loc>https://thegloballens365.vercel.app/article/burnham-says-he-would-seek-to-enter-any-labour-leadership-contest--hnll76</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/bilawal-calls-urgent-ppp-meeting-over-ajk-tensions--zqya5q</loc>
+    <loc>https://thegloballens365.vercel.app/article/business-leaders-seek-restoration-of-final-tax-regime--d3cpbg</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/bilawal-says-will-meet-pm-shehbaz-over-ajk-situation-state-media-reports-jaac-he--hvqx8o</loc>
+    <loc>https://thegloballens365.vercel.app/article/calls-for-urgent-action-on-baby-sleep-industry-after-bbc-investigation--hn58rp</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/biles-reveals-health-scare-after-almost-dying--00md1a</loc>
+    <loc>https://thegloballens365.vercel.app/article/can-two-hours-of-strength-training-a-week-reduce-the-risk-of-dying-early--fjlajc</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/billionaire-west-ham-co-owner-accused-of-abusing-his-power-and-preying-on-women---mknhxq</loc>
+    <loc>https://thegloballens365.vercel.app/article/can-xi-bring-north-korea-closer-into-beijing-s-orbit--av0jvb</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/bisp-head-urges-apology-after-rana-sanaullah-s-beggar-remarks--akejm9</loc>
+    <loc>https://thegloballens365.vercel.app/article/cautious-keir-seeks-to-cement-his-legacy-as-he-plods-towards-the-exit-john-crace--qxifx7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/bolivia-s-legislature-passes-law-allowing-use-of-troops-against-protesters--s9ecyy</loc>
+    <loc>https://thegloballens365.vercel.app/article/ceasefire-in-name--smr5wp</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/born-in-leeds-crafted-in-norway-how-haaland-became-nation-s-superstar--lbs09q</loc>
+    <loc>https://thegloballens365.vercel.app/article/charlie-sheen-on-sobriety-his-netflix-doc-and-other-things-he-swears-we-wouldn-t--p3neyf</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/brazil-argentina-germany-win-friendlies-days-before-world-cup--vvxr9m</loc>
+    <loc>https://thegloballens365.vercel.app/article/china-s-xi-hails-deeper-understanding-at-end-of-north-korea-summit--es10v5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/breakthrough-ovarian-cancer-drug-offers-patients-more-time-and-better-quality-of--zbgbxb</loc>
+    <loc>https://thegloballens365.vercel.app/article/city-airport-faces-opposition-to-large-jet-plans--5f96hw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/burnham-says-he-would-seek-to-enter-any-labour-leadership-contest--8zgy9r</loc>
+    <loc>https://thegloballens365.vercel.app/article/conflicts-are-on-the-rise-globally-at-the-highest-level-since-wwii-data-shows--ah7msb</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/cake-sheds-are-making-bakers-1-000-a-week-but-the-dream-might-be-over--2osbhd</loc>
+    <loc>https://thegloballens365.vercel.app/article/conflicts-around-the-globe-hit-highest-levels-since-world-war-ii-new-report-says--thj0k8</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/can-two-hours-of-strength-training-a-week-reduce-the-risk-of-dying-early--q0cgng</loc>
+    <loc>https://thegloballens365.vercel.app/article/cosmeticorexia-how-girls-are-falling-down-a-skincare-rabbit-hole--r176xs</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/can-xi-bring-north-korea-closer-into-beijing-s-orbit--uz3pmt</loc>
+    <loc>https://thegloballens365.vercel.app/article/could-humanoid-robots-be-heading-for-the-battlefield--gexlro</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/canada-endorses-embattled-marine-park-s-plan-to-relocate-30-beluga-whales--yuizib</loc>
+    <loc>https://thegloballens365.vercel.app/article/daily-pill-doubles-survival-time-for-pancreatic-cancer-patients--7ayh4q</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/cautious-keir-seeks-to-cement-his-legacy-as-he-plods-towards-the-exit-john-crace--vp2ai0</loc>
+    <loc>https://thegloballens365.vercel.app/article/damaged-childhoods--8u9142</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/cctv-captures-moment-of-deadly-strike-on-zaporizhzhia-ukraine--gnoat0</loc>
+    <loc>https://thegloballens365.vercel.app/article/deadly-protests-in-pakistan-administered-kashmir-what-s-going-on--ylo6e5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ceasefire-in-name--20289q</loc>
+    <loc>https://thegloballens365.vercel.app/article/delays-to-defence-plan-undermine-uk-credibility-mps-say--zvey5x</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/child-phone-nudity-law-could-largely-end-online-child-sexual-abuse-if-widely-ado--x3bdf6</loc>
+    <loc>https://thegloballens365.vercel.app/article/did-netanyahu-really-defy-trump-in-bombing-iran--rtk6dg</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/china-s-xi-jinping-and-north-korea-s-kim-jong-un-meet-in-pyongyang--z41so9</loc>
+    <loc>https://thegloballens365.vercel.app/article/disclosure-day-review-emily-blunt-josh-o-connor-and-colin-firth-lead-steven-spie--02s138</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/china-s-xi-lands-in-north-korea-for-rare-visit-hails-invincible-friendship-with---lm58zt</loc>
+    <loc>https://thegloballens365.vercel.app/article/doctor-attacked--u1aq39</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/china-taiwan-vessels-in-standoff-amid-beijing-special-operation--0p8wkp</loc>
+    <loc>https://thegloballens365.vercel.app/article/don-t-be-too-kind-maternity-staff-used-offensive-terms-to-refer-to-pregnant-wome--vckn08</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/chinese-president-visits-north-korea-for-the-first-time-in-7-years--70ijuk</loc>
+    <loc>https://thegloballens365.vercel.app/article/downing-street-hits-out-after-vance-post-about-henry-nowak--4vpmat</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/church-abuse-victims-not-invited-to-meet-pope--7phzg3</loc>
+    <loc>https://thegloballens365.vercel.app/article/download-your-world-cup-2026-wallchart--zuivhz</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/city-airport-faces-opposition-to-large-jet-plans--mlo3q8</loc>
+    <loc>https://thegloballens365.vercel.app/article/driving-test-booking-rules-tightened-after-thousands-of-no-shows--kk0ycd</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/city-s-gonna-be-crazy-knicks-run-electrifies-nyc-as-trump-s-attendance-locks-dow--o01amz</loc>
+    <loc>https://thegloballens365.vercel.app/article/ebola-outbreak-who-s-tedros-visits-uganda-bordering-the-drc-ituri-province-epice--ptrrjn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/civilians-flee-as-somali-troops-and-opposition-allied-militias-trade-fire-in-mog--6gddaz</loc>
+    <loc>https://thegloballens365.vercel.app/article/ebola-spread-in-central-africa-could-match-2014-record-outbreak-us-health-offici--dxqna7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/constitutional-amendment-not-a-concession-to-be-wrested-says-ajk-sc-on-president--r0g9ct</loc>
+    <loc>https://thegloballens365.vercel.app/article/education-secretary-to-ask-competition-watchdog-to-review-hidden-childcare-costs--jcd7b0</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/cooling-cities--vkiatc</loc>
+    <loc>https://thegloballens365.vercel.app/article/eight-killed-in-israel-lebanon-strikes--snyiuj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/cosmeticorexia-how-girls-are-falling-down-a-skincare-rabbit-hole--npzm10</loc>
+    <loc>https://thegloballens365.vercel.app/article/elle-makes-her-debut-in-trailer-for-legally-blonde-prequel-series--5v08ge</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/crusaders-suffer-record-134-0-defeat--fjbgsb</loc>
+    <loc>https://thegloballens365.vercel.app/article/emily-nearly-lost-access-to-her-baby-because-of-a-hair-strand-test-experts-fear---6dxl1s</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/daily-pill-doubles-survival-time-for-pancreatic-cancer-patients--liri8i</loc>
+    <loc>https://thegloballens365.vercel.app/article/england-cricket-board-investigates-stokes-atkinson-for-breaking-team-rules-in-ni--62pmt2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/damaged-childhoods--9mc027</loc>
+    <loc>https://thegloballens365.vercel.app/article/ethiopia-s-election-results-will-likely-confirm-status-quo--eucaoj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/dar-assures-ppp-of-incorporating-its-tax-related-proposals-in-upcoming-budget-sa--if8k69</loc>
+    <loc>https://thegloballens365.vercel.app/article/eu-orders-meta-to-open-whatsapp-to-rival-ai-chatbots--ibqgn4</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/david-lammy-i-told-jd-vance-he-was-wrong-about-henry-nowak-murder--ztlwv7</loc>
+    <loc>https://thegloballens365.vercel.app/article/exploding-rocket-casts-doubts-over-nasa-s-moon-plans--n1y4bj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/delays-to-defence-plan-undermine-uk-credibility-mps-say--ysovd4</loc>
+    <loc>https://thegloballens365.vercel.app/article/extreme-fear-among-immigrants-as-backlash-sweeps-south-africa--ufao3e</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/denmark-s-christian-eriksen-collapses-during-match-with-ukraine--62vbol</loc>
+    <loc>https://thegloballens365.vercel.app/article/failing-sea-defences-disaster-for-nature-reserve--pu5vai</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/denmark-s-christian-eriksen-collapses-on-football-pitch-during-friendly--mtvd8b</loc>
+    <loc>https://thegloballens365.vercel.app/article/fake-ai-apps-become-top-malware-lure-says-report--cspywj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/domestic-football-has-to-rise-now-pff-secretary-general-appointment-at-appropria--66c4ni</loc>
+    <loc>https://thegloballens365.vercel.app/article/falling-pupil-numbers-should-lead-to-smaller-class-sizes-says-union--x8awpk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/don-t-be-too-kind-maternity-staff-used-offensive-terms-to-refer-to-pregnant-wome--vmwp2y</loc>
+    <loc>https://thegloballens365.vercel.app/article/family-values-african-charter-condemned-by-rights-groups-as-regressive-and-dange--8qgd5g</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/downing-street-hits-out-after-vance-post-about-henry-nowak--y0qc1s</loc>
+    <loc>https://thegloballens365.vercel.app/article/farmers-warn-food-security-can-t-be-taken-for-granted--5iwtz5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ebola-cases-rise-in-congo-as-government-revives-travel-restrictions--7sxnox</loc>
+    <loc>https://thegloballens365.vercel.app/article/fault-lines--1d70fv</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ebola-outbreak-spreading-at-an-unprecedented-pace-africa-cdc-says--guq9o4</loc>
+    <loc>https://thegloballens365.vercel.app/article/federal-judge-strikes-down-trump-s-100-000-fee-on-new-h-1b-visas--jklmv7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ebola-outbreak-who-s-tedros-visits-uganda-bordering-the-drc-ituri-province-epice--a4uqq2</loc>
+    <loc>https://thegloballens365.vercel.app/article/fia-establishes-fatf-desks-across-all-zones-to-improve-implementation-of-interna--whtuc8</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ebola-spread-in-central-africa-could-match-2014-record-outbreak-us-health-offici--m0s3bj</loc>
+    <loc>https://thegloballens365.vercel.app/article/fifa-ditches-ea-for-netflix-in-latest-video-game-release-for-2026-world-cup--ni4y61</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/election-in-armenia-becomes-a-test-of-russian-influence--jkyunl</loc>
+    <loc>https://thegloballens365.vercel.app/article/fifa-to-allow-disposable-water-bottles-at-world-cup-games-after-outcry--08uiij</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/eriksen-at-home-and-doing-well-after-collapse--27f4ex</loc>
+    <loc>https://thegloballens365.vercel.app/article/final-piece-of-iconic-denby-pottery-signed--o9a9gq</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/eriksen-conscious-after-collapsing-in-denmark-game--l4lewu</loc>
+    <loc>https://thegloballens365.vercel.app/article/financial-experts-urge-policymakers-to-broaden-tax-net-cut-tariff-distortions--9lq6jo</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ethiopia-s-election-results-will-likely-confirm-status-quo--loiwzw</loc>
+    <loc>https://thegloballens365.vercel.app/article/first-impressions-slay-the-spire-2-spruces-up-the-familiar-with-a-fresh-coat-of---4h584n</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/exams-watchdog-warns-of-rise-in-high-tech-cheating--a9t2wn</loc>
+    <loc>https://thegloballens365.vercel.app/article/from-bitcoin-to-blockchain-key-cryptocurrency-terms-and-what-they-mean--iygpvl</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/experts-criticise-plan-for-american-only-ebola-quarantine-centre-in-kenya--gt5s30</loc>
+    <loc>https://thegloballens365.vercel.app/article/from-hating-cricket-to-world-number-one-the-rise-of-england-s-smith--vuesl5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/exploding-rocket-casts-doubts-over-nasa-s-moon-plans--lhi36d</loc>
+    <loc>https://thegloballens365.vercel.app/article/fury-of-the-young--sq81tj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/extreme-fear-among-immigrants-as-backlash-sweeps-south-africa--cc199h</loc>
+    <loc>https://thegloballens365.vercel.app/article/gb-election-commission-bars-consolidation-of-results-until-re-polling-in-5-const--y7d3li</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/failing-sea-defences-disaster-for-nature-reserve--wr0o1v</loc>
+    <loc>https://thegloballens365.vercel.app/article/genital-herpes-rising-in-england-despite-overall-drop-in-stis--a9hkkv</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/fake-ai-apps-become-top-malware-lure-says-report--3uvogx</loc>
+    <loc>https://thegloballens365.vercel.app/article/gill-rahul-power-india-to-368-3-in-afghanistan-test--3oscbf</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/family-values-african-charter-condemned-by-rights-groups-as-regressive-and-dange--fmufdg</loc>
+    <loc>https://thegloballens365.vercel.app/article/global-violence-reaches-record-levels-due-to-war-and-attacks-on-civilians--lyh6km</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/farmers-warn-food-security-can-t-be-taken-for-granted--6itred</loc>
+    <loc>https://thegloballens365.vercel.app/article/govt-mulls-easing-curbs-to-facilitate-asset-transfer--h6pw3j</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/fia-arrests-2-in-lahore-over-illegal-currency-exchange-another-2-for-copyright-v--0ixenc</loc>
+    <loc>https://thegloballens365.vercel.app/article/hidden-camera-found-in-government-building--0tyi6f</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/fifa-ditches-ea-for-netflix-in-latest-video-game-release-for-2026-world-cup--e5vlrf</loc>
+    <loc>https://thegloballens365.vercel.app/article/historic-canadian-warehouse-workers-sign-first-ever-union-deal-with-walmart--77ti4r</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/fifa-to-allow-disposable-water-bottles-at-world-cup-games-after-outcry--c5t50p</loc>
+    <loc>https://thegloballens365.vercel.app/article/house-of-the-dragon-cast-reunites-at-season-3-premiere-event--cxpnv3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/first-impressions-slay-the-spire-2-spruces-up-the-familiar-with-a-fresh-coat-of---00j5hw</loc>
+    <loc>https://thegloballens365.vercel.app/article/how-driving-test-booking-is-changing-for-learner-drivers--2s8h5p</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/fizzy-drink-cans-recalled-as-they-may-rupture-unexpectedly--pupyrg</loc>
+    <loc>https://thegloballens365.vercel.app/article/how-eriksen-s-heart-device-kicked-into-action--23vqj1</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/floods-tear-through-homes-and-farmland-in-china-s-guizhou-province--um0p50</loc>
+    <loc>https://thegloballens365.vercel.app/article/how-to-watch-the-world-cup-on-the-bbc-and-itv--9skz7x</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/france-and-germany-scrap-fighter-jet-in-hit-to-european-defence-cooperation--xew629</loc>
+    <loc>https://thegloballens365.vercel.app/article/hundreds-of-aftershocks-jolt-philippines-as-officials-say-death-toll-could-rise--0ew5vo</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/from-bitcoin-to-blockchain-key-cryptocurrency-terms-and-what-they-mean--sgfl4c</loc>
+    <loc>https://thegloballens365.vercel.app/article/i-have-right-papers-and-visa-barred-referee-artan--n6fbtn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/fujimori-or-sanchez-peru-vote-marks-10-years-of-turmoil--9tdnvi</loc>
+    <loc>https://thegloballens365.vercel.app/article/i-left-a-children-s-home-and-was-embraced-by-love--p8onas</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/fury-of-the-young--ycjo2w</loc>
+    <loc>https://thegloballens365.vercel.app/article/i-loved-snl-but-it-wasn-t-mine-why-rosebud-baker-left-the-show-after-having-a-ba--wkw4qw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/gaza-cancer-patient-waits-for-a-chance-at-life--r7l467</loc>
+    <loc>https://thegloballens365.vercel.app/article/icc-rates-lahore-s-gaddafi-stadium-unsatisfactory-after-slow-pitch-in-pakistan-a--axnknw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/gb-election--l6cap3</loc>
+    <loc>https://thegloballens365.vercel.app/article/icc-suspends-top-prosecutor-after-investigating-misconduct-allegations--dv0sil</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/gb-politics-of-ambiguity--46p1m7</loc>
+    <loc>https://thegloballens365.vercel.app/article/imran-s-sisters-pti-leaders-again-denied-meeting-former-premier-at-adiala-jail--8c542k</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/genital-herpes-rising-in-england-despite-overall-drop-in-stis--ngiprb</loc>
+    <loc>https://thegloballens365.vercel.app/article/in-pictures-heatwave-grips-pakistan-as-temperatures-cross-40-c--a4vkm1</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/gill-rahul-power-india-to-368-3-in-afghanistan-test--s5pbcr</loc>
+    <loc>https://thegloballens365.vercel.app/article/india-nears-completion-of-strategic-himalayan-tunnel-near-china-border--ijt5vf</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/give-peace-a-little-more-chance-pm-shehbaz-calls-for-restraint-after-israel-iran--63cqhi</loc>
+    <loc>https://thegloballens365.vercel.app/article/india-s-key-objectives-in-afghanistan-solely-driven-by-singular-goal-of-destabil--k70cc3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/going-it-alone--ugro4u</loc>
+    <loc>https://thegloballens365.vercel.app/article/iran-fans-dismayed-by-team-s-world-cup-visa-quarrel--yzxnt2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/govt-borrows-rs3-5tr-from-banks-in-july-may--bhuzn3</loc>
+    <loc>https://thegloballens365.vercel.app/article/iran-israel-pause-attacks-on-trump-s-urging--j3ogw6</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/hamilton-feels-like-i-m-reminding-people-who-i-am--ut0b77</loc>
+    <loc>https://thegloballens365.vercel.app/article/iran-s-world-cup-team-blast-us-visa-row-on-arrival-in-mexico--cn9mpu</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/has-zelenskyy-forfeited-an-honor-and-poland-s-sympathy--8t2s4i</loc>
+    <loc>https://thegloballens365.vercel.app/article/iranian-group-could-be-labelled-national-threat-under-proposed-new-law--ril6q3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/hezbollah-mp-resistance-defends-lebanon-where-the-state-failed--ojqkbm</loc>
+    <loc>https://thegloballens365.vercel.app/article/iranians-struggle-to-buy-food-as-war-drives-up-prices--gl60u5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/historic-canadian-warehouse-workers-sign-first-ever-union-deal-with-walmart--398upd</loc>
+    <loc>https://thegloballens365.vercel.app/article/is-keir-starmer-trying-to-build-a-legacy-or-just-getting-on-with-the-job--vbk35b</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/hodgkinson-stunned-by-werro-despite-personal-best--bo0cm1</loc>
+    <loc>https://thegloballens365.vercel.app/article/is-parliament-effective--uuyha2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/how-disinformation-in-congo-is-worsening-ebola-epidemic--4r9c5z</loc>
+    <loc>https://thegloballens365.vercel.app/article/israel-attacks-tyre-in-lebanon-tells-all-residents-to-leave--moi34v</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/how-emslie-went-from-giving-birth-to-world-cup-qualifiers-inside-six-months--6i90wa</loc>
+    <loc>https://thegloballens365.vercel.app/article/israeli-air-strikes-hit-lebanese-city-of-tyre-despite-iranian-warning-to-stop-at--k4sanh</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/how-eriksen-s-heart-device-kicked-into-action--5kwo42</loc>
+    <loc>https://thegloballens365.vercel.app/article/israeli-military-widens-gaza-control-area--4azpxc</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/how-extreme-weather-and-heat-could-affect-players-at-world-cup-2026--mc3u3k</loc>
+    <loc>https://thegloballens365.vercel.app/article/it-ministry-secures-rs22bn-development-budget-without-cuts--p3sb7g</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/how-significant-is-xi-jinping-s-visit-to-north-korea--vmms9x</loc>
+    <loc>https://thegloballens365.vercel.app/article/italy-s-foreign-minister-slams-israel-s-ben-gvir-over-flip-flop-comments--k500gr</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/how-the-contest-is-shaping-up-two-weeks-ahead-of-crucial-makerfield-by-election--4rtmqv</loc>
+    <loc>https://thegloballens365.vercel.app/article/jaac-strike-markets-streets-deserted-in-ajk-s-muzaffarabad-but-no-demonstrations--1inlw2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/how-williams-british-hitting-partner-kept-comeback-secret--1jtxaj</loc>
+    <loc>https://thegloballens365.vercel.app/article/jailed-crypto-founder-sam-bankman-fried-seeks-trump-pardon--anwmak</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/huge-crowds-throng-madrid-streets-for-pope-s-open-air-mass--thtuu8</loc>
+    <loc>https://thegloballens365.vercel.app/article/japanese-city-shuts-down-nearly-100-schools-after-unprecedented-bear-sighting--k0n3nm</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/hundreds-of-captives-freed-from-boko-haram-mountain-hideout--8c8xe2</loc>
+    <loc>https://thegloballens365.vercel.app/article/jay-z-announces-concerts-in-los-angeles-and-paris--u2qk9y</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/hunger-in-oleshky-ukraine-asks-for-evacuation--gymkod</loc>
+    <loc>https://thegloballens365.vercel.app/article/jennifer-lopez-breaks-down-over-twins-leaving-for-college--hj30wn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/i-don-t-have-anything-to-prove-why-is-44-year-old-williams-back--kns36x</loc>
+    <loc>https://thegloballens365.vercel.app/article/jersey-teenage-politician-congratulated-by-trump-says-he-is-not-a-fan--ai0w51</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/i-left-a-children-s-home-and-was-embraced-by-love--l1sj6g</loc>
+    <loc>https://thegloballens365.vercel.app/article/karachi-heatwave-warning-as-temperature-may-reach-43-c--8gda5c</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/i-was-applying-for-hundreds-of-jobs-this-tip-helped-me-get-one--u2jicf</loc>
+    <loc>https://thegloballens365.vercel.app/article/karachi-s-quandary--roo0zn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/in-meeting-with-pm-president-stresses-provincial-rights-economic-stability-in-up--emg25j</loc>
+    <loc>https://thegloballens365.vercel.app/article/killer-fungus-could-be-good-news-for-habitats-decimated-by-invasive-moss--mgldbc</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/in-speech-to-spanish-parliament-pope-demands-respect-for-the-dignity-of-all-peop--qjmxrd</loc>
+    <loc>https://thegloballens365.vercel.app/article/kosovo-pm-wins-snap-vote-but-with-no-majority--t03yn9</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/india-detains-and-deports-5-000-bangladeshis--x6f7f4</loc>
+    <loc>https://thegloballens365.vercel.app/article/labour-lawmakers-urge-uk-govt-to-end-trade-with-israeli-settlements--xtwu73</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/india-s-frustrated-students-find-a-symbol-the-cockroach--7ysq43</loc>
+    <loc>https://thegloballens365.vercel.app/article/lammy-says-he-told-jd-vance-his-nowak-comments-were-wrong--v16gfp</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/indus-water-sharing-dispute-draws-global-concern--57d7kk</loc>
+    <loc>https://thegloballens365.vercel.app/article/lebanese-army-commander-calls-on-cdf-munir-discusses-regional-security-environme--dsl69s</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/insecurity-and-instability-drive-voters-in-peru-s-tight-presidential-race--66j4li</loc>
+    <loc>https://thegloballens365.vercel.app/article/lebanon-defence-minister-says-israel-violated-lebanon-truce-nearly-3-500-times--j2l7r7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-and-israel-say-they-have-halted-strikes-after-first-exchange-of-fire-since---t7ou69</loc>
+    <loc>https://thegloballens365.vercel.app/article/lesley-manville-boards-brett-goldstein-s-prime-video-comedy-escorted--08ze37</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-fires-missiles-at-israel-after-it-attacked-beirut--h2gezq</loc>
+    <loc>https://thegloballens365.vercel.app/article/let-this-be-a-warning-if-europe-worries-about-trump-it-has-even-more-reason-to-f--nl3y4n</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-halts-military-operations-against-israel-warns-of-harsher-attacks-if-strike--enqxqe</loc>
+    <loc>https://thegloballens365.vercel.app/article/lib-dems-propose-energy-price-discounts-for-all-households--7aqljm</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-launches-first-attack-on-israel-since-truce--zfy33f</loc>
+    <loc>https://thegloballens365.vercel.app/article/liberation-film-from-tony-winner-bess-wohl-among-projects-selected-for-sundance---lgm7vk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-losing-patience-with-israel-and-us-over-ceasefire-violations--dxh6yi</loc>
+    <loc>https://thegloballens365.vercel.app/article/licensing-for-foreign-sponsors-made-easier--rvhe9r</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-releases-footage-of-missiles-launched-at-israel--wd4ouc</loc>
+    <loc>https://thegloballens365.vercel.app/article/lives-still-at-risk-from-unregulated-baby-sleep-industry-after-bbc-investigation--43h9xu</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-s-strike-on-israel-suggests-the-regime-s-sense-of-resilience-is-growing--xwr096</loc>
+    <loc>https://thegloballens365.vercel.app/article/lyari-kicks-its-troubles-aside-as-world-cup-mania-strikes--5oqbno</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-s-world-cup-squad-heads-to-mexico-as-us-visa-row-erupts--xtveov</loc>
+    <loc>https://thegloballens365.vercel.app/article/m-s-launches-new-traineeship-for-1-000-young-people--sjtj63</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iran-s-world-cup-team-blast-us-visa-row-on-arrival-in-mexico--82ru73</loc>
+    <loc>https://thegloballens365.vercel.app/article/making-the-budget-relevant--0827iz</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/iranian-world-cup-excitement-dulled-by-war-and-economic-crisis--9xi31k</loc>
+    <loc>https://thegloballens365.vercel.app/article/malaysia-bars-under-16s-from-signing-up-for-social-media--pbtri7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/is-islamic-banking-islamic--wbhnog</loc>
+    <loc>https://thegloballens365.vercel.app/article/mamdani-scores-goal-at-world-cup-presser--ly1ear</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/is-keir-starmer-in-his-legacy-era-podcast--w5v85z</loc>
+    <loc>https://thegloballens365.vercel.app/article/man-accused-of-killing-mother-in-law-with-poison-laced-satay--g3tqd7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/is-parliament-effective--884dfg</loc>
+    <loc>https://thegloballens365.vercel.app/article/man-reportedly-shot-at-kenya-protest-against-us-ebola-quarantine-centre--y70pmn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israel-and-iran-exchange-missile-fire-threatening-middle-east-truce--9x3uzs</loc>
+    <loc>https://thegloballens365.vercel.app/article/mangrove-forests-are-healing-after-decades-of-human-destruction--xm0blm</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israel-has-reportedly-used-white-phosphorus-near-lebanese-cities-and-towns-what---8nfs5d</loc>
+    <loc>https://thegloballens365.vercel.app/article/mark-zuckerberg-s-longest-serving-employee-on-ai-jobs-and-her-boss--i466v1</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israel-hits-beirut-s-suburbs-in-retaliatory-attack-against-hezbollah--vv6fol</loc>
+    <loc>https://thegloballens365.vercel.app/article/mazadona-einstein-the-ant-20-new-players-to-watch-at-world-cup--bihuqa</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israel-iran-strikes-threaten-truce-and-ebola-is-spreading-at-an-unprecedented-ra--8u5waz</loc>
+    <loc>https://thegloballens365.vercel.app/article/modi-is-using-a-cannon-to-kill-a-cockroach--kzhr98</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israel-iran-trade-fire-despite-trump-s-call-for-restraint--fpas4o</loc>
+    <loc>https://thegloballens365.vercel.app/article/moment-blue-origin-rocket-explodes-during-test-in-florida--hhgavt</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israel-says-iran-launched-a-missile-at-it-in-a-first-during-fragile-ceasefire--ovoaoi</loc>
+    <loc>https://thegloballens365.vercel.app/article/more-black-men-to-benefit-from-prostate-cancer-screening-trial--c8rj47</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israel-strikes-beirut-suburb-days-after-us-brokered-truce--1ldlpz</loc>
+    <loc>https://thegloballens365.vercel.app/article/more-oldies-than-ever-at-world-cup-as-over-40s-rock-on--ap2c4z</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israeli-strike-kills-three-soldiers-in-south-lebanon--ghll0g</loc>
+    <loc>https://thegloballens365.vercel.app/article/nasa-reverses-evacuation-alert-order-for-astronauts-aboard-international-space-s--cxyeix</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israeli-strikes-kill-nine-people-in-gaza--u4y35v</loc>
+    <loc>https://thegloballens365.vercel.app/article/nasa-unveils-next-steps-to-build-permanent-moon-base--uxhj1h</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/israeli-strikes-on-iran-fully-coordinated-with-us-says-tehran--dgady3</loc>
+    <loc>https://thegloballens365.vercel.app/article/new-drug-to-stop-ozempic-butt-muscle-loss-side-effect-of-obesity-jabs--za1fn0</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/it-leads-services-export-surge-to-8-27bn--8eenjb</loc>
+    <loc>https://thegloballens365.vercel.app/article/new-video-of-great-white-shark-in-mediterranean-goes-viral--1c1v25</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/it-s-one-of-the-world-s-most-isolated-islands-here-come-the-bulldozers--nvp6sh</loc>
+    <loc>https://thegloballens365.vercel.app/article/next-el-ni-o-could-be-strongest-in-decades--y6n2ea</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/it-was-either-killed-or-be-killed-ongoing-nightmares-of-an-ex-child-soldier-in-s--1dukdy</loc>
+    <loc>https://thegloballens365.vercel.app/article/ngumoha-to-leave-england-squad-having-made-mark--rmplp8</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/it-will-surprise-no-one-that-your-party-has-split-why-can-t-the-left-stick-toget--4u6f2v</loc>
+    <loc>https://thegloballens365.vercel.app/article/nigel-farage-to-headline-liz-truss-s-uk-cpac-event-after-apparent-snub--x22fdt</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/italy-recovers-10-bodies-as-boat-with-nearly-60-on-board-capsizes-off-malta--chbqw2</loc>
+    <loc>https://thegloballens365.vercel.app/article/no-dead-ends-what-the-dutch-can-teach-us-about-tackling-youth-unemployment--wcxsms</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/jaac-ban--ixlma9</loc>
+    <loc>https://thegloballens365.vercel.app/article/nvidia-ceo-mounts-charm-push-in-south-korea-with-tv-talk-show-baseball-appearanc--7y08tb</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/jailed-crypto-founder-sam-bankman-fried-seeks-trump-pardon--nuwsme</loc>
+    <loc>https://thegloballens365.vercel.app/article/nvidia-launches-windows-laptop-chip-in-consumer-pc-push--y0azcx</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ji-warns-of-protests-if-budget-is-anti-people--xcu2f8</loc>
+    <loc>https://thegloballens365.vercel.app/article/ny-to-show-world-cup-final-in-central-park--gth5rq</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/kangana-comments-on-women-s-representation-debate--e2k07f</loc>
+    <loc>https://thegloballens365.vercel.app/article/offloading-not-to-curb-genuine-travel-claims-fia-chief--kv59f5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/karachi-police-formulate-anti-drug-policy-with-educational-institutions--15t0dn</loc>
+    <loc>https://thegloballens365.vercel.app/article/ogra-in-disarray-amid-pricing-probe-legal-challenges--9qr9dr</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/katie-price-reaffirms-support-for-husband-amid-relationship-speculation--q3w7oi</loc>
+    <loc>https://thegloballens365.vercel.app/article/one-in-four-births-in-england-is-now-emergency-caesarean-bbc-analysis-shows--1wkhp5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/killer-fungus-could-be-good-news-for-habitats-decimated-by-invasive-moss--1xfmuw</loc>
+    <loc>https://thegloballens365.vercel.app/article/outdoor-hospitals-cut-off-communities-as-philippine-quake-toll-hits-41--4rdng7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/killer-of-trust-social-media-groups-fuel-misinformation-in-uk-report-finds--1ekp2r</loc>
+    <loc>https://thegloballens365.vercel.app/article/pak-iran-border-trade-halt-to-trigger-lpg-shortages--ujt62h</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/kim-visits-missile-factory-issues-directive--7fvfeq</loc>
+    <loc>https://thegloballens365.vercel.app/article/pakistan-eyes-instc-gwadar-link-with-russia--1xfd3t</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/king-charles-signals-unity-as-royals-gather-at-wedding--o4q12f</loc>
+    <loc>https://thegloballens365.vercel.app/article/pakistan-vows-self-defence-against-afghanistan-based-militants--te92dr</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/knicks-long-awaited-nba-run-electrifies-nyc-with-trump-set-to-attend-key-game--msqsbw</loc>
+    <loc>https://thegloballens365.vercel.app/article/pcb-names-49-players-for-nca-red-ball-white-ball-camps--vdphck</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/kosovo-holds-third-election-in-16-months--lcxbls</loc>
+    <loc>https://thegloballens365.vercel.app/article/pentagon-labels-tech-giant-alibaba-and-car-maker-byd-as-aiding-chinese-military--p53ta3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/kosovo-pm-wins-snap-vote-but-with-no-majority--9hp8ii</loc>
+    <loc>https://thegloballens365.vercel.app/article/peru-s-discontented-voters-face-straight-left-right-choice-in-election-runoff--o4lifj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/kp-eyes-self-sufficiency-in-food-by-2030--c8jqhz</loc>
+    <loc>https://thegloballens365.vercel.app/article/pff-unveils-plan-to-revive-domestic-football--phz72v</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/la-stadium-workers-threaten-strike-ahead-of-fifa-world-cup--oa7axh</loc>
+    <loc>https://thegloballens365.vercel.app/article/philp-labels-hermer-s-small-boats-comment-a-disgraceful-slur--31ems3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/labour-doesn-t-seem-to-like-send-schools-for-kids-like-mine-but-here-s-what-we-l--18pjss</loc>
+    <loc>https://thegloballens365.vercel.app/article/pide-urges-tax-incentives-to-revive-national-savings--j34gf2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/labour-failing-to-learn-from-tories-over-leadership-change-calls-says-kyle--xeky5f</loc>
+    <loc>https://thegloballens365.vercel.app/article/play-bbc-sport-s-new-world-cup-predictor-game--3v58sj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/lammy-says-he-told-jd-vance-his-nowak-comments-were-wrong--pc6ovr</loc>
+    <loc>https://thegloballens365.vercel.app/article/playstation-comes-out-swinging-with-latest-state-of-play-broadcast--rfh21h</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/lammy-told-jd-vance-his-remarks-about-henry-nowak-were-wrong-as-it-happened--ev4mmm</loc>
+    <loc>https://thegloballens365.vercel.app/article/please-send-help-crew-s-distress-call-after-ship-hit-by-us-missile--tttzbj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/last-minute-visas-and-moving-training-camp-iran-s-road-to-the-world-cup--f853gu</loc>
+    <loc>https://thegloballens365.vercel.app/article/pm-shehbaz-pushes-faster-discos-privatisation--t7gyb2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/lawsuit-seeks-to-stop-trump-s-planned-white-house-ufc-match--07so1a</loc>
+    <loc>https://thegloballens365.vercel.app/article/pm-shehbaz-urges-for-expanding-accelerating-discos-privatisation--3nl9gd</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/leclerc-slams-ferrrari-brake-failure-after-monaco-gp-crash--ns1x9a</loc>
+    <loc>https://thegloballens365.vercel.app/article/police-call-for-calm-amid-fears-planned-protests-in-response-to-belfast-knife-at--iv74s9</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/legal-equality-duty-for-public-services-should-be-scrapped-says-badenoch--cuw6nm</loc>
+    <loc>https://thegloballens365.vercel.app/article/political-fiscal-reality-to-reshape-uplift-budget-as-national-economic-council-m--toljix</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/let-s-call-it-quits-trump-storms-out-of-tense-rain-plagued-interview-when-confro--rg78cq</loc>
+    <loc>https://thegloballens365.vercel.app/article/powerful-earthquake-in-southern-philippines-leaves-at-least-37-dead--zp83xi</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/lib-dems-propose-energy-price-discounts-for-all-households--e76aky</loc>
+    <loc>https://thegloballens365.vercel.app/article/ppp-poised-to-form-government-in-gilgit-baltistan-after-securing-11-seats--996tx5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/lionesses-need-setbacks-like-spain-loss-wiegman--oyx2cy</loc>
+    <loc>https://thegloballens365.vercel.app/article/princess-anne-leads-royal-duty-as-palace-issues-statement--r5pcqz</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/lord-s-pitch-does-not-benefit-test-format-stokes--6kcn9k</loc>
+    <loc>https://thegloballens365.vercel.app/article/pti-to-issue-white-paper-on-gb-poll-rigging--tcu4fa</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/love-not-bots--b16avd</loc>
+    <loc>https://thegloballens365.vercel.app/article/pupils-asked-to-walk-to-school-through-army-firing-range-mp-claims--twbjnw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/lyari-kicks-its-troubles-aside-as-world-cup-mania-strikes--j7xode</loc>
+    <loc>https://thegloballens365.vercel.app/article/raducanu-makes-winning-start-to-grass-court-season--phkpkx</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/m-s-launches-new-traineeship-for-1-000-young-people--0fl5fa</loc>
+    <loc>https://thegloballens365.vercel.app/article/rare-footage-captured-of-great-white-shark-in-mediterranean-sea--yn4m4k</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/major-quake-off-philippines-kills-at-least-31-dozen-still-missing--87y3y3</loc>
+    <loc>https://thegloballens365.vercel.app/article/raspberry-pi-raises-profit-forecast-as-ai-demand-grows--ta3jv8</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/making-the-budget-relevant--k26u6t</loc>
+    <loc>https://thegloballens365.vercel.app/article/reports-iran-uses-war-as-cover-for-increased-executions--75v40u</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/malawians-repatriated-from-south-africa-amid-xenophobia-concerns--xxkpgm</loc>
+    <loc>https://thegloballens365.vercel.app/article/respite-needed--y5dnep</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/man-city-and-chelsea-remain-in-talks-over-maresca--w1k476</loc>
+    <loc>https://thegloballens365.vercel.app/article/risk-of-death-to-oldest-man-at-world-cup-walking-miracle-gordon--qip44x</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/mangrove-forests-are-healing-after-decades-of-human-destruction--h4c6mh</loc>
+    <loc>https://thegloballens365.vercel.app/article/robinson-rocks-new-zealand-again-as-rain-frustrates-england-at-lord-s--y4vdmk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/manufacturers-of-tile-glass-oppose-import-duty-cuts--izrlbs</loc>
+    <loc>https://thegloballens365.vercel.app/article/russia-s-fuel-crisis-intensifies-as-ukraine-steps-up-strikes-on-occupied-territo--k09cy4</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/maritime-affairs-minister-contacts-dar-discusses-release-of-pakistani-seamen-hel--nww240</loc>
+    <loc>https://thegloballens365.vercel.app/article/scotland-s-greenhouse-gas-emissions-fall-slightly-as-progress-slows--wvjy7e</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/mark-zuckerberg-s-longest-serving-employee-on-ai-jobs-and-her-boss--4kacgc</loc>
+    <loc>https://thegloballens365.vercel.app/article/scrap-legal-equality-duty-for-public-services-says-badenoch--ytypr6</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/maryam-nawaz-unveils-major-lahore-urban-renewal-project--igwscb</loc>
+    <loc>https://thegloballens365.vercel.app/article/sea-drone-rescues-us-army-helicopter-crew-near-strait-of-hormuz--05gpgl</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/mccullum-backs-captain-stokes-to-find-batting-form--7fooza</loc>
+    <loc>https://thegloballens365.vercel.app/article/search-black-boys-protect-white-folk-kemi-vies-to-out-right-the-far-right-john-c--rzg7za</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/moment-blue-origin-rocket-explodes-during-test-in-florida--eop5l6</loc>
+    <loc>https://thegloballens365.vercel.app/article/senate-panel-concerned-over-degradation-of-internet-fuel-theft-at-telecom-sites--k8eqkf</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/more-black-men-to-benefit-from-prostate-cancer-screening-trial--drcc2z</loc>
+    <loc>https://thegloballens365.vercel.app/article/setting-priorities-right-for-agriculture--g1g4vk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/mou-signed-with-saudi-arabia-local-partners-for-140-acre-karachi-waterfront-deve--kdgopx</loc>
+    <loc>https://thegloballens365.vercel.app/article/shackled-bleeding-raped-palestinians-describe-abuse-in-israel-s-prisons--6qj7ed</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/mourinho-set-for-real-after-perez-re-elected--1pcnbs</loc>
+    <loc>https://thegloballens365.vercel.app/article/sikh-mps-say-nowak-murder-was-not-about-their-religion--hchrnk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/muslim-rights-group-cair-sues-virginia-schools-over-student-suspensions--wiukim</loc>
+    <loc>https://thegloballens365.vercel.app/article/sipri-with-peace-elusive-nuclear-weapons-make-a-comeback--nh2spc</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/naqvi-takes-cdf-s-message-to-tehran-amid-stalemate--a5ps3g</loc>
+    <loc>https://thegloballens365.vercel.app/article/six-countries-sanction-enablers-of-settler-violence-in-occupied-west-bank--zwi68r</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/nasa-reverses-evacuation-alert-order-for-astronauts-aboard-international-space-s--zlk7h4</loc>
+    <loc>https://thegloballens365.vercel.app/article/small-traders-tax-scheme-less-a-reform-more-a-negotiated-settlement-with-one-of---gmkl2f</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/netherlands-timber-out-of-world-cup-with-injury--8715xh</loc>
+    <loc>https://thegloballens365.vercel.app/article/soft-on-traders--bqe4r3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/new-drug-to-stop-ozempic-butt-muscle-loss-side-effect-of-obesity-jabs--u5780g</loc>
+    <loc>https://thegloballens365.vercel.app/article/some-a-level-papers-voided-for-students-after-exams-leaked-online--ogcyrg</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/next-el-ni-o-could-be-strongest-in-decades--7e18dg</loc>
+    <loc>https://thegloballens365.vercel.app/article/south-africa-migration-crisis-ramaphosa-s-plan-faces-doubt--dfzqhn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/nigerian-forces-rescue-360-captives-from-boko-haram--74o2jk</loc>
+    <loc>https://thegloballens365.vercel.app/article/south-waziristan-tribal-elders-decry-hardship-as-wana-gomal-zam-road-remains-in---t50lnz</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/no-dead-ends-what-the-dutch-can-teach-us-about-tackling-youth-unemployment--x4wa7m</loc>
+    <loc>https://thegloballens365.vercel.app/article/spacex-s-stock-market-blast-off-could-be-musk-s-biggest-gamble-yet--of72yq</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/north-korea-needs-china-for-survival-why-does-beijing-need-pyongyang--w1td3i</loc>
+    <loc>https://thegloballens365.vercel.app/article/starmer-preparing-to-announce-social-media-restrictions-for-children--8mkrqy</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/north-korea-nuclear-programme-absolutely-non-negotiable-kim-jong-un-s-sister--jz7vx5</loc>
+    <loc>https://thegloballens365.vercel.app/article/starmer-tells-apple-and-google-to-ban-nude-images-on-children-s-phones--vpweb3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/north-korea-quietly-ramps-up-its-nuclear-program--eq61d5</loc>
+    <loc>https://thegloballens365.vercel.app/article/starmer-tells-supporters-he-will-fight-any-leadership-contest--8yzj2y</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/norway-boss-brands-scotland-s-clarke-unprofessional--06vs2i</loc>
+    <loc>https://thegloballens365.vercel.app/article/stock-market-jitters-remain-amid-tech-fears-and-renewed-middle-east-attacks--wordu2</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/nvidia-ceo-mounts-charm-push-in-south-korea-with-tv-talk-show-baseball-appearanc--cyu6qw</loc>
+    <loc>https://thegloballens365.vercel.app/article/stocks-extend-losses-on-cautious-trading--qp5uv0</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/odi-win--sd022w</loc>
+    <loc>https://thegloballens365.vercel.app/article/stokes-and-alcohol-give-england-another-headache--3lva3c</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ogra-in-disarray-amid-pricing-probe-legal-challenges--8nxoj1</loc>
+    <loc>https://thegloballens365.vercel.app/article/student-loans-inquiry-finds-many-did-not-understand-terms--94w4pr</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/one-dead-five-injured-after-shooting-in-israel--qsbhyu</loc>
+    <loc>https://thegloballens365.vercel.app/article/students-at-risk-if-universities-go-bust-say-mps--rwum9n</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/one-in-four-births-in-england-is-now-emergency-caesarean-bbc-analysis-shows--jgrjxt</loc>
+    <loc>https://thegloballens365.vercel.app/article/sweden-mulls-prison-for-young-teens-as-violent-crime-rises--m7j9cr</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/one-killed-5-wounded-in-israel-shooting-attacks-suspect-dead--cw005p</loc>
+    <loc>https://thegloballens365.vercel.app/article/sweden-set-to-ban-mobile-phones-in-schools--ff3ykd</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/opec-approves-fourth-oil-output-quota-hike-since-hormuz-closure--21oa1i</loc>
+    <loc>https://thegloballens365.vercel.app/article/talks-begin-in-cairo-to-advance-gaza-truce--qcvny7</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/pakistan-mauritius-explore-new-trade-opportunities--k6fhuq</loc>
+    <loc>https://thegloballens365.vercel.app/article/teachers-in-england-to-vote-on-striking-over-pay--b19zaw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/pakistan-rejects-unwarranted-remarks-on-ajk-by-individuals-in-uk--e6om3d</loc>
+    <loc>https://thegloballens365.vercel.app/article/tech-life--j663we</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/pakistan-tells-un-kashmir-dispute-remains-unresolved-integral-issue--vl1p1s</loc>
+    <loc>https://thegloballens365.vercel.app/article/tech-net-loss--g9ohzl</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/pakistani-workers-say-their-faith-cost-them-their-jobs-in-the-uae--7tb2ks</loc>
+    <loc>https://thegloballens365.vercel.app/article/the-ancient-trick-making-food-waste-useful-and-tasty--9nxy60</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/pcb-names-49-players-for-nca-red-ball-white-ball-camps--n1ytu8</loc>
+    <loc>https://thegloballens365.vercel.app/article/the-criminal-cartels-cashing-in-on-the-world-cup-podcast--f3fs79</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/people-flood-madrid-streets-to-see-pope-leo-s-flower-carpeted-procession--5hv8r8</loc>
+    <loc>https://thegloballens365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--pv0f3h</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/peru-election-result-close-as-vote-counting-continues--e1ks8c</loc>
+    <loc>https://thegloballens365.vercel.app/article/the-guardian-view-on-children-and-the-internet-rolling-back-big-tech-s-untrammel--1vcz88</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/peru-s-discontented-voters-face-straight-left-right-choice-in-election-runoff--8rtbrl</loc>
+    <loc>https://thegloballens365.vercel.app/article/the-strait-of-hormuz-s-3-month-closure-could-set-a-dangerous-precedent-experts-w--vy5gs3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/peshawar-torkham-highway-reopens-after-protests-against-recent-targeted-attack--rfnhjr</loc>
+    <loc>https://thegloballens365.vercel.app/article/third-of-people-say-uni-degree-not-worth-it-as-student-loan-inquiry-begins--htmfzy</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/pff-president-hails-national-men-s-team-for-ending-64-year-wait--2ph8ym</loc>
+    <loc>https://thegloballens365.vercel.app/article/three-ebola-vaccines-in-development-amid-growing-outbreak-fears--5m2smj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/philp-labels-hermer-s-small-boats-comment-a-disgraceful-slur--jjga67</loc>
+    <loc>https://thegloballens365.vercel.app/article/tickets-for-iran-fans-revoked-says-federation--otueio</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/phone-signal-on-trains-not-good-enough-most-of-the-time-research-says--ntm58p</loc>
+    <loc>https://thegloballens365.vercel.app/article/tiktok-is-driving-american-expats-to-southeast-asia--mydaop</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/pide-urges-tax-incentives-to-revive-national-savings--t19nk0</loc>
+    <loc>https://thegloballens365.vercel.app/article/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--9afsae</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/playstation-comes-out-swinging-with-latest-state-of-play-broadcast--uexob7</loc>
+    <loc>https://thegloballens365.vercel.app/article/top-five-a-day-foods-new-study-says-your-heart-needs--mldzma</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/police-officials-refusing-duty-in-ajk-gb-face-action--7kkj1f</loc>
+    <loc>https://thegloballens365.vercel.app/article/trump-booed-in-new-york-as-he-becomes-first-us-president-to-attend-nba-finals--lqbelx</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/police-say-two-suspects-have-been-shot-and-killed-in-israel-gun-attack--qgmsdt</loc>
+    <loc>https://thegloballens365.vercel.app/article/trump-greeted-with-boos-at-nba-finals-in-madison-square-garden--so3bj3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/political-fiscal-reality-to-reshape-uplift-budget-as-national-economic-council-m--tm10uo</loc>
+    <loc>https://thegloballens365.vercel.app/article/trump-says-in-final-throes-of-peace-deal-but-at-least-8-killed-in-lebanon--tnnmyn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/polling-concludes-for-gb-elections-on-24-seats-ppp-accuses-federal-govt-of-tryin--pbcn5z</loc>
+    <loc>https://thegloballens365.vercel.app/article/trump-says-pilots-are-fine-after-u-s-helicopter-crashes-near-strait-of-hormuz--kj494s</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/poultry-industry-grows-at-consumers-cost--3fc3rw</loc>
+    <loc>https://thegloballens365.vercel.app/article/trump-to-meet-ai-leaders-to-discuss-us-investment-in-their-companies--5rnt3a</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ppp-shares-tax-related-reservations-in-pre-budget-meeting-with-dar-say-sources--72totb</loc>
+    <loc>https://thegloballens365.vercel.app/article/two-us-pilots-killed-after-plane-bound-to-pick-up-former-mlb-star-crashes--5047z4</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/punjab-launches-qr-panic-button-system-for-transport-safety-upgrade--w5rdo4</loc>
+    <loc>https://thegloballens365.vercel.app/article/uk-allows-websites-to-opt-out-of-google-ai-search--f4oq3i</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/punjab-requests-deployment-of-army-rangers-for-muharram-security-measures--rirpp6</loc>
+    <loc>https://thegloballens365.vercel.app/article/uk-government-concerned-by-abuse-claims-against-west-ham-co-owner--o6upm3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/punjab-shifts-to-digital-land-ownership-system-from-july--7gr1nu</loc>
+    <loc>https://thegloballens365.vercel.app/article/uk-s-rudest-chalk-figure-gets-a-glow-up-to-stop-it-fading-in-the-rain--2scuju</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/putin-s-pakistan-puzzle--kggogm</loc>
+    <loc>https://thegloballens365.vercel.app/article/unions-rebuff-farage-and-say-reform-cosplaying-as-workers-champions--ozo0oj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/qureshi-warns-over-pakistan-s-gsp-future--2mx213</loc>
+    <loc>https://thegloballens365.vercel.app/article/us-adds-byd-to-list-of-firms-with-alleged-chinese-military-ties--jk0kf5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/rachel-reeves-may-be-unpopular-but-she-is-quietly-rebalancing-uk-plc-heather-ste--azv3ik</loc>
+    <loc>https://thegloballens365.vercel.app/article/us-based-coinbase-offers-trading-using-indian-rupee--3pxl8q</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/rare-footage-captured-of-great-white-shark-in-mediterranean-sea--2kejyr</loc>
+    <loc>https://thegloballens365.vercel.app/article/us-helicopter-crew-who-went-down-in-strait-of-hormuz-rescued-by-drone--jgkqf4</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/rashford-dead-cert-to-start-for-me-walcott--wsmtav</loc>
+    <loc>https://thegloballens365.vercel.app/article/us-israel-what-are-the-allegations-of-espionage-all-about--mf4jh6</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/raspberry-pi-raises-profit-forecast-as-ai-demand-grows--9ekxqs</loc>
+    <loc>https://thegloballens365.vercel.app/article/value-of-trees-in-council-s-healthy-spaces-plan--4vr74b</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/rebel-attacks-in-eastern-drc-kill-30-people-and-hamper-ebola-response--pdl1zy</loc>
+    <loc>https://thegloballens365.vercel.app/article/vast-astronaut-mission-kicks-off-commercial-race-to-replace-iss--wkl3od</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/remarkable-tongue-is-england-s-premier-bowler-agnew--vf6y5q</loc>
+    <loc>https://thegloballens365.vercel.app/article/venezuelans-flood-capital-caracas-streets-demanding-free-elections--qf8wb4</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/reports-iran-uses-war-as-cover-for-increased-executions--bwraea</loc>
+    <loc>https://thegloballens365.vercel.app/article/video-captures-russian-attack-in-ukraine-s-zaporizhzhia--m10zxq</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/respite-needed--k2xpgj</loc>
+    <loc>https://thegloballens365.vercel.app/article/we-need-to-stop-ai-developing-without-humans-says-anthropic-co-founder--31dmxn</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/robinson-rocks-new-zealand-again-as-rain-frustrates-england-at-lord-s--td9syh</loc>
+    <loc>https://thegloballens365.vercel.app/article/weather-tracker-monsoon-season-brings-vital-rainfall-to-parts-of-asia--mtvnee</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/rushed-social-media-ban-for-under-16s-in-uk-could-unravel-charity-warns--nd2wiz</loc>
+    <loc>https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--wkk9ta</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/russia-s-elite-gather-for-putin-s-pet-project-an-economic-forum-in-st-petersburg--ys9p7e</loc>
+    <loc>https://thegloballens365.vercel.app/article/what-now-for-west-ham-after-sullivan-allegations--i79i8q</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/russian-strikes-damage-chernobyl-storage-facility--mnpnl8</loc>
+    <loc>https://thegloballens365.vercel.app/article/what-to-do-as-murder-is-exploited-to-spread-lies-about-race-and-privilege-stand---ov3a6j</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/senate-returns-rs1-43bn-to-exchequer-beats-austerity-target-by-500pc--7dadfl</loc>
+    <loc>https://thegloballens365.vercel.app/article/white-house-ai-policy-adviser-krishnan-to-leave-position--b4cvj4</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/setting-priorities-right-for-agriculture--c8ep4e</loc>
+    <loc>https://thegloballens365.vercel.app/article/who-am-i-guess-world-cup-star-no-2--qqrm04</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/shaheen-defends-pitches-made-for-australia-odi-series--8je12a</loc>
+    <loc>https://thegloballens365.vercel.app/article/why-are-nigeria-south-africa-tensions-rising-amid-xenophobic-attacks--m2pwhk</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/shaheen-s-test-future-faces-uncertainty--jw38l5</loc>
+    <loc>https://thegloballens365.vercel.app/article/why-do-the-right-s-henry-nowak-protests-look-like-a-party-distasteful-as-it-is-t--oovauj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/sikh-mps-say-nowak-murder-was-not-about-their-religion--vzaycm</loc>
+    <loc>https://thegloballens365.vercel.app/article/why-temperature-records-are-being-not-only-broken-but-smashed--wrp93w</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/silicon-valley-including-meta-has-embraced-maga-politics-says-nick-clegg--x5rtwy</loc>
+    <loc>https://thegloballens365.vercel.app/article/why-were-so-many-caught-out-for-pit-lane-speeding-at-monaco-f1-q-a--kwxqxw</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/sipri-with-peace-elusive-nuclear-weapons-make-a-comeback--7wshm9</loc>
+    <loc>https://thegloballens365.vercel.app/article/widow-distressed-by-firm-s-nine-month-delay-to-husband-s-pension--9qegbb</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/slade-centre-stage-willis-goodbye-and-russell-s-calf-prem-talking-points--do5fnd</loc>
+    <loc>https://thegloballens365.vercel.app/article/world-cup-2026-all-48-squads-confirmed--8zfxi5</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/small-traders-tax-scheme-less-a-reform-more-a-negotiated-settlement-with-one-of---1k3yeh</loc>
+    <loc>https://thegloballens365.vercel.app/article/world-cup-fever-muted-in-iran-under-shadow-of-war-hardship--5bhbym</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/smoke-rises-in-illegal-israeli-settlement-after-iranian-missile-attack--2cdtfa</loc>
+    <loc>https://thegloballens365.vercel.app/article/world-cup-opening-ceremony-who-s-performing-when-it-starts-how-to-watch--2iaq7t</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/soft-on-traders--3blnhx</loc>
+    <loc>https://thegloballens365.vercel.app/article/world-first-vaccine-designed-by-artificial-intelligence--zuqmkq</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/south-korea-names-first-woman-pm-in-20-years--5733rq</loc>
+    <loc>https://thegloballens365.vercel.app/article/xi-jinping-and-kim-jong-un-vow-stronger-ties-as-north-korea-visit-wraps-up--xkf4pt</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/spain-s-visitor-numbers-hit-new-highs-as-tourists-avoid-middle-east--lfyzkc</loc>
+    <loc>https://thegloballens365.vercel.app/article/xi-jinping-arrives-in-pyongyang-on-trip-to-revitalise-china-north-korea-ties--g29chl</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/speaker-hesitant-to-convene-kp-assembly-amid-pti-lawmakers-dissent--m3gzon</loc>
+    <loc>https://thegloballens365.vercel.app/article/xi-vows-unwavering-support-for-kim-in-rare-north-korea-visit--b2qmxp</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/starmer-gives-tech-firms-ultimatum-to-block-explicit-images-on-children-s-phones--omk8j9</loc>
+    <loc>https://thegloballens365.vercel.app/article/you-may-be-saving-for-retirement-without-realising-it-here-s-how-to-check--1x6new</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/starmer-preparing-to-announce-social-media-restrictions-for-children--phoisj</loc>
+    <loc>https://thegloballens365.vercel.app/article/young-people-need-money-because-our-system-is-rigged-here-s-a-way-to-give-it-to---h0q9by</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/starmer-tells-apple-and-google-to-ban-nude-images-on-children-s-phones--gmucf9</loc>
+    <loc>https://thegloballens365.vercel.app/article/zelensky-s-close-european-allies-set-out-five-conditions-for-peace-talks--kus8c3</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/starmer-tells-supporters-he-will-fight-any-leadership-contest--3n7qp3</loc>
+    <loc>https://thegloballens365.vercel.app/article/zelenskyy-angers-poland-with-wwii-era-name-for-army-unit--xkz8wj</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/stock-market-jitters-remain-amid-tech-fears-and-renewed-middle-east-attacks--8cr56l</loc>
+    <loc>https://thegloballens365.vercel.app/article/zelenskyy-putin-is-playing-games-with-trump-podcast--pbts3n</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://the-global-lens-365.vercel.app/article/stock-markets-fall-on-tech-plunge-and-renewed-middle-east-attacks--41zozz</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/stokes-atkinson-investigated-over-nightclub-incident--ajppb7</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/successive-elections-take-a-hit-on-kosovo-s-coffers--u1wvsa</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/sweden-mulls-prison-for-young-teens-as-violent-crime-rises--kon6p3</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/tata-steel-says-new-1-25bn-furnace-may-be-delayed-due-to-electrical-issue--3gckxc</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/teenage-sensation-vaibhav-sooryavanshi-called-up-to-india-s-t20i-squad-shreyas-i--5ky9oo</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/texas-bound-jet-crashes-during-emergency-landing-in-dominican-republic--r3a81q</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/the-ancient-trick-making-food-waste-useful-and-tasty--50uanr</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--j5vxjj</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/the-guardian-view-on-children-and-the-internet-rolling-back-big-tech-s-untrammel--fz7xy6</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/the-retaking-of-cuba--l8uonl</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/the-strait-of-hormuz-s-3-month-closure-could-set-a-dangerous-precedent-experts-w--a53au9</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/three-ebola-vaccines-in-development-amid-growing-outbreak-fears--sotjwu</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/tiktok-is-driving-american-expats-to-southeast-asia--rroux1</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--tjw2x5</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/top-chefs-back-andy-burnham-for-prime-minister-to-cut-vat-on-hospitality--eh2yzt</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/top-five-a-day-foods-new-study-says-your-heart-needs--9b7obv</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/transport-leader-injured-in-swat-armed-attack-son-among-3-killed--o5tmlz</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/trump-abruptly-ends-nbc-interview-after-clash-over-rigged-election-claim--08gywu</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/trump-is-remaking-u-s-policy-in-latin-america--ua6899</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/trump-says-will-not-unfreeze-iranian-assets-before-ceasefire-deal-reached--z3st4v</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/trump-to-meet-ai-leaders-to-discuss-us-investment-in-their-companies--iwvuiy</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/two-us-pilots-killed-after-plane-bound-to-pick-up-former-mlb-star-crashes--l0hgv9</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/u-k-deputy-prime-minister-jd-vance-was-wrong-to-blame-teen-s-murder-on-immigrati--p4h0qk</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/uk-asylum-system-is-on-the-brink-cross-party-mps-report-warns--jtyxeq</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/uk-companies-opting-to-hire-temporary-workers-over-permanent-staff-recruitment-f--bzzyb6</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/uk-readies-sanctions-against-israel-to-deter-proposed-illegal-west-bank-settleme--3du0ej</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/uk-s-rudest-chalk-figure-gets-a-glow-up-to-stop-it-fading-in-the-rain--bv67fa</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/ukraine-fires-wave-of-drones-at-russia-on-last-day-of-key-forum--xt9tq4</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/unions-attack-year-long-delay-for-tata-steel-furnace-s-grid-connection-in-south---cfcefm</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/unofficial-results-show-ppp-leading-the-gb-race-with-victory-on-10-seats--yyvbgv</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/uor-earns-ntc-thumbs-up-sets-new-benchmarks-in-technology-education--oox27g</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/us-congressman-demands-probe-into-israel-s-1967-attack-on-uss-liberty--r9d6wu</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/us-imposes-new-sanctions-on-cuban-president-and-castro-family-members--zhnc13</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/us-iran-trade-blows-as-gulf-allies-targeted--cx5js4</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/us-stocks-slump-as-fears-over-big-tech-shake-wall-street--krz67m</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/us-weighs-iranian-assets-plan-as-gulf-tensions-rise--i136bq</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/vast-astronaut-mission-kicks-off-commercial-race-to-replace-iss--ktrcbz</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/video-israel-claims-strike-on-iranian-petrochemical-complex--dx90sz</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/vulnerable-families-illegally-dumped-hundreds-of-miles-away-by-london-councils--xeasyb</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/watch-southern-lights-timelapse-filmed-from-space--99p3lf</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/we-basically-lost-tel-aviv-residents-react-after-israel-iran-strikes--n5rcfy</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/we-don-t-look-at-the-sky-anymore-the-air-india-crash-victims-who-were-not-on-the--jw6ot7</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/we-need-to-stop-ai-developing-without-humans-says-anthropic-co-founder--2w38oc</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/what-to-do-as-murder-is-exploited-to-spread-lies-about-race-and-privilege-stand---g78bop</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/when-u-s-foreign-aid-changed-aids-workers-in-africa-felt-it--ckvlri</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/which-european-nation-has-the-best-chance-to-win-world-cup-2026--ovazg1</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/white-house-ai-policy-adviser-krishnan-to-leave-position--zrctlg</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/who-am-i-guess-world-cup-star-no-1--abhzli</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/who-is-elon-musk-and-what-is-his-net-worth--tx0nkl</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/why-hull-s-us-open-near-miss-shows-major-win-is-close--4o85qb</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/why-temperature-records-are-being-not-only-broken-but-smashed--djjzy1</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/will-the-fifa-world-cup-be-the-economic-bonanza-us-cities-were-promised--o7fuj9</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/women-detained-in-afghanistan-s-herat-in-clothing-crackdown--rscti4</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/world-cup-fever-muted-in-iran-under-shadow-of-war-hardship--q7gyvg</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/world-first-vaccine-designed-by-artificial-intelligence--euzuny</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/xi-and-kim-express-hopes-for-greater-ties-between-china-and-north-korea--we7lo4</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/xi-calls-china-north-korea-ties-unbreakable-but-pyongyang-s-russia-pivot-is-test--7q18tm</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/you-may-be-saving-for-retirement-without-realising-it-here-s-how-to-check--pgycsd</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/zelensky-in-downing-street-for-ukraine-war-talks-with-european-leaders--ve87lw</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/zelensky-s-close-european-allies-set-out-five-conditions-for-peace-talks--f8fjrc</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/zelenskyy-angers-poland-with-wwii-era-name-for-army-unit--vk5lo7</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/zelenskyy-hopes-reform-uk-councils-will-allow-ukraine-flags-to-be-flown-again--v2p6n3</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/zelenskyy-meets-key-allies-in-london-aiming-to-build-on-strikes-on-russia--p6gbbp</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/zverev-beats-cobolli-in-tense-french-open-final-for-first-grand-slam-title--ljoija</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://the-global-lens-365.vercel.app/article/zverev-ends-wait-for-grand-slam-title-with-french-open-triumph--zi9hpe</loc>
+    <loc>https://thegloballens365.vercel.app/article/zverev-ends-wait-for-grand-slam-title-with-french-open-triumph--ysazyp</loc>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
