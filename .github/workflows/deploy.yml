@@ -33,4 +33,10 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
           npx vercel deploy --prod --token="$VERCEL_TOKEN" \
-            --scope="$VERCEL_ORG_ID" --yes --force --json 2>&1
+            --scope="$VERCEL_ORG_ID" --yes --force --json \
+            > /tmp/vercel-out.json 2>/tmp/vercel-err.txt
+          echo "=== EXIT CODE: $? ==="
+          echo "=== STDOUT ==="
+          cat /tmp/vercel-out.json 2>/dev/null | head -20
+          echo "=== STDERR ==="
+          cat /tmp/vercel-err.txt 2>/dev/null | head -20
