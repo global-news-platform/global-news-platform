@@ -1,6 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <rect width="200" height="60" rx="8" fill="transparent"/>
-  <rect x="4" y="6" width="48" height="48" rx="12" fill="#1877F2"/>
-  <path d="M35 18h-5a4 4 0 0 0-4 4v5h-3v4h3v12h4V31h3.5l.5-4h-4v-3a1 1 0 0 1 1-1h4v-5Z" fill="white"/>
-  <text x="60" y="40" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="currentColor">The Global Lens 365</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="400" y2="400">
+      <stop offset="0%" stop-color="#4A90FF" />
+      <stop offset="100%" stop-color="#1A6DFF" />
+    </linearGradient>
+    <linearGradient id="blueLight" x1="0" y1="0" x2="400" y2="400">
+      <stop offset="0%" stop-color="#5AA0FF" />
+      <stop offset="100%" stop-color="#3A8AFF" />
+    </linearGradient>
+    <linearGradient id="blueMed" x1="0" y1="0" x2="400" y2="400">
+      <stop offset="0%" stop-color="#3A8AFF" />
+      <stop offset="100%" stop-color="#1A6DFF" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="400" y2="400">
+      <stop offset="0%" stop-color="#F5A623" />
+      <stop offset="100%" stop-color="#E8912E" />
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="400" y2="400">
+      <stop offset="0%" stop-color="#102A4A" />
+      <stop offset="100%" stop-color="#081838" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="400" y2="400">
+      <stop offset="0%" stop-color="#5AA0FF" />
+      <stop offset="30%" stop-color="#2A7DFF" />
+      <stop offset="100%" stop-color="#1A5DCC" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer glow shadow -->
+  <circle cx="200" cy="200" r="180" fill="url(#blueGrad)" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Lens barrel outer ring -->
+  <circle cx="200" cy="200" r="172" fill="url(#ringGrad)" />
+
+  <!-- Dark body -->
+  <circle cx="200" cy="200" r="152" fill="url(#darkGrad)" />
+
+  <!-- Inner aperture ring -->
+  <circle cx="200" cy="200" r="142" fill="none" stroke="url(#blueGrad)" stroke-width="2" opacity="0.3" />
+
+  <!-- Aperture blade segments (8 sectors) -->
+  <!-- Blade 1 - bottom-right segment (amber) -->
+  <path d="M200,58 A142,142 0 0,1 300.4,99.6 L200,200 Z" fill="url(#amberGrad)" opacity="0.9" />
+  <!-- Blade 2 -->
+  <path d="M300.4,99.6 A142,142 0 0,1 342,200 L200,200 Z" fill="url(#blueLight)" opacity="0.25" />
+  <!-- Blade 3 -->
+  <path d="M342,200 A142,142 0 0,1 300.4,300.4 L200,200 Z" fill="url(#blueMed)" opacity="0.2" />
+  <!-- Blade 4 -->
+  <path d="M300.4,300.4 A142,142 0 0,1 200,342 L200,200 Z" fill="url(#blueLight)" opacity="0.25" />
+  <!-- Blade 5 -->
+  <path d="M200,342 A142,142 0 0,1 99.6,300.4 L200,200 Z" fill="url(#blueMed)" opacity="0.2" />
+  <!-- Blade 6 -->
+  <path d="M99.6,300.4 A142,142 0 0,1 58,200 L200,200 Z" fill="url(#blueLight)" opacity="0.25" />
+  <!-- Blade 7 -->
+  <path d="M58,200 A142,142 0 0,1 99.6,99.6 L200,200 Z" fill="url(#blueMed)" opacity="0.2" />
+  <!-- Blade 8 -->
+  <path d="M99.6,99.6 A142,142 0 0,1 200,58 L200,200 Z" fill="url(#blueLight)" opacity="0.25" />
+
+  <!-- Globe sphere overlay -->
+  <circle cx="200" cy="200" r="115" fill="none" stroke="url(#blueLight)" stroke-width="1.5" opacity="0.15" />
+
+  <!-- Globe latitude lines -->
+  <ellipse cx="200" cy="200" rx="80" ry="115" fill="none" stroke="white" stroke-width="2.5" opacity="0.35" />
+  <ellipse cx="200" cy="200" rx="42" ry="115" fill="none" stroke="white" stroke-width="1.5" opacity="0.2" />
+  <ellipse cx="200" cy="200" rx="10" ry="115" fill="none" stroke="white" stroke-width="1" opacity="0.1" />
+
+  <!-- Globe longitude lines -->
+  <line x1="85" y1="200" x2="315" y2="200" stroke="white" stroke-width="2.5" opacity="0.35" />
+  <line x1="110" y1="140" x2="290" y2="140" stroke="white" stroke-width="1.5" opacity="0.15" />
+  <line x1="110" y1="260" x2="290" y2="260" stroke="white" stroke-width="1.5" opacity="0.15" />
+
+  <!-- Central amber focus dot -->
+  <circle cx="200" cy="200" r="14" fill="url(#amberGrad)" />
+  <circle cx="200" cy="200" r="14" fill="none" stroke="white" stroke-width="2" opacity="0.4" />
+  <circle cx="200" cy="200" r="6" fill="white" opacity="0.8" />
+
+  <!-- Subtle highlight arc -->
+  <path d="M100,110 A130,130 0 0,1 240,72" fill="none" stroke="white" stroke-width="3" opacity="0.08" stroke-linecap="round" />
+
+  <!-- Brand typography -->
+  <text x="200" y="425" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="34" letter-spacing="4" fill="#1A6DFF">THE GLOBAL LENS</text>
+  <text x="200" y="470" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="300" font-size="28" letter-spacing="12" fill="#E8912E">365</text>
 </svg>

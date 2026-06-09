@@ -37,7 +37,7 @@ export function SiteLogo({ className = "h-12 w-12", iconSize = 6, textSize = "te
   return (
     <>
       <img
-        src={siteConfig.logo}
+        src={siteConfig.logoSvg}
         alt={siteConfig.name}
         className={`rounded-lg object-cover ${className}`}
         onError={() => setUseFallback(true)}

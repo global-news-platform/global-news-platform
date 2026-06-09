@@ -1,11 +1,11 @@
 {
-  "name": "Global News Platform",
-  "short_name": "Global News",
+  "name": "The Global Lens 365",
+  "short_name": "Global Lens",
   "description": "Your trusted source for breaking news, in-depth analysis, and global perspectives",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0a0a0a",
+  "background_color": "#081838",
+  "theme_color": "#1A6DFF",
   "icons": [
     {
       "src": "/icon.svg",
