@@ -53,10 +53,14 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
-          # Create project
-          PROJ=$(curl -sS -X POST "https://api.vercel.com/v1/projects" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
+          set -e
+          API_BASE="https://api.vercel.com"
+          AUTH="Authorization: Bearer $VERCEL_TOKEN"
+          TEAM="x-vercel-team-id: $VERCEL_ORG_ID"
+
+          # Create project (idempotent)
+          curl -sS -X POST "$API_BASE/v1/projects" \
+            -H "$AUTH" -H "$TEAM" \
             -H "Content-Type: application/json" \
             -d '{
               "name": "TheGlobalLens365",
@@ -65,13 +69,11 @@ jobs:
               "outputDirectory": ".next",
               "installCommand": "npm ci",
               "gitRepository": {"type": "github", "repoId": 1235422354}
-            }' 2>&1)
-          echo "--- Project create exit: $? ---"
+            }' 2>&1 | head -5 || echo "Project exists"
 
           # Create deployment
-          DEP=$(curl -sS -X POST "https://api.vercel.com/v13/deployments" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "x-vercel-team-id: $VERCEL_ORG_ID" \
+          DEP=$(curl -sS -X POST "$API_BASE/v13/deployments" \
+            -H "$AUTH" -H "$TEAM" \
             -H "Content-Type: application/json" \
             -d '{
               "name": "TheGlobalLens365",
@@ -79,22 +81,39 @@ jobs:
               "gitSource": {"type": "github", "ref": "main", "repoId": 1235422354},
               "target": "production"
             }' 2>&1)
-          echo "--- Deploy create exit: $? ---"
 
-          # Extract URL and ID
-          URL=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('url','no-url'))" 2>/dev/null || echo "parse-failed")
-          ID=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('id','no-id'))" 2>/dev/null || echo "parse-failed")
-          echo "URL=$URL ID=$ID"
+          DEP_URL=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('url','N/A'))" 2>/dev/null || echo "parse-error")
+          DEP_ID=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('id','N/A'))" 2>/dev/null || echo "parse-error")
+          echo "Deployment URL: $DEP_URL"
+          echo "Deployment ID: $DEP_ID"
 
-          # Wait for build, poll every 30s up to 10min
-          if [ "$ID" != "no-id" ]; then
-            for i in $(seq 1 20); do
-              sleep 30
-              STATUS=$(curl -sS "https://api.vercel.com/v13/deployments/$ID" \
-                -H "Authorization: Bearer $VERCEL_TOKEN" \
-                -H "x-vercel-team-id: $VERCEL_ORG_ID" 2>/dev/null | \
-                python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('readyState','unknown'))" 2>/dev/null || echo "unknown")
-              echo "  Check $i: $STATUS"
-              if [ "$STATUS" = "READY" ] || [ "$STATUS" = "ERROR" ]; then break; fi
-            done
+          if [ "$DEP_ID" = "N/A" ] || [ "$DEP_ID" = "parse-error" ]; then
+            echo "ERROR: Could not parse deployment response"
+            echo "$DEP" | head -20
+            exit 1
           fi
+
+          # Poll for build completion (up to 10 min)
+          for i in $(seq 1 20); do
+            sleep 30
+            INFO=$(curl -sS "$API_BASE/v13/deployments/$DEP_ID" -H "$AUTH" -H "$TEAM" 2>&1)
+            STATE=$(echo "$INFO" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('readyState','unknown'))" 2>/dev/null || echo "unknown")
+            echo "  Poll $i: $STATE"
+            case "$STATE" in
+              READY) echo "DEPLOYMENT READY: $DEP_URL"; exit 0 ;;
+              ERROR)
+                echo "BUILD FAILED. Error info:"
+                echo "$INFO" | python3 -c "
+import sys,json
+d=json.load(sys.stdin)
+e=d.get('error',{})
+if e: print('Error:', json.dumps(e,indent=2))
+for a in d.get('alias',[]): print('Alias:', a)
+" 2>/dev/null
+                exit 1
+                ;;
+              CANCELED) echo "Build cancelled"; exit 1 ;;
+            esac
+          done
+          echo "TIMEOUT waiting for build"
+          exit 1
