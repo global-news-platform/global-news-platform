@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 10 Jun 2026 21:00:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 22:06:41 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -193,6 +193,17 @@
     <source url="https://www.aljazeera.com/news/2026/6/10/us-military-chief-hegseth-warns-cuba-against-acquiring-military-arms?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>US Defence Secretary Hegseth pledges strikes on ‘key facilities’ in Iran</title>
+    <link>https://thegloballens365.vercel.app/article/us-defence-secretary-hegseth-pledges-strikes-on-key-facilities-in-iran--q1lejp</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-defence-secretary-hegseth-pledges-strikes-on-key-facilities-in-iran--q1lejp</guid>
+    <description>US Central Command has described the attacks as a result of &apos;Iran’s unwarranted and continued aggression&apos;.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 10 Jun 2026 21:51:57 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/us-defence-secretary-hegseth-pledges-strikes-on-key-facilities-in-iran--q1lejp.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/10/us-defence-secretary-hegseth-pledges-strikes-on-key-facilities-in-iran?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Uptick in children and teenagers enjoying reading for first time in 5 years</title>
     <link>https://thegloballens365.vercel.app/article/uptick-in-children-and-teenagers-enjoying-reading-for-first-time-in-5-years--ijrms3</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uptick-in-children-and-teenagers-enjoying-reading-for-first-time-in-5-years--ijrms3</guid>
@@ -345,6 +356,17 @@
     <pubDate>Wed, 10 Jun 2026 17:50:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/trump-says-he-loves-the-inflation-as-us-prices-rise-at-fastest-rate-in-three-yea--jr3ubc.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c0myzxjkw99o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Trump directs interim US intelligence chief Bill Pulte to downsize agency</title>
+    <link>https://thegloballens365.vercel.app/article/trump-directs-interim-us-intelligence-chief-bill-pulte-to-downsize-agency--9bnnrg</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/trump-directs-interim-us-intelligence-chief-bill-pulte-to-downsize-agency--9bnnrg</guid>
+    <description>Interim ODNI chief Bill Pulte has been slammed by Democrats as a Donald Trump loyalist with no intelligence background.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 10 Jun 2026 21:09:14 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/trump-directs-interim-us-intelligence-chief-bill-pulte-to-downsize-agency--9bnnrg.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/10/trump-directs-interim-us-intelligence-chief-bill-pulte-to-downsize-agency?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Top five-a-day foods new study says your heart needs</title>
@@ -543,28 +565,6 @@
     <pubDate>Wed, 10 Jun 2026 14:01:54 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/sc-overturns-convictions-of-two-mqm-workers-in-karachi-s-baldia-factory-fire-cas--fluvk6.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2006634/sc-overturns-convictions-of-two-mqm-workers-in-karachis-baldia-factory-fire-case">Dawn</source>
-  </item>
-  <item>
-    <title>Saudi Arabia launches new national carrier Riyadh Air despite Middle East conflict, delays</title>
-    <link>https://thegloballens365.vercel.app/article/saudi-arabia-launches-new-national-carrier-riyadh-air-despite-middle-east-confli--ojoc9n</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/saudi-arabia-launches-new-national-carrier-riyadh-air-despite-middle-east-confli--ojoc9n</guid>
-    <description>Saudi Arabia launched its second national carrier Riyadh Air after more than a year of delays on Wednesday, defying the economic turmoil triggered by the...</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 10 Jun 2026 09:27:59 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/saudi-arabia-launches-new-national-carrier-riyadh-air-despite-middle-east-confli--ojoc9n.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006607/saudi-arabia-launches-new-national-carrier-riyadh-air-despite-middle-east-conflict-delays">Dawn</source>
-  </item>
-  <item>
-    <title>Rising cyberscam losses expose gaps in EU response</title>
-    <link>https://thegloballens365.vercel.app/article/rising-cyberscam-losses-expose-gaps-in-eu-response--irww5j</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/rising-cyberscam-losses-expose-gaps-in-eu-response--irww5j</guid>
-    <description>Europeans are losing billions to online scams, yet the EU has been slower than the US, the UK and China in targeting the Southeast Asian networks behind many...</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 10 Jun 2026 11:46:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/rising-cyberscam-losses-expose-gaps-in-eu-response--irww5j.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/rising-cyberscam-losses-expose-gaps-in-eu-response/a-77487321?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   </channel>
 </rss>
