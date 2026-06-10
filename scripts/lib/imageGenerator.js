@@ -78,6 +78,7 @@ async function regenerateViaAI(originalBuffer, title, description) {
     const response = await fetch(MODELS_LAB_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      signal: AbortSignal.timeout(30000),
       body: JSON.stringify({
         key: AI_IMAGE_API_KEY,
         model_id: AI_IMAGE_MODEL,
