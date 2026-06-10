@@ -9,13 +9,35 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 10 Jun 2026 20:47:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 21:00:05 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://thegloballens365.vercel.app</link>
     </image>
+  <item>
+    <title>World&apos;s largest chipmaker does not rule out price rises as costs increase</title>
+    <link>https://thegloballens365.vercel.app/article/world-s-largest-chipmaker-does-not-rule-out-price-rises-as-costs-increase--ovae2m</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-s-largest-chipmaker-does-not-rule-out-price-rises-as-costs-increase--ovae2m</guid>
+    <description>In a rare interview, a senior executive at TSMC discusses the AI boom, the geopolitics of chips and what it means for the price of electronics.</description>
+    <category>karobar</category>
+    <author>Babar Shah</author>
+    <pubDate>Tue, 09 Jun 2026 22:00:24 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-s-largest-chipmaker-does-not-rule-out-price-rises-as-costs-increase--ovae2m.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/ce3ez4zzzlvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>&apos;World-first&apos; vaccine designed by artificial intelligence</title>
+    <link>https://thegloballens365.vercel.app/article/world-first-vaccine-designed-by-artificial-intelligence--m27u2r</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-first-vaccine-designed-by-artificial-intelligence--m27u2r</guid>
+    <description>Cambridge scientists say they have, for the first time, tested a vaccine designed by AI.</description>
+    <category>sehat</category>
+    <author>Sara Khan</author>
+    <pubDate>Thu, 04 Jun 2026 23:29:06 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-first-vaccine-designed-by-artificial-intelligence--m27u2r.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/crrpggegwe0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
   <item>
     <title>World Cup expected to be the biggest betting event in history</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-expected-to-be-the-biggest-betting-event-in-history--jkx2t6</link>
@@ -26,6 +48,28 @@
     <pubDate>Wed, 10 Jun 2026 18:39:31 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-expected-to-be-the-biggest-betting-event-in-history--jkx2t6.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cwydgwdx83yo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Williams&apos; Queen&apos;s campaign in doubt after Mboko injury</title>
+    <link>https://thegloballens365.vercel.app/article/williams-queen-s-campaign-in-doubt-after-mboko-injury--0a7bvr</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/williams-queen-s-campaign-in-doubt-after-mboko-injury--0a7bvr</guid>
+    <description>Serena Williams&apos; doubles campaign at Queen&apos;s is in doubt after Victoria Mboko suffers a knee injury in her singles match against Karolina Pliskova.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 10 Jun 2026 16:59:19 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/williams-queen-s-campaign-in-doubt-after-mboko-injury--0a7bvr.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/tennis/articles/c3ey8pkgjzlo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Why Lebanon remains caught up in the Israel-Iran conflict</title>
+    <link>https://thegloballens365.vercel.app/article/why-lebanon-remains-caught-up-in-the-israel-iran-conflict--1j4uux</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-lebanon-remains-caught-up-in-the-israel-iran-conflict--1j4uux</guid>
+    <description>The Israel-Iran ceasefire may be holding, but for many in Lebanon, the war continues.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 10 Jun 2026 18:54:40 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-lebanon-remains-caught-up-in-the-israel-iran-conflict--1j4uux.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/the-take-2/2026/6/10/aje-onl-aj_tt_irn_next100day-100626?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Why is Hezbollah still important for Iran?</title>
@@ -39,6 +83,39 @@
     <source url="https://www.dw.com/en/why-is-hezbollah-still-important-for-iran/a-77487992?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   <item>
+    <title>White House AI policy adviser Krishnan to leave position</title>
+    <link>https://thegloballens365.vercel.app/article/white-house-ai-policy-adviser-krishnan-to-leave-position--itwgg1</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/white-house-ai-policy-adviser-krishnan-to-leave-position--itwgg1</guid>
+    <description>A top White House artificial intelligence policy adviser on Saturday said he will leave his position at the end of June, marking the exit of a leading figure...</description>
+    <category>technology</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sun, 07 Jun 2026 09:01:40 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/white-house-ai-policy-adviser-krishnan-to-leave-position--itwgg1.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2005854/white-house-ai-policy-adviser-krishnan-to-leave-position">Dawn</source>
+  </item>
+  <item>
+    <title>What is El Niño and why could it mean record temperatures?</title>
+    <link>https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--fkikp3</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--fkikp3</guid>
+    <description>Global temperatures are expected to rise in the coming months as El Niño begins.</description>
+    <category>science</category>
+    <author>Babar Shah</author>
+    <pubDate>Tue, 09 Jun 2026 14:50:57 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--fkikp3.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cj97npgk92po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Whale graveyard dating back five million years discovered</title>
+    <link>https://thegloballens365.vercel.app/article/whale-graveyard-dating-back-five-million-years-discovered--aw0urp</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/whale-graveyard-dating-back-five-million-years-discovered--aw0urp</guid>
+    <description>The Indian Ocean site is \&quot;far beyond anything we had imagined\&quot;, one researcher says.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 10 Jun 2026 18:24:09 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/whale-graveyard-dating-back-five-million-years-discovered--aw0urp.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c75ylx4xn10o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Water cannon deployed in second night of disorder after knife attack in Belfast – UK politics live</title>
     <link>https://thegloballens365.vercel.app/article/water-cannon-deployed-in-second-night-of-disorder-after-knife-attack-in-belfast---ya2uqw</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/water-cannon-deployed-in-second-night-of-disorder-after-knife-attack-in-belfast---ya2uqw</guid>
@@ -48,6 +125,28 @@
     <pubDate>Wed, 10 Jun 2026 20:25:36 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/water-cannon-deployed-in-second-night-of-disorder-after-knife-attack-in-belfast---ya2uqw.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/politics/live/2026/jun/10/belfast-riots-knife-attack-northern-ireland-sdlp-keir-starmer-kemi-badenoch-pmqs-uk-politics-latest-news-updates">The Guardian</source>
+  </item>
+  <item>
+    <title>War in Ukraine: Kyiv strikes key Russian supply lines</title>
+    <link>https://thegloballens365.vercel.app/article/war-in-ukraine-kyiv-strikes-key-russian-supply-lines--tzr3pn</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/war-in-ukraine-kyiv-strikes-key-russian-supply-lines--tzr3pn</guid>
+    <description>Russian troops rely on supplies via the land corridor to Crimea, but Ukrainian forces are now able to launch concentrated attacks along the critical route.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 10 Jun 2026 08:32:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/war-in-ukraine-kyiv-strikes-key-russian-supply-lines--tzr3pn.jpg" type="image/jpeg" />
+    <source url="https://www.dw.com/en/war-in-ukraine-kyiv-strikes-key-russian-supply-lines/a-77480640?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Vets advise ban on over the counter flea treatment for pets</title>
+    <link>https://thegloballens365.vercel.app/article/vets-advise-ban-on-over-the-counter-flea-treatment-for-pets--d2007f</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/vets-advise-ban-on-over-the-counter-flea-treatment-for-pets--d2007f</guid>
+    <description>Pet owners have historically been advised they should treat cats and dogs as a preventative measure every month.</description>
+    <category>siasat</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 10 Jun 2026 17:06:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/vets-advise-ban-on-over-the-counter-flea-treatment-for-pets--d2007f.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cp9pd4d3m5ko?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Version of AI tool &apos;too powerful for public&apos; released to public</title>
@@ -61,6 +160,17 @@
     <source url="https://www.bbc.com/news/articles/ckg701v1dp6o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>VAR, timewasting and subs - World Cup law changes explained</title>
+    <link>https://thegloballens365.vercel.app/article/var-timewasting-and-subs-world-cup-law-changes-explained--9mipsf</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/var-timewasting-and-subs-world-cup-law-changes-explained--9mipsf</guid>
+    <description>The 2026 World Cup is going to be unprecedented for a variety of reasons - and that includes the sheer number of law changes.</description>
+    <category>khel</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 10 Jun 2026 13:18:27 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/var-timewasting-and-subs-world-cup-law-changes-explained--9mipsf.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/football/articles/ce8jv326d7vo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>US official claims banned referee had links with &apos;terror organisations&apos;</title>
     <link>https://thegloballens365.vercel.app/article/us-official-claims-banned-referee-had-links-with-terror-organisations--e9fs5j</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-official-claims-banned-referee-had-links-with-terror-organisations--e9fs5j</guid>
@@ -72,6 +182,17 @@
     <source url="https://www.bbc.com/sport/football/articles/c2dylj8kj82o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>US military chief Hegseth warns Cuba against acquiring military arms</title>
+    <link>https://thegloballens365.vercel.app/article/us-military-chief-hegseth-warns-cuba-against-acquiring-military-arms--vststl</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-military-chief-hegseth-warns-cuba-against-acquiring-military-arms--vststl</guid>
+    <description>Hegseth&apos;s visit to Guantanamo Bay, Cuba, comes as the Trump administration increases pressure against Cuba&apos;s government.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 10 Jun 2026 18:09:11 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/us-military-chief-hegseth-warns-cuba-against-acquiring-military-arms--vststl.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/10/us-military-chief-hegseth-warns-cuba-against-acquiring-military-arms?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Uptick in children and teenagers enjoying reading for first time in 5 years</title>
     <link>https://thegloballens365.vercel.app/article/uptick-in-children-and-teenagers-enjoying-reading-for-first-time-in-5-years--ijrms3</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uptick-in-children-and-teenagers-enjoying-reading-for-first-time-in-5-years--ijrms3</guid>
@@ -81,6 +202,116 @@
     <pubDate>Wed, 10 Jun 2026 12:13:32 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/uptick-in-children-and-teenagers-enjoying-reading-for-first-time-in-5-years--ijrms3.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cze93wggw74o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Unions snub Farage&apos;s invite to join Reform UK</title>
+    <link>https://thegloballens365.vercel.app/article/unions-snub-farage-s-invite-to-join-reform-uk--n7z7xd</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/unions-snub-farage-s-invite-to-join-reform-uk--n7z7xd</guid>
+    <description>The party leader says his \&quot;door is open\&quot; but the Unite union says he is \&quot;no friend of the workers\&quot;.</description>
+    <category>siasat</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 09 Jun 2026 17:37:59 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/unions-snub-farage-s-invite-to-join-reform-uk--n7z7xd.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cevlyvkm4ymo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>UK PM Starmer slams ‘unjustified’ anti-immigration violence in Belfast</title>
+    <link>https://thegloballens365.vercel.app/article/uk-pm-starmer-slams-unjustified-anti-immigration-violence-in-belfast--ye8wn6</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uk-pm-starmer-slams-unjustified-anti-immigration-violence-in-belfast--ye8wn6</guid>
+    <description>Anti-immigrant violence swept through Belfast, with homes and vehicles torched following a knife attack.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 10 Jun 2026 18:00:06 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/uk-pm-starmer-slams-unjustified-anti-immigration-violence-in-belfast--ye8wn6.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/10/uk-pm-starmer-slams-unjustified-anti-immigration-violence-in-belfast?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>UK pint prices up 36% since last World Cup – here&apos;s why</title>
+    <link>https://thegloballens365.vercel.app/article/uk-pint-prices-up-36-since-last-world-cup-here-s-why--24j8bu</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uk-pint-prices-up-36-since-last-world-cup-here-s-why--24j8bu</guid>
+    <description>UK pint prices are up 36% since the last World Cup. We look at why beer now costs so much more.</description>
+    <category>karobar</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 10 Jun 2026 05:23:36 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/uk-pint-prices-up-36-since-last-world-cup-here-s-why--24j8bu.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c982107drq8o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>UK minister defends changes to student loans as criticism mounts</title>
+    <link>https://thegloballens365.vercel.app/article/uk-minister-defends-changes-to-student-loans-as-criticism-mounts--ptub53</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uk-minister-defends-changes-to-student-loans-as-criticism-mounts--ptub53</guid>
+    <description>Lucy Rigby tells MPs heavily subsidised system gives the government the right to alter terms of existing agreements Ministers have rejected accusations that...</description>
+    <category>siasat</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 10 Jun 2026 17:25:14 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/uk-minister-defends-changes-to-student-loans-as-criticism-mounts--ptub53.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/money/2026/jun/10/uk-minister-defends-changes-to-student-loans-as-pressure-grows-for-reforms">The Guardian</source>
+  </item>
+  <item>
+    <title>UK, allies slap sanctions against Israeli network over violence in occupied West Bank</title>
+    <link>https://thegloballens365.vercel.app/article/uk-allies-slap-sanctions-against-israeli-network-over-violence-in-occupied-west---x7feyr</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uk-allies-slap-sanctions-against-israeli-network-over-violence-in-occupied-west---x7feyr</guid>
+    <description>https://www.dawn.com/news/2006531</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 10 Jun 2026 02:53:07 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/uk-allies-slap-sanctions-against-israeli-network-over-violence-in-occupied-west---x7feyr.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2006565/uk-allies-slap-sanctions-against-israeli-network-over-violence-in-occupied-west-bank">Dawn</source>
+  </item>
+  <item>
+    <title>U.S. and Iran exchange strikes after Apache helicopter downing</title>
+    <link>https://thegloballens365.vercel.app/article/u-s-and-iran-exchange-strikes-after-apache-helicopter-downing--vlhu2g</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/u-s-and-iran-exchange-strikes-after-apache-helicopter-downing--vlhu2g</guid>
+    <description>Trump confirmed the two pilots in the U.S. helicopter, downed near the Strait of Hormuz, are safe. The U.S.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Tue, 09 Jun 2026 17:25:28 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/u-s-and-iran-exchange-strikes-after-apache-helicopter-downing--vlhu2g.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/06/09/nx-s1-5851845/trump-confirms-iran-shot-down-helicopter-says-u-s-must-respond">NPR</source>
+  </item>
+  <item>
+    <title>U.K. leaders call for calm as protests break out after Belfast street stabbing</title>
+    <link>https://thegloballens365.vercel.app/article/u-k-leaders-call-for-calm-as-protests-break-out-after-belfast-street-stabbing--8lmzjc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/u-k-leaders-call-for-calm-as-protests-break-out-after-belfast-street-stabbing--8lmzjc</guid>
+    <description>U.K. leaders called for calm Tuesday after the arrest of a Sudanese man accused of trying to kill a man in a vicious stabbing on a Belfast street sparked fiery...</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 10 Jun 2026 06:00:14 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/u-k-leaders-call-for-calm-as-protests-break-out-after-belfast-street-stabbing--8lmzjc.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/06/10/nx-s1-5852968/uk-anti-immigration-protests-belfast">NPR</source>
+  </item>
+  <item>
+    <title>Turkiye’s main opposition party in doldrums as rival leaders hold rallies</title>
+    <link>https://thegloballens365.vercel.app/article/turkiye-s-main-opposition-party-in-doldrums-as-rival-leaders-hold-rallies--yptjfw</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/turkiye-s-main-opposition-party-in-doldrums-as-rival-leaders-hold-rallies--yptjfw</guid>
+    <description>ANKARA: The ousted head of Turkiye’s main opposition party on Tuesday urged lawmakers to resist what he called a bid to eliminate it, while its court-appointed...</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 10 Jun 2026 03:02:59 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/turkiye-s-main-opposition-party-in-doldrums-as-rival-leaders-hold-rallies--yptjfw.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2006504/turkiyes-main-opposition-party-in-doldrums-as-rival-leaders-hold-rallies">Dawn</source>
+  </item>
+  <item>
+    <title>Trump: “we’re working… to make sure the right people come in”</title>
+    <link>https://thegloballens365.vercel.app/article/trump-we-re-working-to-make-sure-the-right-people-come-in--8h43om</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/trump-we-re-working-to-make-sure-the-right-people-come-in--8h43om</guid>
+    <description>When asked about people’s ability to obtain visas to attend the World Cup, Trump said administration is working hard.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 10 Jun 2026 19:21:21 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/trump-we-re-working-to-make-sure-the-right-people-come-in--8h43om.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/10/trump-were-working-to-make-sure-the-right-people-come?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Trump warns of more attacks on Iran after US Apache helicopter downing</title>
+    <link>https://thegloballens365.vercel.app/article/trump-warns-of-more-attacks-on-iran-after-us-apache-helicopter-downing--9xeda2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/trump-warns-of-more-attacks-on-iran-after-us-apache-helicopter-downing--9xeda2</guid>
+    <description>Trump warns of more attacks on Iran after US Apache helicopter downing</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 10 Jun 2026 18:22:13 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/trump-warns-of-more-attacks-on-iran-after-us-apache-helicopter-downing--9xeda2.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/10/trump-warns-of-more-attacks-on-iran-after-us-apache-helicopter-downing?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Trump targeting immigrants from countries hit most by climate shocks</title>
@@ -116,6 +347,28 @@
     <source url="https://www.bbc.com/news/articles/c0myzxjkw99o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Top five-a-day foods new study says your heart needs</title>
+    <link>https://thegloballens365.vercel.app/article/top-five-a-day-foods-new-study-says-your-heart-needs--7qzfhg</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/top-five-a-day-foods-new-study-says-your-heart-needs--7qzfhg</guid>
+    <description>Not all fruit and veg is equal for getting nutrients called flavanols, say researchers.</description>
+    <category>sehat</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 08 Jun 2026 08:00:13 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/top-five-a-day-foods-new-study-says-your-heart-needs--7qzfhg.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/ce3p3z5d63po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>TikToker held for ‘making AI-generated obscene video’ in Bahawalnagar</title>
+    <link>https://thegloballens365.vercel.app/article/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--qwywrd</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--qwywrd</guid>
+    <description>BAHAWALNAGAR: A male TikToker was arrested on Friday for allegedly making an AI-generated obscene video of a rival female TikToker and uploading it on social...</description>
+    <category>technology</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 06 Jun 2026 03:55:31 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar--qwywrd.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2005494/tiktoker-held-for-making-ai-generated-obscene-video-in-bahawalnagar">Dawn</source>
+  </item>
+  <item>
     <title>Three Indian sailors missing after US says it hit tanker in Gulf of Oman</title>
     <link>https://thegloballens365.vercel.app/article/three-indian-sailors-missing-after-us-says-it-hit-tanker-in-gulf-of-oman--bdq8ii</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/three-indian-sailors-missing-after-us-says-it-hit-tanker-in-gulf-of-oman--bdq8ii</guid>
@@ -125,6 +378,61 @@
     <pubDate>Wed, 10 Jun 2026 17:48:54 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/three-indian-sailors-missing-after-us-says-it-hit-tanker-in-gulf-of-oman--bdq8ii.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c0rygjw1kqxo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Third of people say uni degree not worth it, as student loan inquiry begins</title>
+    <link>https://thegloballens365.vercel.app/article/third-of-people-say-uni-degree-not-worth-it-as-student-loan-inquiry-begins--msyidd</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/third-of-people-say-uni-degree-not-worth-it-as-student-loan-inquiry-begins--msyidd</guid>
+    <description>MPs will hear the concerns of graduates about the size of their student debts, and the interest rates.</description>
+    <category>taleem</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Tue, 02 Jun 2026 12:38:59 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/third-of-people-say-uni-degree-not-worth-it-as-student-loan-inquiry-begins--msyidd.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>There are no guardrails now on the right of UK politics: where Restore Britain goes, others will follow | Owen Jones</title>
+    <link>https://thegloballens365.vercel.app/article/there-are-no-guardrails-now-on-the-right-of-uk-politics-where-restore-britain-go--7sa1cl</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/there-are-no-guardrails-now-on-the-right-of-uk-politics-where-restore-britain-go--7sa1cl</guid>
+    <description>In the UK – and across the west - incendiary language and white supremacist policies are entering the political mainstream What qualifies as too rightwing...</description>
+    <category>siasat</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 10 Jun 2026 15:00:50 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/there-are-no-guardrails-now-on-the-right-of-uk-politics-where-restore-britain-go--7sa1cl.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/commentisfree/2026/jun/10/restore-britain-right-politics-white-supremacist">The Guardian</source>
+  </item>
+  <item>
+    <title>The vanishing of Nicolás Maduro: how the former dictator is being erased from Venezuela</title>
+    <link>https://thegloballens365.vercel.app/article/the-vanishing-of-nicol-s-maduro-how-the-former-dictator-is-being-erased-from-ven--z4ldrs</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/the-vanishing-of-nicol-s-maduro-how-the-former-dictator-is-being-erased-from-ven--z4ldrs</guid>
+    <description>Billboards are being painted over and former allies seem eager to forget the man they once glorified For years, his bewhiskered face stared down from...</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 10 Jun 2026 09:00:17 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/the-vanishing-of-nicol-s-maduro-how-the-former-dictator-is-being-erased-from-ven--z4ldrs.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/world/2026/jun/10/maduro-venezuela-erased">The Guardian</source>
+  </item>
+  <item>
+    <title>The Guardian view on far-right violence: digital radicalisation is threatening democracy | Editorial</title>
+    <link>https://thegloballens365.vercel.app/article/the-guardian-view-on-far-right-violence-digital-radicalisation-is-threatening-de--n05d4q</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/the-guardian-view-on-far-right-violence-digital-radicalisation-is-threatening-de--n05d4q</guid>
+    <description>Violence on the streets of Northern Ireland is the real-world expression of a sinister mechanism that goes unchecked online Masked men who drive terrorised...</description>
+    <category>siasat</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 10 Jun 2026 17:30:52 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/the-guardian-view-on-far-right-violence-digital-radicalisation-is-threatening-de--n05d4q.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/commentisfree/2026/jun/10/the-guardian-view-on-far-right-violence-digital-radicalisation-is-threatening-democracy">The Guardian</source>
+  </item>
+  <item>
+    <title>The gamers taking on the industry to stop it switching off games</title>
+    <link>https://thegloballens365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--ougmwb</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--ougmwb</guid>
+    <description>Stop Killing Games is challenging the idea publishers can shut down a game without making sure it&apos;s still playable.</description>
+    <category>technology</category>
+    <author>Sara Khan</author>
+    <pubDate>Sat, 06 Jun 2026 23:25:51 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/the-gamers-taking-on-the-industry-to-stop-it-switching-off-games--ougmwb.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c8e8e7g0r82o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Taiwan drills with U.S. rocket system, firing in China&apos;s direction</title>
@@ -138,6 +446,28 @@
     <source url="https://www.npr.org/2026/06/10/g-s1-127253/taiwan-drills-with-us-rocket-system-firing-in-chinas-direction">NPR</source>
   </item>
   <item>
+    <title>Student loans inquiry finds many did not understand terms</title>
+    <link>https://thegloballens365.vercel.app/article/student-loans-inquiry-finds-many-did-not-understand-terms--d71gb4</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/student-loans-inquiry-finds-many-did-not-understand-terms--d71gb4</guid>
+    <description>The Treasury inquiry is looking at student loan plans in England and whether repayment terms are \&quot;reasonable\&quot;.</description>
+    <category>taleem</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 27 May 2026 16:51:44 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/student-loans-inquiry-finds-many-did-not-understand-terms--d71gb4.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cn9pejwj0xxo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Starmer tells Apple and Google to ban nude images on children&apos;s phones</title>
+    <link>https://thegloballens365.vercel.app/article/starmer-tells-apple-and-google-to-ban-nude-images-on-children-s-phones--flvljv</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/starmer-tells-apple-and-google-to-ban-nude-images-on-children-s-phones--flvljv</guid>
+    <description>Firms will be expected to activate built-in features to stop children accessing sexually explicit images.</description>
+    <category>technology</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 08 Jun 2026 15:30:43 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/starmer-tells-apple-and-google-to-ban-nude-images-on-children-s-phones--flvljv.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cly752ydjw6o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Starmer dithering over defence spending, says Badenoch</title>
     <link>https://thegloballens365.vercel.app/article/starmer-dithering-over-defence-spending-says-badenoch--pwd49r</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/starmer-dithering-over-defence-spending-says-badenoch--pwd49r</guid>
@@ -147,6 +477,72 @@
     <pubDate>Wed, 10 Jun 2026 19:28:03 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/starmer-dithering-over-defence-spending-says-badenoch--pwd49r.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/ckg4rknndjeo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Some A-level papers voided for students after exams leaked online</title>
+    <link>https://thegloballens365.vercel.app/article/some-a-level-papers-voided-for-students-after-exams-leaked-online--xjvkeg</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/some-a-level-papers-voided-for-students-after-exams-leaked-online--xjvkeg</guid>
+    <description>Those affected will have to resit, or will get a mark based on their performance in other assignments.</description>
+    <category>taleem</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 26 May 2026 16:06:12 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/some-a-level-papers-voided-for-students-after-exams-leaked-online--xjvkeg.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cqxpp7er5pzo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Somali World Cup referee denied U.S. entry, hailed as hero at home</title>
+    <link>https://thegloballens365.vercel.app/article/somali-world-cup-referee-denied-u-s-entry-hailed-as-hero-at-home--8c0zvs</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/somali-world-cup-referee-denied-u-s-entry-hailed-as-hero-at-home--8c0zvs</guid>
+    <description>A World Cup dream denied — Somali referee Omar Artan receives a hero&apos;s welcome at home after being blocked from entering the United States and taking part in...</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 10 Jun 2026 20:45:58 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/somali-world-cup-referee-denied-u-s-entry-hailed-as-hero-at-home--8c0zvs.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/06/10/nx-s1-5853075/somali-world-cup-referee-denied-u-s-entry-hailed-as-hero-at-home">NPR</source>
+  </item>
+  <item>
+    <title>Scrap legal equality duty for public services, says Badenoch</title>
+    <link>https://thegloballens365.vercel.app/article/scrap-legal-equality-duty-for-public-services-says-badenoch--z0k388</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/scrap-legal-equality-duty-for-public-services-says-badenoch--z0k388</guid>
+    <description>The Conservative leader says the rules have led to public bodies becoming \&quot;institutionally incompetent\&quot;.</description>
+    <category>siasat</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Tue, 09 Jun 2026 16:43:10 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/scrap-legal-equality-duty-for-public-services-says-badenoch--z0k388.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cy5vyqykpx5o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Scotland&apos;s Super Mario and social butterfly who emerged from Man Utd cocoon</title>
+    <link>https://thegloballens365.vercel.app/article/scotland-s-super-mario-and-social-butterfly-who-emerged-from-man-utd-cocoon--uinscm</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/scotland-s-super-mario-and-social-butterfly-who-emerged-from-man-utd-cocoon--uinscm</guid>
+    <description>From unappreciated at Manchester United to idolised at Scotland and Napoli - but who is the real Scott McTominay?</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 10 Jun 2026 14:38:32 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/scotland-s-super-mario-and-social-butterfly-who-emerged-from-man-utd-cocoon--uinscm.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/football/articles/cx2jd7knx15o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Scotland outclass Pakistan in Women’s T20 World Cup warm-up</title>
+    <link>https://thegloballens365.vercel.app/article/scotland-outclass-pakistan-in-women-s-t20-world-cup-warm-up--zgu7bs</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/scotland-outclass-pakistan-in-women-s-t20-world-cup-warm-up--zgu7bs</guid>
+    <description>DERBY: Pakistan suffered a 41-run defeat (DLS method) against Scotland in their ICC Women’s T20 World Cup warm-up match here on Tuesday, as a dropped chance...</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 10 Jun 2026 01:37:19 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/scotland-outclass-pakistan-in-women-s-t20-world-cup-warm-up--zgu7bs.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2006489/scotland-outclass-pakistan-in-womens-t20-world-cup-warm-up">Dawn</source>
+  </item>
+  <item>
+    <title>SC overturns convictions of two MQM workers in Karachi’s Baldia factory fire case</title>
+    <link>https://thegloballens365.vercel.app/article/sc-overturns-convictions-of-two-mqm-workers-in-karachi-s-baldia-factory-fire-cas--fluvk6</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/sc-overturns-convictions-of-two-mqm-workers-in-karachi-s-baldia-factory-fire-cas--fluvk6</guid>
+    <description>ISLAMABAD: The Supreme Court on Wednesday overturned the convictions of two Muttahida Qaumi Movement (MQM) workers — Abdul Rehman alias Bhola and Zubair alias...</description>
+    <category>pakistan</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 10 Jun 2026 14:01:54 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/sc-overturns-convictions-of-two-mqm-workers-in-karachi-s-baldia-factory-fire-cas--fluvk6.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2006634/sc-overturns-convictions-of-two-mqm-workers-in-karachis-baldia-factory-fire-case">Dawn</source>
   </item>
   <item>
     <title>Saudi Arabia launches new national carrier Riyadh Air despite Middle East conflict, delays</title>
@@ -169,237 +565,6 @@
     <pubDate>Wed, 10 Jun 2026 11:46:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/rising-cyberscam-losses-expose-gaps-in-eu-response--irww5j.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/rising-cyberscam-losses-expose-gaps-in-eu-response/a-77487321?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>No survivors as Pakistan Army Mi-17 helicopter crashes near Muzaffarabad: ISPR</title>
-    <link>https://thegloballens365.vercel.app/article/no-survivors-as-pakistan-army-mi-17-helicopter-crashes-near-muzaffarabad-ispr--ahve2b</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/no-survivors-as-pakistan-army-mi-17-helicopter-crashes-near-muzaffarabad-ispr--ahve2b</guid>
-    <description>No survivors were reported after an Mi-17 helicopter of Pakistan Army Aviation crashed near Muzaffarabad on Wednesday during take-off “due to a technical...</description>
-    <category>pakistan</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 10 Jun 2026 16:59:47 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/no-survivors-as-pakistan-army-mi-17-helicopter-crashes-near-muzaffarabad-ispr--ahve2b.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006621/no-survivors-as-pakistan-army-mi-17-helicopter-crashes-near-muzaffarabad-ispr">Dawn</source>
-  </item>
-  <item>
-    <title>Nasa names next astronauts for Artemis Moon programme</title>
-    <link>https://thegloballens365.vercel.app/article/nasa-names-next-astronauts-for-artemis-moon-programme--ln5a2r</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/nasa-names-next-astronauts-for-artemis-moon-programme--ln5a2r</guid>
-    <description>Nasa names its next Artemis crew, though they will not be walking on the Moon or even going anywhere near it.</description>
-    <category>science</category>
-    <author>Imran Malik</author>
-    <pubDate>Tue, 09 Jun 2026 17:46:55 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/nasa-names-next-astronauts-for-artemis-moon-programme--ln5a2r.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cdejn0gj12go?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Nasa has named the Artemis III crew - what is their mission?</title>
-    <link>https://thegloballens365.vercel.app/article/nasa-has-named-the-artemis-iii-crew-what-is-their-mission--t4rczd</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/nasa-has-named-the-artemis-iii-crew-what-is-their-mission--t4rczd</guid>
-    <description>Artemis III will help test crucial systems needed for the planned Artemis IV Moon landing in 2028.</description>
-    <category>science</category>
-    <author>Babar Shah</author>
-    <pubDate>Tue, 09 Jun 2026 17:45:34 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/nasa-has-named-the-artemis-iii-crew-what-is-their-mission--t4rczd.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cr5j40ezgz4o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Mohsin Naqvi to hold key meeting as PCB mulls changes to Pakistan cricket team</title>
-    <link>https://thegloballens365.vercel.app/article/mohsin-naqvi-to-hold-key-meeting-as-pcb-mulls-changes-to-pakistan-cricket-team--66j8jj</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/mohsin-naqvi-to-hold-key-meeting-as-pcb-mulls-changes-to-pakistan-cricket-team--66j8jj</guid>
-    <description>https://www.dawn.com/news/2006492</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 10 Jun 2026 05:13:28 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/mohsin-naqvi-to-hold-key-meeting-as-pcb-mulls-changes-to-pakistan-cricket-team--66j8jj.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006585/mohsin-naqvi-to-hold-key-meeting-as-pcb-mulls-changes-to-pakistan-cricket-team">Dawn</source>
-  </item>
-  <item>
-    <title>&apos;Lives still at risk&apos; from unregulated baby sleep industry after BBC investigation</title>
-    <link>https://thegloballens365.vercel.app/article/lives-still-at-risk-from-unregulated-baby-sleep-industry-after-bbc-investigation--4vsznk</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/lives-still-at-risk-from-unregulated-baby-sleep-industry-after-bbc-investigation--4vsznk</guid>
-    <description>&apos;Families deserve clarity about the qualifications and training of those caring for their children&apos;</description>
-    <category>taleem</category>
-    <author>Imran Malik</author>
-    <pubDate>Mon, 08 Jun 2026 23:07:35 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/lives-still-at-risk-from-unregulated-baby-sleep-industry-after-bbc-investigation--4vsznk.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/crrprxy2257o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Kalshi to make some users reveal job details to tackle insider trading</title>
-    <link>https://thegloballens365.vercel.app/article/kalshi-to-make-some-users-reveal-job-details-to-tackle-insider-trading--dl5fv9</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/kalshi-to-make-some-users-reveal-job-details-to-tackle-insider-trading--dl5fv9</guid>
-    <description>After issues with insider trading, the prediction betting platform is adding new rules.</description>
-    <category>technology</category>
-    <author>Babar Shah</author>
-    <pubDate>Tue, 09 Jun 2026 22:32:31 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/kalshi-to-make-some-users-reveal-job-details-to-tackle-insider-trading--dl5fv9.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cx2vn7wp33po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Israeli strike on a car kills two in Sidon, Lebanon</title>
-    <link>https://thegloballens365.vercel.app/article/israeli-strike-on-a-car-kills-two-in-sidon-lebanon--5i8j2c</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/israeli-strike-on-a-car-kills-two-in-sidon-lebanon--5i8j2c</guid>
-    <description>An Israeli strike on a vehicle in the southern Lebanese city of Sidon killed two people and sparked a fire.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 10 Jun 2026 19:23:23 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/israeli-strike-on-a-car-kills-two-in-sidon-lebanon--5i8j2c.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/10/israeli-strike-on-a-car-kills-two-in-sidon-lebanon?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Iran war fuels political backlash, inflation debate in the US</title>
-    <link>https://thegloballens365.vercel.app/article/iran-war-fuels-political-backlash-inflation-debate-in-the-us--4f8z7x</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/iran-war-fuels-political-backlash-inflation-debate-in-the-us--4f8z7x</guid>
-    <description>WASHINGTON: Rising inflation and persistent energy price pressures have sharpened political divisions in Washington, with Democrats blaming President Donald...</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 10 Jun 2026 18:45:09 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/iran-war-fuels-political-backlash-inflation-debate-in-the-us--4f8z7x.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006676/iran-war-fuels-political-backlash-inflation-debate-in-the-us">Dawn</source>
-  </item>
-  <item>
-    <title>India summons US envoy over attack on ship carrying Indian sailors off Oman</title>
-    <link>https://thegloballens365.vercel.app/article/india-summons-us-envoy-over-attack-on-ship-carrying-indian-sailors-off-oman--1sgtrs</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/india-summons-us-envoy-over-attack-on-ship-carrying-indian-sailors-off-oman--1sgtrs</guid>
-    <description>Three Indian seafarers are missing after Oman rescues 21 others following a US attack on the Palau-flagged Settebello.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 10 Jun 2026 20:05:59 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/india-summons-us-envoy-over-attack-on-ship-carrying-indian-sailors-off-oman--1sgtrs.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/10/india-summons-us-envoy-over-ship-attack-that-left-three-indians-missing?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>&apos;In emergency, break glass&apos; - England seek stability in Root</title>
-    <link>https://thegloballens365.vercel.app/article/in-emergency-break-glass-england-seek-stability-in-root--3dputz</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/in-emergency-break-glass-england-seek-stability-in-root--3dputz</guid>
-    <description>BBC cricket correspondent Stephan Shemilt explains why England turned to Joe Root to replace Ben Stokes as interim Test captain.</description>
-    <category>khel</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 10 Jun 2026 17:20:08 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/in-emergency-break-glass-england-seek-stability-in-root--3dputz.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/cricket/articles/c6219nxw6llo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>How Eriksen&apos;s heart device kicked into action</title>
-    <link>https://thegloballens365.vercel.app/article/how-eriksen-s-heart-device-kicked-into-action--p0u6su</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/how-eriksen-s-heart-device-kicked-into-action--p0u6su</guid>
-    <description>Denmark&apos;s team doctor said an ICD implanted into the footballer&apos;s chest responded as it should after he collapsed on Sunday.</description>
-    <category>sehat</category>
-    <author>Sara Khan</author>
-    <pubDate>Mon, 08 Jun 2026 16:55:15 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/how-eriksen-s-heart-device-kicked-into-action--p0u6su.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cewq1g7z4qzo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Hollywood’s Road Trip: Where to Stay Along America’s Most Cinematic Highway</title>
-    <link>https://thegloballens365.vercel.app/article/hollywood-s-road-trip-where-to-stay-along-america-s-most-cinematic-highway--6nwmrt</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/hollywood-s-road-trip-where-to-stay-along-america-s-most-cinematic-highway--6nwmrt</guid>
-    <description>As Route 66 rings in its 100th anniversary, we’re rounding up the best places to lodge from Santa Monica to Chicago.</description>
-    <category>shobiz</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 10 Jun 2026 20:32:42 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/hollywood-s-road-trip-where-to-stay-along-america-s-most-cinematic-highway--6nwmrt.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/lifestyle/shopping/best-route-66-road-trip-hotels-america-join-hilton-honors-1236618726/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>Google Cloud outage in India after third-party data centre fire triggers shutdown</title>
-    <link>https://thegloballens365.vercel.app/article/google-cloud-outage-in-india-after-third-party-data-centre-fire-triggers-shutdow--stlw8q</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/google-cloud-outage-in-india-after-third-party-data-centre-fire-triggers-shutdow--stlw8q</guid>
-    <description>Alphabet’s Google Cloud said that some customers in India experienced intermittent network disruptions on Wednesday after a fire at a third-party data centre...</description>
-    <category>technology</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 10 Jun 2026 08:26:14 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/google-cloud-outage-in-india-after-third-party-data-centre-fire-triggers-shutdow--stlw8q.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006599/google-cloud-outage-in-india-after-third-party-data-centre-fire-triggers-shutdown">Dawn</source>
-  </item>
-  <item>
-    <title>Global brands ‘likely’ using mineral that funds rebels accused of atrocities in DRC, investigation finds</title>
-    <link>https://thegloballens365.vercel.app/article/global-brands-likely-using-mineral-that-funds-rebels-accused-of-atrocities-in-dr--wuspc0</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/global-brands-likely-using-mineral-that-funds-rebels-accused-of-atrocities-in-dr--wuspc0</guid>
-    <description>Amazon and Sony among firms that may have sourced coltan, used in phones, from supply chains controlled by the M23 rebels, says Global Witness Leading global...</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 10 Jun 2026 05:00:11 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/global-brands-likely-using-mineral-that-funds-rebels-accused-of-atrocities-in-dr--wuspc0.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/global-development/2026/jun/10/coltan-drc-m23-global-witness-investigation">The Guardian</source>
-  </item>
-  <item>
-    <title>Finance Minister Aurangzeb to present budget for FY2026-27 on June 12</title>
-    <link>https://thegloballens365.vercel.app/article/finance-minister-aurangzeb-to-present-budget-for-fy2026-27-on-june-12--jwhukx</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/finance-minister-aurangzeb-to-present-budget-for-fy2026-27-on-june-12--jwhukx</guid>
-    <description>Finance Minister Muhammad Aurangzeb will present the federal budget for the next fiscal year (FY26–27) in the National Assembly on June 12, an adviser to the...</description>
-    <category>pakistan</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 10 Jun 2026 16:32:41 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/finance-minister-aurangzeb-to-present-budget-for-fy2026-27-on-june-12--jwhukx.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006648/finance-minister-aurangzeb-to-present-budget-for-fy2026-27-on-june-12">Dawn</source>
-  </item>
-  <item>
-    <title>Elon Musk’s X not facing action from UK government over posts inciting violence in Belfast</title>
-    <link>https://thegloballens365.vercel.app/article/elon-musk-s-x-not-facing-action-from-uk-government-over-posts-inciting-violence---76408m</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/elon-musk-s-x-not-facing-action-from-uk-government-over-posts-inciting-violence---76408m</guid>
-    <description>Any official reprimand will come from regulator Ofcom, but not for at least two months UK politics live – latest updates Elon Musk’s X will face no action to...</description>
-    <category>siasat</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 10 Jun 2026 19:54:14 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/elon-musk-s-x-not-facing-action-from-uk-government-over-posts-inciting-violence---76408m.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/uk-news/2026/jun/10/elon-musk-x-not-face-action-uk-government-posts-inciting-violence-belfast">The Guardian</source>
-  </item>
-  <item>
-    <title>Changing visa rules for care workers is wrong, says Rayner</title>
-    <link>https://thegloballens365.vercel.app/article/changing-visa-rules-for-care-workers-is-wrong-says-rayner--039332</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/changing-visa-rules-for-care-workers-is-wrong-says-rayner--039332</guid>
-    <description>The former deputy prime minister says changing visa rules for migrants already living in the UK would be \&quot;un-British\&quot;.</description>
-    <category>siasat</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 10 Jun 2026 17:44:40 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/changing-visa-rules-for-care-workers-is-wrong-says-rayner--039332.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cddl0nz4v5vo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Centre, provinces &apos;made decisions in the best interest of Pakistan&apos;, PM says in NEC meeting</title>
-    <link>https://thegloballens365.vercel.app/article/centre-provinces-made-decisions-in-the-best-interest-of-pakistan-pm-says-in-nec---9uxptm</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/centre-provinces-made-decisions-in-the-best-interest-of-pakistan-pm-says-in-nec---9uxptm</guid>
-    <description>Prime Minister Shehbaz Sharif on Wednesday said the Centre and the provinces had taken various decisions in the “best interest” of Pakistan as the National...</description>
-    <category>karobar</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 10 Jun 2026 15:31:23 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/centre-provinces-made-decisions-in-the-best-interest-of-pakistan-pm-says-in-nec---9uxptm.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006604/centre-provinces-made-decisions-in-the-best-interest-of-pakistan-pm-says-in-nec-meeting">Dawn</source>
-  </item>
-  <item>
-    <title>Bangladesh thrash Australia in rain-hit ODI series opener</title>
-    <link>https://thegloballens365.vercel.app/article/bangladesh-thrash-australia-in-rain-hit-odi-series-opener--0km7fi</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/bangladesh-thrash-australia-in-rain-hit-odi-series-opener--0km7fi</guid>
-    <description>DHAKA: Mosaddek Hos­sain hit a career-best 86 not out and Nahid Rana took four wickets as Bangladesh trounced Australia by 86 runs in the rain-hit opening...</description>
-    <category>khel</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 10 Jun 2026 05:05:30 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/bangladesh-thrash-australia-in-rain-hit-odi-series-opener--0km7fi.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006493/bangladesh-thrash-australia-in-rain-hit-odi-series-opener">Dawn</source>
-  </item>
-  <item>
-    <title>Anthropic rolls out public version of Mythos without cybersecurity capability</title>
-    <link>https://thegloballens365.vercel.app/article/anthropic-rolls-out-public-version-of-mythos-without-cybersecurity-capability--dyemiw</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/anthropic-rolls-out-public-version-of-mythos-without-cybersecurity-capability--dyemiw</guid>
-    <description>Anthropic is rolling out a public version of its Mythos AI model, but with guardrails barring its use in ​risky areas such as cybersecurity, after an earlier...</description>
-    <category>technology</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 10 Jun 2026 07:37:23 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/anthropic-rolls-out-public-version-of-mythos-without-cybersecurity-capability--dyemiw.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2006596/anthropic-rolls-out-public-version-of-mythos-without-cybersecurity-capability">Dawn</source>
-  </item>
-  <item>
-    <title>Advanced radiotherapy for prostate cancer to cut sessions from 20 to five</title>
-    <link>https://thegloballens365.vercel.app/article/advanced-radiotherapy-for-prostate-cancer-to-cut-sessions-from-20-to-five--s8kznc</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/advanced-radiotherapy-for-prostate-cancer-to-cut-sessions-from-20-to-five--s8kznc</guid>
-    <description>Some men in England with the disease will now be offered an advanced form of treatment on the NHS.</description>
-    <category>sehat</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 09 Jun 2026 23:57:30 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/advanced-radiotherapy-for-prostate-cancer-to-cut-sessions-from-20-to-five--s8kznc.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/crm02mmgr3ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
