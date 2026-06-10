@@ -56,20 +56,24 @@ async function pollFetchResult(fetchUrl) {
   throw new Error("AI image generation timed out")
 }
 
+async function resizeOriginal(originalBuffer) {
+  return await sharp(originalBuffer)
+    .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
+    .jpeg({ quality: 95, progressive: true })
+    .toBuffer()
+}
+
 async function regenerateViaAI(originalBuffer, title, description) {
   if (!AI_IMAGE_ENABLED) {
-    console.log("    AI image regeneration disabled — proceeding to resize")
-    return await sharp(originalBuffer)
-      .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
-      .jpeg({ quality: 95, progressive: true })
-      .toBuffer()
+    console.log("    AI regeneration disabled — resize only")
+    return await resizeOriginal(originalBuffer)
   }
 
   const outputPath = path.join(TRANSFORMED_DIR, `_ai_output_${Date.now()}.jpg`)
 
   try {
     const prompt = buildPrompt(title, description)
-    console.log(`    Sending to ModelsLab AI for regeneration (model: ${AI_IMAGE_MODEL})...`)
+    console.log(`    ModelsLab AI regeneration (model: ${AI_IMAGE_MODEL})...`)
 
     const response = await fetch(MODELS_LAB_URL, {
       method: "POST",
@@ -98,19 +102,24 @@ async function regenerateViaAI(originalBuffer, title, description) {
     const data = await response.json()
 
     if (data.status === "error") {
-      throw new Error(`AI API error: ${data.message || "unknown"}`)
+      const msg = data.message || "unknown"
+      if (msg.toLowerCase().includes("credit") || msg.toLowerCase().includes("fund") || msg.toLowerCase().includes("subscribe")) {
+        console.log(`    AI credits exhausted (${msg}) — using original image`)
+        return await resizeOriginal(originalBuffer)
+      }
+      throw new Error(`AI API error: ${msg}`)
     }
 
     let outputUrls
     if (data.status === "success") {
       outputUrls = data.output
     } else if (data.status === "processing") {
-      console.log("    AI generation is processing asynchronously...")
+      console.log("    AI processing asynchronously...")
       const fetchUrl = data.fetch_result
-      if (!fetchUrl) throw new Error("AI API returned processing status without fetch_result URL")
+      if (!fetchUrl) throw new Error("No fetch_result URL")
       outputUrls = await pollFetchResult(fetchUrl)
     } else {
-      throw new Error(`Unexpected API status: ${data.status}`)
+      throw new Error(`Unexpected status: ${data.status}`)
     }
 
     if (!outputUrls || !outputUrls.length) {
@@ -118,7 +127,7 @@ async function regenerateViaAI(originalBuffer, title, description) {
     }
 
     const imageUrl = outputUrls[0]
-    console.log(`    Downloading regenerated image from AI...`)
+    console.log(`    Downloading AI image...`)
     const regenerated = await downloadImage(imageUrl)
 
     await sharp(regenerated)
@@ -129,8 +138,8 @@ async function regenerateViaAI(originalBuffer, title, description) {
     console.log("    AI regeneration complete — source watermark removed")
     return fs.readFileSync(outputPath)
   } catch (err) {
-    console.log(`    AI regeneration failed: ${err.message}`)
-    throw new Error(`AI image processing failed: ${err.message}`)
+    console.log(`    AI regeneration failed: ${err.message} — using original image`)
+    return await resizeOriginal(originalBuffer)
   } finally {
     try { if (fs.existsSync(outputPath)) fs.unlinkSync(outputPath) } catch {}
   }
@@ -183,11 +192,11 @@ async function processArticleImage(article) {
 
     const outPath = path.join(__dirname, "../../public/images/articles", `${slug}.jpg`)
     fs.writeFileSync(outPath, resized)
-    console.log(`  Image ready: ${slug}.jpg (AI regen: ${AI_IMAGE_ENABLED}, watermark: The Global Lens 365)`)
+    console.log(`  Image ready: ${slug}.jpg`)
 
     return `/images/articles/${slug}.jpg`
   } catch (err) {
-    console.log(`  Image processing FAILED for ${slug}: ${err.message}`)
+    console.log(`  Image FAILED for ${slug}: ${err.message}`)
     return null
   }
 }
