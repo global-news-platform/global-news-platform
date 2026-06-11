@@ -1,0 +1,61 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+  workflow_run:
+    workflows: ["News Pipeline"]
+    types:
+      - completed
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch Facebook logo
+        run: node scripts/fetch-logo.js
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
+      - name: Build
+        run: npm run build
+
+      - name: Check Vercel setup
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: |
+          {
+            echo "## Vercel Debug"
+            echo ""
+            echo "**Token length:** ${#VERCEL_TOKEN}"
+            echo "**Org ID:** ${VERCEL_ORG_ID}"
+            echo ""
+            echo "### User info"
+            curl -sS "https://api.vercel.com/v2/user" \
+              -H "Authorization: Bearer $VERCEL_TOKEN" | head -5
+            echo ""
+            echo "### Teams"
+            curl -sS "https://api.vercel.com/v2/teams" \
+              -H "Authorization: Bearer $VERCEL_TOKEN" | head -10
+            echo ""
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy to Vercel
+        run: |
+          npx vercel --prod --token "${{ secrets.VERCEL_TOKEN }}" \
+            --scope "${{ secrets.VERCEL_ORG_ID }}" \
+            --confirm 2>&1
