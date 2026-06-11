@@ -43,6 +43,7 @@ async function pollFetchResult(fetchUrl) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ key: AI_IMAGE_API_KEY }),
+      signal: AbortSignal.timeout(30000),
     })
     const data = await resp.json()
     if (data.status === "success") {
