@@ -106,8 +106,16 @@ async function regenerateViaAI(originalBuffer, title, description) {
     if (data.status === "error") {
       const msg = data.message || "unknown"
       if (msg.toLowerCase().includes("credit") || msg.toLowerCase().includes("fund") || msg.toLowerCase().includes("subscribe")) {
-        console.log(`    AI credits exhausted (${msg}) — using original image`)
-        return await resizeOriginal(originalBuffer)
+        console.log(`    AI credits exhausted (${msg}) — cropping to remove source watermarks`)
+        const meta = await sharp(originalBuffer).metadata()
+        const iw = meta.width || TARGET_WIDTH
+        const ih = meta.height || TARGET_HEIGHT
+        const cropH = Math.round(ih * 0.75)
+        return await sharp(originalBuffer)
+          .extract({ left: 0, top: 0, width: iw, height: cropH })
+          .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
+          .jpeg({ quality: 95, progressive: true })
+          .toBuffer()
       }
       throw new Error(`AI API error: ${msg}`)
     }
@@ -140,8 +148,16 @@ async function regenerateViaAI(originalBuffer, title, description) {
     console.log("    AI regeneration complete — source watermark removed")
     return fs.readFileSync(outputPath)
   } catch (err) {
-    console.log(`    AI regeneration failed: ${err.message} — using original image`)
-    return await resizeOriginal(originalBuffer)
+    console.log(`    AI regeneration failed: ${err.message} — cropping to remove source watermarks`)
+    const meta = await sharp(originalBuffer).metadata()
+    const iw = meta.width || TARGET_WIDTH
+    const ih = meta.height || TARGET_HEIGHT
+    const cropH = Math.round(ih * 0.80)
+    return await sharp(originalBuffer)
+      .extract({ left: 0, top: 0, width: iw, height: cropH })
+      .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
+      .jpeg({ quality: 95, progressive: true })
+      .toBuffer()
   } finally {
     try { if (fs.existsSync(outputPath)) fs.unlinkSync(outputPath) } catch {}
   }
