@@ -130,7 +130,7 @@ function selectTopArticles(articles) {
 }
 
 function getArticleLink(article, siteUrl) {
-  return article.sourceUrl || article.canonicalUrl || `${siteUrl.replace(/\/$/, "")}/article/${article.slug}`
+  return `${siteUrl.replace(/\/$/, "")}/article/${article.slug}`
 }
 
 function getArticleImageUrl(article, siteUrl) {
