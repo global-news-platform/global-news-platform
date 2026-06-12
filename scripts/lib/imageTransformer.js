@@ -3,6 +3,7 @@ const path = require("path")
 const https = require("https")
 const http = require("http")
 const sharp = require("sharp")
+const { regenerateViaAI } = require("./imageGenerator")
 
 function fetchOgImage(articleUrl) {
   if (!articleUrl || !articleUrl.startsWith("http")) return Promise.resolve(null)
@@ -59,9 +60,6 @@ const MAX_ROTATION_ANGLE = 5
 const ZOOM_FACTOR_MIN = 1.10
 const ZOOM_FACTOR_MAX = 1.22
 const JPEG_QUALITY = 88
-const WATERMARK_STDEV_THRESHOLD = 25
-const CORNER_SAMPLE_FRACTION = 0.18
-const BLUR_RADIUS = 7
 const LOGO_OPACITY = 0.8
 const LOGO_PADDING = 12
 
@@ -114,86 +112,6 @@ function randomContrast() {
 
 function randomSaturation() {
   return 1.0 + (Math.random() - 0.5) * 0.06
-}
-
-async function detectWatermarks(buffer) {
-  const meta = await sharp(buffer).metadata()
-  const w = meta.width || FB_IMAGE_WIDTH
-  const h = meta.height || FB_IMAGE_HEIGHT
-  const sampleSize = Math.round(Math.min(w, h) * CORNER_SAMPLE_FRACTION)
-
-  const corners = [
-    { name: "top-left", left: 0, top: 0 },
-    { name: "top-right", left: w - sampleSize, top: 0 },
-    { name: "bottom-left", left: 0, top: h - sampleSize },
-    { name: "bottom-right", left: w - sampleSize, top: h - sampleSize },
-  ]
-
-  const detected = []
-
-  for (const corner of corners) {
-    try {
-      if (corner.left < 0 || corner.top < 0) continue
-      const region = await sharp(buffer)
-        .extract({ left: corner.left, top: corner.top, width: sampleSize, height: sampleSize })
-        .stats()
-
-      const channels = region.channels.filter((c) => c.mean > 5)
-      const avgStdev = channels.reduce((s, c) => s + c.stdev, 0) / (channels.length || 1)
-
-      if (avgStdev > WATERMARK_STDEV_THRESHOLD) {
-        detected.push({
-          ...corner,
-          stdev: avgStdev,
-          severity: Math.min(1, (avgStdev - WATERMARK_STDEV_THRESHOLD) / 50),
-        })
-      }
-    } catch {
-      continue
-    }
-  }
-
-  return detected
-}
-
-async function inpaintWatermark(buffer, detectedRegions) {
-  if (detectedRegions.length === 0) return buffer
-
-  const meta = await sharp(buffer).metadata()
-  const w = meta.width || FB_IMAGE_WIDTH
-  const h = meta.height || FB_IMAGE_HEIGHT
-
-  const blurred = await sharp(buffer)
-    .median(BLUR_RADIUS)
-    .blur(BLUR_RADIUS)
-    .toBuffer()
-
-  let result = sharp(buffer)
-  const composites = []
-
-  for (const region of detectedRegions) {
-    const pad = Math.round(Math.min(w, h) * 0.03)
-    const cropLeft = Math.max(0, region.left - pad)
-    const cropTop = Math.max(0, region.top - pad)
-    const cropWidth = Math.min(w - cropLeft, (region.left === 0 ? Math.round(w * CORNER_SAMPLE_FRACTION) : Math.round(w * CORNER_SAMPLE_FRACTION)) + pad * 2)
-    const cropHeight = Math.min(h - cropTop, (region.top === 0 ? Math.round(h * CORNER_SAMPLE_FRACTION) : Math.round(h * CORNER_SAMPLE_FRACTION)) + pad * 2)
-
-    composites.push({
-      input: await sharp(blurred)
-        .extract({ left: cropLeft, top: cropTop, width: cropWidth, height: cropHeight })
-        .toBuffer(),
-      top: cropTop,
-      left: cropLeft,
-      blend: "over",
-      opacity: Math.min(1, 0.65 + region.severity * 0.3),
-    })
-  }
-
-  if (composites.length > 0) {
-    result = result.composite(composites)
-  }
-
-  return await result.toBuffer()
 }
 
 async function addLogoWatermark(buffer) {
@@ -265,20 +183,7 @@ async function transformImage(sourceBuffer) {
   let croppedBuffer
   try { croppedBuffer = await pipeline.toBuffer() } catch { return null }
 
-  let cleanBuffer = croppedBuffer
-
-  try {
-    const detections = await detectWatermarks(croppedBuffer)
-    if (detections.length > 0) {
-      console.log(`    AI detected ${detections.length} watermark region(s): ${detections.map((d) => `${d.name} (σ=${d.stdev.toFixed(1)})`).join(", ")}`)
-      cleanBuffer = await inpaintWatermark(croppedBuffer, detections)
-    }
-  } catch (err) {
-    console.log(`    Watermark detection skipped: ${err.message}`)
-    cleanBuffer = croppedBuffer
-  }
-
-  let cleanPipeline = sharp(cleanBuffer)
+  let cleanPipeline = sharp(croppedBuffer)
   const resizeW = Math.round(FB_IMAGE_WIDTH * zoom)
   const resizeH = Math.round(FB_IMAGE_HEIGHT * zoom)
 
@@ -336,12 +241,13 @@ async function transformAndSave(article, siteUrl) {
 
   try {
     const buffer = await downloadImageBuffer(imageUrl)
-    const transformed = await transformImage(buffer)
+    const cleaned = await regenerateViaAI(buffer, article.title || "", article.description || "")
+    const transformed = await transformImage(cleaned)
     if (!transformed) return null
     fs.writeFileSync(outPath, transformed)
     const transformedUrl = `/images/transformed/${slug}.jpg`
 
-    console.log(`    Image transformed: ${imageUrl.substring(0, 80)} → ${transformedUrl} (crop: 12%, zoom: 1.10-1.22x, AI watermark: enabled, brand logo: added)`)
+    console.log(`    Image transformed: ${imageUrl.substring(0, 80)} → ${transformedUrl} (AI regeneration: enabled, crop: 12%, zoom: 1.10-1.22x, brand logo: added)`)
     return `${siteUrl.replace(/\/$/, "")}${transformedUrl}`
   } catch (err) {
     console.log(`    Image transform failed: ${err.message}. Using original.`)

@@ -66,8 +66,16 @@ async function resizeOriginal(originalBuffer) {
 
 async function regenerateViaAI(originalBuffer, title, description) {
   if (!AI_IMAGE_ENABLED) {
-    console.log("    AI regeneration disabled — resize only")
-    return await resizeOriginal(originalBuffer)
+    console.log("    AI regeneration disabled — cropping to remove source watermarks")
+    const meta = await sharp(originalBuffer).metadata()
+    const iw = meta.width || TARGET_WIDTH
+    const ih = meta.height || TARGET_HEIGHT
+    const cropH = Math.round(ih * 0.75)
+    return await sharp(originalBuffer)
+      .extract({ left: 0, top: 0, width: iw, height: cropH })
+      .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
+      .jpeg({ quality: 95, progressive: true })
+      .toBuffer()
   }
 
   const outputPath = path.join(TRANSFORMED_DIR, `_ai_output_${Date.now()}.jpg`)
