@@ -2,7 +2,6 @@ const fs = require("fs")
 const path = require("path")
 const https = require("https")
 const { rewriteBatch } = require("./rewriter")
-const { transformAndSave } = require("./imageTransformer")
 
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
 const POST_FORMATS = ["link", "photo", "text"]
@@ -311,9 +310,14 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dry
 
   let articleForPost = article
   if (formatName === "photo") {
-    const transformed = await transformAndSave(article, siteUrl)
-    if (transformed) {
-      articleForPost = { ...article, image: transformed, imageUrl: transformed }
+    const articleImg = getArticleImageUrl(article, siteUrl)
+    if (!articleImg && article.sourceUrl) {
+      const og = await fetchOgImage(article.sourceUrl)
+      if (og) articleForPost = { ...article, image: og, imageUrl: og }
+    }
+    if (!getArticleImageUrl(articleForPost, siteUrl)) {
+      console.log(`    No image available, falling back to link format`)
+      formatName = "link"
     }
   }
 
