@@ -218,7 +218,8 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
 
   if (!imageUrl) {
     console.log(`    No image available, falling back to link format`)
-    return await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
+    const linkResult = await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
+    return linkResult === true ? { id: true, fallback: true } : linkResult
   }
 
   const apiUrl =
@@ -232,7 +233,8 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
   const result = await graphApiRequest(apiUrl, "POST")
   if (result.error) {
     console.error(`    Photo post error: ${result.error.message || JSON.stringify(result.error)} (falling back to link)`)
-    return await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
+    const linkResult = await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
+    return linkResult === true ? { id: true, fallback: true } : linkResult
   }
   console.log(`    Photo post: ${result.id} (image: ${imageUrl})`)
   return true
@@ -322,10 +324,12 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dry
   }
 
   const poster = FORMAT_POSTERS[formatIdx]
-  const success = await poster({ pageId, pageAccessToken, article: articleForPost, siteUrl })
+  const result = await poster({ pageId, pageAccessToken, article: articleForPost, siteUrl })
+  let postedFormat = formatName
+  if (result && typeof result === "object" && result.fallback) postedFormat = "link"
 
-  if (success) {
-    console.log(`    Posted as ${formatName}: ${linkUrl}`)
+  if (result) {
+    console.log(`    Posted as ${postedFormat}: ${linkUrl}`)
     markPosted(article.slug)
     return { posted: 1, skipped: 0, total: 1 }
   } else {
