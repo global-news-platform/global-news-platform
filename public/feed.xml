@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 13 Jun 2026 17:58:27 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 18:35:53 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -314,6 +314,17 @@
     <source url="https://www.dawn.com/news/2007576/us-iran-peace-deal-inches-closer-as-pm-shehbaz-says-finalisation-expected-within-a-day">Dawn</source>
   </item>
   <item>
+    <title>US-Iran deal scheduled to be signed on Sunday, says Trump</title>
+    <link>https://thegloballens365.vercel.app/article/us-iran-deal-scheduled-to-be-signed-on-sunday-says-trump--lv241i</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-iran-deal-scheduled-to-be-signed-on-sunday-says-trump--lv241i</guid>
+    <description>Before the US president&apos;s comments, Iran expressed caution about the exact timing.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sat, 13 Jun 2026 18:03:51 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/us-iran-deal-scheduled-to-be-signed-on-sunday-says-trump--lv241i.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Uncapped Crocombe added to England Test squad</title>
     <link>https://thegloballens365.vercel.app/article/uncapped-crocombe-added-to-england-test-squad--hoaa8d</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uncapped-crocombe-added-to-england-test-squad--hoaa8d</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 04:21:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/sustainable-path--7fjzvy.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2007504/sustainable-path">Dawn</source>
-  </item>
-  <item>
-    <title>Sudan war: UAE denies supporting RSF and Colombian recruits</title>
-    <link>https://thegloballens365.vercel.app/article/sudan-war-uae-denies-supporting-rsf-and-colombian-recruits--0032qx</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/sudan-war-uae-denies-supporting-rsf-and-colombian-recruits--0032qx</guid>
-    <description>Human rights organizations accuse the UAE of supporting the RSF militia, which has seen a number of high-profile defections to the Sudanese Armed Forces.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Sat, 13 Jun 2026 06:13:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/sudan-war-uae-denies-supporting-rsf-and-colombian-recruits--0032qx.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/sudan-war-uae-denies-supporting-rsf-and-colombian-recruits/a-77530527?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   </channel>
 </rss>
