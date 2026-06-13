@@ -59,7 +59,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt || article.publishedAt,
-      authors: [article.author],
+      authors: [absoluteUrl(`/author/${article.authorSlug}`)],
       tags: article.tags,
       images: article.image
         ? [{ url: absoluteUrl(article.image), width: 1200, height: 630 }]
