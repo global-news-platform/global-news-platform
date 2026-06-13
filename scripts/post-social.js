@@ -73,7 +73,7 @@ async function main() {
 
   const pageId = args.pageId || process.env.FB_PAGE_ID
   const token = args.token || process.env.FB_PAGE_ACCESS_TOKEN
-  const siteUrl = process.env.SITE_URL || args.siteUrl || "https://thegloballens365.vercel.app"
+  const siteUrl = "https://thegloballens365.vercel.app"
 
   console.log("=".repeat(60))
   console.log("  Social Media Poster — The Global Lens 365")
