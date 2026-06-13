@@ -7,7 +7,7 @@ export const siteConfig = {
   locale: "en_US",
   localeFull: "en-US",
   logo: "/images/logo.png",
-  logoSvg: "/images/logo.svg",
+  logoSvg: "/images/logo.png",
   ogImage: "/images/og-default.jpg",
   publisherType: "NewsMediaOrganization",
   foundingDate: "2026",
