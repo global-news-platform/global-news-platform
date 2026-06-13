@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 13 Jun 2026 15:16:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 17:26:43 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -26,6 +26,17 @@
     <pubDate>Sat, 13 Jun 2026 14:48:14 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/13/workers-remove-trumps-name-from-kennedy-center-after-court-ruling?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Woman seriously injured in shark attack at Sydney beach</title>
+    <link>https://thegloballens365.vercel.app/article/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm</guid>
+    <description>The woman, 35, was pulled from the water by members of the public and then airlifted to hospital, police say.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 13 Jun 2026 15:24:25 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c3ryw807133o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>With fighting spirit, Korea’s beauty triumphs over Czech set-piece beasts</title>
@@ -114,6 +125,17 @@
     <pubDate>Sat, 13 Jun 2026 13:19:01 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/where-to-watch-the-24-hours-of-le-mans-livestream-online--5fyyl6.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/tv/tv-news/watch-24-hours-of-le-mans-2026-live-stream-race-free-online-1236620691/">The Hollywood Reporter</source>
+  </item>
+  <item>
+    <title>When Mamie Van Doren Met Howard Hughes: “When I Looked, There Wasn’t That Much There”</title>
+    <link>https://thegloballens365.vercel.app/article/when-mamie-van-doren-met-howard-hughes-when-i-looked-there-wasn-t-that-much-ther--net3hq</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/when-mamie-van-doren-met-howard-hughes-when-i-looked-there-wasn-t-that-much-ther--net3hq</guid>
+    <description>Her dalliance with the reclusive billionaire, her childhood friendship with Monroe, her brief affair with Tony Curtis — the 95-year-old one-time pinup spills...</description>
+    <category>shobiz</category>
+    <author>Babar Shah</author>
+    <pubDate>Sat, 13 Jun 2026 17:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/when-mamie-van-doren-met-howard-hughes-when-i-looked-there-wasn-t-that-much-ther--net3hq.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/lifestyle/arts/mamie-van-doren-memoir-marilyn-monroe-1236617583/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>What&apos;s happened to UK defence spending?</title>
@@ -391,6 +413,28 @@
     <source url="https://www.theguardian.com/us-news/2026/jun/10/trump-administration-immigrants-climate-crisis">The Guardian</source>
   </item>
   <item>
+    <title>Trump&apos;s name removed from Washington arts center</title>
+    <link>https://thegloballens365.vercel.app/article/trump-s-name-removed-from-washington-arts-center--ucuanq</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/trump-s-name-removed-from-washington-arts-center--ucuanq</guid>
+    <description>Workers in the US capital removed President Donald Trump’s name from the facade of the John F.</description>
+    <category>pakistan</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sat, 13 Jun 2026 17:06:59 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/trump-s-name-removed-from-washington-arts-center--ucuanq.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2007605/trumps-name-removed-from-washington-arts-center">Dawn</source>
+  </item>
+  <item>
+    <title>Trump cancels further Iran strikes. And, U.S. men&apos;s soccer takes on Paraguay</title>
+    <link>https://thegloballens365.vercel.app/article/trump-cancels-further-iran-strikes-and-u-s-men-s-soccer-takes-on-paraguay--tqbajp</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/trump-cancels-further-iran-strikes-and-u-s-men-s-soccer-takes-on-paraguay--tqbajp</guid>
+    <description>Trump canceled new Iran strikes and signaled that a peace deal could come soon, but Iran says it hasn&apos;t been finalized. And, the U.S.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Fri, 12 Jun 2026 10:42:59 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/trump-cancels-further-iran-strikes-and-u-s-men-s-soccer-takes-on-paraguay--tqbajp.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/06/12/g-s1-127711/up-first-newsletter-iran-peace-national-intelligence-director-world-cup">NPR</source>
+  </item>
+  <item>
     <title>Troubles&apos; legacy bill &apos;unfit for purpose&apos; says ex-minister</title>
     <link>https://thegloballens365.vercel.app/article/troubles-legacy-bill-unfit-for-purpose-says-ex-minister--r8bfcb</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/troubles-legacy-bill-unfit-for-purpose-says-ex-minister--r8bfcb</guid>
@@ -422,6 +466,17 @@
     <pubDate>Sat, 13 Jun 2026 02:31:13 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/thousands-rejoin-ajk-sit-ins-after-overnight-dispersal--qw0lyx.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2007488/thousands-rejoin-ajk-sit-ins-after-overnight-dispersal">Dawn</source>
+  </item>
+  <item>
+    <title>Thousands attend anti-racism rallies following unrest in Belfast</title>
+    <link>https://thegloballens365.vercel.app/article/thousands-attend-anti-racism-rallies-following-unrest-in-belfast--x39ehr</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/thousands-attend-anti-racism-rallies-following-unrest-in-belfast--x39ehr</guid>
+    <description>The rallies in Northern Ireland follow two nights of anti-immigrant violence provoked by a stabbing attack.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 13 Jun 2026 15:34:24 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/thousands-attend-anti-racism-rallies-following-unrest-in-belfast--x39ehr.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/13/thousands-attend-anti-racism-rallies-following-unrest-in-belfast?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Third of people say uni degree not worth it, as student loan inquiry begins</title>
@@ -510,61 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 06:13:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/sudan-war-uae-denies-supporting-rsf-and-colombian-recruits--0032qx.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/sudan-war-uae-denies-supporting-rsf-and-colombian-recruits/a-77530527?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Subsidies cut by 8pc to Rs1.09tr for upcoming fiscal year</title>
-    <link>https://thegloballens365.vercel.app/article/subsidies-cut-by-8pc-to-rs1-09tr-for-upcoming-fiscal-year--i5b9em</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/subsidies-cut-by-8pc-to-rs1-09tr-for-upcoming-fiscal-year--i5b9em</guid>
-    <description>https://www.dawn.com/news/2007516</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 05:12:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/subsidies-cut-by-8pc-to-rs1-09tr-for-upcoming-fiscal-year--i5b9em.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2007534/subsidies-cut-by-8pc-to-rs109tr-for-upcoming-fiscal-year">Dawn</source>
-  </item>
-  <item>
-    <title>Student loans inquiry finds many did not understand terms</title>
-    <link>https://thegloballens365.vercel.app/article/student-loans-inquiry-finds-many-did-not-understand-terms--c9uupl</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/student-loans-inquiry-finds-many-did-not-understand-terms--c9uupl</guid>
-    <description>The Treasury inquiry is looking at student loan plans in England and whether repayment terms are \&quot;reasonable\&quot;.</description>
-    <category>taleem</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 27 May 2026 16:51:44 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/student-loans-inquiry-finds-many-did-not-understand-terms--c9uupl.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cn9pejwj0xxo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Stolen England training equipment recovered</title>
-    <link>https://thegloballens365.vercel.app/article/stolen-england-training-equipment-recovered--rs3yz4</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/stolen-england-training-equipment-recovered--rs3yz4</guid>
-    <description>England recover most of the training equipment that was stolen prior to their arrival in Kansas City on Saturday.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 13 Jun 2026 14:53:33 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/stolen-england-training-equipment-recovered--rs3yz4.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/cwyldy8w0jpo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Starmer admits he must ‘turn things around’ as US adds to pressure over defence spending</title>
-    <link>https://thegloballens365.vercel.app/article/starmer-admits-he-must-turn-things-around-as-us-adds-to-pressure-over-defence-sp--u97io2</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/starmer-admits-he-must-turn-things-around-as-us-adds-to-pressure-over-defence-sp--u97io2</guid>
-    <description>Prime minister promises to fight any leadership challenge as he faces escalating row over military spending Keir Starmer has admitted that he has to “turn...</description>
-    <category>siasat</category>
-    <author>Babar Shah</author>
-    <pubDate>Fri, 12 Jun 2026 17:40:34 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/starmer-admits-he-must-turn-things-around-as-us-adds-to-pressure-over-defence-sp--u97io2.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/politics/2026/jun/12/keir-starmer-john-healey-defence-secretary-exit">The Guardian</source>
-  </item>
-  <item>
-    <title>SpaceX IPO makes Elon Musk the world&apos;s first trillionaire</title>
-    <link>https://thegloballens365.vercel.app/article/spacex-ipo-makes-elon-musk-the-world-s-first-trillionaire--c2gw0l</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/spacex-ipo-makes-elon-musk-the-world-s-first-trillionaire--c2gw0l</guid>
-    <description>Few business leaders have been as deeply embedded in popular culture as Elon Musk, the ambitious entrepreneur who has become a central figure in internet...</description>
-    <category>technology</category>
-    <author>Babar Shah</author>
-    <pubDate>Fri, 12 Jun 2026 09:06:19 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/spacex-ipo-makes-elon-musk-the-world-s-first-trillionaire--c2gw0l.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2007278/spacex-ipo-makes-elon-musk-the-worlds-first-trillionaire">Dawn</source>
   </item>
   </channel>
 </rss>
