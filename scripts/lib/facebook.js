@@ -282,6 +282,24 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dry
 
   const article = selectTopArticles(articles)
 
+  if (article) {
+    const checkUrl = getArticleLink(article, siteUrl)
+    try {
+      await new Promise((resolve, reject) => {
+        const req = https.get(checkUrl, { timeout: 8000 }, (res) => {
+          if (res.statusCode === 200) resolve()
+          else reject(new Error(`HTTP ${res.statusCode}`))
+          res.resume()
+        })
+        req.on("error", reject)
+        req.on("timeout", () => { req.destroy(); reject(new Error("timeout")) })
+      })
+    } catch {
+      console.log(`  Article URL not accessible (${checkUrl}), skipping`)
+      return { posted: 0, skipped: 1, total: 0 }
+    }
+  }
+
   if (!article) {
     console.log("  Facebook: no new articles to post (all already posted)")
     return { posted: 0, skipped: 0, total: 0 }

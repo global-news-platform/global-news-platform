@@ -16,7 +16,7 @@ import {
   safeNumber,
 } from "@/lib/sanitize"
 
-const MAX_DAILY_ARTICLES = 250
+const MAX_DAILY_ARTICLES = 1000
 
 const articlesDir = path.join(process.cwd(), "src/data/articles")
 const articleImgDir = path.join(process.cwd(), "public/images/articles")
@@ -29,47 +29,42 @@ function baseSlug(slug: string): string {
   return slug.replace(/--[a-z0-9]+$/i, "")
 }
 
-function hasLocalImage(slug: string): boolean {
-  if (!fs.existsSync(articleImgDir)) return false
-  for (const ext of [".jpg", ".jpeg", ".png", ".webp"]) {
-    const p = path.join(articleImgDir, `${slug}${ext}`)
-    if (fs.existsSync(p) && fs.statSync(p).size > 0) return true
-  }
-  return false
-}
-
 export function getArticleSlugs(): string[] {
   if (_slugCache) return _slugCache
   if (!fs.existsSync(articlesDir)) return []
 
   const files = fs.readdirSync(articlesDir).filter((f) => f.endsWith(".mdx") || f.endsWith(".md"))
 
-  const slugMap = new Map<string, { slug: string; mtime: Date }>()
+  const slugMap = new Map<string, { slug: string; publishedAt: string }>()
   for (const file of files) {
     const slug = file.replace(/\.(md|mdx)$/, "")
     const base = baseSlug(slug)
     const filePath = path.join(articlesDir, file)
-    const stat = fs.statSync(filePath)
+    const publishedAt = extractPublishedAt(filePath)
     const existing = slugMap.get(base)
     if (!existing) {
-      slugMap.set(base, { slug, mtime: stat.mtime })
-    } else {
-      const existingHasImg = hasLocalImage(existing.slug)
-      const currentHasImg = hasLocalImage(slug)
-      if (currentHasImg && !existingHasImg) {
-        slugMap.set(base, { slug, mtime: stat.mtime })
-      } else if (currentHasImg === existingHasImg && stat.mtime > existing.mtime) {
-        slugMap.set(base, { slug, mtime: stat.mtime })
-      }
+      slugMap.set(base, { slug, publishedAt })
+    } else if (publishedAt > existing.publishedAt) {
+      slugMap.set(base, { slug, publishedAt })
     }
   }
 
   _slugCache = Array.from(slugMap.values())
-    .sort((a, b) => b.mtime.getTime() - a.mtime.getTime())
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
     .map((v) => v.slug)
     .slice(0, MAX_DAILY_ARTICLES)
 
   return _slugCache
+}
+
+function extractPublishedAt(filePath: string): string {
+  try {
+    const content = fs.readFileSync(filePath, "utf-8").split("\n").slice(0, 20).join("\n")
+    const m = content.match(/^publishedAt:\s*"([^"]+)"/m)
+    return m ? m[1] : "2000-01-01"
+  } catch {
+    return "2000-01-01"
+  }
 }
 
 function parseFrontmatter(content: string): {
