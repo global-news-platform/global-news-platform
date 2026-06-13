@@ -4,6 +4,7 @@ import type { ArticleLink } from "@/types"
 import { BreakingNewsBanner } from "@/components/sections/breaking-news-banner"
 import { HeroSection } from "@/components/sections/hero-section"
 import { CategoryGrid } from "@/components/sections/category-grid"
+import { InView } from "@/components/common/in-view"
 
 import {
   getArticleLinks,
@@ -155,42 +156,48 @@ export default async function HomePage() {
 
       <HeroSection featured={featuredHero} secondary={allSecondary} />
 
-      <CategoryGrid
-        categories={[
-          { slug: "pakistan", name: "Pakistan", articles: dedupe(pakistanArticles) },
-          { slug: "dunya", name: "World", articles: dedupe(worldArticles) },
-          { slug: "siasat", name: "Politics", articles: dedupe(siasatArticles) },
-          { slug: "karobar", name: "Business", articles: dedupe(karobarArticles) },
-        ]}
-      />
+      <InView>
+        <CategoryGrid
+          categories={[
+            { slug: "pakistan", name: "Pakistan", articles: dedupe(pakistanArticles) },
+            { slug: "dunya", name: "World", articles: dedupe(worldArticles) },
+            { slug: "siasat", name: "Politics", articles: dedupe(siasatArticles) },
+            { slug: "karobar", name: "Business", articles: dedupe(karobarArticles) },
+          ]}
+        />
+      </InView>
 
       <div className="relative mx-auto max-w-7xl px-3 sm:px-4 lg:px-5">
         <div className="section-divider" />
-        <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-16 h-[3px] bg-gradient-to-r from-transparent via-gold/60 to-transparent rounded-full animate-pulse-soft" />
+        <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-20 h-[3px] bg-gradient-to-r from-transparent via-accent/60 to-transparent rounded-full animate-pulse-soft" />
       </div>
 
-      <CategoryGrid
-        categories={[
-          { slug: "khel", name: "Sports", articles: dedupe(khelArticles) },
-          { slug: "technology", name: "Technology", articles: dedupe(techArticles) },
-          { slug: "sehat", name: "Health", articles: dedupe(sehatArticles) },
-          { slug: "shobiz", name: "Showbiz", articles: dedupe(shobizArticles) },
-        ]}
-      />
+      <InView delay={0.1}>
+        <CategoryGrid
+          categories={[
+            { slug: "khel", name: "Sports", articles: dedupe(khelArticles) },
+            { slug: "technology", name: "Technology", articles: dedupe(techArticles) },
+            { slug: "sehat", name: "Health", articles: dedupe(sehatArticles) },
+            { slug: "shobiz", name: "Showbiz", articles: dedupe(shobizArticles) },
+          ]}
+        />
+      </InView>
 
       {(dedupe(scienceArticles).length > 0 || dedupe(taleemArticles).length > 0) && (
         <>
           <div className="relative mx-auto max-w-7xl px-3 sm:px-4 lg:px-5">
             <div className="section-divider" />
-            <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-16 h-[3px] bg-gradient-to-r from-transparent via-gold/60 to-transparent rounded-full animate-pulse-soft" />
+            <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-20 h-[3px] bg-gradient-to-r from-transparent via-accent/60 to-transparent rounded-full animate-pulse-soft" />
           </div>
 
-          <CategoryGrid
-            categories={[
-              ...(dedupe(scienceArticles).length > 0 ? [{ slug: "science", name: "Science", articles: dedupe(scienceArticles) }] : []),
-              ...(dedupe(taleemArticles).length > 0 ? [{ slug: "taleem", name: "Education", articles: dedupe(taleemArticles) }] : []),
-            ]}
-          />
+          <InView delay={0.2}>
+            <CategoryGrid
+              categories={[
+                ...(dedupe(scienceArticles).length > 0 ? [{ slug: "science", name: "Science", articles: dedupe(scienceArticles) }] : []),
+                ...(dedupe(taleemArticles).length > 0 ? [{ slug: "taleem", name: "Education", articles: dedupe(taleemArticles) }] : []),
+              ]}
+            />
+          </InView>
         </>
       )}
     </>

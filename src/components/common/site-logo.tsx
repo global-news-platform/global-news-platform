@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Facebook } from "lucide-react"
+import { Globe } from "lucide-react"
 import { siteConfig } from "@/lib/constants"
 
 interface SiteLogoProps {
@@ -17,15 +17,15 @@ export function SiteLogo({ className = "h-12 w-12", iconSize = 6, textSize = "te
   if (useFallback) {
     return (
       <>
-        <div className={`flex items-center justify-center rounded-lg bg-[#1877F2] shadow-md ${className}`}>
-          <Facebook className={`h-${iconSize} w-${iconSize} text-white`} />
+        <div className={`flex items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary/80 shadow-lg shadow-primary/30 ${className}`}>
+          <Globe className={`h-${iconSize} w-${iconSize} text-accent`} />
         </div>
         <div className="flex flex-col">
           <span className={textSize}>
             {siteConfig.name}
           </span>
           {showTagline && (
-            <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground md:block">
+            <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground/60 md:block">
               {siteConfig.tagline}
             </span>
           )}
@@ -39,7 +39,7 @@ export function SiteLogo({ className = "h-12 w-12", iconSize = 6, textSize = "te
       <img
         src={siteConfig.logoSvg}
         alt={siteConfig.name}
-        className={`rounded-lg object-cover ${className}`}
+        className={`rounded-xl object-cover shadow-sm ${className}`}
         onError={() => setUseFallback(true)}
       />
       <div className="flex flex-col">
@@ -47,7 +47,7 @@ export function SiteLogo({ className = "h-12 w-12", iconSize = 6, textSize = "te
           {siteConfig.name}
         </span>
         {showTagline && (
-          <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground md:block">
+          <span className="hidden text-[11px] font-medium uppercase tracking-[0.25em] text-muted-foreground/60 md:block">
             {siteConfig.tagline}
           </span>
         )}

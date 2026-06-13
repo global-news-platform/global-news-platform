@@ -4,8 +4,8 @@ import { useState } from "react"
 import Link from "next/link"
 import { formatDateRelative } from "@/lib/utils"
 import { categories, DISCLAIMER_TEXT } from "@/lib/constants"
-import { getFallbackCssGradient } from "@/lib/images/fallbackImages"
 import { MixedText } from "@/components/ui/mixed-text"
+import { getFallbackCssGradient } from "@/lib/images/fallbackImages"
 import type { ArticleLink } from "@/types"
 
 interface ArticleCardProps {
@@ -117,7 +117,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
         <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-8 lg:p-12 z-10">
           <div className="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
             {article.breaking && (
-              <span className="inline-flex items-center gap-1.5 rounded bg-destructive px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-lg shadow-destructive/40">
+              <span className="inline-flex items-center gap-1.5 rounded-lg bg-destructive px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-lg shadow-destructive/40">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/60" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
@@ -125,11 +125,11 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
                 Breaking
               </span>
             )}
-            <span className="rounded bg-white/20 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm border border-white/20">
+            <span className="rounded-lg bg-accent/90 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-accent-foreground shadow-lg shadow-accent/30">
               {catName}
             </span>
           </div>
-          <h2 className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold tracking-wide text-white leading-[1.3] line-clamp-3" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)" }}>
+          <h2 className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.15] line-clamp-3" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)" }}>
             <MixedText text={article.title} />
           </h2>
           {article.excerpt && (
@@ -167,17 +167,20 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
     return (
       <Link href={`/article/${article.slug}`} className="group block w-full h-full">
         <div className="card-featured">
-          <div className="relative aspect-[16/10] w-full overflow-hidden">
+          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-xl">
             <ArticleImage
               src={article.image}
               alt={article.title || ""}
               categorySlug={article.categorySlug}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <div className="absolute bottom-2 left-2 z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+              <span className="inline-flex items-center gap-1 rounded-lg bg-accent/90 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-accent-foreground shadow-lg shadow-accent/30">{catName}</span>
+            </div>
           </div>
           <div className="p-3 sm:p-4">
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
-              <span className="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.06em] text-primary">{catName}</span>
+              <span className="inline-flex items-center rounded-lg bg-accent/10 px-2 py-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.06em] text-accent">{catName}</span>
               <span className="text-[10px] sm:text-[11px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
               {article.source && (
                 <>
@@ -189,7 +192,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
                 </>
               )}
             </div>
-            <h3 className="font-headline text-sm sm:text-base lg:text-lg font-bold leading-[1.4] line-clamp-2 group-hover:text-primary transition-colors duration-200"><MixedText text={article.title} /></h3>
+            <h3 className="font-headline text-sm sm:text-base lg:text-lg font-bold leading-[1.35] line-clamp-2 group-hover:text-accent transition-colors duration-200 tracking-tight"><MixedText text={article.title} /></h3>
             {article.excerpt && (
               <p className="mt-1 sm:mt-1.5 text-[12px] leading-[1.6] text-muted-foreground line-clamp-2">{article.excerpt}</p>
             )}
@@ -201,9 +204,9 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
 
   if (variant === "horizontal") {
     return (
-      <Link href={`/article/${article.slug}`} className="group flex gap-2.5 sm:gap-3 py-3 sm:py-3.5 border-b border-border/10 last:border-0 transition-all duration-300 hover:bg-muted/40 -mx-3 px-3 rounded-sm card-horizontal">
+      <Link href={`/article/${article.slug}`} className="group flex gap-2.5 sm:gap-3 py-3 sm:py-3.5 border-b border-border/10 last:border-0 transition-all duration-300 ease-out-expo hover:bg-gradient-to-r hover:from-accent/[0.03] hover:to-transparent -mx-3 px-3 rounded-lg card-horizontal">
         <div className="w-[80px] sm:w-[88px] md:w-[100px] shrink-0">
-          <div className="thumbnail-accent relative aspect-square w-full overflow-hidden bg-muted rounded-md shadow-sm border border-border/10">
+          <div className="thumbnail-accent relative aspect-square w-full overflow-hidden bg-muted rounded-lg shadow-sm border border-border/10">
             <ArticleImage
               src={article.image}
               alt={article.title || ""}
@@ -212,7 +215,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
           </div>
         </div>
         <div className="flex flex-1 flex-col gap-1 pe-1 overflow-visible" style={{ minWidth: 0 }}>
-          <h4 className="font-headline text-[12px] sm:text-[13px] md:text-[14px] font-bold leading-[1.4] text-foreground group-hover:text-primary transition-colors duration-200 line-clamp-2">
+          <h4 className="font-headline text-[12px] sm:text-[13px] md:text-[14px] font-bold leading-[1.35] text-foreground group-hover:text-accent transition-colors duration-200 line-clamp-2 tracking-tight">
             <MixedText text={article.title} />
           </h4>
           {article.excerpt && (
@@ -230,11 +233,11 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
 
   if (variant === "text-list") {
     return (
-      <div className="border-b border-border/10 pb-3 pt-2 last:border-0 transition-all duration-200 hover:border-primary/10">
+      <div className="border-b border-border/10 pb-3 pt-2 last:border-0 transition-all duration-300 hover:border-accent/20">
         <Link href={`/article/${article.slug}`} className="headline-link group">
-          <span className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-primary/60 group-hover:bg-primary transition-colors duration-200" />
+          <span className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-accent/60 group-hover:bg-accent transition-all duration-300 group-hover:shadow-glow" />
           <div className="min-w-0 flex-1 flex flex-col gap-0.5">
-            <h4 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.9] text-foreground line-clamp-2 group-hover:text-primary transition-colors">
+            <h4 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.9] text-foreground line-clamp-2 group-hover:text-accent transition-colors tracking-tight">
               <MixedText text={article.title} />
             </h4>
             <span className="block text-[10px] text-muted-foreground" suppressHydrationWarning>
@@ -257,13 +260,14 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             alt={article.title || ""}
             categorySlug={article.categorySlug}
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
         </div>
         <div className="p-2.5 sm:p-3 flex flex-1 flex-col">
           <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 mb-1.5">
-            <span className="inline-flex items-center rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-primary">{catName}</span>
+            <span className="inline-flex items-center rounded-md bg-accent/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-accent">{catName}</span>
             <span className="text-[9px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
           </div>
-          <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.45] line-clamp-2 group-hover:text-primary transition-colors duration-200"><MixedText text={article.title} /></h3>
+          <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.35] line-clamp-2 group-hover:text-accent transition-colors duration-200 tracking-tight"><MixedText text={article.title} /></h3>
           {article.excerpt && (
             <p className="mt-1 text-[11px] leading-[1.55] text-muted-foreground line-clamp-2">
               {article.excerpt}
@@ -282,13 +286,14 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
           alt={article.title || ""}
           categorySlug={article.categorySlug}
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       </div>
       <div className="p-2.5 sm:p-3 flex flex-1 flex-col">
         <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 mb-1.5">
-          <span className="inline-flex items-center rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-primary">{catName}</span>
+          <span className="inline-flex items-center rounded-md bg-accent/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-accent">{catName}</span>
           <span className="text-[9px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
         </div>
-        <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.45] line-clamp-2 group-hover:text-primary transition-colors duration-200"><MixedText text={article.title} /></h3>
+        <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.35] line-clamp-2 group-hover:text-accent transition-colors duration-200 tracking-tight"><MixedText text={article.title} /></h3>
         {article.excerpt && (
           <p className="mt-1 text-[11px] leading-[1.55] text-muted-foreground line-clamp-2">
             {article.excerpt}

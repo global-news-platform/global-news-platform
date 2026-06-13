@@ -116,6 +116,8 @@ const config: Config = {
         elevated: "var(--elevated-shadow)",
         header: "0 1px 3px rgba(0,0,0,0.04)",
         nav: "0 1px 2px rgba(0,0,0,0.03)",
+        glow: "0 0 20px hsl(var(--accent)/0.15)",
+        "glow-md": "0 0 30px hsl(var(--accent)/0.2)",
       },
       keyframes: {
         "fade-in": {
@@ -158,6 +160,18 @@ const config: Config = {
           from: { opacity: "0", transform: "translateY(-8px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "expand-width": {
+          from: { width: "0" },
+          to: { width: "100%" },
+        },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "bounce-gentle": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-3px)" },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
@@ -170,6 +184,9 @@ const config: Config = {
         "live-pulse": "live-pulse 1.5s ease-in-out infinite",
         shimmer: "shimmer 2s linear infinite",
         "slide-down": "slide-down 0.2s ease-out",
+        "expand-width": "expand-width 0.6s ease-out forwards",
+        "spin-slow": "spin-slow 3s linear infinite",
+        "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",

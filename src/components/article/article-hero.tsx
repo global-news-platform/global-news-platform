@@ -37,7 +37,7 @@ export function ArticleHero({ article }: ArticleHeroProps) {
       <div className="mb-4">
         <Link
           href={`/category/${article.categorySlug}`}
-          className="inline-block rounded bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-foreground"
+          className="inline-block rounded-lg bg-accent px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-accent-foreground shadow-sm shadow-accent/30"
         >
           {categoryName}
         </Link>

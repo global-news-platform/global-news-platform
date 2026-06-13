@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Flame } from "lucide-react"
 
 interface SectionTitleProps {
   label: string
@@ -33,19 +33,19 @@ export function SectionTitle({
 
   return (
     <div className={cn("mb-6", className)}>
-      <div className="flex items-end justify-between border-b border-border/60 pb-2 relative">
-        <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-primary to-transparent rounded-full" />
+      <div className="flex items-end justify-between border-b border-border/60 pb-2.5 relative">
+        <div className="absolute bottom-0 left-0 w-16 h-[3px] bg-gradient-to-r from-accent via-accent/60 to-transparent rounded-full" />
         <div className="flex items-center gap-2.5">
           <div
             className={cn(
-              "w-1 h-5 rounded-full",
-              isEditorial ? "bg-gold" : "bg-primary",
+              "w-1 h-6 rounded-full",
+              isEditorial ? "bg-accent" : "bg-accent",
             )}
           />
           <h2
             className={cn(
-              "text-lg font-bold md:text-xl tracking-tight",
-              isEditorial ? "text-foreground" : "text-foreground",
+              "text-xl font-bold md:text-2xl tracking-tight",
+              "text-foreground",
             )}
           >
             {label}
@@ -54,10 +54,10 @@ export function SectionTitle({
         {href && (
           <Link
             href={href}
-            className="group inline-flex items-center gap-1.5 text-xs font-semibold text-primary/80 transition-colors hover:text-primary"
+            className="group inline-flex items-center gap-1.5 text-xs font-semibold text-accent/80 transition-all duration-300 hover:text-accent"
           >
             <span>View All</span>
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="h-3.5 w-3.5 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
           </Link>
         )}
       </div>

@@ -20,7 +20,7 @@ function TextOnlyHero({ featured }: { featured: ArticleLink }) {
       <div className="w-full max-w-[800px] mx-auto text-center px-4">
         <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
           {featured.breaking && (
-            <span className="inline-flex items-center gap-1.5 rounded bg-destructive px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-lg">
+            <span className="inline-flex items-center gap-1.5 rounded-lg bg-destructive px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-lg shadow-destructive/40">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/60" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
@@ -28,12 +28,12 @@ function TextOnlyHero({ featured }: { featured: ArticleLink }) {
               Breaking
             </span>
           )}
-          <span className="rounded bg-primary/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-primary">
+          <span className="rounded-lg bg-accent/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-accent">
             {catName}
           </span>
         </div>
         <Link href={`/article/${featured.slug}`} className="group">
-          <h1 className="font-headline text-[2.5rem] md:text-[3rem] font-bold leading-[1.25] text-foreground group-hover:text-destructive transition-colors duration-200">
+          <h1 className="font-headline text-[2.5rem] md:text-[3rem] font-bold leading-[1.15] tracking-tight text-foreground group-hover:text-accent transition-colors duration-200">
             {featured.title}
           </h1>
         </Link>
@@ -62,8 +62,8 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
   const hasImage = hasRealImage(featured)
 
   return (
-    <section className="bg-background border-b border-border/10 shadow-sm relative animate-fade-in">
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent pointer-events-none" />
+    <section className="bg-background border-b border-border/10 relative animate-fade-in section-gradient">
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent pointer-events-none" />
       <div className="mx-auto w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-3">
           {hasImage ? (
@@ -74,13 +74,13 @@ export function HeroSection({ featured, secondary }: HeroSectionProps) {
             <TextOnlyHero featured={featured} />
           )}
           <div className="w-full bg-card flex flex-col relative animate-fade-up [animation-delay:150ms] animate-fill-forwards" style={{ opacity: 0 }}>
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-primary/30 to-transparent lg:hidden pointer-events-none" />
-            <div className="bg-gradient-to-r from-destructive to-destructive/90 px-4 py-2.5 flex items-center gap-2.5 shrink-0">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-accent/30 to-transparent lg:hidden pointer-events-none" />
+            <div className="bg-gradient-to-r from-primary via-primary/95 to-primary/90 px-4 py-2.5 flex items-center gap-2.5 shrink-0">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-destructive-foreground/60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-destructive-foreground" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
-              <h3 className="text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.1em] text-destructive-foreground">
+              <h3 className="text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.1em] text-primary-foreground">
                 Top Stories
               </h3>
             </div>
