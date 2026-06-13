@@ -1,5 +1,6 @@
 const fs = require("fs")
 const path = require("path")
+const http = require("http")
 const https = require("https")
 const { rewriteBatch } = require("./rewriter")
 
@@ -206,6 +207,51 @@ async function postLinkFormat({ pageId, pageAccessToken, article, siteUrl }) {
   return true
 }
 
+async function downloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const protocol = url.startsWith("https") ? https : http
+    protocol.get(url, { timeout: 15000, headers: { "User-Agent": "Mozilla/5.0 (compatible; GlobalLens/1.0)" } }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        downloadImage(res.headers.location).then(resolve); return
+      }
+      if (res.statusCode !== 200) { reject(new Error(`HTTP ${res.statusCode}`)); return }
+      const chunks = []
+      res.on("data", (c) => chunks.push(c))
+      res.on("end", () => resolve(Buffer.concat(chunks)))
+    }).on("error", reject).on("timeout", function () { this.destroy(); reject(new Error("Timeout")) })
+  })
+}
+
+async function postPhotoBinary({ imageBuffer, pageId, pageAccessToken, caption }) {
+  const boundary = "----FormBoundary" + Math.random().toString(36).slice(2)
+  const header = `--${boundary}\r\nContent-Disposition: form-data; name="source"; filename="image.jpg"\r\nContent-Type: image/jpeg\r\n\r\n`
+  const footer = `\r\n--${boundary}\r\nContent-Disposition: form-data; name="caption"\r\n\r\n${caption}\r\n--${boundary}\r\nContent-Disposition: form-data; name="access_token"\r\n\r\n${pageAccessToken}\r\n--${boundary}--\r\n`
+  const body = Buffer.concat([Buffer.from(header), imageBuffer, Buffer.from(footer)])
+
+  return new Promise((resolve, reject) => {
+    const parsed = new URL(`https://graph.facebook.com/v22.0/${pageId}/photos`)
+    const options = {
+      hostname: parsed.hostname,
+      path: parsed.pathname + parsed.search,
+      method: "POST",
+      headers: {
+        "Content-Type": `multipart/form-data; boundary=${boundary}`,
+        "Content-Length": body.length,
+        "User-Agent": "GlobalLens/1.0 (Facebook Auto-Poster; bot@thegloballens365.com)",
+      },
+    }
+    const req = https.request(options, (res) => {
+      let data = ""
+      res.on("data", (c) => (data += c))
+      res.on("end", () => { try { resolve(JSON.parse(data)) } catch { resolve({ error: { message: data } }) } })
+    })
+    req.on("error", reject)
+    req.setTimeout(30000, () => { req.destroy(); reject(new Error("Request timed out")) })
+    req.write(body)
+    req.end()
+  })
+}
+
 async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
   let imageUrl = getArticleImageUrl(article, siteUrl)
   const linkUrl = getArticleLink(article, siteUrl)
@@ -222,7 +268,8 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
     return linkResult === true ? { id: true, fallback: true } : linkResult
   }
 
-  const apiUrl =
+  // Try URL upload first (simpler)
+  const urlApiUrl =
     `https://graph.facebook.com/v22.0/${pageId}/photos` +
     `?access_token=${encodeURIComponent(pageAccessToken)}` +
     `&url=${encodeURIComponent(imageUrl)}` +
@@ -230,14 +277,32 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
     `&locale=en_US` +
     `&published=true`
 
-  const result = await graphApiRequest(apiUrl, "POST")
-  if (result.error) {
-    console.error(`    Photo post error: ${result.error.message || JSON.stringify(result.error)} (falling back to link)`)
-    const linkResult = await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
-    return linkResult === true ? { id: true, fallback: true } : linkResult
+  let result = await graphApiRequest(urlApiUrl, "POST")
+  if (result && result.id) {
+    console.log(`    Photo post: ${result.id} (image: ${imageUrl})`)
+    return true
   }
-  console.log(`    Photo post: ${result.id} (image: ${imageUrl})`)
-  return true
+
+  console.log(`    URL upload failed (${(result.error || {}).message || 'unknown'}), trying binary upload...`)
+
+  // Fallback: download image locally and upload as binary
+  try {
+    const imageBuffer = await downloadImage(imageUrl)
+    const caption = message + `\n\n${linkUrl}`
+    result = await postPhotoBinary({ imageBuffer, pageId, pageAccessToken, caption })
+    if (result && result.id) {
+      console.log(`    Photo post (binary): ${result.id}`)
+      return true
+    }
+    console.error(`    Binary upload also failed: ${(result.error || {}).message || JSON.stringify(result)}`)
+  } catch (err) {
+    console.error(`    Binary upload error: ${err.message}`)
+  }
+
+  // Both methods failed — fall back to link
+  console.log(`    Falling back to link format`)
+  const linkResult = await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
+  return linkResult === true ? { id: true, fallback: true } : linkResult
 }
 
 async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
