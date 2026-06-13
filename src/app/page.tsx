@@ -5,7 +5,6 @@ import { BreakingNewsBanner } from "@/components/sections/breaking-news-banner"
 import { HeroSection } from "@/components/sections/hero-section"
 import { CategoryGrid } from "@/components/sections/category-grid"
 import { InView } from "@/components/common/in-view"
-import { AdSlot } from "@/components/common/ad-slot"
 
 import {
   getArticleLinks,
@@ -153,13 +152,9 @@ export default async function HomePage() {
         }}
       />
 
-      <BreakingNewsBanner articles={filterQualityArticles(allArticles).slice(0, 40)} />
+      <BreakingNewsBanner articles={breaking} />
 
       <HeroSection featured={featuredHero} secondary={allSecondary} />
-
-      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-5 py-6">
-        <AdSlot variant="leaderboard" className="w-full" />
-      </div>
 
       <InView>
         <CategoryGrid
@@ -172,8 +167,9 @@ export default async function HomePage() {
         />
       </InView>
 
-      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-5 py-6">
-        <AdSlot variant="billboard" className="w-full" />
+      <div className="relative mx-auto max-w-7xl px-3 sm:px-4 lg:px-5">
+        <div className="section-divider" />
+        <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-20 h-[3px] bg-gradient-to-r from-transparent via-accent/60 to-transparent rounded-full animate-pulse-soft" />
       </div>
 
       <InView delay={0.1}>
@@ -204,11 +200,6 @@ export default async function HomePage() {
           </InView>
         </>
       )}
-
-      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-5 py-8">
-        <AdSlot variant="rectangle" className="w-full md:hidden" />
-        <AdSlot variant="billboard" className="hidden w-full md:flex" />
-      </div>
     </>
   )
 }
