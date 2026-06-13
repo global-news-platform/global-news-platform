@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import type { ArticleLink } from "@/types"
 
 interface BreakingNewsBannerProps {
@@ -10,6 +10,30 @@ interface BreakingNewsBannerProps {
 
 export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
   const [dismissed, setDismissed] = useState(false)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const animRef = useRef<number | null>(null)
+  const posRef = useRef(0)
+
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track || articles.length === 0) return
+
+    const step = () => {
+      posRef.current -= 0.5
+      const half = track.scrollWidth / 2
+      if (Math.abs(posRef.current) >= half) {
+        posRef.current = 0
+      }
+      track.style.transform = `translateX(${posRef.current}px)`
+      animRef.current = requestAnimationFrame(step)
+    }
+
+    animRef.current = requestAnimationFrame(step)
+    return () => {
+      if (animRef.current) cancelAnimationFrame(animRef.current)
+    }
+  }, [articles.length])
+
   if (dismissed || articles.length === 0) return null
 
   return (
@@ -24,7 +48,11 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
           <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] text-white/90">LIVE</span>
         </div>
         <div className="flex-1 min-w-0 overflow-hidden py-2.5">
-          <div className="inline-flex animate-marquee-rtl whitespace-nowrap will-change-transform" style={{ animationDuration: `${Math.max(articles.length * 8, 20)}s` }}>
+          <div
+            ref={trackRef}
+            className="inline-flex whitespace-nowrap will-change-transform"
+            style={{ transform: "translateX(0)" }}
+          >
             {[...articles, ...articles].map((article, i) => (
               <span key={`${article.slug}-${i}`} className="inline-flex items-center shrink-0">
                 <Link
