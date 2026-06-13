@@ -4,7 +4,7 @@ const https = require("https")
 const { rewriteBatch } = require("./rewriter")
 
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
-const POST_FORMATS = ["link", "photo", "text"]
+const POST_FORMATS = ["photo"]
 const MIN_INTERVAL_MS = 120 * 60 * 1000
 const MAX_POSTS_PER_RUN = 1
 
@@ -261,7 +261,7 @@ async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
   return true
 }
 
-const FORMAT_POSTERS = [postLinkFormat, postPhotoFormat, postTextFormat]
+const FORMAT_POSTERS = [postPhotoFormat]
 
 async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dryRun = false }) {
   if (!pageId || !pageAccessToken) {
