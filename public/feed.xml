@@ -9,13 +9,24 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 13 Jun 2026 18:35:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 21:20:33 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://thegloballens365.vercel.app</link>
     </image>
+  <item>
+    <title>World Cup online betting takes a toll in Brazil</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-online-betting-takes-a-toll-in-brazil--99wokj</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-online-betting-takes-a-toll-in-brazil--99wokj</guid>
+    <description>A World Cup fever is sweeping Brazil. So is sports betting. NPR&apos;s Julia Carneiro reports on the country&apos;s gambling boom and the growing concerns about debt and...</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Sat, 13 Jun 2026 21:02:56 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-online-betting-takes-a-toll-in-brazil--99wokj.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/06/13/nx-s1-5856381/world-cup-online-betting-takes-a-toll-in-brazil">NPR</source>
+  </item>
   <item>
     <title>Workers remove Trump’s name from Kennedy Center after court ruling</title>
     <link>https://thegloballens365.vercel.app/article/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3</link>
@@ -48,6 +59,17 @@
     <pubDate>Sat, 13 Jun 2026 00:23:08 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/with-fighting-spirit-korea-s-beauty-triumphs-over-czech-set-piece-beasts--vne30z.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2007446/with-fighting-spirit-koreas-beauty-triumphs-over-czech-set-piece-beasts">Dawn</source>
+  </item>
+  <item>
+    <title>Will the new EU migration rules work?</title>
+    <link>https://thegloballens365.vercel.app/article/will-the-new-eu-migration-rules-work--gr2ade</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-the-new-eu-migration-rules-work--gr2ade</guid>
+    <description>The European Union&apos;s new migration policy has come into force.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Sat, 13 Jun 2026 20:05:19 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/will-the-new-eu-migration-rules-work--gr2ade.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/inside-story/2026/6/13/will-the-new-eu-migration-rules-work?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Will life improve for Hungary&apos;s Roma community under Magyar?</title>
@@ -204,6 +226,17 @@
     <source url="https://www.bbc.com/news/videos/c4gyx0x1d5ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Was there an offside in build up to Switzerland penalty?</title>
+    <link>https://thegloballens365.vercel.app/article/was-there-an-offside-in-build-up-to-switzerland-penalty--lxk8di</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/was-there-an-offside-in-build-up-to-switzerland-penalty--lxk8di</guid>
+    <description>Breel Embolo puts Switzerland 1-0 up against Qatar from the penalty spot, after the Swiss were awarded a penalty with Remo Freuler appearing to be offside...</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Sat, 13 Jun 2026 21:04:29 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/was-there-an-offside-in-build-up-to-switzerland-penalty--lxk8di.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/football/videos/cm207deyvl2o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Warner Bros $111bn sale to Paramount approved by US justice department</title>
     <link>https://thegloballens365.vercel.app/article/warner-bros-111bn-sale-to-paramount-approved-by-us-justice-department--85b5xl</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/warner-bros-111bn-sale-to-paramount-approved-by-us-justice-department--85b5xl</guid>
@@ -336,6 +369,17 @@
     <source url="https://www.bbc.com/sport/cricket/articles/c74ymz7vym1o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>Ukraine to keep targeting Russian energy after hitting sea terminal</title>
+    <link>https://thegloballens365.vercel.app/article/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal--7kg9xj</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal--7kg9xj</guid>
+    <description>Ukraine&apos;s SBU security service claimed attack sparking fires in Russia&apos;s Tamanneftegaz terminal.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sat, 13 Jun 2026 18:29:35 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal--7kg9xj.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/13/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>UK vows to phase out Russian diesel and jet fuel imports by new year</title>
     <link>https://thegloballens365.vercel.app/article/uk-vows-to-phase-out-russian-diesel-and-jet-fuel-imports-by-new-year--7g8933</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uk-vows-to-phase-out-russian-diesel-and-jet-fuel-imports-by-new-year--7g8933</guid>
@@ -389,6 +433,17 @@
     <pubDate>Thu, 11 Jun 2026 20:04:52 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/u-s-and-iran-peace-deal-within-reach-pakistan-s-prime-minister-says--vevx6f.jpg" type="image/jpeg" />
     <source url="https://www.npr.org/2026/06/11/nx-s1-5854970/trump-iran-peace-deal-cancel-strikes">NPR</source>
+  </item>
+  <item>
+    <title>TV’s Hottest Stars on Growing Chest Hair, Bulking Up and Peeing in Buckets — For Art, Of Course</title>
+    <link>https://thegloballens365.vercel.app/article/tv-s-hottest-stars-on-growing-chest-hair-bulking-up-and-peeing-in-buckets-for-ar--ci1zki</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/tv-s-hottest-stars-on-growing-chest-hair-bulking-up-and-peeing-in-buckets-for-ar--ci1zki</guid>
+    <description>THR sits down with Richard Gadd, Kit Harington, Tom Hiddleston, Charlie Hunnam, Paul Anthony Kelly and Noah Wyle for a conversation about meltdowns,...</description>
+    <category>shobiz</category>
+    <author>Babar Shah</author>
+    <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/tv-s-hottest-stars-on-growing-chest-hair-bulking-up-and-peeing-in-buckets-for-ar--ci1zki.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-features/kit-harington-noah-wyle-drama-actor-roundtable-1236620872/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Trump unveils ‘great’ Iran deal, signing expected in Europe</title>
@@ -479,6 +534,17 @@
     <source url="https://www.dawn.com/news/2007488/thousands-rejoin-ajk-sit-ins-after-overnight-dispersal">Dawn</source>
   </item>
   <item>
+    <title>Thousands rally in Rome, Italy for rival pro- and anti-migration marches</title>
+    <link>https://thegloballens365.vercel.app/article/thousands-rally-in-rome-italy-for-rival-pro-and-anti-migration-marches--tjmy6y</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/thousands-rally-in-rome-italy-for-rival-pro-and-anti-migration-marches--tjmy6y</guid>
+    <description>Thousands of police deployed to keep the rallies apart as far-right &apos;remigration&apos; initiative gains traction.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Sat, 13 Jun 2026 20:46:23 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/thousands-rally-in-rome-italy-for-rival-pro-and-anti-migration-marches--tjmy6y.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/13/thousands-rally-in-rome-italy-for-rival-pro-and-anti-migration-marches?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Thousands attend anti-racism rallies following unrest in Belfast</title>
     <link>https://thegloballens365.vercel.app/article/thousands-attend-anti-racism-rallies-following-unrest-in-belfast--x39ehr</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/thousands-attend-anti-racism-rallies-following-unrest-in-belfast--x39ehr</guid>
@@ -499,72 +565,6 @@
     <pubDate>Tue, 02 Jun 2026 12:38:59 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/third-of-people-say-uni-degree-not-worth-it-as-student-loan-inquiry-begins--v7s1ib.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>The trauma and hope behind Haiti&apos;s rare World Cup appearance</title>
-    <link>https://thegloballens365.vercel.app/article/the-trauma-and-hope-behind-haiti-s-rare-world-cup-appearance--oq3nru</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/the-trauma-and-hope-behind-haiti-s-rare-world-cup-appearance--oq3nru</guid>
-    <description>Haiti&apos;s first appearance at a men&apos;s World Cup for 52 years is as much about hope as it is goals for the conflict-torn nation.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 13 Jun 2026 11:29:34 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/the-trauma-and-hope-behind-haiti-s-rare-world-cup-appearance--oq3nru.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/c23yvvv7kr3o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>The right has created a false reality – fuelled by toxic images delivered straight to your phone | Jason Okundaye</title>
-    <link>https://thegloballens365.vercel.app/article/the-right-has-created-a-false-reality-fuelled-by-toxic-images-delivered-straight--tyte3z</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/the-right-has-created-a-false-reality-fuelled-by-toxic-images-delivered-straight--tyte3z</guid>
-    <description>After a week of violence and discord, this is clear: some politicians know images supersede inconvenient facts.</description>
-    <category>siasat</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 13 Jun 2026 05:00:06 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/the-right-has-created-a-false-reality-fuelled-by-toxic-images-delivered-straight--tyte3z.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/commentisfree/2026/jun/13/right-false-reality-toxic-images-riots-belfast-southampton">The Guardian</source>
-  </item>
-  <item>
-    <title>The case for Labour to introduce a wealth tax has never been stronger | Phillip Inman</title>
-    <link>https://thegloballens365.vercel.app/article/the-case-for-labour-to-introduce-a-wealth-tax-has-never-been-stronger-phillip-in--6faqv9</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/the-case-for-labour-to-introduce-a-wealth-tax-has-never-been-stronger-phillip-in--6faqv9</guid>
-    <description>A 2% levy on fortunes above £100m – with no exemptions – could begin to reverse decades of rising inequality Andy Burnham and Wes Streeting have sought to...</description>
-    <category>siasat</category>
-    <author>Imran Malik</author>
-    <pubDate>Sat, 13 Jun 2026 15:00:16 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/the-case-for-labour-to-introduce-a-wealth-tax-has-never-been-stronger-phillip-in--6faqv9.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/politics/2026/jun/13/labour-introduce-wealth-tax-case-never-been-stronger">The Guardian</source>
-  </item>
-  <item>
-    <title>Taiwan opposition leader says Xi meeting avoided &apos;reunification&apos; talk</title>
-    <link>https://thegloballens365.vercel.app/article/taiwan-opposition-leader-says-xi-meeting-avoided-reunification-talk--o9wq8d</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/taiwan-opposition-leader-says-xi-meeting-avoided-reunification-talk--o9wq8d</guid>
-    <description>Cheng&apos;s comments come as Taiwan awaits approval on a $14 billion arms package from the U.S.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 11 Jun 2026 16:53:25 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/taiwan-opposition-leader-says-xi-meeting-avoided-reunification-talk--o9wq8d.jpg" type="image/jpeg" />
-    <source url="https://www.npr.org/2026/06/11/g-s1-127478/taiwan-opposition-leader-says-xi-meeting-avoided-reunification-talk">NPR</source>
-  </item>
-  <item>
-    <title>Switzerland to vote on plan to cap population at 10 million</title>
-    <link>https://thegloballens365.vercel.app/article/switzerland-to-vote-on-plan-to-cap-population-at-10-million--iu8qlc</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/switzerland-to-vote-on-plan-to-cap-population-at-10-million--iu8qlc</guid>
-    <description>The right-wing Swiss People&apos;s Party calls the plan a \&quot;sustainability initiative\&quot;, but opponents say it is a recipe for chaos.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sat, 13 Jun 2026 11:47:42 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/switzerland-to-vote-on-plan-to-cap-population-at-10-million--iu8qlc.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cx23kz7e76po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Sustainable path?</title>
-    <link>https://thegloballens365.vercel.app/article/sustainable-path--7fjzvy</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/sustainable-path--7fjzvy</guid>
-    <description>THE FY27 budget is the first clear signal that the government is ready to transition from stabilisation to growth — without breaching the IMF’s macroeconomic...</description>
-    <category>siasat</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 13 Jun 2026 04:21:49 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/sustainable-path--7fjzvy.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2007504/sustainable-path">Dawn</source>
   </item>
   </channel>
 </rss>
