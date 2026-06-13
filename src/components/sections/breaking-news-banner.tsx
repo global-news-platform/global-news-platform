@@ -24,18 +24,20 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
           <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] text-white/90">LIVE</span>
         </div>
         <div className="flex-1 min-w-0 overflow-hidden py-2.5">
-          <div className="inline-flex animate-marquee-rtl whitespace-nowrap will-change-transform" style={{ animationDuration: `${Math.max(articles.length * 10, 25)}s` }}>
+          <div className="inline-flex animate-marquee-rtl whitespace-nowrap will-change-transform" style={{ animationDuration: `${Math.max(articles.length * 8, 20)}s` }}>
             {[...articles, ...articles].map((article, i) => (
               <span key={`${article.slug}-${i}`} className="inline-flex items-center shrink-0">
                 <Link
                   href={`/article/${article.slug}`}
-                  className="text-[12px] md:text-[13px] font-medium text-white/90 hover:text-white transition-colors shrink-0"
+                  className="text-[12px] md:text-[13px] font-semibold text-white/90 hover:text-white transition-colors shrink-0"
                 >
                   {article.title}
                 </Link>
-                {i < articles.length * 2 - 1 && (
-                  <span className="mx-5 text-white/20 shrink-0">//</span>
-                )}
+                <span className="mx-5 inline-flex items-center gap-1 text-white/25 shrink-0">
+                  <span className="h-1 w-1 rounded-full bg-white/40" />
+                  <span className="h-1 w-1 rounded-full bg-white/40" />
+                  <span className="h-1 w-1 rounded-full bg-white/40" />
+                </span>
               </span>
             ))}
           </div>

@@ -152,7 +152,7 @@ export default async function HomePage() {
         }}
       />
 
-      <BreakingNewsBanner articles={breaking} />
+      <BreakingNewsBanner articles={filterQualityArticles(allArticles).slice(0, 40)} />
 
       <HeroSection featured={featuredHero} secondary={allSecondary} />
 
