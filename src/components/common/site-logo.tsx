@@ -11,7 +11,7 @@ interface SiteLogoProps {
   showTagline?: boolean
 }
 
-export function SiteLogo({ className = "h-12 w-12", iconSize = 6, textSize = "text-2xl font-bold leading-tight tracking-tight md:text-3xl", showTagline = false }: SiteLogoProps) {
+export function SiteLogo({ className = "h-10 w-10 sm:h-12 sm:w-12", iconSize = 5, textSize = "text-lg sm:text-2xl font-bold leading-tight tracking-tight md:text-3xl", showTagline = false }: SiteLogoProps) {
   const [useFallback, setUseFallback] = useState(false)
 
   if (useFallback) {

@@ -12,7 +12,8 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
   preload: true,
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
+  adjustFontFallback: true,
 })
 
 export const viewport: Viewport = {
@@ -126,6 +127,8 @@ export default function RootLayout({
             `,
           }}
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="alternate"
           type="application/rss+xml"

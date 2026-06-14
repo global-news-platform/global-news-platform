@@ -118,10 +118,10 @@ export function Header() {
         </div>
 
         {/* Logo row - prominent branding */}
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-5 lg:px-6 xl:px-8">
+        <div className="mx-auto flex h-14 sm:h-20 max-w-7xl items-center justify-between px-3 sm:px-5 lg:px-6 xl:px-8">
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="rounded-lg p-2 text-foreground transition-colors hover:bg-accent/10 md:hidden"
+            className="rounded-lg p-2.5 text-foreground transition-colors active:bg-accent/15 hover:bg-accent/10 md:hidden"
             aria-label="Open menu"
           >
             <Menu className="h-5 w-5" />
@@ -129,22 +129,22 @@ export function Header() {
 
           <Link
             href="/"
-            className="group flex items-center gap-3.5"
+            className="group flex items-center gap-2 sm:gap-3.5"
           >
             <SiteLogo showTagline />
           </Link>
 
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-1 sm:gap-2 md:hidden">
             <button
               onClick={() => setSearchOpen(true)}
-              className="rounded-lg p-2 text-foreground transition-colors hover:bg-accent/10"
+              className="rounded-lg p-2.5 text-foreground transition-colors active:bg-accent/15 hover:bg-accent/10"
               aria-label="Search"
             >
               <Search className="h-5 w-5" />
             </button>
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="rounded-lg p-2 text-foreground transition-colors hover:bg-accent/10"
+              className="rounded-lg p-2.5 text-foreground transition-colors active:bg-accent/15 hover:bg-accent/10"
                 aria-label="Toggle theme"
               >
                 {resolvedTheme === "dark" ? (

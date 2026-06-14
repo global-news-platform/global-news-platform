@@ -87,7 +87,7 @@
   html { direction: ltr; }
 
   body {
-    @apply text-foreground font-sans text-[15px] leading-[1.7];
+    @apply text-foreground font-sans text-[14px] sm:text-[15px] leading-[1.7];
     font-feature-settings: "liga" 1, "kern" 1;
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
@@ -95,6 +95,8 @@
     text-rendering: optimizeLegibility;
     font-optical-sizing: auto;
     background-color: hsl(var(--background));
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   ::selection { @apply bg-accent/25 text-foreground; }
@@ -227,6 +229,9 @@
     @apply shadow-card-hover border-primary/20;
     transform: translateY(-4px);
   }
+  .card-article:active {
+    transform: scale(0.98) translateY(-2px);
+  }
   .card-article:hover::before {
     @apply opacity-100;
   }
@@ -241,6 +246,9 @@
   .card-featured:hover {
     @apply shadow-card-hover border-accent/20;
     transform: translateY(-5px);
+  }
+  .card-featured:active {
+    transform: scale(0.98) translateY(-3px);
   }
 
   .card-horizontal {
@@ -303,6 +311,8 @@
   .news-divider {
     @apply border-b border-border/20 my-4;
   }
+
+  .content-visibility-auto { content-visibility: auto; contain-intrinsic-size: 500px; }
 
   .max-w-reading { max-width: 65ch; }
   .max-w-reading-wide { max-width: 72ch; }

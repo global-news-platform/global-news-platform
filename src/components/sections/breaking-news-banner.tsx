@@ -25,10 +25,22 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
     const track = trackRef.current
     if (!track || articles.length === 0) return
 
+    let hidden = false
+    const onVis = () => {
+      hidden = document.hidden
+      if (hidden) {
+        if (animRef.current) cancelAnimationFrame(animRef.current)
+      } else {
+        lastTimeRef.current = performance.now()
+        animRef.current = requestAnimationFrame(step)
+      }
+    }
+    document.addEventListener("visibilitychange", onVis, { passive: true })
+
     lastTimeRef.current = performance.now()
 
     const step = (now: number) => {
-      if (pausedRef.current) {
+      if (pausedRef.current || hidden) {
         lastTimeRef.current = now
         animRef.current = requestAnimationFrame(step)
         return
@@ -48,6 +60,7 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
 
     animRef.current = requestAnimationFrame(step)
     return () => {
+      document.removeEventListener("visibilitychange", onVis)
       if (animRef.current) cancelAnimationFrame(animRef.current)
     }
   }, [articles.length])

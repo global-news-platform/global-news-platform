@@ -104,7 +104,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
   if (variant === "hero") {
     return (
       <Link href={`/article/${article.slug}`} className="group relative block w-full overflow-hidden bg-black">
-        <div className="relative w-full h-[320px] sm:h-[400px] md:h-[520px] lg:h-[600px]">
+        <div className="relative w-full h-[240px] sm:h-[400px] md:h-[520px] lg:h-[600px]">
           <ArticleImage
             src={article.image}
             alt={article.title || ""}
