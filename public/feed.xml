@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 14 Jun 2026 19:40:33 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 21:17:31 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -402,6 +402,17 @@
     <source url="https://www.bbc.com/news/articles/cjwgled9jxwo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Violence erupts during anti-G7 protests in Geneva on eve of summit</title>
+    <link>https://thegloballens365.vercel.app/article/violence-erupts-during-anti-g7-protests-in-geneva-on-eve-of-summit--zbm8bl</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/violence-erupts-during-anti-g7-protests-in-geneva-on-eve-of-summit--zbm8bl</guid>
+    <description>Violence erupts during anti-G7 protests in Geneva on eve of summit.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 14 Jun 2026 20:45:10 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/violence-erupts-during-anti-g7-protests-in-geneva-on-eve-of-summit--zbm8bl.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/14/violence-erupts-during-anti-g7-protests-in-geneva-on-eve-of-summit?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Violence erupts at anti-government protest in DR Congo</title>
     <link>https://thegloballens365.vercel.app/article/violence-erupts-at-anti-government-protest-in-dr-congo--6ke0yr</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/violence-erupts-at-anti-government-protest-in-dr-congo--6ke0yr</guid>
@@ -512,6 +523,17 @@
     <source url="https://www.dawn.com/news/2007460/us-plans-big-cut-to-fighter-jets-warships-for-nato-nyt">Dawn</source>
   </item>
   <item>
+    <title>US musician Oliver Tree, 32, killed in helicopter crash in Brazil</title>
+    <link>https://thegloballens365.vercel.app/article/us-musician-oliver-tree-32-killed-in-helicopter-crash-in-brazil--97fh0s</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-musician-oliver-tree-32-killed-in-helicopter-crash-in-brazil--97fh0s</guid>
+    <description>Alternative singer and internet personality among six who died when two helicopters collided over Rio de Janeiro The American musician Oliver Tree has died in...</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 14 Jun 2026 19:24:36 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/us-musician-oliver-tree-32-killed-in-helicopter-crash-in-brazil--97fh0s.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/world/2026/jun/14/musician-oliver-tree-32-killed-in-helicopter-crash-in-brazil">The Guardian</source>
+  </item>
+  <item>
     <title>US kills leader of Venezuela&apos;s Tren de Aragua gang in airstrike, Trump says</title>
     <link>https://thegloballens365.vercel.app/article/us-kills-leader-of-venezuela-s-tren-de-aragua-gang-in-airstrike-trump-says--gmm4bd</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-kills-leader-of-venezuela-s-tren-de-aragua-gang-in-airstrike-trump-says--gmm4bd</guid>
@@ -543,28 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 18:03:51 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/us-iran-deal-scheduled-to-be-signed-on-sunday-says-trump--lv241i.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>US asks Anthropic to block global access to top AI models: Why it matters</title>
-    <link>https://thegloballens365.vercel.app/article/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters--0omoon</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters--0omoon</guid>
-    <description>Foreigners barred from accessing top AI models, underscoring Donald Trump&apos;s policy of export controls over high tech.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sun, 14 Jun 2026 13:57:22 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters--0omoon.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/14/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Uncapped Crocombe added to England Test squad</title>
-    <link>https://thegloballens365.vercel.app/article/uncapped-crocombe-added-to-england-test-squad--hoaa8d</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uncapped-crocombe-added-to-england-test-squad--hoaa8d</guid>
-    <description>Uncapped Sussex pace bowler Henry Crocombe is called into England&apos;s squad for the second Test against New Zealand as cover for Ollie Robinson.</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 14:14:06 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/uncapped-crocombe-added-to-england-test-squad--hoaa8d.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/cricket/articles/c74ymz7vym1o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
