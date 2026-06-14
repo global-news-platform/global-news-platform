@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 14 Jun 2026 12:00:30 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 14:24:05 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -545,6 +545,17 @@
     <source url="https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>US asks Anthropic to block global access to top AI models: Why it matters</title>
+    <link>https://thegloballens365.vercel.app/article/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters--0omoon</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters--0omoon</guid>
+    <description>Foreigners barred from accessing top AI models, underscoring Donald Trump&apos;s policy of export controls over high tech.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 14 Jun 2026 13:57:22 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters--0omoon.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/14/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Uncapped Crocombe added to England Test squad</title>
     <link>https://thegloballens365.vercel.app/article/uncapped-crocombe-added-to-england-test-squad--hoaa8d</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/uncapped-crocombe-added-to-england-test-squad--hoaa8d</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 14:14:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/uncapped-crocombe-added-to-england-test-squad--hoaa8d.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/cricket/articles/c74ymz7vym1o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Ukraine to keep targeting Russian energy after hitting sea terminal</title>
-    <link>https://thegloballens365.vercel.app/article/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal--7kg9xj</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal--7kg9xj</guid>
-    <description>Ukraine&apos;s SBU security service claimed attack sparking fires in Russia&apos;s Tamanneftegaz terminal.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sat, 13 Jun 2026 18:29:35 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal--7kg9xj.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/13/ukraine-to-keep-targeting-russian-energy-after-hitting-sea-terminal?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
