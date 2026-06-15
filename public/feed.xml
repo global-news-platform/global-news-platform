@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 15 Jun 2026 18:32:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 22:23:58 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -435,6 +435,17 @@
     <source url="https://www.bbc.com/news/articles/c6244zqnk16o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>What Israeli leaders are saying about US-Iran ‘peace deal’</title>
+    <link>https://thegloballens365.vercel.app/article/what-israeli-leaders-are-saying-about-us-iran-peace-deal--5vajgc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-israeli-leaders-are-saying-about-us-iran-peace-deal--5vajgc</guid>
+    <description>Israel’s political leaders, including Itamar Ben-Gvir and Bezalel Smotrich, have reacted to the US-Iran agreement.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 15 Jun 2026 20:20:41 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-israeli-leaders-are-saying-about-us-iran-peace-deal--5vajgc.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/15/what-israeli-leaders-are-saying-about-us-iran-peace?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>What is El Niño and why could it mean record temperatures?</title>
     <link>https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz</guid>
@@ -455,6 +466,17 @@
     <pubDate>Sun, 14 Jun 2026 05:31:14 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/what-does-1-0-win-mean-for-scotland-s-chances-of-qualification--v6yu2o.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/cvglm8n1nyjo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>West Wilson Exits ‘Summer House’ Ahead of Season 11</title>
+    <link>https://thegloballens365.vercel.app/article/west-wilson-exits-summer-house-ahead-of-season-11--6hwurq</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/west-wilson-exits-summer-house-ahead-of-season-11--6hwurq</guid>
+    <description>The news comes ahead of a bonus episode tracking the viral relationship scandal involving Wilson.</description>
+    <category>shobiz</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 15 Jun 2026 20:38:55 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/west-wilson-exits-summer-house-ahead-of-season-11--6hwurq.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/west-wilson-exits-summer-house-season-11-1236622497/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>West Indies beat holders New Zealand in thriller</title>
@@ -543,28 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 22:36:02 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/was-this-offside-fifa-under-pressure-to-release-var-images--yi8m7v.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/ckg80k1yn89o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Was there an offside in build up to Switzerland penalty?</title>
-    <link>https://thegloballens365.vercel.app/article/was-there-an-offside-in-build-up-to-switzerland-penalty--lxk8di</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/was-there-an-offside-in-build-up-to-switzerland-penalty--lxk8di</guid>
-    <description>Breel Embolo puts Switzerland 1-0 up against Qatar from the penalty spot, after the Swiss were awarded a penalty with Remo Freuler appearing to be offside...</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 21:04:29 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/was-there-an-offside-in-build-up-to-switzerland-penalty--lxk8di.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/videos/cm207deyvl2o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Warner Bros $111bn sale to Paramount approved by US justice department</title>
-    <link>https://thegloballens365.vercel.app/article/warner-bros-111bn-sale-to-paramount-approved-by-us-justice-department--85b5xl</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/warner-bros-111bn-sale-to-paramount-approved-by-us-justice-department--85b5xl</guid>
-    <description>The approval marks a key development in the merger that will reshape media, allowing the continue of the takeover of the Hollywood studio, which owns CNN and...</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Sat, 13 Jun 2026 03:28:25 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/warner-bros-111bn-sale-to-paramount-approved-by-us-justice-department--85b5xl.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cjwgled9jxwo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
