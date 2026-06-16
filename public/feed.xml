@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 16 Jun 2026 17:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 20:56:52 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -556,15 +556,15 @@
     <source url="https://www.bbc.com/news/articles/cj97npgk92po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
-    <title>What does the future hold for Rashford?</title>
-    <link>https://thegloballens365.vercel.app/article/what-does-the-future-hold-for-rashford--7ddlvg</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-does-the-future-hold-for-rashford--7ddlvg</guid>
-    <description>Barcelona decided not to trigger the option that would have allowed them to sign Marcus Rashford for £26m, so what does the future hold for the England World...</description>
-    <category>khel</category>
-    <author>Imran Malik</author>
-    <pubDate>Tue, 16 Jun 2026 06:16:50 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-does-the-future-hold-for-rashford--7ddlvg.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/cx2jg48q9y4o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+    <title>What has Iran won and lost from this war?</title>
+    <link>https://thegloballens365.vercel.app/article/what-has-iran-won-and-lost-from-this-war--26008q</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-has-iran-won-and-lost-from-this-war--26008q</guid>
+    <description>Iran&apos;s relationship with its Gulf neighbours, which it attacked during the war, has been damaged.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 16 Jun 2026 19:16:42 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-has-iran-won-and-lost-from-this-war--26008q.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/inside-story/2026/6/16/what-has-iran-won-and-lost-from-this-war?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
