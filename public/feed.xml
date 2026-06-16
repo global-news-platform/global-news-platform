@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 16 Jun 2026 11:16:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -136,6 +136,17 @@
     <pubDate>Mon, 15 Jun 2026 10:44:14 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news--ryze0d.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/6/15/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>World Cup 2026: Day five</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-2026-day-five--5xtxmc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-day-five--5xtxmc</guid>
+    <description>Al Jazeera’s Rahul Pathak has your FIFA World Cup 2026 day five recap.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 16 Jun 2026 16:35:02 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-day-five--5xtxmc.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/16/world-cup-2026-day-five?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>World Cup 2026: Biggest takeaways from Brazil-Morocco group match</title>
@@ -334,6 +345,17 @@
     <pubDate>Sun, 14 Jun 2026 00:56:36 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-is-the-price-of-gold-trending-down--hwop1j.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/economy/2026/6/14/why-is-the-price-of-gold-trending-down?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Why is Thames Water in so much trouble?</title>
+    <link>https://thegloballens365.vercel.app/article/why-is-thames-water-in-so-much-trouble--w2jcg4</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-is-thames-water-in-so-much-trouble--w2jcg4</guid>
+    <description>Thames Water&apos;s lenders have submitted a new rescue plan to save the firm, but how did it end up in this state?</description>
+    <category>karobar</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 16 Jun 2026 11:02:13 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-is-thames-water-in-so-much-trouble--w2jcg4.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/cgleg70r7rno?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Why I sold my business to my staff</title>
@@ -543,28 +565,6 @@
     <pubDate>Tue, 16 Jun 2026 06:16:50 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/what-does-the-future-hold-for-rashford--7ddlvg.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/cx2jg48q9y4o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>What does 1-0 win mean for Scotland&apos;s chances of qualification?</title>
-    <link>https://thegloballens365.vercel.app/article/what-does-1-0-win-mean-for-scotland-s-chances-of-qualification--v6yu2o</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-does-1-0-win-mean-for-scotland-s-chances-of-qualification--v6yu2o</guid>
-    <description>With eight third-place finishers advancing to the last 32, might three points be enough for Scotland to make history?</description>
-    <category>khel</category>
-    <author>Imran Malik</author>
-    <pubDate>Sun, 14 Jun 2026 05:31:14 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-does-1-0-win-mean-for-scotland-s-chances-of-qualification--v6yu2o.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/cvglm8n1nyjo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>West Wilson Exits ‘Summer House’ Ahead of Season 11</title>
-    <link>https://thegloballens365.vercel.app/article/west-wilson-exits-summer-house-ahead-of-season-11--6hwurq</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/west-wilson-exits-summer-house-ahead-of-season-11--6hwurq</guid>
-    <description>The news comes ahead of a bonus episode tracking the viral relationship scandal involving Wilson.</description>
-    <category>shobiz</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 15 Jun 2026 20:38:55 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/west-wilson-exits-summer-house-ahead-of-season-11--6hwurq.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/tv/tv-news/west-wilson-exits-summer-house-season-11-1236622497/">The Hollywood Reporter</source>
   </item>
   </channel>
 </rss>
