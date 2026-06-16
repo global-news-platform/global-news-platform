@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 15 Jun 2026 22:23:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 04:26:03 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -37,6 +37,17 @@
     <pubDate>Sun, 14 Jun 2026 11:49:28 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-thanks-uk-for-intercepting-russian-shadow-fleet-oil-tanker-after-armed--og7avj.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/politics/live/2026/jun/14/russian-shadow-fleet-oil-tanker-channel-army-marines-keir-starmer-dan-jarvis-makerfield-labour-uk-politics-latest-news-updates">The Guardian</source>
+  </item>
+  <item>
+    <title>Zardari hopes preliminary deal will lead to durable peace</title>
+    <link>https://thegloballens365.vercel.app/article/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk</guid>
+    <description>President Asif Ali Zardari on Monday welcomed the announcement of a Memorandum of Understanding between the United States and Iran, which he hoped would pave...</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 16 Jun 2026 04:17:04 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1508459/zardari-hopes-preliminary-deal-will-lead-to-durable-peace/">Daily Times</source>
   </item>
   <item>
     <title>Yellow Line BRT: Two bureaucrats booked in Karachi over misuse of authority, Rs8.5bn payment</title>
@@ -325,6 +336,17 @@
     <source url="https://www.dw.com/en/why-bear-attacks-are-rising-fast-in-japan/a-77521911?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   <item>
+    <title>Who is Vozinha, Cape Verde’s viral goalkeeper at the World Cup?</title>
+    <link>https://thegloballens365.vercel.app/article/who-is-vozinha-cape-verde-s-viral-goalkeeper-at-the-world-cup--tk03wo</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/who-is-vozinha-cape-verde-s-viral-goalkeeper-at-the-world-cup--tk03wo</guid>
+    <description>From his hometown of Sao Vicente in Cape Verde, Vozinha has been his jersey name throughout his club career.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Tue, 16 Jun 2026 02:52:13 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/who-is-vozinha-cape-verde-s-viral-goalkeeper-at-the-world-cup--tk03wo.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/6/16/who-is-vozinha-cape-verdes-viral-goalkeeper-at-the-world-cup?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Who is Elon Musk and what is his net worth?</title>
     <link>https://thegloballens365.vercel.app/article/who-is-elon-musk-and-what-is-his-net-worth--ki74hn</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/who-is-elon-musk-and-what-is-his-net-worth--ki74hn</guid>
@@ -446,6 +468,17 @@
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/15/what-israeli-leaders-are-saying-about-us-iran-peace?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>What is Helium-3 and could we get it from the moon?</title>
+    <link>https://thegloballens365.vercel.app/article/what-is-helium-3-and-could-we-get-it-from-the-moon--sradwb</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-is-helium-3-and-could-we-get-it-from-the-moon--sradwb</guid>
+    <description>Helium-3 is expensive and demand is forecast to soar, so some are planning to mine it on the moon.</description>
+    <category>karobar</category>
+    <author>Babar Shah</author>
+    <pubDate>Tue, 16 Jun 2026 00:11:13 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-is-helium-3-and-could-we-get-it-from-the-moon--sradwb.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/ce8jmg2e4kro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>What is El Niño and why could it mean record temperatures?</title>
     <link>https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz</guid>
@@ -532,39 +565,6 @@
     <pubDate>Fri, 12 Jun 2026 08:40:14 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/weather-tracker-heat-humidity-and-thunderstorms-a-danger-at-world-cup--mq9a1c.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/environment/2026/jun/12/weather-tracker-heat-humidity-thunderstorms-risk-world-cup">The Guardian</source>
-  </item>
-  <item>
-    <title>Watch: Three things to know about SpaceX&apos;s stock market debut</title>
-    <link>https://thegloballens365.vercel.app/article/watch-three-things-to-know-about-spacex-s-stock-market-debut--g86ejk</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/watch-three-things-to-know-about-spacex-s-stock-market-debut--g86ejk</guid>
-    <description>The BBC&apos;s Samira Hussain explains everything you need to know about SpaceX&apos;s historic IPO.</description>
-    <category>karobar</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Fri, 12 Jun 2026 08:39:37 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/watch-three-things-to-know-about-spacex-s-stock-market-debut--g86ejk.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/videos/c4gyx0x1d5ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Was this offside? Technology fault leaves questions over VAR images</title>
-    <link>https://thegloballens365.vercel.app/article/was-this-offside-technology-fault-leaves-questions-over-var-images--gljpfi</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/was-this-offside-technology-fault-leaves-questions-over-var-images--gljpfi</guid>
-    <description>Fifa have blamed a technical fault for the delay in releasing the VAR images after a potential - and controversial - offside call during Qatar&apos;s World Cup draw...</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 14 Jun 2026 08:32:45 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/was-this-offside-technology-fault-leaves-questions-over-var-images--gljpfi.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/ckg80k1yn89o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Was this offside? Fifa under pressure to release VAR images</title>
-    <link>https://thegloballens365.vercel.app/article/was-this-offside-fifa-under-pressure-to-release-var-images--yi8m7v</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/was-this-offside-fifa-under-pressure-to-release-var-images--yi8m7v</guid>
-    <description>There have been calls for Fifa to release the VAR images after a potential - and controversial - offside call during Qatar&apos;s World Cup draw with Switzerland.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 13 Jun 2026 22:36:02 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/was-this-offside-fifa-under-pressure-to-release-var-images--yi8m7v.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/ckg80k1yn89o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
