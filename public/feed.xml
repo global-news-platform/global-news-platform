@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 17 Jun 2026 15:39:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 18:23:13 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -48,6 +48,17 @@
     <pubDate>Tue, 16 Jun 2026 04:17:04 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1508459/zardari-hopes-preliminary-deal-will-lead-to-durable-peace/">Daily Times</source>
+  </item>
+  <item>
+    <title>Young Palestinian women learn AI to tell stories of war on Gaza</title>
+    <link>https://thegloballens365.vercel.app/article/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6</guid>
+    <description>Young Palestinian women learn AI to tell stories of war on Gaza.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 17 Jun 2026 16:58:42 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Yellow Line BRT: Two bureaucrats booked in Karachi over misuse of authority, Rs8.5bn payment</title>
@@ -380,6 +391,17 @@
     <source url="https://www.bbc.com/sport/football/articles/c3vypg424glo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>Why Israel could still derail the Iran-US deal</title>
+    <link>https://thegloballens365.vercel.app/article/why-israel-could-still-derail-the-iran-us-deal--n6plia</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-israel-could-still-derail-the-iran-us-deal--n6plia</guid>
+    <description>Trump called it a historic deal. But with nuclear talks and Israel all unresolved, what did either side actually win?</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 17 Jun 2026 15:23:08 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-israel-could-still-derail-the-iran-us-deal--n6plia.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/the-take-2/2026/6/17/why-israel-could-still-derail-the-iran-us-deal?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Why is the price of gold trending down?</title>
     <link>https://thegloballens365.vercel.app/article/why-is-the-price-of-gold-trending-down--hwop1j</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-is-the-price-of-gold-trending-down--hwop1j</guid>
@@ -433,6 +455,17 @@
     <pubDate>Fri, 12 Jun 2026 11:59:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-bear-attacks-are-rising-fast-in-japan--odgttn.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/why-bear-attacks-are-rising-fast-in-japan/a-77521911?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Why are experts warning latest Ebola outbreak could be ‘worst ever’?</title>
+    <link>https://thegloballens365.vercel.app/article/why-are-experts-warning-latest-ebola-outbreak-could-be-worst-ever--69582f</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-are-experts-warning-latest-ebola-outbreak-could-be-worst-ever--69582f</guid>
+    <description>The virus is spreading faster than health workers can track it and international funding has slumped.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 17 Jun 2026 16:15:30 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-are-experts-warning-latest-ebola-outbreak-could-be-worst-ever--69582f.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/17/why-are-experts-warning-latest-ebola-outbreak-could-be-worst-ever?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Who is Vozinha, Cape Verde’s viral goalkeeper at the World Cup?</title>
@@ -532,39 +565,6 @@
     <pubDate>Sun, 14 Jun 2026 19:00:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/when-the-white-house-could-book-a-real-star--81r0g0.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/music/music-news/white-house-jimmy-carter-dizzy-gillespie-1236617124/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>When Mamie Van Doren Met Howard Hughes: “When I Looked, There Wasn’t That Much There”</title>
-    <link>https://thegloballens365.vercel.app/article/when-mamie-van-doren-met-howard-hughes-when-i-looked-there-wasn-t-that-much-ther--net3hq</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/when-mamie-van-doren-met-howard-hughes-when-i-looked-there-wasn-t-that-much-ther--net3hq</guid>
-    <description>Her dalliance with the reclusive billionaire, her childhood friendship with Monroe, her brief affair with Tony Curtis — the 95-year-old one-time pinup spills...</description>
-    <category>shobiz</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 17:00:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/when-mamie-van-doren-met-howard-hughes-when-i-looked-there-wasn-t-that-much-ther--net3hq.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/lifestyle/arts/mamie-van-doren-memoir-marilyn-monroe-1236617583/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>What to know about this week’s US primary elections</title>
-    <link>https://thegloballens365.vercel.app/article/what-to-know-about-this-week-s-us-primary-elections--9wveko</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-to-know-about-this-week-s-us-primary-elections--9wveko</guid>
-    <description>Primaries are set to take place in Alabama, California, Oklahoma, Georgia, and the capital, Washington, DC, on Tuesday.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Tue, 16 Jun 2026 08:58:44 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-to-know-about-this-week-s-us-primary-elections--9wveko.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/16/what-to-know-about-this-weeks-us-primary-elections?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>What&apos;s happening to UK petrol and diesel prices now the US and Iran have a deal?</title>
-    <link>https://thegloballens365.vercel.app/article/what-s-happening-to-uk-petrol-and-diesel-prices-now-the-us-and-iran-have-a-deal--px2615</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-s-happening-to-uk-petrol-and-diesel-prices-now-the-us-and-iran-have-a-deal--px2615</guid>
-    <description>When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.</description>
-    <category>karobar</category>
-    <author>Imran Malik</author>
-    <pubDate>Mon, 15 Jun 2026 11:28:39 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-s-happening-to-uk-petrol-and-diesel-prices-now-the-us-and-iran-have-a-deal--px2615.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c20zgjzz0e4o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
