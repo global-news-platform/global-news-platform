@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 16 Jun 2026 23:27:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 04:21:39 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -435,6 +435,17 @@
     <source url="https://www.dawn.com/news/2005854/white-house-ai-policy-adviser-krishnan-to-leave-position">Dawn</source>
   </item>
   <item>
+    <title>Which France and World Cup records did Mbappe break against Senegal?</title>
+    <link>https://thegloballens365.vercel.app/article/which-france-and-world-cup-records-did-mbappe-break-against-senegal--06xehh</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/which-france-and-world-cup-records-did-mbappe-break-against-senegal--06xehh</guid>
+    <description>France captain overtakes Giroud with 58 goals for his country and the most for Les Bleus at a World Cup.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 17 Jun 2026 00:07:20 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/which-france-and-world-cup-records-did-mbappe-break-against-senegal--06xehh.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/6/17/which-france-and-world-cup-records-did-mbappe-break-against-senegal?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Where to Watch the 24 Hours of Le Mans Livestream Online</title>
     <link>https://thegloballens365.vercel.app/article/where-to-watch-the-24-hours-of-le-mans-livestream-online--5fyyl6</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/where-to-watch-the-24-hours-of-le-mans-livestream-online--5fyyl6</guid>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 11 Jun 2026 13:32:26 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cj97npgk92po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>What has Iran won and lost from this war?</title>
-    <link>https://thegloballens365.vercel.app/article/what-has-iran-won-and-lost-from-this-war--26008q</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-has-iran-won-and-lost-from-this-war--26008q</guid>
-    <description>Iran&apos;s relationship with its Gulf neighbours, which it attacked during the war, has been damaged.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 16 Jun 2026 19:16:42 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-has-iran-won-and-lost-from-this-war--26008q.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/inside-story/2026/6/16/what-has-iran-won-and-lost-from-this-war?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
