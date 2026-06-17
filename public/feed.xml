@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 17 Jun 2026 04:21:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 11:02:58 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -81,6 +81,17 @@
     <pubDate>Mon, 15 Jun 2026 15:24:21 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-quiz-name-these-top-nations-leading-scorers--8qst1v.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/c1m2p27p8xzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>World Cup predictions: Portugal vs DR Congo, England vs Croatia and more</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more--xu4vcg</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more--xu4vcg</guid>
+    <description>Ronaldo chases goal-scoring record, as Portugal and England begin their World Cup campaigns.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 17 Jun 2026 09:21:01 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more--xu4vcg.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/17/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>World Cup online betting takes a toll in Brazil</title>
@@ -279,6 +290,17 @@
     <pubDate>Sun, 14 Jun 2026 23:10:57 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-you-might-not-be-buying-the-right-pain-relief-for-period-cramps--tpltzj.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c932pex1vpwo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Why UK’s Makerfield by-election matters far beyond one parliamentary seat</title>
+    <link>https://thegloballens365.vercel.app/article/why-uk-s-makerfield-by-election-matters-far-beyond-one-parliamentary-seat--7ph8aa</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-uk-s-makerfield-by-election-matters-far-beyond-one-parliamentary-seat--7ph8aa</guid>
+    <description>Thursday&apos;s contest could pave the way for Manchester Mayor Andy Burnham to challenge Keir Starmer&apos;s premiership.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 17 Jun 2026 09:53:28 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-uk-s-makerfield-by-election-matters-far-beyond-one-parliamentary-seat--7ph8aa.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/17/why-uks-makerfield-by-election-matters-far-beyond-one-parliamentary-seat?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Why the US economy keeps defying the odds</title>
@@ -543,28 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 20:20:41 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/what-israeli-leaders-are-saying-about-us-iran-peace-deal--5vajgc.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/15/what-israeli-leaders-are-saying-about-us-iran-peace?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>What is Helium-3 and could we get it from the moon?</title>
-    <link>https://thegloballens365.vercel.app/article/what-is-helium-3-and-could-we-get-it-from-the-moon--sradwb</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-is-helium-3-and-could-we-get-it-from-the-moon--sradwb</guid>
-    <description>Helium-3 is expensive and demand is forecast to soar, so some are planning to mine it on the moon.</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Tue, 16 Jun 2026 00:11:13 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-is-helium-3-and-could-we-get-it-from-the-moon--sradwb.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/ce8jmg2e4kro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>What is El Niño and why could it mean record temperatures?</title>
-    <link>https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz</guid>
-    <description>Global temperatures are expected to rise in the coming months as El Niño begins.</description>
-    <category>science</category>
-    <author>Imran Malik</author>
-    <pubDate>Thu, 11 Jun 2026 13:32:26 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-is-el-ni-o-and-why-could-it-mean-record-temperatures--qlapnz.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cj97npgk92po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
