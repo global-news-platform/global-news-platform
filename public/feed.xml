@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 17 Jun 2026 11:02:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 15:39:03 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -171,6 +171,17 @@
     <source url="https://www.aljazeera.com/sports/2026/6/14/world-cup-2026-biggest-takeaways-from-brazil-morocco-group-match?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>World Cup 2026: Africa&apos;s new era takes shape</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-2026-africa-s-new-era-takes-shape--948tpi</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-africa-s-new-era-takes-shape--948tpi</guid>
+    <description>From Cape Verde&apos;s debut to DR Congo&apos;s return, Africa&apos;s expanded presence at the 2026 World Cup brings new stories and renewed expectations of success.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 17 Jun 2026 13:42:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-africa-s-new-era-takes-shape--948tpi.jpg" type="image/jpeg" />
+    <source url="https://www.dw.com/en/world-cup-2026-africa-s-new-era-takes-shape/a-77578984?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
     <title>Workers remove Trump’s name from Kennedy Center after court ruling</title>
     <link>https://thegloballens365.vercel.app/article/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3</guid>
@@ -301,6 +312,17 @@
     <pubDate>Wed, 17 Jun 2026 09:53:28 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-uk-s-makerfield-by-election-matters-far-beyond-one-parliamentary-seat--7ph8aa.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/17/why-uks-makerfield-by-election-matters-far-beyond-one-parliamentary-seat?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Why the ‘Widow’s Bay’ Finale Is Not Emmy Eligible — But Its Breakout Performance Is on the Ballot</title>
+    <link>https://thegloballens365.vercel.app/article/why-the-widow-s-bay-finale-is-not-emmy-eligible-but-its-breakout-performance-is---e9jmzt</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-the-widow-s-bay-finale-is-not-emmy-eligible-but-its-breakout-performance-is---e9jmzt</guid>
+    <description>Apple&apos;s new series was such a late-breaking hit this spring that several of its episodes aired too late for the Emmy deadline.</description>
+    <category>shobiz</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 17 Jun 2026 12:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-widow-s-bay-finale-is-not-emmy-eligible-but-its-breakout-performance-is---e9jmzt.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/widows-bay-finale-emmys-k-callan-eligibility-1236623699/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Why the US economy keeps defying the odds</title>
@@ -543,28 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 11:28:39 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/what-s-happening-to-uk-petrol-and-diesel-prices-now-the-us-and-iran-have-a-deal--px2615.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c20zgjzz0e4o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>What&apos;s happened to UK defence spending?</title>
-    <link>https://thegloballens365.vercel.app/article/what-s-happened-to-uk-defence-spending--03kr4l</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-s-happened-to-uk-defence-spending--03kr4l</guid>
-    <description>BBC Verify looks at the size of the UK military after Lord Robertson criticises the government over defence spending.</description>
-    <category>siasat</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 11 Jun 2026 15:21:12 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-s-happened-to-uk-defence-spending--03kr4l.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c6244zqnk16o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>What Israeli leaders are saying about US-Iran ‘peace deal’</title>
-    <link>https://thegloballens365.vercel.app/article/what-israeli-leaders-are-saying-about-us-iran-peace-deal--5vajgc</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/what-israeli-leaders-are-saying-about-us-iran-peace-deal--5vajgc</guid>
-    <description>Israel’s political leaders, including Itamar Ben-Gvir and Bezalel Smotrich, have reacted to the US-Iran agreement.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Mon, 15 Jun 2026 20:20:41 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/what-israeli-leaders-are-saying-about-us-iran-peace-deal--5vajgc.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/15/what-israeli-leaders-are-saying-about-us-iran-peace?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
