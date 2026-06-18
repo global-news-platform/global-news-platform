@@ -54,10 +54,10 @@ export function SectionTitle({
         {href && (
           <Link
             href={href}
-            className="group inline-flex items-center gap-1.5 text-xs font-semibold text-accent/80 transition-all duration-300 hover:text-accent"
+            className="group inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-3 py-1.5 text-xs font-semibold text-accent transition-all duration-300 hover:bg-accent/20 hover:shadow-sm"
           >
             <span>View All</span>
-            <ArrowRight className="h-3.5 w-3.5 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+            <ArrowRight className="h-3.5 w-3.5 transition-all duration-300 group-hover:translate-x-1" />
           </Link>
         )}
       </div>

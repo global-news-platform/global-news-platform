@@ -153,7 +153,15 @@ export default async function HomePage() {
         }}
       />
 
-      <BreakingNewsBanner articles={filterQualityArticles(allArticles).slice(0, 40)} />
+      <div className="mb-2">
+        <BreakingNewsBanner articles={
+          filterQualityArticles(
+            breaking.length >= 5
+              ? breaking
+              : [...breaking, ...allArticles.filter((a) => a.trending && !a.breaking)]
+          ).slice(0, 12)
+        } />
+      </div>
 
       <HeroSection featured={featuredHero} secondary={allSecondary} />
 

@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import Link from "next/link"
-import { formatDateRelative } from "@/lib/utils"
+import { cn, formatDateRelative } from "@/lib/utils"
 import { categories, DISCLAIMER_TEXT } from "@/lib/constants"
 import { MixedText } from "@/components/ui/mixed-text"
 import { getFallbackCssGradient } from "@/lib/images/fallbackImages"
@@ -25,6 +25,16 @@ function PublisherLogo({ src, name }: { src?: string; name: string }) {
   )
 }
 
+function GradientPlaceholder({ gradientStyle, animate = false }: { gradientStyle: string; animate?: boolean }) {
+  return (
+    <div className="absolute inset-0 w-full h-full flex items-center justify-center" style={{ background: gradientStyle }}>
+      <svg className={cn("w-5 h-5 text-white/40", animate && "animate-pulse")} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+      </svg>
+    </div>
+  )
+}
+
 function ArticleImage({
   src,
   alt,
@@ -40,46 +50,31 @@ function ArticleImage({
     src && typeof src === "string" &&
     (src.startsWith("/images/articles/") || src.startsWith("http"))
   )
-  const hasFallbackImage = !!(
-    src && typeof src === "string" &&
-    src.startsWith("/images/") && !src.startsWith("/images/articles/")
-  )
-  const [showGradient, setShowGradient] = useState(!hasRealImage && !hasFallbackImage)
-  const [hasError, setHasError] = useState(false)
+  const [showGradient, setShowGradient] = useState(!hasRealImage)
+  const [imageLoaded, setImageLoaded] = useState(false)
   const gradientStyle = getFallbackCssGradient(categorySlug)
+  const handleLoad = useCallback(() => { setImageLoaded(true); setShowGradient(false) }, [])
+  const handleError = useCallback(() => { setShowGradient(true) }, [])
 
-  if (showGradient || hasError) {
-    return (
-      <div className="absolute inset-0 w-full h-full flex items-center justify-center" style={{ background: gradientStyle }}>
-        <svg className="w-5 h-5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
-        </svg>
-      </div>
-    )
-  }
-
-  if (!src) {
-    return (
-      <div className="absolute inset-0 w-full h-full flex items-center justify-center" style={{ background: gradientStyle }}>
-        <svg className="w-5 h-5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
-        </svg>
-      </div>
-    )
+  if (!src || showGradient) {
+    return <GradientPlaceholder gradientStyle={gradientStyle} />
   }
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ transform: "scale(1.12)", transformOrigin: "center" }}>
+      {!imageLoaded && <GradientPlaceholder gradientStyle={gradientStyle} animate />}
       <img
         src={src}
         alt={alt}
         suppressHydrationWarning
         loading={priority ? "eager" : "lazy"}
-        onError={() => {
-          setShowGradient(true)
-          setHasError(true)
-        }}
-        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+        onLoad={handleLoad}
+        onError={handleError}
+        className={cn(
+          "absolute inset-0 w-full h-full object-cover object-center transition-all duration-700 ease-out",
+          imageLoaded ? "opacity-100" : "opacity-0",
+          "group-hover:scale-105"
+        )}
         style={{ objectPosition: "52% 48%" }}
       />
     </div>
@@ -101,205 +96,154 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
     }
   }
 
+  const href = `/article/${article.slug}`
+  const categoryHref = `/category/${article.categorySlug}`
+
   if (variant === "hero") {
     return (
-      <Link href={`/article/${article.slug}`} className="group relative block w-full overflow-hidden bg-black">
-        <div className="relative w-full h-[240px] sm:h-[400px] md:h-[520px] lg:h-[600px]">
+      <article className="group relative">
+        <Link href={href} className="block relative w-full h-[280px] sm:h-[340px] md:h-[420px] lg:h-[480px] overflow-hidden rounded-sm bg-muted/50">
           <ArticleImage
             src={article.image}
-            alt={article.title || ""}
+            alt={article.title}
             categorySlug={article.categorySlug}
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-8 lg:p-12 z-10">
-          <div className="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
-            {article.breaking && (
-              <span className="inline-flex items-center gap-1.5 rounded-lg bg-destructive px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-lg shadow-destructive/40">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/60" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
-                </span>
-                Breaking
-              </span>
-            )}
-            <span className="rounded-lg bg-accent/90 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] text-accent-foreground shadow-lg shadow-accent/30">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6 lg:p-8">
+            <Link
+              href={categoryHref}
+              className="inline-block rounded bg-accent/90 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground shadow-sm transition-colors hover:bg-accent mb-2"
+            >
               {catName}
-            </span>
+            </Link>
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight text-white drop-shadow-sm line-clamp-2 lg:line-clamp-3">
+              {article.title}
+            </h2>
           </div>
-          <h2 className="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.15] line-clamp-3" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)" }}>
-            <MixedText text={article.title} />
-          </h2>
-          {article.excerpt && (
-            <p className="mt-2 sm:mt-3 max-w-2xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-white/80 line-clamp-2 hidden sm:block" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
-              {article.excerpt}
-            </p>
-          )}
-          <div className="mt-3 sm:mt-4 flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] text-white/60">
-            <span suppressHydrationWarning className="flex items-center gap-1">
-              <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              {formatDateRelative(article.publishedAt)}
-            </span>
-            <span className="text-white/20">|</span>
-            <span className="flex items-center gap-1">
-              {article.readingTime} min
-            </span>
-            {article.source && (
-              <>
-                <span className="text-white/20">|</span>
-                <span className="flex items-center gap-1">
-                  <PublisherLogo src={article.source.logo} name={article.source.name} />
-                  {article.source.name}
-                </span>
-              </>
-            )}
-          </div>
-        </div>
-      </Link>
+        </Link>
+      </article>
     )
   }
 
   if (variant === "featured") {
     return (
-      <Link href={`/article/${article.slug}`} className="group block w-full h-full">
-        <div className="card-featured">
-          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-xl">
-            <ArticleImage
-              src={article.image}
-              alt={article.title || ""}
-              categorySlug={article.categorySlug}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <div className="absolute bottom-2 left-2 z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-              <span className="inline-flex items-center gap-1 rounded-lg bg-accent/90 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-accent-foreground shadow-lg shadow-accent/30">{catName}</span>
-            </div>
+      <article className="group relative">
+        <Link href={href} className="block relative w-full h-[200px] sm:h-[220px] md:h-[200px] overflow-hidden rounded-sm bg-muted/50">
+          <ArticleImage
+            src={article.image}
+            alt={article.title}
+            categorySlug={article.categorySlug}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+            <Link
+              href={categoryHref}
+              className="inline-block rounded bg-accent/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground shadow-sm transition-colors hover:bg-accent mb-1.5"
+            >
+              {catName}
+            </Link>
+            <h3 className="text-sm sm:text-base font-bold leading-snug text-white line-clamp-2">
+              {article.title}
+            </h3>
           </div>
-          <div className="p-3 sm:p-4">
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
-              <span className="inline-flex items-center rounded-lg bg-accent/10 px-2 py-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.06em] text-accent">{catName}</span>
-              <span className="text-[10px] sm:text-[11px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
-              {article.source && (
-                <>
-                  <span className="text-[10px] text-muted-foreground">•</span>
-                  <span className="text-[10px] text-muted-foreground flex items-center gap-1">
-                    <PublisherLogo src={article.source.logo} name={article.source.name} />
-                    {article.source.name}
-                  </span>
-                </>
-              )}
-            </div>
-            <h3 className="font-headline text-sm sm:text-base lg:text-lg font-bold leading-[1.35] line-clamp-2 group-hover:text-accent transition-colors duration-200 tracking-tight"><MixedText text={article.title} /></h3>
-            {article.excerpt && (
-              <p className="mt-1 sm:mt-1.5 text-[12px] leading-[1.6] text-muted-foreground line-clamp-2">{article.excerpt}</p>
-            )}
-          </div>
-        </div>
-      </Link>
+        </Link>
+      </article>
     )
   }
 
   if (variant === "horizontal") {
     return (
-      <Link href={`/article/${article.slug}`} className="group flex gap-2.5 sm:gap-3 py-3 sm:py-3.5 border-b border-border/10 last:border-0 transition-all duration-300 ease-out-expo hover:bg-gradient-to-r hover:from-accent/[0.03] hover:to-transparent -mx-3 px-3 rounded-lg card-horizontal">
-        <div className="w-[80px] sm:w-[88px] md:w-[100px] shrink-0">
-          <div className="thumbnail-accent relative aspect-square w-full overflow-hidden bg-muted rounded-lg shadow-sm border border-border/10">
-            <ArticleImage
-              src={article.image}
-              alt={article.title || ""}
-              categorySlug={article.categorySlug}
-            />
-          </div>
+      <article className="group flex gap-3 sm:gap-4 rounded-sm bg-card/50 backdrop-blur-[2px] p-2 sm:p-3 transition-all duration-200 hover:bg-card/80 hover:shadow-sm">
+        <Link href={href} className="shrink-0 relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 overflow-hidden rounded-sm bg-muted/50">
+          <ArticleImage
+            src={article.image}
+            alt={article.title}
+            categorySlug={article.categorySlug}
+          />
+        </Link>
+        <div className="flex flex-col justify-center min-w-0 flex-1">
+          <Link
+            href={categoryHref}
+            className="inline-block w-fit rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent transition-colors hover:bg-accent/25 mb-1"
+          >
+            {catName}
+          </Link>
+          <h3 className="text-sm font-semibold leading-snug text-card-foreground line-clamp-2 group-hover:text-accent transition-colors duration-200">
+            <Link href={href}>{article.title}</Link>
+          </h3>
         </div>
-        <div className="flex flex-1 flex-col gap-1 pe-1 overflow-visible" style={{ minWidth: 0 }}>
-          <h4 className="font-headline text-[12px] sm:text-[13px] md:text-[14px] font-bold leading-[1.35] text-foreground group-hover:text-accent transition-colors duration-200 line-clamp-2 tracking-tight">
-            <MixedText text={article.title} />
-          </h4>
-          {article.excerpt && (
-            <p className="text-[11px] leading-[1.8] text-muted-foreground line-clamp-2">
-              {article.excerpt}
-            </p>
-          )}
-          <span className="text-[10px] text-muted-foreground" suppressHydrationWarning>
-            {formatDateRelative(article.publishedAt)}
-          </span>
-        </div>
-      </Link>
+      </article>
     )
   }
 
   if (variant === "text-list") {
     return (
-      <div className="border-b border-border/10 pb-3 pt-2 last:border-0 transition-all duration-300 hover:border-accent/20">
-        <Link href={`/article/${article.slug}`} className="headline-link group">
-          <span className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-accent/60 group-hover:bg-accent transition-all duration-300 group-hover:shadow-glow" />
-          <div className="min-w-0 flex-1 flex flex-col gap-0.5">
-            <h4 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.9] text-foreground line-clamp-2 group-hover:text-accent transition-colors tracking-tight">
-              <MixedText text={article.title} />
-            </h4>
-            <span className="block text-[10px] text-muted-foreground" suppressHydrationWarning>
-              {formatDateRelative(article.publishedAt)}
-            </span>
-          </div>
+      <article className="group flex flex-col gap-1 rounded-sm p-2 transition-all duration-200 hover:bg-card/50">
+        <Link
+          href={categoryHref}
+          className="inline-block w-fit rounded bg-accent/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent"
+        >
+          {catName}
         </Link>
-      </div>
+        <h3 className="text-sm leading-snug text-card-foreground line-clamp-2 group-hover:text-accent transition-colors duration-200">
+          <Link href={href}>{article.title}</Link>
+        </h3>
+      </article>
     )
   }
 
-  const isDefault = variant === "default"
-
-  if (isDefault) {
+  if (variant === "compact") {
     return (
-      <Link href={`/article/${article.slug}`} className="group block card-article w-full h-full">
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
+      <article className="group flex flex-col rounded-sm bg-card/50 backdrop-blur-[2px] transition-all duration-200 hover:bg-card/80 hover:shadow-sm overflow-hidden">
+        <Link href={href} className="relative w-full aspect-[16/10] overflow-hidden bg-muted/50">
           <ArticleImage
             src={article.image}
-            alt={article.title || ""}
+            alt={article.title}
             categorySlug={article.categorySlug}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-        </div>
-        <div className="p-2.5 sm:p-3 flex flex-1 flex-col">
-          <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 mb-1.5">
-            <span className="inline-flex items-center rounded-md bg-accent/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-accent">{catName}</span>
-            <span className="text-[9px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
+        </Link>
+        <div className="flex flex-col gap-1.5 p-2.5 sm:p-3">
+          <div className="flex items-center gap-2">
+            <Link
+              href={categoryHref}
+              className="inline-block rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent transition-colors hover:bg-accent/25"
+            >
+              {catName}
+            </Link>
+            <span className="text-[11px] text-muted-foreground/60">{formatDateRelative(article.publishedAt)}</span>
           </div>
-          <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.35] line-clamp-2 group-hover:text-accent transition-colors duration-200 tracking-tight"><MixedText text={article.title} /></h3>
-          {article.excerpt && (
-            <p className="mt-1 text-[11px] leading-[1.55] text-muted-foreground line-clamp-2">
-              {article.excerpt}
-            </p>
-          )}
+          <h3 className="text-sm font-semibold leading-snug text-card-foreground line-clamp-2 group-hover:text-accent transition-colors duration-200">
+            <Link href={href}>{article.title}</Link>
+          </h3>
         </div>
-      </Link>
+      </article>
     )
   }
 
   return (
-    <Link href={`/article/${article.slug}`} className="group block card-article w-full h-full">
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
+    <article className="group flex flex-col rounded-sm bg-card/50 backdrop-blur-[2px] transition-all duration-200 hover:bg-card/80 hover:shadow-sm overflow-hidden">
+      <Link href={href} className="relative w-full aspect-[16/10] overflow-hidden bg-muted/50">
         <ArticleImage
           src={article.image}
-          alt={article.title || ""}
+          alt={article.title}
           categorySlug={article.categorySlug}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-      </div>
-      <div className="p-2.5 sm:p-3 flex flex-1 flex-col">
-        <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 mb-1.5">
-          <span className="inline-flex items-center rounded-md bg-accent/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.06em] text-accent">{catName}</span>
-          <span className="text-[9px] text-muted-foreground" suppressHydrationWarning>{formatDateRelative(article.publishedAt)}</span>
+      </Link>
+      <div className="flex flex-col gap-1.5 p-2.5 sm:p-3">
+        <div className="flex items-center gap-2">
+          <Link
+            href={categoryHref}
+            className="inline-block rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent transition-colors hover:bg-accent/25"
+          >
+            {catName}
+          </Link>
+          <span className="text-[11px] text-muted-foreground/60">{formatDateRelative(article.publishedAt)}</span>
         </div>
-        <h3 className="font-headline text-[12px] sm:text-[13px] font-bold leading-[1.35] line-clamp-2 group-hover:text-accent transition-colors duration-200 tracking-tight"><MixedText text={article.title} /></h3>
-        {article.excerpt && (
-          <p className="mt-1 text-[11px] leading-[1.55] text-muted-foreground line-clamp-2">
-            {article.excerpt}
-          </p>
-        )}
+        <h3 className="text-sm font-semibold leading-snug text-card-foreground line-clamp-2 group-hover:text-accent transition-colors duration-200">
+          <Link href={href}>{article.title}</Link>
+        </h3>
       </div>
-    </Link>
+    </article>
   )
 }

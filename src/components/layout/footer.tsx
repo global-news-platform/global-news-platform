@@ -2,9 +2,10 @@ import Link from "next/link"
 import { Mail, Copyright, ArrowUpRight } from "lucide-react"
 import { SocialIcons } from "@/components/layout/social-icons"
 import { SiteLogo } from "@/components/common/site-logo"
-import { siteConfig, categories, legalLinks } from "@/lib/constants"
+import { siteConfig, categories, navigation, legalLinks } from "@/lib/constants"
 
-const footerCategories = categories.slice(0, 12)
+const navSlugs = new Set(navigation.map((n) => n.href.replace("/category/", "")))
+const footerCategories = categories.filter((c) => navSlugs.has(c.slug))
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -103,7 +104,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href={`mailto:contact@thegloballens365.vercel.app`}
+                  href={`mailto:contact@thegloballens365.com`}
                   className="group inline-flex items-center gap-1.5 text-sm text-background/70 transition-all duration-200 hover:text-background"
                 >
                   <Mail className="h-3.5 w-3.5 shrink-0" />

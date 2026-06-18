@@ -40,10 +40,11 @@ export function SocialIcons({ variant = "footer" }: SocialIconsProps) {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded p-1 text-background/60 transition-colors hover:text-background/90"
+            className="inline-flex items-center gap-1 rounded p-1 text-white/60 transition-colors hover:text-white"
             aria-label={label}
           >
             <Icon className="h-3 w-3" />
+            <span className="hidden lg:inline text-[10px] font-medium">{label}</span>
           </a>
         ))}
       </>
