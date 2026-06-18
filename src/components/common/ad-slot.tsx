@@ -19,7 +19,7 @@ export function AdSlot({ variant = "rectangle", className, label }: AdSlotProps)
   return (
     <div
       className={cn(
-        "relative flex items-center justify-center rounded-xl border-2 border-dashed border-border/60 bg-gradient-to-b from-muted/30 to-muted/50 shadow-sm",
+        "relative flex items-center justify-center rounded-lg border-2 border-dashed border-border/40 bg-muted/40",
         sizeMap[variant],
         className,
       )}

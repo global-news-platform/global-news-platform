@@ -90,8 +90,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
     if (!imgVal || (typeof imgVal === "string" && imgVal.startsWith("/images/fallbacks/"))) {
       console.group(`[ArticleCard] ${article.slug}`)
       console.warn("Image is fallback or missing:", { image: imgVal, categorySlug: article.categorySlug })
-      console.log("Article keys:", Object.keys(article))
-      console.log("Article image key value:", article.image)
+      console.log("Article category:", article.category, "| categorySlug:", article.categorySlug)
       console.groupEnd()
     }
   }
@@ -109,7 +108,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             categorySlug={article.categorySlug}
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 via-40% to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6 lg:p-8">
             <Link
               href={categoryHref}
@@ -135,7 +134,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
             alt={article.title}
             categorySlug={article.categorySlug}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 via-40% to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
             <Link
               href={categoryHref}
@@ -154,7 +153,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
 
   if (variant === "horizontal") {
     return (
-      <article className="group flex gap-3 sm:gap-4 rounded-sm bg-card/50 backdrop-blur-[2px] p-2 sm:p-3 transition-all duration-200 hover:bg-card/80 hover:shadow-sm">
+      <article className="group flex gap-3 sm:gap-4 rounded-sm bg-card/50 backdrop-blur-[2px] p-2 sm:p-3 transition-all duration-200 hover:bg-card/80 hover:shadow-md hover:-translate-y-0.5">
         <Link href={href} className="shrink-0 relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 overflow-hidden rounded-sm bg-muted/50">
           <ArticleImage
             src={article.image}
@@ -179,7 +178,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
 
   if (variant === "text-list") {
     return (
-      <article className="group flex flex-col gap-1 rounded-sm p-2 transition-all duration-200 hover:bg-card/50">
+      <article className="group flex flex-col gap-1 rounded-sm p-2 transition-all duration-200 hover:bg-card/50 hover:-translate-y-0.5">
         <Link
           href={categoryHref}
           className="inline-block w-fit rounded bg-accent/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent"
@@ -195,7 +194,7 @@ export function ArticleCard({ article, variant = "compact" }: ArticleCardProps) 
 
   if (variant === "compact") {
     return (
-      <article className="group flex flex-col rounded-sm bg-card/50 backdrop-blur-[2px] transition-all duration-200 hover:bg-card/80 hover:shadow-sm overflow-hidden">
+      <article className="group flex flex-col rounded-sm bg-card/50 backdrop-blur-[2px] transition-all duration-200 hover:bg-card/80 hover:shadow-md hover:-translate-y-0.5 overflow-hidden">
         <Link href={href} className="relative w-full aspect-[16/10] overflow-hidden bg-muted/50">
           <ArticleImage
             src={article.image}

@@ -180,7 +180,7 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
         trending: Boolean(frontmatter.trending),
         source,
         attribution: sourceName || undefined,
-        isSummary: Boolean(frontmatter.isSummary) || true,
+        isSummary: Boolean(frontmatter.isSummary),
       }
     }
   }

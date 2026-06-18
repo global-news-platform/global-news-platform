@@ -21,33 +21,48 @@ export function CategoryGrid({ categories: sections }: CategoryGridProps) {
       {sections.map((section, idx) => {
         if (section.articles.length === 0) return null
         const listArticles = section.articles.slice(1, 7)
+        const count = section.articles.length
 
         return (
           <section key={section.slug} className={cn("w-full py-5 sm:py-6 md:py-8", idx % 2 === 1 && "section-alt")}>
             <div className="mx-auto w-full max-w-7xl px-3 sm:px-4 lg:px-5">
               <SectionTitle label={section.name} href={`/category/${section.slug}`} />
 
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-                <div className="w-full animate-fade-up [animation-delay:100ms] animate-fill-forwards">
+              {count === 1 ? (
+                <div className="w-full max-w-3xl animate-fade-up [animation-delay:100ms] animate-fill-forwards">
                   <ArticleCard article={section.articles[0]} variant="featured" />
                 </div>
-                <div className="w-full bg-card border border-border/10 rounded-lg p-3 sm:p-4 shadow-sm flex flex-col justify-between animate-fade-up [animation-delay:200ms] animate-fill-forwards">
-                  <div className="flex flex-col">
-                    {listArticles.map((article) => (
-                      <ArticleCard key={article.slug} article={article} variant="text-list" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {section.articles.length > 7 && (
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-3 sm:mt-4">
-                  {section.articles.slice(7, 11).map((article, i) => (
-                    <div key={article.slug} className="animate-fade-up" style={{ animationDelay: `${300 + i * 100}ms` }}>
-                      <ArticleCard article={article} variant="default" />
-                    </div>
+              ) : count >= 2 && count <= 3 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-fade-up [animation-delay:100ms] animate-fill-forwards">
+                  {section.articles.slice(0, 4).map((article) => (
+                    <ArticleCard key={article.slug} article={article} variant="default" />
                   ))}
                 </div>
+              ) : (
+                <>
+                  <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+                    <div className="w-full animate-fade-up [animation-delay:100ms] animate-fill-forwards">
+                      <ArticleCard article={section.articles[0]} variant="featured" />
+                    </div>
+                    <div className="w-full bg-card border border-border/10 rounded-lg p-3 sm:p-4 shadow-sm flex flex-col justify-between animate-fade-up [animation-delay:200ms] animate-fill-forwards">
+                      <div className="flex flex-col">
+                        {listArticles.map((article) => (
+                          <ArticleCard key={article.slug} article={article} variant="text-list" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {count > 7 && (
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-3 sm:mt-4">
+                      {section.articles.slice(7, 11).map((article, i) => (
+                        <div key={article.slug} className="animate-fade-up" style={{ animationDelay: `${300 + i * 100}ms` }}>
+                          <ArticleCard article={article} variant="default" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </section>

@@ -40,33 +40,13 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Categories */}
+          {/* Categories - multi-column */}
           <div>
             <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-accent/70">
               Categories
             </h4>
-            <ul className="space-y-2">
-              {footerCategories.slice(0, 6).map((cat) => (
-                <li key={cat.slug}>
-                  <Link
-                    href={`/category/${cat.slug}`}
-                    className="group inline-flex items-center gap-1 text-sm text-background/70 transition-all duration-200 hover:text-background"
-                  >
-                    <span>{cat.name}</span>
-                    <ArrowUpRight className="h-2.5 w-2.5 opacity-0 -translate-y-1 group-hover:opacity-70 group-hover:translate-y-0 transition-all duration-200" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* More sections */}
-          <div>
-            <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-accent/70">
-              More
-            </h4>
-            <ul className="space-y-2">
-              {footerCategories.slice(6, 12).map((cat) => (
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+              {footerCategories.map((cat) => (
                 <li key={cat.slug}>
                   <Link
                     href={`/category/${cat.slug}`}

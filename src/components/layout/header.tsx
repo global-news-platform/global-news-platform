@@ -99,20 +99,6 @@ export function Header() {
             </div>
             <div className="flex items-center gap-4">
               <SocialIcons variant="header" />
-              <span className="h-3 w-px bg-primary-foreground/20" />
-              <div className="flex items-center gap-4 ml-6">
-                <button
-                  onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-                  className="rounded p-1 text-primary-foreground/70 transition-colors hover:text-primary-foreground"
-                  aria-label="Toggle theme"
-                >
-                  {resolvedTheme === "dark" ? (
-                    <Sun className="h-3 w-3" />
-                  ) : (
-                    <Moon className="h-3 w-3" />
-                  )}
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -195,6 +181,18 @@ export function Header() {
                   Opinion
                 </Link>
                 <span className="h-4 w-px bg-white/20" />
+                <button
+                  onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                  className="rounded-md p-1.5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                  aria-label="Toggle theme"
+                >
+                  {resolvedTheme === "dark" ? (
+                    <Sun className="h-4 w-4" />
+                  ) : (
+                    <Moon className="h-4 w-4" />
+                  )}
+                </button>
+                <span className="h-4 w-px bg-white/20" />
                 <div className="flex items-center gap-0">
                   {inlineSearchOpen ? (
                     <form onSubmit={handleSearch} className="flex items-center">
@@ -212,7 +210,7 @@ export function Header() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onBlur={() => { if (!searchQuery) setTimeout(() => setInlineSearchOpen(false), 200) }}
-                        className="w-40 lg:w-52 bg-white/15 text-white placeholder:text-white/40 rounded-r-md px-3 py-1.5 text-[12px] outline-none border border-white/10 focus:border-accent/50 transition-colors"
+                        className="w-32 lg:w-44 bg-white/15 text-white placeholder:text-white/40 rounded-r-md px-3 py-1.5 text-[12px] outline-none border border-white/10 focus:border-accent/50 transition-colors"
                         autoFocus
                       />
                       <button
@@ -227,10 +225,11 @@ export function Header() {
                   ) : (
                     <button
                       onClick={() => setInlineSearchOpen(true)}
-                      className="rounded-md p-1.5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                      className="inline-flex items-center gap-1.5 rounded-md p-1.5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
                       aria-label="Search"
                     >
                       <Search className="h-4 w-4" />
+                      <span className="hidden lg:inline text-[12px] font-medium">Search</span>
                     </button>
                   )}
                 </div>
