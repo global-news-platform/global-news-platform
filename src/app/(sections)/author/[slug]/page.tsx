@@ -15,15 +15,7 @@ import {
   generatePersonSchema,
 } from "@/lib/seo"
 
-export const dynamic = "force-static"
-export const revalidate = 3600
 
-export async function generateStaticParams() {
-  const allArticles = (await getAllArticles()).slice(0, 250)
-  const articleAuthorSlugs = allArticles.map((a) => a.authorSlug).filter(Boolean)
-  const authorSlugs = authors.map((a) => a.slug)
-  return [...new Set([...authorSlugs, ...articleAuthorSlugs])].map((slug) => ({ slug }))
-}
 
 export async function generateMetadata({
   params,

@@ -29,13 +29,7 @@ import {
 } from "@/lib/seo"
 import { siteConfig, DISCLAIMER_TEXT } from "@/lib/constants"
 
-export const dynamic = "force-static"
-export const revalidate = 3600
 
-export async function generateStaticParams() {
-  const slugs = getArticleSlugs().slice(0, 250)
-  return slugs.length > 0 ? slugs.map((slug) => ({ slug })) : [{ slug: "_placeholder" }]
-}
 
 export async function generateMetadata({
   params,
