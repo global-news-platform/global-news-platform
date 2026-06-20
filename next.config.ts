@@ -1,10 +1,7 @@
 import type { NextConfig } from "next"
 import createMDX from "@next/mdx"
 
-const isVercelExport = process.env.VERCEL === "1"
-
 const nextConfig: NextConfig = {
-  output: isVercelExport ? "export" : undefined,
   images: {
     unoptimized: true,
     formats: ["image/webp", "image/avif"],
