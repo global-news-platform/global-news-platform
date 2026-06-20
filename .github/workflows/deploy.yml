@@ -32,11 +32,8 @@ jobs:
           git checkout origin/ui-patches -- \
             src/components/ \
             src/lib/ \
-            src/app/page.tsx \
-            src/app/\(sections\)/article/\[slug\]/page.tsx \
-            src/app/\(sections\)/category/\[slug\]/page.tsx \
-            src/app/\(sections\)/author/\[slug\]/page.tsx \
-            src/app/\(sections\)/search/page.tsx
+            src/app/ \
+            next.config.ts
 
       - name: Build
         run: npm run build
