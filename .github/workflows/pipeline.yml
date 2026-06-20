@@ -70,6 +70,15 @@ jobs:
           node scripts/lib/sitemap.js
           node scripts/lib/feed.js
 
+      - name: Apply UI patches
+        run: |
+          git fetch origin ui-patches --depth=1
+          git checkout origin/ui-patches -- \
+            src/components/ \
+            src/lib/ \
+            src/app/ \
+            next.config.ts
+
       - name: Build
         run: npm run build
 
