@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -23,6 +25,18 @@ jobs:
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
+      - name: Apply UI patches
+        run: |
+          git fetch origin ui-patches --depth=1
+          git checkout origin/ui-patches -- \
+            src/components/ \
+            src/lib/ \
+            src/app/page.tsx \
+            src/app/\(sections\)/article/\[slug\]/page.tsx \
+            src/app/\(sections\)/category/\[slug\]/page.tsx \
+            src/app/\(sections\)/author/\[slug\]/page.tsx \
+            src/app/\(sections\)/search/page.tsx
 
       - name: Build
         run: npm run build
