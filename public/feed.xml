@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 21 Jun 2026 15:56:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 17:42:59 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -424,6 +424,17 @@
     <source url="https://www.dw.com/en/will-life-improve-for-hungary-s-roma-community-under-magyar/a-77509082?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   <item>
+    <title>Wightman wins 800m title</title>
+    <link>https://thegloballens365.vercel.app/article/wightman-wins-800m-title--03u9tk</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wightman-wins-800m-title--03u9tk</guid>
+    <description>Jake Wightman wins the men&apos;s 800m title at the UK Athletics Championships in a time of 1:45.40 at the Alexander Stadium in Birmingham.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 21 Jun 2026 16:00:24 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/wightman-wins-800m-title--03u9tk.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/athletics/videos/cp8rzn3k9x5o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Why you might not be buying the right pain relief for period cramps</title>
     <link>https://thegloballens365.vercel.app/article/why-you-might-not-be-buying-the-right-pain-relief-for-period-cramps--tpltzj</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-you-might-not-be-buying-the-right-pain-relief-for-period-cramps--tpltzj</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 20 Jun 2026 13:24:12 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-kane-is-different-at-this-world-cup-shearer--g6dduv.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/crr87vwrwwlo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Why Israel could still derail the Iran-US deal</title>
-    <link>https://thegloballens365.vercel.app/article/why-israel-could-still-derail-the-iran-us-deal--n6plia</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-israel-could-still-derail-the-iran-us-deal--n6plia</guid>
-    <description>Trump called it a historic deal. But with nuclear talks and Israel all unresolved, what did either side actually win?</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 17 Jun 2026 15:23:08 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-israel-could-still-derail-the-iran-us-deal--n6plia.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/the-take-2/2026/6/17/why-israel-could-still-derail-the-iran-us-deal?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
