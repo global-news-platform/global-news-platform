@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 20 Jun 2026 23:13:31 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 04:26:41 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -468,6 +468,17 @@
     <source url="https://www.bbc.com/news/articles/cwy031el03po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Why the social media ban is about so much more than social media</title>
+    <link>https://thegloballens365.vercel.app/article/why-the-social-media-ban-is-about-so-much-more-than-social-media--qot9me</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-the-social-media-ban-is-about-so-much-more-than-social-media--qot9me</guid>
+    <description>If we are witnessing a profound shift in the online space, how will it reshape our relationship with it? Technology and AI editor Zoe Kleinman writes.</description>
+    <category>technology</category>
+    <author>Sara Khan</author>
+    <pubDate>Sat, 20 Jun 2026 23:18:12 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-social-media-ban-is-about-so-much-more-than-social-media--qot9me.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c1jy512r19ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Why the economics make this the craziest World Cup ever</title>
     <link>https://thegloballens365.vercel.app/article/why-the-economics-make-this-the-craziest-world-cup-ever--dgmcyj</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-the-economics-make-this-the-craziest-world-cup-ever--dgmcyj</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 16 Jun 2026 11:02:13 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-is-thames-water-in-so-much-trouble--w2jcg4.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cgleg70r7rno?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Why I sold my business to my staff</title>
-    <link>https://thegloballens365.vercel.app/article/why-i-sold-my-business-to-my-staff--wwepty</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-i-sold-my-business-to-my-staff--wwepty</guid>
-    <description>As more US company owners reach retirement age many are selling up to their employees.</description>
-    <category>karobar</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sun, 14 Jun 2026 23:26:01 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-i-sold-my-business-to-my-staff--wwepty.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c0ey87z1ggjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
