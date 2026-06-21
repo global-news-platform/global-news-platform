@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 21 Jun 2026 17:42:59 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 19:47:47 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -114,6 +114,17 @@
     <pubDate>Mon, 15 Jun 2026 17:26:20 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs8-5--9m4anr.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2008087/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs85bn-payment">Dawn</source>
+  </item>
+  <item>
+    <title>Yamal is Spain&apos;s main man - Rooney analysis</title>
+    <link>https://thegloballens365.vercel.app/article/yamal-is-spain-s-main-man-rooney-analysis--wy900r</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yamal-is-spain-s-main-man-rooney-analysis--wy900r</guid>
+    <description>Watch BBC pundits Wayne Rooney, Cesar Azpilicueta, and Thomas Frank give their analysis on Lamine Yamal&apos;s performance for Spain against Saudi Arabia in the...</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 21 Jun 2026 19:24:06 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-is-spain-s-main-man-rooney-analysis--wy900r.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/football/videos/clye4lmd3zzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>World Refugee Day</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 16 Jun 2026 05:27:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-kante-is-still-crucial-for-france-giroud--7idhcr.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/c3vypg424glo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Why Kane is different at this World Cup - Shearer</title>
-    <link>https://thegloballens365.vercel.app/article/why-kane-is-different-at-this-world-cup-shearer--g6dduv</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-kane-is-different-at-this-world-cup-shearer--g6dduv</guid>
-    <description>Former England captain Alan Shearer explains what has changed for Harry Kane since his struggles at the 2022 World Cup in Qatar.</description>
-    <category>khel</category>
-    <author>Sara Khan</author>
-    <pubDate>Sat, 20 Jun 2026 13:24:12 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-kane-is-different-at-this-world-cup-shearer--g6dduv.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/crr87vwrwwlo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
