@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 21 Jun 2026 04:26:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 09:56:07 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -127,6 +127,17 @@
     <source url="https://www.dawn.com/news/2009411/world-refugee-day">Dawn</source>
   </item>
   <item>
+    <title>World Lens: How the Shanghai Film Festival Puts Its Faith in a New Generation</title>
+    <link>https://thegloballens365.vercel.app/article/world-lens-how-the-shanghai-film-festival-puts-its-faith-in-a-new-generation--thx2do</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-lens-how-the-shanghai-film-festival-puts-its-faith-in-a-new-generation--thx2do</guid>
+    <description>Major awards go to first-time filmmakers, reflecting a commitment to finding Asia&apos;s rising stars, while industry initiatives continue to help young directors...</description>
+    <category>shobiz</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 21 Jun 2026 02:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-lens-how-the-shanghai-film-festival-puts-its-faith-in-a-new-generation--thx2do.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/movies/movie-news/world-lens-how-shanghai-film-festival-faith-new-generation-1236626498/">The Hollywood Reporter</source>
+  </item>
+  <item>
     <title>World cup wrap day 9</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-wrap-day-9--h0tjo1</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-wrap-day-9--h0tjo1</guid>
@@ -235,6 +246,17 @@
     <pubDate>Tue, 16 Jun 2026 16:35:02 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-day-five--5xtxmc.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/16/world-cup-2026-day-five?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>World Cup 2026 Day 11: Spain and Iran in action, predictions and schedule</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-2026-day-11-spain-and-iran-in-action-predictions-and-schedule--zicya2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-day-11-spain-and-iran-in-action-predictions-and-schedule--zicya2</guid>
+    <description>Spain-Saudi Arabia, Belgium-Iran on Sunday. Germany reach knockouts, Curacao earn the first point of the World Cup 2026.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Sun, 21 Jun 2026 09:12:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-day-11-spain-and-iran-in-action-predictions-and-schedule--zicya2.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/21/fifa-world-cup-2026-spain-iran-predictions-schedule-germany-curacao?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>World Cup 2026: Biggest takeaways from Brazil-Morocco group match</title>
@@ -543,28 +565,6 @@
     <pubDate>Wed, 17 Jun 2026 15:23:08 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-israel-could-still-derail-the-iran-us-deal--n6plia.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/the-take-2/2026/6/17/why-israel-could-still-derail-the-iran-us-deal?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Why is the price of gold trending down?</title>
-    <link>https://thegloballens365.vercel.app/article/why-is-the-price-of-gold-trending-down--hwop1j</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-is-the-price-of-gold-trending-down--hwop1j</guid>
-    <description>Gold has been under pressure since the US and Israel launched a war against Iran in late February.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 14 Jun 2026 00:56:36 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-is-the-price-of-gold-trending-down--hwop1j.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/economy/2026/6/14/why-is-the-price-of-gold-trending-down?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Why is Thames Water in so much trouble?</title>
-    <link>https://thegloballens365.vercel.app/article/why-is-thames-water-in-so-much-trouble--w2jcg4</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-is-thames-water-in-so-much-trouble--w2jcg4</guid>
-    <description>Thames Water&apos;s lenders have submitted a new rescue plan to save the firm, but how did it end up in this state?</description>
-    <category>karobar</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 16 Jun 2026 11:02:13 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-is-thames-water-in-so-much-trouble--w2jcg4.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cgleg70r7rno?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
