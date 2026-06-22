@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 22 Jun 2026 04:30:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 12:12:34 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -125,6 +125,17 @@
     <pubDate>Sun, 21 Jun 2026 19:24:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-is-spain-s-main-man-rooney-analysis--wy900r.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/videos/clye4lmd3zzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Wowcher sorry for &apos;unacceptable&apos; crocodile attack email</title>
+    <link>https://thegloballens365.vercel.app/article/wowcher-sorry-for-unacceptable-crocodile-attack-email--nhjsyx</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wowcher-sorry-for-unacceptable-crocodile-attack-email--nhjsyx</guid>
+    <description>The firm&apos;s marketing email appeared to reference an incident involving a toddler at a zoo.</description>
+    <category>karobar</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 21 Jun 2026 19:12:32 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/wowcher-sorry-for-unacceptable-crocodile-attack-email--nhjsyx.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/news/articles/c17ynlek5djo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>World Refugee Day</title>
@@ -402,6 +413,17 @@
     <source url="https://www.bbc.com/sport/tennis/articles/clyerm8lym9o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>Williams is the greatest - but will she produce another great fight?</title>
+    <link>https://thegloballens365.vercel.app/article/williams-is-the-greatest-but-will-she-produce-another-great-fight--n850eo</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/williams-is-the-greatest-but-will-she-produce-another-great-fight--n850eo</guid>
+    <description>Serena Williams will return to the singles court at Wimbledon aged 44 - BBC Sport analyses if she is ready and the challenges she will face.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 22 Jun 2026 11:17:11 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/williams-is-the-greatest-but-will-she-produce-another-great-fight--n850eo.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.com/sport/tennis/articles/cze9rrdn91xo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Will the US-Iran deal be signed on Sunday? What we know so far</title>
     <link>https://thegloballens365.vercel.app/article/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far--cky0qd</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far--cky0qd</guid>
@@ -543,28 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 16:34:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-shinnecock-may-not-offer-the-us-open-test-it-has-in-the-past--sp5yfh.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/golf/articles/clyx4g6x76no?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Why Pulisic is ready to take USA to next level  - Giroud</title>
-    <link>https://thegloballens365.vercel.app/article/why-pulisic-is-ready-to-take-usa-to-next-level-giroud--l0hcql</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-pulisic-is-ready-to-take-usa-to-next-level-giroud--l0hcql</guid>
-    <description>France&apos;s World Cup winner Olivier Giroud explains why his friend and former Chelsea and AC Milan team-mate Christian Pulisic holds the key to USA hopes at this...</description>
-    <category>khel</category>
-    <author>Sara Khan</author>
-    <pubDate>Sat, 13 Jun 2026 11:00:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-pulisic-is-ready-to-take-usa-to-next-level-giroud--l0hcql.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/c8r2jn402pro?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Why Kante is still crucial for France  - Giroud</title>
-    <link>https://thegloballens365.vercel.app/article/why-kante-is-still-crucial-for-france-giroud--7idhcr</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-kante-is-still-crucial-for-france-giroud--7idhcr</guid>
-    <description>France&apos;s World Cup winner Olivier Giroud explains why N&apos;Golo Kante is still an important part of Didier Deschamps&apos; squad, eight years after planning to retire...</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 16 Jun 2026 05:27:16 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-kante-is-still-crucial-for-france-giroud--7idhcr.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/c3vypg424glo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
