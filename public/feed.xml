@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 22 Jun 2026 12:12:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 18:15:07 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -457,6 +457,17 @@
     <source url="https://www.dw.com/en/will-life-improve-for-hungary-s-roma-community-under-magyar/a-77509082?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   <item>
+    <title>Will a US-Iran deal transform the Iranian economy?</title>
+    <link>https://thegloballens365.vercel.app/article/will-a-us-iran-deal-transform-the-iranian-economy--akwin0</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-a-us-iran-deal-transform-the-iranian-economy--akwin0</guid>
+    <description>A US-Iran deal could unlock frozen assets, oil exports, and investment, reshaping Iran&apos;s economic future.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 22 Jun 2026 17:06:53 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/will-a-us-iran-deal-transform-the-iranian-economy--akwin0.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/counting-the-cost/2026/6/22/will-a-us-iran-deal-transform-the-iranian-economy?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Wightman wins 800m title</title>
     <link>https://thegloballens365.vercel.app/article/wightman-wins-800m-title--03u9tk</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wightman-wins-800m-title--03u9tk</guid>
@@ -477,6 +488,17 @@
     <pubDate>Sun, 14 Jun 2026 23:10:57 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-you-might-not-be-buying-the-right-pain-relief-for-period-cramps--tpltzj.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c932pex1vpwo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Why Washington’s reflecting pool has gone from ‘US blue’ to algae green</title>
+    <link>https://thegloballens365.vercel.app/article/why-washington-s-reflecting-pool-has-gone-from-us-blue-to-algae-green--haluct</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-washington-s-reflecting-pool-has-gone-from-us-blue-to-algae-green--haluct</guid>
+    <description>Donald Trump, who spent $14m relining the iconic pool, claims it has been vandalised by &apos;radical left lunatics&apos;.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 22 Jun 2026 15:35:16 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-washington-s-reflecting-pool-has-gone-from-us-blue-to-algae-green--haluct.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/22/why-washingtons-reflecting-pool-has-gone-from-us-blue-to-algae-green?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Why was Kane&apos;s penalty retaken against Croatia?</title>
@@ -543,28 +565,6 @@
     <pubDate>Sat, 20 Jun 2026 23:18:12 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-social-media-ban-is-about-so-much-more-than-social-media--qot9me.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c1jy512r19ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Why the economics make this the craziest World Cup ever</title>
-    <link>https://thegloballens365.vercel.app/article/why-the-economics-make-this-the-craziest-world-cup-ever--dgmcyj</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-the-economics-make-this-the-craziest-world-cup-ever--dgmcyj</guid>
-    <description>From trade wars to soaring ticket prices, the 2026 World Cup is unlike any before it.</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 11 Jun 2026 23:07:52 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-economics-make-this-the-craziest-world-cup-ever--dgmcyj.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cpv32417nlwo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Why Shinnecock may not offer the US Open test it has in the past</title>
-    <link>https://thegloballens365.vercel.app/article/why-shinnecock-may-not-offer-the-us-open-test-it-has-in-the-past--sp5yfh</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-shinnecock-may-not-offer-the-us-open-test-it-has-in-the-past--sp5yfh</guid>
-    <description>After the past two US Opens at the New York course descended into controversy, tournament organisers say they have learned lessons, writes Iain Carter.</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Mon, 15 Jun 2026 16:34:49 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-shinnecock-may-not-offer-the-us-open-test-it-has-in-the-past--sp5yfh.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/golf/articles/clyx4g6x76no?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
