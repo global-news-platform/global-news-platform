@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 23 Jun 2026 03:45:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 07:53:28 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -125,6 +125,17 @@
     <pubDate>Sun, 21 Jun 2026 19:24:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-is-spain-s-main-man-rooney-analysis--wy900r.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/videos/clye4lmd3zzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Wyndham Clark edges Burns to win second US Open title</title>
+    <link>https://thegloballens365.vercel.app/article/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz</guid>
+    <description>WYNDHAM Clark of the US celebrates after winning the US Open title at the Shinnecock Hills Golf Club.</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Tue, 23 Jun 2026 04:22:26 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2010200/wyndham-clark-edges-burns-to-win-second-us-open-title">Dawn</source>
   </item>
   <item>
     <title>Wowcher sorry for &apos;unacceptable&apos; crocodile attack email</title>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 14 Jun 2026 05:14:17 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-us-economy-keeps-defying-the-odds--z41kzy.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cwy031el03po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Why the social media ban is about so much more than social media</title>
-    <link>https://thegloballens365.vercel.app/article/why-the-social-media-ban-is-about-so-much-more-than-social-media--qot9me</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-the-social-media-ban-is-about-so-much-more-than-social-media--qot9me</guid>
-    <description>If we are witnessing a profound shift in the online space, how will it reshape our relationship with it? Technology and AI editor Zoe Kleinman writes.</description>
-    <category>technology</category>
-    <author>Sara Khan</author>
-    <pubDate>Sat, 20 Jun 2026 23:18:12 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-social-media-ban-is-about-so-much-more-than-social-media--qot9me.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c1jy512r19ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
