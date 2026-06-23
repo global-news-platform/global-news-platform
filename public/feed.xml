@@ -9,13 +9,24 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 23 Jun 2026 11:21:49 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 14:56:33 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://thegloballens365.vercel.app</link>
     </image>
+  <item>
+    <title>Zombeid marks bold new chapter for Pakistani cinema</title>
+    <link>https://thegloballens365.vercel.app/article/zombeid-marks-bold-new-chapter-for-pakistani-cinema--de8shg</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zombeid-marks-bold-new-chapter-for-pakistani-cinema--de8shg</guid>
+    <description>Nabeel Qureshi’s latest film Zombeid is receiving praise for introducing a fresh genre to Pakistani cinema and showcasing the industry’s growing creative...</description>
+    <category>pakistan</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 23 Jun 2026 13:24:22 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zombeid-marks-bold-new-chapter-for-pakistani-cinema--de8shg.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1512515/zombeid-marks-bold-new-chapter-for-pakistani-cinema/">Daily Times</source>
+  </item>
   <item>
     <title>Zimbabwe’s climate migrants fear eviction as crackdown intensifies</title>
     <link>https://thegloballens365.vercel.app/article/zimbabwe-s-climate-migrants-fear-eviction-as-crackdown-intensifies--09un60</link>
@@ -81,6 +92,17 @@
     <pubDate>Tue, 16 Jun 2026 04:17:04 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1508459/zardari-hopes-preliminary-deal-will-lead-to-durable-peace/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zambia ex-president&apos;s family wins latest legal battle over what should happen to his body</title>
+    <link>https://thegloballens365.vercel.app/article/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt</guid>
+    <description>Edgar Lungu&apos;s family and the Zambian government remain in dispute 12 months after he died.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 23 Jun 2026 12:02:29 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Young women now have &apos;close to zero&apos; risk of cervical cancer death after HPV jab</title>
@@ -468,6 +490,17 @@
     <source url="https://www.dw.com/en/will-life-improve-for-hungary-s-roma-community-under-magyar/a-77509082?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   <item>
+    <title>Will England fans in Boston follow Scotland&apos;s lead?</title>
+    <link>https://thegloballens365.vercel.app/article/will-england-fans-in-boston-follow-scotland-s-lead--8wecsv</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-england-fans-in-boston-follow-scotland-s-lead--8wecsv</guid>
+    <description>After Scotland win the hearts of Boston, can England fans follow in their footsteps?</description>
+    <category>khel</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 23 Jun 2026 13:52:31 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/will-england-fans-in-boston-follow-scotland-s-lead--8wecsv.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/c8x2rev41ydo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Will a US-Iran deal transform the Iranian economy?</title>
     <link>https://thegloballens365.vercel.app/article/will-a-us-iran-deal-transform-the-iranian-economy--akwin0</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-a-us-iran-deal-transform-the-iranian-economy--akwin0</guid>
@@ -532,39 +565,6 @@
     <pubDate>Wed, 17 Jun 2026 20:10:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-was-india-s-cockroach-janta-party-founder-attacked--ued67r.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/why-was-indias-cockroach-janta-party-founder-attacked?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Why UK’s Makerfield by-election matters far beyond one parliamentary seat</title>
-    <link>https://thegloballens365.vercel.app/article/why-uk-s-makerfield-by-election-matters-far-beyond-one-parliamentary-seat--7ph8aa</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-uk-s-makerfield-by-election-matters-far-beyond-one-parliamentary-seat--7ph8aa</guid>
-    <description>Thursday&apos;s contest could pave the way for Manchester Mayor Andy Burnham to challenge Keir Starmer&apos;s premiership.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 17 Jun 2026 09:53:28 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-uk-s-makerfield-by-election-matters-far-beyond-one-parliamentary-seat--7ph8aa.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/17/why-uks-makerfield-by-election-matters-far-beyond-one-parliamentary-seat?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Why the ‘Widow’s Bay’ Finale Is Not Emmy Eligible — But Its Breakout Performance Is on the Ballot</title>
-    <link>https://thegloballens365.vercel.app/article/why-the-widow-s-bay-finale-is-not-emmy-eligible-but-its-breakout-performance-is---e9jmzt</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-the-widow-s-bay-finale-is-not-emmy-eligible-but-its-breakout-performance-is---e9jmzt</guid>
-    <description>Apple&apos;s new series was such a late-breaking hit this spring that several of its episodes aired too late for the Emmy deadline.</description>
-    <category>shobiz</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 17 Jun 2026 12:00:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-widow-s-bay-finale-is-not-emmy-eligible-but-its-breakout-performance-is---e9jmzt.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/tv/tv-news/widows-bay-finale-emmys-k-callan-eligibility-1236623699/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>Why the US economy keeps defying the odds</title>
-    <link>https://thegloballens365.vercel.app/article/why-the-us-economy-keeps-defying-the-odds--z41kzy</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-the-us-economy-keeps-defying-the-odds--z41kzy</guid>
-    <description>Why has the American economy continued to outperform so many of its peers, despite facing the same global shocks?</description>
-    <category>karobar</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 14 Jun 2026 05:14:17 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-the-us-economy-keeps-defying-the-odds--z41kzy.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cwy031el03po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
