@@ -1,51 +1,51 @@
 {
   "date": "2026-06-24",
-  "totalArticles": 2040,
-  "totalSizeKb": 3099,
+  "totalArticles": 2056,
+  "totalSizeKb": 3123,
   "categories": {
-    "dunya": 727,
-    "pakistan": 450,
+    "pakistan": 451,
     "taleem": 11,
-    "khel": 324,
-    "siasat": 270,
-    "science": 19,
-    "karobar": 116,
-    "shobiz": 63,
-    "technology": 43,
+    "dunya": 739,
+    "khel": 327,
+    "siasat": 268,
+    "karobar": 115,
+    "shobiz": 64,
+    "technology": 44,
+    "science": 20,
     "sehat": 17
   },
   "topCategories": [
     {
       "name": "dunya",
-      "count": 727
+      "count": 739
     },
     {
       "name": "pakistan",
-      "count": 450
+      "count": 451
     },
     {
       "name": "khel",
-      "count": 324
+      "count": 327
     },
     {
       "name": "siasat",
-      "count": 270
+      "count": 268
     },
     {
       "name": "karobar",
-      "count": 116
+      "count": 115
     },
     {
       "name": "shobiz",
-      "count": 63
+      "count": 64
     },
     {
       "name": "technology",
-      "count": 43
+      "count": 44
     },
     {
       "name": "science",
-      "count": 19
+      "count": 20
     },
     {
       "name": "sehat",
