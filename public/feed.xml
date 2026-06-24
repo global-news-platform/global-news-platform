@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 03:49:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 07:45:21 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -202,6 +202,17 @@
     <pubDate>Sat, 20 Jun 2026 17:27:59 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-wrap-day-9--h0tjo1.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/20/world-cup-wrap-day-9?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>World Cup sees record goals and the ball’s to blame</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a</guid>
+    <description>It’s been goals galore so far at the World Cup. The tournament has been one of the highest-scoring in history so far and produced nearly 25% more scoring than...</description>
+    <category>pakistan</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 24 Jun 2026 06:12:50 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1512915/world-cup-sees-record-goals-and-the-balls-to-blame/">Daily Times</source>
   </item>
   <item>
     <title>World Cup racism monitor urges FIFA to remove VAR official over gesture</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 17 Jun 2026 21:03:09 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-was-kane-s-penalty-retaken-against-croatia--w1xv42.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/ckg054x8d9qo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Why was India’s Cockroach Janta Party founder attacked?</title>
-    <link>https://thegloballens365.vercel.app/article/why-was-india-s-cockroach-janta-party-founder-attacked--ued67r</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-was-india-s-cockroach-janta-party-founder-attacked--ued67r</guid>
-    <description>Why was India’s Cockroach Janta Party founder attacked?</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 17 Jun 2026 20:10:16 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-was-india-s-cockroach-janta-party-founder-attacked--ued67r.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/why-was-indias-cockroach-janta-party-founder-attacked?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
