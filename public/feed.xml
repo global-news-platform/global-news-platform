@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 19:52:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 21:26:44 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -26,6 +26,17 @@
     <pubDate>Tue, 23 Jun 2026 13:24:22 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zombeid-marks-bold-new-chapter-for-pakistani-cinema--de8shg.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1512515/zombeid-marks-bold-new-chapter-for-pakistani-cinema/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zimbabwe’s Senate approves amendment extending presidential term</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9</guid>
+    <description>Constitutional amendment will keep President Mnangagwa in office until 2030 and allow parliament to elect the president.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 24 Jun 2026 20:43:33 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/24/zimbabwes-senate-approves-amendment-extending-presidential-term?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zimbabwe’s climate migrants fear eviction as crackdown intensifies</title>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 12 Jun 2026 10:24:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/will-life-improve-for-hungary-s-roma-community-under-magyar--azc161.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/will-life-improve-for-hungary-s-roma-community-under-magyar/a-77509082?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Will England fans in Boston follow Scotland&apos;s lead?</title>
-    <link>https://thegloballens365.vercel.app/article/will-england-fans-in-boston-follow-scotland-s-lead--8wecsv</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-england-fans-in-boston-follow-scotland-s-lead--8wecsv</guid>
-    <description>After Scotland win the hearts of Boston, can England fans follow in their footsteps?</description>
-    <category>khel</category>
-    <author>Sara Khan</author>
-    <pubDate>Tue, 23 Jun 2026 13:52:31 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/will-england-fans-in-boston-follow-scotland-s-lead--8wecsv.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/c8x2rev41ydo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
