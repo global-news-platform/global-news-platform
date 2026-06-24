@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 07:45:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 10:54:27 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -303,6 +303,17 @@
     <source url="https://www.aljazeera.com/sports/2026/6/15/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>World Cup 2026: Key takeaways from the second round of group stage matches</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-2026-key-takeaways-from-the-second-round-of-group-stage-matches--hkxmho</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-key-takeaways-from-the-second-round-of-group-stage-matches--hkxmho</guid>
+    <description>Here&apos;s a look at the viral moments, on-field controversies, the biggest players, best performances, goals and more.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 24 Jun 2026 09:23:23 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-key-takeaways-from-the-second-round-of-group-stage-matches--hkxmho.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/6/24/world-cup-2026-key-takeaways-second-round-group-matches-messi-ronaldo-mbappe-haaland-salah?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>World Cup 2026: Day five</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-2026-day-five--5xtxmc</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-day-five--5xtxmc</guid>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 22 Jun 2026 15:35:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/why-washington-s-reflecting-pool-has-gone-from-us-blue-to-algae-green--haluct.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/22/why-washingtons-reflecting-pool-has-gone-from-us-blue-to-algae-green?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Why was Kane&apos;s penalty retaken against Croatia?</title>
-    <link>https://thegloballens365.vercel.app/article/why-was-kane-s-penalty-retaken-against-croatia--w1xv42</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/why-was-kane-s-penalty-retaken-against-croatia--w1xv42</guid>
-    <description>Harry Kane was able to give England the lead against Croatia from the penalty spot - but only thanks to the video assistant referee.</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 17 Jun 2026 21:03:09 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/why-was-kane-s-penalty-retaken-against-croatia--w1xv42.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/ckg054x8d9qo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
