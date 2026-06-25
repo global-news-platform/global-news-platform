@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 25 Jun 2026 14:40:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 18:14:38 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -92,6 +92,17 @@
     <pubDate>Sat, 20 Jun 2026 16:34:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-returns-highest-polish-honour-after-award-stripped--uwu218.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zardari signs finance bill, budget 2026-27 activated</title>
+    <link>https://thegloballens365.vercel.app/article/zardari-signs-finance-bill-budget-2026-27-activated--44z56k</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zardari-signs-finance-bill-budget-2026-27-activated--44z56k</guid>
+    <description>President Asif Ali Zardari has approved the Finance Bill 2026-27, formally clearing the way for Pakistan’s federal budget to take effect from 1 July 2026.</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Thu, 25 Jun 2026 16:50:33 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-signs-finance-bill-budget-2026-27-activated--44z56k.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1513559/zardari-signs-finance-bill-budget-2026-27-activated/">Daily Times</source>
   </item>
   <item>
     <title>Zardari hopes preliminary deal will lead to durable peace</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 22 Jun 2026 11:17:11 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/williams-is-the-greatest-but-will-she-produce-another-great-fight--n850eo.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/tennis/articles/cze9rrdn91xo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Will the US-Iran deal be signed on Sunday? What we know so far</title>
-    <link>https://thegloballens365.vercel.app/article/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far--cky0qd</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far--cky0qd</guid>
-    <description>US says a deal to stop the war on Iran could be signed as early as Sunday. Tehran, however, disputes the timeline.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sun, 14 Jun 2026 09:18:22 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far--cky0qd.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/14/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
