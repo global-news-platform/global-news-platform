@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 25 Jun 2026 07:48:52 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 10:46:58 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -202,6 +202,17 @@
     <pubDate>Sat, 20 Jun 2026 00:07:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-refugee-day--h43sp5.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2009411/world-refugee-day">Dawn</source>
+  </item>
+  <item>
+    <title>World reacts as devastating Venezuela earthquakes kill at least 32</title>
+    <link>https://thegloballens365.vercel.app/article/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32--z0g99v</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32--z0g99v</guid>
+    <description>Global leaders express solidarity with Venezuela as dual earthquakes kill at least 32 and leave widespread devastation.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Thu, 25 Jun 2026 09:06:40 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32--z0g99v.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/6/25/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>World Lens: How the Shanghai Film Festival Puts Its Faith in a New Generation</title>
@@ -468,6 +479,17 @@
     <source url="https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies">The Guardian</source>
   </item>
   <item>
+    <title>Wizards choose teenage Dybantsa with number one pick in NBA draft</title>
+    <link>https://thegloballens365.vercel.app/article/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft--r2pafc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft--r2pafc</guid>
+    <description>Towering teenager Anicet “A.J.” Dybantsa Jr was chosen by the Washington Wizards with the number one pick in the NBA Draft on Tuesday. The 6ft 8in (2.</description>
+    <category>pakistan</category>
+    <author>Babar Shah</author>
+    <pubDate>Thu, 25 Jun 2026 07:57:18 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft--r2pafc.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1513465/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft/">Daily Times</source>
+  </item>
+  <item>
     <title>With fighting spirit, Korea’s beauty triumphs over Czech set-piece beasts</title>
     <link>https://thegloballens365.vercel.app/article/with-fighting-spirit-korea-s-beauty-triumphs-over-czech-set-piece-beasts--vne30z</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/with-fighting-spirit-korea-s-beauty-triumphs-over-czech-set-piece-beasts--vne30z</guid>
@@ -543,28 +565,6 @@
     <pubDate>Sun, 14 Jun 2026 09:18:22 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far--cky0qd.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/14/will-the-us-iran-deal-be-signed-on-sunday-what-we-know-so-far?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Will the new EU migration rules work?</title>
-    <link>https://thegloballens365.vercel.app/article/will-the-new-eu-migration-rules-work--gr2ade</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-the-new-eu-migration-rules-work--gr2ade</guid>
-    <description>The European Union&apos;s new migration policy has come into force.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 20:05:19 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/will-the-new-eu-migration-rules-work--gr2ade.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/inside-story/2026/6/13/will-the-new-eu-migration-rules-work?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Will life improve for Hungary&apos;s Roma community under Magyar?</title>
-    <link>https://thegloballens365.vercel.app/article/will-life-improve-for-hungary-s-roma-community-under-magyar--azc161</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/will-life-improve-for-hungary-s-roma-community-under-magyar--azc161</guid>
-    <description>Under Viktor Orban, the Roma community was kept at the very bottom of the social ladder. His successor is taking a stand against antiziganism.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Fri, 12 Jun 2026 10:24:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/will-life-improve-for-hungary-s-roma-community-under-magyar--azc161.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/will-life-improve-for-hungary-s-roma-community-under-magyar/a-77509082?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   </channel>
 </rss>
