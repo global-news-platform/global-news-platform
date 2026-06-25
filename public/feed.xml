@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 25 Jun 2026 18:14:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 21:47:31 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -138,6 +138,17 @@
     <source url="https://www.bbc.com/news/articles/c621z28z138o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Young people avoiding the news, Reuters report</title>
+    <link>https://thegloballens365.vercel.app/article/young-people-avoiding-the-news-reuters-report--30ugbi</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-people-avoiding-the-news-reuters-report--30ugbi</guid>
+    <description>An alarming number of young people are turning away from the news, according to the Reuters Digital News Report presented at DW&apos;s Global Media Forum.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Thu, 25 Jun 2026 19:16:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-people-avoiding-the-news-reuters-report--30ugbi.jpg" type="image/jpeg" />
+    <source url="https://www.dw.com/en/young-people-avoiding-the-news-reuters-report/a-77713516?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
     <title>Young Palestinian women learn AI to tell stories of war on Gaza</title>
     <link>https://thegloballens365.vercel.app/article/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6</guid>
@@ -169,6 +180,17 @@
     <pubDate>Sun, 21 Jun 2026 19:24:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-is-spain-s-main-man-rooney-analysis--wy900r.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/videos/clye4lmd3zzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Xbox to raise console prices worldwide from August</title>
+    <link>https://thegloballens365.vercel.app/article/xbox-to-raise-console-prices-worldwide-from-august--bjbcce</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/xbox-to-raise-console-prices-worldwide-from-august--bjbcce</guid>
+    <description>Microsoft’s Xbox is raising prices of its gaming consoles by up to $150 worldwide, citing a deepening global components crisis that has sent storage and memory...</description>
+    <category>technology</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 25 Jun 2026 18:25:18 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/xbox-to-raise-console-prices-worldwide-from-august--bjbcce.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2010839/xbox-to-raise-console-prices-worldwide-from-august">Dawn</source>
   </item>
   <item>
     <title>Wyndham Clark edges Burns to win second US Open title</title>
@@ -457,6 +479,17 @@
     <source url="https://www.dawn.com/news/2007653/women-making-significant-strides-in-judiciary-sc-judge">Dawn</source>
   </item>
   <item>
+    <title>Women alleging rape and sexual assault in France call to abolish statute of limitations</title>
+    <link>https://thegloballens365.vercel.app/article/women-alleging-rape-and-sexual-assault-in-france-call-to-abolish-statute-of-limi--bkpzps</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/women-alleging-rape-and-sexual-assault-in-france-call-to-abolish-statute-of-limi--bkpzps</guid>
+    <description>More than 50 women are calling for the abolition of the statute of limitations which they say has prevented them seeking justice.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 25 Jun 2026 18:50:12 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/women-alleging-rape-and-sexual-assault-in-france-call-to-abolish-statute-of-limi--bkpzps.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/ckg7z5dvxnzo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Woman seriously injured in shark attack at Sydney beach</title>
     <link>https://thegloballens365.vercel.app/article/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm</guid>
@@ -532,39 +565,6 @@
     <pubDate>Wed, 24 Jun 2026 19:33:12 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wins-by-mamdani-backed-candidates-deal-blow-to-pro-israel-camp-in-us--1x4593.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/24/wins-by-mamdani-backed-candidates-deal-blow-to-pro-israel-camp-in-us?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Winning the Indus lawfare</title>
-    <link>https://thegloballens365.vercel.app/article/winning-the-indus-lawfare--oonuhh</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/winning-the-indus-lawfare--oonuhh</guid>
-    <description>FEW agreements in the belligerent India-Pakistan relations have demonstrated the resilience of the Indus Waters Treaty.</description>
-    <category>siasat</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 20 Jun 2026 03:40:41 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/winning-the-indus-lawfare--oonuhh.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2009409/winning-the-indus-lawfare">Dawn</source>
-  </item>
-  <item>
-    <title>Williams sisters to play together at Wimbledon</title>
-    <link>https://thegloballens365.vercel.app/article/williams-sisters-to-play-together-at-wimbledon--ehc355</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/williams-sisters-to-play-together-at-wimbledon--ehc355</guid>
-    <description>Serena Williams is given a wildcard to play alongside older sister Venus in the Wimbledon women&apos;s doubles.</description>
-    <category>khel</category>
-    <author>Sara Khan</author>
-    <pubDate>Tue, 16 Jun 2026 10:18:08 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/williams-sisters-to-play-together-at-wimbledon--ehc355.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/tennis/articles/clyerm8lym9o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Williams is the greatest - but will she produce another great fight?</title>
-    <link>https://thegloballens365.vercel.app/article/williams-is-the-greatest-but-will-she-produce-another-great-fight--n850eo</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/williams-is-the-greatest-but-will-she-produce-another-great-fight--n850eo</guid>
-    <description>Serena Williams will return to the singles court at Wimbledon aged 44 - BBC Sport analyses if she is ready and the challenges she will face.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Mon, 22 Jun 2026 11:17:11 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/williams-is-the-greatest-but-will-she-produce-another-great-fight--n850eo.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/tennis/articles/cze9rrdn91xo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
