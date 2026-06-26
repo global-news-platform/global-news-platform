@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 26 Jun 2026 03:56:55 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 07:59:05 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -158,6 +158,17 @@
     <pubDate>Wed, 17 Jun 2026 16:58:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Yoon leads as Korda bid for major hat-trick falters</title>
+    <link>https://thegloballens365.vercel.app/article/yoon-leads-as-korda-bid-for-major-hat-trick-falters--0orq4n</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yoon-leads-as-korda-bid-for-major-hat-trick-falters--0orq4n</guid>
+    <description>Ina Yoon leads the Women&apos;s PGA Championship by two shots after the first round as Nellie Korda&apos;s hopes of a third straight major falter.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Fri, 26 Jun 2026 06:59:20 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yoon-leads-as-korda-bid-for-major-hat-trick-falters--0orq4n.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/golf/articles/cn4rjvj8krmo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Yes, there have been rows but here&apos;s how I&apos;ve made moving back home work</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 25 Jun 2026 07:57:18 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft--r2pafc.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1513465/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft/">Daily Times</source>
-  </item>
-  <item>
-    <title>With fighting spirit, Korea’s beauty triumphs over Czech set-piece beasts</title>
-    <link>https://thegloballens365.vercel.app/article/with-fighting-spirit-korea-s-beauty-triumphs-over-czech-set-piece-beasts--vne30z</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/with-fighting-spirit-korea-s-beauty-triumphs-over-czech-set-piece-beasts--vne30z</guid>
-    <description>GUADALAJARA: It was the tale of “Beauty and the Beast” that lit up the Estadio Guadalajara on Thursday, with South Korea’s prettier, stylish football...</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 00:23:08 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/with-fighting-spirit-korea-s-beauty-triumphs-over-czech-set-piece-beasts--vne30z.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2007446/with-fighting-spirit-koreas-beauty-triumphs-over-czech-set-piece-beasts">Dawn</source>
   </item>
   </channel>
 </rss>
