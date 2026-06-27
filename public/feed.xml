@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 27 Jun 2026 19:26:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 21:10:30 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -224,6 +224,17 @@
     <pubDate>Tue, 23 Jun 2026 04:22:26 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2010200/wyndham-clark-edges-burns-to-win-second-us-open-title">Dawn</source>
+  </item>
+  <item>
+    <title>Wyatt-Hodge smashes unbeaten 89 as England race into semis</title>
+    <link>https://thegloballens365.vercel.app/article/wyatt-hodge-smashes-unbeaten-89-as-england-race-into-semis--kshkem</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wyatt-hodge-smashes-unbeaten-89-as-england-race-into-semis--kshkem</guid>
+    <description>England&apos;s winning run at the T20 World Cup continues with a rampant nine-wicket victory over New Zealand in their final group game at The Oval.</description>
+    <category>khel</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sat, 27 Jun 2026 21:00:03 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/wyatt-hodge-smashes-unbeaten-89-as-england-race-into-semis--kshkem.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/cricket/articles/c3vy1e0l774o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Wyatt-Hodge half-century powers England against Windies</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 17:19:45 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/woman-21-dies-after-being-thrown-from-brazil-rope-jump-bridge-without-harness--7dcsv4.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies">The Guardian</source>
-  </item>
-  <item>
-    <title>WNBA: Alyssa Thomas suspended one game for fist into Cailtin Clark’s throat</title>
-    <link>https://thegloballens365.vercel.app/article/wnba-alyssa-thomas-suspended-one-game-for-fist-into-cailtin-clark-s-throat--xg33gh</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wnba-alyssa-thomas-suspended-one-game-for-fist-into-cailtin-clark-s-throat--xg33gh</guid>
-    <description>Both players were on the floor when Thomas pushed her fist into Clark&apos;s throat before getting up and stepping over her.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Thu, 25 Jun 2026 21:48:05 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/wnba-alyssa-thomas-suspended-one-game-for-fist-into-cailtin-clark-s-throat--xg33gh.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/sports/2026/6/25/wnba-alyssa-thomas-suspended-one-game-for-fist-into-cailtin-clarks-throat?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
