@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 27 Jun 2026 06:56:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 10:14:06 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -468,6 +468,17 @@
     <source url="https://www.dw.com/en/world-cup-2026-africa-s-new-era-takes-shape/a-77578984?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   <item>
+    <title>World Bank approves $1.1 billion emergency financing for Bangladesh</title>
+    <link>https://thegloballens365.vercel.app/article/world-bank-approves-1-1-billion-emergency-financing-for-bangladesh--mbpc5b</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-bank-approves-1-1-billion-emergency-financing-for-bangladesh--mbpc5b</guid>
+    <description>The World Bank approved $1.1 billion in emergency financing for Bangladesh to help secure food supplies, support vulnerable households and businesses due to...</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 27 Jun 2026 07:59:59 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-bank-approves-1-1-billion-emergency-financing-for-bangladesh--mbpc5b.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2011127/world-bank-approves-11-billion-emergency-financing-for-bangladesh">Dawn</source>
+  </item>
+  <item>
     <title>Workers remove Trump’s name from Kennedy Center after court ruling</title>
     <link>https://thegloballens365.vercel.app/article/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3</guid>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 25 Jun 2026 21:48:05 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wnba-alyssa-thomas-suspended-one-game-for-fist-into-cailtin-clark-s-throat--xg33gh.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/6/25/wnba-alyssa-thomas-suspended-one-game-for-fist-into-cailtin-clarks-throat?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Wizards choose teenage Dybantsa with number one pick in NBA draft</title>
-    <link>https://thegloballens365.vercel.app/article/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft--r2pafc</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft--r2pafc</guid>
-    <description>Towering teenager Anicet “A.J.” Dybantsa Jr was chosen by the Washington Wizards with the number one pick in the NBA Draft on Tuesday. The 6ft 8in (2.</description>
-    <category>pakistan</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 25 Jun 2026 07:57:18 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft--r2pafc.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1513465/wizards-choose-teenage-dybantsa-with-number-one-pick-in-nba-draft/">Daily Times</source>
   </item>
   </channel>
 </rss>
