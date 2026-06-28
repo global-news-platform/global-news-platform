@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 28 Jun 2026 19:26:35 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 21:06:29 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -413,6 +413,17 @@
     <source url="https://www.aljazeera.com/sports/2026/6/16/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>World Cup 2026: Top matches to watch in the Round of 32 knockout stage</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452</guid>
+    <description>We have finally reached the knockout stages of the 2026 World Cup - here is Al Jazeera&apos;s guide to the best matchups.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Sun, 28 Jun 2026 19:48:40 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/6/28/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>World Cup 2026: Spain vs Cape Verde prediction, schedules, latest news</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news--ryze0d</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news--ryze0d</guid>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 25 Jun 2026 18:50:12 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/women-alleging-rape-and-sexual-assault-in-france-call-to-abolish-statute-of-limi--bkpzps.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/ckg7z5dvxnzo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Woman seriously injured in shark attack at Sydney beach</title>
-    <link>https://thegloballens365.vercel.app/article/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm</guid>
-    <description>The woman, 35, was pulled from the water by members of the public and then airlifted to hospital, police say.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Sat, 13 Jun 2026 15:24:25 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c3ryw807133o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
