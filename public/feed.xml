@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 28 Jun 2026 04:03:48 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 08:57:36 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -257,6 +257,17 @@
     <pubDate>Sun, 21 Jun 2026 19:12:32 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wowcher-sorry-for-unacceptable-crocodile-attack-email--nhjsyx.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c17ynlek5djo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>World’s largest particle smasher halts for upgrade to boost hunt for dark matter</title>
+    <link>https://thegloballens365.vercel.app/article/world-s-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter--rdc5wh</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-s-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter--rdc5wh</guid>
+    <description>MEYRIN: The world’s most powerful particle accelerator will on Monday shutter operations for four years of renovations to dramatically boost its...</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 28 Jun 2026 02:04:49 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-s-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter--rdc5wh.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2011257/worlds-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter">Dawn</source>
   </item>
   <item>
     <title>World Refugee Day</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 20 Jun 2026 07:15:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/woman-killed-hundreds-evacuate-in-dominican-republic-hotel-fire--303l4b.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/woman-killed-hundreds-evacuate-in-dominican-republic-hotel-fire/a-77634423?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Woman, 21, dies after being thrown from Brazil rope jump bridge without harness</title>
-    <link>https://thegloballens365.vercel.app/article/woman-21-dies-after-being-thrown-from-brazil-rope-jump-bridge-without-harness--7dcsv4</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/woman-21-dies-after-being-thrown-from-brazil-rope-jump-bridge-without-harness--7dcsv4</guid>
-    <description>Instructors hurled Maria Eduarda Rodrigues de Freitas into 40-metre abyss without attaching safety equipment A 21-year-old woman who died when two rope jumping...</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 15 Jun 2026 17:19:45 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/woman-21-dies-after-being-thrown-from-brazil-rope-jump-bridge-without-harness--7dcsv4.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies">The Guardian</source>
   </item>
   </channel>
 </rss>
