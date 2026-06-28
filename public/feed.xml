@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 28 Jun 2026 08:57:36 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 11:50:22 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -380,6 +380,17 @@
     <source url="https://www.bbc.com/sport/football/articles/c621620wr77o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>World Cup goals chart led by PSG and Real... plus Palace and Sunderland</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-goals-chart-led-by-psg-and-real-plus-palace-and-sunderland--1pvvcu</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-goals-chart-led-by-psg-and-real-plus-palace-and-sunderland--1pvvcu</guid>
+    <description>Crystal Palace and Sunderland lead the Premier League’s World Cup scoring charts after the 2026 group stage, ahead of Arsenal, Liverpool and Manchester City.</description>
+    <category>khel</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sun, 28 Jun 2026 09:57:25 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-goals-chart-led-by-psg-and-real-plus-palace-and-sunderland--1pvvcu.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/ckg59eerpw4o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>World Cup Day 4: Netherlands vs Japan, Curacao debut, prediction, schedule</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 15:24:25 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/woman-seriously-injured-in-shark-attack-at-sydney-beach--83q8bm.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c3ryw807133o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Woman killed, hundreds evacuate in Dominican Republic hotel fire</title>
-    <link>https://thegloballens365.vercel.app/article/woman-killed-hundreds-evacuate-in-dominican-republic-hotel-fire--303l4b</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/woman-killed-hundreds-evacuate-in-dominican-republic-hotel-fire--303l4b</guid>
-    <description>A huge fire tore through a four-star beach resort in the Dominican Republic, killing one woman.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 20 Jun 2026 07:15:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/woman-killed-hundreds-evacuate-in-dominican-republic-hotel-fire--303l4b.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/woman-killed-hundreds-evacuate-in-dominican-republic-hotel-fire/a-77634423?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   </channel>
 </rss>
