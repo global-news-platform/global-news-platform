@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 29 Jun 2026 04:09:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 11:06:06 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -48,6 +48,17 @@
     <pubDate>Mon, 15 Jun 2026 00:54:32 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-climate-migrants-fear-eviction-as-crackdown-intensifies--09un60.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/15/zimbabwes-climate-migrants-fear-eviction-as-crackdown-intensifies?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zimbabwe dominate first day of Bangladesh Test</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0</guid>
+    <description>HARARE: Zimbabwe took first-day honours in a one-off Test against Bangladesh on Sunday thanks to opener Innocent Kaia and left-arm quick Newman Nyamhuri.</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 29 Jun 2026 04:26:46 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2011566/zimbabwe-dominate-first-day-of-bangladesh-test">Dawn</source>
   </item>
   <item>
     <title>Zelenskyy thanks UK for intercepting Russian shadow fleet oil tanker after armed forces board vessel - UK politics live</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 18 Jun 2026 03:04:34 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/words-that-wound--uejchx.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2008720/words-that-wound">Dawn</source>
-  </item>
-  <item>
-    <title>Women making significant strides in judiciary: SC judge</title>
-    <link>https://thegloballens365.vercel.app/article/women-making-significant-strides-in-judiciary-sc-judge--y7tgb7</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/women-making-significant-strides-in-judiciary-sc-judge--y7tgb7</guid>
-    <description>ISLAMABAD: Hailing the progress made by women in the legal profession, Justice Miangul Hassan Aurangzeb of the Supreme Court on Saturday said female...</description>
-    <category>pakistan</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 14 Jun 2026 00:20:29 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/women-making-significant-strides-in-judiciary-sc-judge--y7tgb7.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2007653/women-making-significant-strides-in-judiciary-sc-judge">Dawn</source>
   </item>
   </channel>
 </rss>
