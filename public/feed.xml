@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 28 Jun 2026 23:07:47 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 04:09:39 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -158,6 +158,17 @@
     <pubDate>Wed, 17 Jun 2026 16:58:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>&apos;You are Canadian heroes&apos; - the forgotten hosts making World Cup history</title>
+    <link>https://thegloballens365.vercel.app/article/you-are-canadian-heroes-the-forgotten-hosts-making-world-cup-history--f5l9lq</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-are-canadian-heroes-the-forgotten-hosts-making-world-cup-history--f5l9lq</guid>
+    <description>Canada are making history at this World Cup with a run that is likely to change the face of football in the country forever.</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 29 Jun 2026 00:02:44 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-are-canadian-heroes-the-forgotten-hosts-making-world-cup-history--f5l9lq.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/cvg4pen8xq7o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Yoon leads as Korda bid for major hat-trick falters</title>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 14 Jun 2026 00:20:29 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/women-making-significant-strides-in-judiciary-sc-judge--y7tgb7.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2007653/women-making-significant-strides-in-judiciary-sc-judge">Dawn</source>
-  </item>
-  <item>
-    <title>Women alleging rape and sexual assault in France call to abolish statute of limitations</title>
-    <link>https://thegloballens365.vercel.app/article/women-alleging-rape-and-sexual-assault-in-france-call-to-abolish-statute-of-limi--bkpzps</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/women-alleging-rape-and-sexual-assault-in-france-call-to-abolish-statute-of-limi--bkpzps</guid>
-    <description>More than 50 women are calling for the abolition of the statute of limitations which they say has prevented them seeking justice.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Thu, 25 Jun 2026 18:50:12 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/women-alleging-rape-and-sexual-assault-in-france-call-to-abolish-statute-of-limi--bkpzps.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/ckg7z5dvxnzo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
