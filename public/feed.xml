@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 30 Jun 2026 07:58:59 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 11:02:04 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -202,6 +202,17 @@
     <pubDate>Thu, 25 Jun 2026 23:03:48 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yes-there-have-been-rows-but-here-s-how-i-ve-made-moving-back-home-work--1s4n4p.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cg53q6dl0plo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Yen hits 39-year low as dollar strength pressures Japan</title>
+    <link>https://thegloballens365.vercel.app/article/yen-hits-39-year-low-as-dollar-strength-pressures-japan--lrg091</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yen-hits-39-year-low-as-dollar-strength-pressures-japan--lrg091</guid>
+    <description>The Japanese yen dropped to its weakest level against the US dollar in nearly 39 years on Monday, reflecting growing concerns that American interest rates...</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 30 Jun 2026 10:33:35 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yen-hits-39-year-low-as-dollar-strength-pressures-japan--lrg091.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1515581/yen-hits-39-year-low-as-dollar-strength-pressures-japan/">Daily Times</source>
   </item>
   <item>
     <title>Yellow Line BRT: Two bureaucrats booked in Karachi over misuse of authority, Rs8.5bn payment</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 14:48:14 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/13/workers-remove-trumps-name-from-kennedy-center-after-court-ruling?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Words that wound</title>
-    <link>https://thegloballens365.vercel.app/article/words-that-wound--uejchx</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/words-that-wound--uejchx</guid>
-    <description>LONG before a church is burned, a mosque vandalised or a mob assembled, the poison that enables such violence has been spreading quietly for months or years.</description>
-    <category>siasat</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Thu, 18 Jun 2026 03:04:34 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/words-that-wound--uejchx.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2008720/words-that-wound">Dawn</source>
   </item>
   </channel>
 </rss>
