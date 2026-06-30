@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 30 Jun 2026 20:09:49 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 23:19:21 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -125,6 +125,17 @@
     <pubDate>Tue, 16 Jun 2026 04:17:04 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1508459/zardari-hopes-preliminary-deal-will-lead-to-durable-peace/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zara Noor Abbas fumes at trend of pitting actors against each other</title>
+    <link>https://thegloballens365.vercel.app/article/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other--ucqx3j</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other--ucqx3j</guid>
+    <description>Actor Zara Noor Abbas spoke out against the online trend of comparing women and criticised tabloids for creating unnecessary competition between female actors...</description>
+    <category>pakistan</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 30 Jun 2026 22:52:12 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other--ucqx3j.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1515879/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other/">Daily Times</source>
   </item>
   <item>
     <title>Zambia ex-president&apos;s family wins latest legal battle over what should happen to his body</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 27 Jun 2026 07:59:59 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-bank-approves-1-1-billion-emergency-financing-for-bangladesh--mbpc5b.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2011127/world-bank-approves-11-billion-emergency-financing-for-bangladesh">Dawn</source>
-  </item>
-  <item>
-    <title>Workers remove Trump’s name from Kennedy Center after court ruling</title>
-    <link>https://thegloballens365.vercel.app/article/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3</guid>
-    <description>Judge says Trump-backed board&apos;s move to add president&apos;s name unlawful, requires Congressional approval.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 14:48:14 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/workers-remove-trump-s-name-from-kennedy-center-after-court-ruling--mdluq3.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/13/workers-remove-trumps-name-from-kennedy-center-after-court-ruling?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
