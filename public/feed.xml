@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 01 Jul 2026 04:08:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 09:54:46 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -246,6 +246,17 @@
     <pubDate>Sun, 21 Jun 2026 19:24:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-is-spain-s-main-man-rooney-analysis--wy900r.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/videos/clye4lmd3zzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Xi vows to strengthen China&apos;s military, stamp out corruption</title>
+    <link>https://thegloballens365.vercel.app/article/xi-vows-to-strengthen-china-s-military-stamp-out-corruption--vczfjk</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/xi-vows-to-strengthen-china-s-military-stamp-out-corruption--vczfjk</guid>
+    <description>Chinese President Xi Jinping vowed on Wednesday to strengthen and modernise the military and to stamp out corruption within the ruling Communist Party.</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 01 Jul 2026 06:52:56 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/xi-vows-to-strengthen-china-s-military-stamp-out-corruption--vczfjk.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2012144/xi-vows-to-strengthen-chinas-military-stamp-out-corruption">Dawn</source>
   </item>
   <item>
     <title>Xbox to raise console prices worldwide from August</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 17 Jun 2026 13:42:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-africa-s-new-era-takes-shape--948tpi.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/world-cup-2026-africa-s-new-era-takes-shape/a-77578984?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>World Bank approves $1.1 billion emergency financing for Bangladesh</title>
-    <link>https://thegloballens365.vercel.app/article/world-bank-approves-1-1-billion-emergency-financing-for-bangladesh--mbpc5b</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-bank-approves-1-1-billion-emergency-financing-for-bangladesh--mbpc5b</guid>
-    <description>The World Bank approved $1.1 billion in emergency financing for Bangladesh to help secure food supplies, support vulnerable households and businesses due to...</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Sat, 27 Jun 2026 07:59:59 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-bank-approves-1-1-billion-emergency-financing-for-bangladesh--mbpc5b.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2011127/world-bank-approves-11-billion-emergency-financing-for-bangladesh">Dawn</source>
   </item>
   </channel>
 </rss>
