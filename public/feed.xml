@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 02 Jul 2026 10:45:39 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 14:08:25 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -501,6 +501,17 @@
     <source url="https://www.aljazeera.com/sports/2026/6/16/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>World Cup boom falters as US hospitality jobs fall in June</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-boom-falters-as-us-hospitality-jobs-fall-in-june--sojz49</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-boom-falters-as-us-hospitality-jobs-fall-in-june--sojz49</guid>
+    <description>There had been early signs of a jobs boom from the tournament, but hospitality jobs declined in June.</description>
+    <category>karobar</category>
+    <author>Babar Shah</author>
+    <pubDate>Thu, 02 Jul 2026 13:36:04 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-boom-falters-as-us-hospitality-jobs-fall-in-june--sojz49.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cr471w6ykxno?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>World Cup 2026: Top matches to watch in the Round of 32 knockout stage</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 24 Jun 2026 12:36:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-full-group-schedule-and-top-third-round-matches-to-watch--3ibb5t.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/6/24/world-cup-2026-full-group-schedule-and-top-third-round-matches-to-watch?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup 2026: Faith and football</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-2026-faith-and-football--ch3iaf</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-faith-and-football--ch3iaf</guid>
-    <description>From prayers on the pitch to cursing the opposing team, faith and religious belief have been prominent this World Cup.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 01 Jul 2026 17:42:09 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-faith-and-football--ch3iaf.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/1/world-cup-2026-faith-and-football?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
