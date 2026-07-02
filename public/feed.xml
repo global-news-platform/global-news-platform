@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 02 Jul 2026 03:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 07:39:27 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -457,6 +457,17 @@
     <source url="https://www.bbc.co.uk/sport/football/articles/ckg59eerpw4o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>World Cup dreams shattered as StubHub tickets cancelled at last minute</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-dreams-shattered-as-stubhub-tickets-cancelled-at-last-minute--kw0mwa</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-dreams-shattered-as-stubhub-tickets-cancelled-at-last-minute--kw0mwa</guid>
+    <description>Hundreds of fans who bought World Cup tickets on resale site StubHub say they have had them cancelled at the last minute.</description>
+    <category>karobar</category>
+    <author>Babar Shah</author>
+    <pubDate>Thu, 02 Jul 2026 04:59:47 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-dreams-shattered-as-stubhub-tickets-cancelled-at-last-minute--kw0mwa.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/crkvlekgy07o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>World Cup Day 4: Netherlands vs Japan, Curacao debut, prediction, schedule</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 16 Jun 2026 16:35:02 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-day-five--5xtxmc.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/16/world-cup-2026-day-five?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup 2026 Day 11: Spain and Iran in action, predictions and schedule</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-2026-day-11-spain-and-iran-in-action-predictions-and-schedule--zicya2</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-day-11-spain-and-iran-in-action-predictions-and-schedule--zicya2</guid>
-    <description>Spain-Saudi Arabia, Belgium-Iran on Sunday. Germany reach knockouts, Curacao earn the first point of the World Cup 2026.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Sun, 21 Jun 2026 09:12:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-day-11-spain-and-iran-in-action-predictions-and-schedule--zicya2.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/21/fifa-world-cup-2026-spain-iran-predictions-schedule-germany-curacao?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
