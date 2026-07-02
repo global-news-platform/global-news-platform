@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 02 Jul 2026 07:39:27 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 10:45:39 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -191,6 +191,17 @@
     <pubDate>Wed, 17 Jun 2026 16:58:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>&apos;You can&apos;t catch your breath&apos; - how will Azteca altitude impact England?</title>
+    <link>https://thegloballens365.vercel.app/article/you-can-t-catch-your-breath-how-will-azteca-altitude-impact-england--s3mton</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-can-t-catch-your-breath-how-will-azteca-altitude-impact-england--s3mton</guid>
+    <description>BBC Sport explores how playing football at high altitude affects the body and mind as England prepare to visit Mexico and their fortress Azteca Stadium.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 02 Jul 2026 08:21:52 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-can-t-catch-your-breath-how-will-azteca-altitude-impact-england--s3mton.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/c4gy0v05qyro?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>&apos;You are Canadian heroes&apos; - the forgotten hosts making World Cup history</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 01 Jul 2026 17:42:09 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-faith-and-football--ch3iaf.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/7/1/world-cup-2026-faith-and-football?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup 2026: Day five</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-2026-day-five--5xtxmc</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-day-five--5xtxmc</guid>
-    <description>Al Jazeera’s Rahul Pathak has your FIFA World Cup 2026 day five recap.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 16 Jun 2026 16:35:02 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-day-five--5xtxmc.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/16/world-cup-2026-day-five?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
