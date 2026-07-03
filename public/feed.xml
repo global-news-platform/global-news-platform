@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 03 Jul 2026 17:30:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 19:28:57 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -26,6 +26,17 @@
     <pubDate>Fri, 03 Jul 2026 16:39:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zuma-showing-south-africa-middle-finger-by-meeting-gupta-brother-minister--v3nkx2.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cvge0gd6lnqo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zuckerberg says AI progress slower than expected</title>
+    <link>https://thegloballens365.vercel.app/article/zuckerberg-says-ai-progress-slower-than-expected--2eul2e</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zuckerberg-says-ai-progress-slower-than-expected--2eul2e</guid>
+    <description>Meta Chief Executive Mark Zuckerberg said the company’s AI agent technology is advancing more slowly than expected.</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Fri, 03 Jul 2026 17:53:10 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zuckerberg-says-ai-progress-slower-than-expected--2eul2e.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1517110/zuckerberg-says-ai-progress-slower-than-expected/">Daily Times</source>
   </item>
   <item>
     <title>Zombeid marks bold new chapter for Pakistani cinema</title>
@@ -314,6 +325,17 @@
     <source url="https://www.dawn.com/news/2012144/xi-vows-to-strengthen-chinas-military-stamp-out-corruption">Dawn</source>
   </item>
   <item>
+    <title>Xhaka set to stay at Sunderland despite Chelsea interest</title>
+    <link>https://thegloballens365.vercel.app/article/xhaka-set-to-stay-at-sunderland-despite-chelsea-interest--uj2s7l</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/xhaka-set-to-stay-at-sunderland-despite-chelsea-interest--uj2s7l</guid>
+    <description>Sunderland captain Granit Xhaka is set to stay at the club this summer, despite interest from Chelsea.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Fri, 03 Jul 2026 18:11:14 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/xhaka-set-to-stay-at-sunderland-despite-chelsea-interest--uj2s7l.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/c5yz8jj0g50o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Xbox to raise console prices worldwide from August</title>
     <link>https://thegloballens365.vercel.app/article/xbox-to-raise-console-prices-worldwide-from-august--bjbcce</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/xbox-to-raise-console-prices-worldwide-from-august--bjbcce</guid>
@@ -543,28 +565,6 @@
     <pubDate>Thu, 02 Jul 2026 13:36:04 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-boom-falters-as-us-hospitality-jobs-fall-in-june--sojz49.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cr471w6ykxno?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>World Cup 2026: Top matches to watch in the Round of 32 knockout stage</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452</guid>
-    <description>We have finally reached the knockout stages of the 2026 World Cup - here is Al Jazeera&apos;s guide to the best matchups.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Sun, 28 Jun 2026 19:48:40 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage--p0m452.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/sports/2026/6/28/world-cup-2026-top-matches-to-watch-in-the-round-of-32-knockout-stage?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup 2026: Spain vs Cape Verde prediction, schedules, latest news</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news--ryze0d</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news--ryze0d</guid>
-    <description>Spain, Belgium, Uruguay and Iran begin their campaigns as off-field stories also shape the World Cup.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Mon, 15 Jun 2026 10:44:14 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news--ryze0d.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/sports/2026/6/15/world-cup-2026-spain-vs-cape-verde-prediction-schedules-latest-news?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
