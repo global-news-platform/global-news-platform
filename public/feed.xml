@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 04 Jul 2026 10:14:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 13:40:09 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -136,6 +136,17 @@
     <pubDate>Sat, 20 Jun 2026 16:34:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-returns-highest-polish-honour-after-award-stripped--uwu218.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zelensky denies Russian capture of key eastern city Kostiantynivka</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f</guid>
+    <description>Ukraine still controls the strategically important eastern city of Kostiantynivka, President Volodymyr Zelensky and the General Staff said on Saturday,...</description>
+    <category>pakistan</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 04 Jul 2026 11:02:03 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2012943/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka">Dawn</source>
   </item>
   <item>
     <title>Zardari signs finance bill, budget 2026-27 activated</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 16 Jun 2026 09:39:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6--ftsvrr.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/6/16/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup boom falters as US hospitality jobs fall in June</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-boom-falters-as-us-hospitality-jobs-fall-in-june--sojz49</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-boom-falters-as-us-hospitality-jobs-fall-in-june--sojz49</guid>
-    <description>There had been early signs of a jobs boom from the tournament, but hospitality jobs declined in June.</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 02 Jul 2026 13:36:04 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-boom-falters-as-us-hospitality-jobs-fall-in-june--sojz49.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cr471w6ykxno?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
