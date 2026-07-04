@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 04 Jul 2026 13:40:09 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 15:10:22 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -136,6 +136,17 @@
     <pubDate>Sat, 20 Jun 2026 16:34:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-returns-highest-polish-honour-after-award-stripped--uwu218.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zelensky rejects Russian Kostiantynivka capture claim</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-rejects-russian-kostiantynivka-capture-claim--t34fl4</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-rejects-russian-kostiantynivka-capture-claim--t34fl4</guid>
+    <description>Ukraine on Saturday denied Russia’s claim that it had captured the strategic eastern city of Kostiantynivka.</description>
+    <category>pakistan</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 04 Jul 2026 14:11:48 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-rejects-russian-kostiantynivka-capture-claim--t34fl4.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1517638/zelensky-rejects-russian-kostiantynivka-capture-claim/">Daily Times</source>
   </item>
   <item>
     <title>Zelensky denies Russian capture of key eastern city Kostiantynivka</title>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 14 Jun 2026 08:38:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/6/14/fifa-world-cup-2026-schedule-netherlands-japan-prediction-germany-curacao-schedule?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup: Can Senegal stun France again? Predictions, schedule on Day 6</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6--ftsvrr</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6--ftsvrr</guid>
-    <description>France take on Senegal in a repeat of their famous 2002 opener while Messi&apos;s Argentina face Algeria in Kansas City.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Tue, 16 Jun 2026 09:39:06 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6--ftsvrr.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/sports/2026/6/16/world-cup-can-senegal-stun-france-again-predictions-schedule-on-day-6?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
