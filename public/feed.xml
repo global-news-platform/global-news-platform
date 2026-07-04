@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 04 Jul 2026 15:10:22 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 17:11:04 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -235,6 +235,17 @@
     <pubDate>Wed, 17 Jun 2026 16:58:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>&apos;You don&apos;t see that often!&apos; - Buttler&apos;s unconventional run-out</title>
+    <link>https://thegloballens365.vercel.app/article/you-don-t-see-that-often-buttler-s-unconventional-run-out--8m6els</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-don-t-see-that-often-buttler-s-unconventional-run-out--8m6els</guid>
+    <description>Jos Buttler runs out Axar Patel, after appearing to initially aim but miss the batter&apos;s stumps, before the ball rolls through to hit at the non-striker&apos;s end,...</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 04 Jul 2026 16:22:13 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-don-t-see-that-often-buttler-s-unconventional-run-out--8m6els.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/cricket/videos/c04y2162v6vo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>&apos;You can&apos;t catch your breath&apos; - how will Azteca altitude impact England?</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 02 Jul 2026 04:59:47 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-dreams-shattered-as-stubhub-tickets-cancelled-at-last-minute--kw0mwa.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/crkvlekgy07o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>World Cup Day 4: Netherlands vs Japan, Curacao debut, prediction, schedule</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd</guid>
-    <description>The Netherlands face Japan in a must-watch game as World Cup Day 4 brings predictions, key fixtures and other headlines.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 14 Jun 2026 08:38:49 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-day-4-netherlands-vs-japan-curacao-debut-prediction-schedule--dep1qd.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/sports/2026/6/14/fifa-world-cup-2026-schedule-netherlands-japan-prediction-germany-curacao-schedule?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
