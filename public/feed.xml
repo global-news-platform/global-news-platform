@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 06 Jul 2026 08:26:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 13:51:39 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -235,6 +235,17 @@
     <pubDate>Wed, 17 Jun 2026 16:58:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>&apos;You&apos;ve been trying to kill me for 23 years&apos; - should Ronaldo start?</title>
+    <link>https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</guid>
+    <description>Appearing at his sixth World Cup, will Cristiano Ronaldo lift the famous trophy for the first time before he retires?</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 06 Jul 2026 11:21:44 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/cz7523l9rdvo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>&apos;You don&apos;t see that often!&apos; - Buttler&apos;s unconventional run-out</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 09:34:25 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-hydration-breaks-who-are-the-winners-and-losers--urd7xd.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/c621620wr77o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>World Cup goals chart led by PSG and Real... plus Palace and Sunderland</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-goals-chart-led-by-psg-and-real-plus-palace-and-sunderland--1pvvcu</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-goals-chart-led-by-psg-and-real-plus-palace-and-sunderland--1pvvcu</guid>
-    <description>Crystal Palace and Sunderland lead the Premier League’s World Cup scoring charts after the 2026 group stage, ahead of Arsenal, Liverpool and Manchester City.</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 28 Jun 2026 09:57:25 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-goals-chart-led-by-psg-and-real-plus-palace-and-sunderland--1pvvcu.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/ckg59eerpw4o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
