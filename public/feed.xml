@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 06 Jul 2026 03:46:54 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 08:26:34 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -490,6 +490,17 @@
     <source url="https://dailytimes.com.pk/1512915/world-cup-sees-record-goals-and-the-balls-to-blame/">Daily Times</source>
   </item>
   <item>
+    <title>World Cup referees are just not good enough - Tuchel</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-referees-are-just-not-good-enough-tuchel--n0s1ts</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-referees-are-just-not-good-enough-tuchel--n0s1ts</guid>
+    <description>England head coach Thomas Tuchel says referees at the World Cup \&quot;are just not good enough\&quot; after the dramatic last-16 win over Mexico.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 06 Jul 2026 02:50:51 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-referees-are-just-not-good-enough-tuchel--n0s1ts.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/cq6115rj9ymo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>World Cup racism monitor urges FIFA to remove VAR official over gesture</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-racism-monitor-urges-fifa-to-remove-var-official-over-gesture--e8ppr1</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-racism-monitor-urges-fifa-to-remove-var-official-over-gesture--e8ppr1</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 28 Jun 2026 09:57:25 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-goals-chart-led-by-psg-and-real-plus-palace-and-sunderland--1pvvcu.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/football/articles/ckg59eerpw4o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>World Cup dreams shattered as StubHub tickets cancelled at last minute</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-dreams-shattered-as-stubhub-tickets-cancelled-at-last-minute--kw0mwa</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-dreams-shattered-as-stubhub-tickets-cancelled-at-last-minute--kw0mwa</guid>
-    <description>Hundreds of fans who bought World Cup tickets on resale site StubHub say they have had them cancelled at the last minute.</description>
-    <category>karobar</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 02 Jul 2026 04:59:47 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-dreams-shattered-as-stubhub-tickets-cancelled-at-last-minute--kw0mwa.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/crkvlekgy07o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
