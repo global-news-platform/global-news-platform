@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 07 Jul 2026 07:44:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 11:12:41 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -48,6 +48,17 @@
     <pubDate>Tue, 23 Jun 2026 13:24:22 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zombeid-marks-bold-new-chapter-for-pakistani-cinema--de8shg.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1512515/zombeid-marks-bold-new-chapter-for-pakistani-cinema/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zimbabwean football star survives gun attack in South Africa</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwean-football-star-survives-gun-attack-in-south-africa--8bu2om</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwean-football-star-survives-gun-attack-in-south-africa--8bu2om</guid>
+    <description>South African police say they are investigating a case of attempted murder but that no arrests have been made so far.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 07 Jul 2026 10:48:49 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwean-football-star-survives-gun-attack-in-south-africa--8bu2om.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c1my1rvy28do?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zimbabwe’s Senate approves amendment extending presidential term</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 17 Jun 2026 09:21:01 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more--xu4vcg.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/17/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup online betting takes a toll in Brazil</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-online-betting-takes-a-toll-in-brazil--99wokj</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-online-betting-takes-a-toll-in-brazil--99wokj</guid>
-    <description>A World Cup fever is sweeping Brazil. So is sports betting. NPR&apos;s Julia Carneiro reports on the country&apos;s gambling boom and the growing concerns about debt and...</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 13 Jun 2026 21:02:56 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-online-betting-takes-a-toll-in-brazil--99wokj.jpg" type="image/jpeg" />
-    <source url="https://www.npr.org/2026/06/13/nx-s1-5856381/world-cup-online-betting-takes-a-toll-in-brazil">NPR</source>
   </item>
   </channel>
 </rss>
