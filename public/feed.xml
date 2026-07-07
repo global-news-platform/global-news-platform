@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 06 Jul 2026 23:13:49 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 03:38:42 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -114,6 +114,17 @@
     <pubDate>Wed, 01 Jul 2026 18:35:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-attends-ireland-eu-presidency-ceremony--ci8xp9.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1516178/zelenskyy-attends-ireland-eu-presidency-ceremony/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zelensky to press Nato for air defence systems after intense Russian strikes</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-to-press-nato-for-air-defence-systems-after-intense-russian-strikes--9zaobv</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-to-press-nato-for-air-defence-systems-after-intense-russian-strikes--9zaobv</guid>
+    <description>The Ukrainian president will use the Nato meeting in Turkey to argue he needs more interceptor missiles.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 07 Jul 2026 02:07:15 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-to-press-nato-for-air-defence-systems-after-intense-russian-strikes--9zaobv.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c9d227e5zj6o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zelensky stripped of highest Polish honour over WW2 name of army unit</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 13 Jun 2026 21:02:56 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-online-betting-takes-a-toll-in-brazil--99wokj.jpg" type="image/jpeg" />
     <source url="https://www.npr.org/2026/06/13/nx-s1-5856381/world-cup-online-betting-takes-a-toll-in-brazil">NPR</source>
-  </item>
-  <item>
-    <title>World Cup hydration breaks - who are the winners and losers?</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-hydration-breaks-who-are-the-winners-and-losers--urd7xd</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-hydration-breaks-who-are-the-winners-and-losers--urd7xd</guid>
-    <description>They have become a regular feature at World Cup games - but who are the winners and who are losers of the mandatory hydration breaks?</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 15 Jun 2026 09:34:25 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-hydration-breaks-who-are-the-winners-and-losers--urd7xd.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/articles/c621620wr77o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
