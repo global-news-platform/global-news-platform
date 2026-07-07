@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 07 Jul 2026 18:05:24 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 21:29:38 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -512,6 +512,17 @@
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/20/world-cup-wrap-day-9?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>World Cup Sets Another Ratings Record in U.S. Loss to Belgium</title>
+    <link>https://thegloballens365.vercel.app/article/world-cup-sets-another-ratings-record-in-u-s-loss-to-belgium--5m209p</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-sets-another-ratings-record-in-u-s-loss-to-belgium--5m209p</guid>
+    <description>Fox&apos;s telecast drew 30 million viewers Monday night, according to early Nielsen numbers.</description>
+    <category>shobiz</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 07 Jul 2026 19:44:54 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-sets-another-ratings-record-in-u-s-loss-to-belgium--5m209p.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/world-cup-2026-us-belgium-tv-ratings-record-1236640350/">The Hollywood Reporter</source>
+  </item>
+  <item>
     <title>World Cup sees record goals and the ball’s to blame</title>
     <link>https://thegloballens365.vercel.app/article/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a</guid>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 15:24:21 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-quiz-name-these-top-nations-leading-scorers--8qst1v.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/articles/c1m2p27p8xzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>World Cup predictions: Portugal vs DR Congo, England vs Croatia and more</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more--xu4vcg</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more--xu4vcg</guid>
-    <description>Ronaldo chases goal-scoring record, as Portugal and England begin their World Cup campaigns.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 17 Jun 2026 09:21:01 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more--xu4vcg.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/17/world-cup-predictions-portugal-vs-dr-congo-england-vs-croatia-and-more?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
