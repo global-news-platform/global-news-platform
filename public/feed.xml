@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2026 14:17:56 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 17:42:20 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -235,6 +235,17 @@
     <pubDate>Tue, 23 Jun 2026 12:02:29 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>YouTuber Rehan Tariq handed over to NCCIA on six-day physical remand over blasphemy, PECA charges</title>
+    <link>https://thegloballens365.vercel.app/article/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f</guid>
+    <description>LAHORE: A judicial magistrate on Wednesday granted the National Cyber Crime Investigation Agency (NCCIA) a six-day physical remand of podcast host Rehan Tariq...</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 08 Jul 2026 15:18:09 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2013901/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasphemy-peca-charges">Dawn</source>
   </item>
   <item>
     <title>&apos;Your boys took a hell of a beating&apos; - England and Norway&apos;s football rivalry</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 20 Jun 2026 17:27:59 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-wrap-day-9--h0tjo1.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/20/world-cup-wrap-day-9?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Cup Sets Another Ratings Record in U.S. Loss to Belgium</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-sets-another-ratings-record-in-u-s-loss-to-belgium--5m209p</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-sets-another-ratings-record-in-u-s-loss-to-belgium--5m209p</guid>
-    <description>Fox&apos;s telecast drew 30 million viewers Monday night, according to early Nielsen numbers.</description>
-    <category>shobiz</category>
-    <author>Sara Khan</author>
-    <pubDate>Tue, 07 Jul 2026 19:44:54 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-sets-another-ratings-record-in-u-s-loss-to-belgium--5m209p.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/tv/tv-news/world-cup-2026-us-belgium-tv-ratings-record-1236640350/">The Hollywood Reporter</source>
   </item>
   </channel>
 </rss>
