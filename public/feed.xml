@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2026 10:23:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 14:17:56 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -435,6 +435,17 @@
     <source url="https://www.dawn.com/news/2010839/xbox-to-raise-console-prices-worldwide-from-august">Dawn</source>
   </item>
   <item>
+    <title>X wants to know how Danish Taimoor &apos;grew up&apos; watching 41-year-old Ronaldo</title>
+    <link>https://thegloballens365.vercel.app/article/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo--4y38b3</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo--4y38b3</guid>
+    <description>https://images.dawn.com/news/1195516</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 08 Jul 2026 11:12:18 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo--4y38b3.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2013869/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo">Dawn</source>
+  </item>
+  <item>
     <title>Wyndham Clark edges Burns to win second US Open title</title>
     <link>https://thegloballens365.vercel.app/article/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz</guid>
@@ -466,6 +477,17 @@
     <pubDate>Wed, 24 Jun 2026 18:42:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wyatt-hodge-half-century-powers-england-against-windies--e300zf.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/videos/cpd397w91z0o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Wreckage of missing cargo plane located off Ormara: PAA</title>
+    <link>https://thegloballens365.vercel.app/article/wreckage-of-missing-cargo-plane-located-off-ormara-paa--1uokt7</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wreckage-of-missing-cargo-plane-located-off-ormara-paa--1uokt7</guid>
+    <description>The Pakistan Airports Authority (PAA) on Wednesday said the Pakistan Navy (PN) and Pakistan Maritime Security Agency (PMSA), after 12 hours of search and...</description>
+    <category>pakistan</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 08 Jul 2026 14:07:17 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/wreckage-of-missing-cargo-plane-located-off-ormara-paa--1uokt7.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2013836/wreckage-of-missing-cargo-plane-located-off-ormara-paa">Dawn</source>
   </item>
   <item>
     <title>Wowcher sorry for &apos;unacceptable&apos; crocodile attack email</title>
@@ -543,28 +565,6 @@
     <pubDate>Tue, 07 Jul 2026 19:44:54 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-sets-another-ratings-record-in-u-s-loss-to-belgium--5m209p.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/tv/tv-news/world-cup-2026-us-belgium-tv-ratings-record-1236640350/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>World Cup sees record goals and the ball’s to blame</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a</guid>
-    <description>It’s been goals galore so far at the World Cup. The tournament has been one of the highest-scoring in history so far and produced nearly 25% more scoring than...</description>
-    <category>pakistan</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 24 Jun 2026 06:12:50 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-sees-record-goals-and-the-ball-s-to-blame--jvw68a.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1512915/world-cup-sees-record-goals-and-the-balls-to-blame/">Daily Times</source>
-  </item>
-  <item>
-    <title>World Cup referees are just not good enough - Tuchel</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-referees-are-just-not-good-enough-tuchel--n0s1ts</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-referees-are-just-not-good-enough-tuchel--n0s1ts</guid>
-    <description>England head coach Thomas Tuchel says referees at the World Cup \&quot;are just not good enough\&quot; after the dramatic last-16 win over Mexico.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Mon, 06 Jul 2026 02:50:51 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-referees-are-just-not-good-enough-tuchel--n0s1ts.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/cq6115rj9ymo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
