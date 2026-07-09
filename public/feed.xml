@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 08 Jul 2026 23:12:51 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 03:31:47 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -512,6 +512,17 @@
     <source url="https://www.bbc.com/news/articles/c17ynlek5djo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Would the US protect NATO allies if they were attacked?</title>
+    <link>https://thegloballens365.vercel.app/article/would-the-us-protect-nato-allies-if-they-were-attacked--ejfj6n</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/would-the-us-protect-nato-allies-if-they-were-attacked--ejfj6n</guid>
+    <description>This is America: Jim Townsend says he is unsure whether the US would send troops if a NATO ally were attacked.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Thu, 09 Jul 2026 02:39:35 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/would-the-us-protect-nato-allies-if-they-were-attacked--ejfj6n.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/9/aje-onl-nf_would-the-us-protect-nato-allies-080726?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>World’s largest particle smasher halts for upgrade to boost hunt for dark matter</title>
     <link>https://thegloballens365.vercel.app/article/world-s-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter--rdc5wh</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-s-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter--rdc5wh</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 21 Jun 2026 02:00:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-lens-how-the-shanghai-film-festival-puts-its-faith-in-a-new-generation--thx2do.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/movies/movie-news/world-lens-how-shanghai-film-festival-faith-new-generation-1236626498/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>World cup wrap day 9</title>
-    <link>https://thegloballens365.vercel.app/article/world-cup-wrap-day-9--h0tjo1</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-cup-wrap-day-9--h0tjo1</guid>
-    <description>World cup wrap day 9</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 20 Jun 2026 17:27:59 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-cup-wrap-day-9--h0tjo1.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/20/world-cup-wrap-day-9?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
