@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 09 Jul 2026 15:17:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 18:01:03 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -246,6 +246,17 @@
     <pubDate>Wed, 08 Jul 2026 15:18:09 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2013901/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasphemy-peca-charges">Dawn</source>
+  </item>
+  <item>
+    <title>YouTube Stars the Stokes Twins Sign Netflix Deal (Exclusive)</title>
+    <link>https://thegloballens365.vercel.app/article/youtube-stars-the-stokes-twins-sign-netflix-deal-exclusive--v2uqc2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youtube-stars-the-stokes-twins-sign-netflix-deal-exclusive--v2uqc2</guid>
+    <description>An archive of the brothers&apos; content will debut on the streamer July 18, and they&apos;re also developing a long-form series.</description>
+    <category>shobiz</category>
+    <author>Babar Shah</author>
+    <pubDate>Thu, 09 Jul 2026 16:01:26 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/youtube-stars-the-stokes-twins-sign-netflix-deal-exclusive--v2uqc2.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/youtube-stokes-twins-netflix-deal-1236643152/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>&apos;Your boys took a hell of a beating&apos; - England and Norway&apos;s football rivalry</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 25 Jun 2026 09:06:40 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32--z0g99v.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/25/world-reacts-as-devastating-venezuela-earthquakes-kill-at-least-32?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>World Lens: How the Shanghai Film Festival Puts Its Faith in a New Generation</title>
-    <link>https://thegloballens365.vercel.app/article/world-lens-how-the-shanghai-film-festival-puts-its-faith-in-a-new-generation--thx2do</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-lens-how-the-shanghai-film-festival-puts-its-faith-in-a-new-generation--thx2do</guid>
-    <description>Major awards go to first-time filmmakers, reflecting a commitment to finding Asia&apos;s rising stars, while industry initiatives continue to help young directors...</description>
-    <category>shobiz</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sun, 21 Jun 2026 02:00:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-lens-how-the-shanghai-film-festival-puts-its-faith-in-a-new-generation--thx2do.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/movies/movie-news/world-lens-how-shanghai-film-festival-faith-new-generation-1236626498/">The Hollywood Reporter</source>
   </item>
   </channel>
 </rss>
