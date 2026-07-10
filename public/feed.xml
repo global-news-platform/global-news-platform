@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 10 Jul 2026 14:34:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 17:52:18 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -26,6 +26,17 @@
     <pubDate>Fri, 03 Jul 2026 16:39:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zuma-showing-south-africa-middle-finger-by-meeting-gupta-brother-minister--v3nkx2.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cvge0gd6lnqo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zulu king expresses regret after video captures tirade against his wife</title>
+    <link>https://thegloballens365.vercel.app/article/zulu-king-expresses-regret-after-video-captures-tirade-against-his-wife--yray9m</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zulu-king-expresses-regret-after-video-captures-tirade-against-his-wife--yray9m</guid>
+    <description>In the footage widely shared in South Africa, King Misuzulu threatens to physically assault his wife and accuses her of cheating.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Fri, 10 Jul 2026 16:42:11 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zulu-king-expresses-regret-after-video-captures-tirade-against-his-wife--yray9m.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cy8dl9n1v3vo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zuckerberg says AI progress slower than expected</title>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 28 Jun 2026 02:04:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/world-s-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter--rdc5wh.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2011257/worlds-largest-particle-smasher-halts-for-upgrade-to-boost-hunt-for-dark-matter">Dawn</source>
-  </item>
-  <item>
-    <title>World Refugee Day</title>
-    <link>https://thegloballens365.vercel.app/article/world-refugee-day--h43sp5</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/world-refugee-day--h43sp5</guid>
-    <description>WORLD Refugee Day, observed today around the globe, marks 75 years since the adoption of the 1951 convention relating to the status of refugees.</description>
-    <category>siasat</category>
-    <author>Sara Khan</author>
-    <pubDate>Sat, 20 Jun 2026 00:07:42 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/world-refugee-day--h43sp5.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2009411/world-refugee-day">Dawn</source>
   </item>
   </channel>
 </rss>
