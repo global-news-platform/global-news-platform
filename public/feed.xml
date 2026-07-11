@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 11 Jul 2026 11:09:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 13:26:09 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -59,6 +59,17 @@
     <pubDate>Tue, 23 Jun 2026 13:24:22 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zombeid-marks-bold-new-chapter-for-pakistani-cinema--de8shg.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1512515/zombeid-marks-bold-new-chapter-for-pakistani-cinema/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zimbabweans return home amid xenophobic violence in South Africa</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabweans-return-home-amid-xenophobic-violence-in-south-africa--q304jc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabweans-return-home-amid-xenophobic-violence-in-south-africa--q304jc</guid>
+    <description>Zimbabweans return home amid xenophobic violence in South Africa</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Sat, 11 Jul 2026 11:47:54 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabweans-return-home-amid-xenophobic-violence-in-south-africa--q304jc.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/11/zimbabweans-return-home-amid-xenophobic-violence-in-south-africa?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zimbabwean football star survives gun attack in South Africa</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 27 Jun 2026 21:00:03 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wyatt-hodge-smashes-unbeaten-89-as-england-race-into-semis--kshkem.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/cricket/articles/c3vy1e0l774o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Wyatt-Hodge half-century powers England against Windies</title>
-    <link>https://thegloballens365.vercel.app/article/wyatt-hodge-half-century-powers-england-against-windies--e300zf</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wyatt-hodge-half-century-powers-england-against-windies--e300zf</guid>
-    <description>Watch how Danni Wyatt-Hodge reached a half century for England while playing against West Indies in the ICC Women&apos;s T20 World Cup.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 24 Jun 2026 18:42:49 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/wyatt-hodge-half-century-powers-england-against-windies--e300zf.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/videos/cpd397w91z0o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
