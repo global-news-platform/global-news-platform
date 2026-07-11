@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 11 Jul 2026 09:42:35 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 11:09:48 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -268,6 +268,17 @@
     <pubDate>Tue, 23 Jun 2026 12:02:29 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>YSL Beauty and Armani Beauty strengthen presence in Pakistan</title>
+    <link>https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</guid>
+    <description>Luxury beauty brands YSL Beauty and Armani Beauty have reaffirmed their official presence in Pakistan following high-profile launch events in Lahore that...</description>
+    <category>pakistan</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sat, 11 Jul 2026 09:59:28 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1521520/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan/">Daily Times</source>
   </item>
   <item>
     <title>YouTuber Rehan Tariq handed over to NCCIA on six-day physical remand over blasphemy, PECA charges</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 24 Jun 2026 18:42:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wyatt-hodge-half-century-powers-england-against-windies--e300zf.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/videos/cpd397w91z0o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Wreckage of missing cargo plane located off Ormara: PAA</title>
-    <link>https://thegloballens365.vercel.app/article/wreckage-of-missing-cargo-plane-located-off-ormara-paa--1uokt7</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wreckage-of-missing-cargo-plane-located-off-ormara-paa--1uokt7</guid>
-    <description>The Pakistan Airports Authority (PAA) on Wednesday said the Pakistan Navy (PN) and Pakistan Maritime Security Agency (PMSA), after 12 hours of search and...</description>
-    <category>pakistan</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 08 Jul 2026 14:07:17 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/wreckage-of-missing-cargo-plane-located-off-ormara-paa--1uokt7.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2013836/wreckage-of-missing-cargo-plane-located-off-ormara-paa">Dawn</source>
   </item>
   </channel>
 </rss>
