@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 13 Jul 2026 11:16:48 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 14:41:27 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -380,6 +380,17 @@
     <source url="https://www.dawn.com/news/2014943/young-girl-among-six-dead-in-israeli-strike-in-gaza">Dawn</source>
   </item>
   <item>
+    <title>Young doctor shot dead in robbery near Karachi&apos;s Teen Talwar: police</title>
+    <link>https://thegloballens365.vercel.app/article/young-doctor-shot-dead-in-robbery-near-karachi-s-teen-talwar-police--w0yv77</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-doctor-shot-dead-in-robbery-near-karachi-s-teen-talwar-police--w0yv77</guid>
+    <description>KARACHI: A young doctor practicing at the Jinnah Postgraduate Medical Centre (JPMC) was shot dead during a robbery near Clifton on Monday, according to police.</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Mon, 13 Jul 2026 14:36:23 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-doctor-shot-dead-in-robbery-near-karachi-s-teen-talwar-police--w0yv77.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2015139/young-doctor-shot-dead-in-robbery-near-karachis-teen-talwar-police">Dawn</source>
+  </item>
+  <item>
     <title>&apos;You&apos;ve been trying to kill me for 23 years&apos; - should Ronaldo start?</title>
     <link>https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</guid>
@@ -468,6 +479,17 @@
     <source url="https://dailytimes.com.pk/1515581/yen-hits-39-year-low-as-dollar-strength-pressures-japan/">Daily Times</source>
   </item>
   <item>
+    <title>Yemeni government forces strike Sanaa airport</title>
+    <link>https://thegloballens365.vercel.app/article/yemeni-government-forces-strike-sanaa-airport--mgotko</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemeni-government-forces-strike-sanaa-airport--mgotko</guid>
+    <description>Yemeni government forces strike Sanaa airport</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 13 Jul 2026 14:03:44 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemeni-government-forces-strike-sanaa-airport--mgotko.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/13/yemeni-government-forces-strike-sanaa-airport?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Yemen’s Houthis threaten Saudi Arabia after alleged airspace intrusion</title>
     <link>https://thegloballens365.vercel.app/article/yemen-s-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion--m62u45</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-s-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion--m62u45</guid>
@@ -543,28 +565,6 @@
     <pubDate>Fri, 03 Jul 2026 18:11:14 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/xhaka-set-to-stay-at-sunderland-despite-chelsea-interest--uj2s7l.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/football/articles/c5yz8jj0g50o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Xbox to raise console prices worldwide from August</title>
-    <link>https://thegloballens365.vercel.app/article/xbox-to-raise-console-prices-worldwide-from-august--bjbcce</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/xbox-to-raise-console-prices-worldwide-from-august--bjbcce</guid>
-    <description>Microsoft’s Xbox is raising prices of its gaming consoles by up to $150 worldwide, citing a deepening global components crisis that has sent storage and memory...</description>
-    <category>technology</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Thu, 25 Jun 2026 18:25:18 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/xbox-to-raise-console-prices-worldwide-from-august--bjbcce.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2010839/xbox-to-raise-console-prices-worldwide-from-august">Dawn</source>
-  </item>
-  <item>
-    <title>X wants to know how Danish Taimoor &apos;grew up&apos; watching 41-year-old Ronaldo</title>
-    <link>https://thegloballens365.vercel.app/article/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo--4y38b3</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo--4y38b3</guid>
-    <description>https://images.dawn.com/news/1195516</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 08 Jul 2026 11:12:18 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo--4y38b3.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2013869/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo">Dawn</source>
   </item>
   </channel>
 </rss>
