@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 13 Jul 2026 03:00:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 06:58:16 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -224,6 +224,17 @@
     <pubDate>Sat, 04 Jul 2026 11:02:03 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2012943/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka">Dawn</source>
+  </item>
+  <item>
+    <title>Zelensky announces major government reshuffle</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</guid>
+    <description>Ukrainian President Volodymyr Zelensky has announced a major government reshuffle, confirming his decision to replace Prime Minister Yulia Svyrydenko as part...</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Mon, 13 Jul 2026 05:31:07 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-announces-major-government-reshuffle--j2yq4n.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1522108/zelensky-announces-major-government-reshuffle/">Daily Times</source>
   </item>
   <item>
     <title>Zardari signs finance bill, budget 2026-27 activated</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 08 Jul 2026 11:12:18 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo--4y38b3.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2013869/x-wants-to-know-how-danish-taimoor-grew-up-watching-41-year-old-ronaldo">Dawn</source>
-  </item>
-  <item>
-    <title>Wyndham Clark edges Burns to win second US Open title</title>
-    <link>https://thegloballens365.vercel.app/article/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz</guid>
-    <description>WYNDHAM Clark of the US celebrates after winning the US Open title at the Shinnecock Hills Golf Club.</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Tue, 23 Jun 2026 04:22:26 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2010200/wyndham-clark-edges-burns-to-win-second-us-open-title">Dawn</source>
   </item>
   </channel>
 </rss>
