@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 13 Jul 2026 18:00:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 19:30:56 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -501,6 +501,17 @@
     <source url="https://www.aljazeera.com/news/2026/7/3/yemens-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>Yemen govt says hit Sanaa airport, Houthis attack Saudi Arabia</title>
+    <link>https://thegloballens365.vercel.app/article/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib</guid>
+    <description>Yemen’s Houthis targeted Saudi Arabia on Monday, hours after the rebels accused the kingdom of attacking Sanaa airport — the biggest flare-up in years between...</description>
+    <category>pakistan</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 13 Jul 2026 18:25:45 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2015162/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia">Dawn</source>
+  </item>
+  <item>
     <title>Yemen government says it attacked Houthi-controlled Sanaa airport, reviving dormant conflict</title>
     <link>https://thegloballens365.vercel.app/article/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 11 Jul 2026 02:26:40 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-does-not-mind-lack-of-goals-if-spain-win-world-cup-2026--4upxu4.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/7/11/yamal-does-not-mind-lack-of-goals-if-spain-win-world-cup-2026?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Xi vows to strengthen China&apos;s military, stamp out corruption</title>
-    <link>https://thegloballens365.vercel.app/article/xi-vows-to-strengthen-china-s-military-stamp-out-corruption--vczfjk</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/xi-vows-to-strengthen-china-s-military-stamp-out-corruption--vczfjk</guid>
-    <description>Chinese President Xi Jinping vowed on Wednesday to strengthen and modernise the military and to stamp out corruption within the ruling Communist Party.</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 01 Jul 2026 06:52:56 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/xi-vows-to-strengthen-china-s-military-stamp-out-corruption--vczfjk.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2012144/xi-vows-to-strengthen-chinas-military-stamp-out-corruption">Dawn</source>
   </item>
   </channel>
 </rss>
