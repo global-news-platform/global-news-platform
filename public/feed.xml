@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 13 Jul 2026 14:41:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 18:00:08 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -501,6 +501,17 @@
     <source url="https://www.aljazeera.com/news/2026/7/3/yemens-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>Yemen government says it attacked Houthi-controlled Sanaa airport, reviving dormant conflict</title>
+    <link>https://thegloballens365.vercel.app/article/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6</guid>
+    <description>Yemen’s internationally recognised government said it struck Houthi-controlled Sanaa airport on Monday, its biggest flare-up in years with the rebels, who...</description>
+    <category>pakistan</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 13 Jul 2026 17:49:26 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2015162/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dormant-conflict">Dawn</source>
+  </item>
+  <item>
     <title>‘Yellowstone’ creator Taylor Sheridan addresses Kevin Costner’s exit amid feud rumours</title>
     <link>https://thegloballens365.vercel.app/article/yellowstone-creator-taylor-sheridan-addresses-kevin-costner-s-exit-amid-feud-rum--5ghxmv</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yellowstone-creator-taylor-sheridan-addresses-kevin-costner-s-exit-amid-feud-rum--5ghxmv</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 01 Jul 2026 06:52:56 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/xi-vows-to-strengthen-china-s-military-stamp-out-corruption--vczfjk.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2012144/xi-vows-to-strengthen-chinas-military-stamp-out-corruption">Dawn</source>
-  </item>
-  <item>
-    <title>Xhaka set to stay at Sunderland despite Chelsea interest</title>
-    <link>https://thegloballens365.vercel.app/article/xhaka-set-to-stay-at-sunderland-despite-chelsea-interest--uj2s7l</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/xhaka-set-to-stay-at-sunderland-despite-chelsea-interest--uj2s7l</guid>
-    <description>Sunderland captain Granit Xhaka is set to stay at the club this summer, despite interest from Chelsea.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Fri, 03 Jul 2026 18:11:14 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/xhaka-set-to-stay-at-sunderland-despite-chelsea-interest--uj2s7l.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/c5yz8jj0g50o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
