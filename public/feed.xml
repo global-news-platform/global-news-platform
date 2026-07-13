@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 12 Jul 2026 22:54:41 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 03:00:33 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -358,6 +358,17 @@
     <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>Young girl among six dead in Israeli strike in Gaza</title>
+    <link>https://thegloballens365.vercel.app/article/young-girl-among-six-dead-in-israeli-strike-in-gaza--qhlq62</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-girl-among-six-dead-in-israeli-strike-in-gaza--qhlq62</guid>
+    <description>CAIRO: Israeli attacks killed at least six people in the Gaza Strip on Sunday, including a nine-year-old girl, Palestinian health officials said, as mediators...</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Mon, 13 Jul 2026 02:44:42 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-girl-among-six-dead-in-israeli-strike-in-gaza--qhlq62.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2014943/young-girl-among-six-dead-in-israeli-strike-in-gaza">Dawn</source>
+  </item>
+  <item>
     <title>&apos;You&apos;ve been trying to kill me for 23 years&apos; - should Ronaldo start?</title>
     <link>https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 23 Jun 2026 04:22:26 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/wyndham-clark-edges-burns-to-win-second-us-open-title--0kq1kz.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2010200/wyndham-clark-edges-burns-to-win-second-us-open-title">Dawn</source>
-  </item>
-  <item>
-    <title>Wyatt-Hodge smashes unbeaten 89 as England race into semis</title>
-    <link>https://thegloballens365.vercel.app/article/wyatt-hodge-smashes-unbeaten-89-as-england-race-into-semis--kshkem</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/wyatt-hodge-smashes-unbeaten-89-as-england-race-into-semis--kshkem</guid>
-    <description>England&apos;s winning run at the T20 World Cup continues with a rampant nine-wicket victory over New Zealand in their final group game at The Oval.</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sat, 27 Jun 2026 21:00:03 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/wyatt-hodge-smashes-unbeaten-89-as-england-race-into-semis--kshkem.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/cricket/articles/c3vy1e0l774o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
