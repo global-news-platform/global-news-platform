@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 14 Jul 2026 13:51:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 15:28:45 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -336,6 +336,17 @@
     <source url="https://www.bbc.co.uk/sport/football/articles/cz9l74k031do?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>Younis Khan takes charge as KCL league commissioner</title>
+    <link>https://thegloballens365.vercel.app/article/younis-khan-takes-charge-as-kcl-league-commissioner--hm2kuj</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/younis-khan-takes-charge-as-kcl-league-commissioner--hm2kuj</guid>
+    <description>Former Pakistan captain Younis Khan has been appointed as the League Commissioner of the Khyber Pakhtunkhwa Champions League, marking another major addition to...</description>
+    <category>pakistan</category>
+    <author>Babar Shah</author>
+    <pubDate>Tue, 14 Jul 2026 13:52:40 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/younis-khan-takes-charge-as-kcl-league-commissioner--hm2kuj.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1522941/younis-khan-takes-charge-as-kcl-league-commissioner/">Daily Times</source>
+  </item>
+  <item>
     <title>Young women now have &apos;close to zero&apos; risk of cervical cancer death after HPV jab</title>
     <link>https://thegloballens365.vercel.app/article/young-women-now-have-close-to-zero-risk-of-cervical-cancer-death-after-hpv-jab--jdi5fg</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-women-now-have-close-to-zero-risk-of-cervical-cancer-death-after-hpv-jab--jdi5fg</guid>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 17:26:20 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs8-5--9m4anr.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2008087/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs85bn-payment">Dawn</source>
-  </item>
-  <item>
-    <title>Yamal is Spain&apos;s main man - Rooney analysis</title>
-    <link>https://thegloballens365.vercel.app/article/yamal-is-spain-s-main-man-rooney-analysis--wy900r</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yamal-is-spain-s-main-man-rooney-analysis--wy900r</guid>
-    <description>Watch BBC pundits Wayne Rooney, Cesar Azpilicueta, and Thomas Frank give their analysis on Lamine Yamal&apos;s performance for Spain against Saudi Arabia in the...</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sun, 21 Jun 2026 19:24:06 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-is-spain-s-main-man-rooney-analysis--wy900r.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/sport/football/videos/clye4lmd3zzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
