@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 14 Jul 2026 10:03:37 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 11:43:42 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -501,6 +501,17 @@
     <source url="https://www.aljazeera.com/news/2026/7/3/yemens-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>Yemen&apos;s Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport</title>
+    <link>https://thegloballens365.vercel.app/article/yemen-s-houthis-launch-missiles-at-saudi-arabia-after-strikes-on-sanaa-airport--lir52q</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-s-houthis-launch-missiles-at-saudi-arabia-after-strikes-on-sanaa-airport--lir52q</guid>
+    <description>The Iran-backed Houthis blame Saudi Arabia for the attack in Yemen&apos;s capital and say they targeted Abha airport in response.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 14 Jul 2026 10:02:43 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-s-houthis-launch-missiles-at-saudi-arabia-after-strikes-on-sanaa-airport--lir52q.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cp9ldle3d3xo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Yemen govt says hit Sanaa airport, Houthis attack Saudi Arabia</title>
     <link>https://thegloballens365.vercel.app/article/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 21 Jun 2026 19:24:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-is-spain-s-main-man-rooney-analysis--wy900r.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/sport/football/videos/clye4lmd3zzo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Yamal does not mind lack of goals if Spain win World Cup 2026</title>
-    <link>https://thegloballens365.vercel.app/article/yamal-does-not-mind-lack-of-goals-if-spain-win-world-cup-2026--4upxu4</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yamal-does-not-mind-lack-of-goals-if-spain-win-world-cup-2026--4upxu4</guid>
-    <description>Spanish star has scored just one goal in the World Cup, where he has been sharing celebrations with his little brother.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 11 Jul 2026 02:26:40 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yamal-does-not-mind-lack-of-goals-if-spain-win-world-cup-2026--4upxu4.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/sports/2026/7/11/yamal-does-not-mind-lack-of-goals-if-spain-win-world-cup-2026?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
