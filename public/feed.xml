@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 15 Jul 2026 15:31:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 17:22:53 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -158,6 +158,17 @@
     <pubDate>Sat, 20 Jun 2026 13:14:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/zelenskyy-returns-poland-s-highest-honor-as-row-deepens/a-77637366?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Zelenskyy backs state energy company chief Koretskyi for new Ukraine PM</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-ukraine-pm--7s7md1</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-ukraine-pm--7s7md1</guid>
+    <description>Ukraine&apos;s parliament is expected to vote for the next prime minister on Thursday.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 15 Jul 2026 16:48:14 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-ukraine-pm--7s7md1.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/7/15/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-pm?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zelenskyy attends Ireland EU presidency ceremony</title>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 03 Jul 2026 15:38:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yellowstone-creator-taylor-sheridan-addresses-kevin-costner-s-exit-amid-feud-rum--5ghxmv.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1517178/yellowstone-creator-taylor-sheridan-addresses-kevin-costners-exit-amid-feud-rumours/">Daily Times</source>
-  </item>
-  <item>
-    <title>Yellow Line BRT: Two bureaucrats booked in Karachi over misuse of authority, Rs8.5bn payment</title>
-    <link>https://thegloballens365.vercel.app/article/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs8-5--9m4anr</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs8-5--9m4anr</guid>
-    <description>KARACHI: Two bureaucrats have been booked over an advance payment of Rs8.5 billion to contractors of the Yellow Line BRT project in an alleged case of misuse...</description>
-    <category>pakistan</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 15 Jun 2026 17:26:20 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs8-5--9m4anr.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2008087/yellow-line-brt-two-bureaucrats-booked-in-karachi-over-misuse-of-authority-rs85bn-payment">Dawn</source>
   </item>
   </channel>
 </rss>
