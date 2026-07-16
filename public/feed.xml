@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 16 Jul 2026 10:14:28 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 14:01:18 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -158,6 +158,17 @@
     <pubDate>Sat, 20 Jun 2026 13:14:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/zelenskyy-returns-poland-s-highest-honor-as-row-deepens/a-77637366?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Zelenskyy fires Ukraine&apos;s tech-savvy defense minister in government reshuffle</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc</guid>
+    <description>Ukraine&apos;s President Volodymyr Zelenskyy has fired the country&apos;s popular defense minister, who pushed for innovation in the battlefield through the use of...</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Thu, 16 Jul 2026 11:33:11 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired">NPR</source>
   </item>
   <item>
     <title>Zelenskyy backs state energy company chief Koretskyi for new Ukraine PM</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 13 Jul 2026 18:25:45 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2015162/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia">Dawn</source>
-  </item>
-  <item>
-    <title>Yemen government says it attacked Houthi-controlled Sanaa airport, reviving dormant conflict</title>
-    <link>https://thegloballens365.vercel.app/article/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6</guid>
-    <description>Yemen’s internationally recognised government said it struck Houthi-controlled Sanaa airport on Monday, its biggest flare-up in years with the rebels, who...</description>
-    <category>pakistan</category>
-    <author>Imran Malik</author>
-    <pubDate>Mon, 13 Jul 2026 17:49:26 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dorma--wcqgn6.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2015162/yemen-government-says-it-attacked-houthi-controlled-sanaa-airport-reviving-dormant-conflict">Dawn</source>
   </item>
   </channel>
 </rss>
