@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 16 Jul 2026 15:43:30 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 17:21:53 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -213,6 +213,17 @@
     <pubDate>Fri, 19 Jun 2026 21:46:07 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-stripped-of-highest-polish-honour-over-ww2-name-of-army-unit--z1h4c5.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cr7xzg3dmj8o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zelensky&apos;s removal of popular defence minister sparks protests in Ukraine</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-s-removal-of-popular-defence-minister-sparks-protests-in-ukraine--9wbnm2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-s-removal-of-popular-defence-minister-sparks-protests-in-ukraine--9wbnm2</guid>
+    <description>A rift between Fedorov and Commander-in-Chief Oleksandr Syrskyi was apparently at the heart of Zelensky&apos;s decision.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 16 Jul 2026 16:36:21 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-s-removal-of-popular-defence-minister-sparks-protests-in-ukraine--9wbnm2.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cdx76069n3do?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zelensky returns highest Polish honour after award stripped</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 16 Jul 2026 09:36:38 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-is-edging-closer-to-renewed-confrontation--fqh081.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/opinions/2026/7/16/yemen-is-edging-closer-to-renewed-confrontation?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Yemen govt says hit Sanaa airport, Houthis attack Saudi Arabia</title>
-    <link>https://thegloballens365.vercel.app/article/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib</guid>
-    <description>Yemen’s Houthis targeted Saudi Arabia on Monday, hours after the rebels accused the kingdom of attacking Sanaa airport — the biggest flare-up in years between...</description>
-    <category>pakistan</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Mon, 13 Jul 2026 18:25:45 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia--ucsoib.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2015162/yemen-govt-says-hit-sanaa-airport-houthis-attack-saudi-arabia">Dawn</source>
   </item>
   </channel>
 </rss>
