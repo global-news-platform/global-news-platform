@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 18 Jul 2026 14:58:06 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 17:02:23 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -169,6 +169,17 @@
     <pubDate>Thu, 16 Jul 2026 11:33:11 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc.jpg" type="image/jpeg" />
     <source url="https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired">NPR</source>
+  </item>
+  <item>
+    <title>Zelenskyy confirms strikes on Russian facilities</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-confirms-strikes-on-russian-facilities--qp5by3</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-confirms-strikes-on-russian-facilities--qp5by3</guid>
+    <description>Ukrainian President Volodymyr Zelenskyy said Ukraine carried out long-range strikes on Russian oil and logistics facilities in the Moscow and Tambov regions.</description>
+    <category>pakistan</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sat, 18 Jul 2026 16:18:30 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-confirms-strikes-on-russian-facilities--qp5by3.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1524947/zelenskyy-confirms-strikes-on-russian-facilities/">Daily Times</source>
   </item>
   <item>
     <title>Zelenskyy backs state energy company chief Koretskyi for new Ukraine PM</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 14 Jul 2026 10:02:43 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-s-houthis-launch-missiles-at-saudi-arabia-after-strikes-on-sanaa-airport--lir52q.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cp9ldle3d3xo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Yemen is edging closer to renewed confrontation</title>
-    <link>https://thegloballens365.vercel.app/article/yemen-is-edging-closer-to-renewed-confrontation--fqh081</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-is-edging-closer-to-renewed-confrontation--fqh081</guid>
-    <description>The Iranian aircraft incident has exposed a fragile calm that may not survive a wider regional escalation.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Thu, 16 Jul 2026 09:36:38 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-is-edging-closer-to-renewed-confrontation--fqh081.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/opinions/2026/7/16/yemen-is-edging-closer-to-renewed-confrontation?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
