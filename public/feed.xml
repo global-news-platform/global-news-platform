@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 20 Jul 2026 18:09:17 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 21:17:53 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -534,6 +534,17 @@
     <source url="https://dailytimes.com.pk/1515581/yen-hits-39-year-low-as-dollar-strength-pressures-japan/">Daily Times</source>
   </item>
   <item>
+    <title>Yemeni women support families through enterprise as economic crisis bites</title>
+    <link>https://thegloballens365.vercel.app/article/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites--8oluk7</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites--8oluk7</guid>
+    <description>Amid Yemen’s harsh economic crisis, securing viable employment has become increasingly difficult for men.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 20 Jul 2026 19:36:37 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites--8oluk7.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/economy/2026/7/20/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Yemeni government forces strike Sanaa airport</title>
     <link>https://thegloballens365.vercel.app/article/yemeni-government-forces-strike-sanaa-airport--mgotko</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemeni-government-forces-strike-sanaa-airport--mgotko</guid>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 03 Jul 2026 15:44:30 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-s-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion--m62u45.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/7/3/yemens-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Yemen&apos;s Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport</title>
-    <link>https://thegloballens365.vercel.app/article/yemen-s-houthis-launch-missiles-at-saudi-arabia-after-strikes-on-sanaa-airport--lir52q</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-s-houthis-launch-missiles-at-saudi-arabia-after-strikes-on-sanaa-airport--lir52q</guid>
-    <description>The Iran-backed Houthis blame Saudi Arabia for the attack in Yemen&apos;s capital and say they targeted Abha airport in response.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 14 Jul 2026 10:02:43 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-s-houthis-launch-missiles-at-saudi-arabia-after-strikes-on-sanaa-airport--lir52q.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cp9ldle3d3xo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
