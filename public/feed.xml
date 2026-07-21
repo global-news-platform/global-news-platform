@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 21 Jul 2026 19:29:53 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 21:16:17 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -224,6 +224,17 @@
     <pubDate>Fri, 19 Jun 2026 21:46:07 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-stripped-of-highest-polish-honour-over-ww2-name-of-army-unit--z1h4c5.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cr7xzg3dmj8o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zelensky sacks Ukraine&apos;s top army commander after days of protests</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-sacks-ukraine-s-top-army-commander-after-days-of-protests--jlszkb</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-sacks-ukraine-s-top-army-commander-after-days-of-protests--jlszkb</guid>
+    <description>Oleksandr Syrskyi is dismissed after days of unrest over the removal of popular Defence Minister Mykhailo Fedorov.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 21 Jul 2026 19:57:38 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-sacks-ukraine-s-top-army-commander-after-days-of-protests--jlszkb.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cyvl35z3917o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zelensky&apos;s removal of popular defence minister sparks protests in Ukraine</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 20 Jul 2026 19:36:37 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites--8oluk7.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/economy/2026/7/20/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Yemeni government forces strike Sanaa airport</title>
-    <link>https://thegloballens365.vercel.app/article/yemeni-government-forces-strike-sanaa-airport--mgotko</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemeni-government-forces-strike-sanaa-airport--mgotko</guid>
-    <description>Yemeni government forces strike Sanaa airport</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Mon, 13 Jul 2026 14:03:44 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemeni-government-forces-strike-sanaa-airport--mgotko.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/13/yemeni-government-forces-strike-sanaa-airport?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
