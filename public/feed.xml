@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 21 Jul 2026 21:16:17 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 23:02:05 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -158,6 +158,17 @@
     <pubDate>Sat, 20 Jun 2026 13:14:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/zelenskyy-returns-poland-s-highest-honor-as-row-deepens/a-77637366?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Zelenskyy replaces Ukraine military chief after protests</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-military-chief-after-protests--2vtyu8</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-military-chief-after-protests--2vtyu8</guid>
+    <description>Replaced military chief Syrskyi clashed with former Defence Minister Fedorov, whose removal last week led to protests.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 21 Jul 2026 21:58:32 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-replaces-ukraine-military-chief-after-protests--2vtyu8.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/7/21/zelenskyy-replaces-ukraine-military-chief-after-protests?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zelenskyy fires Ukraine&apos;s tech-savvy defense minister in government reshuffle</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 30 Jun 2026 10:33:35 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yen-hits-39-year-low-as-dollar-strength-pressures-japan--lrg091.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1515581/yen-hits-39-year-low-as-dollar-strength-pressures-japan/">Daily Times</source>
-  </item>
-  <item>
-    <title>Yemeni women support families through enterprise as economic crisis bites</title>
-    <link>https://thegloballens365.vercel.app/article/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites--8oluk7</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites--8oluk7</guid>
-    <description>Amid Yemen’s harsh economic crisis, securing viable employment has become increasingly difficult for men.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Mon, 20 Jul 2026 19:36:37 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites--8oluk7.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/economy/2026/7/20/yemeni-women-support-families-through-enterprise-as-economic-crisis-bites?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
