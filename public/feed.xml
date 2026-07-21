@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 21 Jul 2026 06:32:50 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 10:30:40 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -369,6 +369,17 @@
     <source url="https://www.hollywoodreporter.com/tv/tv-news/youtube-stokes-twins-netflix-deal-1236643152/">The Hollywood Reporter</source>
   </item>
   <item>
+    <title>Your tips on getting a fussy child to eat, and six recipes they&apos;ll love</title>
+    <link>https://thegloballens365.vercel.app/article/your-tips-on-getting-a-fussy-child-to-eat-and-six-recipes-they-ll-love--xshhug</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/your-tips-on-getting-a-fussy-child-to-eat-and-six-recipes-they-ll-love--xshhug</guid>
+    <description>Want to avoid battles over broccoli and squabbles over spinach? We&apos;ve asked you for your advice on how to cope at mealtimes over the summer holidays.</description>
+    <category>sehat</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 21 Jul 2026 00:16:08 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/your-tips-on-getting-a-fussy-child-to-eat-and-six-recipes-they-ll-love--xshhug.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c5yrjgj984qo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>&apos;Your boys took a hell of a beating&apos; - England and Norway&apos;s football rivalry</title>
     <link>https://thegloballens365.vercel.app/article/your-boys-took-a-hell-of-a-beating-england-and-norway-s-football-rivalry--modqle</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/your-boys-took-a-hell-of-a-beating-england-and-norway-s-football-rivalry--modqle</guid>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 13 Jul 2026 14:03:44 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yemeni-government-forces-strike-sanaa-airport--mgotko.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/7/13/yemeni-government-forces-strike-sanaa-airport?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Yemen’s Houthis threaten Saudi Arabia after alleged airspace intrusion</title>
-    <link>https://thegloballens365.vercel.app/article/yemen-s-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion--m62u45</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yemen-s-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion--m62u45</guid>
-    <description>Army says it confronted Saudi planes that ⁠⁠allegedly tried to ⁠⁠stop Iranian civilian ​aircraft from landing in Sanaa.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Fri, 03 Jul 2026 15:44:30 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yemen-s-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion--m62u45.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/7/3/yemens-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
