@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 22 Jul 2026 02:51:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 06:34:03 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -125,6 +125,17 @@
     <pubDate>Wed, 08 Jul 2026 07:36:11 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-t--xwatcs.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2013827/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-to-probe-incident">Dawn</source>
+  </item>
+  <item>
+    <title>Zendaya’s Best Press Tour Looks, From ‘Dune’ to ‘Challengers’ to ‘The Odyssey’</title>
+    <link>https://thegloballens365.vercel.app/article/zendaya-s-best-press-tour-looks-from-dune-to-challengers-to-the-odyssey--zs6rbi</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zendaya-s-best-press-tour-looks-from-dune-to-challengers-to-the-odyssey--zs6rbi</guid>
+    <description>The actress and her longtime stylist, Law Roach, have become modern pioneers of \&quot;method dressing,\&quot; in which they match fashion to her film and television roles...</description>
+    <category>shobiz</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 22 Jul 2026 04:42:16 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-s-best-press-tour-looks-from-dune-to-challengers-to-the-odyssey--zs6rbi.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/lists/zendaya-best-press-tour-looks/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Zelenskyy urges urgent efforts in Ukraine to start Patriot production</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 25 Jun 2026 23:03:48 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yes-there-have-been-rows-but-here-s-how-i-ve-made-moving-back-home-work--1s4n4p.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cg53q6dl0plo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Yen hits 39-year low as dollar strength pressures Japan</title>
-    <link>https://thegloballens365.vercel.app/article/yen-hits-39-year-low-as-dollar-strength-pressures-japan--lrg091</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yen-hits-39-year-low-as-dollar-strength-pressures-japan--lrg091</guid>
-    <description>The Japanese yen dropped to its weakest level against the US dollar in nearly 39 years on Monday, reflecting growing concerns that American interest rates...</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Tue, 30 Jun 2026 10:33:35 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yen-hits-39-year-low-as-dollar-strength-pressures-japan--lrg091.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1515581/yen-hits-39-year-low-as-dollar-strength-pressures-japan/">Daily Times</source>
   </item>
   </channel>
 </rss>
