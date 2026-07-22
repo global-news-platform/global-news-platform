@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 22 Jul 2026 06:34:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 10:31:04 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -402,6 +402,17 @@
     <source url="https://www.hollywoodreporter.com/tv/tv-news/youtube-stokes-twins-netflix-deal-1236643152/">The Hollywood Reporter</source>
   </item>
   <item>
+    <title>Youth raped by 12 men succumbs to injuries in Bahawalnagar</title>
+    <link>https://thegloballens365.vercel.app/article/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao</guid>
+    <description>BAHAWALPUR: A young shepherd who was gang-raped by 12 men in Cholistan desert in jurisdictions of the Marot Police Station of Bahawalnagar succumbed to his...</description>
+    <category>pakistan</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 22 Jul 2026 10:01:19 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2017352/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar">Dawn</source>
+  </item>
+  <item>
     <title>Your tips on getting a fussy child to eat, and six recipes they&apos;ll love</title>
     <link>https://thegloballens365.vercel.app/article/your-tips-on-getting-a-fussy-child-to-eat-and-six-recipes-they-ll-love--xshhug</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/your-tips-on-getting-a-fussy-child-to-eat-and-six-recipes-they-ll-love--xshhug</guid>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 26 Jun 2026 06:59:20 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/yoon-leads-as-korda-bid-for-major-hat-trick-falters--0orq4n.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/golf/articles/cn4rjvj8krmo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Yes, there have been rows but here&apos;s how I&apos;ve made moving back home work</title>
-    <link>https://thegloballens365.vercel.app/article/yes-there-have-been-rows-but-here-s-how-i-ve-made-moving-back-home-work--1s4n4p</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yes-there-have-been-rows-but-here-s-how-i-ve-made-moving-back-home-work--1s4n4p</guid>
-    <description>Rising costs are forcing more young adults to live with their parents, here&apos;s how not to come to blows.</description>
-    <category>karobar</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Thu, 25 Jun 2026 23:03:48 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yes-there-have-been-rows-but-here-s-how-i-ve-made-moving-back-home-work--1s4n4p.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cg53q6dl0plo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
