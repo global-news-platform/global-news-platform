@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 22 Jul 2026 10:31:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 14:03:44 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -169,6 +169,17 @@
     <pubDate>Sat, 20 Jun 2026 13:14:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/zelenskyy-returns-poland-s-highest-honor-as-row-deepens/a-77637366?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
+  </item>
+  <item>
+    <title>Zelenskyy replaces Ukraine’s commander-in-chief after days of protests</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-s-commander-in-chief-after-days-of-protests--tns3xa</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-s-commander-in-chief-after-days-of-protests--tns3xa</guid>
+    <description>Zelenskyy replaces Ukraine’s commander-in-chief after days of protests</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 22 Jul 2026 12:57:20 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-replaces-ukraine-s-commander-in-chief-after-days-of-protests--tns3xa.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/22/zelenskyy-replaces-ukraines-commander-in-chief-after-days-of-protests?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zelenskyy replaces Ukraine military chief after protests</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 29 Jun 2026 00:02:44 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/you-are-canadian-heroes-the-forgotten-hosts-making-world-cup-history--f5l9lq.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/football/articles/cvg4pen8xq7o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Yoon leads as Korda bid for major hat-trick falters</title>
-    <link>https://thegloballens365.vercel.app/article/yoon-leads-as-korda-bid-for-major-hat-trick-falters--0orq4n</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/yoon-leads-as-korda-bid-for-major-hat-trick-falters--0orq4n</guid>
-    <description>Ina Yoon leads the Women&apos;s PGA Championship by two shots after the first round as Nellie Korda&apos;s hopes of a third straight major falter.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Fri, 26 Jun 2026 06:59:20 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/yoon-leads-as-korda-bid-for-major-hat-trick-falters--0orq4n.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/golf/articles/cn4rjvj8krmo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
