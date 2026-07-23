@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 23 Jul 2026 14:08:27 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 17:27:23 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -391,6 +391,17 @@
     <source url="https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zale Parry, Pioneering Scuba Diver and ‘Sea Hunt’ Actress, Dies at 93</title>
+    <link>https://thegloballens365.vercel.app/article/zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93--t5jv9a</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93--t5jv9a</guid>
+    <description>A record-setting plunge got her on ‘You Bet Your Life’ with Groucho Marx, followed by work in ‘Boy on a Dolphin,’ ‘Underwater Warrior’ and ‘Voyage to the...</description>
+    <category>shobiz</category>
+    <author>Imran Malik</author>
+    <pubDate>Thu, 23 Jul 2026 16:35:08 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93--t5jv9a.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/zale-parry-dead-scuba-diver-sea-hunt-1236655098/">The Hollywood Reporter</source>
+  </item>
+  <item>
     <title>YSL Beauty and Armani Beauty strengthen presence in Pakistan</title>
     <link>https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 04 Jul 2026 16:22:13 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/you-don-t-see-that-often-buttler-s-unconventional-run-out--8m6els.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/cricket/videos/c04y2162v6vo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>&apos;You can&apos;t catch your breath&apos; - how will Azteca altitude impact England?</title>
-    <link>https://thegloballens365.vercel.app/article/you-can-t-catch-your-breath-how-will-azteca-altitude-impact-england--s3mton</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-can-t-catch-your-breath-how-will-azteca-altitude-impact-england--s3mton</guid>
-    <description>BBC Sport explores how playing football at high altitude affects the body and mind as England prepare to visit Mexico and their fortress Azteca Stadium.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Thu, 02 Jul 2026 08:21:52 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-can-t-catch-your-breath-how-will-azteca-altitude-impact-england--s3mton.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/c4gy0v05qyro?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
