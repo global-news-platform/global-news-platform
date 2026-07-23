@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 23 Jul 2026 17:27:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 19:23:47 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -48,6 +48,17 @@
     <pubDate>Fri, 03 Jul 2026 17:53:10 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zuckerberg-says-ai-progress-slower-than-expected--2eul2e.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1517110/zuckerberg-says-ai-progress-slower-than-expected/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zosia Mamet Joins ‘Industry’ Season 5</title>
+    <link>https://thegloballens365.vercel.app/article/zosia-mamet-joins-industry-season-5--k5zazi</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zosia-mamet-joins-industry-season-5--k5zazi</guid>
+    <description>The ‘Girls’ actress will join the HBO and BBC series as a new character for its final season.</description>
+    <category>shobiz</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 23 Jul 2026 19:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zosia-mamet-joins-industry-season-5--k5zazi.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/industry-adds-zosia-mamet-season-5-cast-1236655281/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Zombeid marks bold new chapter for Pakistani cinema</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 11 Jul 2026 01:05:23 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/you-made-us-proud-egypt-gives-heroes-welcome-to-team--u3ngzu.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2014464/you-made-us-proud-egypt-gives-heroes-welcome-to-team">Dawn</source>
-  </item>
-  <item>
-    <title>&apos;You don&apos;t see that often!&apos; - Buttler&apos;s unconventional run-out</title>
-    <link>https://thegloballens365.vercel.app/article/you-don-t-see-that-often-buttler-s-unconventional-run-out--8m6els</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-don-t-see-that-often-buttler-s-unconventional-run-out--8m6els</guid>
-    <description>Jos Buttler runs out Axar Patel, after appearing to initially aim but miss the batter&apos;s stumps, before the ball rolls through to hit at the non-striker&apos;s end,...</description>
-    <category>khel</category>
-    <author>Imran Malik</author>
-    <pubDate>Sat, 04 Jul 2026 16:22:13 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-don-t-see-that-often-buttler-s-unconventional-run-out--8m6els.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/cricket/videos/c04y2162v6vo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
