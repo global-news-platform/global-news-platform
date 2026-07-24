@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 24 Jul 2026 15:30:06 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 17:42:28 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -70,6 +70,17 @@
     <pubDate>Tue, 23 Jun 2026 13:24:22 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zombeid-marks-bold-new-chapter-for-pakistani-cinema--de8shg.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1512515/zombeid-marks-bold-new-chapter-for-pakistani-cinema/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zohran Mamdani praises Shamoon Ismail’s music</title>
+    <link>https://thegloballens365.vercel.app/article/zohran-mamdani-praises-shamoon-ismail-s-music--gar8qd</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zohran-mamdani-praises-shamoon-ismail-s-music--gar8qd</guid>
+    <description>New York City Mayor Zohran Mamdani has revealed that he has been listening to Pakistani singer and rapper Shamoon Ismail for several years.</description>
+    <category>pakistan</category>
+    <author>Imran Malik</author>
+    <pubDate>Fri, 24 Jul 2026 15:40:42 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zohran-mamdani-praises-shamoon-ismail-s-music--gar8qd.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1527847/zohran-mamdani-praises-shamoon-ismails-music/">Daily Times</source>
   </item>
   <item>
     <title>Zimbabweans return home amid xenophobic violence in South Africa</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 06 Jul 2026 11:21:44 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/football/articles/cz7523l9rdvo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>‘You made us proud’: Egypt gives heroes’ welcome to team</title>
-    <link>https://thegloballens365.vercel.app/article/you-made-us-proud-egypt-gives-heroes-welcome-to-team--u3ngzu</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-made-us-proud-egypt-gives-heroes-welcome-to-team--u3ngzu</guid>
-    <description>EL ALAMEIN: Egypt’s Mohamed Salah waves as the national team is welcomed by fans at the El Alamein International Airport on Friday.</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sat, 11 Jul 2026 01:05:23 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-made-us-proud-egypt-gives-heroes-welcome-to-team--u3ngzu.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2014464/you-made-us-proud-egypt-gives-heroes-welcome-to-team">Dawn</source>
   </item>
   </channel>
 </rss>
