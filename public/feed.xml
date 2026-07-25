@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 24 Jul 2026 23:06:21 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 02:51:07 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -268,6 +268,17 @@
     <pubDate>Wed, 01 Jul 2026 18:35:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-attends-ireland-eu-presidency-ceremony--ci8xp9.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1516178/zelenskyy-attends-ireland-eu-presidency-ceremony/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zelensky tries to fix crisis over removal of defence minister and counts the cost</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-tries-to-fix-crisis-over-removal-of-defence-minister-and-counts-the-cos--hsd8gx</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-tries-to-fix-crisis-over-removal-of-defence-minister-and-counts-the-cos--hsd8gx</guid>
+    <description>Protests have continued over Zelensky&apos;s decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Fri, 24 Jul 2026 23:01:06 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-tries-to-fix-crisis-over-removal-of-defence-minister-and-counts-the-cos--hsd8gx.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zelensky to press Nato for air defence systems after intense Russian strikes</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 13 Jul 2026 14:36:23 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-doctor-shot-dead-in-robbery-near-karachi-s-teen-talwar-police--w0yv77.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2015139/young-doctor-shot-dead-in-robbery-near-karachis-teen-talwar-police">Dawn</source>
-  </item>
-  <item>
-    <title>&apos;You&apos;ve been trying to kill me for 23 years&apos; - should Ronaldo start?</title>
-    <link>https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob</guid>
-    <description>Appearing at his sixth World Cup, will Cristiano Ronaldo lift the famous trophy for the first time before he retires?</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 06 Jul 2026 11:21:44 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/you-ve-been-trying-to-kill-me-for-23-years-should-ronaldo-start--seh1ob.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/cz7523l9rdvo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
