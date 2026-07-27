@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 27 Jul 2026 14:42:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 17:47:23 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -268,6 +268,17 @@
     <pubDate>Wed, 01 Jul 2026 18:35:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-attends-ireland-eu-presidency-ceremony--ci8xp9.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1516178/zelenskyy-attends-ireland-eu-presidency-ceremony/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zelensky visit sends clear message of support for Ukraine, Burnham says</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot</guid>
+    <description>The Ukrainian president became the new prime minister&apos;s first international visitor since taking office.</description>
+    <category>siasat</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 27 Jul 2026 15:58:27 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zelensky tries to fix crisis over removal of defence minister and counts the cost</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 18 Jun 2026 08:14:34 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-women-now-have-close-to-zero-risk-of-cervical-cancer-death-after-hpv-jab--jdi5fg.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c621z28z138o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Young people avoiding the news, Reuters report</title>
-    <link>https://thegloballens365.vercel.app/article/young-people-avoiding-the-news-reuters-report--30ugbi</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-people-avoiding-the-news-reuters-report--30ugbi</guid>
-    <description>An alarming number of young people are turning away from the news, according to the Reuters Digital News Report presented at DW&apos;s Global Media Forum.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Thu, 25 Jun 2026 19:16:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-people-avoiding-the-news-reuters-report--30ugbi.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/young-people-avoiding-the-news-reuters-report/a-77713516?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   </channel>
 </rss>
