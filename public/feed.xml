@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 26 Jul 2026 23:02:54 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 03:24:39 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -358,6 +358,17 @@
     <source url="https://www.dawn.com/news/2012943/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka">Dawn</source>
   </item>
   <item>
+    <title>Zelensky claims Russia helped Iran target US bases in Gulf</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf--1da3cl</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf--1da3cl</guid>
+    <description>UKRAINIAN President Volody­myr Zelensky claimed over the weekend that Russia is assisting Iran in targeting US bases in the Mid­dle East by sharing satellite...</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Mon, 27 Jul 2026 02:59:59 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf--1da3cl.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2018669/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf">Dawn</source>
+  </item>
+  <item>
     <title>Zelensky announces major government reshuffle</title>
     <link>https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</guid>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 13 Jul 2026 02:44:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-girl-among-six-dead-in-israeli-strike-in-gaza--qhlq62.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2014943/young-girl-among-six-dead-in-israeli-strike-in-gaza">Dawn</source>
-  </item>
-  <item>
-    <title>Young doctor shot dead in robbery near Karachi&apos;s Teen Talwar: police</title>
-    <link>https://thegloballens365.vercel.app/article/young-doctor-shot-dead-in-robbery-near-karachi-s-teen-talwar-police--w0yv77</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-doctor-shot-dead-in-robbery-near-karachi-s-teen-talwar-police--w0yv77</guid>
-    <description>KARACHI: A young doctor practicing at the Jinnah Postgraduate Medical Centre (JPMC) was shot dead during a robbery near Clifton on Monday, according to police.</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Mon, 13 Jul 2026 14:36:23 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-doctor-shot-dead-in-robbery-near-karachi-s-teen-talwar-police--w0yv77.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2015139/young-doctor-shot-dead-in-robbery-near-karachis-teen-talwar-police">Dawn</source>
   </item>
   </channel>
 </rss>
