@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 27 Jul 2026 11:28:22 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 14:42:04 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -369,6 +369,17 @@
     <source url="https://www.dawn.com/news/2018669/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf">Dawn</source>
   </item>
   <item>
+    <title>Zelensky arrives in UK ahead of meeting Burnham</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-arrives-in-uk-ahead-of-meeting-burnham--z89hy1</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-arrives-in-uk-ahead-of-meeting-burnham--z89hy1</guid>
+    <description>The Ukrainian president will be the new prime minister&apos;s first international visitor since taking office.</description>
+    <category>siasat</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 27 Jul 2026 12:33:40 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-arrives-in-uk-ahead-of-meeting-burnham--z89hy1.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zelensky announces major government reshuffle</title>
     <link>https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</guid>
@@ -479,6 +490,17 @@
     <source url="https://www.hollywoodreporter.com/tv/tv-news/youtube-stokes-twins-netflix-deal-1236643152/">The Hollywood Reporter</source>
   </item>
   <item>
+    <title>YouTube introduces long-awaited thumbnail tool</title>
+    <link>https://thegloballens365.vercel.app/article/youtube-introduces-long-awaited-thumbnail-tool--ik6ph2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youtube-introduces-long-awaited-thumbnail-tool--ik6ph2</guid>
+    <description>YouTube has introduced a new feature that allows eligible creators to upload custom thumbnails for Shorts videos.</description>
+    <category>pakistan</category>
+    <author>Imran Malik</author>
+    <pubDate>Mon, 27 Jul 2026 13:35:50 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/youtube-introduces-long-awaited-thumbnail-tool--ik6ph2.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1529233/youtube-introduces-long-awaited-thumbnail-tool/">Daily Times</source>
+  </item>
+  <item>
     <title>Youth raped by 12 men succumbs to injuries in Bahawalnagar</title>
     <link>https://thegloballens365.vercel.app/article/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao</guid>
@@ -543,28 +565,6 @@
     <pubDate>Thu, 25 Jun 2026 19:16:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/young-people-avoiding-the-news-reuters-report--30ugbi.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/young-people-avoiding-the-news-reuters-report/a-77713516?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Young Palestinian women learn AI to tell stories of war on Gaza</title>
-    <link>https://thegloballens365.vercel.app/article/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6</guid>
-    <description>Young Palestinian women learn AI to tell stories of war on Gaza.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 17 Jun 2026 16:58:42 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza--wtvvf6.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/6/17/young-palestinian-women-learn-ai-to-tell-stories-of-war-on-gaza?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Young girl among six dead in Israeli strike in Gaza</title>
-    <link>https://thegloballens365.vercel.app/article/young-girl-among-six-dead-in-israeli-strike-in-gaza--qhlq62</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/young-girl-among-six-dead-in-israeli-strike-in-gaza--qhlq62</guid>
-    <description>CAIRO: Israeli attacks killed at least six people in the Gaza Strip on Sunday, including a nine-year-old girl, Palestinian health officials said, as mediators...</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Mon, 13 Jul 2026 02:44:42 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/young-girl-among-six-dead-in-israeli-strike-in-gaza--qhlq62.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2014943/young-girl-among-six-dead-in-israeli-strike-in-gaza">Dawn</source>
   </item>
   </channel>
 </rss>
