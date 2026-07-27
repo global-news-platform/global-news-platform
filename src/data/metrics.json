@@ -4,15 +4,15 @@
   "totalSizeKb": 3257,
   "categories": {
     "dunya": 1109,
-    "siasat": 158,
+    "siasat": 157,
     "technology": 36,
     "khel": 265,
-    "science": 40,
-    "pakistan": 352,
     "sehat": 25,
-    "karobar": 96,
+    "karobar": 97,
+    "shobiz": 69,
     "taleem": 10,
-    "shobiz": 67
+    "pakistan": 350,
+    "science": 40
   },
   "topCategories": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "name": "pakistan",
-      "count": 352
+      "count": 350
     },
     {
       "name": "khel",
@@ -29,15 +29,15 @@
     },
     {
       "name": "siasat",
-      "count": 158
+      "count": 157
     },
     {
       "name": "karobar",
-      "count": 96
+      "count": 97
     },
     {
       "name": "shobiz",
-      "count": 67
+      "count": 69
     },
     {
       "name": "science",
