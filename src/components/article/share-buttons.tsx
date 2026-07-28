@@ -27,7 +27,7 @@ export function ShareButtons({
     },
     {
       name: "Facebook",
-      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&display=popup&quote=${encodedTitle}`,
       icon: Facebook,
     },
     {

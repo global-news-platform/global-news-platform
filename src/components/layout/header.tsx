@@ -74,27 +74,27 @@ export function Header() {
         className={cn(
           "sticky top-0 z-40 w-full border-b transition-all duration-500 ease-out-expo",
           isScrolled
-            ? "border-border/40 bg-background/80 backdrop-blur-lg shadow-header"
+            ? "border-border/40 bg-background/80 backdrop-blur-xl shadow-header"
             : "border-border/80 bg-background",
         )}
       >
         {/* Top bar with date and social */}
-        <div className="hidden border-b border-border/30 bg-gradient-to-r from-primary via-primary/95 to-primary/90 md:block">
+        <div className="hidden border-b border-border/20 bg-gradient-to-r from-primary via-primary/95 to-primary/90 md:block">
           <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 sm:px-5 lg:px-6 xl:px-8">
             <div className="flex items-center gap-4">
-              <span className="text-[11px] font-medium text-primary-foreground/75">
+              <span className="text-[11px] font-medium text-primary-foreground/70">
                 {today}
               </span>
               <span className="text-primary-foreground/20">|</span>
               <Link
                 href="/breaking"
-                className="flex items-center gap-1.5 text-[11px] font-bold text-accent transition-colors hover:text-accent/80"
+                className="flex items-center gap-1.5 text-[11px] font-bold text-accent/90 transition-all duration-300 hover:text-accent hover:underline decoration-accent/40 underline-offset-4"
               >
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/60" />
+                  <span className="absolute inline-flex h-full w-full animate-live-pulse rounded-full bg-accent/60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
                 </span>
-                Breaking
+                Breaking News
               </Link>
             </div>
             <div className="flex items-center gap-4">
@@ -107,7 +107,7 @@ export function Header() {
         <div className="mx-auto flex h-14 sm:h-20 max-w-7xl items-center justify-between px-3 sm:px-5 lg:px-6 xl:px-8">
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="rounded-lg p-2.5 text-foreground transition-colors active:bg-accent/15 hover:bg-accent/10 md:hidden"
+            className="rounded-lg p-2.5 text-foreground transition-all duration-200 hover:bg-accent/10 active:bg-accent/15 md:hidden"
             aria-label="Open menu"
           >
             <Menu className="h-5 w-5" />
@@ -123,14 +123,14 @@ export function Header() {
           <div className="flex items-center gap-1 sm:gap-2 md:hidden">
             <button
               onClick={() => setSearchOpen(true)}
-              className="rounded-lg p-2.5 text-foreground transition-colors active:bg-accent/15 hover:bg-accent/10"
+              className="rounded-lg p-2.5 text-foreground transition-all duration-200 hover:bg-accent/10 active:bg-accent/15"
               aria-label="Search"
             >
               <Search className="h-5 w-5" />
             </button>
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="rounded-lg p-2.5 text-foreground transition-colors active:bg-accent/15 hover:bg-accent/10"
+              className="rounded-lg p-2.5 text-foreground transition-all duration-200 hover:bg-accent/10 active:bg-accent/15"
                 aria-label="Toggle theme"
               >
                 {resolvedTheme === "dark" ? (
@@ -183,7 +183,7 @@ export function Header() {
                 <span className="h-4 w-px bg-white/20" />
                 <button
                   onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-                  className="rounded-md p-1.5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                  className="rounded-md p-1.5 text-white/80 transition-all duration-200 hover:bg-white/10 hover:text-white"
                   aria-label="Toggle theme"
                 >
                   {resolvedTheme === "dark" ? (
@@ -198,7 +198,7 @@ export function Header() {
                     <form onSubmit={handleSearch} className="flex items-center">
                       <button
                         type="submit"
-                        className="rounded-l-md p-1.5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                        className="rounded-l-md p-1.5 text-white/80 transition-all duration-200 hover:bg-white/10 hover:text-white"
                         aria-label="Search"
                       >
                         <Search className="h-4 w-4" />
@@ -210,7 +210,7 @@ export function Header() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onBlur={() => { if (!searchQuery) setTimeout(() => setInlineSearchOpen(false), 200) }}
-                        className="w-32 lg:w-44 bg-white/15 text-white placeholder:text-white/40 rounded-r-md px-3 py-1.5 text-[12px] outline-none border border-white/10 focus:border-accent/50 transition-colors"
+                        className="w-32 lg:w-44 bg-white/15 text-white placeholder:text-white/40 rounded-r-md px-3 py-1.5 text-[12px] outline-none border border-white/10 focus:border-accent/50 transition-all duration-200"
                         autoFocus
                       />
                       <button
@@ -225,7 +225,7 @@ export function Header() {
                   ) : (
                     <button
                       onClick={() => setInlineSearchOpen(true)}
-                      className="inline-flex items-center gap-1.5 rounded-md p-1.5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                      className="inline-flex items-center gap-1.5 rounded-md p-1.5 text-white/80 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       aria-label="Search"
                     >
                       <Search className="h-4 w-4" />
@@ -247,13 +247,13 @@ export function Header() {
             onClick={() => setMobileMenuOpen(false)}
           />
           <div className="absolute inset-y-0 right-0 z-50 w-[300px] max-w-[85vw] overflow-y-auto bg-background shadow-elevated animate-slide-down">
-            <div className="flex items-center justify-between border-b border-border/10 bg-gradient-to-r from-primary/5 to-accent/5 p-4">
+            <div className="flex items-center justify-between border-b border-border/10 bg-gradient-to-r from-primary/[0.03] to-accent/[0.03] p-4">
               <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
                 <SiteLogo className="h-8 w-8" iconSize={4} textSize="text-base font-bold" />
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-lg p-1.5 text-muted-foreground transition-colors hover:bg-secondary"
+                className="rounded-lg p-1.5 text-muted-foreground transition-all duration-200 hover:bg-secondary"
               >
                 <X className="h-5 w-5" />
               </button>

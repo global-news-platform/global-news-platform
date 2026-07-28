@@ -328,7 +328,7 @@ async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
 
 const FORMAT_POSTERS = [postPhotoFormat]
 
-async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dryRun = false }) {
+async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, limit = 1, dryRun = false }) {
   if (!pageId || !pageAccessToken) {
     console.log("  Facebook: skipped (missing PAGE_ID or PAGE_ACCESS_TOKEN)")
     return { posted: 0, skipped: 0, total: 0 }
@@ -352,10 +352,9 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dry
     return { posted: 0, skipped: 0, total: 0 }
   }
 
-  const articleArray = [article]
   {
     console.log(`  Rewriting article with local rewriter...`)
-    const rewritten = await rewriteBatch(articleArray)
+    const rewritten = await rewriteBatch([article])
     if (rewritten[0].title && rewritten[0].title !== article.title) {
       console.log(`    "${(article.title || "").substring(0, 50)}" → "${(rewritten[0].title || "").substring(0, 50)}"`)
     }
@@ -364,7 +363,7 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, dry
   }
 
   const formatIdx = getNextFormatIndex()
-  const formatName = POST_FORMATS[formatIdx]
+  let formatName = POST_FORMATS[formatIdx]
   const sourceName = article.sourceName || article.attribution || article.source || ""
   const linkUrl = getArticleLink(article, siteUrl)
 

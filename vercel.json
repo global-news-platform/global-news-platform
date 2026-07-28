@@ -1,5 +1,4 @@
 {
-  "name": "thegloballens365",
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",

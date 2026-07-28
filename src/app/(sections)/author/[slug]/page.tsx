@@ -7,7 +7,7 @@ import { ArticleCard } from "@/components/article/article-card"
 import { AdSlot } from "@/components/common/ad-slot"
 import { Breadcrumbs } from "@/components/article/breadcrumbs"
 
-import { getArticlesByAuthor, getAuthorBySlug, getAllArticles } from "@/lib/articles"
+import { getArticlesByAuthor, getAuthorBySlug, getArticleLinks } from "@/lib/articles"
 import { authors } from "@/data/authors/authors"
 import {
   absoluteUrl,
@@ -15,7 +15,19 @@ import {
   generatePersonSchema,
 } from "@/lib/seo"
 
+export const revalidate = 3600
 
+export async function generateStaticParams() {
+  const links = await getArticleLinks()
+  const slugs = new Set<string>()
+  for (const a of links) {
+    if (a.authorSlug) slugs.add(a.authorSlug)
+  }
+  for (const a of authors) {
+    if (a.slug) slugs.add(a.slug)
+  }
+  return Array.from(slugs).map((slug) => ({ slug }))
+}
 
 export async function generateMetadata({
   params,

@@ -1,22 +1,17 @@
-name: Automated News Ingestion
+name: Maintenance
 
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
-    inputs:
-      max:
-        description: "Max articles per source"
-        default: "5"
-        type: number
 
 permissions:
   contents: write
-  deployments: write
 
 jobs:
-  ingest:
+  maintenance:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,13 +19,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
 
       - run: npm ci
-
-      - name: Ingest RSS feeds
-        run: node scripts/pipeline.js --ingest-only --max ${{ inputs.max || '5' }}
 
       - name: Regenerate sitemap & RSS feed
         run: |
@@ -45,15 +37,6 @@ jobs:
           console.log('✓ Metrics & trending updated');
         "
 
-      - name: Fetch Facebook logo
-        run: node scripts/fetch-logo.js
-        env:
-          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
-
-      - name: Build & verify
-        run: npx next build
-
       - name: Commit & push
         run: |
           git config user.name "The Global Lens 365 Bot"
@@ -62,13 +45,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Auto: ingest news articles $(date +%Y-%m-%d-%H)"
+            git commit -m "Auto: maintenance $(date +%Y-%m-%d-%H)"
             git push
           fi
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy out --project-name=pakistan-news-hub --branch=main

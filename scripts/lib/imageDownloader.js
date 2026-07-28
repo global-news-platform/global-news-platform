@@ -6,7 +6,7 @@ const crypto = require("crypto")
 const sharp = require("sharp")
 const { searchImage } = require("./imageSearch")
 const { applyWatermarks } = require("./watermark")
-const { regenerateViaAI, AI_IMAGE_ENABLED } = require("./imageGenerator")
+const { regenerateViaAI } = require("./imageGenerator")
 
 const ARTICLES_DIR = path.join(__dirname, "../../public/images/articles")
 const FALLBACKS_DIR = path.join(__dirname, "../../public/images/fallbacks")
@@ -124,7 +124,7 @@ function downloadImageBuffer(url) {
     const req = protocol.get(url, {
       timeout: 15000,
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; GlobalNewsBot/1.0)",
+        "User-Agent": "ArticleAutoPoster/1.0 (contact@thegloballens365.com)",
         Accept: "image/webp,image/jpeg,image/png,*/*",
       },
     }, (res) => {
@@ -243,7 +243,7 @@ function fetchOgImage(articleUrl) {
     const req = protocol.get(articleUrl, {
       timeout: 10000,
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; GlobalNewsBot/1.0)",
+        "User-Agent": "ArticleAutoPoster/1.0 (contact@thegloballens365.com)",
         Accept: "text/html,application/xhtml+xml",
       },
     }, (res) => {
@@ -333,11 +333,11 @@ async function downloadArticleImage(article) {
     if (result) return result
   }
 
-  if (AI_IMAGE_ENABLED) {
-    console.log(`  ? ALL image sources exhausted for "${(article.title || "").substring(0, 50)}" — SKIPPING article (strict mode)`)
-    return null
-  }
+  console.log(`  ? Trying picsum.photos fallback for "${(article.title || "").substring(0, 50)}"`)
+  const picsumResult = await tryDownload(slug, `https://picsum.photos/1024/1024?random=${encodeURIComponent(slug)}`, article)
+  if (picsumResult) return picsumResult
 
+  console.log(`  ? ALL image sources exhausted for "${(article.title || "").substring(0, 50)}" — using category fallback`)
   const articleCategory = article.categorySlug || article.category || "general"
   const normalCat = NORMALIZE_CATEGORY[articleCategory] || articleCategory
 

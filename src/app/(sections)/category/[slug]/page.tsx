@@ -15,7 +15,11 @@ import {
   generateBreadcrumbSchema,
 } from "@/lib/seo"
 
+export const revalidate = 3600
 
+export async function generateStaticParams() {
+  return categories.map((c) => ({ slug: c.slug }))
+}
 
 export async function generateMetadata({
   params,

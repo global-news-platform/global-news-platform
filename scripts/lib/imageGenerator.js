@@ -3,11 +3,6 @@ const path = require("path")
 const sharp = require("sharp")
 const { applyWatermarks } = require("./watermark")
 
-const AI_IMAGE_API_KEY = process.env.AI_IMAGE_API_KEY || ""
-const AI_IMAGE_MODEL = process.env.AI_IMAGE_MODEL || "flux"
-const AI_IMAGE_ENABLED = !!(AI_IMAGE_API_KEY && process.env.AI_IMAGE_ENABLED === "true")
-
-const TRANSFORMED_DIR = path.join(__dirname, "../../public/images/transformed")
 const TARGET_WIDTH = 1200
 const TARGET_HEIGHT = 630
 
@@ -26,35 +21,9 @@ async function downloadImage(url) {
   return buffer
 }
 
-const MODELS_LAB_URL = "https://modelslab.com/api/v6/realtime/text2img"
-const POLL_DELAY_MS = 2000
-const MAX_POLLS = 60
-
 function buildPrompt(title, description) {
   const topic = (title + " " + (description || "")).slice(0, 250)
   return `professional photojournalism news photograph: ${topic}. High quality, sharp focus, natural lighting, accurate colors, realistic textures. Clean image with no text, logos, watermarks, banners, or superimposed elements.`
-}
-
-async function pollFetchResult(fetchUrl) {
-  console.log("    Polling for async AI generation result...")
-  for (let i = 0; i < MAX_POLLS; i++) {
-    await new Promise((r) => setTimeout(r, POLL_DELAY_MS))
-    const resp = await fetch(fetchUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key: AI_IMAGE_API_KEY }),
-      signal: AbortSignal.timeout(30000),
-    })
-    const data = await resp.json()
-    if (data.status === "success") {
-      return data.output
-    }
-    if (data.status === "error") {
-      throw new Error(`AI generation failed: ${data.message || "unknown"}`)
-    }
-    if (i % 15 === 0) console.log(`    Still waiting... (${Math.round(i * 2)}s)`)
-  }
-  throw new Error("AI image generation timed out")
 }
 
 async function resizeOriginal(originalBuffer) {
@@ -65,98 +34,34 @@ async function resizeOriginal(originalBuffer) {
 }
 
 async function regenerateViaAI(originalBuffer, title, description) {
-  if (!AI_IMAGE_ENABLED) {
-    console.log("    AI regeneration disabled — cropping to remove source watermarks")
-    const meta = await sharp(originalBuffer).metadata()
-    const iw = meta.width || TARGET_WIDTH
-    const ih = meta.height || TARGET_HEIGHT
-    const cropH = Math.round(ih * 0.75)
-    return await sharp(originalBuffer)
-      .extract({ left: 0, top: 0, width: iw, height: cropH })
-      .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
-      .jpeg({ quality: 95, progressive: true })
-      .toBuffer()
-  }
-
-  const outputPath = path.join(TRANSFORMED_DIR, `_ai_output_${Date.now()}.jpg`)
+  const prompt = buildPrompt(title, description)
+  const encodedPrompt = encodeURIComponent(prompt)
+  const url = `https://pollinations.ai/p/${encodedPrompt}?width=1024&height=1024&seed=${Math.floor(Math.random() * 99999)}&model=flux`
 
   try {
-    const prompt = buildPrompt(title, description)
-    console.log(`    ModelsLab AI regeneration (model: ${AI_IMAGE_MODEL})...`)
-
-    const response = await fetch(MODELS_LAB_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    console.log(`    Pollinations.ai generation...`)
+    const response = await fetch(url, {
       signal: AbortSignal.timeout(30000),
-      body: JSON.stringify({
-        key: AI_IMAGE_API_KEY,
-        model_id: AI_IMAGE_MODEL,
-        prompt,
-        width: "1024",
-        height: "1024",
-        samples: "1",
-        num_inference_steps: "20",
-        safety_checker: false,
-        seed: null,
-        base64: false,
-        webhook: null,
-        track_id: null,
-      }),
     })
 
     if (!response.ok) {
-      const err = await response.text().catch(() => "")
-      throw new Error(`AI API responded ${response.status}: ${err.slice(0, 150)}`)
+      throw new Error(`Pollinations responded ${response.status}`)
     }
 
-    const data = await response.json()
-
-    if (data.status === "error") {
-      const msg = data.message || "unknown"
-      if (msg.toLowerCase().includes("credit") || msg.toLowerCase().includes("fund") || msg.toLowerCase().includes("subscribe")) {
-        console.log(`    AI credits exhausted (${msg}) — cropping to remove source watermarks`)
-        const meta = await sharp(originalBuffer).metadata()
-        const iw = meta.width || TARGET_WIDTH
-        const ih = meta.height || TARGET_HEIGHT
-        const cropH = Math.round(ih * 0.75)
-        return await sharp(originalBuffer)
-          .extract({ left: 0, top: 0, width: iw, height: cropH })
-          .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
-          .jpeg({ quality: 95, progressive: true })
-          .toBuffer()
-      }
-      throw new Error(`AI API error: ${msg}`)
+    const buffer = Buffer.from(await response.arrayBuffer())
+    if (buffer.length < 1000) {
+      throw new Error(`Generated image too small (${buffer.length} bytes)`)
     }
 
-    let outputUrls
-    if (data.status === "success") {
-      outputUrls = data.output
-    } else if (data.status === "processing") {
-      console.log("    AI processing asynchronously...")
-      const fetchUrl = data.fetch_result
-      if (!fetchUrl) throw new Error("No fetch_result URL")
-      outputUrls = await pollFetchResult(fetchUrl)
-    } else {
-      throw new Error(`Unexpected status: ${data.status}`)
-    }
-
-    if (!outputUrls || !outputUrls.length) {
-      throw new Error("AI returned no image URLs")
-    }
-
-    const imageUrl = outputUrls[0]
-    console.log(`    Downloading AI image...`)
-    const regenerated = await downloadImage(imageUrl)
-
-    await sharp(regenerated)
+    const processed = await sharp(buffer)
       .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
       .jpeg({ quality: 95, progressive: true })
-      .toFile(outputPath)
+      .toBuffer()
 
-    console.log("    AI regeneration complete — source watermark removed")
-    return fs.readFileSync(outputPath)
+    console.log("    Pollinations.ai generation complete")
+    return processed
   } catch (err) {
-    console.log(`    AI regeneration failed: ${err.message} — cropping to remove source watermarks`)
+    console.log(`    AI generation failed (${err.message}) — cropping original as fallback`)
     const meta = await sharp(originalBuffer).metadata()
     const iw = meta.width || TARGET_WIDTH
     const ih = meta.height || TARGET_HEIGHT
@@ -166,8 +71,6 @@ async function regenerateViaAI(originalBuffer, title, description) {
       .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
       .jpeg({ quality: 95, progressive: true })
       .toBuffer()
-  } finally {
-    try { if (fs.existsSync(outputPath)) fs.unlinkSync(outputPath) } catch {}
   }
 }
 
@@ -249,4 +152,4 @@ async function processAllArticleImages(articles, concurrency = 3) {
   return results
 }
 
-module.exports = { processArticleImage, processAllArticleImages, regenerateViaAI, AI_IMAGE_ENABLED }
+module.exports = { processArticleImage, processAllArticleImages, regenerateViaAI }

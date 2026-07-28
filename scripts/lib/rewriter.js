@@ -46,7 +46,6 @@ const SYNONYMS = {
   "protest": ["demonstration", "rally", "sit-in", "walkout"],
   "election": ["vote", "poll", "ballot", "referendum"],
   "leader": ["chief", "head", "principal", "top official"],
-  "official": ["authority", "representative", "spokesperson", "administration"],
   "investigation": ["inquiry", "probe", "review", "examination"],
   "charge": ["accuse", "indict", "file charges against", "prosecute"],
   "court": ["tribunal", "bench", "judiciary", "legal forum"],
@@ -62,7 +61,6 @@ const SYNONYMS = {
   "possible": ["potential", "feasible", "conceivable", "plausible"],
   "first": ["inaugural", "maiden", "initial", "premier"],
   "new": ["fresh", "recent", "emerging", "latest"],
-  "major": ["significant", "substantial", "far-reaching", "wide-ranging"],
   "global": ["worldwide", "international", "planet-wide", "across the world"],
   "country": ["nation", "state", "sovereign state", "territory"],
   "government": ["administration", "regime", "authorities", "ruling body"],
@@ -210,7 +208,7 @@ function rewriteExcerpt(title, excerpt, sourceName, isBreaking) {
   return result
 }
 
-async function rewriteArticle(article, apiKey) {
+async function rewriteArticle(article) {
   const originalTitle = article.title || ""
   const originalExcerpt = (article.excerpt || article.description || "").substring(0, 500)
   const sourceName = article.sourceName || article.attribution || article.source || ""
@@ -221,7 +219,7 @@ async function rewriteArticle(article, apiKey) {
   return { title: rewrittenTitle, excerpt: rewrittenExcerpt }
 }
 
-async function rewriteBatch(articles, apiKey) {
+async function rewriteBatch(articles) {
   const rewritten = []
   for (const article of articles) {
     const result = await rewriteArticle(article)

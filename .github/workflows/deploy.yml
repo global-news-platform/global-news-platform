@@ -15,7 +15,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
 
       - run: npm ci
@@ -26,41 +26,21 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
 
-      - name: Apply UI patches
-        run: |
-          git fetch origin ui-patches --depth=1
-          git checkout origin/ui-patches -- \
-            src/components/ \
-            src/lib/ \
-            src/app/ \
-            next.config.ts
-
       - name: Build
         run: npm run build
-
-      - name: Check Vercel setup
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: |
-          {
-            echo "## Vercel Debug"
-            echo ""
-            echo "**Token length:** ${#VERCEL_TOKEN}"
-            echo "**Org ID:** ${VERCEL_ORG_ID}"
-            echo ""
-            echo "### User info"
-            curl -sS "https://api.vercel.com/v2/user" \
-              -H "Authorization: Bearer $VERCEL_TOKEN" | head -5
-            echo ""
-            echo "### Teams"
-            curl -sS "https://api.vercel.com/v2/teams" \
-              -H "Authorization: Bearer $VERCEL_TOKEN" | head -10
-            echo ""
-          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Deploy to Vercel
         run: |
           npx vercel --prod --token "${{ secrets.VERCEL_TOKEN }}" \
             --scope "${{ secrets.VERCEL_ORG_ID }}" \
             --confirm 2>&1
+
+      - name: Report success
+        if: success()
+        run: |
+          echo "✅ Deployed successfully: https://thegloballens365.vercel.app"
+
+      - name: Report failure
+        if: failure()
+        run: |
+          echo "❌ Deploy failed! Check: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"

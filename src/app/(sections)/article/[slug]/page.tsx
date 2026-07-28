@@ -29,7 +29,12 @@ import {
 } from "@/lib/seo"
 import { siteConfig, DISCLAIMER_TEXT } from "@/lib/constants"
 
+export const revalidate = 3600
 
+export async function generateStaticParams() {
+  const slugs = getArticleSlugs()
+  return slugs.slice(0, 100).map((slug) => ({ slug }))
+}
 
 export async function generateMetadata({
   params,

@@ -55,9 +55,9 @@ jobs:
           AI_REWRITE_ENABLED: ${{ secrets.AI_API_KEY != '' && 'true' || 'false' }}
           AI_REWRITE_MODEL: ${{ secrets.AI_REWRITE_MODEL || 'gpt-4o-mini' }}
           AI_BASE_URL: ${{ secrets.AI_BASE_URL || 'https://api.openai.com/v1' }}
-          AI_IMAGE_ENABLED: ${{ secrets.AI_IMAGE_API_KEY != '' && 'true' || 'false' }}
-          AI_IMAGE_API_KEY: ${{ secrets.AI_IMAGE_API_KEY }}
-          AI_IMAGE_MODEL: ${{ secrets.AI_IMAGE_MODEL || 'flux' }}
+          AI_IMAGE_ENABLED: "false"
+          AI_IMAGE_API_KEY: ""
+          AI_IMAGE_MODEL: "flux"
 
       - name: Fetch Facebook logo
         run: node scripts/fetch-logo.js
@@ -69,15 +69,6 @@ jobs:
         run: |
           node scripts/lib/sitemap.js
           node scripts/lib/feed.js
-
-      - name: Apply UI patches
-        run: |
-          git fetch origin ui-patches --depth=1
-          git checkout origin/ui-patches -- \
-            src/components/ \
-            src/lib/ \
-            src/app/ \
-            next.config.ts
 
       - name: Build
         run: npm run build
@@ -98,3 +89,9 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           npx vercel --prod --token="$VERCEL_TOKEN" --scope "${{ secrets.VERCEL_ORG_ID }}" --yes
+
+      - name: Report failure
+        if: failure()
+        run: |
+          echo "❌ Pipeline failed on $(date)"
+          echo "Check: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"

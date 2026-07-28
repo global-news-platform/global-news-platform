@@ -96,7 +96,7 @@ async function main() {
   computeTrending(20)
 
   if (args.facebook && !dryRun) {
-    const siteUrl = process.env.SITE_URL || "https://the-global-lens-365.vercel.app"
+    const siteUrl = process.env.SITE_URL || "https://thegloballens365.vercel.app"
     const pageId = process.env.FB_PAGE_ID
     const pageAccessToken = process.env.FB_PAGE_ACCESS_TOKEN
     console.log(`\nPosting to Facebook (${pageId ? "configured" : "not configured"})...`)

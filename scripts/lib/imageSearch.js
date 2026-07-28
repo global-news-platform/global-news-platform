@@ -1,29 +1,46 @@
 const https = require("https")
 const http = require("http")
 
-function fetchJson(url) {
+const WIKI_USER_AGENT = "ArticleAutoPoster/1.0 (contact@thegloballens365.com)"
+const WIKI_API_DELAY_MS = 3000
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function fetchJson(url, retries = 3) {
   return new Promise((resolve, reject) => {
     const protocol = url.startsWith("https") ? https : http
-    const req = protocol.get(url, {
-      timeout: 10000,
-      headers: {
-        "User-Agent": "GlobalNewsBot/1.0 (PakistanNewsBot; image search)",
-        Accept: "application/json",
-      },
-    }, (res) => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        fetchJson(res.headers.location).then(resolve).catch(reject)
-        return
-      }
-      if (res.statusCode !== 200) { reject(new Error(`HTTP ${res.statusCode}`)); return }
-      let data = ""
-      res.on("data", (chunk) => data += chunk.toString())
-      res.on("end", () => {
-        try { resolve(JSON.parse(data)) } catch (e) { reject(new Error("Invalid JSON")) }
+    const doRequest = (attempt) => {
+      const req = protocol.get(url, {
+        timeout: 10000,
+        headers: {
+          "User-Agent": WIKI_USER_AGENT,
+          Accept: "application/json",
+        },
+      }, (res) => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          fetchJson(res.headers.location, retries).then(resolve).catch(reject)
+          return
+        }
+        if (res.statusCode === 429 && attempt < retries) {
+          const backoff = Math.pow(2, attempt) * 1000
+          console.log(`    Wikipedia rate-limited (429), retrying in ${backoff}ms... (attempt ${attempt + 1}/${retries})`)
+          res.resume()
+          setTimeout(() => doRequest(attempt + 1), backoff)
+          return
+        }
+        if (res.statusCode !== 200) { reject(new Error(`HTTP ${res.statusCode}`)); return }
+        let data = ""
+        res.on("data", (chunk) => data += chunk.toString())
+        res.on("end", () => {
+          try { resolve(JSON.parse(data)) } catch (e) { reject(new Error("Invalid JSON")) }
+        })
       })
-    })
-    req.on("error", reject)
-    req.on("timeout", () => { req.destroy(); reject(new Error("Timeout")) })
+      req.on("error", reject)
+      req.on("timeout", () => { req.destroy(); reject(new Error("Timeout")) })
+    }
+    doRequest(0)
   })
 }
 
@@ -69,6 +86,7 @@ function thumbToOriginal(thumbUrl) {
 }
 
 async function getWikipediaImage(title) {
+  await sleep(WIKI_API_DELAY_MS)
   const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`
   try {
     const data = await fetchJson(url)
@@ -92,6 +110,7 @@ async function getWikipediaImage(title) {
 
 async function searchWikipediaEntity(entity) {
   if (!entity || entity.length < 2) return null
+  await sleep(WIKI_API_DELAY_MS)
   const searchUrl = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(entity)}&srlimit=1&format=json&origin=*`
   try {
     const data = await fetchJson(searchUrl)

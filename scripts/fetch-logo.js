@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require("fs")
 const path = require("path")
+const http = require("http")
 const https = require("https")
 
 const LOGO_DIR = path.join(__dirname, "../public/images")
