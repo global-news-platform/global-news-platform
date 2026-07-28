@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 28 Jul 2026 14:16:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 17:41:35 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -158,6 +158,17 @@
     <pubDate>Mon, 29 Jun 2026 04:26:46 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2011566/zimbabwe-dominate-first-day-of-bangladesh-test">Dawn</source>
+  </item>
+  <item>
+    <title>Zidane waited for France - now can he harness their star power?</title>
+    <link>https://thegloballens365.vercel.app/article/zidane-waited-for-france-now-can-he-harness-their-star-power--3lb5aj</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zidane-waited-for-france-now-can-he-harness-their-star-power--3lb5aj</guid>
+    <description>Zinedine Zidane says he waited for the France job, but what will he bring to the role after after five years out of management?</description>
+    <category>khel</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 28 Jul 2026 17:04:09 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zidane-waited-for-france-now-can-he-harness-their-star-power--3lb5aj.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/football/articles/c20dxgpjng3o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zidane confirmed as France head coach</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 27 Jul 2026 13:35:50 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/youtube-introduces-long-awaited-thumbnail-tool--ik6ph2.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1529233/youtube-introduces-long-awaited-thumbnail-tool/">Daily Times</source>
-  </item>
-  <item>
-    <title>Youth raped by 12 men succumbs to injuries in Bahawalnagar</title>
-    <link>https://thegloballens365.vercel.app/article/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao</guid>
-    <description>BAHAWALPUR: A young shepherd who was gang-raped by 12 men in Cholistan desert in jurisdictions of the Marot Police Station of Bahawalnagar succumbed to his...</description>
-    <category>pakistan</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 22 Jul 2026 10:01:19 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar--1dcpao.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2017352/youth-raped-by-12-men-succumbs-to-injuries-in-bahawalnagar">Dawn</source>
   </item>
   </channel>
 </rss>
