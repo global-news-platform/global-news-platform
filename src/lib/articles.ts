@@ -109,82 +109,107 @@ function parseFrontmatter(content: string): {
   return { frontmatter, body: match[2] }
 }
 
-export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null> {
+function findArticleFile(slug: string): { slug: string; filePath: string } | null {
   for (const ext of [".mdx", ".md"]) {
-    const filePath = path.join(articlesDir, `${slug}${ext}`)
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, "utf-8")
-      const { frontmatter, body } = parseFrontmatter(content)
-      const rt = readingTime(body)
+    const fp = path.join(articlesDir, `${slug}${ext}`)
+    if (fs.existsSync(fp)) return { slug, filePath: fp }
+  }
 
-      const rawTitle = safeString(frontmatter.title, "")
-      const sanitizedTitle = sanitizeTitle(rawTitle)
+  const base = baseSlug(slug)
+  if (base === slug) return null
 
-      const validation = validateArticleContent({
-        title: sanitizedTitle || rawTitle,
-        excerpt: safeString(frontmatter.excerpt),
-        body,
-      })
-
-      if (!validation.valid) return null
-      if (!sanitizedTitle) return null
-
-      const sanitizedBody = sanitizeBody(body, sanitizedTitle)
-
-      const rawCategory = safeString(frontmatter.category, "General")
-      const categoryInfo = categories.find(
-        (c) => c.name.toLowerCase() === rawCategory.toLowerCase(),
-      )
-      let categoryName = categoryInfo?.name || rawCategory
-      let categorySlug = categoryInfo?.slug || rawCategory.toLowerCase()
-
-      const rawAuthor = safeString(frontmatter.author, "Staff")
-      const rawAuthorSlug = safeString(frontmatter.authorSlug) || slugify(rawAuthor)
-
-      const resolvedImage = getImage({
-        slug,
-        frontmatterImage: frontmatter.image as string | undefined | null,
-        categorySlug,
-      })
-
-      const sourceName = safeString(frontmatter.sourceName) || safeString(frontmatter.attribution)
-      const sourceUrl = safeString(frontmatter.sourceUrl)
-      const canonicalUrl = safeString(frontmatter.canonicalUrl) || sourceUrl
-
-      let source: ArticleSource | undefined
-      if (sourceName && sourceUrl) {
-        source = { name: sourceName, url: sourceUrl, canonicalUrl: canonicalUrl || undefined }
-      }
-
-      return {
-        slug,
-        title: sanitizedTitle,
-        excerpt: safeString(frontmatter.excerpt) || sanitizedTitle,
-        content: sanitizedBody,
-        category: categoryName,
-        categorySlug,
-        author: rawAuthor,
-        authorSlug: rawAuthorSlug,
-        publishedAt: safeString(frontmatter.publishedAt, ""),
-        updatedAt: frontmatter.updatedAt
-          ? safeString(frontmatter.updatedAt)
-          : undefined,
-        image: resolvedImage,
-        imageAlt: frontmatter.imageAlt
-          ? safeString(frontmatter.imageAlt)
-          : undefined,
-        tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],
-        readingTime: Math.max(1, Math.round(safeNumber(rt.minutes, 1))),
-        featured: Boolean(frontmatter.featured),
-        breaking: Boolean(frontmatter.breaking),
-        trending: Boolean(frontmatter.trending),
-        source,
-        attribution: sourceName || undefined,
-        isSummary: Boolean(frontmatter.isSummary),
-      }
+  const files = fs.readdirSync(articlesDir).filter((f) => f.endsWith(".mdx") || f.endsWith(".md"))
+  for (const file of files) {
+    const fileSlug = file.replace(/\.(md|mdx)$/, "")
+    if (baseSlug(fileSlug) === base) {
+      return { slug: fileSlug, filePath: path.join(articlesDir, file) }
     }
   }
   return null
+}
+
+function readArticleFromFile(found: { slug: string; filePath: string }): ArticleMeta | null {
+  const { slug, filePath } = found
+  const content = fs.readFileSync(filePath, "utf-8")
+  const { frontmatter, body } = parseFrontmatter(content)
+  const rt = readingTime(body)
+
+  const rawTitle = safeString(frontmatter.title, "")
+  const sanitizedTitle = sanitizeTitle(rawTitle)
+
+  const validation = validateArticleContent({
+    title: sanitizedTitle || rawTitle,
+    excerpt: safeString(frontmatter.excerpt),
+    body,
+  })
+
+  if (!validation.valid) return null
+  if (!sanitizedTitle) return null
+
+  const sanitizedBody = sanitizeBody(body, sanitizedTitle)
+
+  const rawCategory = safeString(frontmatter.category, "General")
+  const categoryInfo = categories.find(
+    (c) => c.name.toLowerCase() === rawCategory.toLowerCase(),
+  )
+  const categoryName = categoryInfo?.name || rawCategory
+  const categorySlug = categoryInfo?.slug || rawCategory.toLowerCase()
+
+  const rawAuthor = safeString(frontmatter.author, "Staff")
+  const rawAuthorSlug = safeString(frontmatter.authorSlug) || slugify(rawAuthor)
+
+  const resolvedImage = getImage({
+    slug,
+    frontmatterImage: frontmatter.image as string | undefined | null,
+    categorySlug,
+  })
+
+  const sourceName = safeString(frontmatter.sourceName) || safeString(frontmatter.attribution)
+  const sourceUrl = safeString(frontmatter.sourceUrl)
+  const canonicalUrl = safeString(frontmatter.canonicalUrl) || sourceUrl
+
+  let source: ArticleSource | undefined
+  if (sourceName && sourceUrl) {
+    source = { name: sourceName, url: sourceUrl, canonicalUrl: canonicalUrl || undefined }
+  }
+
+  return {
+    slug,
+    title: sanitizedTitle,
+    excerpt: safeString(frontmatter.excerpt) || sanitizedTitle,
+    content: sanitizedBody,
+    category: categoryName,
+    categorySlug,
+    author: rawAuthor,
+    authorSlug: rawAuthorSlug,
+    publishedAt: safeString(frontmatter.publishedAt, ""),
+    updatedAt: frontmatter.updatedAt
+      ? safeString(frontmatter.updatedAt)
+      : undefined,
+    image: resolvedImage,
+    imageAlt: frontmatter.imageAlt
+      ? safeString(frontmatter.imageAlt)
+      : undefined,
+    tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],
+    readingTime: Math.max(1, Math.round(safeNumber(rt.minutes, 1))),
+    featured: Boolean(frontmatter.featured),
+    breaking: Boolean(frontmatter.breaking),
+    trending: Boolean(frontmatter.trending),
+    source,
+    attribution: sourceName || undefined,
+    isSummary: Boolean(frontmatter.isSummary),
+  }
+}
+
+export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null> {
+  const found = findArticleFile(slug)
+  if (!found) return null
+  return readArticleFromFile(found)
+}
+
+export function resolveArticleSlug(slug: string): string | null {
+  const found = findArticleFile(slug)
+  return found?.slug ?? null
 }
 
 export async function getAllArticles(): Promise<ArticleMeta[]> {

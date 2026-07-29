@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { redirect } from "next/navigation"
 import { Search, Home, ExternalLink, Copyright } from "lucide-react"
 
 import { ArticleHero } from "@/components/article/article-hero"
@@ -16,6 +17,7 @@ import { cn } from "@/lib/utils"
 
 import {
   getArticleBySlug,
+  resolveArticleSlug,
   getArticleSlugs,
   getRelatedArticles,
   getAdjacentArticles,
@@ -79,6 +81,12 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
+
+  const resolvedSlug = resolveArticleSlug(slug)
+  if (resolvedSlug && resolvedSlug !== slug) {
+    redirect(`/article/${resolvedSlug}`)
+  }
+
   const article = await getArticleBySlug(slug)
   if (!article) {
     return (
