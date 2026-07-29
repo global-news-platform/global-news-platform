@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 29 Jul 2026 02:51:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 06:37:44 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -457,6 +457,17 @@
     <source url="https://dailytimes.com.pk/1522108/zelensky-announces-major-government-reshuffle/">Daily Times</source>
   </item>
   <item>
+    <title>Zelensky and Netanyahu meet Trump as wars in Ukraine and Iran drag on</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-and-netanyahu-meet-trump-as-wars-in-ukraine-and-iran-drag-on--m3eky9</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-and-netanyahu-meet-trump-as-wars-in-ukraine-and-iran-drag-on--m3eky9</guid>
+    <description>The two leaders sound encouraged after holding back-to-back bilaterals at the White House.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 29 Jul 2026 02:24:03 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-and-netanyahu-meet-trump-as-wars-in-ukraine-and-iran-drag-on--m3eky9.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cj4k2z8z45ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zardari signs finance bill, budget 2026-27 activated</title>
     <link>https://thegloballens365.vercel.app/article/zardari-signs-finance-bill-budget-2026-27-activated--44z56k</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zardari-signs-finance-bill-budget-2026-27-activated--44z56k</guid>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 09 Jul 2026 16:01:26 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/youtube-stars-the-stokes-twins-sign-netflix-deal-exclusive--v2uqc2.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/tv/tv-news/youtube-stokes-twins-netflix-deal-1236643152/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>YouTube introduces long-awaited thumbnail tool</title>
-    <link>https://thegloballens365.vercel.app/article/youtube-introduces-long-awaited-thumbnail-tool--ik6ph2</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youtube-introduces-long-awaited-thumbnail-tool--ik6ph2</guid>
-    <description>YouTube has introduced a new feature that allows eligible creators to upload custom thumbnails for Shorts videos.</description>
-    <category>pakistan</category>
-    <author>Imran Malik</author>
-    <pubDate>Mon, 27 Jul 2026 13:35:50 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/youtube-introduces-long-awaited-thumbnail-tool--ik6ph2.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1529233/youtube-introduces-long-awaited-thumbnail-tool/">Daily Times</source>
   </item>
   </channel>
 </rss>
