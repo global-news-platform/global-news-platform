@@ -10,15 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: npm
 
-      - run: npm ci
+      - run: npm ci --no-audit --no-fund
 
       - name: Fetch Facebook logo
         run: node scripts/fetch-logo.js
@@ -26,10 +24,8 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
 
-      - name: Build
-        run: npm run build
-
       - name: Deploy to Vercel
+        timeout-minutes: 15
         run: |
           npx vercel --prod --token "${{ secrets.VERCEL_TOKEN }}" \
             --scope "${{ secrets.VERCEL_ORG_ID }}" \
@@ -37,10 +33,10 @@ jobs:
 
       - name: Report success
         if: success()
-        run: |
-          echo "✅ Deployed successfully: https://thegloballens365.vercel.app"
+        run: echo "✅ Deployed: https://thegloballens365.vercel.app"
 
       - name: Report failure
         if: failure()
         run: |
-          echo "❌ Deploy failed! Check: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "❌ Deploy failed!"
+          echo "Check: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
