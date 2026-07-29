@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 29 Jul 2026 19:26:02 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 21:04:33 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -213,6 +213,17 @@
     <pubDate>Tue, 28 Jul 2026 10:02:38 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries--crtihu.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1529714/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zendaya on working with Tom Holland in Spider-Man: ‘When you’re best friends it’s easy’</title>
+    <link>https://thegloballens365.vercel.app/article/zendaya-on-working-with-tom-holland-in-spider-man-when-you-re-best-friends-it-s---9cshj0</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zendaya-on-working-with-tom-holland-in-spider-man-when-you-re-best-friends-it-s---9cshj0</guid>
+    <description>The couple walked the white carpet at the London premiere of their latest film, Spiderman: Brand New Day.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 29 Jul 2026 20:21:46 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-on-working-with-tom-holland-in-spider-man-when-you-re-best-friends-it-s---9cshj0.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c0km3d2j6mko?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zelenskyy urges urgent efforts in Ukraine to start Patriot production</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 11 Jul 2026 09:59:28 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1521520/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan/">Daily Times</source>
-  </item>
-  <item>
-    <title>YouTuber Rehan Tariq handed over to NCCIA on six-day physical remand over blasphemy, PECA charges</title>
-    <link>https://thegloballens365.vercel.app/article/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f</guid>
-    <description>LAHORE: A judicial magistrate on Wednesday granted the National Cyber Crime Investigation Agency (NCCIA) a six-day physical remand of podcast host Rehan Tariq...</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 08 Jul 2026 15:18:09 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2013901/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasphemy-peca-charges">Dawn</source>
   </item>
   </channel>
 </rss>
