@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 29 Jul 2026 06:37:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 10:48:40 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -534,6 +534,17 @@
     <source url="https://www.hollywoodreporter.com/tv/tv-news/zale-parry-dead-scuba-diver-sea-hunt-1236655098/">The Hollywood Reporter</source>
   </item>
   <item>
+    <title>Zack Polanski will not say sorry to Farage for sharing guillotine image</title>
+    <link>https://thegloballens365.vercel.app/article/zack-polanski-will-not-say-sorry-to-farage-for-sharing-guillotine-image--8awc49</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zack-polanski-will-not-say-sorry-to-farage-for-sharing-guillotine-image--8awc49</guid>
+    <description>Green party leader says post was ‘inadvertent mistake’ after Reform UK accuses him of ‘inciting murder’ The Green party leader, Zack Polanski, has said he made...</description>
+    <category>siasat</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 29 Jul 2026 08:16:26 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zack-polanski-will-not-say-sorry-to-farage-for-sharing-guillotine-image--8awc49.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/politics/2026/jul/29/zack-polanski-will-not-apologise-to-nigel-farage-for-sharing-image">The Guardian</source>
+  </item>
+  <item>
     <title>YSL Beauty and Armani Beauty strengthen presence in Pakistan</title>
     <link>https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 08 Jul 2026 15:18:09 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasph--b3s01f.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2013901/youtuber-rehan-tariq-handed-over-to-nccia-on-six-day-physical-remand-over-blasphemy-peca-charges">Dawn</source>
-  </item>
-  <item>
-    <title>YouTube Stars the Stokes Twins Sign Netflix Deal (Exclusive)</title>
-    <link>https://thegloballens365.vercel.app/article/youtube-stars-the-stokes-twins-sign-netflix-deal-exclusive--v2uqc2</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/youtube-stars-the-stokes-twins-sign-netflix-deal-exclusive--v2uqc2</guid>
-    <description>An archive of the brothers&apos; content will debut on the streamer July 18, and they&apos;re also developing a long-form series.</description>
-    <category>shobiz</category>
-    <author>Babar Shah</author>
-    <pubDate>Thu, 09 Jul 2026 16:01:26 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/youtube-stars-the-stokes-twins-sign-netflix-deal-exclusive--v2uqc2.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/tv/tv-news/youtube-stokes-twins-netflix-deal-1236643152/">The Hollywood Reporter</source>
   </item>
   </channel>
 </rss>
