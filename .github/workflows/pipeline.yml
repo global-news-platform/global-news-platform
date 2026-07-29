@@ -79,7 +79,7 @@ jobs:
           GH_TOKEN: ${{ secrets.REPO_PAT }}
         run: |
           gh workflow run deploy.yml --ref main
-          echo "Deploy workflow dispatched via API"
+          echo 'Deploy workflow dispatched'
 
       - name: Deploy to Vercel (fallback)
         if: failure()
@@ -93,5 +93,6 @@ jobs:
       - name: Report failure
         if: failure()
         run: |
-          echo "❌ Pipeline failed on $(date)"
+          echo 'Pipeline failed'
+          echo "date: $(date)"
           echo "Check: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"

@@ -33,10 +33,11 @@ jobs:
 
       - name: Report success
         if: success()
-        run: echo "✅ Deployed: https://thegloballens365.vercel.app"
+        run: |
+          echo 'Deployed: https://thegloballens365.vercel.app'
 
       - name: Report failure
         if: failure()
         run: |
-          echo "❌ Deploy failed!"
+          echo 'Deploy failed!'
           echo "Check: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"

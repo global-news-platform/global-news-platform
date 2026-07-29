@@ -22,12 +22,12 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Compute trending & metrics
-        run: node -e "
-          const { computeTrending, computeDailyMetrics } = require('./scripts/lib/metrics');
-          computeTrending(20);
-          computeDailyMetrics();
-          console.log('✓ Trending & metrics updated');
-        "
+        run: |
+          node -e "
+            const c = require('./scripts/lib/metrics');
+            c.computeTrending(20);
+            c.computeDailyMetrics();
+          "
 
       - name: Regenerate static files
         run: |

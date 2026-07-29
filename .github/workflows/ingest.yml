@@ -5,13 +5,9 @@ on:
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   maintenance:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,12 +26,12 @@ jobs:
           node scripts/lib/feed.js
 
       - name: Compute metrics & trending
-        run: node -e "
-          const { computeTrending, computeDailyMetrics } = require('./scripts/lib/metrics');
-          computeTrending(20);
-          computeDailyMetrics();
-          console.log('✓ Metrics & trending updated');
-        "
+        run: |
+          node -e "
+            const c = require('./scripts/lib/metrics');
+            c.computeTrending(20);
+            c.computeDailyMetrics();
+          "
 
       - name: Commit & push
         run: |
