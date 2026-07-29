@@ -25,7 +25,7 @@ jobs:
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
 
       - name: Deploy to Vercel
-        timeout-minutes: 15
+        timeout-minutes: 60
         run: |
           npx vercel --prod --token "${{ secrets.VERCEL_TOKEN }}" \
             --scope "${{ secrets.VERCEL_ORG_ID }}" \
