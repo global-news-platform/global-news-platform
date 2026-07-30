@@ -61,16 +61,8 @@ async function regenerateViaAI(originalBuffer, title, description) {
     console.log("    Pollinations.ai generation complete")
     return processed
   } catch (err) {
-    console.log(`    AI generation failed (${err.message}) — cropping original as fallback`)
-    const meta = await sharp(originalBuffer).metadata()
-    const iw = meta.width || TARGET_WIDTH
-    const ih = meta.height || TARGET_HEIGHT
-    const cropH = Math.round(ih * 0.80)
-    return await sharp(originalBuffer)
-      .extract({ left: 0, top: 0, width: iw, height: cropH })
-      .resize(TARGET_WIDTH, TARGET_HEIGHT, { fit: "cover", position: "centre" })
-      .jpeg({ quality: 95, progressive: true })
-      .toBuffer()
+    console.log(`    AI generation failed (${err.message})`)
+    return null
   }
 }
 
@@ -91,6 +83,10 @@ async function processArticleImage(article) {
     const original = await downloadImage(imageUrl)
 
     const processed = await regenerateViaAI(original, title, description)
+    if (!processed) {
+      console.log(`  AI regeneration failed for ${slug} — skipping`)
+      return null
+    }
 
     const withWatermark = await applyWatermarks(processed)
 

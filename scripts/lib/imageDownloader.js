@@ -385,6 +385,10 @@ async function tryDownload(slug, imageUrl, article) {
     }
 
     processed = await regenerateViaAI(processed, article.title, article.description)
+    if (!processed) {
+      console.log(`  ? AI regeneration returned no image for "${(article.title || "").substring(0, 50)}" — trying next source`)
+      return null
+    }
     processed = await applyWatermarks(processed)
 
     const finalMeta = await sharp(processed).metadata()
