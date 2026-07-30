@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react"
 import Link from "next/link"
 import { cn, formatDateRelative } from "@/lib/utils"
-import { categories, DISCLAIMER_TEXT } from "@/lib/constants"
+import { categories } from "@/lib/constants"
 import { MixedText } from "@/components/ui/mixed-text"
 import { getFallbackCssGradient } from "@/lib/images/fallbackImages"
 import type { ArticleLink } from "@/types"

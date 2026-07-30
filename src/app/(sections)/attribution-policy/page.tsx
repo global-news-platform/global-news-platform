@@ -60,7 +60,7 @@ export default function AttributionPolicyPage() {
             <ul className="mt-3 list-disc space-y-2 pl-6">
               <li>
                 <strong>Clear naming:</strong> Each news summary displays the original
-                publisher's name prominently (e.g., "Source: Dawn")
+                publisher&apos;s name prominently (e.g., &ldquo;Source: Dawn&rdquo;)
               </li>
               <li>
                 <strong>Direct link:</strong> Every summary includes a direct link to the
@@ -70,7 +70,7 @@ export default function AttributionPolicyPage() {
                 <strong>Date:</strong> The original publication date is recorded
               </li>
               <li>
-                <strong>Author:</strong> Where possible, the original author's name is included
+                <strong>Author:</strong> Where possible, the original author&apos;s name is included
               </li>
               <li>
                 <strong>Prominent placement:</strong> Attribution is positioned so readers can

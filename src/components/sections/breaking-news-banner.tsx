@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState, useRef, useEffect, useCallback } from "react"
+import { useState, useRef, useEffect } from "react"
 import type { ArticleLink } from "@/types"
 
 const SPEED = 60
@@ -19,7 +19,9 @@ export function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
   const lastTimeRef = useRef(0)
   const pausedRef = useRef(false)
 
-  pausedRef.current = paused
+  useEffect(() => {
+    pausedRef.current = paused
+  }, [paused])
 
   useEffect(() => {
     const track = trackRef.current

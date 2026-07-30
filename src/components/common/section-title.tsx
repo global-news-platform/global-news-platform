@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { ArrowRight, Flame } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 interface SectionTitleProps {
   label: string

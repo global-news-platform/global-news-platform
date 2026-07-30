@@ -33,10 +33,6 @@ export const metadata: Metadata = {
   },
 }
 
-function hasValidImage(a: ArticleLink): boolean {
-  return !!(a.image && typeof a.image === "string" && (a.image.startsWith("/") || a.image.startsWith("http")))
-}
-
 function filterQualityArticles(articles: ArticleLink[]): ArticleLink[] {
   return articles.filter((a) => {
     if (!a.title || a.title.length < 8) return false

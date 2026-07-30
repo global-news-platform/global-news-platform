@@ -65,10 +65,10 @@ export default function CopyrightPolicyPage() {
               follow these attribution principles:
             </p>
             <ul className="mt-3 list-disc space-y-2 pl-6">
-              <li>The original publisher's name is displayed prominently</li>
+              <li>The original publisher&apos;s name is displayed prominently</li>
               <li>A direct link to the original article is provided</li>
               <li>The publication date is recorded</li>
-              <li>The author's name is included when available</li>
+              <li>The author&apos;s name is included when available</li>
             </ul>
           </section>
 

@@ -48,8 +48,8 @@ export default function TermsOfServicePage() {
               Terms. You agree that:
             </p>
             <ul className="mt-3 list-disc space-y-2 pl-6">
-              <li>You will not use the site's content for any unlawful purpose</li>
-              <li>You will not attempt to disrupt the site's operation</li>
+              <li>You will not use the site&apos;s content for any unlawful purpose</li>
+              <li>You will not attempt to disrupt the site&apos;s operation</li>
               <li>You will not collect data from the site via automated systems (bots)</li>
               <li>You will not remove or alter our attribution links</li>
             </ul>

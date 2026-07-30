@@ -8,7 +8,7 @@ import { SocialIcons } from "@/components/layout/social-icons"
 import { SiteLogo } from "@/components/common/site-logo"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/components/common/theme-provider"
-import { navigation, categories, siteConfig } from "@/lib/constants"
+import { navigation, categories } from "@/lib/constants"
 import {
   Dialog,
   DialogContent,

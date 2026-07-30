@@ -19,7 +19,6 @@ import {
 const MAX_DAILY_ARTICLES = 1000
 
 const articlesDir = path.join(process.cwd(), "src/data/articles")
-const articleImgDir = path.join(process.cwd(), "public/images/articles")
 
 let _allArticlesCache: ArticleMeta[] | null = null
 let _slugCache: string[] | null = null

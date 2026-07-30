@@ -57,7 +57,7 @@ export default function DmcaPage() {
               <li>
                 <strong>Accuracy statement:</strong> A statement that the information in the
                 notice is accurate and, under penalty of perjury, that you are the copyright
-                owner or authorized to act on the owner's behalf.
+                owner or authorized to act on the owner&apos;s behalf.
               </li>
               <li>
                 <strong>Signature:</strong> Your physical or electronic signature.

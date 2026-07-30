@@ -1,5 +1,5 @@
-export function removeEnglishFromUrdu(text: string): string {
-  return text
+export function removeEnglishFromUrdu(): string {
+  return ""
 }
 
 export interface MixedSegment {
@@ -11,10 +11,10 @@ export function splitMixedLanguage(text: string): MixedSegment[] {
   return [{ text, dir: "ltr" }]
 }
 
-export function isEnglishText(text: string): boolean {
+export function isEnglishText(): boolean {
   return true
 }
 
-export function urduCharCount(text: string): number {
+export function urduCharCount(): number {
   return 0
 }

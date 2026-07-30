@@ -136,7 +136,7 @@ export default async function AuthorPage({
           <div className="flex gap-8">
             <div className="min-w-0 flex-1">
               <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                {author.name}'s Articles
+{author.name}&apos;s Articles
               </h2>
               {articles.length > 0 ? (
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
