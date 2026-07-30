@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 30 Jul 2026 06:35:58 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 10:33:11 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -92,6 +92,17 @@
     <pubDate>Fri, 24 Jul 2026 15:40:42 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zohran-mamdani-praises-shamoon-ismail-s-music--gar8qd.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1527847/zohran-mamdani-praises-shamoon-ismails-music/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zoe Saldaña to Receive Locarno Fest Special Honor</title>
+    <link>https://thegloballens365.vercel.app/article/zoe-salda-a-to-receive-locarno-fest-special-honor--eeamcy</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-salda-a-to-receive-locarno-fest-special-honor--eeamcy</guid>
+    <description>Claudio Simonetti will be honored for his contribution to film music, while Olivia Wilde, Caleb Landry Jones, Monica Bellucci, Isabelle Huppert and Kingsley...</description>
+    <category>shobiz</category>
+    <author>Imran Malik</author>
+    <pubDate>Thu, 30 Jul 2026 10:12:29 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zoe-salda-a-to-receive-locarno-fest-special-honor--eeamcy.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/movies/movie-news/zoe-saldana-locarno-2026-special-pardo-leopard-honor-1236659915/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Zinedine Zidane named new France head coach following World Cup 2026</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 29 Jul 2026 08:16:26 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zack-polanski-will-not-say-sorry-to-farage-for-sharing-guillotine-image--8awc49.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/politics/2026/jul/29/zack-polanski-will-not-apologise-to-nigel-farage-for-sharing-image">The Guardian</source>
-  </item>
-  <item>
-    <title>YSL Beauty and Armani Beauty strengthen presence in Pakistan</title>
-    <link>https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8</guid>
-    <description>Luxury beauty brands YSL Beauty and Armani Beauty have reaffirmed their official presence in Pakistan following high-profile launch events in Lahore that...</description>
-    <category>pakistan</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 11 Jul 2026 09:59:28 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan--utx8u8.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1521520/ysl-beauty-and-armani-beauty-strengthen-presence-in-pakistan/">Daily Times</source>
   </item>
   </channel>
 </rss>
