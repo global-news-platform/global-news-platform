@@ -134,21 +134,8 @@ function getArticleLink(article, siteUrl) {
   return `${siteUrl.replace(/\/$/, "")}/article/${article.slug}`
 }
 
-const CATEGORY_FALLBACK_MAP = {
-  pakistan: "pakistan", dunya: "world", siasat: "politics",
-  karobar: "business", technology: "technology", khel: "sports",
-  sehat: "health", science: "science", shobiz: "entertainment",
-  mazhab: "default", taleem: "default", mausam: "default",
-  crime: "default", adalat: "default", baynalaqwami: "world",
-  raye: "politics", videos: "entertainment", general: "default",
-  world: "world", politics: "politics", business: "business",
-  sports: "sports", health: "health", entertainment: "entertainment",
-  breaking: "default",
-}
-
-function getCategoryFallbackUrl(categorySlug, siteUrl) {
-  const name = CATEGORY_FALLBACK_MAP[((categorySlug || "")).toLowerCase()] || "default"
-  return `${siteUrl.replace(/\/$/, "")}/images/fallbacks/${name}.jpg`
+function getDefaultFallbackUrl(siteUrl) {
+  return `${siteUrl.replace(/\/$/, "")}/images/fallbacks/default.jpg`
 }
 
 function getArticleImageUrl(article, siteUrl) {
@@ -281,7 +268,7 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
 
   if (!imageUrl) {
     console.log(`    No image available — using category fallback`)
-    imageUrl = getCategoryFallbackUrl(article.category, siteUrl)
+      imageUrl = getDefaultFallbackUrl(siteUrl)
   }
 
   // Try URL upload first (simpler)
@@ -398,8 +385,8 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
       if (og) articleForPost = { ...article, image: og, imageUrl: og }
     }
     if (!getArticleImageUrl(articleForPost, siteUrl)) {
-      const fallbackUrl = getCategoryFallbackUrl(article.category, siteUrl)
-      console.log(`    No image — using category fallback: ${fallbackUrl}`)
+      const fallbackUrl = getDefaultFallbackUrl(siteUrl)
+      console.log(`    No image — using default fallback: ${fallbackUrl}`)
       articleForPost = { ...articleForPost, image: fallbackUrl, imageUrl: fallbackUrl }
     }
   }
