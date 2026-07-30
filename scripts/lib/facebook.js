@@ -134,6 +134,23 @@ function getArticleLink(article, siteUrl) {
   return `${siteUrl.replace(/\/$/, "")}/article/${article.slug}`
 }
 
+const CATEGORY_FALLBACK_MAP = {
+  pakistan: "pakistan", dunya: "world", siasat: "politics",
+  karobar: "business", technology: "technology", khel: "sports",
+  sehat: "health", science: "science", shobiz: "entertainment",
+  mazhab: "default", taleem: "default", mausam: "default",
+  crime: "default", adalat: "default", baynalaqwami: "world",
+  raye: "politics", videos: "entertainment", general: "default",
+  world: "world", politics: "politics", business: "business",
+  sports: "sports", health: "health", entertainment: "entertainment",
+  breaking: "default",
+}
+
+function getCategoryFallbackUrl(categorySlug, siteUrl) {
+  const name = CATEGORY_FALLBACK_MAP[((categorySlug || "")).toLowerCase()] || "default"
+  return `${siteUrl.replace(/\/$/, "")}/images/fallbacks/${name}.jpg`
+}
+
 function getArticleImageUrl(article, siteUrl) {
   const img = article.image || article.imageUrl || ""
   if (img.startsWith("http://") || img.startsWith("https://")) {
@@ -263,9 +280,8 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
   }
 
   if (!imageUrl) {
-    console.log(`    No image available, falling back to link format`)
-    const linkResult = await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
-    return linkResult === true ? { id: true, fallback: true } : linkResult
+    console.log(`    No image available — using category fallback`)
+    imageUrl = getCategoryFallbackUrl(article.category, siteUrl)
   }
 
   // Try URL upload first (simpler)
@@ -382,8 +398,9 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
       if (og) articleForPost = { ...article, image: og, imageUrl: og }
     }
     if (!getArticleImageUrl(articleForPost, siteUrl)) {
-      console.log(`    No image available, falling back to link format`)
-      formatName = "link"
+      const fallbackUrl = getCategoryFallbackUrl(article.category, siteUrl)
+      console.log(`    No image — using category fallback: ${fallbackUrl}`)
+      articleForPost = { ...articleForPost, image: fallbackUrl, imageUrl: fallbackUrl }
     }
   }
 
