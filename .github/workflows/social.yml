@@ -2,7 +2,7 @@ name: Social Media Posting
 
 on:
   schedule:
-    - cron: "15 */2 * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -15,6 +15,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: social-posting
+  cancel-in-progress: false
 
 jobs:
   facebook:

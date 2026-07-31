@@ -6,8 +6,22 @@ const { rewriteBatch } = require("./rewriter")
 
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
 const POST_FORMATS = ["photo"]
-const MIN_INTERVAL_MS = 120 * 60 * 1000
 const MAX_POSTS_PER_RUN = 1
+
+// RULE (ACCURACY_FIRST):
+// Facebook posts must show accurate news with an accurate, article-specific image.
+// An article is postable ONLY if it has its own image at /images/articles/{slug}.jpg
+// (AI-generated from the article content). Generic fallback images (default.jpg,
+// category, keyword, picsum, og-default) are NEVER acceptable — a wrong image is
+// worse than no post. Articles without an accurate image are skipped, not posted.
+const ACCURACY_FIRST = true
+
+// RULE (RANDOM_INTERVALS):
+// Posts happen at random durations (5, 15, 30, 21, 14 minutes, ...) instead of a
+// fixed schedule. After each post a random delay in [MIN, MAX] is stored in the
+// tracker as nextPostAt; the next post is only allowed once that delay has elapsed.
+const MIN_INTERVAL_MS = 5 * 60 * 1000
+const MAX_INTERVAL_MS = 30 * 60 * 1000
 
 function loadTracker() {
   if (!fs.existsSync(FB_TRACKER_PATH)) return { posted: [], lastRun: null, formatIndex: 0 }
@@ -27,11 +41,19 @@ function hasBeenPosted(slug) {
   return loadTracker().posted.includes(slug)
 }
 
+function randomPostDelayMs() {
+  const minMinutes = Math.round(MIN_INTERVAL_MS / 60000)
+  const maxMinutes = Math.round(MAX_INTERVAL_MS / 60000)
+  const minutes = minMinutes + Math.floor(Math.random() * (maxMinutes - minMinutes + 1))
+  return minutes * 60 * 1000
+}
+
 function markPosted(slug) {
   const state = loadTracker()
   if (!state.posted.includes(slug)) {
     state.posted.push(slug)
     state.lastRun = new Date().toISOString()
+    state.nextPostAt = Date.now() + randomPostDelayMs()
     if (state.posted.length > 500) {
       state.posted = state.posted.slice(-250)
     }
@@ -49,13 +71,8 @@ function getNextFormatIndex() {
 
 function isWithinThrottleWindow() {
   const state = loadTracker()
-  if (!state.lastRun) return false
-  const elapsed = Date.now() - new Date(state.lastRun).getTime()
-  return elapsed < MIN_INTERVAL_MS
-}
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms))
+  if (!state.nextPostAt) return false
+  return Date.now() < state.nextPostAt
 }
 
 function graphApiRequest(url, method = "GET") {
@@ -89,6 +106,22 @@ function graphApiRequest(url, method = "GET") {
   })
 }
 
+function isAccurateImageUrl(img) {
+  if (!img) return false
+  return img.includes("/images/articles/")
+}
+
+function hasAccurateImage(article) {
+  const img = article.image || article.imageUrl || ""
+  if (!isAccurateImageUrl(img)) return false
+  const localPath = path.join(__dirname, "../../public", img)
+  try {
+    return fs.existsSync(localPath) && fs.statSync(localPath).size > 0
+  } catch {
+    return false
+  }
+}
+
 function selectTopArticles(articles) {
   const sourcePriority = [
     "reuters", "associated press", "ap news", "bbc", "bbc news",
@@ -98,6 +131,7 @@ function selectTopArticles(articles) {
   ]
 
   const scored = articles
+    .filter((a) => (ACCURACY_FIRST ? hasAccurateImage(a) : true))
     .map((a) => {
       let score = 0
       if (a.breaking) score += 100
@@ -134,10 +168,6 @@ function getArticleLink(article, siteUrl) {
   return `${siteUrl.replace(/\/$/, "")}/article/${article.slug}`
 }
 
-function getDefaultFallbackUrl(siteUrl) {
-  return `${siteUrl.replace(/\/$/, "")}/images/fallbacks/default.jpg`
-}
-
 function getArticleImageUrl(article, siteUrl) {
   const img = article.image || article.imageUrl || ""
   if (img.startsWith("http://") || img.startsWith("https://")) {
@@ -149,66 +179,9 @@ function getArticleImageUrl(article, siteUrl) {
   return null
 }
 
-function fetchOgImage(articleUrl) {
-  if (!articleUrl || !articleUrl.startsWith("http")) return Promise.resolve(null)
-  return new Promise((resolve) => {
-    const protocol = articleUrl.startsWith("https") ? https : http
-    const req = protocol.get(articleUrl, {
-      timeout: 10000,
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; GlobalLens/1.0)", Accept: "text/html,application/xhtml+xml" },
-    }, (res) => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        fetchOgImage(res.headers.location).then(resolve); return
-      }
-      if (res.statusCode !== 200) { resolve(null); return }
-      let html = ""
-      res.on("data", (chunk) => { html += chunk.toString(); if (html.length > 100000) { req.destroy(); resolve(extractOgFromHtml(html)) } })
-      res.on("end", () => resolve(extractOgFromHtml(html)))
-    })
-    req.on("error", () => resolve(null))
-    req.on("timeout", () => { req.destroy(); resolve(null) })
-  })
-}
-
-function extractOgFromHtml(html) {
-  const patterns = [
-    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
-    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
-    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
-    /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
-    /<link[^>]+rel=["']image_src["'][^>]+href=["']([^"']+)["']/i,
-  ]
-  for (const pattern of patterns) {
-    const m = html.match(pattern)
-    if (m && m[1]) { try { new URL(m[1]); return m[1] } catch { continue } }
-  }
-  return null
-}
-
 function cleanMessage(title, isBreaking) {
   const prefix = isBreaking ? "BREAKING: " : ""
   return `${prefix}${title}\n\n#GlobalNews #WorldNews`
-}
-
-async function postLinkFormat({ pageId, pageAccessToken, article, siteUrl }) {
-  const linkUrl = getArticleLink(article, siteUrl)
-  const message = cleanMessage(article.title, article.breaking)
-
-  const apiUrl =
-    `https://graph.facebook.com/v22.0/${pageId}/feed` +
-    `?access_token=${encodeURIComponent(pageAccessToken)}` +
-    `&message=${encodeURIComponent(message)}` +
-    `&link=${encodeURIComponent(linkUrl)}` +
-    `&locale=en_US` +
-    `&published=true`
-
-  const result = await graphApiRequest(apiUrl, "POST")
-  if (result.error) {
-    console.error(`    Link post error: ${result.error.message || JSON.stringify(result.error)}`)
-    return false
-  }
-  console.log(`    Link post: ${result.id} → ${linkUrl}`)
-  return true
 }
 
 async function downloadImage(url) {
@@ -257,18 +230,13 @@ async function postPhotoBinary({ imageBuffer, pageId, pageAccessToken, caption }
 }
 
 async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
-  let imageUrl = getArticleImageUrl(article, siteUrl)
+  const imageUrl = getArticleImageUrl(article, siteUrl)
   const linkUrl = getArticleLink(article, siteUrl)
   const message = cleanMessage(article.title, article.breaking)
 
-  if (!imageUrl && article.sourceUrl) {
-    console.log(`    No local image — fetching og:image from source...`)
-    imageUrl = await fetchOgImage(article.sourceUrl)
-  }
-
-  if (!imageUrl) {
-    console.log(`    No image available — using category fallback`)
-      imageUrl = getDefaultFallbackUrl(siteUrl)
+  if (!isAccurateImageUrl(imageUrl)) {
+    console.log(`    ACCURACY_FIRST: no accurate article-specific image — skipping post (no irrelevant/fallback images allowed)`)
+    return false
   }
 
   // Try URL upload first (simpler)
@@ -302,31 +270,8 @@ async function postPhotoFormat({ pageId, pageAccessToken, article, siteUrl }) {
     console.error(`    Binary upload error: ${err.message}`)
   }
 
-  // Both methods failed — fall back to link
-  console.log(`    Falling back to link format`)
-  const linkResult = await postLinkFormat({ pageId, pageAccessToken, article, siteUrl })
-  return linkResult === true ? { id: true, fallback: true } : linkResult
-}
-
-async function postTextFormat({ pageId, pageAccessToken, article, siteUrl }) {
-  const linkUrl = getArticleLink(article, siteUrl)
-  const message = cleanMessage(article.title, true)
-
-  const apiUrl =
-    `https://graph.facebook.com/v22.0/${pageId}/feed` +
-    `?access_token=${encodeURIComponent(pageAccessToken)}` +
-    `&message=${encodeURIComponent(message)}` +
-    `&link=${encodeURIComponent(linkUrl)}` +
-    `&locale=en_US` +
-    `&published=true`
-
-  const result = await graphApiRequest(apiUrl, "POST")
-  if (result.error) {
-    console.error(`    Text post error: ${result.error.message || JSON.stringify(result.error)}`)
-    return false
-  }
-  console.log(`    Text post: ${result.id} → ${linkUrl}`)
-  return true
+  console.log(`    Photo upload failed — skipping post (ACCURACY_FIRST: no link-post fallback with missing image)`)
+  return false
 }
 
 const FORMAT_POSTERS = [postPhotoFormat]
@@ -339,19 +284,16 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
 
   const state = loadTracker()
 
-  if (state.lastRun) {
-    const elapsed = Date.now() - new Date(state.lastRun).getTime()
-    if (elapsed < MIN_INTERVAL_MS) {
-      const remaining = Math.ceil((MIN_INTERVAL_MS - elapsed) / 60000)
-      console.log(`  Facebook: throttled — last post was ${Math.floor(elapsed / 60000)}m ago. Next post allowed in ${remaining}m (${MIN_INTERVAL_MS / 60000}min interval).`)
-      return { posted: 0, skipped: 0, total: 0 }
-    }
+  if (state.nextPostAt && Date.now() < state.nextPostAt) {
+    const remaining = Math.ceil((state.nextPostAt - Date.now()) / 60000)
+    console.log(`  Facebook: next post scheduled in ${remaining}m (random 5–30 min interval).`)
+    return { posted: 0, skipped: 0, total: 0 }
   }
 
   const article = selectTopArticles(articles)
 
   if (!article) {
-    console.log("  Facebook: no new articles to post (all already posted)")
+    console.log("  Facebook: no new articles to post (all posted, or none with an accurate article-specific image)")
     return { posted: 0, skipped: 0, total: 0 }
   }
 
@@ -366,38 +308,30 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
   }
 
   const formatIdx = getNextFormatIndex()
-  let formatName = POST_FORMATS[formatIdx]
+  const formatName = POST_FORMATS[formatIdx]
   const sourceName = article.sourceName || article.attribution || article.source || ""
   const linkUrl = getArticleLink(article, siteUrl)
 
   console.log(`  [${formatName}] ${(article.title || "").substring(0, 65)} (${sourceName})`)
+
+  if (formatName === "photo") {
+    const articleImg = getArticleImageUrl(article, siteUrl)
+    if (!articleImg || !isAccurateImageUrl(articleImg)) {
+      console.log(`    ACCURACY_FIRST: article has no accurate article-specific image — skipping`)
+      return { posted: 0, skipped: 1, total: 1 }
+    }
+  }
 
   if (dryRun) {
     console.log(`    (dry-run — would post as ${formatName}, link: ${linkUrl})`)
     return { posted: 0, skipped: 0, total: 1 }
   }
 
-  let articleForPost = article
-  if (formatName === "photo") {
-    const articleImg = getArticleImageUrl(article, siteUrl)
-    if (!articleImg && article.sourceUrl) {
-      const og = await fetchOgImage(article.sourceUrl)
-      if (og) articleForPost = { ...article, image: og, imageUrl: og }
-    }
-    if (!getArticleImageUrl(articleForPost, siteUrl)) {
-      const fallbackUrl = getDefaultFallbackUrl(siteUrl)
-      console.log(`    No image — using default fallback: ${fallbackUrl}`)
-      articleForPost = { ...articleForPost, image: fallbackUrl, imageUrl: fallbackUrl }
-    }
-  }
-
   const poster = FORMAT_POSTERS[formatIdx]
-  const result = await poster({ pageId, pageAccessToken, article: articleForPost, siteUrl })
-  let postedFormat = formatName
-  if (result && typeof result === "object" && result.fallback) postedFormat = "link"
+  const result = await poster({ pageId, pageAccessToken, article, siteUrl })
 
   if (result) {
-    console.log(`    Posted as ${postedFormat}: ${linkUrl}`)
+    console.log(`    Posted as ${formatName}: ${linkUrl}`)
     markPosted(article.slug)
     return { posted: 1, skipped: 0, total: 1 }
   } else {
