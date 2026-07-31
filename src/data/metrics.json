@@ -3,13 +3,13 @@
   "totalArticles": 2178,
   "totalSizeKb": 3273,
   "categories": {
-    "dunya": 1128,
+    "dunya": 1126,
+    "khel": 268,
     "karobar": 96,
     "technology": 34,
-    "khel": 266,
-    "siasat": 161,
+    "siasat": 160,
+    "pakistan": 349,
     "shobiz": 69,
-    "pakistan": 348,
     "sehat": 27,
     "science": 38,
     "taleem": 11
@@ -17,19 +17,19 @@
   "topCategories": [
     {
       "name": "dunya",
-      "count": 1128
+      "count": 1126
     },
     {
       "name": "pakistan",
-      "count": 348
+      "count": 349
     },
     {
       "name": "khel",
-      "count": 266
+      "count": 268
     },
     {
       "name": "siasat",
-      "count": 161
+      "count": 160
     },
     {
       "name": "karobar",
