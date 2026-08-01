@@ -381,10 +381,11 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
       continue
     }
     if (relevant === null) {
-      console.log(`    (relevance check skipped — Gemini key not configured or unavailable)`)
-    } else {
-      console.log(`    Image relevance confirmed.`)
+      console.log(`    Relevance check unavailable (no Gemini key / provider error) — skipping to avoid posting an unverified image: ${(article.title || "").substring(0, 60)}`)
+      article = null
+      continue
     }
+    console.log(`    Image relevance confirmed.`)
     break
   }
 

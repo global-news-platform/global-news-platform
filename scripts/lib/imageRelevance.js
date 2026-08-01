@@ -46,7 +46,7 @@ async function verifyImageRelevance(imageUrl, headline) {
   const base64 = buffer.toString("base64")
 
   try {
-    const response = await fetch(`${GEMINI_BASE_URL}/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
+    const response = await fetchWithRetry(`${GEMINI_BASE_URL}/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -81,6 +81,21 @@ async function verifyImageRelevance(imageUrl, headline) {
     console.log(`    Image relevance check error: ${err.message}`)
     return null
   }
+}
+
+async function fetchWithRetry(url, options, attempts = 4) {
+  for (let i = 0; i < attempts; i++) {
+    const response = await fetch(url, options)
+    if (response.status !== 429 && response.status !== 503) return response
+    if (i < attempts - 1) {
+      const wait = 2000 * Math.pow(2, i)
+      console.log(`    Relevance provider rate limited (${response.status}) — retrying in ${wait}ms...`)
+      await new Promise((r) => setTimeout(r, wait))
+    } else {
+      return response
+    }
+  }
+  throw new Error("unreachable")
 }
 
 module.exports = { verifyImageRelevance }
