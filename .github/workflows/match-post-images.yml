@@ -1,0 +1,43 @@
+name: Match Post Images
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Number of recent posts to check"
+        required: false
+        default: "20"
+
+permissions:
+  contents: read
+
+jobs:
+  match:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Compare posted images to article images
+        run: |
+          node scripts/match-post-images.js \
+            --page-id="${{ secrets.FB_PAGE_ID }}" \
+            --token="${{ secrets.FB_PAGE_ACCESS_TOKEN }}" \
+            --limit="${{ github.event.inputs.limit || '20' }}"
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: match-report
+          path: match-report.txt
