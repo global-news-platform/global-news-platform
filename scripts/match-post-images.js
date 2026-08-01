@@ -184,7 +184,7 @@ async function main() {
     const title = (msg || "").substring(0, 90)
     const imageUrls = collectImageUrls(p)
 
-    log(`--- POST ${i + 1} (${p.created_time}) ---`)
+    log(`--- POST ${i + 1} (${p.id}) (${p.created_time}) ---`)
     log(`  title: ${title}`)
     if (!slug) {
       log(`  (no article slug found in message)`)
