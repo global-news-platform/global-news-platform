@@ -1,6 +1,6 @@
-const AI_API_KEY = process.env.AI_API_KEY || ""
-const AI_MODEL = process.env.AI_REWRITE_MODEL || "gpt-4o-mini"
-const AI_BASE_URL = process.env.AI_BASE_URL || "https://api.openai.com/v1"
+const AI_API_KEY = process.env.GROQ_API_KEY || process.env.AI_API_KEY || ""
+const AI_MODEL = process.env.GROQ_VISION_MODEL || "meta-llama/llama-4-scout-17b-16e-instruct"
+const AI_BASE_URL = process.env.GROQ_BASE_URL || "https://api.groq.com/openai/v1"
 
 const VERIFY_PROMPT = `You are an image-news relevance verifier for a news page.
 Given a news headline and an image, decide whether the image is a RELEVANT illustration of that news story.
