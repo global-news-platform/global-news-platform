@@ -122,6 +122,53 @@ function hasAccurateImage(article) {
   }
 }
 
+const IMAGE_RETRY_MS = 60 * 60 * 1000
+
+function getFailedImages() {
+  const state = loadTracker()
+  const now = Date.now()
+  const retry = {}
+  for (const [slug, ts] of Object.entries(state.failedImages || {})) {
+    if (now - ts < IMAGE_RETRY_MS) retry[slug] = ts
+  }
+  return retry
+}
+
+function rememberImageFailure(slug) {
+  const state = loadTracker()
+  state.failedImages = state.failedImages || {}
+  state.failedImages[slug] = Date.now()
+  saveTracker(state)
+}
+
+function clearImageFailure(slug) {
+  const state = loadTracker()
+  if (state.failedImages && state.failedImages[slug]) {
+    delete state.failedImages[slug]
+    saveTracker(state)
+  }
+}
+
+async function verifyImageUrl(url) {
+  if (!url) return false
+  try {
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), 10000)
+    const res = await fetch(url, {
+      method: "GET",
+      signal: controller.signal,
+      headers: { Range: "bytes=0-2048", "User-Agent": "GlobalLens/1.0 (Image Verifier)" },
+    })
+    clearTimeout(timer)
+    if (!res.ok) return false
+    const contentType = (res.headers.get("content-type") || "").toLowerCase()
+    if (contentType && !contentType.startsWith("image/")) return false
+    return true
+  } catch {
+    return false
+  }
+}
+
 function selectTopArticles(articles) {
   const sourcePriority = [
     "reuters", "associated press", "ap news", "bbc", "bbc news",
@@ -130,8 +177,11 @@ function selectTopArticles(articles) {
     "pakistan today", "daily times", "the nation", "ary news",
   ]
 
+  const failedImages = getFailedImages()
+
   const scored = articles
     .filter((a) => (ACCURACY_FIRST ? hasAccurateImage(a) : true))
+    .filter((a) => !failedImages[a.slug])
     .map((a) => {
       let score = 0
       if (a.breaking) score += 100
@@ -290,10 +340,32 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
     return { posted: 0, skipped: 0, total: 0 }
   }
 
-  const article = selectTopArticles(articles)
+  let article = null
+  let attempts = 0
+  while (attempts < 10) {
+    attempts++
+    article = selectTopArticles(articles)
+    if (!article) break
+
+    const articleImg = getArticleImageUrl(article, siteUrl)
+    if (!articleImg || !isAccurateImageUrl(articleImg)) {
+      console.log(`    ACCURACY_FIRST: article has no accurate article-specific image — skipping`)
+      return { posted: 0, skipped: 1, total: 1 }
+    }
+
+    console.log(`  Verifying image on live site (${articleImg})...`)
+    const verified = await verifyImageUrl(articleImg)
+    if (verified) {
+      console.log(`    Image verified: ${articleImg}`)
+      break
+    }
+    console.log(`    Image NOT reachable on live site — skipping for retry later: ${(article.slug || "").substring(0, 60)}`)
+    rememberImageFailure(article.slug)
+    article = null
+  }
 
   if (!article) {
-    console.log("  Facebook: no new articles to post (all posted, or none with an accurate article-specific image)")
+    console.log("  Facebook: no postable article found (all posted, or none with a reachable accurate image)")
     return { posted: 0, skipped: 0, total: 0 }
   }
 
@@ -314,14 +386,6 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
 
   console.log(`  [${formatName}] ${(article.title || "").substring(0, 65)} (${sourceName})`)
 
-  if (formatName === "photo") {
-    const articleImg = getArticleImageUrl(article, siteUrl)
-    if (!articleImg || !isAccurateImageUrl(articleImg)) {
-      console.log(`    ACCURACY_FIRST: article has no accurate article-specific image — skipping`)
-      return { posted: 0, skipped: 1, total: 1 }
-    }
-  }
-
   if (dryRun) {
     console.log(`    (dry-run — would post as ${formatName}, link: ${linkUrl})`)
     return { posted: 0, skipped: 0, total: 1 }
@@ -332,6 +396,7 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
 
   if (result) {
     console.log(`    Posted as ${formatName}: ${linkUrl}`)
+    clearImageFailure(article.slug)
     markPosted(article.slug)
     return { posted: 1, skipped: 0, total: 1 }
   } else {
