@@ -1,0 +1,43 @@
+name: Cleanup Facebook Posts
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (list posts only, no deletion)"
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      threshold:
+        description: "Similar-image hash threshold (bits, 0-64, lower = stricter)"
+        default: "8"
+        type: number
+
+permissions:
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Analyze and clean Facebook posts
+        run: |
+          node scripts/cleanup-facebook-posts.js \
+            --threshold="${{ github.event.inputs.threshold }}" \
+            --page-id="${{ secrets.FB_PAGE_ID }}" \
+            --token="${{ secrets.FB_PAGE_ACCESS_TOKEN }}" \
+            ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '--delete' }}
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
