@@ -107,8 +107,12 @@ function generateSlug(title) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .substring(0, 80)
-  const hash = Math.random().toString(36).substring(2, 8)
-  return `${slug}--${hash}`
+  let hash = 0
+  for (let i = 0; i < title.length; i++) {
+    hash = (hash * 31 + title.charCodeAt(i)) >>> 0
+  }
+  const suffix = hash.toString(36).substring(0, 6)
+  return `${slug}--${suffix}`
 }
 
 function generateTags(title, description, category) {

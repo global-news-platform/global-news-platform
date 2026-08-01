@@ -6,7 +6,15 @@ on:
       limit:
         description: "Number of recent posts to check"
         required: false
-        default: "20"
+        default: "25"
+      delete:
+        description: "Delete bad/mismatched posts"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
 
 permissions:
   contents: read
@@ -31,7 +39,8 @@ jobs:
           node scripts/match-post-images.js \
             --page-id="${{ secrets.FB_PAGE_ID }}" \
             --token="${{ secrets.FB_PAGE_ACCESS_TOKEN }}" \
-            --limit="${{ github.event.inputs.limit || '20' }}"
+            --limit="${{ github.event.inputs.limit || '25' }}" \
+            ${{ github.event.inputs.delete == 'true' && '--delete' || '' }}
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}

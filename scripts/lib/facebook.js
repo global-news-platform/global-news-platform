@@ -3,6 +3,9 @@ const path = require("path")
 const http = require("http")
 const https = require("https")
 const { rewriteBatch } = require("./rewriter")
+const { verifyImageRelevance } = require("./imageRelevance")
+
+const AI_API_KEY = process.env.AI_API_KEY || ""
 
 const FB_TRACKER_PATH = path.join(__dirname, "../../src/data/.facebook-tracker.json")
 const POST_FORMATS = ["photo"]
@@ -357,11 +360,32 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
     const verified = await verifyImageUrl(articleImg)
     if (verified) {
       console.log(`    Image verified: ${articleImg}`)
-      break
+    } else {
+      console.log(`    Image NOT reachable on live site — skipping for retry later: ${(article.slug || "").substring(0, 60)}`)
+      rememberImageFailure(article.slug)
+      article = null
+      continue
     }
-    console.log(`    Image NOT reachable on live site — skipping for retry later: ${(article.slug || "").substring(0, 60)}`)
-    rememberImageFailure(article.slug)
-    article = null
+
+    // ACCURACY_FIRST: verify the image content actually matches the article
+    // before posting. A reachable image can still be an irrelevant AI
+    // generation or a stale/fallback image — only post when a vision model
+    // confirms the image depicts the news story.
+    const relevanceHeadline = `${article.title || ""}${article.excerpt ? " — " + article.excerpt.substring(0, 160) : ""}`
+    console.log(`  Checking image relevance vs headline...`)
+    const relevant = await verifyImageRelevance(articleImg, relevanceHeadline)
+    if (relevant === false) {
+      console.log(`    Image NOT relevant to the article — skipping: ${(article.title || "").substring(0, 60)}`)
+      rememberImageFailure(article.slug)
+      article = null
+      continue
+    }
+    if (relevant === null) {
+      console.log(`    (relevance check skipped — AI key not configured or unavailable)`)
+    } else {
+      console.log(`    Image relevance confirmed.`)
+    }
+    break
   }
 
   if (!article) {

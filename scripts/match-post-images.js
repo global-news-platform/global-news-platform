@@ -5,8 +5,7 @@ const fs = require("fs")
 const path = require("path")
 const sharp = require("sharp")
 
-const FB_GRAPH = "https://graph.facebook.com/v22.0"
-const SITE = "https://thegloballens365.vercel.app"
+const FB_GRAPH = "https://graph.facebook.com/v22.0"const SITE = "https://thegloballens365.vercel.app"
 const REPORT_PATH = path.join(process.cwd(), "match-report.txt")
 
 function log(msg) {
@@ -17,11 +16,12 @@ function log(msg) {
 }
 
 function parseArgs() {
-  const args = { pageId: null, token: null, limit: 20 }
+  const args = { pageId: null, token: null, limit: 0, deleteBad: false }
   for (const arg of process.argv.slice(2)) {
     if (arg.startsWith("--page-id=")) args.pageId = arg.split("=")[1]
     else if (arg.startsWith("--token=")) args.token = arg.split("=")[1]
     else if (arg.startsWith("--limit=")) args.limit = parseInt(arg.split("=")[1], 10)
+    else if (arg === "--delete") args.deleteBad = true
   }
   return args
 }
@@ -175,6 +175,7 @@ async function main() {
 
   let checked = 0
   let mismatched = 0
+  const badPosts = []
   for (let i = 0; i < posts.length; i++) {
     const p = posts[i]
     const msg = (p.message || "").replace(/\s+/g, " ")
@@ -199,6 +200,7 @@ async function main() {
     const ogUrl = await fetchOgImage(slug)
     if (!ogUrl) {
       log(`  article page: FAILED to fetch / no og:image (${SITE}/article/${slug})`)
+      badPosts.push({ post: p, reason: "no-article-og" })
       continue
     }
 
@@ -222,7 +224,10 @@ async function main() {
     if (fbOk && ogOk) {
       const dist = hamming(fbHash, ogHash)
       const verdict = dist <= 8 ? "MATCH" : "MISMATCH"
-      if (dist > 8) mismatched++
+      if (dist > 8) {
+        mismatched++
+        badPosts.push({ post: p, reason: `image-mismatch` })
+      }
       log(`  hamming distance: ${dist}/64 → ${verdict}`)
       log(`  posted image: ${imageUrls[0].substring(0, 100)}...`)
       log(`  article image: ${ogUrl}`)
@@ -233,6 +238,24 @@ async function main() {
   }
 
   log(`Summary: ${checked} posts checked, ${mismatched} mismatched.`)
+
+  if (args.deleteBad && badPosts.length > 0) {
+    log(`\nDeleting ${badPosts.length} posts with bad/mismatched images...`)
+    let deleted = 0
+    let failed = 0
+    for (const { post, reason } of badPosts) {
+      const del = await graphApiRequest(`${FB_GRAPH}/${post.id}?access_token=${encodeURIComponent(token)}`, "DELETE")
+      if (del && !del.error) {
+        deleted++
+        log(`  DELETED ${post.id} (${reason})`)
+      } else {
+        failed++
+        log(`  FAILED  ${post.id} (${reason}): ${(del.error || {}).message || JSON.stringify(del)}`)
+      }
+      await new Promise((r) => setTimeout(r, 500))
+    }
+    log(`\nDone: ${deleted} deleted, ${failed} failed.`)
+  }
 }
 
 main().catch((err) => {
