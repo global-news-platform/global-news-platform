@@ -5,7 +5,8 @@ const fs = require("fs")
 const path = require("path")
 const sharp = require("sharp")
 
-const FB_GRAPH = "https://graph.facebook.com/v22.0"const SITE = "https://thegloballens365.vercel.app"
+const FB_GRAPH = "https://graph.facebook.com/v22.0"
+const SITE = "https://thegloballens365.vercel.app"
 const REPORT_PATH = path.join(process.cwd(), "match-report.txt")
 
 function log(msg) {
