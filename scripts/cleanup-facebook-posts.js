@@ -157,6 +157,8 @@ async function main() {
     url = res.paging.next
   }
   posts = posts.slice(0, MAX_POSTS)
+  const seen = new Set()
+  posts = posts.filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)))
   log(`\nFetched ${posts.length} posts.`)
 
   const withImages = []
@@ -215,6 +217,7 @@ async function main() {
     cluster.items.sort((a, b) => new Date(b.post.created_time) - new Date(a.post.created_time))
     const keep = cluster.items[0]
     for (const item of cluster.items.slice(1)) {
+      if (item.post.id === keep.post.id) continue
       similarToDelete.push({ post: item.post, keep: keep.post, imageUrl: item.imageUrl })
     }
   }
