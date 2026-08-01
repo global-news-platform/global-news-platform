@@ -1,0 +1,45 @@
+name: Diagnose Facebook Posts
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Number of recent posts to inspect"
+        required: false
+        default: "15"
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Diagnose recent posts
+        run: |
+          node scripts/diagnose-facebook-posts.js \
+            --page-id="${{ secrets.FB_PAGE_ID }}" \
+            --token="${{ secrets.FB_PAGE_ACCESS_TOKEN }}" \
+            --limit="${{ github.event.inputs.limit || '15' }}"
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagnose-report
+          path: |
+            diagnose-report.txt
+            post-images/
