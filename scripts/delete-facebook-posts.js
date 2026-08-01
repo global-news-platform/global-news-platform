@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const https = require("https")
+
 const FB_GRAPH = "https://graph.facebook.com/v22.0"
 
 function parseArgs() {
@@ -47,7 +49,6 @@ function sleep(ms) {
 }
 
 async function main() {
-  const https = require("https")
   const args = parseArgs()
 
   const pageId = args.pageId || process.env.FB_PAGE_ID
