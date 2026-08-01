@@ -27,13 +27,13 @@ function parseArgs() {
   return args
 }
 
-function graphApiRequest(url) {
+function graphApiRequest(url, method = "GET") {
   return new Promise((resolve, reject) => {
     const parsed = new URL(url)
     const options = {
       hostname: parsed.hostname,
       path: parsed.pathname + parsed.search,
-      method: "GET",
+      method,
       headers: { "User-Agent": "GlobalLens/1.0 (Facebook Match; bot@thegloballens365.com)" },
     }
     const req = https.request(options, (res) => {
