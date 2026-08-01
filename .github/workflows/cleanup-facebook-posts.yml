@@ -37,7 +37,15 @@ jobs:
             --threshold="${{ github.event.inputs.threshold }}" \
             --page-id="${{ secrets.FB_PAGE_ID }}" \
             --token="${{ secrets.FB_PAGE_ACCESS_TOKEN }}" \
-            ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '--delete' }}
+            ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '--delete' }} 2>&1 | tee cleanup-report.txt
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+
+      - name: Upload cleanup report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cleanup-report
+          path: cleanup-report.txt
+          if-no-files-found: ignore

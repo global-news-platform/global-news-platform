@@ -1,11 +1,21 @@
 #!/usr/bin/env node
 
 const https = require("https")
+const fs = require("fs")
+const path = require("path")
 const sharp = require("sharp")
 
 const FB_GRAPH = "https://graph.facebook.com/v22.0"
 const SIMILARITY_THRESHOLD = 8
 const MAX_POSTS = 3000
+const REPORT_PATH = path.join(process.cwd(), "cleanup-report.txt")
+
+function log(msg) {
+  console.log(msg)
+  try {
+    fs.appendFileSync(REPORT_PATH, `${msg}\n`, "utf-8")
+  } catch {}
+}
 
 function parseArgs() {
   const args = { dryRun: true, pageId: null, token: null, threshold: SIMILARITY_THRESHOLD }
@@ -122,15 +132,15 @@ async function main() {
   const threshold = Number.isFinite(args.threshold) ? args.threshold : SIMILARITY_THRESHOLD
 
   if (!pageId || !token) {
-    console.error("Missing Facebook credentials. Set FB_PAGE_ID and FB_PAGE_ACCESS_TOKEN.")
+    log("Missing Facebook credentials. Set FB_PAGE_ID and FB_PAGE_ACCESS_TOKEN.")
     process.exit(1)
   }
 
-  console.log("=".repeat(60))
-  console.log("  Facebook Page Cleanup — The Global Lens 365")
-  console.log(`  Mode: ${args.dryRun ? "DRY RUN (list only)" : "DELETE"}`)
-  console.log(`  Similarity threshold: ${threshold} bits`)
-  console.log("=".repeat(60))
+  log("=".repeat(60))
+  log("  Facebook Page Cleanup — The Global Lens 365")
+  log(`  Mode: ${args.dryRun ? "DRY RUN (list only)" : "DELETE"}`)
+  log(`  Similarity threshold: ${threshold} bits`)
+  log("=".repeat(60))
 
   let posts = []
   let url = `${FB_GRAPH}/${pageId}/posts?fields=id,created_time,message,permalink_url,attachments{media_type,url,type,media{image{src}},subattachments{media_type,media{image{src}}}}&limit=100&access_token=${encodeURIComponent(token)}`
@@ -139,7 +149,7 @@ async function main() {
     pages++
     const res = await graphApiRequest(url)
     if (res.error) {
-      console.error(`  API error fetching posts: ${res.error.message || JSON.stringify(res.error)}`)
+      log(`  API error fetching posts: ${res.error.message || JSON.stringify(res.error)}`)
       process.exit(1)
     }
     posts = posts.concat(res.data || [])
@@ -147,7 +157,7 @@ async function main() {
     url = res.paging.next
   }
   posts = posts.slice(0, MAX_POSTS)
-  console.log(`\nFetched ${posts.length} posts.`)
+  log(`\nFetched ${posts.length} posts.`)
 
   const withImages = []
   const noImage = []
@@ -178,13 +188,13 @@ async function main() {
       continue
     }
     withImages.push({ post: p, hash, imageUrl: urls[0] })
-    if ((i + 1) % 50 === 0) console.log(`  Analyzed ${i + 1}/${posts.length} posts...`)
+    if ((i + 1) % 50 === 0) log(`  Analyzed ${i + 1}/${posts.length} posts...`)
     await sleep(100)
   }
 
-  console.log(`\n  With usable image: ${withImages.length}`)
-  console.log(`  No image: ${noImage.length}`)
-  console.log(`  Image unreachable/broken: ${unreachable.length}`)
+  log(`\n  With usable image: ${withImages.length}`)
+  log(`  No image: ${noImage.length}`)
+  log(`  Image unreachable/broken: ${unreachable.length}`)
 
   const clusters = []
   for (const item of withImages) {
@@ -209,37 +219,37 @@ async function main() {
     }
   }
 
-  console.log(`\nDuplicate-image clusters: ${duplicateClusters.length}`)
+  log(`\nDuplicate-image clusters: ${duplicateClusters.length}`)
 
-  console.log("\n=== POSTS WITH NO IMAGE ===")
+  log("\n=== POSTS WITH NO IMAGE ===")
   noImage.forEach((p, i) => {
     const msg = (p.message || "").replace(/\s+/g, " ").substring(0, 80)
-    console.log(`  ${String(i + 1).padStart(3)}. ${p.id} | ${p.created_time} | ${msg}`)
+    log(`  ${String(i + 1).padStart(3)}. ${p.id} | ${p.created_time} | ${msg}`)
   })
 
-  console.log("\n=== POSTS WITH UNREACHABLE/BROKEN IMAGE ===")
+  log("\n=== POSTS WITH UNREACHABLE/BROKEN IMAGE ===")
   unreachable.forEach((p, i) => {
     const msg = (p.message || "").replace(/\s+/g, " ").substring(0, 80)
-    console.log(`  ${String(i + 1).padStart(3)}. ${p.id} | ${p.created_time} | ${msg}`)
+    log(`  ${String(i + 1).padStart(3)}. ${p.id} | ${p.created_time} | ${msg}`)
   })
 
-  console.log("\n=== POSTS WITH SIMILAR IMAGES (duplicates) ===")
+  log("\n=== POSTS WITH SIMILAR IMAGES (duplicates) ===")
   similarToDelete.forEach((item, i) => {
     const msg = (item.post.message || "").replace(/\s+/g, " ").substring(0, 60)
     const keepMsg = (item.keep.message || "").replace(/\s+/g, " ").substring(0, 60)
-    console.log(`  ${String(i + 1).padStart(3)}. DELETE ${item.post.id} | ${item.post.created_time} | ${msg}`)
-    console.log(`        keep  ${item.keep.id} | ${item.keep.created_time} | ${keepMsg}`)
+    log(`  ${String(i + 1).padStart(3)}. DELETE ${item.post.id} | ${item.post.created_time} | ${msg}`)
+    log(`        keep  ${item.keep.id} | ${item.keep.created_time} | ${keepMsg}`)
   })
 
   const totalToDelete = noImage.length + unreachable.length + similarToDelete.length
-  console.log(`\nTOTAL to delete: ${totalToDelete} (${noImage.length} no-image, ${unreachable.length} broken-image, ${similarToDelete.length} similar-image)`)
+  log(`\nTOTAL to delete: ${totalToDelete} (${noImage.length} no-image, ${unreachable.length} broken-image, ${similarToDelete.length} similar-image)`)
 
   if (args.dryRun) {
-    console.log(`\n[DRY RUN] Re-run with --delete to actually delete these ${totalToDelete} posts.`)
+    log(`\n[DRY RUN] Re-run with --delete to actually delete these ${totalToDelete} posts.`)
     return
   }
 
-  console.log(`\nDeleting ${totalToDelete} posts...`)
+  log(`\nDeleting ${totalToDelete} posts...`)
   let deleted = 0
   let failed = 0
   const ids = new Set([...noImage, ...unreachable, ...similarToDelete.map((s) => s.post)].map((p) => p.id))
@@ -247,17 +257,17 @@ async function main() {
     const del = await graphApiRequest(`${FB_GRAPH}/${id}?access_token=${encodeURIComponent(token)}`, "DELETE")
     if (del && !del.error) {
       deleted++
-      console.log(`  DELETED ${id}`)
+      log(`  DELETED ${id}`)
     } else {
       failed++
-      console.error(`  FAILED  ${id}: ${(del.error || {}).message || JSON.stringify(del)}`)
+      log(`  FAILED  ${id}: ${(del.error || {}).message || JSON.stringify(del)}`)
     }
     await sleep(500)
   }
-  console.log(`\nDone: ${deleted} deleted, ${failed} failed.`)
+  log(`\nDone: ${deleted} deleted, ${failed} failed.`)
 }
 
 main().catch((err) => {
-  console.error("Page cleanup failed:", err.message)
+  log("Page cleanup failed:", err.message)
   process.exit(1)
 })
