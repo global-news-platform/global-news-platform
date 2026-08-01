@@ -1,6 +1,6 @@
-const AI_API_KEY = process.env.GROQ_API_KEY || process.env.AI_API_KEY || ""
-const AI_MODEL = process.env.GROQ_VISION_MODEL || "meta-llama/llama-4-scout-17b-16e-instruct"
-const AI_BASE_URL = process.env.GROQ_BASE_URL || "https://api.groq.com/openai/v1"
+const GEMINI_API_KEY = process.env.GOOGLE_GENERATIVE_AI_API_KEY || ""
+const GEMINI_MODEL = process.env.GEMINI_VISION_MODEL || "gemini-3.6-flash"
+const GEMINI_BASE_URL = process.env.GEMINI_BASE_URL || "https://generativelanguage.googleapis.com/v1beta"
 
 const VERIFY_PROMPT = `You are an image-news relevance verifier for a news page.
 Given a news headline and an image, decide whether the image is a RELEVANT illustration of that news story.
@@ -24,46 +24,41 @@ async function downloadImage(url) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const buf = Buffer.from(await res.arrayBuffer())
     if (buf.length < 1000) throw new Error("Image too small")
-    return buf
+    return { buf, mime: (res.headers.get("content-type") || "image/jpeg").split(";")[0] }
   } finally {
     clearTimeout(timer)
   }
 }
 
 async function verifyImageRelevance(imageUrl, headline) {
-  if (!AI_API_KEY) return null
+  if (!GEMINI_API_KEY) return null
 
   let buffer
+  let mime
   try {
-    buffer = await downloadImage(imageUrl)
+    const dl = await downloadImage(imageUrl)
+    buffer = dl.buf
+    mime = dl.mime
   } catch (err) {
     return null
   }
 
   const base64 = buffer.toString("base64")
-  const mime = "image/jpeg"
 
   try {
-    const response = await fetch(`${AI_BASE_URL}/chat/completions`, {
+    const response = await fetch(`${GEMINI_BASE_URL}/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
-      headers: {
-        "Authorization": `Bearer ${AI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: AI_MODEL,
-        messages: [
-          { role: "system", content: VERIFY_PROMPT },
+        contents: [
           {
-            role: "user",
-            content: [
-              { type: "text", text: `News headline: "${headline}". Is the attached image relevant to this news story?` },
-              { type: "image_url", image_url: { url: `data:${mime};base64,${base64}` } },
+            parts: [
+              { text: `News headline: "${headline}".\n\n${VERIFY_PROMPT}` },
+              { inline_data: { mime_type: mime, data: base64 } },
             ],
           },
         ],
-        temperature: 0,
-        max_tokens: 200,
+        generationConfig: { temperature: 0, maxOutputTokens: 200 },
       }),
     })
 
@@ -74,10 +69,13 @@ async function verifyImageRelevance(imageUrl, headline) {
     }
 
     const data = await response.json()
-    const content = data.choices?.[0]?.message?.content
+    const parts = data.candidates?.[0]?.content?.parts || []
+    const content = parts.map((p) => p.text || "").join("").trim()
     if (!content) return null
 
-    const parsed = JSON.parse(content)
+    const jsonMatch = content.match(/\{[\s\S]*\}/)
+    if (!jsonMatch) return null
+    const parsed = JSON.parse(jsonMatch[0])
     return !!parsed.relevant
   } catch (err) {
     console.log(`    Image relevance check error: ${err.message}`)

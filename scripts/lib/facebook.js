@@ -381,7 +381,7 @@ async function postTopArticles(articles, { pageId, pageAccessToken, siteUrl, lim
       continue
     }
     if (relevant === null) {
-      console.log(`    (relevance check skipped — Groq/AI key not configured or unavailable)`)
+      console.log(`    (relevance check skipped — Gemini key not configured or unavailable)`)
     } else {
       console.log(`    Image relevance confirmed.`)
     }
