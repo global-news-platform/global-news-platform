@@ -160,7 +160,12 @@ async function main() {
       noImage.push(p)
       continue
     }
-    const buf = await downloadImage(urls[0])
+    let buf = null
+    try {
+      buf = await downloadImage(urls[0])
+    } catch {
+      buf = null
+    }
     if (!buf) {
       unreachable.push(p)
       continue
