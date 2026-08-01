@@ -69,7 +69,7 @@ async function main() {
   console.log("=".repeat(60))
 
   let posts = []
-  let url = `${FB_GRAPH}/${pageId}/posts?fields=id,created_time,message,permalink_url,type&limit=100&access_token=${encodeURIComponent(token)}`
+  let url = `${FB_GRAPH}/${pageId}/posts?fields=id,created_time,message,permalink_url&limit=100&access_token=${encodeURIComponent(token)}`
   let pages = 0
   while (url) {
     pages++
@@ -91,7 +91,7 @@ async function main() {
   console.log(`\nFetched ${posts.length} recent posts; ${toDelete.length} created in the last ${days} days:`)
   toDelete.forEach((p, i) => {
     const msg = (p.message || p.permalink_url || "").replace(/\s+/g, " ").substring(0, 90)
-    console.log(`  ${String(i + 1).padStart(2)}. [${p.type}] ${p.created_time} | ${p.id} | ${msg}`)
+    console.log(`  ${String(i + 1).padStart(2)}. ${p.created_time} | ${p.id} | ${msg}`)
   })
 
   if (toDelete.length === 0) {
