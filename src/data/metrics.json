@@ -6,10 +6,10 @@
     "khel": 267,
     "karobar": 96,
     "technology": 35,
-    "pakistan": 344,
-    "shobiz": 70,
+    "shobiz": 71,
     "siasat": 165,
-    "dunya": 1121,
+    "dunya": 1118,
+    "pakistan": 346,
     "sehat": 27,
     "taleem": 11,
     "science": 38
@@ -17,11 +17,11 @@
   "topCategories": [
     {
       "name": "dunya",
-      "count": 1121
+      "count": 1118
     },
     {
       "name": "pakistan",
-      "count": 344
+      "count": 346
     },
     {
       "name": "khel",
@@ -37,7 +37,7 @@
     },
     {
       "name": "shobiz",
-      "count": 70
+      "count": 71
     },
     {
       "name": "science",
