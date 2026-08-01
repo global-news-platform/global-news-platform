@@ -5,7 +5,7 @@ const https = require("https")
 const FB_GRAPH = "https://graph.facebook.com/v22.0"
 
 function parseArgs() {
-  const args = { days: 3, dryRun: true, pageId: null, token: null }
+  const args = { days: 3, dryRun: false, pageId: null, token: null }
   for (const arg of process.argv.slice(2)) {
     if (arg === "--dry-run") args.dryRun = true
     else if (arg.startsWith("--days=")) args.days = parseInt(arg.split("=")[1], 10)
