@@ -1,6 +1,8 @@
 const GEMINI_API_KEY = process.env.GOOGLE_GENERATIVE_AI_API_KEY || ""
-const GEMINI_MODEL = process.env.GEMINI_VISION_MODEL || "gemini-3.6-flash"
+const GEMINI_MODEL = process.env.GEMINI_VISION_MODEL || "gemini-3.1-flash-lite"
 const GEMINI_BASE_URL = process.env.GEMINI_BASE_URL || "https://generativelanguage.googleapis.com/v1beta"
+
+const cache = new Map()
 
 const VERIFY_PROMPT = `You are an image-news relevance verifier for a news page.
 Given a news headline and an image, decide whether the image is a RELEVANT illustration of that news story.
@@ -33,6 +35,9 @@ async function downloadImage(url) {
 async function verifyImageRelevance(imageUrl, headline) {
   if (!GEMINI_API_KEY) return null
 
+  const cacheKey = `${imageUrl}|${(headline || "").substring(0, 120)}`
+  if (cache.has(cacheKey)) return cache.get(cacheKey)
+
   let buffer
   let mime
   try {
@@ -58,7 +63,7 @@ async function verifyImageRelevance(imageUrl, headline) {
             ],
           },
         ],
-        generationConfig: { temperature: 0, maxOutputTokens: 200 },
+        generationConfig: { temperature: 0, maxOutputTokens: 100 },
       }),
     })
 
@@ -76,7 +81,9 @@ async function verifyImageRelevance(imageUrl, headline) {
     const jsonMatch = content.match(/\{[\s\S]*\}/)
     if (!jsonMatch) return null
     const parsed = JSON.parse(jsonMatch[0])
-    return !!parsed.relevant
+    const result = !!parsed.relevant
+    cache.set(cacheKey, result)
+    return result
   } catch (err) {
     console.log(`    Image relevance check error: ${err.message}`)
     return null
