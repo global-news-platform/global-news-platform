@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 03 Aug 2026 15:09:48 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 18:18:41 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -391,6 +391,17 @@
     <source url="https://www.bbc.com/news/articles/cr7xzg3dmj8o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zelensky seeks end to war before winter</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-seeks-end-to-war-before-winter--1gpubb</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-seeks-end-to-war-before-winter--1gpubb</guid>
+    <description>Ukrainian President Volodymyr Zelensky said Ukraine will seek to increase pressure on Russia to end the war before winter.</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Mon, 03 Aug 2026 17:40:50 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1532940/zelensky-seeks-end-to-war-before-winter/">Daily Times</source>
+  </item>
+  <item>
     <title>Zelensky sacks Ukraine&apos;s top army commander after days of protests</title>
     <link>https://thegloballens365.vercel.app/article/zelensky-sacks-ukraine-s-top-army-commander-after-days-of-protests--jlszkb</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-sacks-ukraine-s-top-army-commander-after-days-of-protests--jlszkb</guid>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 23 Jul 2026 16:35:08 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93--t5jv9a.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/tv/tv-news/zale-parry-dead-scuba-diver-sea-hunt-1236655098/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>Zack Polanski will not say sorry to Farage for sharing guillotine image</title>
-    <link>https://thegloballens365.vercel.app/article/zack-polanski-will-not-say-sorry-to-farage-for-sharing-guillotine-image--8awc49</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zack-polanski-will-not-say-sorry-to-farage-for-sharing-guillotine-image--8awc49</guid>
-    <description>Green party leader says post was ‘inadvertent mistake’ after Reform UK accuses him of ‘inciting murder’ The Green party leader, Zack Polanski, has said he made...</description>
-    <category>siasat</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 29 Jul 2026 08:16:26 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zack-polanski-will-not-say-sorry-to-farage-for-sharing-guillotine-image--8awc49.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/politics/2026/jul/29/zack-polanski-will-not-apologise-to-nigel-farage-for-sharing-image">The Guardian</source>
   </item>
   </channel>
 </rss>
