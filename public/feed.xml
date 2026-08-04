@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 04 Aug 2026 11:05:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 14:41:57 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -114,6 +114,17 @@
     <pubDate>Tue, 28 Jul 2026 09:39:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zinedine-zidane-named-new-france-head-coach-following-world-cup-2026--l36kmy.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/7/28/zidane-named-new-france-head-coach-after-fifa-world-cup-2026?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zinc dresses and ice creams - how to survive a heatwave wedding</title>
+    <link>https://thegloballens365.vercel.app/article/zinc-dresses-and-ice-creams-how-to-survive-a-heatwave-wedding--13ko1h</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zinc-dresses-and-ice-creams-how-to-survive-a-heatwave-wedding--13ko1h</guid>
+    <description>The wedding industry is facing last-minute costs to cope with the heat and October bookings are up.</description>
+    <category>karobar</category>
+    <author>Sara Khan</author>
+    <pubDate>Mon, 03 Aug 2026 23:20:15 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cgr7qrdx4qwo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zimbabweans return home amid xenophobic violence in South Africa</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 23 Jun 2026 12:02:29 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zale Parry, Pioneering Scuba Diver and ‘Sea Hunt’ Actress, Dies at 93</title>
-    <link>https://thegloballens365.vercel.app/article/zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93--t5jv9a</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93--t5jv9a</guid>
-    <description>A record-setting plunge got her on ‘You Bet Your Life’ with Groucho Marx, followed by work in ‘Boy on a Dolphin,’ ‘Underwater Warrior’ and ‘Voyage to the...</description>
-    <category>shobiz</category>
-    <author>Imran Malik</author>
-    <pubDate>Thu, 23 Jul 2026 16:35:08 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93--t5jv9a.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/tv/tv-news/zale-parry-dead-scuba-diver-sea-hunt-1236655098/">The Hollywood Reporter</source>
   </item>
   </channel>
 </rss>
