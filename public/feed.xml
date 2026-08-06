@@ -9,13 +9,24 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 06 Aug 2026 11:07:21 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 14:40:33 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://thegloballens365.vercel.app</link>
     </image>
+  <item>
+    <title>Zurich Fest to Honor Director Martin McDonagh</title>
+    <link>https://thegloballens365.vercel.app/article/zurich-fest-to-honor-director-martin-mcdonagh--d22sq2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zurich-fest-to-honor-director-martin-mcdonagh--d22sq2</guid>
+    <description>The &apos;Three Billboards Outside Ebbing, Missouri&apos; filmmaker will receive Zurich&apos;s A Tribute To...</description>
+    <category>shobiz</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 06 Aug 2026 13:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/movies/movie-news/zurich-fest-martin-mcdonagh-career-honor-wild-horse-nine-1236665704/">The Hollywood Reporter</source>
+  </item>
   <item>
     <title>Zuma showing South Africa &apos;middle finger&apos; by meeting Gupta brother - minister</title>
     <link>https://thegloballens365.vercel.app/article/zuma-showing-south-africa-middle-finger-by-meeting-gupta-brother-minister--v3nkx2</link>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 11 Jul 2026 01:12:46 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zaporizhzhia-s-mayor-says-russian-advance-reaches-city-s-outskirts--0fltbr.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/7/11/zaporizhzhias-mayor-says-russian-advance-reaches-citys-outskirts?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zambia ex-president&apos;s family wins latest legal battle over what should happen to his body</title>
-    <link>https://thegloballens365.vercel.app/article/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt</guid>
-    <description>Edgar Lungu&apos;s family and the Zambian government remain in dispute 12 months after he died.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 23 Jun 2026 12:02:29 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zambia-ex-president-s-family-wins-latest-legal-battle-over-what-should-happen-to--pkgbyt.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
