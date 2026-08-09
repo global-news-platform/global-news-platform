@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 08 Aug 2026 02:16:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 13:28:20 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -369,6 +369,17 @@
     <source url="https://dailytimes.com.pk/1516178/zelenskyy-attends-ireland-eu-presidency-ceremony/">Daily Times</source>
   </item>
   <item>
+    <title>Zelensky visits Russian ally Serbia as Moscow intensifies strikes on Kyiv</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv--xxrnm2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv--xxrnm2</guid>
+    <description>BELGRADE/SOFIA: President Volodymyr Zelensky made his first official visit to Serbia — a rare European country still closely aligned with Moscow — on Saturday...</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sun, 09 Aug 2026 04:04:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2021642/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv">Dawn</source>
+  </item>
+  <item>
     <title>Zelensky visit sends clear message of support for Ukraine, Burnham says</title>
     <link>https://thegloballens365.vercel.app/article/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 30 Jun 2026 22:52:12 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other--ucqx3j.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1515879/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zaporizhzhia’s mayor says Russian advance reaches city’s outskirts</title>
-    <link>https://thegloballens365.vercel.app/article/zaporizhzhia-s-mayor-says-russian-advance-reaches-city-s-outskirts--0fltbr</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zaporizhzhia-s-mayor-says-russian-advance-reaches-city-s-outskirts--0fltbr</guid>
-    <description>Emergency crews are searching for survivors after a Russian air strike on the Ukrainian city of Zaporizhzhia.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sat, 11 Jul 2026 01:12:46 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zaporizhzhia-s-mayor-says-russian-advance-reaches-city-s-outskirts--0fltbr.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/11/zaporizhzhias-mayor-says-russian-advance-reaches-citys-outskirts?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
