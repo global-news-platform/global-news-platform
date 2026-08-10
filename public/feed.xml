@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 10 Aug 2026 15:31:40 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 21:12:56 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -59,6 +59,17 @@
     <pubDate>Fri, 03 Jul 2026 17:53:10 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zuckerberg-says-ai-progress-slower-than-expected--2eul2e.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1517110/zuckerberg-says-ai-progress-slower-than-expected/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zuckerberg’s yacht crew did not hear call for help, says spokesperson</title>
+    <link>https://thegloballens365.vercel.app/article/zuckerberg-s-yacht-crew-did-not-hear-call-for-help-says-spokesperson--19y4tc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zuckerberg-s-yacht-crew-did-not-hear-call-for-help-says-spokesperson--19y4tc</guid>
+    <description>A skiff off Alaska coast received help from a nearby cruise ship after Zuckerberg&apos;s yacht crew did not respond in time.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 10 Aug 2026 17:51:18 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/8/10/zuckerbergs-yacht-crew-did-not-hear-call-for-help-says-spokesperson?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zosia Mamet Joins ‘Industry’ Season 5</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 16 Jun 2026 04:17:04 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1508459/zardari-hopes-preliminary-deal-will-lead-to-durable-peace/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zara Noor Abbas fumes at trend of pitting actors against each other</title>
-    <link>https://thegloballens365.vercel.app/article/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other--ucqx3j</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other--ucqx3j</guid>
-    <description>Actor Zara Noor Abbas spoke out against the online trend of comparing women and criticised tabloids for creating unnecessary competition between female actors...</description>
-    <category>pakistan</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 30 Jun 2026 22:52:12 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other--ucqx3j.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1515879/zara-noor-abbas-fumes-at-trend-of-pitting-actors-against-each-other/">Daily Times</source>
   </item>
   </channel>
 </rss>
