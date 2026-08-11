@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 11 Aug 2026 13:38:06 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 15:29:46 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -125,6 +125,17 @@
     <pubDate>Thu, 30 Jul 2026 10:12:29 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zoe-salda-a-to-receive-locarno-fest-special-honor--eeamcy.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/movies/movie-news/zoe-saldana-locarno-2026-special-pardo-leopard-honor-1236659915/">The Hollywood Reporter</source>
+  </item>
+  <item>
+    <title>Zoe Kazan’s ‘East of Eden’ Series, Colin Kaepernick, Padma Lakshmi Join Atlantic Festival Lineup (Exclusive)</title>
+    <link>https://thegloballens365.vercel.app/article/zoe-kazan-s-east-of-eden-series-colin-kaepernick-padma-lakshmi-join-atlantic-fes--4aflmr</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-kazan-s-east-of-eden-series-colin-kaepernick-padma-lakshmi-join-atlantic-fes--4aflmr</guid>
+    <description>The event, taking place in New York from Sept. 17-19, will also feature talks with Richard Linklater, Ben McKenzie and Malcolm Gladwell.</description>
+    <category>shobiz</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/atlantic-festival-2026-east-of-eden-colin-kaepernick-1236670719/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Zinedine Zidane named new France head coach following World Cup 2026</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 25 Jun 2026 16:50:33 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-signs-finance-bill-budget-2026-27-activated--44z56k.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1513559/zardari-signs-finance-bill-budget-2026-27-activated/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zardari hopes preliminary deal will lead to durable peace</title>
-    <link>https://thegloballens365.vercel.app/article/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk</guid>
-    <description>President Asif Ali Zardari on Monday welcomed the announcement of a Memorandum of Understanding between the United States and Iran, which he hoped would pave...</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Tue, 16 Jun 2026 04:17:04 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-hopes-preliminary-deal-will-lead-to-durable-peace--39ytuk.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1508459/zardari-hopes-preliminary-deal-will-lead-to-durable-peace/">Daily Times</source>
   </item>
   </channel>
 </rss>
