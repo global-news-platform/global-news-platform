@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 09:43:14 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 13:40:47 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -246,6 +246,28 @@
     <pubDate>Wed, 08 Jul 2026 07:36:11 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-t--xwatcs.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2013827/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-to-probe-incident">Dawn</source>
+  </item>
+  <item>
+    <title>Zhu Rongji, who helped turn China into a trading giant, dies at 97</title>
+    <link>https://thegloballens365.vercel.app/article/zhu-rongji-who-helped-turn-china-into-a-trading-giant-dies-at-97--m3h51l</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zhu-rongji-who-helped-turn-china-into-a-trading-giant-dies-at-97--m3h51l</guid>
+    <description>Zhu brought China into the WTO and championed reforms that fuelled growth.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 12 Aug 2026 12:10:45 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c75g9777wwxo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zhu Rongji, who drove China&apos;s 1990s economic reforms, has died at 97</title>
+    <link>https://thegloballens365.vercel.app/article/zhu-rongji-who-drove-china-s-1990s-economic-reforms-has-died-at-97--5y1g5z</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zhu-rongji-who-drove-china-s-1990s-economic-reforms-has-died-at-97--5y1g5z</guid>
+    <description>Zhu was renowned for reforms that sought to transition China from the post-Maoist years to a more global market-oriented financial system, without ceding party...</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 12 Aug 2026 12:36:30 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
+    <source url="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR</source>
   </item>
   <item>
     <title>Zendaya’s Best Press Tour Looks, From ‘Dune’ to ‘Challengers’ to ‘The Odyssey’</title>
@@ -543,28 +565,6 @@
     <pubDate>Mon, 27 Jul 2026 12:33:40 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-arrives-in-uk-ahead-of-meeting-burnham--z89hy1.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky announces major government reshuffle</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-announces-major-government-reshuffle--j2yq4n</guid>
-    <description>Ukrainian President Volodymyr Zelensky has announced a major government reshuffle, confirming his decision to replace Prime Minister Yulia Svyrydenko as part...</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Mon, 13 Jul 2026 05:31:07 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-announces-major-government-reshuffle--j2yq4n.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1522108/zelensky-announces-major-government-reshuffle/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zelensky and Netanyahu meet Trump as wars in Ukraine and Iran drag on</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-and-netanyahu-meet-trump-as-wars-in-ukraine-and-iran-drag-on--m3eky9</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-and-netanyahu-meet-trump-as-wars-in-ukraine-and-iran-drag-on--m3eky9</guid>
-    <description>The two leaders sound encouraged after holding back-to-back bilaterals at the White House.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 29 Jul 2026 02:24:03 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-and-netanyahu-meet-trump-as-wars-in-ukraine-and-iran-drag-on--m3eky9.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cj4k2z8z45ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
