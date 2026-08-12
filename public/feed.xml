@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 06:09:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 07:55:42 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -303,6 +303,17 @@
     <source url="https://www.theguardian.com/politics/live/2026/jun/14/russian-shadow-fleet-oil-tanker-channel-army-marines-keir-starmer-dan-jarvis-makerfield-labour-uk-politics-latest-news-updates">The Guardian</source>
   </item>
   <item>
+    <title>Zelenskyy says Ukraine has sent proposals to US to end war with Russia</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-says-ukraine-has-sent-proposals-to-us-to-end-war-with-russia--16d50v</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-says-ukraine-has-sent-proposals-to-us-to-end-war-with-russia--16d50v</guid>
+    <description>Ukraine&apos;s president also says Russia will use its election next month as a pretext to declare a new mobilisation.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 12 Aug 2026 05:26:26 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/8/12/zelenskyy-says-ukraine-has-sent-proposals-to-us-to-end-war-with-russia?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Zelenskyy sacks Syrskii: How many generals have Ukraine, Russia fired?</title>
     <link>https://thegloballens365.vercel.app/article/zelenskyy-sacks-syrskii-how-many-generals-have-ukraine-russia-fired--0f2yw3</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-sacks-syrskii-how-many-generals-have-ukraine-russia-fired--0f2yw3</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 29 Jul 2026 02:24:03 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-and-netanyahu-meet-trump-as-wars-in-ukraine-and-iran-drag-on--m3eky9.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cj4k2z8z45ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zardari signs finance bill, budget 2026-27 activated</title>
-    <link>https://thegloballens365.vercel.app/article/zardari-signs-finance-bill-budget-2026-27-activated--44z56k</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zardari-signs-finance-bill-budget-2026-27-activated--44z56k</guid>
-    <description>President Asif Ali Zardari has approved the Finance Bill 2026-27, formally clearing the way for Pakistan’s federal budget to take effect from 1 July 2026.</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Thu, 25 Jun 2026 16:50:33 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zardari-signs-finance-bill-budget-2026-27-activated--44z56k.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1513559/zardari-signs-finance-bill-budget-2026-27-activated/">Daily Times</source>
   </item>
   </channel>
 </rss>
