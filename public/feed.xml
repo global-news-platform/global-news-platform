@@ -9,13 +9,24 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 13 Aug 2026 02:33:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 06:09:19 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://thegloballens365.vercel.app</link>
     </image>
+  <item>
+    <title>Zurich Film Fest Galas Set for Award Contenders ‘I Play Rocky,’ ‘Possible Love,’ ‘Josephine’</title>
+    <link>https://thegloballens365.vercel.app/article/zurich-film-fest-galas-set-for-award-contenders-i-play-rocky-possible-love-josep--1tp5ie</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zurich-film-fest-galas-set-for-award-contenders-i-play-rocky-possible-love-josep--1tp5ie</guid>
+    <description>World premieres are planned for new features from German directors Andreas Dresen and Doris Dörrie.</description>
+    <category>shobiz</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Thu, 13 Aug 2026 04:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/movies/movie-news/zurich-film-festival-2026-galas-lineup-1236672047/">The Hollywood Reporter</source>
+  </item>
   <item>
     <title>Zurich Fest to Honor Director Martin McDonagh</title>
     <link>https://thegloballens365.vercel.app/article/zurich-fest-to-honor-director-martin-mcdonagh--d22sq2</link>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 04 Jul 2026 11:02:03 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2012943/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka">Dawn</source>
-  </item>
-  <item>
-    <title>Zelensky claims Russia helped Iran target US bases in Gulf</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf--1da3cl</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf--1da3cl</guid>
-    <description>UKRAINIAN President Volody­myr Zelensky claimed over the weekend that Russia is assisting Iran in targeting US bases in the Mid­dle East by sharing satellite...</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Mon, 27 Jul 2026 02:59:59 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf--1da3cl.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2018669/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf">Dawn</source>
   </item>
   </channel>
 </rss>
