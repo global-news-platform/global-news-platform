@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 13:40:47 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 02:33:42 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -191,6 +191,17 @@
     <pubDate>Wed, 24 Jun 2026 20:43:33 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/24/zimbabwes-senate-approves-amendment-extending-presidential-term?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zimbabwe’s land reform enters a new chapter</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwe-s-land-reform-enters-a-new-chapter--460axc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-land-reform-enters-a-new-chapter--460axc</guid>
+    <description>A new land policy is reopening disputes over farms seized during Zimbabwe’s land reform after 2000.</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Thu, 13 Aug 2026 01:48:39 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/8/13/zimbabwes-land-reform-enters-a-new-chapter?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zimbabwe’s climate migrants fear eviction as crackdown intensifies</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 27 Jul 2026 02:59:59 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf--1da3cl.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2018669/zelensky-claims-russia-helped-iran-target-us-bases-in-gulf">Dawn</source>
-  </item>
-  <item>
-    <title>Zelensky arrives in UK ahead of meeting Burnham</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-arrives-in-uk-ahead-of-meeting-burnham--z89hy1</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-arrives-in-uk-ahead-of-meeting-burnham--z89hy1</guid>
-    <description>The Ukrainian president will be the new prime minister&apos;s first international visitor since taking office.</description>
-    <category>siasat</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Mon, 27 Jul 2026 12:33:40 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-arrives-in-uk-ahead-of-meeting-burnham--z89hy1.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
