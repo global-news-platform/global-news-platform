@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 13 Aug 2026 09:43:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 13:40:53 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -292,6 +292,17 @@
     <source url="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR</source>
   </item>
   <item>
+    <title>Zero hours crackdown could cost firms up to £2.9bn a year</title>
+    <link>https://thegloballens365.vercel.app/article/zero-hours-crackdown-could-cost-firms-up-to-2-9bn-a-year--26e41w</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zero-hours-crackdown-could-cost-firms-up-to-2-9bn-a-year--26e41w</guid>
+    <description>Labour&apos;s employment rights bill crackdown on zero hours contracts could cost businesses up to £2.9bn a year, new official analysis has found.</description>
+    <category>siasat</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Thu, 13 Aug 2026 11:12:33 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c0l525k76d0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zendaya’s Best Press Tour Looks, From ‘Dune’ to ‘Challengers’ to ‘The Odyssey’</title>
     <link>https://thegloballens365.vercel.app/article/zendaya-s-best-press-tour-looks-from-dune-to-challengers-to-the-odyssey--zs6rbi</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zendaya-s-best-press-tour-looks-from-dune-to-challengers-to-the-odyssey--zs6rbi</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 04 Jul 2026 14:11:48 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-rejects-russian-kostiantynivka-capture-claim--t34fl4.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1517638/zelensky-rejects-russian-kostiantynivka-capture-claim/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zelensky denies Russian capture of key eastern city Kostiantynivka</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f</guid>
-    <description>Ukraine still controls the strategically important eastern city of Kostiantynivka, President Volodymyr Zelensky and the General Staff said on Saturday,...</description>
-    <category>pakistan</category>
-    <author>Imran Malik</author>
-    <pubDate>Sat, 04 Jul 2026 11:02:03 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka--wt2w7f.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2012943/zelensky-denies-russian-capture-of-key-eastern-city-kostiantynivka">Dawn</source>
   </item>
   </channel>
 </rss>
