@@ -9,13 +9,24 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 13 Aug 2026 21:11:39 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 02:30:56 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://thegloballens365.vercel.app</link>
     </image>
+  <item>
+    <title>Zverev says cutting Masters events to one week is an easy fix for crowded calendar</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-says-cutting-masters-events-to-one-week-is-an-easy-fix-for-crowded-calend--t0lbw2</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-says-cutting-masters-events-to-one-week-is-an-easy-fix-for-crowded-calend--t0lbw2</guid>
+    <description>World number three Alexander Zverev said cutting Masters tournaments back to one week would help players maintain their fitness instead of having to manage...</description>
+    <category>pakistan</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 13 Aug 2026 23:27:16 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1538148/zverev-says-cutting-masters-events-to-one-week-is-an-easy-fix-for-crowded-calendar/">Daily Times</source>
+  </item>
   <item>
     <title>Zurich Film Fest Galas Set for Award Contenders ‘I Play Rocky,’ ‘Possible Love,’ ‘Josephine’</title>
     <link>https://thegloballens365.vercel.app/article/zurich-film-fest-galas-set-for-award-contenders-i-play-rocky-possible-love-josep--1tp5ie</link>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 20 Jun 2026 16:34:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-returns-highest-polish-honour-after-award-stripped--uwu218.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky rejects Russian Kostiantynivka capture claim</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-rejects-russian-kostiantynivka-capture-claim--t34fl4</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-rejects-russian-kostiantynivka-capture-claim--t34fl4</guid>
-    <description>Ukraine on Saturday denied Russia’s claim that it had captured the strategic eastern city of Kostiantynivka.</description>
-    <category>pakistan</category>
-    <author>Imran Malik</author>
-    <pubDate>Sat, 04 Jul 2026 14:11:48 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-rejects-russian-kostiantynivka-capture-claim--t34fl4.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1517638/zelensky-rejects-russian-kostiantynivka-capture-claim/">Daily Times</source>
   </item>
   </channel>
 </rss>
