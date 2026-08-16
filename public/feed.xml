@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 15 Aug 2026 01:49:38 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 01:53:37 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -246,6 +246,17 @@
     <pubDate>Mon, 29 Jun 2026 04:26:46 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2011566/zimbabwe-dominate-first-day-of-bangladesh-test">Dawn</source>
+  </item>
+  <item>
+    <title>Zimbabwe boat accident death toll hits 68 as 22 more bodies recovered</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwe-boat-accident-death-toll-hits-68-as-22-more-bodies-recovered--1c25mw</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-boat-accident-death-toll-hits-68-as-22-more-bodies-recovered--1c25mw</guid>
+    <description>Eighteen children among the people killed after ferry capsized on Lake Kariba Twenty-two more bodies have been recovered after a boat accident in Zimbabwe,...</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Sat, 15 Aug 2026 19:39:07 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/world/2026/aug/15/more-bodies-recovered-after-zimbabwe-boat-accident">The Guardian</source>
   </item>
   <item>
     <title>Zidane waited for France - now can he harness their star power?</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 16 Jul 2026 16:36:21 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-s-removal-of-popular-defence-minister-sparks-protests-in-ukraine--9wbnm2.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cdx76069n3do?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky returns highest Polish honour after award stripped</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-returns-highest-polish-honour-after-award-stripped--uwu218</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-returns-highest-polish-honour-after-award-stripped--uwu218</guid>
-    <description>Ukraine&apos;s president said his country was open to \&quot;engagement\&quot; about \&quot;difficult and painful chapters of our shared past\&quot;.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 20 Jun 2026 16:34:15 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-returns-highest-polish-honour-after-award-stripped--uwu218.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
