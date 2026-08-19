@@ -9,13 +9,24 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 18 Aug 2026 08:59:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 03:22:29 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
       <title>The Global Lens 365</title>
       <link>https://thegloballens365.vercel.app</link>
     </image>
+  <item>
+    <title>ZZ Top drummer Frank Beard dies aged 77</title>
+    <link>https://thegloballens365.vercel.app/article/zz-top-drummer-frank-beard-dies-aged-77--9a6fsz</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zz-top-drummer-frank-beard-dies-aged-77--9a6fsz</guid>
+    <description>A statement on the blues-rock band&apos;s website said he died on Monday in hospice</description>
+    <category>dunya</category>
+    <author>Sara Khan</author>
+    <pubDate>Tue, 18 Aug 2026 22:25:46 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/czdmzdnp3z0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
   <item>
     <title>Zverev says cutting Masters events to one week is an easy fix for crowded calendar</title>
     <link>https://thegloballens365.vercel.app/article/zverev-says-cutting-masters-events-to-one-week-is-an-easy-fix-for-crowded-calend--t0lbw2</link>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 21 Jul 2026 19:57:38 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-sacks-ukraine-s-top-army-commander-after-days-of-protests--jlszkb.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cyvl35z3917o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky&apos;s removal of popular defence minister sparks protests in Ukraine</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-s-removal-of-popular-defence-minister-sparks-protests-in-ukraine--9wbnm2</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-s-removal-of-popular-defence-minister-sparks-protests-in-ukraine--9wbnm2</guid>
-    <description>A rift between Fedorov and Commander-in-Chief Oleksandr Syrskyi was apparently at the heart of Zelensky&apos;s decision.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Thu, 16 Jul 2026 16:36:21 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-s-removal-of-popular-defence-minister-sparks-protests-in-ukraine--9wbnm2.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cdx76069n3do?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
