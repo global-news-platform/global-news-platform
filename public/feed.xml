@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 01 Sep 2026 16:41:21 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 21:09:35 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -336,6 +336,17 @@
     <source url="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR</source>
   </item>
   <item>
+    <title>Zeze Takahisa’s ‘Sukiyaki’ to Open Tokyo Film Festival</title>
+    <link>https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</guid>
+    <description>Yeon Sang-ho&apos;s zombie film &apos;Colony&apos; is set to close the event, with Takashi Yamazaki&apos;s &apos;Godzilla Minus Zero&apos; receiving a special Centerpiece screening.</description>
+    <category>shobiz</category>
+    <author>Imran Malik</author>
+    <pubDate>Tue, 01 Sep 2026 19:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/movies/movie-news/tokyo-film-festival-2026-opening-closing-films-1236687035/">The Hollywood Reporter</source>
+  </item>
+  <item>
     <title>Zero hours crackdown could cost firms up to £2.9bn a year</title>
     <link>https://thegloballens365.vercel.app/article/zero-hours-crackdown-could-cost-firms-up-to-2-9bn-a-year--26e41w</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zero-hours-crackdown-could-cost-firms-up-to-2-9bn-a-year--26e41w</guid>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 19 Jun 2026 21:46:07 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-stripped-of-highest-polish-honour-over-ww2-name-of-army-unit--z1h4c5.jpg" type="image/jpeg" />
     <source url="https://www.bbc.com/news/articles/cr7xzg3dmj8o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky should be asked what he knew about government corruption, sacked minister tells BBC</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-should-be-asked-what-he-knew-about-government-corruption-sacked-ministe--u8slf1</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-should-be-asked-what-he-knew-about-government-corruption-sacked-ministe--u8slf1</guid>
-    <description>Mykhailo Fedorov has also called for wartime elections to be held in Ukraine.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 23 Aug 2026 12:56:43 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cwy4ypzvd7po?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
