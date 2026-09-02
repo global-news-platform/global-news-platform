@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 01 Sep 2026 21:09:35 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 00:18:15 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -391,6 +391,17 @@
     <source url="https://www.bbc.co.uk/news/articles/c0km3d2j6mko?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zelenskyy warns airlines as Ukrainian drones target Russian airspace</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace--7uruxn</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace--7uruxn</guid>
+    <description>President Volodymyr Zelenskyy warned that Ukrainian drones will continue operating over Russia.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 01 Sep 2026 21:03:45 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/video/newsfeed/2026/9/1/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Zelenskyy urges urgent efforts in Ukraine to start Patriot production</title>
     <link>https://thegloballens365.vercel.app/article/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production--uspk5z</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production--uspk5z</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 07 Jul 2026 02:07:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-to-press-nato-for-air-defence-systems-after-intense-russian-strikes--9zaobv.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c9d227e5zj6o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky stripped of highest Polish honour over WW2 name of army unit</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-stripped-of-highest-polish-honour-over-ww2-name-of-army-unit--z1h4c5</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-stripped-of-highest-polish-honour-over-ww2-name-of-army-unit--z1h4c5</guid>
-    <description>Ukraine has denounced the move, calling it a \&quot;strategic mistake\&quot; and \&quot;disrespectful\&quot;.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Fri, 19 Jun 2026 21:46:07 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-stripped-of-highest-polish-honour-over-ww2-name-of-army-unit--z1h4c5.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.com/news/articles/cr7xzg3dmj8o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
