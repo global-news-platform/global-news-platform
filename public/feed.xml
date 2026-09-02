@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 02 Sep 2026 03:55:45 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 09:00:05 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -523,6 +523,17 @@
     <source url="https://dailytimes.com.pk/1516178/zelenskyy-attends-ireland-eu-presidency-ceremony/">Daily Times</source>
   </item>
   <item>
+    <title>Zelensky warns airlines over Russian airspace</title>
+    <link>https://thegloballens365.vercel.app/article/zelensky-warns-airlines-over-russian-airspace--16kehj</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-warns-airlines-over-russian-airspace--16kehj</guid>
+    <description>Ukrainian President Volodymyr Zelensky has warned airlines against using Russian airspace.</description>
+    <category>pakistan</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 02 Sep 2026 06:49:52 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://dailytimes.com.pk/1546989/zelensky-warns-airlines-over-russian-airspace/">Daily Times</source>
+  </item>
+  <item>
     <title>Zelensky visits Russian ally Serbia as Moscow intensifies strikes on Kyiv</title>
     <link>https://thegloballens365.vercel.app/article/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv--xxrnm2</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv--xxrnm2</guid>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 24 Jul 2026 23:01:06 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-tries-to-fix-crisis-over-removal-of-defence-minister-and-counts-the-cos--hsd8gx.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky to press Nato for air defence systems after intense Russian strikes</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-to-press-nato-for-air-defence-systems-after-intense-russian-strikes--9zaobv</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-to-press-nato-for-air-defence-systems-after-intense-russian-strikes--9zaobv</guid>
-    <description>The Ukrainian president will use the Nato meeting in Turkey to argue he needs more interceptor missiles.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Tue, 07 Jul 2026 02:07:15 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-to-press-nato-for-air-defence-systems-after-intense-russian-strikes--9zaobv.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/c9d227e5zj6o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
