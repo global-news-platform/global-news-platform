@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 04 Sep 2026 03:50:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 09:02:37 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -37,6 +37,28 @@
     <pubDate>Thu, 13 Aug 2026 23:27:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1538148/zverev-says-cutting-masters-events-to-one-week-is-an-easy-fix-for-crowded-calendar/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zverev goes distance to scrape into third round as upsets rock US Open</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-goes-distance-to-scrape-into-third-round-as-upsets-rock-us-open--t8ngqc</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-goes-distance-to-scrape-into-third-round-as-upsets-rock-us-open--t8ngqc</guid>
+    <description>Men&apos;s third seed Felix Auger-Aliassime goes out, along with sixth-seed Alex de Minaur and 13th-seed Lorenzo Musetti.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Fri, 04 Sep 2026 07:27:15 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/9/4/zverev-goes-distance-to-scrape-into-third-round-as-upsets-rock-us-open?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zverev battles through after enduring another 2am finish</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-battles-through-after-enduring-another-2am-finish--4mq9y6</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-battles-through-after-enduring-another-2am-finish--4mq9y6</guid>
+    <description>Top seed Alexander Zverev endures another gruelling five-set US Open match as he overcomes Quentin Halys at 02:15 local time to reach the third round.</description>
+    <category>khel</category>
+    <author>Sara Khan</author>
+    <pubDate>Fri, 04 Sep 2026 06:33:33 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/cy0zxxk3y62o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zurich Film Fest Galas Set for Award Contenders ‘I Play Rocky,’ ‘Possible Love,’ ‘Josephine’</title>
@@ -543,28 +565,6 @@
     <pubDate>Sun, 09 Aug 2026 04:04:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2021642/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv">Dawn</source>
-  </item>
-  <item>
-    <title>Zelensky visit sends clear message of support for Ukraine, Burnham says</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot</guid>
-    <description>The Ukrainian president became the new prime minister&apos;s first international visitor since taking office.</description>
-    <category>siasat</category>
-    <author>Imran Malik</author>
-    <pubDate>Mon, 27 Jul 2026 15:58:27 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says--56mnot.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zelensky tries to fix crisis over removal of defence minister and counts the cost</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-tries-to-fix-crisis-over-removal-of-defence-minister-and-counts-the-cos--hsd8gx</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-tries-to-fix-crisis-over-removal-of-defence-minister-and-counts-the-cos--hsd8gx</guid>
-    <description>Protests have continued over Zelensky&apos;s decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Fri, 24 Jul 2026 23:01:06 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelensky-tries-to-fix-crisis-over-removal-of-defence-minister-and-counts-the-cos--hsd8gx.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
