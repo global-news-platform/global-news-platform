@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 05 Sep 2026 20:31:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:04:51 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -37,6 +37,17 @@
     <pubDate>Thu, 13 Aug 2026 23:27:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1538148/zverev-says-cutting-masters-events-to-one-week-is-an-easy-fix-for-crowded-calendar/">Daily Times</source>
+  </item>
+  <item>
+    <title>Zverev grinds past Halys, Gauff keeps rolling at US Open</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-grinds-past-halys-gauff-keeps-rolling-at-us-open--1bc9lk</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-grinds-past-halys-gauff-keeps-rolling-at-us-open--1bc9lk</guid>
+    <description>NEW YORK: Alexander Zverev was dragged the distance for a second straight match at the US Open but the top seed outlasted Quentin Halys on Thursday to reach...</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Sat, 05 Sep 2026 23:08:38 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2027584/zverev-grinds-past-halys-gauff-keeps-rolling-at-us-open">Dawn</source>
   </item>
   <item>
     <title>Zverev goes distance to scrape into third round as upsets rock US Open</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 02 Sep 2026 06:49:52 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1546989/zelensky-warns-airlines-over-russian-airspace/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zelensky visits Russian ally Serbia as Moscow intensifies strikes on Kyiv</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv--xxrnm2</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv--xxrnm2</guid>
-    <description>BELGRADE/SOFIA: President Volodymyr Zelensky made his first official visit to Serbia — a rare European country still closely aligned with Moscow — on Saturday...</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 09 Aug 2026 04:04:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2021642/zelensky-visits-russian-ally-serbia-as-moscow-intensifies-strikes-on-kyiv">Dawn</source>
   </item>
   </channel>
 </rss>
