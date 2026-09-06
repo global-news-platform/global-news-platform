@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 06 Sep 2026 03:55:52 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 08:53:12 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -70,6 +70,17 @@
     <pubDate>Fri, 04 Sep 2026 06:33:33 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/cy0zxxk3y62o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zverev and Gauff ease into US Open last 16 but Alex Eala falls to Jovic</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-and-gauff-ease-into-us-open-last-16-but-alex-eala-falls-to-jovic--tcz0ox</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-and-gauff-ease-into-us-open-last-16-but-alex-eala-falls-to-jovic--tcz0ox</guid>
+    <description>Filipina Alex Eala lost a three-set thriller to American Iva Jovic, as Naomi Osaka overcame Elise Mertens to progress.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 06 Sep 2026 07:59:04 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/9/6/zverev-and-gauff-ease-into-us-open-last-16-but-alex-eala-falls-to-jovic?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zurich Film Fest Galas Set for Award Contenders ‘I Play Rocky,’ ‘Possible Love,’ ‘Josephine’</title>
@@ -369,6 +380,17 @@
     <source url="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR</source>
   </item>
   <item>
+    <title>Zheng goes from 5-0 and match point down to victory</title>
+    <link>https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</guid>
+    <description>Zheng Qinwen fights back from 5-0 down in the deciding set and stares down match point to stun American 22nd seed Madison Keys.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sat, 05 Sep 2026 22:09:18 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/c3eq55xznvyo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Zeze Takahisa’s ‘Sukiyaki’ to Open Tokyo Film Festival</title>
     <link>https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</guid>
@@ -543,28 +565,6 @@
     <pubDate>Wed, 15 Jul 2026 16:48:14 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-ukraine-pm--7s7md1.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/7/15/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-pm?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zelenskyy attends Ireland EU presidency ceremony</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-attends-ireland-eu-presidency-ceremony--ci8xp9</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-attends-ireland-eu-presidency-ceremony--ci8xp9</guid>
-    <description>Ukrainian President Volodymyr Zelenskyy arrived in Ireland on Wednesday to attend the opening ceremony of the country’s European Union Council presidency.</description>
-    <category>pakistan</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 01 Jul 2026 18:35:16 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-attends-ireland-eu-presidency-ceremony--ci8xp9.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1516178/zelenskyy-attends-ireland-eu-presidency-ceremony/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zelensky warns airlines over Russian airspace</title>
-    <link>https://thegloballens365.vercel.app/article/zelensky-warns-airlines-over-russian-airspace--16kehj</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelensky-warns-airlines-over-russian-airspace--16kehj</guid>
-    <description>Ukrainian President Volodymyr Zelensky has warned airlines against using Russian airspace.</description>
-    <category>pakistan</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 02 Sep 2026 06:49:52 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1546989/zelensky-warns-airlines-over-russian-airspace/">Daily Times</source>
   </item>
   </channel>
 </rss>
