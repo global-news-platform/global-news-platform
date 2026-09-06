@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 06 Sep 2026 08:53:12 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 13:52:11 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -358,6 +358,17 @@
     <source url="https://www.dawn.com/news/2013827/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-to-probe-incident">Dawn</source>
   </item>
   <item>
+    <title>Zia Yusuf’s post about Camden council leader is ‘straightforward racism’, says minister</title>
+    <link>https://thegloballens365.vercel.app/article/zia-yusuf-s-post-about-camden-council-leader-is-straightforward-racism-says-mini--19mr52</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zia-yusuf-s-post-about-camden-council-leader-is-straightforward-racism-says-mini--19mr52</guid>
+    <description>Senior Reform UK figure has faced criticism within party after post about Sagal Abdi-Wali, a former child refugee Labour has accused Reform’s Zia Yusuf of...</description>
+    <category>siasat</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sun, 06 Sep 2026 12:15:28 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.theguardian.com/politics/2026/sep/06/zia-yusuf-reform-uk-post-camden-council-leader-sagal-abdi-wali">The Guardian</source>
+  </item>
+  <item>
     <title>Zhu Rongji, who helped turn China into a trading giant, dies at 97</title>
     <link>https://thegloballens365.vercel.app/article/zhu-rongji-who-helped-turn-china-into-a-trading-giant-dies-at-97--m3h51l</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zhu-rongji-who-helped-turn-china-into-a-trading-giant-dies-at-97--m3h51l</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 18 Jul 2026 16:18:30 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-confirms-strikes-on-russian-facilities--qp5by3.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1524947/zelenskyy-confirms-strikes-on-russian-facilities/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zelenskyy backs state energy company chief Koretskyi for new Ukraine PM</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-ukraine-pm--7s7md1</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-ukraine-pm--7s7md1</guid>
-    <description>Ukraine&apos;s parliament is expected to vote for the next prime minister on Thursday.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 15 Jul 2026 16:48:14 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-ukraine-pm--7s7md1.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/7/15/zelenskyy-backs-state-energy-company-chief-koretskyi-for-new-pm?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
