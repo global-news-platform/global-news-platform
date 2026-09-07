@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 07 Sep 2026 09:29:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 20:06:34 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -391,6 +391,17 @@
     <source url="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR</source>
   </item>
   <item>
+    <title>Zheng stuns Swiatek after winning another set from 5-0 down</title>
+    <link>https://thegloballens365.vercel.app/article/zheng-stuns-swiatek-after-winning-another-set-from-5-0-down--1q876u</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-stuns-swiatek-after-winning-another-set-from-5-0-down--1q876u</guid>
+    <description>Zheng Qinwen wins a set from 5-0 down for the second successive match as she shocks Iga Swiatek to reach the US Open quarter-finals.</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 07 Sep 2026 19:28:40 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/cm2ml7xxg80o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
     <title>Zheng goes from 5-0 and match point down to victory</title>
     <link>https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</guid>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 16 Jul 2026 11:33:11 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc.jpg" type="image/jpeg" />
     <source url="https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired">NPR</source>
-  </item>
-  <item>
-    <title>Zelenskyy confirms strikes on Russian facilities</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-confirms-strikes-on-russian-facilities--qp5by3</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-confirms-strikes-on-russian-facilities--qp5by3</guid>
-    <description>Ukrainian President Volodymyr Zelenskyy said Ukraine carried out long-range strikes on Russian oil and logistics facilities in the Moscow and Tambov regions.</description>
-    <category>pakistan</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sat, 18 Jul 2026 16:18:30 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-confirms-strikes-on-russian-facilities--qp5by3.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1524947/zelenskyy-confirms-strikes-on-russian-facilities/">Daily Times</source>
   </item>
   </channel>
 </rss>
