@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 08 Sep 2026 03:55:40 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 09:04:26 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -402,6 +402,17 @@
     <source url="https://www.bbc.co.uk/sport/tennis/articles/cm2ml7xxg80o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>Zheng pulls off stunning comeback to make quarter finals, Zverev through to the final eight in the US Open</title>
+    <link>https://thegloballens365.vercel.app/article/zheng-pulls-off-stunning-comeback-to-make-quarter-finals-zverev-through-to-the-f--lus054</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-pulls-off-stunning-comeback-to-make-quarter-finals-zverev-through-to-the-f--lus054</guid>
+    <description>Zheng Qinwen pulled off another US Open stunner on Monday, beating Iga Swiatek to book a quarter final with Elena Rybakina as men’s top seed Alexander Zverev...</description>
+    <category>khel</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 08 Sep 2026 06:59:04 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2028331/zheng-pulls-off-stunning-comeback-to-make-quarter-finals-zverev-through-to-the-final-eight-in-the-us-open">Dawn</source>
+  </item>
+  <item>
     <title>Zheng goes from 5-0 and match point down to victory</title>
     <link>https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 21 Jul 2026 21:58:32 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-replaces-ukraine-military-chief-after-protests--2vtyu8.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/7/21/zelenskyy-replaces-ukraine-military-chief-after-protests?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zelenskyy fires Ukraine&apos;s tech-savvy defense minister in government reshuffle</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc</guid>
-    <description>Ukraine&apos;s President Volodymyr Zelenskyy has fired the country&apos;s popular defense minister, who pushed for innovation in the battlefield through the use of...</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Thu, 16 Jul 2026 11:33:11 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-fires-ukraine-s-tech-savvy-defense-minister-in-government-reshuffle--bm9auc.jpg" type="image/jpeg" />
-    <source url="https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired">NPR</source>
   </item>
   </channel>
 </rss>
