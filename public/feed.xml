@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 09 Sep 2026 14:46:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 19:37:58 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -534,6 +534,17 @@
     <source url="https://www.aljazeera.com/news/2026/7/22/zelenskyy-sacks-syrskii-how-many-generals-have-ukraine-russia-fired?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>Zelenskyy’s plane ‘almost hit’ by drone on way to Oslo, Norwegian PM says</title>
+    <link>https://thegloballens365.vercel.app/article/zelenskyy-s-plane-almost-hit-by-drone-on-way-to-oslo-norwegian-pm-says--c38r4i</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-s-plane-almost-hit-by-drone-on-way-to-oslo-norwegian-pm-says--c38r4i</guid>
+    <description>Jonas ​Gahr Store says incident happened when jet ⁠⁠carrying Ukrainian president took off from Moldova.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 09 Sep 2026 18:36:50 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/9/9/zelenskyys-plane-almost-hit-by-drone-on-way-to-oslo-norwegian-pm-says?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Zelenskyy returns Poland&apos;s highest honor as row deepens</title>
     <link>https://thegloballens365.vercel.app/article/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 22 Jul 2026 12:57:20 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-replaces-ukraine-s-commander-in-chief-after-days-of-protests--tns3xa.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/7/22/zelenskyy-replaces-ukraines-commander-in-chief-after-days-of-protests?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zelenskyy replaces Ukraine military chief after protests</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-military-chief-after-protests--2vtyu8</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-military-chief-after-protests--2vtyu8</guid>
-    <description>Replaced military chief Syrskyi clashed with former Defence Minister Fedorov, whose removal last week led to protests.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Tue, 21 Jul 2026 21:58:32 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-replaces-ukraine-military-chief-after-protests--2vtyu8.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/7/21/zelenskyy-replaces-ukraine-military-chief-after-protests?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
