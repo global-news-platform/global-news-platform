@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 09 Sep 2026 19:37:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 22:47:00 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -479,6 +479,17 @@
     <source url="https://www.bbc.co.uk/news/articles/c0km3d2j6mko?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zendaya, David Harbour, Florence Pugh Among Stars Set to Present at the Emmys</title>
+    <link>https://thegloballens365.vercel.app/article/zendaya-david-harbour-florence-pugh-among-stars-set-to-present-at-the-emmys--18r8vn</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zendaya-david-harbour-florence-pugh-among-stars-set-to-present-at-the-emmys--18r8vn</guid>
+    <description>They will be joined by other mainstays of the small and big screen including Sarah Michelle Gellar, Amy Poehler and Jon Hamm.</description>
+    <category>shobiz</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 09 Sep 2026 20:00:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-news/2026-emmy-presenters-revealed-zendaya-david-harbour-1236695742/">The Hollywood Reporter</source>
+  </item>
+  <item>
     <title>Zelenskyy warns airlines as Ukrainian drones target Russian airspace</title>
     <link>https://thegloballens365.vercel.app/article/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace--7uruxn</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace--7uruxn</guid>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 20 Jun 2026 13:14:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e.jpg" type="image/jpeg" />
     <source url="https://www.dw.com/en/zelenskyy-returns-poland-s-highest-honor-as-row-deepens/a-77637366?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
-  </item>
-  <item>
-    <title>Zelenskyy replaces Ukraine’s commander-in-chief after days of protests</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-s-commander-in-chief-after-days-of-protests--tns3xa</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-replaces-ukraine-s-commander-in-chief-after-days-of-protests--tns3xa</guid>
-    <description>Zelenskyy replaces Ukraine’s commander-in-chief after days of protests</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 22 Jul 2026 12:57:20 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-replaces-ukraine-s-commander-in-chief-after-days-of-protests--tns3xa.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/7/22/zelenskyy-replaces-ukraines-commander-in-chief-after-days-of-protests?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
