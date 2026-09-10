@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 10 Sep 2026 04:02:01 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 09:15:15 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -59,6 +59,17 @@
     <pubDate>Fri, 04 Sep 2026 07:27:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/9/4/zverev-goes-distance-to-scrape-into-third-round-as-upsets-rock-us-open?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zverev defeats Van de Zandschulp in straight sets to enter US Open semis</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-defeats-van-de-zandschulp-in-straight-sets-to-enter-us-open-semis--1mcy9v</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-defeats-van-de-zandschulp-in-straight-sets-to-enter-us-open-semis--1mcy9v</guid>
+    <description>The German, who faces Russia’s Karen Khachanov, is the only Grand Slam winner left standing in the men&apos;s draw.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Thu, 10 Sep 2026 05:33:55 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/9/10/zverev-defeats-van-de-zandschulp-in-straight-sets-to-enter-us-open-semis?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zverev battles through after enduring another 2am finish</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 09 Sep 2026 18:36:50 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/9/9/zelenskyys-plane-almost-hit-by-drone-on-way-to-oslo-norwegian-pm-says?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zelenskyy returns Poland&apos;s highest honor as row deepens</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e</guid>
-    <description>Ukraine&apos;s president has returned a medal to Poland after a decision to strip him of the honor.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 20 Jun 2026 13:14:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-returns-poland-s-highest-honor-as-row-deepens--t78q9e.jpg" type="image/jpeg" />
-    <source url="https://www.dw.com/en/zelenskyy-returns-poland-s-highest-honor-as-row-deepens/a-77637366?maca=en-rss-en-world-4025-rdf">Deutsche Welle</source>
   </item>
   </channel>
 </rss>
