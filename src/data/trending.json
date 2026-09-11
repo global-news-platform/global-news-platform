@@ -1,15 +1,81 @@
 [
   {
-    "slug": "fourth-polio-case-of-2026-reported-in-kp-s-bannu-district--12q8p0",
-    "title": "Fourth polio case of 2026 reported in KP's Bannu district",
+    "slug": "calm-classy-but-no-century-brilliant-masood-frustrates-england--cffott",
+    "title": "Calm, classy but no century - Brilliant Masood frustrates England",
+    "category": "khel",
+    "score": 9.9
+  },
+  {
+    "slug": "consultations-begin-to-schedule-meeting-between-na-opposition-leader-and-prime-m--174c7t",
+    "title": "Consultations begin to schedule meeting between NA opposition leader and prime minister",
     "category": "pakistan",
     "score": 9.9
   },
   {
-    "slug": "kp-advocate-general-questions-maintainability-of-plea-against-pti-s-sept-27-prot--4y7m57",
-    "title": "KP advocate general questions maintainability of plea against PTI's Sept 27 protest",
+    "slug": "mps-vote-against-assisted-dying-bill-after-tense-debate-uk-politics-live--1hpumr",
+    "title": "MPs vote against assisted dying bill after tense debate – UK politics live",
+    "category": "siasat",
+    "score": 9.9
+  },
+  {
+    "slug": "cynthia-erivo-s-first-film-since-wicked-required-her-to-go-dark-deep-and-fearles--p2ayu7",
+    "title": "Cynthia Erivo’s First Film Since ‘Wicked’ Required Her to Go Dark, Deep and Fearless: “I’d Feel Sick and Angry”",
+    "category": "shobiz",
+    "score": 9.9
+  },
+  {
+    "slug": "us-inflation-holds-steady-as-diesel-prices-pass-6-a-gallon--vj7xu3",
+    "title": "US inflation holds steady as diesel prices pass $6 a gallon",
+    "category": "karobar",
+    "score": 9.9
+  },
+  {
+    "slug": "masood-falls-just-short-of-century-after-lawrence-s-stunning-catch--pjnnj2",
+    "title": "Masood falls just short of century after Lawrence's stunning catch",
+    "category": "khel",
+    "score": 9.9
+  },
+  {
+    "slug": "india-hosts-russia-iran-for-brics-summit--unbye0",
+    "title": "India hosts Russia, Iran for Brics summit",
     "category": "pakistan",
     "score": 9.9
+  },
+  {
+    "slug": "opposition-holding-consultations-to-call-all-parties-moot-on-creation-of-new-pro--1hx0ty",
+    "title": "Opposition holding consultations to call all parties-moot on creation of new provinces, other issues: Gohar",
+    "category": "pakistan",
+    "score": 9.8
+  },
+  {
+    "slug": "assisted-dying-how-laws-differ-around-the-world--1sdrsc",
+    "title": "Assisted dying: How laws differ around the world",
+    "category": "sehat",
+    "score": 9.8
+  },
+  {
+    "slug": "mps-vote-against-legalising-assisted-dying-in-england-and-wales--qymhgk",
+    "title": "MPs vote against legalising assisted dying in England and Wales",
+    "category": "siasat",
+    "score": 9.8
+  },
+  {
+    "slug": "hull-fined-30k-bans-issued-over-chelsea-chant--o4jsvs",
+    "title": "Hull fined £30k & bans issued over Chelsea chant",
+    "category": "khel",
+    "score": 9.8
+  },
+  {
+    "slug": "parineeti-chopra-returns-to-screen-with-netflix-s-shaque--kwgv01",
+    "title": "Parineeti Chopra returns to screen with Netflix’s Shaque",
+    "category": "pakistan",
+    "score": 9.8
+  },
+  {
+    "slug": "new-york-marks-25th-anniversary-of-9-11-attacks--sjrxx8",
+    "title": "New York marks 25th anniversary of 9/11 attacks",
+    "category": "pakistan",
+    "score": 9.8
   },
   {
     "slug": "interest-rates-could-rise-again-across-the-world-here-s-why--33byyi",
@@ -18,104 +84,38 @@
     "score": 9.8
   },
   {
-    "slug": "what-did-25-years-of-the-war-on-terror-leave-behind--1bvjdu",
-    "title": "What did 25 years of the “war on terror” leave behind?",
-    "category": "dunya",
+    "slug": "man-in-motion-the-rick-hansen-story-doc-takes-viewers-back-to-1980s-globe-circli--lzziuz",
+    "title": "‘Man in Motion: The Rick Hansen Story’ Doc Takes Viewers Back to 1980s Globe-Circling Wheelchair Trek: “It’s Just Insane”",
+    "category": "shobiz",
     "score": 9.8
   },
   {
-    "slug": "how-9-11-helped-israel-sell-its-war-on-palestinians-to-america--1fdyrh",
-    "title": "How 9/11 helped Israel sell its war on Palestinians to America",
-    "category": "dunya",
-    "score": 9.8
-  },
-  {
-    "slug": "mps-to-vote-again-on-assisted-dying-as-bill-returns-to-parliament-uk-politics-li--wjml7f",
-    "title": "MPs to vote again on assisted dying as bill returns to parliament – UK politics live",
-    "category": "siasat",
-    "score": 9.8
-  },
-  {
-    "slug": "anthropic-warns-of-bids-to-use-ai-to-build-biological-weapons--10cjzi",
-    "title": "Anthropic warns of bids to use AI to build biological weapons",
-    "category": "dunya",
-    "score": 9.8
-  },
-  {
-    "slug": "ai-boom-helps-drive-surprise-uk-growth-in-july--5p8ham",
-    "title": "AI boom helps drive surprise UK growth in July",
-    "category": "karobar",
-    "score": 9.8
-  },
-  {
-    "slug": "mongolian-president-khurelsukh-stuns-public-with-100kg-bench-press--y00ens",
-    "title": "Mongolian president Khurelsukh stuns public with 100kg bench press",
+    "slug": "shan-masood-frustrates-england-s-victory-push-in-third-test--8kzv83",
+    "title": "Shan Masood frustrates England's victory push in third Test",
     "category": "pakistan",
     "score": 9.8
   },
   {
-    "slug": "hong-kong-court-hands-stiff-jail-sentences-to-tiananmen-vigil-activists--32vryj",
-    "title": "Hong Kong court hands stiff jail sentences to Tiananmen vigil activists",
+    "slug": "the-vanishing-pharmacy-of-the-sundarbans--1966ie",
+    "title": "The vanishing pharmacy of the Sundarbans",
+    "category": "dunya",
+    "score": 9.8
+  },
+  {
+    "slug": "the-dystopian-legal-architecture-of-the-war-on-terror-must-be-dismantled--qoaok7",
+    "title": "The dystopian legal architecture of the ‘war on terror’ must be dismantled",
     "category": "dunya",
     "score": 9.7
   },
   {
-    "slug": "hall-signs-new-contract-with-newcastle-until-2031--o2c9fn",
-    "title": "Hall signs new contract with Newcastle until 2031",
-    "category": "khel",
-    "score": 9.7
-  },
-  {
-    "slug": "pressure-grows-on-burnham-to-commit-to-increasing-statutory-paternity-leave--f5po95",
-    "title": "Pressure grows on Burnham to commit to increasing statutory paternity leave",
-    "category": "siasat",
-    "score": 9.7
-  },
-  {
-    "slug": "uefa-wants-fifa-subsidiaries-blocked-from-infantino-discovery-fight-in-us--2t4ojh",
-    "title": "UEFA wants FIFA subsidiaries’ blocked from Infantino discovery fight in US",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "psx-slides-as-oil-prices-fuel-inflation-and-rate-hike-fears--elk2o2",
-    "title": "PSX slides as oil prices fuel inflation and rate hike fears",
+    "slug": "shehbaz-urges-higher-farm-productivity-exports--30kwr",
+    "title": "Shehbaz urges higher farm productivity, exports",
     "category": "pakistan",
     "score": 9.7
   },
   {
-    "slug": "from-hours-at-security-to-bulletproof-cockpits-how-9-11-changed-air-travel--6ffdp7",
-    "title": "From hours at security to bulletproof cockpits: How 9/11 changed air travel",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "alstom-to-build-new-battery-electric-train-fleet--mn5kus",
-    "title": "Alstom to build new battery-electric train fleet",
-    "category": "karobar",
-    "score": 9.7
-  },
-  {
-    "slug": "brics-summit-is-the-bloc-truly-challenging-a-western-dominated-world--abzo29",
-    "title": "BRICS summit: Is the bloc truly challenging a Western-dominated world?",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "bts-suga-meets-boxing-legend-sugar-ray-leonard--hg9vzs",
-    "title": "BTS SUGA meets boxing legend Sugar Ray Leonard",
-    "category": "pakistan",
-    "score": 9.7
-  },
-  {
-    "slug": "settlers-soldiers-and-israeli-impunity-in-the-west-bank--1vg14d",
-    "title": "Settlers, soldiers, and Israeli impunity in the West Bank",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "why-houthi-military-gains-in-yemen-may-further-increase-gas-prices--1mjbos",
-    "title": "Why Houthi military gains in Yemen may further increase gas prices",
+    "slug": "arsenal-manager-arteta-very-surprised-at-jesus-blast-over-barcelona-move--79lbv3",
+    "title": "Arsenal manager Arteta ‘very surprised’ at Jesus blast over Barcelona move",
     "category": "dunya",
     "score": 9.7
   }
