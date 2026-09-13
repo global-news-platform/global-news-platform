@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 13 Sep 2026 19:04:18 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 22:37:49 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -81,6 +81,17 @@
     <pubDate>Thu, 10 Sep 2026 05:33:55 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/9/10/zverev-defeats-van-de-zandschulp-in-straight-sets-to-enter-us-open-semis?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zverev caps transformational year with US Open triumph</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-caps-transformational-year-with-us-open-triumph--1vpr7i</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-caps-transformational-year-with-us-open-triumph--1vpr7i</guid>
+    <description>Alexander Zverev lands his second Grand Slam title after ending Ben Shelton&apos;s hopes of becoming a rare home US Open men&apos;s champion.</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Sun, 13 Sep 2026 22:02:29 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/c1wx9qpxjg3o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev battles through after enduring another 2am finish</title>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 10 Jul 2026 04:03:36 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production--uspk5z.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/7/10/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zelenskyy thanks UK for intercepting Russian shadow fleet oil tanker after armed forces board vessel - UK politics live</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-thanks-uk-for-intercepting-russian-shadow-fleet-oil-tanker-after-armed--og7avj</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-thanks-uk-for-intercepting-russian-shadow-fleet-oil-tanker-after-armed--og7avj</guid>
-    <description>Keir Starmer said British armed forces intercepted a Russian shadow fleet vessel in the early hours of Sunday morning British armed forces intercept Russian...</description>
-    <category>siasat</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sun, 14 Jun 2026 11:49:28 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-thanks-uk-for-intercepting-russian-shadow-fleet-oil-tanker-after-armed--og7avj.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/politics/live/2026/jun/14/russian-shadow-fleet-oil-tanker-channel-army-marines-keir-starmer-dan-jarvis-makerfield-labour-uk-politics-latest-news-updates">The Guardian</source>
   </item>
   </channel>
 </rss>
