@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 13 Sep 2026 22:37:49 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 04:20:30 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -81,6 +81,17 @@
     <pubDate>Thu, 10 Sep 2026 05:33:55 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/9/10/zverev-defeats-van-de-zandschulp-in-straight-sets-to-enter-us-open-semis?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zverev defeats Shelton in four sets to win his first US Open title</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-defeats-shelton-in-four-sets-to-win-his-first-us-open-title--tj3abi</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-defeats-shelton-in-four-sets-to-win-his-first-us-open-title--tj3abi</guid>
+    <description>Germany&apos;s Alexander Zverev beats American Ben Shelton 6-3, 7-6 (2), 5-7, 6-2 to win the men&apos;s singles title in New York.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Sun, 13 Sep 2026 22:33:34 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/9/13/zverev-beats-shelton-in-four-sets-to-win-us-open-title?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
     <title>Zverev caps transformational year with US Open triumph</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 01 Sep 2026 21:03:45 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/video/newsfeed/2026/9/1/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zelenskyy urges urgent efforts in Ukraine to start Patriot production</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production--uspk5z</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production--uspk5z</guid>
-    <description>US President Donald Trump gave his blessing earlier this week to domestic Ukrainian production of the missiles.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Fri, 10 Jul 2026 04:03:36 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production--uspk5z.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/7/10/zelenskyy-urges-urgent-efforts-in-ukraine-to-start-patriot-production?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
