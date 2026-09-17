@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 16 Sep 2026 21:40:02 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 07:41:42 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -191,6 +191,17 @@
     <pubDate>Mon, 10 Aug 2026 17:51:18 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/8/10/zuckerbergs-yacht-crew-did-not-hear-call-for-help-says-spokesperson?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zuckerberg pushes back on AI slowdown calls</title>
+    <link>https://thegloballens365.vercel.app/article/zuckerberg-pushes-back-on-ai-slowdown-calls--1fzt32</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zuckerberg-pushes-back-on-ai-slowdown-calls--1fzt32</guid>
+    <description>SAN FRANCISCO: Meta CEO Mark Zuckerberg pushed back on Tuesday against growing calls to pause or slow AI development, arguing that market incentives and legal...</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Thu, 17 Sep 2026 03:31:57 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2030539/zuckerberg-pushes-back-on-ai-slowdown-calls">Dawn</source>
   </item>
   <item>
     <title>Zosia Mamet Joins ‘Industry’ Season 5</title>
@@ -479,6 +490,17 @@
     <source url="https://www.bbc.co.uk/sport/tennis/articles/c3eq55xznvyo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>Zhang Yimou to Lead Busan Film Festival Competition Jury</title>
+    <link>https://thegloballens365.vercel.app/article/zhang-yimou-to-lead-busan-film-festival-competition-jury--14a5ls</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zhang-yimou-to-lead-busan-film-festival-competition-jury--14a5ls</guid>
+    <description>Chinese auteur Bi Gan, Korean actor Moon Choi, Japanese filmmaker Kei Ishikawa and Cannes best actress winner Samal Yeslyamova are among the other six jurors.</description>
+    <category>shobiz</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Wed, 16 Sep 2026 23:53:23 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/movies/movie-news/zhang-yimou-busan-film-festival-competition-jury-1236704168/">The Hollywood Reporter</source>
+  </item>
+  <item>
     <title>Zeze Takahisa’s ‘Sukiyaki’ to Open Tokyo Film Festival</title>
     <link>https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</guid>
@@ -543,28 +565,6 @@
     <pubDate>Wed, 29 Jul 2026 20:21:46 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-on-working-with-tom-holland-in-spider-man-when-you-re-best-friends-it-s---9cshj0.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c0km3d2j6mko?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zendaya, David Harbour, Florence Pugh Among Stars Set to Present at the Emmys</title>
-    <link>https://thegloballens365.vercel.app/article/zendaya-david-harbour-florence-pugh-among-stars-set-to-present-at-the-emmys--18r8vn</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zendaya-david-harbour-florence-pugh-among-stars-set-to-present-at-the-emmys--18r8vn</guid>
-    <description>They will be joined by other mainstays of the small and big screen including Sarah Michelle Gellar, Amy Poehler and Jon Hamm.</description>
-    <category>shobiz</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 09 Sep 2026 20:00:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/tv/tv-news/2026-emmy-presenters-revealed-zendaya-david-harbour-1236695742/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>Zelenskyy warns airlines as Ukrainian drones target Russian airspace</title>
-    <link>https://thegloballens365.vercel.app/article/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace--7uruxn</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace--7uruxn</guid>
-    <description>President Volodymyr Zelenskyy warned that Ukrainian drones will continue operating over Russia.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 01 Sep 2026 21:03:45 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/video/newsfeed/2026/9/1/zelenskyy-warns-airlines-as-ukrainian-drones-target-russian-airspace?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
