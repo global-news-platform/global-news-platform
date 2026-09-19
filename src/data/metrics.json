@@ -1,12 +1,12 @@
 {
   "date": "2026-09-19",
-  "totalArticles": 2172,
-  "totalSizeKb": 3190,
+  "totalArticles": 2164,
+  "totalSizeKb": 3177,
   "categories": {
     "technology": 39,
     "karobar": 132,
-    "pakistan": 228,
-    "dunya": 1012,
+    "pakistan": 219,
+    "dunya": 1013,
     "shobiz": 149,
     "sehat": 33,
     "khel": 352,
@@ -17,7 +17,7 @@
   "topCategories": [
     {
       "name": "dunya",
-      "count": 1012
+      "count": 1013
     },
     {
       "name": "khel",
@@ -25,7 +25,7 @@
     },
     {
       "name": "pakistan",
-      "count": 228
+      "count": 219
     },
     {
       "name": "siasat",
