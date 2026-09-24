@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 24 Sep 2026 20:17:59 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 23:33:05 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -125,6 +125,17 @@
     <pubDate>Sun, 06 Sep 2026 07:59:04 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/9/6/zverev-and-gauff-ease-into-us-open-last-16-but-alex-eala-falls-to-jovic?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zurich Film Festival Underway With Golden Eye Award for Tom Hiddleston</title>
+    <link>https://thegloballens365.vercel.app/article/zurich-film-festival-underway-with-golden-eye-award-for-tom-hiddleston--1xfej6</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zurich-film-festival-underway-with-golden-eye-award-for-tom-hiddleston--1xfej6</guid>
+    <description>The Swiss film festival has opened with the European premiere of Hiddleston&apos;s latest feature, an Everest drama called &apos;Tenzing.&apos;</description>
+    <category>shobiz</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 24 Sep 2026 21:01:26 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/movies/movie-news/zurich-film-festival-2026-tom-hiddleston-tenzing-golden-eye-1236709651/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Zurich Film Fest Galas Set for Award Contenders ‘I Play Rocky,’ ‘Possible Love,’ ‘Josephine’</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 28 Jul 2026 10:02:38 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries--crtihu.jpg" type="image/jpeg" />
     <source url="https://dailytimes.com.pk/1529714/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries/">Daily Times</source>
-  </item>
-  <item>
-    <title>Zendaya on working with Tom Holland in Spider-Man: ‘When you’re best friends it’s easy’</title>
-    <link>https://thegloballens365.vercel.app/article/zendaya-on-working-with-tom-holland-in-spider-man-when-you-re-best-friends-it-s---9cshj0</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zendaya-on-working-with-tom-holland-in-spider-man-when-you-re-best-friends-it-s---9cshj0</guid>
-    <description>The couple walked the white carpet at the London premiere of their latest film, Spiderman: Brand New Day.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 29 Jul 2026 20:21:46 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-on-working-with-tom-holland-in-spider-man-when-you-re-best-friends-it-s---9cshj0.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/c0km3d2j6mko?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
