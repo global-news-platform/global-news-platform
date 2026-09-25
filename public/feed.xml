@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 25 Sep 2026 20:25:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 23:35:31 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -413,6 +413,17 @@
     <source url="https://www.bbc.co.uk/sport/football/articles/c20dxgpjng3o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
+    <title>Zidane puts early stamp on France off the pitch before winning start</title>
+    <link>https://thegloballens365.vercel.app/article/zidane-puts-early-stamp-on-france-off-the-pitch-before-winning-start--1ct81a</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zidane-puts-early-stamp-on-france-off-the-pitch-before-winning-start--1ct81a</guid>
+    <description>Zinedine Zidane’s first week in charge of France ended with a 1-0 Nations League win away to Turkiye on Friday thanks to a second-half goal from Kylian Mbappe,...</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Fri, 25 Sep 2026 21:48:56 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2032681/zidane-puts-early-stamp-on-france-off-the-pitch-before-winning-start">Dawn</source>
+  </item>
+  <item>
     <title>Zidane confirmed as France head coach</title>
     <link>https://thegloballens365.vercel.app/article/zidane-confirmed-as-france-head-coach--do6o9g</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zidane-confirmed-as-france-head-coach--do6o9g</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 22 Jul 2026 04:42:16 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-s-best-press-tour-looks-from-dune-to-challengers-to-the-odyssey--zs6rbi.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/lists/zendaya-best-press-tour-looks/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>Zendaya praises Tom Holland for setting strong personal boundaries</title>
-    <link>https://thegloballens365.vercel.app/article/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries--crtihu</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries--crtihu</guid>
-    <description>Zendaya has shared one quality she admires most about her husband, Tom Holland, saying she wishes she could be more like him when it comes to setting clear...</description>
-    <category>pakistan</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Tue, 28 Jul 2026 10:02:38 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries--crtihu.jpg" type="image/jpeg" />
-    <source url="https://dailytimes.com.pk/1529714/zendaya-praises-tom-holland-for-setting-strong-personal-boundaries/">Daily Times</source>
   </item>
   </channel>
 </rss>
