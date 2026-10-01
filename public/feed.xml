@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 05:09:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 13:03:09 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -358,6 +358,17 @@
     <source url="https://www.bbc.co.uk/news/articles/c1my1rvy28do?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zimbabwe tycoon Wicknell Chivayo and wife killed in helicopter crash</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwe-tycoon-wicknell-chivayo-and-wife-killed-in-helicopter-crash--d0761h</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-tycoon-wicknell-chivayo-and-wife-killed-in-helicopter-crash--d0761h</guid>
+    <description>Chivayo was known for his lavish lifestyle, close ties to African presidents and lucrative government contracts.</description>
+    <category>dunya</category>
+    <author>Imran Malik</author>
+    <pubDate>Thu, 01 Oct 2026 11:00:28 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cr4gvg0yenl4o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zimbabwe’s Senate approves amendment extending presidential term</title>
     <link>https://thegloballens365.vercel.app/article/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9</guid>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 10 Sep 2026 21:34:44 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/movies/movie-reviews/zero-intention-of-living-quietly-review-adam-pearson-1236690979/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>Zero hours crackdown could cost firms up to £2.9bn a year</title>
-    <link>https://thegloballens365.vercel.app/article/zero-hours-crackdown-could-cost-firms-up-to-2-9bn-a-year--26e41w</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zero-hours-crackdown-could-cost-firms-up-to-2-9bn-a-year--26e41w</guid>
-    <description>Labour&apos;s employment rights bill crackdown on zero hours contracts could cost businesses up to £2.9bn a year, new official analysis has found.</description>
-    <category>siasat</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Thu, 13 Aug 2026 11:12:33 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/c0l525k76d0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
