@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sat, 03 Oct 2026 23:12:49 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 05:16:21 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -336,6 +336,17 @@
     <source url="https://www.bbc.co.uk/news/articles/cgr7qrdx4qwo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zimbabweans struggle to rebuild after fleeing xenophobia in South Africa</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabweans-struggle-to-rebuild-after-fleeing-xenophobia-in-south-africa--smee45</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabweans-struggle-to-rebuild-after-fleeing-xenophobia-in-south-africa--smee45</guid>
+    <description>Returnees face economic hardship and limited support as they try to rebuild in Zimbabwe.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Sun, 04 Oct 2026 01:55:46 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/10/4/zimbabweans-struggle-to-rebuild-after-fleeing-xenophobia-in-south-africa?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Zimbabweans return home amid xenophobic violence in South Africa</title>
     <link>https://thegloballens365.vercel.app/article/zimbabweans-return-home-amid-xenophobic-violence-in-south-africa--q304jc</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabweans-return-home-amid-xenophobic-violence-in-south-africa--q304jc</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 01 Sep 2026 19:00:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/movies/movie-news/tokyo-film-festival-2026-opening-closing-films-1236687035/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>‘Zero Intention of Living Quietly’ Review: Doc About ‘A Different Man’ Star Adam Pearson Is Moving, When It’s Not Getting in Its Own Way</title>
-    <link>https://thegloballens365.vercel.app/article/zero-intention-of-living-quietly-review-doc-about-a-different-man-star-adam-pear--ivq1mn</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zero-intention-of-living-quietly-review-doc-about-a-different-man-star-adam-pear--ivq1mn</guid>
-    <description>The Telluride debut centers on the friendship between the actor, who has facial disfigurement from neurofibromatosis, and a teenage girl with the same genetic...</description>
-    <category>shobiz</category>
-    <author>Imran Malik</author>
-    <pubDate>Thu, 10 Sep 2026 21:34:44 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/movies/movie-reviews/zero-intention-of-living-quietly-review-adam-pearson-1236690979/">The Hollywood Reporter</source>
   </item>
   </channel>
 </rss>
