@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 04 Oct 2026 21:26:43 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 00:57:14 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -314,6 +314,17 @@
     <source url="https://www.hollywoodreporter.com/tv/tv-news/atlantic-festival-2026-east-of-eden-colin-kaepernick-1236670719/">The Hollywood Reporter</source>
   </item>
   <item>
+    <title>Zoe Kazan on Honoring Steinbeck’s ‘East of Eden’ for Netflix Series While Rethinking Its Characters</title>
+    <link>https://thegloballens365.vercel.app/article/zoe-kazan-on-honoring-steinbeck-s-east-of-eden-for-netflix-series-while-rethinki--1l4cot</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-kazan-on-honoring-steinbeck-s-east-of-eden-for-netflix-series-while-rethinki--1l4cot</guid>
+    <description>The series creator explains her decision to build the adaptation around a love story, between brothers, rereading Cathy Ames and how she updated Steinbeck&apos;s...</description>
+    <category>shobiz</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Sun, 04 Oct 2026 23:30:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-features/netflix-east-of-eden-creator-interview-adapting-steinbeck-1236713934/">The Hollywood Reporter</source>
+  </item>
+  <item>
     <title>Zinedine Zidane named new France head coach following World Cup 2026</title>
     <link>https://thegloballens365.vercel.app/article/zinedine-zidane-named-new-france-head-coach-following-world-cup-2026--l36kmy</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zinedine-zidane-named-new-france-head-coach-following-world-cup-2026--l36kmy</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 16 Sep 2026 23:53:23 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/movies/movie-news/zhang-yimou-busan-film-festival-competition-jury-1236704168/">The Hollywood Reporter</source>
-  </item>
-  <item>
-    <title>Zeze Takahisa’s ‘Sukiyaki’ to Open Tokyo Film Festival</title>
-    <link>https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zeze-takahisa-s-sukiyaki-to-open-tokyo-film-festival--11snqz</guid>
-    <description>Yeon Sang-ho&apos;s zombie film &apos;Colony&apos; is set to close the event, with Takashi Yamazaki&apos;s &apos;Godzilla Minus Zero&apos; receiving a special Centerpiece screening.</description>
-    <category>shobiz</category>
-    <author>Imran Malik</author>
-    <pubDate>Tue, 01 Sep 2026 19:00:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/movies/movie-news/tokyo-film-festival-2026-opening-closing-films-1236687035/">The Hollywood Reporter</source>
   </item>
   </channel>
 </rss>
