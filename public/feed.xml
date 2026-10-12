@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Mon, 12 Oct 2026 05:20:13 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 15:16:23 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -37,6 +37,17 @@
     <pubDate>Fri, 11 Sep 2026 22:42:27 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/sports.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/clykzn81n4go?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zverev secures year-end number one ranking as Alcaraz loses</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-secures-year-end-number-one-ranking-as-alcaraz-loses--1ecmcn</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-secures-year-end-number-one-ranking-as-alcaraz-loses--1ecmcn</guid>
+    <description>Alexander Zverev is guaranteed to finish his 2026 season as the world number one after Carlos Alcaraz suffers a surprise defeat in Shanghai.</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 12 Oct 2026 14:30:28 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/cw3dj8jr8xj2o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev says cutting Masters events to one week is an easy fix for crowded calendar</title>
@@ -325,6 +336,17 @@
     <source url="https://www.hollywoodreporter.com/tv/tv-features/netflix-east-of-eden-creator-interview-adapting-steinbeck-1236713934/">The Hollywood Reporter</source>
   </item>
   <item>
+    <title>Zizou Bergs stuns Alcaraz in Shanghai as Zverev claims year-end top ranking</title>
+    <link>https://thegloballens365.vercel.app/article/zizou-bergs-stuns-alcaraz-in-shanghai-as-zverev-claims-year-end-top-ranking--gun3w4</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zizou-bergs-stuns-alcaraz-in-shanghai-as-zverev-claims-year-end-top-ranking--gun3w4</guid>
+    <description>After defending his Japan Open title after returning from injury, Alcaraz never found his rhythm in a scrappy contest.</description>
+    <category>dunya</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Mon, 12 Oct 2026 14:14:04 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/sports/2026/10/12/zizou-bergs-stuns-alcaraz-in-shanghai-as-zverev-claims-year-end-top-ranking?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Zinedine Zidane named new France head coach following World Cup 2026</title>
     <link>https://thegloballens365.vercel.app/article/zinedine-zidane-named-new-france-head-coach-following-world-cup-2026--l36kmy</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zinedine-zidane-named-new-france-head-coach-following-world-cup-2026--l36kmy</guid>
@@ -543,28 +565,6 @@
     <pubDate>Tue, 08 Sep 2026 06:59:04 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2028331/zheng-pulls-off-stunning-comeback-to-make-quarter-finals-zverev-through-to-the-final-eight-in-the-us-open">Dawn</source>
-  </item>
-  <item>
-    <title>Zheng goes from 5-0 and match point down to victory</title>
-    <link>https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-goes-from-5-0-and-match-point-down-to-victory--on484z</guid>
-    <description>Zheng Qinwen fights back from 5-0 down in the deciding set and stares down match point to stun American 22nd seed Madison Keys.</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Sat, 05 Sep 2026 22:09:18 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/tennis/articles/c3eq55xznvyo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Zheng beats Andreeva to become first home player to win China Open</title>
-    <link>https://thegloballens365.vercel.app/article/zheng-beats-andreeva-to-become-first-home-player-to-win-china-open--10vnfu</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-beats-andreeva-to-become-first-home-player-to-win-china-open--10vnfu</guid>
-    <description>Zheng Qinwen became the first home winner of the China Open on Sunday as she beat Russian teenager Mirra Andreeva 7-5, 6-4 in the final.</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 12 Oct 2026 00:33:08 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2036533/zheng-beats-andreeva-to-become-first-home-player-to-win-china-open">Dawn</source>
   </item>
   </channel>
 </rss>
