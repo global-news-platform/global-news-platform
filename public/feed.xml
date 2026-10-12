@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 11 Oct 2026 23:55:28 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 05:20:13 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -556,15 +556,15 @@
     <source url="https://www.bbc.co.uk/sport/tennis/articles/c3eq55xznvyo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
-    <title>Zhang Yimou to Lead Busan Film Festival Competition Jury</title>
-    <link>https://thegloballens365.vercel.app/article/zhang-yimou-to-lead-busan-film-festival-competition-jury--14a5ls</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zhang-yimou-to-lead-busan-film-festival-competition-jury--14a5ls</guid>
-    <description>Chinese auteur Bi Gan, Korean actor Moon Choi, Japanese filmmaker Kei Ishikawa and Cannes best actress winner Samal Yeslyamova are among the other six jurors.</description>
-    <category>shobiz</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 16 Sep 2026 23:53:23 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/entertainment.jpg" type="image/jpeg" />
-    <source url="https://www.hollywoodreporter.com/movies/movie-news/zhang-yimou-busan-film-festival-competition-jury-1236704168/">The Hollywood Reporter</source>
+    <title>Zheng beats Andreeva to become first home player to win China Open</title>
+    <link>https://thegloballens365.vercel.app/article/zheng-beats-andreeva-to-become-first-home-player-to-win-china-open--10vnfu</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-beats-andreeva-to-become-first-home-player-to-win-china-open--10vnfu</guid>
+    <description>Zheng Qinwen became the first home winner of the China Open on Sunday as she beat Russian teenager Mirra Andreeva 7-5, 6-4 in the final.</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Mon, 12 Oct 2026 00:33:08 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2036533/zheng-beats-andreeva-to-become-first-home-player-to-win-china-open">Dawn</source>
   </item>
   </channel>
 </rss>
