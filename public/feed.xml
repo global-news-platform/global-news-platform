@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 13 Oct 2026 14:24:52 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 20:39:03 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -81,6 +81,17 @@
     <pubDate>Fri, 04 Sep 2026 07:27:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/9/4/zverev-goes-distance-to-scrape-into-third-round-as-upsets-rock-us-open?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zverev defies &apos;physical issues&apos; to reach Shanghai Masters quarter-finals</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-defies-physical-issues-to-reach-shanghai-masters-quarter-finals--1iqioy</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-defies-physical-issues-to-reach-shanghai-masters-quarter-finals--1iqioy</guid>
+    <description>Top-seeded Alexander Zverev toughed out two tie-breaks to beat Alexander Bublik 7-6 (8/6), 4-6, 7-6 (7/1) at the Shanghai Masters on Tuesday, winning his first...</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Tue, 13 Oct 2026 16:37:49 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2036920/zverev-defies-physical-issues-to-reach-shanghai-masters-quarter-finals">Dawn</source>
   </item>
   <item>
     <title>Zverev defeats Van de Zandschulp in straight sets to enter US Open semis</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 07 Sep 2026 19:28:40 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/cm2ml7xxg80o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Zheng pulls off stunning comeback to make quarter finals, Zverev through to the final eight in the US Open</title>
-    <link>https://thegloballens365.vercel.app/article/zheng-pulls-off-stunning-comeback-to-make-quarter-finals-zverev-through-to-the-f--lus054</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-pulls-off-stunning-comeback-to-make-quarter-finals-zverev-through-to-the-f--lus054</guid>
-    <description>Zheng Qinwen pulled off another US Open stunner on Monday, beating Iga Swiatek to book a quarter final with Elena Rybakina as men’s top seed Alexander Zverev...</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 08 Sep 2026 06:59:04 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2028331/zheng-pulls-off-stunning-comeback-to-make-quarter-finals-zverev-through-to-the-final-eight-in-the-us-open">Dawn</source>
   </item>
   </channel>
 </rss>
