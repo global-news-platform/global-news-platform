@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 13 Oct 2026 20:39:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 01:27:12 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -413,6 +413,17 @@
     <source url="https://www.bbc.co.uk/news/articles/c1my1rvy28do?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zimbabwean author denies using AI to write award-winning story</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwean-author-denies-using-ai-to-write-award-winning-story--c1805m</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwean-author-denies-using-ai-to-write-award-winning-story--c1805m</guid>
+    <description>Simbarashe Kundizeza was responding to an accusation that has caused an uproar on social media.</description>
+    <category>dunya</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Tue, 13 Oct 2026 23:31:10 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cm4g1rekpgnjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zimbabwe tycoon Wicknell Chivayo and wife killed in helicopter crash</title>
     <link>https://thegloballens365.vercel.app/article/zimbabwe-tycoon-wicknell-chivayo-and-wife-killed-in-helicopter-crash--d0761h</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-tycoon-wicknell-chivayo-and-wife-killed-in-helicopter-crash--d0761h</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 12 Aug 2026 12:36:30 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
     <source url="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR</source>
-  </item>
-  <item>
-    <title>Zheng stuns Swiatek after winning another set from 5-0 down</title>
-    <link>https://thegloballens365.vercel.app/article/zheng-stuns-swiatek-after-winning-another-set-from-5-0-down--1q876u</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zheng-stuns-swiatek-after-winning-another-set-from-5-0-down--1q876u</guid>
-    <description>Zheng Qinwen wins a set from 5-0 down for the second successive match as she shocks Iga Swiatek to reach the US Open quarter-finals.</description>
-    <category>khel</category>
-    <author>Babar Shah</author>
-    <pubDate>Mon, 07 Sep 2026 19:28:40 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/tennis/articles/cm2ml7xxg80o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
