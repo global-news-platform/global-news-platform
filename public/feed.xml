@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 14 Oct 2026 18:57:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 23:36:15 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -268,6 +268,17 @@
     <pubDate>Tue, 28 Jul 2026 08:50:20 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zoo-staff-rescue-near-extinct-snails-from-remote-rock--1ydpqm.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cwyq7e5d1gko?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>‘Zombies 4’ Star Mekonnen “MK” Knife Shares Favorite Moments From Disney’s Worlds Collide Tour, Backstage “Mayhem” and His Message to Fans</title>
+    <link>https://thegloballens365.vercel.app/article/zombies-4-star-mekonnen-mk-knife-shares-favorite-moments-from-disney-s-worlds-co--dxua91</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zombies-4-star-mekonnen-mk-knife-shares-favorite-moments-from-disney-s-worlds-co--dxua91</guid>
+    <description>The actor-singer-dancer is touring the country with stars from the &apos;Zombies,&apos; &apos;Descendants&apos; and &apos;Camp Rock&apos; franchises, performing the biggest songs from all...</description>
+    <category>shobiz</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 14 Oct 2026 20:00:04 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zombies-4-star-mekonnen-mk-knife-shares-favorite-moments-from-disney-s-worlds-co--dxua91.jpg" type="image/jpeg" />
+    <source url="https://www.hollywoodreporter.com/tv/tv-features/zombies-mekonnen-mk-knife-interview-disney-worlds-collide-1236730193/">The Hollywood Reporter</source>
   </item>
   <item>
     <title>Zombie writers</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 12 Aug 2026 12:10:45 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c75g9777wwxo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zhu Rongji, who drove China&apos;s 1990s economic reforms, has died at 97</title>
-    <link>https://thegloballens365.vercel.app/article/zhu-rongji-who-drove-china-s-1990s-economic-reforms-has-died-at-97--5y1g5z</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zhu-rongji-who-drove-china-s-1990s-economic-reforms-has-died-at-97--5y1g5z</guid>
-    <description>Zhu was renowned for reforms that sought to transition China from the post-Maoist years to a more global market-oriented financial system, without ceding party...</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Wed, 12 Aug 2026 12:36:30 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
-    <source url="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR</source>
   </item>
   </channel>
 </rss>
