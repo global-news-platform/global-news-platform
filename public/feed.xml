@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 15 Oct 2026 15:18:51 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 23:32:46 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -114,6 +114,17 @@
     <pubDate>Sun, 13 Sep 2026 22:33:34 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/9/13/zverev-beats-shelton-in-four-sets-to-win-us-open-title?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zverev cruises past De Minaur to reach Shanghai semi-finals</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-cruises-past-de-minaur-to-reach-shanghai-semi-finals--qk33xa</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-cruises-past-de-minaur-to-reach-shanghai-semi-finals--qk33xa</guid>
+    <description>Top seed Alexander Zverev took “a huge step up” to dismantle Alex de Minaur 6-4, 6-4 on Thursday and roll into the Shanghai Masters semi-finals.</description>
+    <category>khel</category>
+    <author>Sara Khan</author>
+    <pubDate>Thu, 15 Oct 2026 15:50:25 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2037384/zverev-cruises-past-de-minaur-to-reach-shanghai-semi-finals">Dawn</source>
   </item>
   <item>
     <title>Zverev caps transformational year with US Open triumph</title>
@@ -554,17 +565,6 @@
     <pubDate>Sun, 06 Sep 2026 12:15:28 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/politics/2026/sep/06/zia-yusuf-reform-uk-post-camden-council-leader-sagal-abdi-wali">The Guardian</source>
-  </item>
-  <item>
-    <title>Zhu Rongji, who helped turn China into a trading giant, dies at 97</title>
-    <link>https://thegloballens365.vercel.app/article/zhu-rongji-who-helped-turn-china-into-a-trading-giant-dies-at-97--m3h51l</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zhu-rongji-who-helped-turn-china-into-a-trading-giant-dies-at-97--m3h51l</guid>
-    <description>Zhu brought China into the WTO and championed reforms that fuelled growth.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Wed, 12 Aug 2026 12:10:45 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/world.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/c75g9777wwxo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
