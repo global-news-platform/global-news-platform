@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 22 Oct 2026 09:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 20:24:19 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -226,6 +226,17 @@
     <source url="https://www.bbc.co.uk/news/articles/cy8dl9n1v3vo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zuckerberg wins Meta deal to help him foot bill for possible California billionaire tax</title>
+    <link>https://thegloballens365.vercel.app/article/zuckerberg-wins-meta-deal-to-help-him-foot-bill-for-possible-california-billiona--at9piw</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zuckerberg-wins-meta-deal-to-help-him-foot-bill-for-possible-california-billiona--at9piw</guid>
+    <description>The Meta boss had said he would exit the state over a wealth tax that has not yet come into force.</description>
+    <category>karobar</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 22 Oct 2026 18:26:56 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cky83vwnyglno?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zuckerberg says AI progress slower than expected</title>
     <link>https://thegloballens365.vercel.app/article/zuckerberg-says-ai-progress-slower-than-expected--2eul2e</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zuckerberg-says-ai-progress-slower-than-expected--2eul2e</guid>
@@ -345,6 +356,17 @@
     <pubDate>Thu, 30 Jul 2026 10:12:29 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zoe-salda-a-to-receive-locarno-fest-special-honor--eeamcy.jpg" type="image/jpeg" />
     <source url="https://www.hollywoodreporter.com/movies/movie-news/zoe-saldana-locarno-2026-special-pardo-leopard-honor-1236659915/">The Hollywood Reporter</source>
+  </item>
+  <item>
+    <title>Zoe Kleinman: PHP is the cyber equivalent of an unexploded bomb</title>
+    <link>https://thegloballens365.vercel.app/article/zoe-kleinman-php-is-the-cyber-equivalent-of-an-unexploded-bomb--1qqkvf</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-kleinman-php-is-the-cyber-equivalent-of-an-unexploded-bomb--1qqkvf</guid>
+    <description>It has been a dramatic, public and global response, but the cyber event hasn&apos;t happened yet.</description>
+    <category>technology</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Thu, 22 Oct 2026 10:17:26 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/technology.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cw98z6qlyvg3o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
     <title>Zoe Kazan’s ‘East of Eden’ Series, Colin Kaepernick, Padma Lakshmi Join Atlantic Festival Lineup (Exclusive)</title>
@@ -543,28 +565,6 @@
     <pubDate>Tue, 28 Jul 2026 09:03:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zidane-confirmed-as-france-head-coach--do6o9g.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/football/articles/cpd741qn2y9o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Ziarat SP suspended following terrorist attack on police post; committee formed to probe incident</title>
-    <link>https://thegloballens365.vercel.app/article/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-t--xwatcs</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-t--xwatcs</guid>
-    <description>QUETTA: The Ziarat superintendent of police (SP) has been suspended following a terrorist attack on the Mangi Dam police post, it emerged on Wednesday.</description>
-    <category>pakistan</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Wed, 08 Jul 2026 07:36:11 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-t--xwatcs.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2013827/ziarat-sp-suspended-following-terrorist-attack-on-police-post-committee-formed-to-probe-incident">Dawn</source>
-  </item>
-  <item>
-    <title>Zia Yusuf’s post about Camden council leader is ‘straightforward racism’, says minister</title>
-    <link>https://thegloballens365.vercel.app/article/zia-yusuf-s-post-about-camden-council-leader-is-straightforward-racism-says-mini--19mr52</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zia-yusuf-s-post-about-camden-council-leader-is-straightforward-racism-says-mini--19mr52</guid>
-    <description>Senior Reform UK figure has faced criticism within party after post about Sagal Abdi-Wali, a former child refugee Labour has accused Reform’s Zia Yusuf of...</description>
-    <category>siasat</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Sun, 06 Sep 2026 12:15:28 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/politics/2026/sep/06/zia-yusuf-reform-uk-post-camden-council-leader-sagal-abdi-wali">The Guardian</source>
   </item>
   </channel>
 </rss>
