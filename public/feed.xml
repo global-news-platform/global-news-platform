@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 28 Oct 2026 01:30:29 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 08:29:13 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -490,6 +490,17 @@
     <source url="https://www.aljazeera.com/news/2026/6/24/zimbabwes-senate-approves-amendment-extending-presidential-term?traffic_source=rss">Al Jazeera</source>
   </item>
   <item>
+    <title>Zimbabwe’s platinum boom: Where is the wealth?</title>
+    <link>https://thegloballens365.vercel.app/article/zimbabwe-s-platinum-boom-where-is-the-wealth--1hk1pv</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-platinum-boom-where-is-the-wealth--1hk1pv</guid>
+    <description>The metal is generating billions, but mining communities say basic services have failed to keep pace.</description>
+    <category>dunya</category>
+    <author>Babar Shah</author>
+    <pubDate>Wed, 28 Oct 2026 07:08:00 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-platinum-boom-where-is-the-wealth--1hk1pv.jpg" type="image/jpeg" />
+    <source url="https://www.aljazeera.com/news/2026/10/28/zimbabwes-platinum-boom-where-is-the-wealth?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
     <title>Zimbabwe’s land reform enters a new chapter</title>
     <link>https://thegloballens365.vercel.app/article/zimbabwe-s-land-reform-enters-a-new-chapter--460axc</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-land-reform-enters-a-new-chapter--460axc</guid>
@@ -554,17 +565,6 @@
     <pubDate>Fri, 25 Sep 2026 21:48:56 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2032681/zidane-puts-early-stamp-on-france-off-the-pitch-before-winning-start">Dawn</source>
-  </item>
-  <item>
-    <title>Zidane confirmed as France head coach</title>
-    <link>https://thegloballens365.vercel.app/article/zidane-confirmed-as-france-head-coach--do6o9g</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zidane-confirmed-as-france-head-coach--do6o9g</guid>
-    <description>Former Real Madrid manager Zinedine Zidane has been confirmed as the head coach of the France national team.</description>
-    <category>dunya</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Tue, 28 Jul 2026 09:03:49 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zidane-confirmed-as-france-head-coach--do6o9g.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/cpd741qn2y9o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
