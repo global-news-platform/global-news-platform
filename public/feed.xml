@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 29 Oct 2026 17:14:59 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 23:07:49 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -48,6 +48,17 @@
     <pubDate>Mon, 12 Oct 2026 14:30:28 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/cw3dj8jr8xj2o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zverev seals world number one spot after win</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-seals-world-number-one-spot-after-win--1vcqj8</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-seals-world-number-one-spot-after-win--1vcqj8</guid>
+    <description>Alexander Zverev will replace Jannik Sinner as men’s world number one at his earliest opportunity after reaching the Vienna quarter-finals.</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Thu, 29 Oct 2026 20:25:37 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zverev-seals-world-number-one-spot-after-win--1vcqj8.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/cwdr8m8g4jz2o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev says cutting Masters events to one week is an easy fix for crowded calendar</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 28 Jul 2026 17:04:09 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zidane-waited-for-france-now-can-he-harness-their-star-power--3lb5aj.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/football/articles/c20dxgpjng3o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
-  </item>
-  <item>
-    <title>Zidane puts early stamp on France off the pitch before winning start</title>
-    <link>https://thegloballens365.vercel.app/article/zidane-puts-early-stamp-on-france-off-the-pitch-before-winning-start--1ct81a</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zidane-puts-early-stamp-on-france-off-the-pitch-before-winning-start--1ct81a</guid>
-    <description>Zinedine Zidane’s first week in charge of France ended with a 1-0 Nations League win away to Turkiye on Friday thanks to a second-half goal from Kylian Mbappe,...</description>
-    <category>khel</category>
-    <author>Ali Ahmed</author>
-    <pubDate>Fri, 25 Sep 2026 21:48:56 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2032681/zidane-puts-early-stamp-on-france-off-the-pitch-before-winning-start">Dawn</source>
   </item>
   </channel>
 </rss>
