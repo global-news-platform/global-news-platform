@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Fri, 30 Oct 2026 12:57:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 19:36:58 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -37,6 +37,17 @@
     <pubDate>Fri, 11 Sep 2026 22:42:27 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/sports.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/clykzn81n4go?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zverev thrashes GB&apos;s Fery to reach Vienna semis</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-thrashes-gb-s-fery-to-reach-vienna-semis--1aqnnk</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-thrashes-gb-s-fery-to-reach-vienna-semis--1aqnnk</guid>
+    <description>Alexander Zverev marks his rise to world number one with a dominant victory over Britain&apos;s Arthur Fery to reach the semi-finals of the Vienna Open.</description>
+    <category>khel</category>
+    <author>Babar Shah</author>
+    <pubDate>Fri, 30 Oct 2026 18:41:25 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/cm0ld27ew5lyo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev secures year-end number one ranking as Alcaraz loses</title>
@@ -554,17 +565,6 @@
     <pubDate>Sat, 15 Aug 2026 19:39:07 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.theguardian.com/world/2026/aug/15/more-bodies-recovered-after-zimbabwe-boat-accident">The Guardian</source>
-  </item>
-  <item>
-    <title>Zidane waited for France - now can he harness their star power?</title>
-    <link>https://thegloballens365.vercel.app/article/zidane-waited-for-france-now-can-he-harness-their-star-power--3lb5aj</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zidane-waited-for-france-now-can-he-harness-their-star-power--3lb5aj</guid>
-    <description>Zinedine Zidane says he waited for the France job, but what will he bring to the role after after five years out of management?</description>
-    <category>khel</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 28 Jul 2026 17:04:09 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zidane-waited-for-france-now-can-he-harness-their-star-power--3lb5aj.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/sport/football/articles/c20dxgpjng3o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   </channel>
 </rss>
