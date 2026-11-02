@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 01 Nov 2026 17:09:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 09:29:38 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -158,6 +158,17 @@
     <pubDate>Sun, 13 Sep 2026 22:02:29 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/c1wx9qpxjg3o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zverev becomes deserved world number one - but sense of discomfort remains</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-becomes-deserved-world-number-one-but-sense-of-discomfort-remains--w6inzr</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-becomes-deserved-world-number-one-but-sense-of-discomfort-remains--w6inzr</guid>
+    <description>Alexander Zverev has been the best player in the world in men&apos;s tennis this year - but a sense of discomfort remains.</description>
+    <category>khel</category>
+    <author>Fatima Hussain</author>
+    <pubDate>Mon, 02 Nov 2026 06:44:05 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zverev-becomes-deserved-world-number-one-but-sense-of-discomfort-remains--w6inzr.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/cwkg5z5jmye0o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev battles through after enduring another 2am finish</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 29 Jun 2026 04:26:46 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0.jpg" type="image/jpeg" />
     <source url="https://www.dawn.com/news/2011566/zimbabwe-dominate-first-day-of-bangladesh-test">Dawn</source>
-  </item>
-  <item>
-    <title>Zimbabwe boat accident death toll hits 68 as 22 more bodies recovered</title>
-    <link>https://thegloballens365.vercel.app/article/zimbabwe-boat-accident-death-toll-hits-68-as-22-more-bodies-recovered--1c25mw</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-boat-accident-death-toll-hits-68-as-22-more-bodies-recovered--1c25mw</guid>
-    <description>Eighteen children among the people killed after ferry capsized on Lake Kariba Twenty-two more bodies have been recovered after a boat accident in Zimbabwe,...</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Sat, 15 Aug 2026 19:39:07 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.theguardian.com/world/2026/aug/15/more-bodies-recovered-after-zimbabwe-boat-accident">The Guardian</source>
   </item>
   </channel>
 </rss>
