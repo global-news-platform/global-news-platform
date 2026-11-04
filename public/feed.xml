@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 04 Nov 2026 09:15:52 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 18:46:54 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -180,6 +180,17 @@
     <pubDate>Fri, 04 Sep 2026 06:33:33 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/cy0zxxk3y62o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zverev annoyed by reaction to becoming world number one</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-annoyed-by-reaction-to-becoming-world-number-one--1df0zs</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-annoyed-by-reaction-to-becoming-world-number-one--1df0zs</guid>
+    <description>After a defeat at the Paris Masters, Alexander Zverev complains that he is the only player who has had \&quot;to explain why it&apos;s OK\&quot; for him to be top of the...</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Wed, 04 Nov 2026 17:08:45 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zverev-annoyed-by-reaction-to-becoming-world-number-one--1df0zs.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/ckpdg01pq55eo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev and Gauff ease into US Open last 16 but Alex Eala falls to Jovic</title>
@@ -554,17 +565,6 @@
     <pubDate>Mon, 15 Jun 2026 00:54:32 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-climate-migrants-fear-eviction-as-crackdown-intensifies--09un60.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/15/zimbabwes-climate-migrants-fear-eviction-as-crackdown-intensifies?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zimbabwe dominate first day of Bangladesh Test</title>
-    <link>https://thegloballens365.vercel.app/article/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0</guid>
-    <description>HARARE: Zimbabwe took first-day honours in a one-off Test against Bangladesh on Sunday thanks to opener Innocent Kaia and left-arm quick Newman Nyamhuri.</description>
-    <category>khel</category>
-    <author>Imran Malik</author>
-    <pubDate>Mon, 29 Jun 2026 04:26:46 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-dominate-first-day-of-bangladesh-test--1f1fb0.jpg" type="image/jpeg" />
-    <source url="https://www.dawn.com/news/2011566/zimbabwe-dominate-first-day-of-bangladesh-test">Dawn</source>
   </item>
   </channel>
 </rss>
