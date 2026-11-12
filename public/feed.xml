@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Thu, 12 Nov 2026 13:23:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 22:21:48 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -424,6 +424,17 @@
     <source url="https://www.bbc.co.uk/news/articles/cj3vqv3nee72o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zoe Kleinman: How AI visionary Jensen Huang was undone by his own bad decisions</title>
+    <link>https://thegloballens365.vercel.app/article/zoe-kleinman-how-ai-visionary-jensen-huang-was-undone-by-his-own-bad-decisions--2u2d0w</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-kleinman-how-ai-visionary-jensen-huang-was-undone-by-his-own-bad-decisions--2u2d0w</guid>
+    <description>Zoe Kleinman explains how the man who built Nvidia from the ground up lost everything in a matter of days.</description>
+    <category>technology</category>
+    <author>Imran Malik</author>
+    <pubDate>Thu, 12 Nov 2026 16:43:36 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zoe-kleinman-how-ai-visionary-jensen-huang-was-undone-by-his-own-bad-decisions--2u2d0w.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/cq5y13819gpjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zoe Kazan’s ‘East of Eden’ Series, Colin Kaepernick, Padma Lakshmi Join Atlantic Festival Lineup (Exclusive)</title>
     <link>https://thegloballens365.vercel.app/article/zoe-kazan-s-east-of-eden-series-colin-kaepernick-padma-lakshmi-join-atlantic-fes--4aflmr</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-kazan-s-east-of-eden-series-colin-kaepernick-padma-lakshmi-join-atlantic-fes--4aflmr</guid>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 28 Oct 2026 07:08:00 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-platinum-boom-where-is-the-wealth--1hk1pv.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/10/28/zimbabwes-platinum-boom-where-is-the-wealth?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zimbabwe’s land reform enters a new chapter</title>
-    <link>https://thegloballens365.vercel.app/article/zimbabwe-s-land-reform-enters-a-new-chapter--460axc</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-land-reform-enters-a-new-chapter--460axc</guid>
-    <description>A new land policy is reopening disputes over farms seized during Zimbabwe’s land reform after 2000.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Thu, 13 Aug 2026 01:48:39 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/8/13/zimbabwes-land-reform-enters-a-new-chapter?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
