@@ -1,93 +1,45 @@
 [
   {
-    "slug": "italy-fines-meta-880m-over-photo-privacy--1v8i39",
-    "title": "Italy fines Meta $880m over photo privacy",
+    "slug": "us-flights-resume-after-ageing-technology-blamed-for-outage--1mpvxd",
+    "title": "US flights resume after ageing technology blamed for outage",
     "category": "dunya",
     "score": 9.7
   },
   {
-    "slug": "myanmar-airstrike-kills-12-at-displacement-camp-in-rakhine-state--11vk64",
-    "title": "Myanmar airstrike kills 12 at displacement camp in Rakhine state",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "us-flights-resume-after-rare-hours-long-nationwide-grounding-but-delays-persist--2zj88e",
-    "title": "US flights resume after rare hours-long nationwide grounding but delays persist",
-    "category": "pakistan",
-    "score": 9.7
-  },
-  {
-    "slug": "fuel-crisis-and-protests-pressure-chile-s-far-right-president--16fi1d",
-    "title": "Fuel crisis and protests pressure Chile's far-right president",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "a-rapid-interest-rate-rise-seems-inevitable-and-households-are-expected-to-pick---1cjugm",
-    "title": "A rapid interest rate rise seems inevitable – and households are expected to pick up the tab",
+    "slug": "uk-ethics-watchdog-chief-steps-back-from-role-over-sexual-misconduct-claims--1ekgrl",
+    "title": "UK ethics watchdog chief steps back from role over sexual misconduct claims",
     "category": "siasat",
-    "score": 9.7
+    "score": 9.6
   },
   {
-    "slug": "azma-bukhari-highlights-youth-employment-initiatives--jw4t5i",
-    "title": "Azma Bukhari highlights youth employment initiatives",
-    "category": "pakistan",
-    "score": 9.7
-  },
-  {
-    "slug": "christopher-abbott-reveals-how-his-you-can-see-everything-moment-came-to-be--1472nj",
-    "title": "Christopher Abbott Reveals How His ‘You Can See Everything’ Moment Came to Be",
-    "category": "shobiz",
-    "score": 9.7
-  },
-  {
-    "slug": "eu-calls-for-immediate-humanitarian-access-to-gaza--1m6j8f",
-    "title": "EU calls for immediate humanitarian access to Gaza",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "trump-putin-and-xi-plan-historic-joint-meeting-in-china-next-week-white-house-sa--1406qg",
-    "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
-    "category": "dunya",
-    "score": 9.7
-  },
-  {
-    "slug": "nigeria-cautions-against-travel-via-ethiopia-s-main-airport-due-to-altitude--sp7koq",
-    "title": "Nigeria cautions against travel via Ethiopia's main airport due to altitude",
+    "slug": "us-envoy-kushner-says-he-aims-to-broker-europe-russia-talks-on-ukraine--1bf7kq",
+    "title": "US envoy Kushner says he aims to broker Europe-Russia talks on Ukraine",
     "category": "dunya",
     "score": 9.6
   },
   {
-    "slug": "yemen-fighting-displaces-over-340-000-people--vxh4y2",
-    "title": "Yemen fighting displaces over 340,000 people",
-    "category": "pakistan",
+    "slug": "comeback-kid-joseph-thrills-as-england-eye-all-blacks--16c216",
+    "title": "Comeback kid Joseph thrills as England eye All Blacks",
+    "category": "khel",
     "score": 9.6
   },
   {
-    "slug": "jerusalem-daily-israeli-forces-occupy-palestinian-american-s-home--1eoxl1",
-    "title": "Jerusalem Daily: Israeli forces occupy Palestinian-American’s home",
+    "slug": "second-catch-attempt-as-spacex-starship-rocket-heads-back-to-earth--51im43",
+    "title": "Second catch attempt as SpaceX Starship rocket heads back to Earth",
+    "category": "science",
+    "score": 9.6
+  },
+  {
+    "slug": "nigeria-s-upcoming-election-marred-by-rising-ai-disinformation--x2hwzi",
+    "title": "Nigeria's upcoming election marred by rising AI disinformation",
     "category": "dunya",
     "score": 9.6
   },
   {
-    "slug": "why-bruce-buffer-traded-the-octagon-for-the-steakhouse-in-new-bud-light-campaign--72r5j",
-    "title": "Why Bruce Buffer Traded the Octagon for the Steakhouse in New Bud Light Campaign",
-    "category": "shobiz",
-    "score": 9.6
-  },
-  {
-    "slug": "mir-raza-murder-case-ex-sho-dismissed-over-misconduct-mishandling-of-evidence--ie2y3b",
-    "title": "Mir Raza murder case: Ex-SHO dismissed over misconduct, mishandling of evidence",
-    "category": "pakistan",
-    "score": 9.6
-  },
-  {
-    "slug": "khushhal-khan-denies-forcing-ramsha-off-social-media--1ljsql",
-    "title": "Khushhal Khan denies forcing Ramsha off social media",
-    "category": "pakistan",
-    "score": 9.6
+    "slug": "no-racism-in-spain-de-la-fuente-message-for-tuchel--11m2pd",
+    "title": "'No racism in Spain' – De la Fuente message for Tuchel",
+    "category": "khel",
+    "score": 9.5
   },
   {
     "slug": "us-has-floated-ukraine-ceding-donbas-for-nato-membership-zelensky-says--kbhkrx",
@@ -96,27 +48,75 @@
     "score": 9.5
   },
   {
-    "slug": "nasa-s-voyager-1-to-hit-new-space-distance-record-of-one-light-day--1ka942",
-    "title": "NASA’s Voyager 1 to hit new space distance record of one light-day",
-    "category": "dunya",
-    "score": 9.5
-  },
-  {
-    "slug": "meetmebythesea-wins-first-paddy-power-gold-cup-for-mcmanus--1q73t7",
-    "title": "Meetmebythesea wins first Paddy Power Gold Cup for McManus",
+    "slug": "rice-close-to-signing-new-arsenal-contract--1niv80",
+    "title": "Rice close to signing new Arsenal contract",
     "category": "khel",
     "score": 9.5
   },
   {
-    "slug": "pakistan-to-host-30th-eco-council-of-ministers-meeting-on-nov-15-16--v7lr5n",
-    "title": "Pakistan to host 30th ECO Council of Ministers meeting on Nov 15-16",
-    "category": "pakistan",
+    "slug": "fact-check-iranian-content-farms-reach-millions--kuudm2",
+    "title": "Fact check: 'Iranian' content farms reach millions",
+    "category": "dunya",
     "score": 9.5
   },
   {
-    "slug": "canada-s-stelco-to-recall-175-workers-after-government-pressure--11iu3l",
-    "title": "Canada’s Stelco to recall 175 workers after government pressure",
+    "slug": "miracle-on-mississippi-all-passengers-rescued-after-new-orleans-cruise-ship-coll--1r4t0t",
+    "title": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
     "category": "dunya",
-    "score": 9.5
+    "score": 9.4
+  },
+  {
+    "slug": "india-s-assam-state-demolishes-homes-of-132-muslim-families--nzrldo",
+    "title": "India’s Assam state demolishes homes of 132 Muslim families",
+    "category": "dunya",
+    "score": 9.4
+  },
+  {
+    "slug": "fatherland-wins-top-camerimage-prize-as-wild-horse-nine-nabs-audience-award--1vx6ie",
+    "title": "‘Fatherland’ Wins Top Camerimage Prize as ‘Wild Horse Nine’ Nabs Audience Award",
+    "category": "shobiz",
+    "score": 9.4
+  },
+  {
+    "slug": "philomena-cunk-comes-for-hollywood--12n8ks",
+    "title": "Philomena Cunk Comes for Hollywood",
+    "category": "shobiz",
+    "score": 9.4
+  },
+  {
+    "slug": "can-being-non-western-cost-you-your-home-in-denmark--1s60on",
+    "title": "Can being ‘non-Western’ cost you your home in Denmark?",
+    "category": "dunya",
+    "score": 9.3
+  },
+  {
+    "slug": "deadly-car-bomb-blast-kills-two-near-syria-s-capital--tm41w8",
+    "title": "Deadly car bomb blast kills two near Syria’s capital",
+    "category": "dunya",
+    "score": 9.3
+  },
+  {
+    "slug": "more-than-100-000-rally-across-france-in-new-yellow-vest-protests--1meu1s",
+    "title": "More than 100,000 rally across France in new Yellow Vest protests",
+    "category": "dunya",
+    "score": 9.3
+  },
+  {
+    "slug": "one-of-the-greatest-wins-wales-stun-all-blacks-to-go-from-no-hopers-to-heroes--qljjx",
+    "title": "'One of the greatest wins' - Wales stun All Blacks to go from no-hopers to heroes",
+    "category": "khel",
+    "score": 9.3
+  },
+  {
+    "slug": "thousands-rally-in-antalya-to-demand-climate-justice-as-cop31-talks-hit-midpoint--kw2nda",
+    "title": "Thousands rally in Antalya to demand climate justice as COP31 talks hit midpoint",
+    "category": "pakistan",
+    "score": 9.3
+  },
+  {
+    "slug": "joseph-enjoys-dream-return-as-england-thrash-japan-at-twickenham--6mz929",
+    "title": "Joseph enjoys dream return as England thrash Japan at Twickenham",
+    "category": "khel",
+    "score": 9.3
   }
 ]
