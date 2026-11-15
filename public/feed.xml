@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Sun, 15 Nov 2026 14:34:37 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 20:07:33 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -103,6 +103,17 @@
     <pubDate>Fri, 04 Sep 2026 07:27:15 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/sports/2026/9/4/zverev-goes-distance-to-scrape-into-third-round-as-upsets-rock-us-open?traffic_source=rss">Al Jazeera</source>
+  </item>
+  <item>
+    <title>Zverev &apos;felt a lot of joy&apos; in first win as world number one</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-felt-a-lot-of-joy-in-first-win-as-world-number-one--lfop7q</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-felt-a-lot-of-joy-in-first-win-as-world-number-one--lfop7q</guid>
+    <description>Alexander Zverev claims his first victory as world number one as he sweeps aside Rafael Jodar in the opening match of the ATP Finals.</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Sun, 15 Nov 2026 18:00:57 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/cm5y1grdy3w2o?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev defies &apos;physical issues&apos; to reach Shanghai Masters quarter-finals</title>
@@ -554,17 +565,6 @@
     <pubDate>Wed, 24 Jun 2026 20:43:33 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9.jpg" type="image/jpeg" />
     <source url="https://www.aljazeera.com/news/2026/6/24/zimbabwes-senate-approves-amendment-extending-presidential-term?traffic_source=rss">Al Jazeera</source>
-  </item>
-  <item>
-    <title>Zimbabwe’s platinum boom: Where is the wealth?</title>
-    <link>https://thegloballens365.vercel.app/article/zimbabwe-s-platinum-boom-where-is-the-wealth--1hk1pv</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-platinum-boom-where-is-the-wealth--1hk1pv</guid>
-    <description>The metal is generating billions, but mining communities say basic services have failed to keep pace.</description>
-    <category>dunya</category>
-    <author>Babar Shah</author>
-    <pubDate>Wed, 28 Oct 2026 07:08:00 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-platinum-boom-where-is-the-wealth--1hk1pv.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/10/28/zimbabwes-platinum-boom-where-is-the-wealth?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
