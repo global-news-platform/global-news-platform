@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Tue, 17 Nov 2026 21:06:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 03:52:07 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -48,6 +48,17 @@
     <pubDate>Fri, 30 Oct 2026 18:41:25 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/sport/tennis/articles/cm0ld27ew5lyo?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
+  </item>
+  <item>
+    <title>Zverev serves up emphatic win to reach ATP Finals last four</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-serves-up-emphatic-win-to-reach-atp-finals-last-four--192zdt</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-serves-up-emphatic-win-to-reach-atp-finals-last-four--192zdt</guid>
+    <description>World No. 1 Alexander Zverev was imperious on serve as he blasted past third-seed Ben Shelton 6-2, 7-6(7/4) on Tuesday to book a place in the last four of the...</description>
+    <category>khel</category>
+    <author>Imran Malik</author>
+    <pubDate>Tue, 17 Nov 2026 22:15:42 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/articles/zverev-serves-up-emphatic-win-to-reach-atp-finals-last-four--192zdt.jpg" type="image/jpeg" />
+    <source url="https://www.dawn.com/news/2045241/zverev-serves-up-emphatic-win-to-reach-atp-finals-last-four">Dawn</source>
   </item>
   <item>
     <title>Zverev secures year-end number one ranking as Alcaraz loses</title>
@@ -554,17 +565,6 @@
     <pubDate>Thu, 01 Oct 2026 11:00:28 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cr4gvg0yenl4o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zimbabwe’s Senate approves amendment extending presidential term</title>
-    <link>https://thegloballens365.vercel.app/article/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9</guid>
-    <description>Constitutional amendment will keep President Mnangagwa in office until 2030 and allow parliament to elect the president.</description>
-    <category>dunya</category>
-    <author>Sara Khan</author>
-    <pubDate>Wed, 24 Jun 2026 20:43:33 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwe-s-senate-approves-amendment-extending-presidential-term--pmcgp9.jpg" type="image/jpeg" />
-    <source url="https://www.aljazeera.com/news/2026/6/24/zimbabwes-senate-approves-amendment-extending-presidential-term?traffic_source=rss">Al Jazeera</source>
   </item>
   </channel>
 </rss>
