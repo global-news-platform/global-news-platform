@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 18 Nov 2026 13:15:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 22:17:44 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -26,6 +26,17 @@
     <pubDate>Tue, 18 Aug 2026 22:25:46 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/czdmzdnp3z0o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
+    <title>Zverev to defend himself against fresh lawsuit</title>
+    <link>https://thegloballens365.vercel.app/article/zverev-to-defend-himself-against-fresh-lawsuit--1ne377</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zverev-to-defend-himself-against-fresh-lawsuit--1ne377</guid>
+    <description>Lawyers for world number one Alexander Zverev say he will defend himself against a lawsuit which alleges he misrepresented the outcome of a domestic abuse...</description>
+    <category>khel</category>
+    <author>Ali Ahmed</author>
+    <pubDate>Wed, 18 Nov 2026 16:27:24 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/sport/tennis/articles/c60rkq9kweego?at_medium=RSS&amp;at_campaign=rss">BBC Sport</source>
   </item>
   <item>
     <title>Zverev through to third Grand Slam final in a row</title>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 13 Oct 2026 23:31:10 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/cm4g1rekpgnjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zimbabwe tycoon Wicknell Chivayo and wife killed in helicopter crash</title>
-    <link>https://thegloballens365.vercel.app/article/zimbabwe-tycoon-wicknell-chivayo-and-wife-killed-in-helicopter-crash--d0761h</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwe-tycoon-wicknell-chivayo-and-wife-killed-in-helicopter-crash--d0761h</guid>
-    <description>Chivayo was known for his lavish lifestyle, close ties to African presidents and lucrative government contracts.</description>
-    <category>dunya</category>
-    <author>Imran Malik</author>
-    <pubDate>Thu, 01 Oct 2026 11:00:28 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cr4gvg0yenl4o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
