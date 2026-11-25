@@ -9,7 +9,7 @@
     <description>Global news aggregation — breaking stories, analysis, and reports from around the world</description>
     <language>en-us</language>
     <copyright>2026 The Global Lens 365 — News summaries with attribution. All copyrights belong to respective owners.</copyright>
-    <lastBuildDate>Wed, 25 Nov 2026 02:32:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 11:41:02 GMT</lastBuildDate>
     <atom:link href="https://thegloballens365.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://thegloballens365.vercel.app/images/logo.svg</url>
@@ -457,6 +457,17 @@
     <source url="https://www.bbc.co.uk/news/articles/cj3vqv3nee72o?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   <item>
+    <title>Zoe Kleinman: Nobody is irreplaceable - unless you&apos;re Jensen Huang</title>
+    <link>https://thegloballens365.vercel.app/article/zoe-kleinman-nobody-is-irreplaceable-unless-you-re-jensen-huang--1ybv7i</link>
+    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-kleinman-nobody-is-irreplaceable-unless-you-re-jensen-huang--1ybv7i</guid>
+    <description>The BBC&apos;s technology and AI editor on how Nvidia&apos;s boss made himself impossible to fire.</description>
+    <category>technology</category>
+    <author>Sara Khan</author>
+    <pubDate>Wed, 25 Nov 2026 10:03:12 GMT</pubDate>
+    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/technology.jpg" type="image/jpeg" />
+    <source url="https://www.bbc.co.uk/news/articles/c3rrgqj2zx5yo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
+  </item>
+  <item>
     <title>Zoe Kleinman: How AI visionary Jensen Huang was undone by his own bad decisions</title>
     <link>https://thegloballens365.vercel.app/article/zoe-kleinman-how-ai-visionary-jensen-huang-was-undone-by-his-own-bad-decisions--2u2d0w</link>
     <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zoe-kleinman-how-ai-visionary-jensen-huang-was-undone-by-his-own-bad-decisions--2u2d0w</guid>
@@ -554,17 +565,6 @@
     <pubDate>Tue, 07 Jul 2026 10:48:49 GMT</pubDate>
     <enclosure url="https://thegloballens365.vercel.app/images/articles/zimbabwean-football-star-survives-gun-attack-in-south-africa--8bu2om.jpg" type="image/jpeg" />
     <source url="https://www.bbc.co.uk/news/articles/c1my1rvy28do?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
-  </item>
-  <item>
-    <title>Zimbabwean author denies using AI to write award-winning story</title>
-    <link>https://thegloballens365.vercel.app/article/zimbabwean-author-denies-using-ai-to-write-award-winning-story--c1805m</link>
-    <guid isPermaLink="true">https://thegloballens365.vercel.app/article/zimbabwean-author-denies-using-ai-to-write-award-winning-story--c1805m</guid>
-    <description>Simbarashe Kundizeza was responding to an accusation that has caused an uproar on social media.</description>
-    <category>dunya</category>
-    <author>Fatima Hussain</author>
-    <pubDate>Tue, 13 Oct 2026 23:31:10 GMT</pubDate>
-    <enclosure url="https://thegloballens365.vercel.app/images/fallbacks/pakistan.jpg" type="image/jpeg" />
-    <source url="https://www.bbc.co.uk/news/articles/cm4g1rekpgnjo?at_medium=RSS&amp;at_campaign=rss">BBC News</source>
   </item>
   </channel>
 </rss>
